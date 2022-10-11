@@ -1,0 +1,77 @@
+{
+	"ID": "20221011221323-nbbqp8m",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221011221323-nbbqp8m",
+		"title": "读写锁代码",
+		"updated": "20221011221439"
+	},
+	"Children": [
+		{
+			"ID": "20221011214520-6hxmr9c",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-6hxmr9c",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cvector\u003e\n#include \u003csstream\u003e\n#include \u003ccstdio\u003e\n#include \u003ccstdlib\u003e\n#include \u003ccstring\u003e\n#include \u003cunistd.h\u003e\n#include \u003cpthread.h\u003e \nvolatile int ticket = 1000;\n\npthread_rwlock_t rwlock;\n\nvoid* reader(void* arg)\n{\n\tchar* id = (char*)arg;\n\twhile (1) {\n\t\tpthread_rwlock_rdlock(\u0026rwlock);\n\t\tif (ticket \u003c= 0) {\n\t\t\tpthread_rwlock_unlock(\u0026rwlock);\n\t\t\tbreak;\n\t\t}\n\t\tprintf(\"%s: %d\\n\", id, ticket);\n\t\tpthread_rwlock_unlock(\u0026rwlock);\n\t\tusleep(1);\n\t}\n\treturn nullptr;\n}\n\nvoid* writer(void* arg)\n{\n\tchar* id = (char*)arg;\n\twhile (1) {\n\t\tpthread_rwlock_wrlock(\u0026rwlock);\n\t\tif (ticket \u003c= 0) {\n\t\t\tpthread_rwlock_unlock(\u0026rwlock);\n\t\t\tbreak;\n\t\t}\n\t\tprintf(\"%s: %d\\n\", id, --ticket);\n\t\tpthread_rwlock_unlock(\u0026rwlock);\n\t\tusleep(1);\n\t}\n\treturn nullptr;\n}\n\nstruct ThreadAttr\n{\n\tpthread_t tid;\n\tstd::string id;\n};\n\nstd::string create_reader_id(std::size_t i)\n{\n\t// 利用    ostringstream 进行    string 拼接\n\tstd::ostringstream oss(\"thread reader \", std::ios_base::ate);\n\toss \u003c\u003c i;\n\treturn oss.str();\n}\n\nstd::string create_writer_id(std::size_t i)\n{\n\t// 利用    ostringstream 进行    string 拼接\n\tstd::ostringstream oss(\"thread writer \", std::ios_base::ate);\n\toss \u003c\u003c i;\n\treturn oss.str();\n}\n\nvoid init_readers(std::vector\u003cThreadAttr\u003e\u0026 vec)\n{\n\tfor (std::size_t i = 0; i \u003c vec.size(); ++i) {\n\t\tvec[i].id = create_reader_id(i);\n\t\tpthread_create(\u0026vec[i].tid, nullptr, reader, (void*)vec[i].id.c_str());\n\t}\n}\n\nvoid init_writers(std::vector\u003cThreadAttr\u003e\u0026 vec)\n{\n\tfor (std::size_t i = 0; i \u003c vec.size(); ++i) {\n\t\tvec[i].id = create_writer_id(i);\n\t\tpthread_create(\u0026vec[i].tid, nullptr, writer, (void*)vec[i].id.c_str());\n\t}\n}\n\nvoid join_threads(std::vector\u003cThreadAttr\u003e const\u0026 vec)\n{\n\t// 我们按创建的    逆序    来进行线程的回收\n\tfor (std::vector\u003cThreadAttr\u003e::const_reverse_iterator it = vec.rbegin(); it !=\n\t\tvec.rend(); ++it) {\n\t\tpthread_t const\u0026 tid = it-\u003etid;\n\t\tpthread_join(tid, nullptr);\n\t}\n}\n\nvoid init_rwlock()\n{\n#if 0   // 写优先\n\tpthread_rwlockattr_t attr;\n\tpthread_rwlockattr_init(\u0026attr);\n\tpthread_rwlockattr_setkind_np(\u0026attr, PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP);\n\tpthread_rwlock_init(\u0026rwlock, \u0026attr);\n\tpthread_rwlockattr_destroy(\u0026attr);\n#else   // 读优先，会造成写饥饿\n\tpthread_rwlock_init(\u0026rwlock, nullptr);\n#endif\n}\nint main()\n{\n\t// 测试效果不明显的情况下，可以加大    reader_nr\n\t// 但也不能太大，超过一定阈值后系统就调度不了主线程了 \n\tconst std::size_t reader_nr = 1000;\n\tconst std::size_t writer_nr = 2;\n\tstd::vector\u003cThreadAttr\u003e readers(reader_nr);\n\tstd::vector\u003cThreadAttr\u003e writers(writer_nr);\n\tinit_rwlock();\n\tinit_readers(readers);\n\tinit_writers(writers);\n\tjoin_threads(writers);\n\tjoin_threads(readers);\n\tpthread_rwlock_destroy(\u0026rwlock);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011221438-s83a9u1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011221438-s83a9u1",
+				"updated": "20221011221439"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221011212001"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221011212001-20221011221422-ob14y6i.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}
