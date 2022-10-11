@@ -1,0 +1,108 @@
+/* -----------------------------------------------------------------pdf双链-------------------------------------------------------- */
+
+/* ————————————————————修改PDF双链样式———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref'] {
+    color: var(--b3-theme-on-background);
+    text-decoration: 1px solid underline var(--b3-theme-primary);
+    margin: 0px;
+}
+
+
+.protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"]:before {
+    content: url("../../src/file-pdf.svg");
+    position: relative;
+    top: 0.1em;
+    margin-right: 4px;
+}
+
+
+
+/* ——————————————————————pdf搜索高亮———————————————————— */
+.textLayer .highlight.selected {
+    background-color: var(--b3-search-highlight);
+}
+
+/* ——————————————————————PDF搜索候选词高亮———————————————————— */
+.textLayer .highlight {
+    background-color: var(--b3-font-background1);
+}
+
+/* ————————————————————pdf光标选中文本样式———————————————————— */
+.pdf__outer ::selection {
+    background-color: var(--b3-pdf-selcect-hightlight);
+    color: transparent !important;
+}
+
+/* ————————————————————PDF标注弹出项目———————————————————— */
+.pdf__util.b3-menu .b3-color__square {
+    height: 25px;
+    width: 25px;
+    border-radius: var(--b3-border-radius-none);
+}
+
+/* ————————————————————PDF标注弹出项目鼠标悬浮时的样式———————————————————— */
+.pdf__util.b3-menu .b3-color__square:hover {
+    border: 2px solid gray;
+}
+
+
+
+/* ————————————————————PDF搜索栏设置—————————————————— */
+.findbar {
+    padding: 5px 8px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ————————————————————PDF鼠标悬浮时无双链的标注不显示链接弹窗———————————————————— */
+.block__popover--open[data-oid="undefined"] {
+    display: none;
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* ————————————————————调整弹窗的阴影———————————————————— */
+.block__popover--open {
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* ------------------------------------------------------------pdf双链 END-------------------------------------------------------- */
+
+
+/* ————————————————————设置PDF标注的格式———————————————————— */
+button.b3-color__square[style*="background-color:var(--b3-pdf"] {
+    border-radius: var(--b3-border-radius-noraml) !important;
+    border: var(--b3-border-normal) !important;
+}
+
+/* ————————————————————设置PDF标注的相关文字———————————————————— */
+button.b3-color__square[style*="background-color:var(--b3-pdf-background"]::before {
+    color: #202124;
+    font-family: "Microsoft YaHei";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background1)"]::before {
+    content: "红";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background2)"]::before {
+    content: "橙";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background3)"]::before {
+    content: "黄";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background4)"]::before {
+    content: "绿";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background5)"]::before {
+    content: "青";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background6)"]::before {
+    content: "蓝";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background7)"]::before {
+    content: "紫";
+}

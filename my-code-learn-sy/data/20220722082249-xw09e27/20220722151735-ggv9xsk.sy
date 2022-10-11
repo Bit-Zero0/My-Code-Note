@@ -1,0 +1,2860 @@
+{
+	"ID": "20220722151735-ggv9xsk",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722151735-ggv9xsk",
+		"title": "makefile的使用",
+		"updated": "20220722153004"
+	},
+	"Children": [
+		{
+			"ID": "20220722151744-td5x9hv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722151744-td5x9hv",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Makefile的意义"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-s4ln8yv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-s4ln8yv",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "makefile是将我们项目管理工具，没有makefile的话，我们的项目的关系可以会很错综复杂，而makefile则能有效管理我们的项目。\n类似于在VS2019中创建项目，当我们创建项目时，我们文件的关系VS2019就可以帮我们关联好了，VS2019是一个集成开发环境，而makefile是我们在Linux系统中，实现的文件关联的工具。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-d6upism",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722151744-d6upism",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "makefile的使用"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-7liurx3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-7liurx3",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在我们需要进行文件管理的路径，创建文件 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "makefile"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n之后我们可以在makefile这个文件中创建我们项目文件之间的关系。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-o7lzph2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-o7lzph2",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：我们需要创建 四个文件 ："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   ， "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool1.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   ,   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.h"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-rej7u8k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-rej7u8k",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  为主文件，\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ",   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool1.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  中会打印一句话"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.h"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  是包含 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  和  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool1.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 声明的头文件"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-7atm2v6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-7atm2v6",
+				"updated": "20220722151758"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "文件结构如下：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504162936.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nmakefile的书写"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-st2fccl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722151744-st2fccl",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "  1 mytool: main.o tool.o tool1.o                                               \n  2     gcc main.o tool.o tool1.o  -o mytool                                          \n  3                                                              \n  4 main.o:main.c                                                \n  5     gcc main.c -c -Wall -std=c99 -g -o main.o                             \n  6                                                              \n  7 tool.o: tool.c                                               \n  8     gcc tool.c -c -Wall -std=c99 -g -o tool.o\n  9\n 10 tool1.o:tool1.c                                              \n 11     gcc tool1.c -c -Wall -std=c99 -g -o tool1.o                            \n 12                                                              \n 13                                                              \n 14 .PHONY:clean                                                 \n 15 clean:                                                       \n 16     rm -fr *.o mytool\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-5xxy38y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-5xxy38y",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第一行表示：文件的总依赖关系，我们要生成的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可执行文件"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mytool"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  依赖于 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool1.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  这三个[[gcc与g++的使用#连接（生成可执行文件或库文件）|链接]]文件"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-oh5yn9t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-oh5yn9t",
+				"updated": "20220722152322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第四行表示"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 文件的依赖关系 ，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  来自于 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  。 在第五行中，main.c 被 gcc编译器使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-c"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 命令 ，也就是"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722140734-8j0pmxr"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "汇编"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件 ， 而"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722140734-darcog0"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "-Wall"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表示显示所有警告信息，"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722140824-5fjyl3o"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "-g 的作用就是将文件转化为debug"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "模式，这样方便文件出错后的调试。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-cjsalx0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-cjsalx0",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "七到十一行 与 四到五行是一模一样的，只是换了文件名而已。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-y80s4o0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-y80s4o0",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第十四行 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": ".PHONY"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  是修饰对应的符号 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "clean"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，是一个伪目标的概念，表示总是可以执行的，十五行到十六行就是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "clean"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 这个符号的实现， 使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "make clean"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 后就会 删除 以"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": ".o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 为后缀名文件与mytool这个可执行文件。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-lpgwbta",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-lpgwbta",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "make"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "命令构建项目以后，如果依赖文件没有改动，是无法在使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "make"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "命令的,会提示项目已经构建过了。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-t050kh9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-t050kh9",
+				"updated": "20220722152352"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这是我们的文件\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504170651.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-4v8e71b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-4v8e71b",
+				"updated": "20220722152404"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第一次使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "make"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令后\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504170835.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-9cdufnp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-9cdufnp",
+				"updated": "20220722152417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第二次使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "make"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令，提示我们的版本已经是最新的，意思就是我们的源文件没有任何改动。如果源文件有改动，则又可以使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "make"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504170931.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722152431-yx57l7y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722152431-yx57l7y"
+			}
+		},
+		{
+			"ID": "20220722151744-1pzwk0g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-1pzwk0g",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当需要删除我们生成的这些 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": ".o"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 文件"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可执行文件"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 时， 我们可以使用我们在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "makefile"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件中写的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "clean"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 指令。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-rr1fdrs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-rr1fdrs",
+				"updated": "20220722152448"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "被红框的文件就是我们需要删除的文件。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504171446.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-2kx9kkg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-2kx9kkg",
+				"updated": "20220722152537"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "make clean"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504171653.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504171714.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722152556-45npkbx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722152556-45npkbx"
+			}
+		},
+		{
+			"ID": "20220722151744-q7pt6hq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722151744-q7pt6hq",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "makefile文件的改善"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-wd8smw6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-wd8smw6",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在makefile中是有些特定的命令来给我们使用的，这些特定的指令有助于我们代码的简洁性和复用性"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-n7niv9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-n7niv9b",
+				"updated": "20220722152825"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这是根据 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722151744-st2fccl"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "上面的makefile"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "上面的makefile 来更改的。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-wggoeel",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722151744-wggoeel",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "  1 OB = main.o tool.o tool1.o                                   \n  2 CC=gcc                                                       \n  3 CFLAGS+=-c -Wall -std=c99 -g                                 \n  4                                                              \n  5 mytool: $(OB)                                                \n  6     $(CC) $^  -o $@                                          \n  7                                                              \n  8 main.o:main.c                                                \n  9     $(CC) $^ $(CFLAGS) -o $@                             \n 10                                                              \n 11 tool.o: tool.c                                               \n 12     $(CC) $^ $(CFLAGS) -o $@\n 13\n 14 tool1.o:tool1.c                                              \n 15     $(CC) $^ $(CFLAGS) -o $@                            \n 16                                                              \n 17                                                              \n 18 .PHONY:clean                                                 \n 19 clean:                                                       \n 20     $(RM) -r *.o mytool\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-oekk5mt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-oekk5mt",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后边跟变量，表示使用，如："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$(OB)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$(CC)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$^"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  ,"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$@"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   ."
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-8ngsfw3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-8ngsfw3",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第一行的 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "OB"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是我们可以自定义的，类似 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "宏"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "OB"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 此时就代表了  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool1.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这个三个文件。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-8hxux5f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-8hxux5f",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第二行的 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "CC"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 代表使用 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "gcc"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 进行编译。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-u907f7d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-u907f7d",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第三行的 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "CFLAGS"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 表示语言编译器的参数，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "+="
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "变量追加值"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 也就是在之前的变量上"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "追加我们定义的参数"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-c -Wall -std=c99 -g"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-94h2la8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-94h2la8",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在第五行，就会将"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "OB"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的参数进行替换，替换为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tool1.o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-fo9epmq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-fo9epmq",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第六行的 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "$^"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "表示所有依赖目标的集合, 会去除重复的依赖目标"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，就是将依赖项"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "OB"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "复制下来；"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "$@"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "表示目标集合"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，就是我们要生成的目标文件，整个第六行 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$(CC) $^  -o $@"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就相当于 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "gcc main.o tool.o tool1.o -o mytool"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-0etmrig",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-0etmrig",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第二十行的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$(RM)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 表示 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "rm -f"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-lwscyaw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-lwscyaw",
+				"updated": "20220722152859"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504180459.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-esfhvcr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-esfhvcr",
+				"updated": "20220722152910"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用make命令运行后\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504175038.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-mntuj9t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-mntuj9t",
+				"updated": "20220722152917"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "得到的文件也是一样的\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504175108.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722152921-enblgj2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722152921-enblgj2"
+			}
+		},
+		{
+			"ID": "20220722151744-ezqnfg4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722151744-ezqnfg4",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "makefile再改善"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-424nnjy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-424nnjy",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为第8行到第15行的内容除了文件名不同，其他代码都是一样的， 所以可以再简化一些。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-lmao52x",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722151744-lmao52x",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "  1 OB = main.o tool.o tool1.o                                   \n  2 CC=gcc                                                       \n  3 CFLAGS+=-c -Wall -std=c99 -g                                 \n  4                                                              \n  5 mytool: $(OB)                                                \n  6     $(CC) $^  -o $@                                          \n  7                                                              \n  8 %.o:%.c                                                      \n  9     $(CC) $^ $(CFLAGS) -o $@                                 \n 10                                                              \n 11 .PHONY:clean                                                 \n 12 clean:                                                       \n 13     $(RM) -r *.o mytool                                      \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-d0ece2m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-d0ece2m",
+				"updated": "20220722152951"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为只有文件名不同，所以我们可以使用通配符 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "%"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来匹配，只要依赖文件的后缀名相同，则就会使用第8行到第9行的数据进行匹配。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-6nvd73j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-6nvd73j",
+				"updated": "20220722153004"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220504181438.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-d48di1v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722151744-d48di1v",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "makefile中的一些隐含规则"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-t0hk5g8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722151744-t0hk5g8",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1) 自动推倒命名："
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-apnhf5k",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722151744-apnhf5k",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722151744-ga0rofc",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722151744-ga0rofc",
+						"updated": "20220722151744"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "编译C时，"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "*.o"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 的目标会自动推导为 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "*.c"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-qfxpum0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722151744-qfxpum0",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2) 隐含变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-e3r2oqu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151744-e3r2oqu",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "[RM] rm -f"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "[AR] ar"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "[CC] cc"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "[CXX] g++"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "[ARFLAGS] AR命令的参数"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "[CFLAGS] 语言编译器的参数"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "[CXXFLAGS] C++语言编译器的参数"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-fcwcscy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722151744-fcwcscy",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "3) 自动变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722151744-09ptf8e",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722151744-09ptf8e",
+				"updated": "20220722151744"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722151744-gp83ov6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722151744-gp83ov6",
+						"updated": "20220722151744"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "[$@] 目标集合"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "[$%] 当目标是函数库文件时, 表示其中的目标文件名"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "[$\u003c] 第一个依赖目标. 如果依赖目标是多个, 逐个表示依赖目标"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "[$?] 比目标新的依赖目标的集合"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "[$^] 所有依赖目标的集合, 会去除重复的依赖目标"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "[$+] 所有依赖目标的集合, 不会去除重复的依赖目标"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "[$*] 这个是GNU make特有的, 其它的make不一定支持"
+						}
+					]
+				}
+			]
+		}
+	]
+}

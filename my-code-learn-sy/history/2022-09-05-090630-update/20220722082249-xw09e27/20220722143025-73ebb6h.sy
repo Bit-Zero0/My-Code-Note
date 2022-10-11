@@ -1,0 +1,8706 @@
+{
+	"ID": "20220722143025-73ebb6h",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722143025-73ebb6h",
+		"title": "Linux进程控制",
+		"updated": "20220905090620"
+	},
+	"Children": [
+		{
+			"ID": "20220722143034-zqjbdmp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722143034-zqjbdmp",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程创建"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-5cjtheq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-5cjtheq",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "fork()"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数创建进程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-dpfxghe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-dpfxghe",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "程调用fork，当控制转移到内核中的fork代码后，内核做："
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-jqcrcdy",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722143034-jqcrcdy",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-gvzziov",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-gvzziov",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-wbbmfol",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-wbbmfol",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分配新的内存块和内核数据结构给子进程。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-8hdcer6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-8hdcer6",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-ea42qsp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-ea42qsp",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将父进程部分数据结构内容拷贝至子进程。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-7vf0un9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-7vf0un9",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-34x64qn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-34x64qn",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "添加子进程到系统进程列表当中。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-j9a88lv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-j9a88lv",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-66zogm2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-66zogm2",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "fork返回，开始调度器调度 。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-e7mz514",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-e7mz514",
+				"updated": "20220722143042"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220526124350.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n当一个进程调用fork之后，就有"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "两个二进制代码相同的进程"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。而且它们都运行到相同的地方。但每个进程都将可以开始它们自己的旅程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143135-fdpg744",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20220722143135-fdpg744",
+				"updated": "20220722143135"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20220722141506-h4gc1uu'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20220722143143-qotn9xy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143143-qotn9xy"
+			}
+		},
+		{
+			"ID": "20220722143034-kemebjf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-kemebjf",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "fork函数返回值"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-wh6zm7d",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722143034-wh6zm7d",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-l4fqgdy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-l4fqgdy",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-iomz13b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-iomz13b",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "子进程返回0，"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-wnczxw1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-wnczxw1",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-obsmod2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-obsmod2",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "父进程返回的是子进程的pid。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143200-yn65p07",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143200-yn65p07"
+			}
+		},
+		{
+			"ID": "20220722143034-vqdesox",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-vqdesox",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "写时拷贝"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-1l5f7hj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-1l5f7hj",
+				"updated": "20220722143208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "父子代码共享，父子再不写入时，数据也是共享的，当任意一方试图写入，便以写时拷贝的方式各自一份副本。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220526125325.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143211-bh233db",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143211-bh233db"
+			}
+		},
+		{
+			"ID": "20220722143034-t2punur",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-t2punur",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "fork的常规用法"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-jg8tbdy",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722143034-jg8tbdy",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-58zca9u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-58zca9u",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-78vgs91",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-78vgs91",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一个父进程希望复制自己，使父子进程同时"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "执行不同的代码段"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。例如，父进程等待客户端请求，生成子进程来处理请求。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-mpgfgk5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-mpgfgk5",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-6184kyi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-6184kyi",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一个进程要执行一个不同的程序。例如子进程从fork返回后，调用"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "exec"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "函数。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-xr13fgb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722143034-xr13fgb",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程终止"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-6webed6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-6webed6",
+				"updated": "20220722143225"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程退出，OS层面做了什么呢？？"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-c7ukstr",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-c7ukstr",
+				"updated": "20220829131023"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-zar9ctr",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-zar9ctr",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "系统层面，少了一个进程："
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "free PCB"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ,  "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "free mm_struct"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ,free页表和各种映射关系，代码+数据申请的空间也要给"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "释放"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "掉！"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220829131023-qpnpd0z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220829131023-qpnpd0z"
+			}
+		},
+		{
+			"ID": "20220722143034-uuz0o05",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-uuz0o05",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程退出场景"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ht9qxs9",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722143034-ht9qxs9",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-2o27x8w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-2o27x8w",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-5cwwfrh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-5cwwfrh",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "代码运行完毕，结果正确"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-dxcbb16",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-dxcbb16",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-yx2hnng",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-yx2hnng",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "代码运行完毕，结果不正确"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-ayq4e6w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-ayq4e6w",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-ditek16",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-ditek16",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "代码异常终止"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-obaw7dk",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-obaw7dk",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-qx8y4hv",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-qx8y4hv",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "代码运行完毕，结果"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "正确"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，退出码返回 "
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "0"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n代码运行完毕，结果"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "不正确"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ， 退出码返回 "
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "!0"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，结果不正确的原因有很多\n代码异常终止: 程序崩溃，退出码也就没有意义了。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-lrg1kp3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-lrg1kp3",
+				"updated": "20220722143247"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527205434.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220829131016-nv3fay3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220829131016-nv3fay3"
+			}
+		},
+		{
+			"ID": "20220722143034-xstuqix",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-xstuqix",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程退出码"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-hu48v7z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-hu48v7z",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程的退出码大概有 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "140"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 个\n进程退出码可以通过 c语言提供的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "strerror"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数查看。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ipu4fhu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-ipu4fhu",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\nint main()\n{\n    for(int i  = 0 ; i \u003c 100 ; i++)\n    {\n        printf(\"%d : %s\\n\" , i , strerror(i)); // strerror是打印错误码的函数\n    }\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-04vbmkb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-04vbmkb",
+				"updated": "20220722143305"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这里并不是完整的退出码，这是部分。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527211417.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143312-q4a5wnv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143312-q4a5wnv"
+			}
+		},
+		{
+			"ID": "20220722143034-3ql9mq8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-3ql9mq8",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程常见的退出方法"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-2sb47yy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-2sb47yy",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "正常终止（可以通过 echo $? 查看进程退出码）："
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-fe0isko",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220722143034-fe0isko",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-79yuuw3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220722143034-79yuuw3",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-pdb8zb1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-pdb8zb1",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "main"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 返回"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-q64tf6r",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220722143034-q64tf6r",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-ul7zqp2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-ul7zqp2",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "调用 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "exit"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-mzct5x2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220722143034-mzct5x2",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-xpbmtoj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-xpbmtoj",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "_exit"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143325-q5vqjr3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143325-q5vqjr3"
+			}
+		},
+		{
+			"ID": "20220722143034-zu8f4j7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-zu8f4j7",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常退出："
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-0finlyt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-0finlyt",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ctrl + c"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，信号终止"
+				}
+			]
+		},
+		{
+			"ID": "20220722143334-qywz8hs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143334-qywz8hs"
+			}
+		},
+		{
+			"ID": "20220722143034-dwtcph6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722143034-dwtcph6",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数返回"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-84c9eqf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-84c9eqf",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数的退出值是进程的退出码。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-v0f7zdw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-v0f7zdw",
+				"updated": "20220722143357"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527203638.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如以上代码中的main返回值是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "100"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "； 我们查询到的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "退出信号"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "也 就是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "100"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。\n查询退出信号使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "echo $?"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527204218.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143338-3ggf8ck",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143338-3ggf8ck"
+			}
+		},
+		{
+			"ID": "20220722143512-hjupcnv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143512-hjupcnv"
+			}
+		},
+		{
+			"ID": "20220722143034-edtpw9f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722143034-edtpw9f",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数返回"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-p4ucx3t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-p4ucx3t",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "作用"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：exit在任意地方调用，都代表终止进程，参数是退出码。\n需要导入头文件 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "stdlib.h"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-07wkqr1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-07wkqr1",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此代码并不会走到 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "return"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， 因为 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "exit"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 在 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "return"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 之前使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "exit"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 之后便退出进程了，并显示退出码为 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "66"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-p0q3k26",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-p0q3k26",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n    printf(\"exit 退出码测试\\n\");\n    exit(66);\n  \n    return 0;//不会使用return退出进程了\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-umbj67s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-umbj67s",
+				"updated": "20220722143423"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527212631.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143427-9qf19bw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143427-9qf19bw"
+			}
+		},
+		{
+			"ID": "20220722143510-edbpwgu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143510-edbpwgu"
+			}
+		},
+		{
+			"ID": "20220722143034-xfynv9f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722143034-xfynv9f",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数返回"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-0utk9s4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-0utk9s4",
+				"updated": "20220722143443"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数作用也是 退出进程， 但是也exit有些区别。\n需要导入头文件 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unistd.h"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527215140.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-n0ws3sc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-n0ws3sc",
+				"updated": "20220722143455"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数是不会负责善后工作的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527215228.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-q4i1cp5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-q4i1cp5",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n    printf(\"exit 退出码测试\");\n    sleep(5);\n\n    _exit(10);\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-6h6omf8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-6h6omf8",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用exit和 main中的return是 在5秒后会打印输出缓冲区中的内容的， 但是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 不会负责这些善后工作，而是直接带着"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "退出码"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "退出进程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143506-axiaxjh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143506-axiaxjh"
+			}
+		},
+		{
+			"ID": "20220722143507-55xfjcu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143507-55xfjcu"
+			}
+		},
+		{
+			"ID": "20220722143034-xy6zq77",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722143034-xy6zq77",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main return"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 与 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  的一些不同之处"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-o8c3gfg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-o8c3gfg",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\nint main()\n{\n    printf(\"return 退出码测试\");\n    sleep(5);\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-uprg7es",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-uprg7es",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用这段代码时，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "printf"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的内容并不会先显示出来，而是在输出缓冲区中休眠了5秒才打印。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-1ntxute",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-1ntxute",
+				"updated": "20220905090251"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\nint main()\n{\n    printf(\"exit 退出码测试\");\n    sleep(5);\n\n    exit(EXIT_SUCCESS);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-hczsd64",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-hczsd64",
+				"updated": "20220722143545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这段代码和上面的一样， 要在输出输出缓冲区中休眠了5秒才打印。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527214945.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-lsx21z4",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-lsx21z4",
+				"updated": "20220722143554"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-ziw8jku",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-ziw8jku",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "exit"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " or "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "main return"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "本身就会要求系统进行，缓冲区刷新！"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143554-prlegtb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143554-prlegtb"
+			}
+		},
+		{
+			"ID": "20220722143034-u7ewu4n",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-u7ewu4n",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n    printf(\"exit 退出码测试\");\n    sleep(5);\n\n    _exit(10);\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-94ubil3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-94ubil3",
+				"updated": "20220722143622"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用exit和 main中的return是 在5秒后会打印输出缓冲区中的内容的， 但是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_exit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 不会负责这些善后工作，而是直接带着"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "退出码"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "退出进程。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527215819.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-2yj65sl",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-2yj65sl",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-yje2r72",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-yje2r72",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "1."
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "main"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "函数"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "return"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ",代表进程退出！！"
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-0vlf1ul",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722143034-0vlf1ul",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-l80c44r",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722143034-l80c44r",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"ID": "20220722143034-sx2b1af",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722143034-sx2b1af",
+										"updated": "20220722143034"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "非"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "main"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "函数呢？？ 函数返回！"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-ju432ho",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-ju432ho",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "2."
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "exit"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在任意地方调用，都代表终止进程，参数是退出码！"
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-wbr3uoz",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-wbr3uoz",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "3."
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "_exit"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "终止进程，强制终止进程，不要进行进程的后续收尾工作，比如刷新缓冲区！"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143708-knfca1u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143708-knfca1u"
+			}
+		},
+		{
+			"ID": "20220722143034-xi2rvvj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722143034-xi2rvvj",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程等待"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-yyoqwwh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-yyoqwwh",
+				"updated": "20220722143702"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程等待的函数有：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528080653.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143717-wwd04ko",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143717-wwd04ko",
+				"updated": "20220905090620"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527224411.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-9df1l4s",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-9df1l4s",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程等待必要性"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-82k88ip",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220722143034-82k88ip",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-34zj3up",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220722143034-34zj3up",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-i10za0z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-i10za0z",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "获取子进程退出的信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，能够得知子进程执行结果。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-ia2clww",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220722143034-ia2clww",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-vq8e3n2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-vq8e3n2",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以保证："
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "时序问题"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，子进程先退出，父进程后退出。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-uurhf1c",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220722143034-uurhf1c",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-cp9jj6a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-cp9jj6a",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "进程退出的时候会先进入僵尸状态会造成内存泄漏的问题，需要"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "通过父进程wait,释放该子进程占用的资源"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-becwp9a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-becwp9a",
+				"updated": "20220905090403"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外，进程一旦变成"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "僵尸状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那就刀枪不入，“杀人不眨眼\"的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "kill -9"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 也无能为力，因为谁也没有办法杀死一个已经死去的进程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143721-vwbqvnz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143721-vwbqvnz"
+			}
+		},
+		{
+			"ID": "20220722143034-e2ikwyd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-e2ikwyd",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "wait()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220724144652-n4dqict",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220724144652-n4dqict",
+				"updated": "20220724144652"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220724144652-49ltqz3.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-alkndwx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-alkndwx",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "wait()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 只能等待"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "指定"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "一个子进程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-9fetzwt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-9fetzwt",
+				"updated": "20220905090618"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用时需要包含头文件 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "sys/wait.h"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-9fm33zu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-9fm33zu",
+				"updated": "20220724144835"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n    int id = fork();\n    if(id == 0)\n    {\n        //child\n\tint cut = 5;\n        while(cut)\n        {  \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\tcut--;\n\t\tsleep(1);\n        }\n\texit(0);\n    }\n   //parent\n    sleep(10);\n    printf(\"father  wait begin!!\\n\");\n    int ret = wait(NULL);\n    if(ret \u003e 0)\n\tprintf(\"father wait : %d\\n\", ret);\n    else\n\tprintf(\"father wait failed \\n\");\n\n    sleep(10);\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-6hdpw99",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-6hdpw99",
+				"updated": "20220722143807"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "先让子进程运行5秒，然后退出子进程，在监视的那一头就会显示子进程进入了 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Z"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 僵尸状态"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  ,之后休息10秒，父进程开始等待子进程，当发现子进程的状态后对子进程进行管理，若子进程的状态为 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Z"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，则保存子进程信息后回收子进程。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220527232649.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143823-4ugga0w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143823-4ugga0w"
+			}
+		},
+		{
+			"ID": "20220722143034-d98afj1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-d98afj1",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "wait()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的函数参数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-y2a7tzc",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-y2a7tzc",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-zld4syw",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-zld4syw",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "pid_t wait(int* status);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-prkp6vw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-prkp6vw",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "返回值"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "成功"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "返回被等待"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进程pid"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "失败返回-1"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-a4wr4bm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-a4wr4bm",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "参数"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " : 输出型参数，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "获取子进程退出状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ",不关心则可以设置成为NULL"
+				}
+			]
+		},
+		{
+			"ID": "20220722143828-29qak6s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143828-29qak6s"
+			}
+		},
+		{
+			"ID": "20220722143034-ckd3vu9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-ckd3vu9",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "waitpid()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-yrj17dv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-yrj17dv",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "waitpid()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以等待"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "任意"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "一个子进程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-vmaiome",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-vmaiome",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码几乎和"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "wait()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的一样，只是将"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "wait()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 改为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "waitpid()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-bw6pgpo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-bw6pgpo",
+				"updated": "20220724145204"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n    int id = fork();\n    if(id == 0)\n    {\n        //child\n\tint cut = 5;\n        while(cut)\n        {  \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\tcut--;\n\t\tsleep(1);\n        }\n\texit(0);\n    }\n  \n   //parent\n   sleep(10);\n    printf(\"father  wait begin!!\\n\");\n    int ret = waitpid(id, NULL , 0);\n    if(ret \u003e 0)\n\tprintf(\"father wait : %d\\n\", ret);\n    else\n\tprintf(\"father wait failed \\n\");\n\n    sleep(10);\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-wj5d4u2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-wj5d4u2",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "waitpid()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数参数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-y62vgh5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-y62vgh5",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-ngcqmxc",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-ngcqmxc",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "pid_ t waitpid(pid_t pid, int* status, int options);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-gtud213",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-gtud213",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "返回值"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-qv4ta3n",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722143034-qv4ta3n",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-1d7ch18",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-1d7ch18",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-uckrb7w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-uckrb7w",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当正常返回的时候waitpid返回收集到的子进程的进程ID；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-bdzr4jb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-bdzr4jb",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-0odbmr0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-0odbmr0",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果设置了选项WNOHANG,而调用中waitpid发现没有已退出的子进程可收集,则返回0；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-kb97owt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-kb97owt",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-pxvgo7v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-pxvgo7v",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果调用中出错,则返回-1,这时errno会被设置成相应的值以指示错误所在；"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-a3ags43",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-a3ags43",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "参数"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "pid"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：\n\t* Pid = -1 , 等待任意一个子进程。与wait等效。\n\t* Pid \u003e 0 . 等待其进程ID与pid相等的子进程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-9rsxsea",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-9rsxsea",
+				"updated": "20220724150905"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "status"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":\n\t* "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "WIFEXITED(status)"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 若为正常终止子进程返回的状态，则为真。（查看进程是否是正常退出）\n\t* "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "WEXITSTATUS(status)"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 若WIFEXITED非零，提取子进程退出码。（查看进程的退出码） "
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-8oce7i2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-8oce7i2",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "options"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":\n\t* "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "WNOHANG"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 若pid指定的子进程没有结束，则waitpid()函数返回0，不予以等待。若正常结束，则返回该子进程的ID。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-o515wpd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-o515wpd",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "看一以下代码"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-xu56zuj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-xu56zuj",
+				"updated": "20220724145330"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n    int id = fork();\n    if(id == 0)\n    {\n        //child\n\tint cut = 5;\n        while(cut)\n        {    \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\tcut--;\n\t\tsleep(1);\n        }\n\texit(10); //退出码改为10\n    }\n  \n   //parent\n    printf(\"father  wait begin!!\\n\");\n  \n    int status = 0; //定义status\n    int ret = waitpid(id, \u0026status , 0);\n\n\tif(ret \u003e 0)\n\t\tprintf(\"father wait : %d  status：%d\\n\", ret，status);\n\telse\n\t\tprintf(\"father wait failed \\n\");\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-84q1j7o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-84q1j7o",
+				"updated": "20220722143856"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是我们发现status的结果并不是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "10"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，而是 2560。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528083904.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-xz7vedt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722143034-xz7vedt",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "status的构成"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-35m2kmp",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722143034-35m2kmp",
+				"updated": "20220722143904"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-ndcfq2o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-ndcfq2o",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-tbt3coz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-tbt3coz",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "wait和waitpid，都有一个status参数，该参数是一个"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "输出型参数"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，由操作"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "系统填充"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-fl75qma",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-fl75qma",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-29hhrj2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-29hhrj2",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "传递NULL"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，表示"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不关心子进程的退出状态"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "信息。否则，操作系统会根据该参数，将子进程的退出信息反馈给父进程。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-54nactg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-54nactg",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-dvbpc80",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-dvbpc80",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "status不能简单的当作整形来看待，可以当作位图来看待，具体细节如下图（只研究status"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "低16比特位"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-otg666a",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-otg666a",
+						"updated": "20220722143904"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-w01issv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-w01issv",
+								"updated": "20220722143904"
+							},
+							"Children": [
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "assets/"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/020220528084249.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-hpy1u1x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-hpy1u1x",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "最终status一定要让父进程得到子进程的执行结果。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-hlaqmug",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-hlaqmug",
+				"updated": "20220722143921"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528085226.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ctlhdk6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-ctlhdk6",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在代码中可以通过 左移操作符"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "\u003e\u003e"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ， 右移操作符"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "\u003c\u003c"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 来的得到"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "退出状态"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "和**终止信号"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "**。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ad47kir",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-ad47kir",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "测试代码"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-h62rjws",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-h62rjws",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003csys/wait.h\u003e\n#include \u003cstdio.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cerrno.h\u003e\n\nint main( void )\n{\n\tpid_t pid;\n\n\tif ( (pid=fork()) == -1 )\n\t\tperror(\"fork\"),exit(1);\n\n\tif ( pid == 0 )\n\t{\n\t\tsleep(20);\n\t\texit(10);\n\t} \n\telse \n\t{\n\t\tint st;\n\t\tint ret = wait(\u0026st);\n\t\tif ( ret \u003e 0 \u0026\u0026 ( st \u0026 0X7F ) == 0 ){ // 正常退出\n\t\t\tprintf(\"child exit code:%d\\n\", (st\u003e\u003e8)\u00260XFF); //将退出码右移八位后 \u0026 上 0XFF，即可得到退出码。\n\t\t} \n\t\telse if( ret \u003e 0 ) { // 异常退出\n\t\t\tprintf(\"sig code : %d\\n\", st\u00260X7F );\n\t\t}\n\n\t}\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-xnytk5x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-xnytk5x",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "0XFF"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  = "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "1111 1111"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-5km02kd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-5km02kd",
+				"updated": "20220724145900"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当然也可以使用 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "WIFEXITED"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  和 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "WEXITSTATUS"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20220724145903-3upy546",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20220724145903-3upy546",
+				"updated": "20220724145903"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20220722143034-9rsxsea'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-u9kh03o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-u9kh03o",
+				"updated": "20220724150154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n    int id = fork();\n    if(id == 0)\n    {\n        //child\n         int cut = 5;\n         while(cut){  \n            printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n            cut--;\n            sleep(1);\n        }\n        exit(10);\n    }\n  \n    //parent\n    printf(\"father  wait begin!!\\n\");\n\n    int status = 0;\n    int ret = waitpid(id,\u0026status,0);\n\n\n    if(ret \u003e 0)\n      if(WIFEXITED(status))//没有收到任何退出信号\n        printf(\"exit code : %d\\n\",WEXITSTATUS(status));//正常结束的，获取相应的退出码。\n\n    return 100;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-vhye4sb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-vhye4sb",
+				"updated": "20220722143933"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528091820.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-yhq5ahs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-yhq5ahs",
+				"updated": "20220722144001"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528092236.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144051-p3w1l3e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144051-p3w1l3e"
+			}
+		},
+		{
+			"ID": "20220722144052-z0k2i7m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144052-z0k2i7m"
+			}
+		},
+		{
+			"ID": "20220722143034-uj6ejo6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722143034-uj6ejo6",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "options 的构成"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-4b9invf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 5,
+			"Properties": {
+				"id": "20220722143034-4b9invf",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程的阻塞等待"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-00jm0z7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-00jm0z7",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "阻寒的本质：其实是进程的PCB被放入了等待队列，并将进程的状态改为S状态。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-nw1lezc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-nw1lezc",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "返回的本质：进程的PCB从等待队列拿到R队列，从而被CPU调度。"
+				}
+			]
+		},
+		{
+			"ID": "20220722144046-f0lgxjx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144046-f0lgxjx"
+			}
+		},
+		{
+			"ID": "20220722143034-chw6d1n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 5,
+			"Properties": {
+				"id": "20220722143034-chw6d1n",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程的非阻塞等待"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-bp8c8ke",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-bp8c8ke",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "看到某些应用或者OS本身，卡住了长时间不动，应用或者程序"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "hang"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "住了。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-nlu66xy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-nlu66xy",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在options参数选项填入 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "WNOHANG"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-u46q009",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-u46q009",
+				"updated": "20220724150440"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220724150440-shu11n1",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220724150440-shu11n1",
+						"updated": "20220724150440"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "WNOHANG:非阻塞。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ubb5maf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-ubb5maf",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n\tint id = fork();\n\tif(id == 0)\n\t{\n\t\t//child\n\t\tint cut = 10;\n        while(cut)\n        {      \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\t\tcut--;\n\t\t\tsleep(1);\n        }\n\t\texit(10);\n    }\n  \n    int status  = 0;\n    while(1)\n    {\n\t    int ret = waitpid(id , \u0026status , WNOHANG);\n\t    if(ret == 0)\n\t    {\n\t      //子进程没有退出，但是waitpid的等待是成功的，需要父进程重复进行等待\n\t      printf(\"Do my things! \\n\");\n\t    }\n\t    else if(ret \u003e 0) // 子进程退出了，waitpid也成功了，获取到了对应的结果\n\t    {\n\t      printf(\"father wait : %d , success , status exit code : %d m status exit signal : %d \\n\", ret , (status \u003e\u003e 8)\u00260xFF, status\u00260x7F );\n\t      break;\n\t    }\n\t    else{ // ret \u003c 0 ,等待失败\n\t      perror(\"waitpid\");\n\t        break;\n\t    }\n\t    sleep(1);\n    }\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-2huwqe6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-2huwqe6",
+				"updated": "20220722144112"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时的父子进程都在同时进行了。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528095540.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144119-h4zl88p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144119-h4zl88p"
+			}
+		},
+		{
+			"ID": "20220722144119-vmt56xb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144119-vmt56xb"
+			}
+		},
+		{
+			"ID": "20220722143034-i1ov2xg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722143034-i1ov2xg",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程程序替换"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ni0k5na",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-ni0k5na",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "替换原理"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-34qu9xu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-34qu9xu",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用fork创建子进程后执行的是和父进程相同的程序(但有可能执行不同的代码分支),子进程往往要调用一种"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "exec函数"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "执行另一个程序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "当进程调用一种exec函数时,该进程的用户空间代码和数据完全被新程序替换,从新程序的启动例程开始执行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "调用exec并不创建新进程,所以调用exec前后该进程的id并未改变"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-m5ulmn0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-m5ulmn0",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进程不变，仅仅替换当前进程的代码和数据的技术，叫做，进程的程序替换！"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-b2h5av1",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-b2h5av1",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-4ieqryk",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-4ieqryk",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "有没有创建任何新的进程？？\n没有！！"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-onuzzkm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-onuzzkm",
+				"updated": "20220722144143"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如，将我们的代码和数据，直接替换到进程的物理地址之中，即完成了进程的程序替换。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528095902.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144214-ik1v8au",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144214-ik1v8au"
+			}
+		},
+		{
+			"ID": "20220722143034-c13zv0x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-c13zv0x",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程替换函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-yzadnqh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-yzadnqh",
+				"updated": "20220722144158"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528100715.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-lio05mq",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-lio05mq",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-1ax3ajr",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-1ax3ajr",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "int execve(const char *path, char *const argv[], char *const envp[]);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-gnccluf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-gnccluf",
+				"updated": "20220722144205"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220530214610.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n其中 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execve"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是系统调用， 其余的五个函数都是以 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execve"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 为基本 来进行封装的。"
+				}
+			]
+		},
+		{
+			"ID": "20220722144209-3t8quzr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144209-3t8quzr"
+			}
+		},
+		{
+			"ID": "20220722143034-qr4m2f1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-qr4m2f1",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "函数解释"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-gn8eykw",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220722143034-gn8eykw",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-hq50qgp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220722143034-hq50qgp",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-835yuy8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-835yuy8",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这些函数如果"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "调用成功"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "则加载新的程序从启动代码开始执行,"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不再返回"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-1mj2e9i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220722143034-1mj2e9i",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-w3ksmuo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-w3ksmuo",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "调用出错"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "则返回"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "-1"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-4yf09xu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220722143034-4yf09xu",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-p778r3f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-p778r3f",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所以"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "exec"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "函数"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只有出错的返回值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "而没有成功的返回值。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144219-khj2r53",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144219-khj2r53"
+			}
+		},
+		{
+			"ID": "20220722143034-iywjpou",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-iywjpou",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "命名理解"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-x19a20k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-x19a20k",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这些函数原型看起来很容易混,但只要掌握了规律就很好记。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ql906pn",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-ql906pn",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-2d73e12",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-2d73e12",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "l"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(list) : 表示参数采用列表\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "v"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(vector) : 参数用数组\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "p"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(path) : 有p自动搜索环境变量PATH\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "e"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(env) : 表示自己维护环境变量"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-nzcio3t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-nzcio3t",
+				"updated": "20220722144240"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220530192819.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220724144334-l98in8u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220724144334-l98in8u"
+			}
+		},
+		{
+			"ID": "20220722143034-jvc7prc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-jvc7prc",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execl"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220724144331-hv5x7tc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220724144331-hv5x7tc",
+				"updated": "20220724144331"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220724144331-jt8ou58.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-rgvzdit",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-rgvzdit",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n  printf(\"i am a process! ,pid : %d\\n\" , getpid());\n  execl(\"/usr/bin/ls\",\"ls\" , \"-a\" ,\"-l\", NULL);  \n\n  printf(\"hahahhahahahahha\\n\");\n  printf(\"hahahhahahahahha\\n\");\n  printf(\"hahahhahahahahha\\n\");\n  printf(\"hahahhahahahahha\\n\");\n  printf(\"hahahhahahahahha\\n\");\n  return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-fgjop9l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-fgjop9l",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当代码走到 execl时 ，就会被进程替换了，此处是替换为了 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ls"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 指令,进程替换后就不会执行后续的代码，因为进程已经被替换。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-e172b8h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-e172b8h",
+				"updated": "20220722144309"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行结果\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528101720.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-o6mk73r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-o6mk73r",
+				"updated": "20220722144317"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528102319.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-g8983rj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-g8983rj",
+				"updated": "20220722144336"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528103704.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722144338-44pbark",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144338-44pbark",
+				"updated": "20220722144347"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528103723.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-9w4tq6j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-9w4tq6j",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "只要进程的程序替换成功，就不会执行后续代码，意味着"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "exec*"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "函数，成功的时候，不需要返回值检测！\n只要"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "exec*"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  返回了，就一定是因为调用失败了。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-k96kpq3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-k96kpq3",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tprintf(\"I am a process!,pid:%d\\n\",getpid());\n\t//只要进程的程序替换成功，就不会执行后续代码，意味着exec*函数，成功的时候，不需要返回值检测！\n\t//只要exec*返回了，就一定是因为调用失败了！！！！！！！！I\n\texecl(\"/usr/bin/1ssss\",\"1s\",\"-a\",\"-1\",NULL);//execl执行程序替换exit(1);\n\n\tprintf (\"hahahhaahha\\n\");\n\tprintf (\"hahahhaahha\\n\");\n\tprintf(\"hahahhaahha \\n\");\n\tprintf(\"hahahhaahha\\n\");\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-2v2cwxa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-2v2cwxa",
+				"updated": "20220722144411"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行结果\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528104256.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-z98j01s",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-z98j01s",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-5iwkv34",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-5iwkv34",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "int execl(const char* path, const char* arg, ...);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ksiugiy",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722143034-ksiugiy",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"ID": "20220722143034-r71jcjh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-r71jcjh",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-2jsevzz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-2jsevzz",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "path"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 你的要执行的目标程序的全路径所在路径/文件名 ."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-tx09q60",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-tx09q60",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-r409px4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-r409px4",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "arg"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "   要执行的目标程序在命令行上怎么执行这里参数就怎么一个一个的传递进去."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722143034-fogxkxz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722143034-fogxkxz",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"ID": "20220722143034-7yzflxh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722143034-7yzflxh",
+								"updated": "20220722143034"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "..."
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  可变参数列表。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-xqdk1te",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-xqdk1te",
+				"updated": "20220722144427"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220528105119.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144437-d2qycao",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144437-d2qycao"
+			}
+		},
+		{
+			"ID": "20220722143034-gxf6y2f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-gxf6y2f",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execlp"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-yznk42r",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-yznk42r",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-qtzpsj7",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-qtzpsj7",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "int execlp(const char * file , const char * arg , ...);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144441-jazkkem",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144441-jazkkem"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "第一个参数可以直接使用文件名进行传参；"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 如 需要替换 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ls"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  ，在第一个参数就直接使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ls"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就行了。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-omp3f6r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-omp3f6r",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "exec"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后面的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "lp"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 分别代表："
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-fvip9zz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-fvip9zz",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-upsuszd",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-upsuszd",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "l"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(list) : 表示参数采用列表 ，\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "p"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(path) : 有p自动搜索环境变量PATH"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-4vpr4lp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-4vpr4lp",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\nint main()\n{\n  printf(\"process chaneg beginning ...\\n\");\n\n  execlp(\"ls\" , \"ls\" , \"-a\" , \"-l\" , NULL);\n\n  printf(\"process change fail\");\n  return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-9hquqm7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-9hquqm7",
+				"updated": "20220722144458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行结果：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220530202640.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144503-dufcadx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144503-dufcadx"
+			}
+		},
+		{
+			"ID": "20220722143034-ti4dwft",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-ti4dwft",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execle"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-d4bnhfw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-d4bnhfw",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-4r9qcqb",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-4r9qcqb",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "int execle(const char * path , const char * arg, ... , char * const envp[]);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-g7kkfqg",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-g7kkfqg",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-0algvzj",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-0algvzj",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "l"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(list) : 表示参数采用列表\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "e"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(env) : 表示自己维护环境变量"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-7kqrlrq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-7kqrlrq",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "带e的，需要自己组装环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-s5hwktb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-s5hwktb",
+				"updated": "20220722144510"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们需要创建两个文件，用[[makefile的使用|makefile]]编写一下\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220530212705.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144521-cgmz60h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144521-cgmz60h"
+			}
+		},
+		{
+			"ID": "20220722143034-iaf5oux",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-iaf5oux",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "main.c 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-5up2k3d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-5up2k3d",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\nint main()\n{\n  printf(\"process chaneg beginning ...\\n\");\n\n  char* env[] = {\n    \"TEST1 = emmmmmmm\",\n    \"TEST2 = yhhhhhhh\",\n    \"TEST3 = emmyhh\",\n    NULL\n  };\n\n  execle(\"./myload\" , \"myload\" , NULL , env);\n\n  printf(\"process change fail\");\n  return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-gle4p2p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-gle4p2p",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "myload.c 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-zmnzufv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-zmnzufv",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n\nint main()\n{\n    extern char** environ;\n    for(int i = 0; environ[i]; i++){\n        printf(\"%s\\n\", environ[i]);\n    }\n\n    printf(\"my exe running .... done\\n\");\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-hhcwpd7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-hhcwpd7",
+				"updated": "20220722144614"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行可执行文件时 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "myload"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 时\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220530213223.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n运行"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "myload"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "只执行文件时，其中打印的我们的环境变量。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-xqx340x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-xqx340x",
+				"updated": "20220722144625"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而当我们在"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "myexec"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可执行文件中，使用使用程序替换后的结果。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220530213432.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n成功的使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "env"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 替换了myload中的环境环境变量。"
+				}
+			]
+		},
+		{
+			"ID": "20220722144638-pav8vo3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144638-pav8vo3"
+			}
+		},
+		{
+			"ID": "20220722144640-sel5x6q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144640-sel5x6q"
+			}
+		},
+		{
+			"ID": "20220722143034-k71fi7j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-k71fi7j",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execv"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-wggrp0n",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-wggrp0n",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-j85csia",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-j85csia",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "int execv(const char *path, char *const argv[]);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-zp13f2k",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-zp13f2k",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-loobjsj",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-loobjsj",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "v"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(vector) : 参数用数组"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-p1oixqx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-p1oixqx",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "其实就是将 “你想怎么执行” 这个步骤放到一个指针数组中。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ox87oyy",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-ox87oyy",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\nint main()\n{\n  printf(\"process chaneg beginning ...\\n\");\n\n  char* argv[] = { //指针数组中放的就是 “你想怎么执行” 这个步骤。\n    \"ls\",\n    \"-a\",\n    \"-l\",\n    NULL\n  }; \n\n  execv(\"/usr/bin/ls\",argv);//将argv传入execv，它会按数组中的字符串顺序依次执行。\n\n  printf(\"process change fail\");\n  return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-dnpktdu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-dnpktdu",
+				"updated": "20220722144703"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220530204740.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144656-whd68f4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144656-whd68f4"
+			}
+		},
+		{
+			"ID": "20220722143034-15z5wtn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-15z5wtn",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execvp"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-u35nsde",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-u35nsde",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-aniryop",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-aniryop",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "int execvp(const char* file  , char* const argv[]);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-xgl7t7h",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-xgl7t7h",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-ostqjto",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-ostqjto",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "v"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(vector) : 参数用数组\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "p"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(path) : 有p自动搜索环境变量PATH"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-epkofzf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-epkofzf",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第一个参数直接传入我们要使用的文件名即可，因为它会去环境变量中寻找。\n第二个参数就需要定义一个数组指针，要执行的命令就放在其中。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-1cq24yr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-1cq24yr",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\nint main()\n{\n  printf(\"process chaneg beginning ...\\n\");\n\n  char* argv[] = { //指针数组中放的就是 “你想怎么执行” 这个步骤。\n    \"ls\",\n    \"-a\",\n    \"-l\",\n    NULL\n  }; \n\n  execv(\"ls\",argv);\n\n  printf(\"process change fail\");\n  return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-vj9x215",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722143034-vj9x215",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execve"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-tmuszdo",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-tmuszdo",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-c1p1vxx",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-c1p1vxx",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "int execve(const char* path  ,  char* const argv[], char* const envp[]);"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ynh5qsh",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722143034-ynh5qsh",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722143034-gmpu6wt",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722143034-gmpu6wt",
+						"updated": "20220722143034"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "v"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(vector) : 参数用数组\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "e"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(env) : 表示自己维护环境变量"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-kbole0c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-kbole0c",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此函数其实和上面的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execv"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "execle"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 这两个函数很相同。"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-ay9a8nn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-ay9a8nn",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\nint main()\n{\n  printf(\"process chaneg beginning ...\\n\");\n\n  char* argv[] = {\n    \"ls\",\n    \"-a\",\n    \"-l\",\n    NULL\n  }; \n  \n  char* env[] = {\n    \"TEST1 = emmmmmmm\",\n    \"TEST2 = yhhhhhhh\",\n    \"TEST3 = emmyhh\",\n    NULL\n  };\n  \n  execve(\"./myload\" , argv , env);\n  printf(\"process change fail\");\n  return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-tygfdcq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722143034-tygfdcq",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "小练习"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-fmoyhj8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-fmoyhj8",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mini_shell"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-0bfhjlr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722143034-0bfhjlr",
+				"updated": "20220722143034"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\n\n#define NUM 128\n#define CMD_NUM 64\n\nint main()\n{\n\n    char command[NUM];\n    while(1){\n        char *argv[CMD_NUM] = { NULL };\n      \n        //1. 打印提示符\n        command[0] = 0; //用这种方式，可以做到O(1)时间复杂度，清空字符串\n        printf(\"[fmy@myhost EmmYhh]# \");\n        fflush(stdout);\n\n        //2. 获取命令字符串\n        fgets(command, NUM, stdin);\n        command[strlen(command) - 1] = '\\0'; //\"ls\\n\\0\"\n\n\n        //\"ls -a -b -c\\0\";\n        //3. 解析命令字符串, char *argv[]\n        const char *sep = \" \";\n        argv[0] = strtok(command, sep);\n        int i = 1;\n        while(argv[i] = strtok(NULL, sep))\n        {\n            i++;\n        }\n\n        //4.检测命令是否是需要shell本身执行的，内建命令\n        if(strcmp(argv[0], \"cd\") == 0)\n        {\n            if(argv[1] != NULL) \n            {\n\t            chdir(argv[1]);\n\t        }\n\t      \n            continue;\n        }\n\n        //5. 执行第三方命令\n        if(fork() == 0)\n        {\n            //child\n            execvp(argv[0], argv);\n            exit(1);\n        }\n\n        int status = 0;\n        waitpid(-1, \u0026status, 0);\n        printf(\"exit code: %d\\n\", (status \u003e\u003e 8)\u00260xFF);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722143034-qcibvuu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722143034-qcibvuu",
+				"updated": "20220722144756"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220605144659.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722144749-n9rnn2d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722144749-n9rnn2d"
+			}
+		}
+	]
+}

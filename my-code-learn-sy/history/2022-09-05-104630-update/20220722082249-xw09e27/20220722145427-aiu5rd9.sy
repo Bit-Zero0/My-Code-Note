@@ -1,0 +1,2591 @@
+{
+	"ID": "20220722145427-aiu5rd9",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722145427-aiu5rd9",
+		"title": "Linux程序地址空间",
+		"updated": "20220905103815"
+	},
+	"Children": [
+		{
+			"ID": "20220722145433-l266b2t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722145433-l266b2t",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C/C++语言内存布局图"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-rr0slmo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-rr0slmo",
+				"updated": "20220722145447"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在C语言中我们学到的内存布局图\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521212957.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-y3f0pvr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-y3f0pvr",
+				"updated": "20220722145456"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用以下代码来验证以下这个内存布局图是否正确\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521210205.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145600-xl7c9gi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145600-xl7c9gi"
+			}
+		},
+		{
+			"ID": "20220722145433-w56cbq6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722145433-w56cbq6",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程虚拟地址空间"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-qif8q41",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-qif8q41",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实际上，以上代码的地址都不是在实际的内存中的"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-3mz3aqx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722145433-3mz3aqx",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "证明"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-7007m20",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722145433-7007m20",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstdlib.h\u003e\n\nint g_val = 0;\n\nint main()\n{\n\tpid_t id = fork();\n\tif(id \u003c 0)\n\t{\n\t\tperror(\"fork\");\n\t\treturn 0;\n\t}\n\n\telse if(id == 0)\n\t{ //child,子进程肯定先跑完，也就是子进程先修改，完成之后，父进程再读取\n\t\tg_val=100;\n\t\tprintf(\"child[%d]: %d : %p\\n\", getpid(), g_val, \u0026g_val);\n\t}\n\n\telse\n\t{ //parent\n\t\tsleep(3);\n\t\tprintf(\"parent[%d]: %d : %p\\n\", getpid(), g_val, \u0026g_val);\n\t}\n\tsleep(1);\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-l3zzjzj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-l3zzjzj",
+				"updated": "20220722145519"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521213442.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n我们发现，父子进程，输出地址是一致的，但是变量内容不一样！能得出如下结论:"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-5b3itei",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722145433-5b3itei",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722145433-035m2tm",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722145433-035m2tm",
+						"updated": "20220722145433"
+					},
+					"Children": [
+						{
+							"ID": "20220722145433-ddk09p5",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722145433-ddk09p5",
+								"updated": "20220722145433"
+							},
+							"Children": [
+								{
+									"ID": "20220722145433-4oqy9vr",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722145433-4oqy9vr",
+										"updated": "20220722145433"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "变量内容不一样,所以父子进程输出的变量绝对不是同一个变量"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722145433-fv19ve3",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722145433-fv19ve3",
+								"updated": "20220722145433"
+							},
+							"Children": [
+								{
+									"ID": "20220722145433-76hmgxe",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722145433-76hmgxe",
+										"updated": "20220722145433"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "但"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "地址值是一样"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "的，说明，该"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "地址绝对不是物理地址"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "！"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722145433-ll85r9f",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722145433-ll85r9f",
+								"updated": "20220722145433"
+							},
+							"Children": [
+								{
+									"ID": "20220722145433-vwhm9ij",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722145433-vwhm9ij",
+										"updated": "20220722145433"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "在Linux地址下，这种地址叫做 "
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "虚拟地址"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722145433-qmb7bzj",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722145433-qmb7bzj",
+								"updated": "20220722145433"
+							},
+							"Children": [
+								{
+									"ID": "20220722145433-u5sn2zl",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722145433-u5sn2zl",
+										"updated": "20220722145433"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "我们在用C/C++语言所看到的地址，全部都是虚拟地址！物理地址用户一概看不到，由"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "OS统一管理"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-pqmsx10",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-pqmsx10",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "OS必须负责将 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "虚拟地址"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 转化成 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "物理地址"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145610-2mg3j5s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145610-2mg3j5s"
+			}
+		},
+		{
+			"ID": "20220722145433-6slulod",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722145433-6slulod",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每个进程的地址空间"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-nikrrc1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-nikrrc1",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每个进程都有一个地址空间都认为自己在独占物理内存！\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在 32位系统下 ，每个进程都认为自己有 4GB 内存。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-1b2f3uq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-1b2f3uq",
+				"updated": "20220722145535"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521214405.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nmm_struct 的构成[大概]"
+				}
+			]
+		},
+		{
+			"ID": "20220722145614-8bm148v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145614-8bm148v"
+			}
+		},
+		{
+			"ID": "20220722145433-fpw9822",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722145433-fpw9822",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚拟地址空间的划分"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-p70b3qg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-p70b3qg",
+				"updated": "20220722145631"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程虚拟地址空间 在内核中的是一个数据结构类型 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "struct mm_strcut"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521214532.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-uk6zgby",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-uk6zgby",
+				"updated": "20220722145640"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "mm_struct"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中详细的记录了虚拟地址空间的详细信息。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522144925.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如图中的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "code_start"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "code_end"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 代表的就是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码区"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "地址空间区域。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-dss80gi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-dss80gi",
+				"updated": "20220722145711"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "task_struct"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的结构体中也会有一个指向 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "mm_struct"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的指针。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521214935.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145716-91c8uf4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145716-91c8uf4"
+			}
+		},
+		{
+			"ID": "20220722145433-0uqrwn1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722145433-0uqrwn1",
+				"updated": "20220905103815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚拟地址转化物理地址的原理"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-yrg352u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722145433-yrg352u",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "页表  和 MMU"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-p7mwlf5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-p7mwlf5",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "页表"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：是负责虚拟地址和物理地址相对应的表。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-1k23yys",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-1k23yys",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "MMU[内存管理单元]"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：是一种硬件，在集成在cpu中，负责"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "查页表"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-oc5u16q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-oc5u16q",
+				"updated": "20220722145839"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522150432.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-fha9844",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722145433-fha9844",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何控制物理地址区域中的的权限呢？"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-yr0h002",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-yr0h002",
+				"updated": "20220722145851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " 如 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "const char* s = \"hello world\""
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中的  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "hello world"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就是在"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "字符常量区"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的，只有 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "r"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "[只读]权限，无法进行修改。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522151346.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n 代码在查询页表时，会查询到虚拟地址对应的物理地址的权限，从而映射到物理地址中响应权限的区域。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145908-te7y7o6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145908-te7y7o6"
+			}
+		},
+		{
+			"ID": "20220722145433-kar8tjw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722145433-kar8tjw",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么要有虚拟地址"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-a6eu708",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-a6eu708",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1.通过添加一层"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "软件层"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，完成有效的对进程操作内存进行"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "风险管理（权限管理）"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，本质目的是为了，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "保护物理内存"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "以及各个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进程的数据安全"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-58zqk2c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-58zqk2c",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2.将"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "内存申请"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "内存使用"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的概念在"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "时间上划分"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "清楚，通过"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "虚拟地址空间，来屏蔽底层申请内存的过程，达到进程读写内存和0S进行内存管理操作，进行软件上面的分离"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-8uagvae",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-8uagvae",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "3.站在CPU和应用层的角度，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进程统一可以看做统一使用4GB空间"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而且"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每个空间区域的相对位置"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "比较确定"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的！"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-azehf6r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722145433-azehf6r",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解释 1"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-kv3pzlq",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722145433-kv3pzlq",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722145433-22yswso",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722145433-22yswso",
+						"updated": "20220722145433"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "通过添加一层"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "软件层"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，完成有效的对进程操作内存进行"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "风险管理（权限管理）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，本质目的是为了，"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "保护物理内存"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "以及各个"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进程的数据安全"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-xne5tj1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-xne5tj1",
+				"updated": "20220722145916"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果我们没有虚拟地址，而是直接使用物理地址。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522152802.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n当我们的进程A越界时， 很有可能访问到其他进程的代码和数据，严重危害了其他进程的安全性，所以添加虚拟地址是非常有必要的。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-o8akcpy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722145433-o8akcpy",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解释 2"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-xyt2mxz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722145433-xyt2mxz",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722145433-j9yoild",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722145433-j9yoild",
+						"updated": "20220722145433"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "将"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存申请"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "和"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存使用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "的概念在"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时间上划分"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "清楚，通过"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "虚拟地址空间，来屏蔽底层申请内存的过程，达到进程读写内存和0S进行内存管理操作，进行软件上面的分离"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "！"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-buoe7i9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-buoe7i9",
+				"updated": "20220722145939"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们申请空间后，可能暂时不会全部使用，甚至不使用。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522153239.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n就像你和父母说，你要买什么东西，这时你提前和他们说了，当父母和你一起去买的时候的这段时间，父母再想办法凑到钱去买这件物品。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-cfbbnfc",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722145433-cfbbnfc",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722145433-plajlm9",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722145433-plajlm9",
+						"updated": "20220722145433"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "你申请空间成功时， 只是虚拟地址上申请成功了，物理地址上可能还没申请成功，要等到你真正去用时，才会申请。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-e7gbzvc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722145433-e7gbzvc",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解释 3"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-iub1ocp",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722145433-iub1ocp",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722145433-k0lo66s",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722145433-k0lo66s",
+						"updated": "20220722145433"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "站在CPU和应用层的角度，"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进程统一可以看做统一使用4GB空间"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，而且"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "每个空间区域的相对位置"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，是"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "比较确定"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "的！"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-1dyjrcl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-1dyjrcl",
+				"updated": "20220722150002"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "CPU是如何找到代码的入口（如："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数）的？\n不可能为了查找 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码的入口"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，把整个虚拟地址都遍历吧？\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522155425.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n所以我们需要告诉CPU去指定的虚拟地址的区域（如：代码区）, 查找即可。\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "注意：程序的代码和数据可以被加载到物理内存的任意位置。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-2bky1so",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722145433-2bky1so",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "父子进程的虚拟地址空间"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-89tz52x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-89tz52x",
+				"updated": "20220722150043"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还是这段代码\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522155756.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722150048-m31ro5b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150048-m31ro5b",
+				"updated": "20220722150054"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522160243.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n但子进程或父进程发生修改时，就会发生写时拷贝，此时父进程或子进程的物理地址实际上已经发生了改变， 但是虚拟地址还是同一个 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150105-9qqjk6o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150105-9qqjk6o"
+			}
+		},
+		{
+			"ID": "20220722145433-dgh2u8q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722145433-dgh2u8q",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚拟地址的内存布局图"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-nrtremd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722145433-nrtremd",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003cunistd.h\u003e\n\nint g_unval;\nint g_val = 100;\nint main(int argc, char *argv[], char *env[])\n{\n  \n    const char *s =\"hello world\";\n    printf(\"code addr: %p\\n\", main);\n    printf(\"string rdonly addr: %p\\n\", s);\n    printf(\"init addr: %p\\n\", \u0026g_val);\n    printf(\"uninit addr: %p\\n\", \u0026g_unval);\n    char *heap = (char*)malloc(10);\n    char *heap1 = (char*)malloc(10);\n    char *heap2 = (char*)malloc(10);\n    char *heap3 = (char*)malloc(10);\n    char *heap4 = (char*)malloc(10);\n\n    printf(\"heap addr: %p\\n\", heap1);\n    printf(\"heap addr: %p\\n\", heap2);\n    printf(\"heap addr: %p\\n\", heap3);\n    printf(\"heap addr: %p\\n\", heap4);\n\n    printf(\"stack addr: %p\\n\", \u0026s);\n    printf(\"stack addr: %p\\n\", \u0026heap);\n    int a = 10;\n    int b = 30;\n    printf(\"stack addr: %p\\n\", \u0026a);\n    printf(\"stack addr: %p\\n\", \u0026b);\n\n    for(int i = 0; argv[i]; i++){\n        printf(\"argv[%d]: %p\\n\", i, argv[i]);\n    }\n\n    for(int i =0; env[i] ;i++){\n        printf(\"env[%d]: %p\\n\", i, env[i]);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-1heuhij",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-1heuhij",
+				"updated": "20220722150119"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522161128.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-lox3fcq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-lox3fcq",
+				"updated": "20220722145433"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由此代码运行结果可知，在栈区之上还有内存区域， 那就是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "命令行参数、环境变量区"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722145433-rkznn08",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722145433-rkznn08",
+				"updated": "20220722150130"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220522161437.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150133-0pg1x6y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150133-0pg1x6y"
+			}
+		}
+	]
+}

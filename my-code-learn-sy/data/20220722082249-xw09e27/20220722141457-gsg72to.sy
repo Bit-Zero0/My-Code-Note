@@ -1,0 +1,5433 @@
+{
+	"ID": "20220722141457-gsg72to",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722141457-gsg72to",
+		"title": "Linux进程",
+		"updated": "20220725225118"
+	},
+	"Children": [
+		{
+			"ID": "20220722141506-djwp82c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-djwp82c",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本概念"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-dxxd2o8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-dxxd2o8",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-d7d9fl6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141506-d7d9fl6",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "课本概念：程序的一个执行实例，正在执行的程序等\n内核观点：担当分配系统资源（CPU时间，内存）的实体。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-zo0j5l3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-zo0j5l3",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "描述进程-PCB"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-ck6dhv2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-ck6dhv2",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程信息被放在一个叫做进程控制块的数据结构中，可以理解为进程属性的集合。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-xj3256n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-xj3256n",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "课本上称之为PCB（process control block），Linux操作系统下的PCB是: task_struct"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-wa4cxx9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-wa4cxx9",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "task_struct-PCB的一种"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-hm537j2",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-hm537j2",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-ttgkipt",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141506-ttgkipt",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "在Linux中描述进程的结构体叫做task_struct。\ntask_struct是Linux内核的一种数据结构，它会被装载到RAM(内存)里并且包含着进程的信息。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-sga04ut",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-sga04ut",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "task_ struct内容分类"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-jehhjck",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-jehhjck",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-7fsm2m2",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141506-7fsm2m2",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "标示符"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 描述本进程的唯一标示符，用来区别其他进程。\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "状态"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 任务状态，退出代码，退出信号等。\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "优先级"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 相对于其他进程的优先级。\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "程序计数器"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 程序中即将被执行的下一条指令的地址。\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "内存指针"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 包括程序代码和进程相关数据的指针，还有和其他进程共享的内存块的指针\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "上下文数据"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 进程执行时处理器的寄存器中的数据[休学例子，要加图CPU，寄存器]。\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "I／O状态信息"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 包括显示的I/O请求,分配给进程的I／O设备和被进程使用的文件列表。\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "记账信息"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 可能包括处理器时间总和，使用的时钟数总和，时间限制，记账号等。\n其他信息"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-cfp7lgm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-cfp7lgm",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "标识符"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-ky59ou0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-ky59ou0",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "说明"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：述本进程的唯一标示符，用来区别其他进程。\n在Linux中用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "pid"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  标识。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-wsgnn21",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-wsgnn21",
+				"updated": "20220722141536"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查询指令 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ps axj | grep 进程名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如我们要查询"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "myproc"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的进程\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220519132335.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nmyproc 进程的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "pid"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 标识符就是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "730"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ."
+				}
+			]
+		},
+		{
+			"ID": "20220722141604-8p83rfa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141604-8p83rfa"
+			}
+		},
+		{
+			"ID": "20220722141506-eyjhzqc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-eyjhzqc",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "状态"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-7px2qb6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-7px2qb6",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "说明"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：任务状态，退出代码，退出信号等。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141605-u7j6t4l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141605-u7j6t4l"
+			}
+		},
+		{
+			"ID": "20220722141506-trvru3o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-trvru3o",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "任务状态："
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-0izb3tm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-0izb3tm",
+				"updated": "20220722141545"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220519214938.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141600-v3m2fhs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141600-v3m2fhs"
+			}
+		},
+		{
+			"ID": "20220722141506-7c0n2rg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-7c0n2rg",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "退出信号："
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-1ztzmid",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-1ztzmid",
+				"updated": "20220722141557"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：注意我们在"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "myproc"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进程中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220519220240.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如我们在main.c中的 return 放回值是 100 。这就是退出信号"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-orq0obb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-orq0obb",
+				"updated": "20220722141657"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "echo $?"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 这个指令就能打印出最近的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "退出信号"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220519220653.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n这个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "100"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  就是我们的退出信号。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141620-coiwmo3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141620-coiwmo3"
+			}
+		},
+		{
+			"ID": "20220722141506-h8ay6vh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-h8ay6vh",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内存指针"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-bfrc5kb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-bfrc5kb",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "说明"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "： 包括程序代码和进程相关数据的指针，还有和其他进程共享的内存块的指针。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-ikdkm9z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-ikdkm9z",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个指针叫做 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "PC指针"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，其实也就是寄存器 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "EIP"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141705-swvhd8b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141705-swvhd8b"
+			}
+		},
+		{
+			"ID": "20220722141506-si846q2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-si846q2",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上下文数据"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-5jb3sgq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-5jb3sgq",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "说明"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "上下文数据"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 进程执行时处理器的寄存器中的数据[休学例子，要加图CPU，寄存器]\n进程是有并发性的，当从就绪态进入运行态时，会将我们需要处理的数据交给CPU，但进程是时间片完了后，就会切换下一个进程，而没有被处理完的数据就会保存"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "task_struct"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中，以便下次进入运行态时，恢复现场。\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722141719-ba2epsu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141719-ba2epsu",
+				"updated": "20220722141725"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220520181017.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141748-6a2ta91",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141748-6a2ta91"
+			}
+		},
+		{
+			"ID": "20220722141506-6b4oqps",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-6b4oqps",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "I／O状态信息:"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-zjmjkqh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-zjmjkqh",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "说明"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：包括显示的I/O请求,分配给进程的I／O设备和被进程使用的文件列表。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141750-4iwq7zj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141750-4iwq7zj"
+			}
+		},
+		{
+			"ID": "20220722141506-sz0rbw4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-sz0rbw4",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "记账信息:"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-bupwjbe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-bupwjbe",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明：可能包括处理器时间总和，使用的时钟数总和，时间限制，记账号等。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141751-1k3ript",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141751-1k3ript"
+			}
+		},
+		{
+			"ID": "20220722141506-9tf73u7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-9tf73u7",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "组织进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-jqghjgk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-jqghjgk",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以在内核源代码里找到它。所有运行在系统里的进程都以"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "task_struct"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "链表的形式存在内核里。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141753-5hxz8k0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141753-5hxz8k0"
+			}
+		},
+		{
+			"ID": "20220722141506-1cb8u4z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-1cb8u4z",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-onflw9o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-onflw9o",
+				"updated": "20220722141803"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程的信息可以通过 /proc 系统文件夹查看\n如：要获取PID为1的进程信息，你需要查看  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "/proc/"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  这个文件夹。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220517230233.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-h4gc1uu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-h4gc1uu",
+				"updated": "20220725225118"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用fork()创建子进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-w1sz9pw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-w1sz9pw",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "fork()函数的本质就是创建子进程。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-hsvla9a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-hsvla9a",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如在文件中写一下代码"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-7qrhy67",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141506-7qrhy67",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e                                                                                       \n#include \u003cunistd.h\u003e                                                                                                                     \nint main()                                                                                                \n{                                                                                                         \n   fork();                                                                                               \n   std::cout\u003c\u003c\"hello proc: \" \u003c\u003c getpid()\u003c\u003c\" \"\u003c\u003c \"helloproc parent: \" \u003c\u003c getppid()\u003c\u003c std::endl;           \n   return 0;                                                                                             \n}   \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-z95n47z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-z95n47z",
+				"updated": "20220722141823"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是执行后发现有两条执行结果。这是因为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "fork()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数创建了一个子进程。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220520183751.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-bawarbe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-bawarbe",
+				"updated": "20220722141831"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：子进程的数据和父进程是共享的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220520184213.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n但父进程或子进程修改数据时， 就会发生"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "写时拷贝"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后变成独立的数据。"
+				}
+			]
+		},
+		{
+			"ID": "20220722142020-iyao1v6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142020-iyao1v6"
+			}
+		},
+		{
+			"ID": "20220722141506-tuibo0s",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-tuibo0s",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "fork的返回值"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-c9b0y0u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-c9b0y0u",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "成功"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-gshp96m",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722141506-gshp96m",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"ID": "20220722141506-p1pgtf7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722141506-p1pgtf7",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"ID": "20220722141506-8ue0enj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722141506-8ue0enj",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "给父进程返回子进程的pid"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722141506-gi1widn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722141506-gi1widn",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"ID": "20220722141506-n4zfwdu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722141506-n4zfwdu",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "给子进程返回0"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-30vl4ry",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141506-30vl4ry",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "失败"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-0ddygh5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-0ddygh5",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "返回小于0   "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\u003c0"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-vdg48c9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-vdg48c9",
+				"updated": "20220722141850"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220520185058.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-16ob4pf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-16ob4pf",
+				"updated": "20220722141859"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220520231607.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-h8gfueg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-h8gfueg",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是fork之后，父进程和子进程谁先执行呢？"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-4tgbpmt",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-4tgbpmt",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-z9kjsp8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141506-z9kjsp8",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "不确定，由调度器调度"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722142015-9wqdem1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142015-9wqdem1"
+			}
+		},
+		{
+			"ID": "20220722141506-9x82zou",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-9x82zou",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程状态"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-adeh5wz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-adeh5wz",
+				"updated": "20220722141913"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220519214938.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-v4dy6wv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-v4dy6wv",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程的状态类"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-lttvrj5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-lttvrj5",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-zfymi82",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141506-zfymi82",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "\"R (running)\", /* 0 "
+						},
+						{
+							"Type": "NodeEmphasis",
+							"Data": "em",
+							"Children": [
+								{
+									"Type": "NodeEmA6kOpenMarker",
+									"Data": "*"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "/\n\"S (sleeping)\", /"
+								},
+								{
+									"Type": "NodeEmA6kCloseMarker",
+									"Data": "*"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 1 "
+						},
+						{
+							"Type": "NodeEmphasis",
+							"Data": "em",
+							"Children": [
+								{
+									"Type": "NodeEmA6kOpenMarker",
+									"Data": "*"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "/\n\"D (disk sleep)\", /"
+								},
+								{
+									"Type": "NodeEmA6kCloseMarker",
+									"Data": "*"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 2 "
+						},
+						{
+							"Type": "NodeEmphasis",
+							"Data": "em",
+							"Children": [
+								{
+									"Type": "NodeEmA6kOpenMarker",
+									"Data": "*"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "/\n\"T (stopped)\", /"
+								},
+								{
+									"Type": "NodeEmA6kCloseMarker",
+									"Data": "*"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 4 "
+						},
+						{
+							"Type": "NodeEmphasis",
+							"Data": "em",
+							"Children": [
+								{
+									"Type": "NodeEmA6kOpenMarker",
+									"Data": "*"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "/\n\"t (tracing stop)\", /"
+								},
+								{
+									"Type": "NodeEmA6kCloseMarker",
+									"Data": "*"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 8 "
+						},
+						{
+							"Type": "NodeEmphasis",
+							"Data": "em",
+							"Children": [
+								{
+									"Type": "NodeEmA6kOpenMarker",
+									"Data": "*"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "/\n\"X (dead)\", /"
+								},
+								{
+									"Type": "NodeEmA6kCloseMarker",
+									"Data": "*"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 16 "
+						},
+						{
+							"Type": "NodeEmphasis",
+							"Data": "em",
+							"Children": [
+								{
+									"Type": "NodeEmA6kOpenMarker",
+									"Data": "*"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "/\n\"Z (zombie)\", /"
+								},
+								{
+									"Type": "NodeEmA6kCloseMarker",
+									"Data": "*"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 32 */"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722142013-ogran7r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142013-ogran7r"
+			}
+		},
+		{
+			"ID": "20220722141506-6kxbpdb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-6kxbpdb",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "后台运行"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-wmc1eqh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-wmc1eqh",
+				"updated": "20220722141959"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在状态后面有个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "+"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  ， 这是说明这个进程运行在前台，如果没有 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "+"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，就是表示进程运行在后台，运行在后台的进程是无法被 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ctrl^c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  kill的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521130610.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-lbfwuug",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-lbfwuug",
+				"updated": "20220722142008"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在运行程序的使用时候可以在 其后 加一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\u0026"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 符号，就可变为后台进程。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521141727.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-5hm9t6j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-5hm9t6j",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "R运行状态（running）:"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-gxd8v6v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-gxd8v6v",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "并不意味着进程一定在运行中，它表明进程要么是在运行中要么在运行队列里。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-dxxxf1m",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141506-dxxxf1m",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n\nint main()\n{\n  \n    while(1)\n    {\n      int c = 10;\n      int a= c;\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-k9h2eca",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-k9h2eca",
+				"updated": "20220722142039"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521122819.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n在当前进程中没有 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "I/O"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 流的使用，所以使用的是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "R"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "状态。"
+				}
+			]
+		},
+		{
+			"ID": "20220722142028-oao5g91",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142028-oao5g91"
+			}
+		},
+		{
+			"ID": "20220722141506-bkpjo1y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-bkpjo1y",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "S睡眠状态（sleeping):"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-yvqo6kh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-yvqo6kh",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "意味着进程在等待事件完成（这里的睡眠有时候也叫做可中断睡眠（interruptible sleep））。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-0cf6lqj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141506-0cf6lqj",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n\nint main()\n{\n    while(1)\n    {\n      int c = 10;\n      int a = c;\n      std::cout \u003c\u003c a \u003c\u003c std::endl; \n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-a706vik",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-a706vik",
+				"updated": "20220722142103"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220520234057.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n比如这进程就是在等待 I/O ,因为这个进程中就有一个输出语句。"
+				}
+			]
+		},
+		{
+			"ID": "20220722142108-2aen9y8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142108-2aen9y8"
+			}
+		},
+		{
+			"ID": "20220722141506-crqjf70",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-crqjf70",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "磁盘休眠状态（Disk sleep）"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-mksf44b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-mksf44b",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有时候也叫"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不可中断睡眠状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（uninterruptible sleep），在这个状态的进程通常会等待IO的结束。\n当进程处于"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "D状态"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不可被杀"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "掉的。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-k5m1tuw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-k5m1tuw",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "T停止状态（stopped）："
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-vrbdtsv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-vrbdtsv",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以通过发送 SIGSTOP 信号给进程来停止（T）进程。这个被暂停的进程可以通过发送 SIGCONT 信号让进程继续运行。"
+				}
+			]
+		},
+		{
+			"ID": "20220722142406-skdglyv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142406-skdglyv",
+				"updated": "20220722142406"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-9dpkp0a"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "kill"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的指令 来停止进程运行，注意：只是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "停止"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；"
+				}
+			]
+		},
+		{
+			"ID": "20220722142438-vinmkyv",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20220722142438-vinmkyv",
+				"updated": "20220722142438"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20220722135728-9dpkp0a'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-4o45twf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-4o45twf",
+				"updated": "20220722142406"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "19"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "号 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SIGSTOP"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来停止进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-92zchrz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-92zchrz",
+				"updated": "20220722142457"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521130105.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n此时的进程状态就是 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "T"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521130119.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-srvjysv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-srvjysv",
+				"updated": "20220722142531"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们在使用 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "18"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "号 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SIGCONT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来开始进程时,进程就会没有后面的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "+"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "了，表示在后台运行。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521130610.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n此时的进程就无法使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ctrl^c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "终止"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进程了，只有使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "kill -9"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 指令来终止进程。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521130841.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-56pg64g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-56pg64g",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "X死亡状态（dead）："
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-zx6wi8q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-zx6wi8q",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个状态只是一个返回状态，你不会在任务列表里看到这个状态。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-dooxkzp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-dooxkzp",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Z(zombie)僵尸进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-0dh8cy0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722141506-0dh8cy0",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"ID": "20220722141506-tu8aw2o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722141506-tu8aw2o",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"ID": "20220722141506-0ielc86",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722141506-0ielc86",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "僵死状态"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（Zombies）是一个比较特殊的状态。当"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "进程退出"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "并且父进程（使用wait()系统调用,后面讲）没有读取到子进程退出的返回代码时就会产生僵死(尸)进程"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722141506-pguplzp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722141506-pguplzp",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"ID": "20220722141506-uybn2j2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722141506-uybn2j2",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "僵死进程会以终止状态保持在进程表中，并且会一直在等待父进程读取退出状态代码。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722141506-tlmmekb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722141506-tlmmekb",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"ID": "20220722141506-vohwplr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722141506-vohwplr",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所以，只要子进程退出，父进程还在运行，但父进程没有读取子进程状态，子进程进入Z状态"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-rdbg27e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141506-rdbg27e",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n#include \u003ccstdlib\u003e\nusing namespace std;\nint main()\n{\n    pid_t id = fork();\n    if(id == 0){\n        //child\n        while(true){\n            cout \u003c\u003c \" I am child, running!\" \u003c\u003c endl;\n            sleep(2);\n        }\n    }\n    else{\n        //parent\n        cout \u003c\u003c \"father do nothing!\\n\" \u003c\u003c endl;\n        sleep(10);\n        exit(1);\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-480csxm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-480csxm",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行以上代码，在右边的窗口中运行 这段脚本 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "while :; do ps axj |head -1 \u0026\u0026 ps ajx| grep myproc | grep -v grep ;sleep 1; echo \"###############\"; done"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-m4mmlof",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-m4mmlof",
+				"updated": "20220722142613"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由此可以在父进程还么退出前，"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-9dpkp0a"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "kill"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 了子进程。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521134459.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-8bvi10u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-8bvi10u",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由此就看能看到Z状态的僵尸子进程。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-xtexbwd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-xtexbwd",
+				"updated": "20220722142628"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521135132.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-oph62td",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-oph62td",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "孤儿进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-l82r6ju",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-l82r6ju",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-u3c3i5j",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722141506-u3c3i5j",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"ID": "20220722141506-guoen2r",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722141506-guoen2r",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"ID": "20220722141506-bdslktx",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722141506-bdslktx",
+										"updated": "20220722141506"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "父进程如果提前退出，那么子进程后退出，进入Z之后，那该如何处理呢？"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722141506-jgrkume",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722141506-jgrkume",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"ID": "20220722141506-25jytba",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722141506-25jytba",
+										"updated": "20220722141506"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "父进程先退出，子进程就称之为“孤儿进程”"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722141506-li2p1t9",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722141506-li2p1t9",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"ID": "20220722141506-4vikk4r",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722141506-4vikk4r",
+										"updated": "20220722141506"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "孤儿进程被"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "1号init进程"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "领养"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "，当然要有init进程"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "回收"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "喽。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-7ernyfe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-7ernyfe",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还是这段代码"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-s32aqhr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141506-s32aqhr",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n#include \u003ccstdlib\u003e\nusing namespace std;\nint main()\n{\n    pid_t id = fork();\n    if(id == 0){\n        //child\n        while(true){\n            cout \u003c\u003c \" I am child, running!\" \u003c\u003c endl;\n            sleep(2);\n        }\n    }\n    else{\n        //parent\n        cout \u003c\u003c \"father do nothing!\\n\" \u003c\u003c endl;\n        sleep(10);\n        exit(1);\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-z58mii7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-z58mii7",
+				"updated": "20220722142704"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521135415.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722142708-4auktto",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142708-4auktto"
+			}
+		},
+		{
+			"ID": "20220722141506-drmdgqg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722141506-drmdgqg",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程优先级"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-ez5tnt2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-ez5tnt2",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本概念"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-gorj64k",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-gorj64k",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-hxhu09h",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722141506-hxhu09h",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"ID": "20220722141506-9mdisdb",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722141506-9mdisdb",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"ID": "20220722141506-maq1nrz",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722141506-maq1nrz",
+										"updated": "20220722141506"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "cpu资源分配的先后顺序，就是指进程的优先权(priority)。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722141506-xwv6b6l",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722141506-xwv6b6l",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"ID": "20220722141506-2l2uhfi",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722141506-2l2uhfi",
+										"updated": "20220722141506"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "优先权高的进程有优先执行权利。配置进程优先权对多任务环境的ux很有用，可以改善系统性能."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722141506-ks9vxl1",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722141506-ks9vxl1",
+								"updated": "20220722141506"
+							},
+							"Children": [
+								{
+									"ID": "20220722141506-7id4rc7",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722141506-7id4rc7",
+										"updated": "20220722141506"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "还可以把进程运行到指定的CPU上，这样一来，把不重要的进程安排到某个CPU,可以大大改善系统整体性能。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-w1ps3s7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-w1ps3s7",
+				"updated": "20220722142719"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521140103.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "UID"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " : 代表执行者的身份\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "PID"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " : 代表这个进程的代号\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "PPID"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ：代表这个进程是由哪个进程发展衍生而来的，亦即父进程的代号\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "PRI"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ：代表这个进程可被执行的优先级，其值越小越早被执行\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "NI"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ：代表这个进程的nice值"
+				}
+			]
+		},
+		{
+			"ID": "20220722142729-8xl5fo9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142729-8xl5fo9"
+			}
+		},
+		{
+			"ID": "20220722141506-4xjoji0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-4xjoji0",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PRI and NI"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-7ponsi8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-7ponsi8",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "PRI"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "也还是比较好理解的，即"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进程的优先级"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，或者通俗点说就是程序被CPU执行的先后顺序，此"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "值越小进程的优先级别越高"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-9wdffd1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-9wdffd1",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "NI"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "呢?就是我们所要说的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "nice值"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "了，其表示"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进程可被执行的优先级的修正数值"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。PRI值越小越快被执行，那么加入nice值后，将会使得PRI变为："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "PRI(new)=PRI(old)+nice"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-sx40xvz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-sx40xvz",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以，调整进程优先级，在Linux下，就是调整进程nice值"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-moo1blx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-moo1blx",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "nice其"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "取值范围"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-20至19"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，一共40个级别"
+				}
+			]
+		},
+		{
+			"ID": "20220722142733-ieq5qm4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142733-ieq5qm4"
+			}
+		},
+		{
+			"ID": "20220722141506-hnhrb27",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141506-hnhrb27",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "优先级修改"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-zh3tzr3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-zh3tzr3",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "优先级最好不要修改，因为我们对于资源的分配上没有系统了解，让系统自己做就好了。但是基于学习我们就学习用 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "top"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来修改进程优先级。\n注意："
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "NI值"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "得修改范围是 "
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-20至19"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，频繁进行修改时需要使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "sudo"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "sudo top"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-3jh1ms5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-3jh1ms5",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "nice值为何要是一个相对比较小的范围呢？？"
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-bvyyeo1",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141506-bvyyeo1",
+				"updated": "20220722141506"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141506-n5begx4",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141506-n5begx4",
+						"updated": "20220722141506"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "优先级再怎么设置，也只能是一种"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "相对的优先级"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "不能"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "出现"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "绝对的优先级"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，否则会出现很严重的"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进程“饥饿问题”"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n调度器：较为均衡的让每个进程享受到CPU资源"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-yfzcen6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-yfzcen6",
+				"updated": "20220722142819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 top后，会出现这个页面\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521143204.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n进入后，按下 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "r"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "键 ，就会出现调整优先级的命令行 ：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521143346.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n虽然上面会有"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "默认调整"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的进程，但是只要输入我们的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进程的pid"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "就是进行修改了。\n如我们的输入的进程pid为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "23283"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , 修改的 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "NI"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 为 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "10"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521143753.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141506-6fojcpr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-6fojcpr",
+				"updated": "20220722142827"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看是否修改成功\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521144047.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n修改成功"
+				}
+			]
+		},
+		{
+			"ID": "20220722142929-b2xic57",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142929-b2xic57"
+			}
+		},
+		{
+			"ID": "20220722141506-9axeozo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-9axeozo",
+				"updated": "20220722142845"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果再将NI的值该为5呢，结果是95吗？\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521144649.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n结果：并不是，而是以"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "默认的PRI的值作为基础修改的"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521144716.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722142926-osel0z5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142926-osel0z5"
+			}
+		},
+		{
+			"ID": "20220722141506-mbr8qnh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141506-mbr8qnh",
+				"updated": "20220722142919"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而当NI值修改为-100时呢？\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521145252.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n结果：发现Ni值"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最低"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "只能为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-20"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，当然最高为 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "19"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521145322.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}

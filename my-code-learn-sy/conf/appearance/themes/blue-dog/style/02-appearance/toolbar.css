@@ -1,0 +1,24 @@
+/* --------------------------------------------------鼠标选中文本后弹出的工具栏样式------------------------------------- */
+.protyle-toolbar {
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 20%) 0px 4px 20px 0px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.protyle-toolbar__item {
+    color: var(--b3-font-color-gray);
+}
+
+.protyle-toolbar__item:hover:not(.protyle-toolbar__item:focus) {
+    color: var(--b3-font-color-hover);
+    background-color: var(--b3-theme-hover-gray);
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.protyle-toolbar__item--current {
+    color: var(--b3-theme-primary) !important;
+    background-color: var(--b3-theme-tm2) !important;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* --------------------------------------------------鼠标选中文本后弹出的工具栏样式 END------------------------------------- */

@@ -1,0 +1,26 @@
+/* ------------------------------------------------块引用/引用块------------------------------------------------- */
+
+/* 设置引用块格式 */
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref'] {
+    color: #175199;
+    font-weight: 550;
+    padding: 1px 3px;
+    border-radius: 4px;
+}
+
+/* 为引用块后面增加引用图标 */
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::before {
+    color: rgba(128, 128, 128, 0.6);
+    content: "[[";
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::after {
+    color: rgba(128, 128, 128, 0.6);
+    content: "]]";
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]:hover {
+    background-color: #0066ff1a;
+}
+
+/* ------------------------------------------------块引用 END------------------------------------------------- */

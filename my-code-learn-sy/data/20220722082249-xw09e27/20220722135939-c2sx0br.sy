@@ -1,0 +1,962 @@
+{
+	"ID": "20220722135939-c2sx0br",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722135939-c2sx0br",
+		"title": "重定向与通道",
+		"updated": "20220722140226"
+	},
+	"Children": [
+		{
+			"ID": "20220722135953-wk20zr7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722135953-wk20zr7",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "重定向与通道"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-g0a9335",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135953-g0a9335",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "重定向"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-qy6cogj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-qy6cogj",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "重定向又分为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "输出重定向"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "输入重定向"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-zet60pa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722135953-zet60pa",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输出重定向"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-ectmbke",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135953-ectmbke",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135953-pj6t7d2",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135953-pj6t7d2",
+						"updated": "20220722135953"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "将命令执行的标准输出结果重定向输出到指定的文件中，如果没有该文件，就会创建此文件如果该文件已包含数据，会清空原有数据，再写入新数据。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-hy20zua",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-hy20zua",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输出重定向符号 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\u003e"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-b2f5mdd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-b2f5mdd",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例1："
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-rfzpqm6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722135953-rfzpqm6",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[fmy@VM-8-6-centos ~]$ echo \"hello world\"\nhello world\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-uv82zpb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-uv82zpb",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "echo"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令 表示打印。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-g4dy8pz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-g4dy8pz",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果我们要将这段指令输出到一个文件"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "test.c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中，就需要用到输出重定向。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-rf4a5jr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722135953-rf4a5jr",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[fmy@VM-8-6-centos ~]$ echo \"hello world\" \u003e test.txt\n\n[fmy@VM-8-6-centos ~]$ cat test.txt \nhello world\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-z05ypxr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-z05ypxr",
+				"updated": "20220722140101"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220428130806.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n使用输出重定向到"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "test.txt"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件后 ， 使用"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-fskrfaq"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "cat指令"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "查看文件内容，此时发现，输出结果已经被重定向到了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "test.txt"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件中了。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-bh0zyv5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-bh0zyv5",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "普通的重定向"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "不能在文件内容中"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "追加数据"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，当再次使用普通的输出重定向时，就会覆盖了之前的数据。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-6hs69vs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722135953-6hs69vs",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[fmy@VM-8-6-centos ~]$ echo \"hello world\" \u003e test.txt\n[fmy@VM-8-6-centos ~]$ \n[fmy@VM-8-6-centos ~]$ \n[fmy@VM-8-6-centos ~]$ cat test.txt \nhello world\n\n[fmy@VM-8-6-centos ~]$ echo \"hello Linux\" \u003e test.txt \n[fmy@VM-8-6-centos ~]$ \n[fmy@VM-8-6-centos ~]$ cat test.txt \nhello Linux\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-otxo1xr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-otxo1xr",
+				"updated": "20220722140143"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在之前代码的基础上我们将"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "hello Linux"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 这段字符串重定向到 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "test.txt"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中， 使用"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-fskrfaq"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "cat指令"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "显示代码发现，之前的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "hello world"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 已经被覆盖了。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-5apzkb4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722135953-5apzkb4",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "追加重定向"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-89cxfal",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-89cxfal",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们要在文件中追加内容时，可以使用"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "追加输出重定向"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\u003e\u003e"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-13x24f8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-13x24f8",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果我们要是在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "test.txt"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中添加一句 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "hello YhhEmm"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,就需要是使用"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "追加重定向"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-wtz77w3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722135953-wtz77w3",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[fmy@VM-8-6-centos ~]$ echo \"hello YhhEmm\" \u003e\u003e test.txt \n[fmy@VM-8-6-centos ~]$ \n[fmy@VM-8-6-centos ~]$ cat test.txt \nhello Linux\nhello YhhEmm\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-ndhs6oq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722135953-ndhs6oq",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输入重定向"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-3jdqo6q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-3jdqo6q",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "输入重定向"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\u003c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  , 将一个文件或输入的导向给为我们确定的文件或输出流"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-m1w38dw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722135953-m1w38dw",
+				"updated": "20220722135953"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[fmy@VM-8-6-centos ~]$ cat \u003c test.txt\nhello Linux\nhello YhhEmm\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722135953-2otzc7n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135953-2otzc7n",
+				"updated": "20220722140225"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "test.txt"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的内容输入到 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-fskrfaq"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "cat指令"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中。"
+				}
+			]
+		},
+		{
+			"ID": "20220722140226-2xoftt3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140226-2xoftt3"
+			}
+		}
+	]
+}

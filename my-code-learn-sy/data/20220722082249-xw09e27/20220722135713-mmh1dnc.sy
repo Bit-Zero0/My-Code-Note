@@ -1,0 +1,5664 @@
+{
+	"ID": "20220722135713-mmh1dnc",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722135713-mmh1dnc",
+		"title": "linux常用命令",
+		"updated": "20220913224753"
+	},
+	"Children": [
+		{
+			"ID": "20220910160658-wh56ukz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220910160658-wh56ukz",
+				"updated": "20220910160658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程通信的命令"
+				}
+			]
+		},
+		{
+			"ID": "20220910160658-favctnz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220910160658-favctnz",
+				"updated": "20220910160658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ipcs"
+				}
+			]
+		},
+		{
+			"ID": "20220910160658-3m1fy9p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160658-3m1fy9p",
+				"updated": "20220910160658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以查看进程通信的方式的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "共享内存"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "消息队列"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "信号量"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160658-kr8ms5e",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220910160658-kr8ms5e",
+				"updated": "20220910160658"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220910160658-vucrto6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220910160658-vucrto6",
+						"updated": "20220910160658"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-m"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 仅查看共享内存\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-q"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 仅查看消息队列\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-s"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 仅查看信号量"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160658-gk0v0z8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220910160658-gk0v0z8",
+				"updated": "20220910160658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ipcrm"
+				}
+			]
+		},
+		{
+			"ID": "20220910160658-ue3fuel",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160658-ue3fuel",
+				"updated": "20220910160658"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ipcrm -m [shmid]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n释放或进程通信的方式的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "共享内存"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "消息队列"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "信号量"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160658-kkdy7yo",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220910160658-kkdy7yo",
+				"updated": "20220910160658"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220910160658-dtto0mo",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220910160658-dtto0mo",
+						"updated": "20220910160658"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-m"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 释放共享内存\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-q"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 释放消息队列\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-s"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 释放看信号量"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160657-sws7dxd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160657-sws7dxd"
+			}
+		},
+		{
+			"ID": "20220904133800-0g554sq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220904133800-0g554sq",
+				"updated": "20220904133800"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关于链接的命令"
+				}
+			]
+		},
+		{
+			"ID": "20220904133800-2jkiy65",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220904133800-2jkiy65",
+				"updated": "20220904133800"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ar -rc"
+				}
+			]
+		},
+		{
+			"ID": "20220904133800-8qhh8vi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133800-8qhh8vi",
+				"updated": "20220904133812"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对二进制文件"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": ".o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行打包，生成静态库。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220831224304"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220831224304-20220904133812-70shrxm.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220904133800-mzh75qm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220904133800-mzh75qm",
+				"updated": "20220904133800"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ar -tv"
+				}
+			]
+		},
+		{
+			"ID": "20220904133800-en9ouor",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133800-en9ouor",
+				"updated": "20220904133819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看静态库内的二进制文件。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220831224407"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220831224407-20220904133819-4h3e227.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220904133849-sgu5f37",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133849-sgu5f37"
+			}
+		},
+		{
+			"ID": "20220904133800-2i53irs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220904133800-2i53irs",
+				"updated": "20220913224753"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ldd "
+				}
+			]
+		},
+		{
+			"ID": "20220904133800-4lfbpve",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133800-4lfbpve",
+				"updated": "20220904133836"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "作用"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：查看"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可执行文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "链接"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用法"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ldd  可执行文件"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220904133758-bu4j4tq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133758-bu4j4tq",
+				"updated": "20220904133840"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220830210202"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220830210202-20220904133839-1s5ce83.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904133844-zfilg06",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133844-zfilg06"
+			}
+		},
+		{
+			"ID": "20220722135728-xktkrfz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722135728-xktkrfz",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux常用命令"
+				}
+			]
+		},
+		{
+			"ID": "20220904133922-1pan1of",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220904133922-1pan1of",
+				"updated": "20220910160710"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "wc"
+				}
+			]
+		},
+		{
+			"ID": "20220904133922-jxtrsao",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133922-jxtrsao",
+				"updated": "20220904133922"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "作用"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：统计指定文件中的字节数、字数、行数，并将统计结果显示输出。"
+				}
+			]
+		},
+		{
+			"ID": "20220904133922-8k5o1ip",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220904133922-8k5o1ip",
+				"updated": "20220904133922"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220904133922-yr98x9a",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220904133922-yr98x9a",
+						"updated": "20220904133922"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-c"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "　  统计字节数\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-l"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "　   统计行数\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-m"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "　 统计字符数。这个参数不能与 -c 参数一起使用。\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-w"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "　 统计字数。一个字被定义为空白、跳格或换行字符分隔的字符串。\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-L"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "　 打印最长行的长度"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904133922-dll51mo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133922-dll51mo",
+				"updated": "20220904133939"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220903170703"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220903170703-20220904133939-nt6cvr8.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904133922-dlde03s",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220904133922-dlde03s",
+				"updated": "20220904133922"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220904133922-z3z7f9d",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220904133922-z3z7f9d",
+						"updated": "20220904133922"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "5　　    7　　        33　　        abc.txt\n行数　单词数　　字节数　　文件名"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904133927-nm88o2b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133927-nm88o2b"
+			}
+		},
+		{
+			"ID": "20220904133922-nk87h0n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220904133922-nk87h0n",
+				"updated": "20220910160720"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "stat"
+				}
+			]
+		},
+		{
+			"ID": "20220904133922-dzyt4hu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133922-dzyt4hu",
+				"updated": "20220904133952"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "作用"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：查看文件属性\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用法"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "stat 文件名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904134027-tpcdr1l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904134027-tpcdr1l",
+				"updated": "20220904134054"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220830185336"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220830185336-20220904134054-lhi8qwx.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904134027-kll3n6g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904134027-kll3n6g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220904133921-mwj672z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904133921-mwj672z"
+			}
+		},
+		{
+			"ID": "20220722135728-4awipt7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-4awipt7",
+				"updated": "20220910160726"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "pwd"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-zgf2xhl",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-zgf2xhl",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-iet6ekw",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-iet6ekw",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "pwd"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 查看当前路径"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135738-q66458n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135738-q66458n"
+			}
+		},
+		{
+			"ID": "20220722135728-ycmemjs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-ycmemjs",
+				"updated": "20220910160731"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ls"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-n5kpelp",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-n5kpelp",
+				"updated": "20220819170929"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-15i4sv6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-15i4sv6",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-ls"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对于目录，该命令列出该目录下的所有子目录与文件。对于文件，将列出文件名以及其他信息。"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-nnvir70",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-nnvir70",
+						"updated": "20220819170929"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-qiqe3ts",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-qiqe3ts",
+								"updated": "20220819170929"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-a"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 列出目录下的所有文件，包括以 . 开头的隐含文件\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-k"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 以 k 字节的形式表示文件的大小。ls –alk 指定文件\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-r"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对目录反向排序。\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-t"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 以时间排序。\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-R"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 列出所有子目录下的文件。(递归)\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-l"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：使⽤长格式列出⽂件及⽬录信息"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-320qu3h",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-320qu3h",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-jz70xy8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-jz70xy8",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "ll"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 查看当前目录的文件详细信息，后面可以跟指定文件夹名，相当于 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ls -la"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135736-ionaxfh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135736-ionaxfh"
+			}
+		},
+		{
+			"ID": "20220722135728-x6tsqmp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-x6tsqmp",
+				"updated": "20220910160737"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "cd"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-eamvf6j",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-eamvf6j",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-hiyongz",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-hiyongz",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "cd"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 改变工作目录，将当前工作目录切换到指定的目录下"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-9uerqiv",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-9uerqiv",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-4e9x18u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-4e9x18u",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "cd ~"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：进入用户家目\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "cd -"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：返回最近访问目录"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135740-vydssnd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135740-vydssnd"
+			}
+		},
+		{
+			"ID": "20220722135728-a3izcjt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-a3izcjt",
+				"updated": "20220910160803"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "touch"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-utrqk01",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-utrqk01",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-8o0r5uk",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-8o0r5uk",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "touch"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 主要用来创建文件，单页可以更改文档或目录的日期时间，包括存储时间和更改时间。"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-n9u02yg",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-n9u02yg",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-ju0gzro",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-ju0gzro",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-a"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "   或--time=atime或--time=access或--time=use只更改存取时间。\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-r"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  把指定文档或目录的日期时间，统统设成和参考文档或目录的日期时间相同。\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-t"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  使用指定的日期时间，而非现在的时间。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-pmm4f7x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-pmm4f7x",
+				"updated": "20220910160757"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mkdir"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-lng5f6f",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-lng5f6f",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-r837uo4",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-r837uo4",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mkdir"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 在当前目录下创建目录"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-pwv45iv",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-pwv45iv",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-vik9qdz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-vik9qdz",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-p"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录;"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-hschah6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-hschah6",
+				"updated": "20220910160812"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "rm"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-rzo8hua",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-rzo8hua",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-fjovw5c",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-fjovw5c",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "rm"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "删除文件或目录"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-j3asqpi",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-j3asqpi",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-hqdw14e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-hqdw14e",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-f"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  强制删除 ，不必询问\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-r"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  删除文件目录，及其下的所有文件与目录。\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-i"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  删除前逐一询问确认"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-z19j2o0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-z19j2o0",
+				"updated": "20220910160819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "man"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-q62mxsc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-q62mxsc",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux系统中的可靠男人。\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "语法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "man [选项] 命令"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-5u3h306",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-5u3h306",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-2cvjqe0",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-2cvjqe0",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "man"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  Linux的命令有很多参数，我们不可能全记住，我们可以通过查看联机手册获取帮助。"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-hlu9kzx",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-hlu9kzx",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-wsbme51",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-wsbme51",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-k"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 根据关键字搜索联机帮助\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-a"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 将所有章节的都显示出来，比如 man printf 它缺省从第一章开始搜索，知道就停止，用a选项，当按下q退出，他会继续往后面搜索，直到所有章节都搜索完毕。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-j5kfif0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-j5kfif0",
+				"updated": "20220910160751"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "cp"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-28lfvr5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-28lfvr5",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-46xqh96",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-46xqh96",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "cp"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 也就是拷贝文件或目录。 如同时指定两个以上的文件或目录，且最后的目的地是一个已经存在的目录，则它会把前面指定的所有文件或目录复制到此目录中。若同时指定多个文件或目录，而最后的目的地并非一个已存在的目录，则会出现错误信息"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-wk8oecd",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-wk8oecd",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-80qbb64",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-80qbb64",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-f"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " (force)  强行复制文件或目录，不论目的文件或目录是否存在。\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-i"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  或 --interactive 覆盖文件之前先询问用户\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-r"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 递归处理，将指定目录下的文件与子目录一并处理。若源文件或目录的形态，不属于目录或符号链接，则一律视为普通文件处理"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-7xaebd9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-7xaebd9",
+				"updated": "20220910160828"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mv"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-8j97axy",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-8j97axy",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-kvtv9yo",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-kvtv9yo",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mv"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 用来移动文件或文件改名"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-goeyh4g",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-goeyh4g",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-898iceb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-898iceb",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-f"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-i"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ：若目标文件 (destination) 已经存在时，就会询问是否覆盖！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-fskrfaq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-fskrfaq",
+				"updated": "20220910160847"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "cat"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-2n9w3ya",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-2n9w3ya",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-ufqtr5h",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-ufqtr5h",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "cat"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "   查看目标文件内容。"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-j36x467",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-j36x467",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-3tqun3q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-3tqun3q",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-b"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对非空输出行编号\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-n"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对输出的所有行编号\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-s"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 不输出多行空行"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-jpwpcp5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-jpwpcp5",
+				"updated": "20220910160853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "more"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-gvblnim",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-gvblnim",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-9pixeoo",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-9pixeoo",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "more"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能类似 cat，查看重头展示目标文件内容的一部分，按 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "s"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 键向下翻动，不能向上翻动， 不够灵活，推荐使用 "
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "less"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "指令"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-p96mx6x",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-p96mx6x",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-8vysdlq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-8vysdlq",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-n"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对输出的所有行编号\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "q"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 退出more"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-o1ti2yl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-o1ti2yl",
+				"updated": "20220910160857"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "less"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-j4ljn2o",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-j4ljn2o",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-o58f9kj",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-o58f9kj",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "less"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "与more类似，但使用less可以随意浏览文件，而more仅能向前移动，却不能向后移动，而且less在查看之前不会加载整个文件。"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-h6sugph",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-h6sugph",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-9ufr469",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-9ufr469",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-i"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  忽略搜索时的大小写\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-N"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  显示每行的行号\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "/字符串"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：向下搜索“字符串”的功能\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "?字符串"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：向上搜索“字符串”的功能\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "n"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：重复前一个搜索（与 / 或 ? 有关）\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "N"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：反向重复前一个搜索（与 / 或 ? 有关）\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "q"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":quit"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-uo617ei",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-uo617ei",
+				"updated": "20220910160901"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "head"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-syt7jap",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-syt7jap",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-pl7n85y",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-pl7n85y",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "head"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-7gppa56",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-7gppa56",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-brg3dp9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-brg3dp9",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-n\u003c行数\u003e"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 显示的行数"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-y3nxgi7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-y3nxgi7",
+				"updated": "20220910160905"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "tail"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-enjlh0c",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-enjlh0c",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-8j5ooqq",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-8j5ooqq",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "tail"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-9ndd5r2",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-9ndd5r2",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-b6ae768",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-b6ae768",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-n\u003c行数\u003e"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 显示的行数"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-u4rufjb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-u4rufjb",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "date"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-c6ahxpi",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-c6ahxpi",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-fq268nl",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-fq268nl",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "date"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "是时间指令"
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-6zmzx6i",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-6zmzx6i",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-h3b9qxw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-h3b9qxw",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "%H"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " : 小时(00..23)\n==%M ==: 分钟(00..59)\n==%S ==: 秒(00..61)\n==%X ==: 相当于 %H:%M:%S\n==%d ==: 日 (01..31)\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "%m"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " : 月份 (01..12)\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "%Y"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " : 完整年份 (0000..9999)\n"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "%F"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " : 相当于 %Y-%m-%d"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-wxcsqzf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-wxcsqzf",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "cal"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-s0vcoy2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-s0vcoy2",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "cal命令可以用来显示公历（阳历）日历。公历是现在国际通用的历法\n命令格式： "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "cal [参数][月份][年份]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-uddv7ca",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-uddv7ca",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-6cmjpd6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-6cmjpd6",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "cal"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722135728-o8f924p",
+					"Type": "NodeBlockquote",
+					"Properties": {
+						"id": "20220722135728-o8f924p",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeBlockquoteMarker",
+							"Data": "\u003e"
+						},
+						{
+							"ID": "20220722135728-oo8zicy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722135728-oo8zicy",
+								"updated": "20220722135728"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "-3"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 显示系统前一个月，当前月，下一个月的月历\n-j  显示在当年中的第几天（一年日期按天算，从1月1号算起，默认显示当前月在一年中的天数）\n-y  显示当前年份的日历"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-kr32qrn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-kr32qrn",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "find"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-u4yy4ln",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-u4yy4ln",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "功能： 用于在文件树种查找文件，并作出相应的处理（可能访问磁盘）\n语法： fifind pathname -options"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-8fry0ea",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-8fry0ea",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-z34kxyg",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-z34kxyg",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-name"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "   按照文件名查找文件。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-me728tr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-me728tr",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "grep"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-hn5toa3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-hn5toa3",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "grep[选项]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n功能： 在文件中搜索字符串，将找到的行打印出来"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-ovt4geb",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-ovt4geb",
+				"updated": "20220905103609"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-2pblqr8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-2pblqr8",
+						"updated": "20220905103609"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-i"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：忽略大小写的不同，所以大小写视为相同\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-n"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：输出行号\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-v"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：反向选择，亦即显示出没有 '搜寻字符串' 内容的那一行"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-wu8yaih",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-wu8yaih",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "zip/unzip："
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-7bvdjpy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-7bvdjpy",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法： zip 压缩文件.zip 目录或文件\n功能： 将目录或文件压缩成zip格式或解压unzip文件"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-xjgzah2",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-xjgzah2",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-by40435",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-by40435",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-r"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 递 归处理，将指定目录下的所有文件和子目录一并处理"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-4g8svfz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-4g8svfz",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "tar"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-exebqnr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-exebqnr",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打包/解包，不打开它，直接看内容"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-xup7l50",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-xup7l50",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-744so4z",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-744so4z",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-c"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：建立一个压缩文件的参数指令(create 的意思)；\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-x"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：解开一个压缩文件的参数指令！\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-t"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：查看 tarfifile 里面的文件！\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-z"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-j"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-v"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-f"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-C"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ： 解压到指定目录"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-usdqpdq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-usdqpdq",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "uname"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-xptet59",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-xptet59",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "语法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "uname [选项]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " \n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "： uname用来获取电脑和操作系统的相关信息"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-f6mqtp3",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-f6mqtp3",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-8l063by",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-8l063by",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-r"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 显示内核版本信息\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-a"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "或"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "–all"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 详细输出所有信息，依次为内核名称，主机名，内核版本号，内核版本，硬件名，处理器类型，硬件平台类型，操作系统名称"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-eracrph",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-eracrph",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "file"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-pxzgijl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-pxzgijl",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能说明："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 辨识文件类型。"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-iocn42p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-iocn42p",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "语法："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "fifile [选项] 文件或目录... "
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-yug138s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-yug138s",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用选项："
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-ka93cwo",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722135728-ka93cwo",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722135728-ktqmshj",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722135728-ktqmshj",
+						"updated": "20220722135728"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-c"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 详细显示指令执行过程，便于排错或分析程序执行的情形。\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-z"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 尝试去解读压缩文件的内容。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-fjy9q91",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-fjy9q91",
+				"updated": "20220819165605"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220503164223.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-lka8ima",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-lka8ima",
+				"updated": "20220819165614"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220503164239.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220819165540-vqalvq7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819165540-vqalvq7"
+			}
+		},
+		{
+			"ID": "20220819165947-mlcofqa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220819165947-mlcofqa",
+				"updated": "20220819165947"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ln"
+				}
+			]
+		},
+		{
+			"ID": "20220819165947-aedokwr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819165947-aedokwr",
+				"updated": "20220819165947"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "语法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ln [选项] 链接地址 链接名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " \n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "： 创建软/硬链接"
+				}
+			]
+		},
+		{
+			"ID": "20220819165947-vh69vfi",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220819165947-vh69vfi",
+				"updated": "20220819170054"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220819170048-o0hj8d6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220819170048-o0hj8d6",
+						"updated": "20220819170048"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "不带 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-s"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 参数创建的是硬链接"
+						}
+					]
+				},
+				{
+					"ID": "20220819170051-yd985nq",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220819170051-yd985nq",
+						"updated": "20220819170054"
+					},
+					"Children": [
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "Pasted image 20220819155115"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "assets/Pasted image 20220819155115-20220819170054-04ednfh.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n​"
+						},
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "Pasted image 20220819155135"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "assets/Pasted image 20220819155135-20220819170054-64tndtk.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220819170134-zbiq7h4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819170134-zbiq7h4",
+				"updated": "20220819170134"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不带 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-s"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 参数创建的是硬链接"
+				}
+			]
+		},
+		{
+			"ID": "20220819170142-yhgc1wc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819170142-yhgc1wc"
+			}
+		},
+		{
+			"ID": "20220819170134-h258qf1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220819170134-h258qf1",
+				"updated": "20220819170134"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "unlink"
+				}
+			]
+		},
+		{
+			"ID": "20220819170134-kn245rj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819170134-kn245rj",
+				"updated": "20220819170134"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "语法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unlink 链接名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " \n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "： 删除链接"
+				}
+			]
+		},
+		{
+			"ID": "20220819170152-d78i5la",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819170152-d78i5la"
+			}
+		},
+		{
+			"ID": "20220722135728-fy230lj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722135728-fy230lj",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程命令"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-2mqk3d1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-2mqk3d1",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ps"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-ydjd4lb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-ydjd4lb",
+				"updated": "20220722135831"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明：查看进程。\n但是通常是配合着 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-me728tr"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "grep"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 使用."
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-ke90yr7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-ke90yr7",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ps axj | head -1 \u0026\u0026 ps axj | grep 进程名"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-wod497q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-wod497q",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果要查看myproc"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-xv9ne6w",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722135728-xv9ne6w",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ps axj | head -1 \u0026\u0026 ps axj | grep 进程名\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-vmmm949",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-vmmm949",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "或查看"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "pid"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 为 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "66123"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-t3m9etm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722135728-t3m9etm",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ps axj | head -1 \u0026\u0026 ps axj | grep 66123\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220913224343-iivatfc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913224343-iivatfc"
+			}
+		},
+		{
+			"ID": "20220722135728-zpa179r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-zpa179r",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ps -al"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-xf80ec8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-xf80ec8",
+				"updated": "20220722135904"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到最近开始运行的进程\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521142254.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913221959-ybltfwe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913221959-ybltfwe"
+			}
+		},
+		{
+			"ID": "20220913222001-gsvxdn3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220913222001-gsvxdn3",
+				"updated": "20220913224135"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ps -aL"
+				}
+			]
+		},
+		{
+			"ID": "20220913222001-hq13pge",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913222001-hq13pge",
+				"updated": "20220913224334"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看轻量级进程(可以看到线程)\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913182254"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913182254-20220913222259-8nyojqh.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220913221959-fivrmje",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913221959-fivrmje"
+			}
+		},
+		{
+			"ID": "20220722135728-9dpkp0a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-9dpkp0a",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "kill"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-4re7ut5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-4re7ut5",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明：杀进程或控制进程"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-vhiuwvz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-vhiuwvz",
+				"updated": "20220722135912"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "kill -l"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  ， 可以查看"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "kill"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 命令菜单。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521125525.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722142429-hp4h29t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722142429-hp4h29t"
+			}
+		},
+		{
+			"ID": "20220722135728-j104qn9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722135728-j104qn9",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "环境变量指令"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-r85188t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-r85188t",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "env 查看详细环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-pvui4wh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-pvui4wh",
+				"updated": "20220722135923"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521153815.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-w19c8pt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-w19c8pt",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "echo:显示某个环境变量值"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-4cvhrsf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722135728-4cvhrsf",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "echo $?"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以查看最近进程退出时的退出码"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-2adop6i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-2adop6i",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "export:设置一个新的环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-b7pmztj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-b7pmztj",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "unset:清除环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722135728-6wv1evs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722135728-6wv1evs",
+				"updated": "20220722135728"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "set:显示本地定义的shell变量和环境变量"
+				}
+			]
+		}
+	]
+}

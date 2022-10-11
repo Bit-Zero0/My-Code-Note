@@ -1,0 +1,77 @@
+/* ————————————————————设置界面颜色———————————————————— */
+/* 设置界面侧栏 */
+.b3-dialog--open .b3-dialog__container ul.b3-tab-bar.b3-list.b3-list--background {
+    background-color: #fafbfc !important;
+    border-right: 1px solid var(--b3-border-color);
+}
+
+
+li.b3-list-item--focus.b3-list-item.b3-list-item--big {
+    color: var(--b3-theme-primary);
+}
+
+/* 设置界面右栏 */
+.b3-dialog--open .b3-dialog__container .b3-tab-container {
+    background-color: white !important;
+}
+
+/* 搜索界面标签页中文字居中 */
+.b3-dialog--open .b3-dialog__container span.item__text {
+    padding: 4px !important;
+}
+
+/* 给设置界面选择的地方加上边框 */
+.b3-dialog--open .b3-dialog__container .b3-select {
+    border: 1px solid var(--b3-border-color1);
+}
+
+/* 设置界面左右按钮的边框 */
+.b3-dialog--open .b3-dialog__container .b3-switch:after {
+    border: 0.15em solid white;
+}
+
+/* 去掉设置界面某些选项框前面有滚动条的bug */
+/* .b3-dialog--open .b3-dialog__container .fn__flex-1 {
+    overflow: hidden;
+} */
+
+.fn__flex-center.fn__flex-1.ft__on-surface {
+    overflow: hidden;
+}
+
+/* 为“打开主题文件夹”的按钮设置下划线 */
+a#appearanceOpenTheme,
+a#appearanceOpenIcon {
+    border-bottom: 2px solid gray;
+}
+
+a#appearanceOpenTheme:hover,
+a#appearanceOpenIcon:hover {
+    text-decoration: none;
+}
+
+/* ————————————————————账号-续订价格那里的设置———————————————————— */
+.config-account__center--text .b3-button--outline:hover {
+    color: inherit;
+    background-color: inherit;
+}
+
+
+
+/* 取消集市里边主题预览图鼠标悬浮时的动画 */
+.b3-card:hover {
+    background-color: var(--b3-theme-background) !important;
+    box-shadow: none;
+    transform: none !important;
+}
+
+.b3-card {
+    box-shadow: none;
+    border: 1px solid var(--b3-border-color1);
+}
+
+
+/* 设置对话框级别 */
+.config-bazaar__readme {
+    z-index: 2;
+}

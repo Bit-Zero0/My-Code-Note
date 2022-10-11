@@ -1,0 +1,2473 @@
+{
+	"ID": "20220722141042-5jkjzrd",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722141042-5jkjzrd",
+		"title": "Linux权限管理",
+		"updated": "20220722145339"
+	},
+	"Children": [
+		{
+			"ID": "20220722141051-rej8itu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141051-rej8itu",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux权限"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-ws4m6s7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-ws4m6s7",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "inux下有两种用户：超级用户（root）、普通用户。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-520mhxc",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141051-520mhxc",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141051-nitu738",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-nitu738",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "超级用户"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：可以再linux系统下做任何事情，不受限制\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "普通用户"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：在linux下做有限的事情。\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "超级用户"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "的命令提示符是  "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "#"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  ，普通用户的命令提示符是 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "#"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-jd5io83",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-jd5io83",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "命令："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "su [用户名]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n功能：切换用户。\n例如，要从root用户切换到普通用户user，则使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "su user"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-asifpuk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141051-asifpuk",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "文件访问者分类"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-xr8jw9w",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141051-xr8jw9w",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141051-gzfeac8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-gzfeac8",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "文件和文件目录的所有者："
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "u"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ---User（中国平民 法律问题）\n文件和文件目录的所有者所在的组的用户："
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "g"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  ---Group（不多说）\n其它用户："
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "o"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  ---Others （外国人）"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-9kvucvy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-9kvucvy",
+				"updated": "20220722141104"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220429073618.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-g773tpo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-g773tpo",
+				"updated": "20220722141111"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "权限的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "拥有者"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "所属组"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220429073851.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141120-vnlzs2b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141120-vnlzs2b"
+			}
+		},
+		{
+			"ID": "20220722141051-nn5k6zu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141051-nn5k6zu",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "文件类型和访问权限(事物属性)"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-o6d66ec",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141051-o6d66ec",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "文件类型"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-drjhpwn",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141051-drjhpwn",
+				"updated": "20220722145339"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141051-e3q29rs",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-e3q29rs",
+						"updated": "20220722145339"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "d"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：文件夹\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：普通文件\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "l"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：软链接（类似Windows的快捷方式）\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "b"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：块设备文件（例如硬盘、光驱等）\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "p"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：管道文件\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "c"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：字符设备文件（例如屏幕等串口设备）\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "s"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：套接口文件\n​"
+						},
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "assets/"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "assets/020220429074522.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-ie7gp0k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141051-ie7gp0k",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本权限"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-91yhcvt",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141051-91yhcvt",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141051-0moj65f",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-0moj65f",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "读  "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "r"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：Read对文件而言，具有读取文件内容的权限；对目录来说，具有浏览该目录信息的权限"
+						}
+					]
+				},
+				{
+					"ID": "20220722141051-fuqbtke",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-fuqbtke",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "写  "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "w"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：Write对文件而言，具有修改文件内容的权限；对目录来说具有删除移动目录内文件的权限"
+						}
+					]
+				},
+				{
+					"ID": "20220722141051-hoab692",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-hoab692",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "执行 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "x"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：execute对文件而言，具有执行文件的权限；对目录来说，具有进入目录的权限"
+						}
+					]
+				},
+				{
+					"ID": "20220722141051-2lamwug",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-2lamwug",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "   表示不具有该项权限"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-l3kcnjd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-l3kcnjd",
+				"updated": "20220722141134"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220429074859.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-q2tidyu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141051-q2tidyu",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "文件访问设置的方法"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-2bgg0xk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141051-2bgg0xk",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "chmod"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-d7987dy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-d7987dy",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：设置文件的访问权限"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-pn601fo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-pn601fo",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "格式"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "chmod [参数] 权限 文件名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-acjbwwu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-acjbwwu",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用选项："
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-x7uzil6",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141051-x7uzil6",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141051-negy18u",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-negy18u",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "R -\u003e 递归修改目录文件的权限\n说明：只有文件的拥有者和root才可以改变文件的权限"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-gttq8kb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722141051-gttq8kb",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "chmod命令权限值的格式"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-flvhsby",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-flvhsby",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1.用户表示符+/-=权限字符"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-pd0xpbi",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141051-pd0xpbi",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141051-p5evz86",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-p5evz86",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "用户符号"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：  \n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "u"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：拥有者\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "g"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：拥有者同组用\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "o"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：其它用户\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "a"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：所有用户\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "+"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":向权限范围增加权限代号所表示的权限\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":向权限范围取消权限代号所表示的权限\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "="
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":向权限范围赋予权限代号所表示的权限"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-j56tday",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141051-j56tday",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# chmod u+w /home/abc.txt\n\n# chmod o-x /home/abc.txt\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-eagwdxv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-eagwdxv",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2.三位8进制数字"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-evzfrpu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141051-evzfrpu",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# chmod 664 /home/abc.txt\n\n# chmod 640 /home/abc.txt\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141316-ca58ldq",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20220722141316-ca58ldq",
+				"updated": "20220722141316"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20220722140235-9r3pxov'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20220722141329-smrgqco",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141329-smrgqco"
+			}
+		},
+		{
+			"ID": "20220722141051-69633l5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141051-69633l5",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "chown"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-hi4zg7i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-hi4zg7i",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 修改文件的拥有者。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-9qa1571",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-9qa1571",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "**格式："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "chown [参数] 用户名 文件名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-metpufc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-metpufc",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用选项："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-R"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  递归修改文件或目录的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "拥有者"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-dk5hi1a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141051-dk5hi1a",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# chown user1 f1\n\n# chown -R user1 filegroup1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141333-bpj9bso",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141333-bpj9bso"
+			}
+		},
+		{
+			"ID": "20220722141051-py338k6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722141051-py338k6",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "chgrp"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-jjggffw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-jjggffw",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 修改文件或目录的所属组"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-1kykmw3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-1kykmw3",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "格式："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "chgrp [参数] 用户组名 文件名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-dc448w3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-dc448w3",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用选项："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-R"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 递归修改文件或目录的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "所属组"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-pffdd7s",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141051-pffdd7s",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# chown grp1 f1\n\n# chown -R grp2 filegroup1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-vuyvhg9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722141051-vuyvhg9",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "umask 权限掩码"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-6kyff92",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-6kyff92",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "功能："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n新建文件夹默认权限="
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "0666"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-5y8kl9g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-5y8kl9g",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "新建目录默认权限="
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "0777"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-9lnwbga",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-9lnwbga",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但实际上你所创建的文件和目录，看到的权限往往不是上面这个值。原因就是创建文件或目录的时候还要受到"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "umask"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的影响。假设默认权限是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "mask"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，则实际创建的出来的文件权限是: "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mask \u0026 ~umask"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-71f09r2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-71f09r2",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "格式："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " umask 权限值"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-c61cgwm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-c61cgwm",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明：将现有的存取权限减去权限掩码后，即可产生建立文件时预设权限。超级用户默认掩码值为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "0022"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，普通用户默认为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "0002"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-08jcaow",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722141051-08jcaow",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# umask 755\n\n# umask //查看\n\n# umask 044//设置\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722141344-4o46hbs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141344-4o46hbs"
+			}
+		},
+		{
+			"ID": "20220722141051-4yycglu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722141051-4yycglu",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "粘滞位"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-5xjp5cw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-5xjp5cw",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "只要"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用户"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "具有目录的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "写权限"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 用户就可以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "删除目录中的文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 而"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不论这个用户是否有这个文件的写权限"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-2n56g9e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-2n56g9e",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这好像不太科学啊, 我张三创建的一个文件, 凭什么被你李四可以删掉?"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-q64nz6f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-q64nz6f",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为解决这个问题，就有了"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "粘滞位"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-zcn1eh2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-zcn1eh2",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "粘滞位的设置方法："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "chmod [用户] +t"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  这里的用户一般设置为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， 也就是 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "其他人"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-vaxqkpl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-vaxqkpl",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意事项："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 设置粘滞位后只有 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "文件的拥有者"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以删除，此外 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "root"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 用户也可以删除，因为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "root用户"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是上帝，可以修改一切"
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-v9ceiue",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-v9ceiue",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "若我们的需求："
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-ktf1jsx",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722141051-ktf1jsx",
+				"updated": "20220722141051"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141051-yr4dnf1",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141051-yr4dnf1",
+						"updated": "20220722141051"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "other 可以在lesson文件下创建文件，并写入\n但不想任何人删掉自己的文件"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141051-as7mcuq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141051-as7mcuq",
+				"updated": "20220722141409"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220503165136.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141416-75vibm6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141416-75vibm6",
+				"updated": "20220722141423"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220503165355.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722141412-6qwbtmp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722141412-6qwbtmp"
+			}
+		}
+	]
+}

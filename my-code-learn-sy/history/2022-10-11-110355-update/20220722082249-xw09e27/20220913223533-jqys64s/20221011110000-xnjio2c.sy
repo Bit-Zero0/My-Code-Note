@@ -1,0 +1,314 @@
+{
+	"ID": "20221011110000-xnjio2c",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221011110000-xnjio2c",
+		"title": "线程池代码",
+		"updated": "20221011110229"
+	},
+	"Children": [
+		{
+			"ID": "20221011110135-vobau0c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110135-vobau0c",
+				"updated": "20221011110135"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "main.cpp(主文件)"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011110135-mpzb3hk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011110135-mpzb3hk",
+				"updated": "20221011110135"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cctime\u003e\n#include \u003ccstdlib\u003e\n\n#include \"thread_pool.hpp\"\n#include \"Task.hpp\"\n\nusing namespace fmy_task;\nusing namespace fmy_threadPool;\n\nint main()\n{\n    ThreadPool\u003cTask\u003e* tp = new ThreadPool\u003cTask\u003e(3);\n    tp-\u003eInitThreadPool();\n\n    srand((long long)time(nullptr));\n\n    while(true)\n    {\n        Task t(rand()%20+1 , rand()%10+1 ,\"+-*/%\"[rand()%5]);\n        tp-\u003ePushTask(t);\n    }\n\n\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011110135-gn1ukkz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110135-gn1ukkz",
+				"updated": "20221011110135"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "thread_pool.hpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n本次的重头戏，线程池文件，"
+				}
+			]
+		},
+		{
+			"ID": "20221011110135-r2b20q9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011110135-r2b20q9",
+				"updated": "20221011110135"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003cqueue\u003e\n#include \u003cpthread.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring\u003e\n\nnamespace fmy_threadPool\n{\n    const int g_num = 5;\n\n    template\u003cclass T\u003e\n    class ThreadPool\n    {\n    private:\n        int _num;\n        std::queue\u003cT\u003e _task_queue;\n\n        pthread_mutex_t  _mtx;\n        pthread_cond_t _cond;\n\n    public:\n        void Lock()\n        {\n            pthread_mutex_lock(\u0026_mtx);\n        }\n\n        void Unlock()\n        {\n            pthread_mutex_unlock(\u0026_mtx);\n        }\n\n        void Wait()\n        {\n            pthread_cond_wait(\u0026_cond , \u0026_mtx);\n        }\n\n        void WakeUp()\n        {\n            pthread_cond_signal(\u0026_cond);\n        }\n\n        bool IsEmpty()\n        {\n            return _task_queue.empty();\n        }\n\n    public:\n        ThreadPool(int num = g_num)\n            :_num(num)\n        {\n            pthread_mutex_init(\u0026_mtx , nullptr);\n            pthread_cond_init(\u0026_cond , nullptr);\n        }\n\n        ~ThreadPool()\n        {\n            pthread_mutex_destroy(\u0026_mtx);\n            pthread_cond_destroy(\u0026_cond);\n        }\n\n\t\t// 在类中要让线程执行类内成员方法，是不可行的！\n        // 必须让线程执行静态方法\n        static void *Rountine(void* args)//线程的运行函数\n        {\n            pthread_detach(pthread_self());//将每个线程进行分离\n            ThreadPool\u003cT\u003e* tp = (ThreadPool\u003cT\u003e*)args;\n\n            while(true)\n            {\n                tp-\u003eLock();//以下是临界区\n              \n                while(tp-\u003eIsEmpty())\n                {\n                    tp-\u003eWait();\n                }\n                T t;\n                tp-\u003ePopTask(\u0026t);\n              \n                tp-\u003eUnlock();//以上是临界区\n                t();\n            }\n        }\n\n        void InitThreadPool()\n        {\n            pthread_t tid;\n            for(int i = 0 ; i \u003c _num; i++)//定义_num个线程\n            {\n                pthread_create(\u0026tid , nullptr , Rountine , (void*)this);//传入this指针是因为Rountine线程函数是一个静态方法，无法执行类内成员方法。\n            }\n        }\n\n        void PushTask(const T\u0026 in)//push也需要是原子的\n        {\n            Lock();\n            _task_queue.push(in);\n\n            Unlock();\n            WakeUp();\n        }\n\n        void PopTask(T* out)//pop 直接取数据就行，无需锁\n        {\n            *out = _task_queue.front();\n            _task_queue.pop();\n        }\n    };\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011110135-rrsx7x4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110135-rrsx7x4",
+				"updated": "20221011110135"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Task.hpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n和上面的Task.hpp文件一样的"
+				}
+			]
+		},
+		{
+			"ID": "20221011110135-yw8s6c0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011110135-yw8s6c0",
+				"updated": "20221011110135"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003cpthread.h\u003e\n\nnamespace fmy_task\n{\n    class Task\n    {\n    private:\n        int x_;\n        int y_;\n        char op_; //+/*/%\n    public:\n        Task() {}\n        Task(int x, int y, char op) : x_(x), y_(y), op_(op)\n        {\n        }\n        std::string Show()\n        {\n            std::string message = std::to_string(x_);\n            message += op_;\n            message += std::to_string(y_);\n            message += \"=?\";\n            return message;\n        }\n        int Run()\n        {\n            int res = 0;\n            switch (op_)\n            {\n            case '+':\n                res = x_ + y_;\n                break;\n            case '-':\n                res = x_ - y_;\n                break;\n            case '*':\n                res = x_ * y_;\n                break;\n            case '/':\n                res = x_ / y_;\n                break;\n            case '%':\n                res = x_ % y_;\n                break;\n            default:\n                std::cout \u003c\u003c \"bug??\" \u003c\u003c std::endl;\n                break;\n            }\n            std::cout \u003c\u003c \"当前任务正在被: \" \u003c\u003c pthread_self() \u003c\u003c \" 处理: \" \\\n            \u003c\u003c x_ \u003c\u003c op_ \u003c\u003c y_ \u003c\u003c \"=\" \u003c\u003c res \u003c\u003c std::endl;\n            return res;\n        }\n        int operator()()\n        {\n            return Run();\n        }\n        ~Task() {}\n    };\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011110135-8mpwyxm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110135-8mpwyxm",
+				"updated": "20221011110217"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行结果：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221004224041"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221004224041-20221011110217-fzyiiy5.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221011110135-4oybjhk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110135-4oybjhk",
+				"updated": "20221011110229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但运行结果占用太多资源时，系统会自动把进程被19号信号kill的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221004224203"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221004224203-20221011110229-pznomg0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		}
+	]
+}

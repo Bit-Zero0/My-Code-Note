@@ -1,0 +1,264 @@
+/* 折叠样式
+ * REF https: //github.com/UserZYF/zhang-light/blob/d309151036bafe324bcf9eb754829ebc93a88d03/theme.css#L1661
+ */
+@import url(/appearance/themes/Dark+/style/module/config.css);
+@import url(/widgets/custom.css);
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]::before {
+  /* 移除子标题折叠原有样式 */
+  content: none;
+  height: auto;
+  width: auto;
+  background: none;
+  display: none;
+  position: static;
+  left: auto;
+  top: auto;
+  border-radius: 0;
+  margin-top: 0;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]::after {
+  /* 添加子标题折叠标记 */
+  content: var(--custom-h-fold-mark);
+}
+.protyle-wysiwyg [data-node-id][fold="1"].code-block > .protyle-action {
+  /* 代码块功能按钮 */
+  top: 2px;
+}
+.protyle-wysiwyg [data-node-id][fold="1"].code-block > .hljs,
+.protyle-wysiwyg [data-node-id][fold="1"].code-block > .protyle-linenumber__rows {
+  /* 代码块编辑区 */
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeTable"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeTable"] tbody {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeBlockQueryEmbed"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeBlockQueryEmbed"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeBlockQueryEmbed"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeBlockQueryEmbed"] div:first-child:before {
+  content: "[Query Embed]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeMathBlock"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeMathBlock"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeMathBlock"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeMathBlock"] div:first-child:before {
+  content: "[Math]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeIFrame"] div:first-child:before {
+  content: "[IFrame]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeWidget"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeWidget"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeWidget"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeWidget"] div:first-child:before {
+  content: "[Widget]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeAudio"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeAudio"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeAudio"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeAudio"] div:first-child:before {
+  content: "[Audio]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeVideo"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeVideo"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeVideo"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeVideo"] div:first-child:before {
+  content: "[Video]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="plantuml"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="plantuml"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="plantuml"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="plantuml"] div:first-child:before {
+  content: "[PlantUML]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="flowchart"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="flowchart"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="flowchart"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="flowchart"] div:first-child:before {
+  content: "[Flow Chart]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="echarts"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="echarts"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="echarts"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="echarts"] div:first-child:before {
+  content: "[Echarts]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mindmap"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mindmap"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mindmap"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mindmap"] div:first-child:before {
+  content: "[Mind Map]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"] div:first-child:before {
+  content: "[Mermaid]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="graphviz"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="graphviz"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="graphviz"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="graphviz"] div:first-child:before {
+  content: "[Graphviz]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"] {
+  text-align: center;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"] div {
+  display: none;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="abc"] div:first-child:before {
+  content: "[Staff]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="flowchart LR"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="flowchart LR"] div:first-child:before {
+  content: "[Mermaid - Flowchart]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="graph LR"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="graph LR"] div:first-child:before {
+  content: "[Mermaid - Flowchart]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="graph TB"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="graph TB"] div:first-child:before {
+  content: "[Mermaid - Flowchart]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="sequenceDiagram"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="sequenceDiagram"] div:first-child:before {
+  content: "[Mermaid - Sequence Diagram]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="classDiagram"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="classDiagram"] div:first-child:before {
+  content: "[Mermaid - Class Diagram]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="stateDiagram"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="stateDiagram"] div:first-child:before {
+  content: "[Mermaid - State Diagram]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="erDiagram"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="erDiagram"] div:first-child:before {
+  content: "[Mermaid - Entity Relationship Diagram]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="journey"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="journey"] div:first-child:before {
+  content: "[Mermaid - User Journey]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="gantt"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="gantt"] div:first-child:before {
+  content: "[Mermaid - Gantt]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="pie"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="pie"] div:first-child:before {
+  content: "[Mermaid - Pie Chart]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="requirementDiagram"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="requirementDiagram"] div:first-child:before {
+  content: "[Mermaid - Requirement Diagram]";
+  line-height: 100%;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="gitGraph"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="gitGraph"] div:first-child:before {
+  content: "[Mermaid - Git Graph]";
+  line-height: 100%;
+}
+/* 子标题折叠标记缩进 */
+/* .protyle-wysiwyg>.h1[data-node-id][fold="1"]::after {
+    padding-left: var(--custom-h1-indentation);
+}
+.protyle-wysiwyg>.h2[data-node-id][fold="1"]::after {
+    padding-left: var(--custom-h2-indentation);
+}
+.protyle-wysiwyg>.h3[data-node-id][fold="1"]::after {
+    padding-left: var(--custom-h3-indentation);
+}
+.protyle-wysiwyg>.h4[data-node-id][fold="1"]::after {
+    padding-left: var(--custom-h4-indentation);
+}
+.protyle-wysiwyg>.h5[data-node-id][fold="1"]::after {
+    padding-left: var(--custom-h5-indentation);
+}
+.protyle-wysiwyg>.h6[data-node-id][fold="1"]::after {
+    padding-left: var(--custom-h6-indentation);
+} */
+/* 修复代码块折叠样式 */
+/* .protyle-wysiwyg [data-node-id][fold="1"].code-block {
+    height: 26px;
+} */

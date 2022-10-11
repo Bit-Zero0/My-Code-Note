@@ -1,0 +1,22 @@
+/* ------------------------------------------标签 tag--------------------------------------------- */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty) {
+    color: #0066ff;
+    background-color: #0066ff1a;
+    /* border: 1px solid var(--b3-border-color1); */
+    border-color: transparent !important;
+    border-radius: var(--b3-border-radius-half-round);
+    padding-left: 4px;
+    padding-right: 10px;
+    font-size: 90%;
+    position: relative;
+    top: -0.05em;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="tag"] {
+    border-bottom: none;
+}
+
+/* ————————————————————标签#号———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty)::before {
+    content: " ★ ";
+}

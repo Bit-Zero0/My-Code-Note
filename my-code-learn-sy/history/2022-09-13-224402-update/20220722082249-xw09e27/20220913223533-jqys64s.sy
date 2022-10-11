@@ -1,0 +1,1818 @@
+{
+	"ID": "20220913223533-jqys64s",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220913223533-jqys64s",
+		"title": "多线程",
+		"updated": "20220913224105"
+	},
+	"Children": [
+		{
+			"ID": "20220913223711-33eidv3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220913223711-33eidv3",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是线程"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-ua9eq2c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-ua9eq2c",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程:是在进程内部运行的一个执行分支(执行流)，属于进程的一部分，粒度要比进程更加细和轻量化。一般叫做："
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "TCB"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-sxjsjpp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-sxjsjpp",
+				"updated": "20220913223819"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913151305"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913151305-20220913223819-dw64gqe.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223821-4z9h1kd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223821-4z9h1kd"
+			}
+		},
+		{
+			"ID": "20220913223711-ridzzqk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220913223711-ridzzqk",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程的优缺点"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-ujk4sq3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220913223711-ujk4sq3",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程的优点"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-90lybth",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220913223711-90lybth",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"ID": "20220913223711-9f0xoft",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220913223711-9f0xoft",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-ityz89r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-ityz89r",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建一个新线程的代价要比创建一个新进程小得多"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-ounl2os",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220913223711-ounl2os",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-26hf3vd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-26hf3vd",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与进程之间的切换相比，线程之间的切换需要操作系统做的工作要少很多"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-lu9ydmx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220913223711-lu9ydmx",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-1e5f36s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-1e5f36s",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程占用的资源要比进程少很多"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-486ewif",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220913223711-486ewif",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-9pellvp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-9pellvp",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "能充分利用多处理器的可并行数量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-cjnx75b",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220913223711-cjnx75b",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-jdwrqxo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-jdwrqxo",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在等待慢速I/O操作结束的同时，程序可执行其他的计算任务"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-wd4o46q",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220913223711-wd4o46q",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-a657szg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-a657szg",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "计算密集型应用，为了能在多处理器系统上运行，将计算分解到多个线程中实现"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-mat5s7y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220913223711-mat5s7y",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-00a4p2z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-00a4p2z",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "I/O密集型应用，为了提高性能，将I/O操作重叠。线程可以同时等待不同的I/O操作。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-rea7qcn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220913223711-rea7qcn",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程的缺点"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-t0x1png",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220913223711-t0x1png",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"ID": "20220913223711-hdpc7nk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220913223711-hdpc7nk",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-of6ua1g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-of6ua1g",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "性能损失"
+								}
+							]
+						},
+						{
+							"ID": "20220913223711-pelfmlo",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220913223711-pelfmlo",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"ID": "20220913223711-30yqzt8",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220913223711-30yqzt8",
+										"updated": "20220913223711"
+									},
+									"Children": [
+										{
+											"ID": "20220913223711-x9032r2",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220913223711-x9032r2",
+												"updated": "20220913223711"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "一个很少被外部事件阻塞的计算密集型线程往往无法与共它线程共享同一个处理器。如果计算密集型线程的数量比可用的处理器多，那么可能会有较大的性能损失，这里的性能损失指的是增加了额外的同步和调度开销，而可用的资源不变。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-8phx25k",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220913223711-8phx25k",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-mzngjm1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-mzngjm1",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "健壮性降低"
+								}
+							]
+						},
+						{
+							"ID": "20220913223711-b1kd2na",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220913223711-b1kd2na",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"ID": "20220913223711-5nooywj",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220913223711-5nooywj",
+										"updated": "20220913223711"
+									},
+									"Children": [
+										{
+											"ID": "20220913223711-g06k4yv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220913223711-g06k4yv",
+												"updated": "20220913223711"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "编写多线程需要更全面更深入的考虑，在一个多线程程序里，因时间分配上的细微偏差或者因共享了不该共享的变量而造成不良影响的可能性是很大的，换句话说线程之间是缺乏保护的。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-lv3n4d4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220913223711-lv3n4d4",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-egjlbxr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-egjlbxr",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "缺乏访问控制"
+								}
+							]
+						},
+						{
+							"ID": "20220913223711-0pqkiqu",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220913223711-0pqkiqu",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"ID": "20220913223711-4h2649i",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220913223711-4h2649i",
+										"updated": "20220913223711"
+									},
+									"Children": [
+										{
+											"ID": "20220913223711-l0y8zs8",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220913223711-l0y8zs8",
+												"updated": "20220913223711"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "进程是访问控制的基本粒度，在一个线程中调用某些OS函数会对整个进程造成影响。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-ychnmwj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20220913223711-ychnmwj",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-3vj1mre",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-3vj1mre",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "编程难度提高"
+								}
+							]
+						},
+						{
+							"ID": "20220913223711-x73eut4",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220913223711-x73eut4",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"ID": "20220913223711-l03tu39",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220913223711-l03tu39",
+										"updated": "20220913223711"
+									},
+									"Children": [
+										{
+											"ID": "20220913223711-vgjkjfv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220913223711-vgjkjfv",
+												"updated": "20220913223711"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "编写与调试一个多线程程序比单线程程序困难得多"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223853-fg56j5h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223853-fg56j5h"
+			}
+		},
+		{
+			"ID": "20220913223711-96oy07h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220913223711-96oy07h",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux的进程的概念"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-kmuqcwb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-kmuqcwb",
+				"updated": "20220913223904"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Linux中没有专门为线程设计TCB，而是用进程的PCB来模拟线程"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n优点：不用维护复杂的进程和线程的关系，不用单独为线程设计任何算法,直接使用进程的一套相关的方法。0S只需要聚焦在线程间的资源分配上就可以了!\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913151531"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913151531-20220913223843-jln9qcb.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n进程是承担分配系统资源的基本实体! !\n线程是CPU调度的基本单位，承担进程资源的一部分的基本实体！\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进程划分资源给线程"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220913223859-m6y86px",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223859-m6y86px",
+				"updated": "20220913223908"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913173256"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913173256-20220913223908-x5j0am6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223913-1uue2c8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223913-1uue2c8"
+			}
+		},
+		{
+			"ID": "20220913223711-idhkl7y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220913223711-idhkl7y",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "之前学的进程 vs 今天的进程"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-loqtlsn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-loqtlsn",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "之前学的进程,内部只有一个执行流的进程"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-zuyok92",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-zuyok92",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "今天的进程,内部可以具有多个执行流"
+				}
+			]
+		},
+		{
+			"ID": "20220913223901-ef5v3fx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223901-ef5v3fx"
+			}
+		},
+		{
+			"ID": "20220913223711-wc6e4j8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220913223711-wc6e4j8",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux线程与接口关系的认识"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-yeco1jl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-yeco1jl",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux PCB\u003c=传统意义上的进程PCB Linux进程，轻量级进程"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-xfqd9cu",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220913223711-xfqd9cu",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"ID": "20220913223711-xxvb1xg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220913223711-xxvb1xg",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-qrdjkdo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-qrdjkdo",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "OS创建\"线程\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220913223711-k2xn6a0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220913223711-k2xn6a0",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"ID": "20220913223711-sfljjzx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220913223711-sfljjzx",
+								"updated": "20220913223711"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "CPU调度"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223928-o1wgffn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223928-o1wgffn",
+				"updated": "20220913223928"
+			}
+		},
+		{
+			"ID": "20220913223711-z66m6mr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-z66m6mr",
+				"updated": "20220913223940"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux因为是用进程模拟的，所以Linux下不会给我们提供直接操作线程的接口，而是给我们提供，在同一个地址空间内创建PCB的方法，分配资源给指定的PCB的接口\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913173125"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913173125-20220913223940-lx2dcoz.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n系统级别的工程师，在用户层对Linux轻量级进程接口进行封装,给我们打包成库，让用直接使用库接口，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "原生线程库"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "(用户层)"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-kpx2q4c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220913223711-kpx2q4c",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Linux进程VS线程"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-n40k9h9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220913223711-n40k9h9",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程和线程"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-vwbqxym",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-vwbqxym",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进程是资源分配的基本单位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程是调度的基本单位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程共享进程数据，但也拥有自己的一部分数据"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-j6dl3af",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220913223711-j6dl3af",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220913223711-676rfzb",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220913223711-676rfzb",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "线程ID\n一组寄存器\n栈\nerrno\n信号屏蔽字\n调度优先级"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-8s75ecs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-8s75ecs",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程的多个线程共享  同一地址空间,因此Text Segment、Data Segment都是共享的,如果定义一个函数,在各线程中都可以调用,如果定义一个全局变量,在各线程中都可以访问到,除此之外,各线程还"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "共享以下进程资源和环境"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-gedszdz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220913223711-gedszdz",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220913223711-8t45ouu",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220913223711-8t45ouu",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "文件描述符表\n每种信号的处理方式(SIG_ IGN、SIG_ DFL或者自定义的信号处理函数)\n当前工作目录\n用户id和组id"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-qk81spo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-qk81spo",
+				"updated": "20220913223951"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913174244"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913174244-20220913223951-qims5tl.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223954-ylit9mk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223954-ylit9mk"
+			}
+		},
+		{
+			"ID": "20220913223711-wffe63e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220913223711-wffe63e",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "pthread_create() 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-vfls4nm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-vfls4nm",
+				"updated": "20220913224009"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用：创建一个线程\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913174642"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913174642-20220913224003-4h2c3kb.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-pw0owxj",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220913223711-pw0owxj",
+				"updated": "20220913224012"
+			},
+			"Children": [
+				{
+					"ID": "20220913224010-94v3rva",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220913224010-94v3rva",
+						"updated": "20220913224012"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "函数参数："
+						}
+					]
+				},
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220913223711-zwidal9",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220913223711-zwidal9",
+						"updated": "20220913223711"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "thread"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":返回线程ID\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "attr"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":设置线程的属性，attr为NULL表示使用默认属性\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "start_routine"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":是个函数地址，线程启动后要执行的函数\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "arg"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":传给线程启动函数的参数\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：成功返回0；失败返回错误码"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-43yu7fn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220913223711-43yu7fn",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cpthread.h\u003e//想要调用pthread.h中的函数必须在编译时，动态链接到pthread库\n#include \u003cunistd.h\u003e\n\nvoid *thread_run(void *args)\n{\n    const char *id = (const char*)args;\n    while(1)\n    {\n        printf(\"我是%s线程, %d\\n\", id, getpid());\n        sleep(1);\n    }\n}\n\nint main()\n{\n    pthread_t tid;\n    pthread_create(\u0026tid, NULL, thread_run, (void*)\"thread 1\");\n\n    while(1){\n        printf(\"我是main 线程, %d\\n\", getpid());\n        sleep(1);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-3tx1ggk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-3tx1ggk",
+				"updated": "20220913223711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "gcc  xxx.c -lpthread"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 进行编译。"
+				}
+			]
+		},
+		{
+			"ID": "20220913224044-s6xcjpx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913224044-s6xcjpx"
+			}
+		},
+		{
+			"ID": "20220913223711-e6grlh7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-e6grlh7",
+				"updated": "20220913224052"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行结果，发现在进程中只有一个进程，因为thread是一个线程，pid是与进程共享的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913181535"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913181535-20220913224052-y2j31x9.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-x6vovyu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-x6vovyu",
+				"updated": "20220913224057"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用9号指令关闭进程，线程也相应关闭了。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220913181719"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220913181719-20220913224057-n8vb79i.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220913223711-3frywxr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220913223711-3frywxr",
+				"updated": "20220913224105"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以使用 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220913222001-gsvxdn3"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "ps -aL"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "]指令来查看轻量级进程，也就是线程，可以看到线程的pid和进程pid是相同的，我们可以通过"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "LWP"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来分辨线程，进程的PID和LWP是相同的，线程会比进程多1。\n![[Pasted image 20220913181943.png]]"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,7077 @@
+{
+	"ID": "20220904152507-qkz0b5r",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220904152507-qkz0b5r",
+		"title": "进程间通信",
+		"updated": "20220910161848"
+	},
+	"Children": [
+		{
+			"ID": "20220905114349-zux32h3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220905114349-zux32h3",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程间通信介绍"
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-p3lu7pb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220905114349-p3lu7pb",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程间通信的目的"
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-hudfb1x",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220905114349-hudfb1x",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"ID": "20220905114349-amfmrvz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-amfmrvz",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-rem5sit",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-rem5sit",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数据传输"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：一个进程需要将它的数据发送给另一个进程"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-hs4s7k1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-hs4s7k1",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-u34saev",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-u34saev",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "资源共享"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：多个进程之间共享同样的资源。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-uc21mhf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-uc21mhf",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-cix0ccm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-cix0ccm",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "通知事件"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：一个进程需要向另一个或一组进程发送消息，通知它（它们）发生了某种事件（如进程终止时要通知父进程）。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-s6bks9n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-s6bks9n",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-82qykj2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-82qykj2",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "进程控制"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：有些进程希望完全控制另一个进程的执行（如Debug进程），此时控制进程希望能够拦截另一个进程的所有陷入和异常，并能够及时知道它的状态改变。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-lzdtjl6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220905114349-lzdtjl6",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程间通信发展"
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-az9f98d",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220905114349-az9f98d",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"ID": "20220905114349-wg202hj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-wg202hj",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-3wyoanj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-3wyoanj",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "管道"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-odvi1al",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-odvi1al",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-vxf176u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-vxf176u",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "System V进程间通信"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-q9rj04u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-q9rj04u",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-8ofx3ge",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-8ofx3ge",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "POSIX进程间通信"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-i4rth3i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220905114349-i4rth3i",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程间通信分类"
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-0iq5med",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114349-0iq5med",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "管道"
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-vxgb9rm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220905114349-vxgb9rm",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"ID": "20220905114349-zx9k8yw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-zx9k8yw",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-2nmbnol",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-2nmbnol",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "匿名管道pipe"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-y1xkija",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-y1xkija",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-pw8to21",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-pw8to21",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "命名管道"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-yo2jcyu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114349-yo2jcyu",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "System V IPC"
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-q5xoep8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220905114349-q5xoep8",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"ID": "20220905114349-1oi0hyy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-1oi0hyy",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-r7vr5bg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-r7vr5bg",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "System V 消息队列"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-smcabfk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-smcabfk",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-8u89ppj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-8u89ppj",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "System V 共享内存"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-osfg6ro",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-osfg6ro",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-vqleqhw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-vqleqhw",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "System V 信号量"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-nyj0amc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114349-nyj0amc",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "POSIX IPC"
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-xkkjrp6",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220905114349-xkkjrp6",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"ID": "20220905114349-pdxozvw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-pdxozvw",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-t2o178f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-t2o178f",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "消息队列"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-q5gh71t",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-q5gh71t",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-9e8x2n3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-9e8x2n3",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "共享内存"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-3afswvw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-3afswvw",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-3h1cefu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-3h1cefu",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "信号量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-rzjfgzm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-rzjfgzm",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-r3r2xy0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-r3r2xy0",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "互斥量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-v050gri",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-v050gri",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-6jakr3y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-6jakr3y",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "条件变量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114349-vqu1dgc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114349-vqu1dgc",
+						"updated": "20220905114349"
+					},
+					"Children": [
+						{
+							"ID": "20220905114349-tiso0fm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114349-tiso0fm",
+								"updated": "20220905114349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "读写锁"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114349-q2e0dx2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220905114349-q2e0dx2",
+				"updated": "20220905114349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程通信的原理"
+				}
+			]
+		},
+		{
+			"ID": "20220904152507-8ktvbjf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904152507-8ktvbjf",
+				"updated": "20220904152517"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904152517-bq3czet.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114414-wq791xo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114414-wq791xo",
+				"updated": "20220905114414"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程之间可能会有特定的协同工作的场景，一个进程要把自己的数据交付给另一个进程，让其对数据进行处理，这就是进程之间的通信，而进程是具有独立性的，所以OS要设计进程的通信方式。"
+				}
+			]
+		},
+		{
+			"ID": "20220905114414-dlk67u4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114414-dlk67u4",
+				"updated": "20220905114414"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为进程具有独立性，一个进程是看不到另外一个进程的资源的，所以就必须要要有一份公共的资源来存储数据，这份公共的资源就是 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "内存"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "那这份内存属于谁？应当被谁管理？ 当然是我们的OS"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n而可能以文件方式提供，也可能以队列的方式，也可能提供的就是原始的内存块。"
+				}
+			]
+		},
+		{
+			"ID": "20220905114414-15vigjp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114414-15vigjp",
+				"updated": "20220905114414"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "所以进程间通信的前提本质就是OS参与，提供一份所有通信进程能看到的公共资源"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220905114419-jj5w3hw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114419-jj5w3hw"
+			}
+		},
+		{
+			"ID": "20220905114420-8ncfsoh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114420-8ncfsoh"
+			}
+		},
+		{
+			"ID": "20220905114414-h9thx4e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220905114414-h9thx4e",
+				"updated": "20220905114414"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "父子进程是两个独立的进程吗？"
+				}
+			]
+		},
+		{
+			"ID": "20220904152737-v8qwsdo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904152737-v8qwsdo"
+			}
+		},
+		{
+			"ID": "20220904152737-ub08c6y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904152737-ub08c6y",
+				"updated": "20220904152737"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904152737-ubqutjk.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-w4kesqd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114514-w4kesqd",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "答案：父子进程是两个独立的进程，子进程继承了父进程的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "struct file_struct"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,而其中所有文件指向的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "struct file"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 也是一样的。\n在[[Linux IO操作#缓冲区|缓冲区]]时，我们知道，系统调用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "write"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是将数据直接写入到OS的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "文件内核缓冲区"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "struct file"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 指向的也是这片文件内核缓冲区，父子进程就是通用这片缓冲区来进程通信"
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-fsfx3gy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220905114514-fsfx3gy",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "管道"
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-6884ium",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220905114514-6884ium",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是管道"
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-sh684hs",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220905114514-sh684hs",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"ID": "20220905114514-9d3hwj2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114514-9d3hwj2",
+						"updated": "20220905114514"
+					},
+					"Children": [
+						{
+							"ID": "20220905114514-7q0s8d1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114514-7q0s8d1",
+								"updated": "20220905114514"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "管道是Unix中最古老的进程间通信的形式。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114514-z9m9sjh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220905114514-z9m9sjh",
+						"updated": "20220905114514"
+					},
+					"Children": [
+						{
+							"ID": "20220905114514-86ff58w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114514-86ff58w",
+								"updated": "20220905114514"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们把从一个进程连接到另一个进程的一个数据流称为一个“管道”"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-oqmkd52",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220905114514-oqmkd52",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "匿名管道"
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-cy30qby",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114514-cy30qby",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "特点"
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-djyy806",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220905114514-djyy806",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"ID": "20220905114514-gsyn8ie",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220905114514-gsyn8ie",
+						"updated": "20220905114514"
+					},
+					"Children": [
+						{
+							"ID": "20220905114514-ub3ymoe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114514-ub3ymoe",
+								"updated": "20220905114514"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "匿名管道是一个只能单向通信的的通信信道。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114514-4gey9g4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220905114514-4gey9g4",
+						"updated": "20220905114514"
+					},
+					"Children": [
+						{
+							"ID": "20220905114514-jy0qmxa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114514-jy0qmxa",
+								"updated": "20220905114514"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "管道是面向字节流的。 [之后补充]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114514-glld34g",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220905114514-glld34g",
+						"updated": "20220905114514"
+					},
+					"Children": [
+						{
+							"ID": "20220905114514-kbvng65",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114514-kbvng65",
+								"updated": "20220905114514"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "仅限于父子进程通信。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114514-6aopw4e",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20220905114514-6aopw4e",
+						"updated": "20220905114514"
+					},
+					"Children": [
+						{
+							"ID": "20220905114514-n4ua7lw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114514-n4ua7lw",
+								"updated": "20220905114514"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "管道自带同步机制，原子性写入。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220905114514-15s870v",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20220905114514-15s870v",
+						"updated": "20220905114514"
+					},
+					"Children": [
+						{
+							"ID": "20220905114514-76mn3hq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220905114514-76mn3hq",
+								"updated": "20220905114514"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "管道的生命周期是随进程的。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-pabmm28",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114514-pabmm28",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "pipe()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 系统调用"
+				}
+			]
+		},
+		{
+			"ID": "20220905114514-u2gsmcp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114514-u2gsmcp",
+				"updated": "20220905114514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "man 2 pipe"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以查看"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "pipe"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "系统调用的解释文档."
+				}
+			]
+		},
+		{
+			"ID": "20220904154702-iyvvx2m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904154702-iyvvx2m",
+				"updated": "20220904154702"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904154702-qvfeqio.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904155119-t7kp7v6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904155119-t7kp7v6",
+				"updated": "20220904155124"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "函数参数 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "pipefd[2]"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 表示是一个输出型参数，pipefd：文件描述符数组,其中pipefd[0]表示读端, pipefd[1]表示写端"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。[就像对应的fd   0 , 1 , 2 ]"
+				}
+			]
+		},
+		{
+			"ID": "20220904155114-0jpnlh0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904155114-0jpnlh0",
+				"updated": "20220904155114"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904155114-3c87ej6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904165225-024eafr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904165225-024eafr",
+				"updated": "20220904165227"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904165227-oknco98.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904165226-lvgi2t5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904165226-lvgi2t5"
+			}
+		},
+		{
+			"ID": "20220905114541-9jhc5z8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114541-9jhc5z8",
+				"updated": "20220905114541"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用fork() 来共享管道原理"
+				}
+			]
+		},
+		{
+			"ID": "20220904165212-8ozxeqr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904165212-8ozxeqr",
+				"updated": "20220904165213"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904165213-p2tq1fr.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904165155-fresibs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904165155-fresibs"
+			}
+		},
+		{
+			"ID": "20220905114547-67x7viy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114547-67x7viy",
+				"updated": "20220905114547"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "站在文件描述符角度-深度理解管道"
+				}
+			]
+		},
+		{
+			"ID": "20220904165156-gpdbgt1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904165156-gpdbgt1",
+				"updated": "20220904165156"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904165156-6nmtjrc.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904185930-pzl695g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904185930-pzl695g"
+			}
+		},
+		{
+			"ID": "20220905114614-qpyuock",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220905114614-qpyuock",
+				"updated": "20220905114614"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "匿名管道会出现的四种情况"
+				}
+			]
+		},
+		{
+			"ID": "20220905114614-xj1zadf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220905114614-xj1zadf",
+				"updated": "20220905114614"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "a.读端不读或者读的慢，写端要等读端"
+				}
+			]
+		},
+		{
+			"ID": "20220905114614-qesgp9a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114614-qesgp9a",
+				"updated": "20220905114614"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码如下"
+				}
+			]
+		},
+		{
+			"ID": "20220905114614-tqecp9q",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220905114614-tqecp9q",
+				"updated": "20220905114623"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n\n\nint main()\n{\n    int pipe_fd[2] = {0};\n    if(pipe(pipe_fd) \u003c 0)\n    {\n        perror(\"pipe error...\");\n        return 1;\n    }\n\n    printf(\"%d ,%d\\n\",pipe_fd[0] , pipe_fd[1]);//fd: 3 4\n\n    pid_t id = fork();\n    if (id \u003c 0)\n    {\n        perror(\"fork error\");\n        return 2;\n    }\n    else if (id == 0)\n    {\n        close(pipe_fd[0]);\n\n        char c = 'x';\n       // const char* msg = \"hello fmy , I am child\";\n\n        int count = 0;\n        while(1)\n        {\n            count++;\n            write(pipe_fd[1] , \u0026c, 1 );\n            printf(\"wirte :%d \\n\",count);\n        }\n    }\n    else\n\t{//parent 父进程\n        close(pipe_fd[1]);\n\n        char buf;\n        while(1)\n        {\n            sleep(1);\n            ssize_t size =read(pipe_fd[0] ,\u0026buf , 1);\n            if(size \u003e 0)\n            {\n                printf(\"parent get message from  child # %c \" , buf);\n            }\n  else if(size ==0 )\n            {\n                printf(\"pipe file close , child quit\");\n                break;\n            }\n            else\n            {\n                break;\n            }\n        }\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220904185949-ii7jc4n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904185949-ii7jc4n",
+				"updated": "20220904185950"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904185950-0r1lpe3.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904185949-afsjk06",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904185949-afsjk06",
+				"updated": "20220905114714"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码会写到 65536 ，为什么是65536？因为这就是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "管道的大小就是 "
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "64KB"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220904185931-lg4j1w8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904185931-lg4j1w8",
+				"updated": "20220904185932"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904185932-deynqo6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114731-uchnp6p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114731-uchnp6p",
+				"updated": "20220905114731"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而父进程又读的太慢，所以管道内的数据暂时不会刷新。"
+				}
+			]
+		},
+		{
+			"ID": "20220905114731-nargj65",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114731-nargj65",
+				"updated": "20220905114731"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那管道满了以后，什么时候才能写入新数据呢？"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "累计读了"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "4KB"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "数据以后，才能写入新数据"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220904225158-hduybuu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904225158-hduybuu"
+			}
+		},
+		{
+			"ID": "20220904225159-rionjyq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220904225159-rionjyq"
+			}
+		},
+		{
+			"ID": "20220905114815-d09ee4f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220905114815-d09ee4f",
+				"updated": "20220905114815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "b.读端关闭，写端收到SIGPIPE信号直接终止"
+				}
+			]
+		},
+		{
+			"ID": "20220905114815-cod6g9v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114815-cod6g9v",
+				"updated": "20220905114815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们的读端关闭，写端还在写入，此时站在OS的层面，合理吗?\n严重不合理，已经没有人读了，你还在写入，本质就是在浪费0S的资源0S会直接终止写入进程!OS给目标进程发送信号"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "SIGPlPE"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "!"
+				}
+			]
+		},
+		{
+			"ID": "20220905113824-jr4fwop",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905113824-jr4fwop",
+				"updated": "20220905113824"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220905113824-ghralv0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905114830-yk8sw01",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220905114830-yk8sw01",
+				"updated": "20220905115058"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003csys/wait.h\u003e\n\n\nint main(){\n    int pipe_fd[2] = {0};\n    if(pipe(pipe_fd) \u003c 0)\n    {\n        perror(\"pipe\");\n        return 1;\n    }\n\n    if(fork() == 0)\n    {\n        close(pipe_fd[0]);\n        const char* msg = \"hello fmy\";\n\n        while(1)\n        {\n            write(pipe_fd[1] , msg , strlen(msg));\n            sleep(5);\n        }\n        close(pipe_fd[1]);\n        exit(0);\n    }\n\n    close(pipe_fd[1]);\n    while(1) {\n        sleep(10);\n        char c[64] = {0};\n        ssize_t size = read(pipe_fd[0] , c , sizeof(c));\n\n        if(size \u003e 0) {\n            c[size] = 0;\n            printf(\"father take : %s \\n\" , c);\n        }\n        else if(size == 0){\n            printf(\"write quit ...\");\n            break;\n        }\n        else {\n            break;\n        }\n        break;\n    }\n\n    close(pipe_fd[0]);\n\n    int status = 0;\n    waitpid(-1 , \u0026status , 0);\n    printf(\"exit code : %d\\n\", (status\u003e\u003e8) \u0026 0xFF);\n    printf(\"exit signal: %d\\n\", status \u0026 0x7F);\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220905114915-e30pxgu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114915-e30pxgu",
+				"updated": "20220905114952"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "监视代码"
+				}
+			]
+		},
+		{
+			"ID": "20220905114915-f1oqr6a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220905114915-f1oqr6a",
+				"updated": "20220905114945"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "while :; do ps axj |grep pipe | grep -v grep; sleep 1; echo \"########################################\" ; done\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220905114830-17sp29p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114830-17sp29p",
+				"updated": "20220905114956"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "十秒后父进程读端关闭，子进程写端也随着关闭"
+				}
+			]
+		},
+		{
+			"ID": "20220905114232-embls80",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114232-embls80",
+				"updated": "20220905114256"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"parent-style": "max-width: 603px;",
+						"style": "width: 593px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220905114256-ssy60og.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 593px;\" parent-style=\"max-width: 603px;\"}"
+				}
+			]
+		},
+		{
+			"ID": "20220905114913-b3sskrx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905114913-b3sskrx",
+				"updated": "20220905114920"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "pipe可执行文件的运行结果："
+				}
+			]
+		},
+		{
+			"ID": "20220905113717-s7r8354",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905113717-s7r8354",
+				"updated": "20220905113717"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220905113717-7aei0xz.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905113822-0r2r5nx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905113822-0r2r5nx"
+			}
+		},
+		{
+			"ID": "20220905115019-sir45uy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220905115019-sir45uy",
+				"updated": "20220905115019"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "c.写端不写或者写的慢，读端要等写端"
+				}
+			]
+		},
+		{
+			"ID": "20220905115019-978o1wv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905115019-978o1wv",
+				"updated": "20220905115019"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "写端每5秒写入一条数据"
+				}
+			]
+		},
+		{
+			"ID": "20220905115019-z184ajr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220905115019-z184ajr",
+				"updated": "20220905115019"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n\nint main(){\n\n    int pipe_fd[2] = {0};\n    if(pipe(pipe_fd) \u003c 0 )\n    {\n        perror(\"pipe error\");\n        return 1;\n    }\n    printf(\"%d %d \" , pipe_fd[0] , pipe_fd[1]);\n\n    int id = fork();\n\n    if(id \u003c 0)\n    {\n        perror(\"fork\");\n        return 2;\n    }\n    else if(id == 0)\n    {\n        close(pipe_fd[0]);\n\n        const char* msg = \"hello fmy \";\n\n        while(1)\n        {\n            write(pipe_fd[1] , msg , strlen(msg)); \n            sleep(5);\n        }\n\n        exit(0);\n    }\n    else{\n         close(pipe_fd[1]);\n\n         while(1){\n             char c[64] = {0};\n\n             ssize_t size = read(pipe_fd[0] , c , sizeof(c) );\n             c[size] = 0;\n\n             printf(\"father take : %s \\n\" ,c);\n         }\n    }\n\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220905115116-qozo15x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905115116-qozo15x"
+			}
+		},
+		{
+			"ID": "20220905115117-x60oyyn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905115117-x60oyyn"
+			}
+		},
+		{
+			"ID": "20220905115117-c5s8xw0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220905115117-c5s8xw0",
+				"updated": "20220905115117"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "d.写端关闭，读端读完pipe内部的数据然后再读，会读到0,表明读到文件结尾!"
+				}
+			]
+		},
+		{
+			"ID": "20220905115117-riyy1iu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905115117-riyy1iu",
+				"updated": "20220905115117"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "写端写一条语句后，5秒退出，读端一直读。"
+				}
+			]
+		},
+		{
+			"ID": "20220905115117-dxp08wd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220905115117-dxp08wd",
+				"updated": "20220905115117"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003csys/wait.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n\nint main(){\n\n    int pipe_fd[2] = {0};\n    if(pipe(pipe_fd) \u003c 0 )\n    {\n        perror(\"pipe error\");\n        return 1;\n    }\n    printf(\"%d %d \" , pipe_fd[0] , pipe_fd[1]);\n\n    int id = fork();\n\n    if(id \u003c 0)\n    {\n        perror(\"fork\");\n        return 2;\n    }\n    else if(id == 0)\n    {\n        close(pipe_fd[0]);\n\n        const char* msg = \"hello fmy \";\n\n        while(1)\n        {\n            write(pipe_fd[1] , msg , strlen(msg));\n            sleep(5);\n            break;\n        }\n\n        close(pipe_fd[1]);\n        exit(0);\n    }\n    else{\n         close(pipe_fd[1]);\n\n         while(1){\n             char c[64] = {0};\n\n             ssize_t size = read(pipe_fd[0] , c , sizeof(c) );\n             if(size \u003e 0){\n                c[size] = 0;\n                printf(\"father take : %s \\n\" , c);\n             }\n             else if( size == 0 ){\n                 printf(\"writer quit ...\\n\");\n                 break;\n             }\n             else{\n                 break;\n             }\n\n         }\n    }\n\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220905115132-7s8og7c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905115132-7s8og7c",
+				"updated": "20220905115133"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220904225159-08ywp1f.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905164343-ofy0vj9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905164343-ofy0vj9"
+			}
+		},
+		{
+			"ID": "20220905164349-6w00z67",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220905164349-6w00z67",
+				"updated": "20220905164349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "命名管道"
+				}
+			]
+		},
+		{
+			"ID": "20220905164344-z5crii8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905164344-z5crii8",
+				"updated": "20220905164344"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220905164344-l0r02ha.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155602-943oqlv",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220910155602-943oqlv",
+				"updated": "20220910155602"
+			},
+			"Children": [
+				{
+					"ID": "20220910155602-4hb8yv5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910155602-4hb8yv5",
+						"updated": "20220910155602"
+					},
+					"Children": [
+						{
+							"ID": "20220910155602-y9rf60e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155602-y9rf60e",
+								"updated": "20220910155602"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "管道应用的一个限制就是只能在具有共同祖先（具有亲缘关系）的进程间通信。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910155602-04nc0qn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910155602-04nc0qn",
+						"updated": "20220910155602"
+					},
+					"Children": [
+						{
+							"ID": "20220910155602-f1gdg7w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155602-f1gdg7w",
+								"updated": "20220910155602"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果我们想在"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不相关的进程之间交换数据"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，可以使用"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "FIFO文件"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来做这项工作，它经常被称为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "命名管道"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910155602-1849bdn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910155602-1849bdn",
+						"updated": "20220910155602"
+					},
+					"Children": [
+						{
+							"ID": "20220910155602-403ms73",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155602-403ms73",
+								"updated": "20220910155602"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "命名管道是一种特殊类型的文件。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910155602-d825u3l",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910155602-d825u3l",
+						"updated": "20220910155602"
+					},
+					"Children": [
+						{
+							"ID": "20220910155602-w0elxko",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155602-w0elxko",
+								"updated": "20220910155602"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "命名管道也是基于"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字节流"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155602-3ben1tf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910155602-3ben1tf",
+				"updated": "20220910155602"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "命名管道的创建"
+				}
+			]
+		},
+		{
+			"ID": "20220910155602-qpdfu3y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155602-qpdfu3y",
+				"updated": "20220910155630"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-z19j2o0"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "man指令"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "查询 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "mkfifo"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155602-n41otth",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155602-n41otth",
+				"updated": "20220910155602"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "创建命名管道： "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mkfifo pipe"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905190738-24ltqfc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905190738-24ltqfc",
+				"updated": "20220910155608"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220905222719-ef08zgi.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905190739-ovtio9j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905190739-ovtio9j"
+			}
+		},
+		{
+			"ID": "20220910155700-558eu3z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910155700-558eu3z",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码实现"
+				}
+			]
+		},
+		{
+			"ID": "20220910155700-y2rlq1i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155700-y2rlq1i",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "common.h 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220910155700-0n2e6dv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910155700-0n2e6dv",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003csys/fcntl.h\u003e\n#include \u003csys/wait.h\u003e\n#include \u003csys/stat.h\u003e\n#include \u003cstring.h\u003e\n\n#define MY_FIFO \"./fifo\" //将文件路径封装\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910155700-kh0buex",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155700-kh0buex",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "server.c 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220910155700-q72xlm8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910155700-q72xlm8",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"common.h\"\n\nint main(){\n    umask(0);\n    if(mkfifo(MY_FIFO , 0666) \u003c 0){\n        perror(\"mkfifo\");\n        return 1;\n    }\n\n    int fd = open(MY_FIFO , O_RDONLY);\n    if(fd \u003c 0 ){\n        perror(\"open\");\n        return 2;\n    }\n\n    while(1){\n        char buf[64] = {0};\n        ssize_t size = read(fd , buf , sizeof(buf) -1);\n        if(size \u003e 0){\n            buf[size] = 0;\n            printf(\"client # %s\\n\" , buf);\n        }\n        else if (size == 0){\n            printf(\"client quit ...\\n\");\n            break;\n        }\n        else{\n            perror(\"read\");\n            break;\n        }\n    }\n\n    close(fd);\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910155700-cm0j0a9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155700-cm0j0a9",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "client.c 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220910155700-3u5hsvc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910155700-3u5hsvc",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"common.h\"\nint main(){\n    int fd = open(MY_FIFO , O_WRONLY);\n    if (fd \u003c 0){\n        perror(\"open\");\n        return 1;\n    }\n\n    while(1){\n        printf(\"请输入 #\");\n        fflush(stdout);\n        char buf[64] = {0};\n        ssize_t size = read(0 , buf , sizeof(buf) -1);\n        if(size \u003e 0){\n            buf[size-1] = 0;\n            printf(\"%s\\n\" , buf);\n\n            write(fd , buf , strlen(buf));\n        }\n    }\n    close(fd);\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910155700-6va8yr3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155700-6va8yr3",
+				"updated": "20220910155700"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时client 传递信息给 server 了"
+				}
+			]
+		},
+		{
+			"ID": "20220910155728-sf33nnx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155728-sf33nnx",
+				"updated": "20220910155730"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910155730-slf1pnl.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155728-pvwajjg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155728-pvwajjg"
+			}
+		},
+		{
+			"ID": "20220910155809-fes4h8y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220910155809-fes4h8y",
+				"updated": "20220910155809"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "具体应用："
+				}
+			]
+		},
+		{
+			"ID": "20220910155809-qo4lwie",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155809-qo4lwie",
+				"updated": "20220910161635"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "修改一下 server.c 文件，就具有了像命令行指令的功能了，其中代码用到了"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722143034-jvc7prc"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "程序替换函数"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722143034-ckd3vu9"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "程序等待函数"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155809-85ym714",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910155809-85ym714",
+				"updated": "20220910155809"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"common.h\"\n\nint main(){\n    umask(0);\n    if(mkfifo(MY_FIFO , 0666) \u003c 0){\n        perror(\"mkfifo\");\n        return 1;\n    }\n\n    int fd = open(MY_FIFO , O_RDONLY);\n    if(fd \u003c 0 ){\n        perror(\"open\");\n        return 2;\n    }\n\n    while(1){\n        char buf[64] = {0};\n        ssize_t size = read(fd , buf , sizeof(buf) -1);\n        if(size \u003e 0){\n            buf[size] = 0;\n            if(strcmp(buf , \"show\") == 0){\n                if(fork()==0){\n                    execl(\"/usr/bin/ls\" , \"ls\" , \"-l\" , NULL);\n                    exit(1);\n                }\n\n                waitpid( -1 , NULL , 0 );\n            }\n            else if (strcmp(buf , \"run\") == 0){\n                if (fork()== 0){\n                    execl(\"/usr/bin/sl\" , \"sl\" , NULL);\n                }\n                waitpid(-1 , NULL , 0);\n            }\n            else{\n                 printf(\"client # %s\\n\" , buf);\n            }\n\n        }\n        else if (size == 0){\n            printf(\"client quit ...\\n\");\n            break;\n        }\n        else{\n            perror(\"read\");\n            break;\n        }\n    }\n\n    close(fd);\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220905190739-lpbeoy1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905190739-lpbeoy1",
+				"updated": "20220905203102"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220905203102-re6iklp.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905203041-2l7hhsf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905203041-2l7hhsf"
+			}
+		},
+		{
+			"ID": "20220910155831-5c83ro7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155831-5c83ro7"
+			}
+		},
+		{
+			"ID": "20220910155829-ausne7w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220910155829-ausne7w",
+				"updated": "20220910155829"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "命名管道会在硬盘存储数据吗？"
+				}
+			]
+		},
+		{
+			"ID": "20220910155829-ikb6ccm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155829-ikb6ccm",
+				"updated": "20220910155829"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不会，为了效率，命名管道的数据不会刷新到磁盘上。"
+				}
+			]
+		},
+		{
+			"ID": "20220905203042-tc2jyie",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905203042-tc2jyie",
+				"updated": "20220905203042"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220905203042-iovii0u.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220905222717-4cex2j3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905222717-4cex2j3"
+			}
+		},
+		{
+			"ID": "20220905222718-ru7lupk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220905222718-ru7lupk"
+			}
+		},
+		{
+			"ID": "20220910155845-1ki4fnd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220910155845-1ki4fnd",
+				"updated": "20220910155845"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "System V"
+				}
+			]
+		},
+		{
+			"ID": "20220910155845-yu6ibxl",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220910155845-yu6ibxl",
+				"updated": "20220910155845"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220910155845-9l3ducz",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220910155845-9l3ducz",
+						"updated": "20220910155845"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "system V主要有"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "三种进程通信方式"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "："
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "消息队列"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "共享内存"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "信号量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155845-6j7id4a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155845-6j7id4a",
+				"updated": "20220910155845"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "管道都是基于文件的通信方式"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220910155845-1n8panh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220910155845-1n8panh",
+				"updated": "20220910155845"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "system V 共享内存"
+				}
+			]
+		},
+		{
+			"ID": "20220910155845-5oi7yit",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155845-5oi7yit",
+				"updated": "20220910155845"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这里主要讲的是system V中的 共享内存的进程通信方式。"
+				}
+			]
+		},
+		{
+			"ID": "20220910155845-ze1xe96",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155845-ze1xe96",
+				"updated": "20220910155845"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而system V是标准的进程间通信方式。共享内存区是最快的IPC形式。一旦这样的内存映射到共享它的进程的地址空间，这些进程间数据传递不再涉及到内核，换句话说是进程不再通过执行进入内核的系统调用来传递彼此的数据"
+				}
+			]
+		},
+		{
+			"ID": "20220906205257-x5amuaq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220906205257-x5amuaq",
+				"updated": "20220906205316"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220906205316-cvgzhrx.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155903-5i7fpcj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155903-5i7fpcj",
+				"updated": "20220910155903"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实就是在物理内存中创建一块共享内存 ，虽然创建的两个进程的虚拟地址是不一样的，但是在页表中 ，两进程都是挂接在物理内存的同一块共享内存中。"
+				}
+			]
+		},
+		{
+			"ID": "20220910155909-0ckbulx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155909-0ckbulx"
+			}
+		},
+		{
+			"ID": "20220910155903-cm6v46a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910155903-cm6v46a",
+				"updated": "20220910155903"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "准备工作"
+				}
+			]
+		},
+		{
+			"ID": "20220910155903-midtjq3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155903-midtjq3",
+				"updated": "20220910155903"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "共享内存是在物理地址中，所以是由OS管理。 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "再次重申：OS是不信任认可人的"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220910155903-z1dhh2r",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220910155903-z1dhh2r",
+				"updated": "20220910155903"
+			},
+			"Children": [
+				{
+					"ID": "20220910155903-zmp321m",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220910155903-zmp321m",
+						"updated": "20220910155903"
+					},
+					"Children": [
+						{
+							"ID": "20220910155903-noltq4g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155903-noltq4g",
+								"updated": "20220910155903"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "OS中存在着多个进程，同时使用不同的共享内存来通信，所以共享内存在系统中存在多份。OS如何管理这些共享内存呢？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "先描述，再组织"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910155903-gn5z60d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220910155903-gn5z60d",
+						"updated": "20220910155903"
+					},
+					"Children": [
+						{
+							"ID": "20220910155903-ypawcdy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155903-ypawcdy",
+								"updated": "20220910155903"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "怎么保证两个或多个进程，看到的是同一份共享内存呢？ "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "所以一定有一个唯一标识性的ID，放标不同的进程能识别同一个共享内存资源 ，这个ID 就是 shmid"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910155903-f8t1j5p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220910155903-f8t1j5p",
+						"updated": "20220910155903"
+					},
+					"Children": [
+						{
+							"ID": "20220910155903-wnwjdu4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155903-wnwjdu4",
+								"updated": "20220910155903"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这个ID在哪里？一定在描述共享内存的数据结构中，这个数据结构就是 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "struct shmid_ds"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 。"
+								}
+							]
+						},
+						{
+							"ID": "20220910155935-rm72wh9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910155935-rm72wh9",
+								"updated": "20220910155936"
+							},
+							"Children": [
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/image-20220910155936-uaopbrj.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910155944-7m6snq5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910155944-7m6snq5"
+			}
+		},
+		{
+			"ID": "20220910160036-abatwbr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160036-abatwbr",
+				"updated": "20220910160036"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用的接口"
+				}
+			]
+		},
+		{
+			"ID": "20220910160036-c2wpn26",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160036-c2wpn26",
+				"updated": "20220910160036"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在使用共享内存是接口是较多的。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160036-2l07pn2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910160036-2l07pn2",
+				"updated": "20220910160036"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": " int shmget (key_t , size_t size , int shmfig);\n\n int shmctl (int shmid , int cmd , struct shmid_ds * buf);\n \n void* shmat (int shmid , const void* shmaddr , int shmfig );\n \n int shmdt ( const void *shmaddr);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910160036-zhbn87q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160036-zhbn87q",
+				"updated": "20220910160036"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "shmget()"
+				}
+			]
+		},
+		{
+			"ID": "20220910160036-m2iuyux",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160036-m2iuyux",
+				"updated": "20220910160036"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "shmget()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 作用就是创建一块共享内存。"
+				}
+			]
+		},
+		{
+			"ID": "20220906212200-r79kh4p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220906212200-r79kh4p",
+				"updated": "20220906212200"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220906212200-y39hbc6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160057-7qivosq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220910160057-7qivosq",
+				"updated": "20220910160057"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "函数参数"
+				}
+			]
+		},
+		{
+			"ID": "20220910160057-0vykxsw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220910160057-0vykxsw",
+				"updated": "20220910161759"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220910160057-7g2znga",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220910160057-7g2znga",
+						"updated": "20220910161759"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "key"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " :这个共享内存段名字.建议使用"
+						},
+						{
+							"Type": "NodeBlockRef",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeBlockRefID",
+									"Data": "20220910160124-ajo9qzj"
+								},
+								{
+									"Type": "NodeBlockRefSpace"
+								},
+								{
+									"Type": "NodeBlockRefDynamicText",
+									"Data": "ftok()"
+								},
+								{
+									"Type": "NodeCloseParen"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "函数来获取。\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "size"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":共享内存大小。建议是 "
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "4kb"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "的整数倍\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "shmflg"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 由九个权限标志构成，它们的用法和创建文件时使用的mode模式标志是一样的"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160057-jl1kxqp",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220910160057-jl1kxqp",
+				"updated": "20220910160057"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220910160057-4sxd7ev",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220910160057-4sxd7ev",
+						"updated": "20220910160057"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：成功返回一个非负整数，即该共享内存段的标识码；失败返回-1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220906224929-t6kcxyd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220906224929-t6kcxyd",
+				"updated": "20220910160114"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "shmfig可以选两个参数 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IPC_CREAT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IPC_EXCL"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220906224929-4jf6xnj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220906224929-4jf6xnj",
+				"updated": "20220906224930"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220906224930-2pil36i.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160124-17e9lt7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160124-17e9lt7",
+				"updated": "20220910160124"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果单独使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IPC_CREAT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ",或者flg为0:不存在共享内存时，创建一个共享内存，如果创建的共享内存已经存在，则 直接返回当前已经存在的共享内存。(基本不会空手而归)\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IPC_EXCL"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "(单独使用没有意义)\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IPC_CREAT|IPC_EXCL"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":如果不存在共享内存，则创建之。如果已经有了共享内存，则返回出错!（意义:如果我调用成功，得到的一定是一个最新的，没有没别人使用的共享内存!)"
+				}
+			]
+		},
+		{
+			"ID": "20220910160128-4oci9l8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160128-4oci9l8"
+			}
+		},
+		{
+			"ID": "20220910160124-qtav6i5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220910160124-qtav6i5",
+				"updated": "20220910160124"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "key vs shmid"
+				}
+			]
+		},
+		{
+			"ID": "20220910160124-3ewzfu8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160124-3ewzfu8",
+				"updated": "20220910160124"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "key:只是用来在系统层面进行标识唯一性的,不能用来管理shm。\nshaid:是OS给用户返回的id，用来在用户层进行shm管理。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160124-ajo9qzj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160124-ajo9qzj",
+				"updated": "20220910160124"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ftok()"
+				}
+			]
+		},
+		{
+			"ID": "20220910160124-ygcdibv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160124-ygcdibv",
+				"updated": "20220910160124"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ftok()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可以将"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "路径"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "项目标识符"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "转化为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "shmget()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "key"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ."
+				}
+			]
+		},
+		{
+			"ID": "20220907212907-da5i5h0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220907212907-da5i5h0",
+				"updated": "20220910160201"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910160201-3de1by3.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160213-vaj6r9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160213-vaj6r9b",
+				"updated": "20220910160213"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "路径"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "项目标识符"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是一样的，那么生成的key也是同一个值。这有利于通信的另一个进程获取到key。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160216-zazpuxl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160216-zazpuxl"
+			}
+		},
+		{
+			"ID": "20220910160213-700spu9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160213-700spu9",
+				"updated": "20220910160213"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "shmctl()"
+				}
+			]
+		},
+		{
+			"ID": "20220910160213-3fc5h8c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160213-3fc5h8c",
+				"updated": "20220910160213"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "控制共享内存，但我们一般只用来删除共享内存。"
+				}
+			]
+		},
+		{
+			"ID": "20220907212907-mqrklly",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220907212907-mqrklly",
+				"updated": "20220907212908"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220907212908-gysrad7.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910154517-fcvw8td",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910154517-fcvw8td",
+				"updated": "20220910160227"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "函数参数的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "cmd"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 很多选择， 但是我们主要使用的是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IPC_RMID"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , 来释放内存。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160228-y40tzg9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160228-y40tzg9",
+				"updated": "20220910160239"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910160239-ir072ai.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160230-ke3isyi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160230-ke3isyi",
+				"updated": "20220910160246"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在参数中有个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "struct shmid_ds* buf"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  这其实就是管理共享内存的数据结构。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160002-paz5t18",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160002-paz5t18",
+				"updated": "20220910160007"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910155936-uaopbrj.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910154518-2k2lxk7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910154518-2k2lxk7"
+			}
+		},
+		{
+			"ID": "20220910160318-8a2dab5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160318-8a2dab5",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "shmat() 和 shmdt()"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-uulzrcy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-uulzrcy",
+				"updated": "20220910160336"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910160336-698odiy.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-neuf5nu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-neuf5nu",
+				"updated": "20220910161827"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "shmat()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 负责将进程"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "挂接"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "到我们申请到的共享内存。\n参数\n    "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "shmid"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 共享内存标识\n    "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "shmaddr"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":指定连接的地址\n    "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "shmflg"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":它的两个可能取值是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SHM_RND"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SHM_RDONLY"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n\t"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "返回值"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：成功返回一个地址(虚拟地址)，指向共享内存第一个节；失败返回-1 。"
+				}
+			]
+		},
+		{
+			"ID": "20220910161828-564wm8l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910161828-564wm8l"
+			}
+		},
+		{
+			"ID": "20220910160318-itjqpmx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-itjqpmx",
+				"updated": "20220910161848"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "shmdt()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 负责将进程从共享内存上"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "拆卸"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n参数\n     "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "shmaddr"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 由shmat所返回的指针\n     "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "返回值"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：成功返回0；失败返回-1\n    注意：将共享内存段与当前进程脱离不等于删除共享内存段"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-ft9mj1r",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220910160318-ft9mj1r",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220910160318-8tu9cg7",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220910160318-8tu9cg7",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "shmaddr为NULL，核心自动选择一个地址\nshmaddr不为NULL且shmflg无SHM_RND标记，则以shmaddr为连接地址。\nshmaddr不为NULL且shmflg设置了SHM_RND标记，则连接的地址会自动向下调整为SHMLBA的整数倍。公式：shmaddr -\n(shmaddr % SHMLBA)\nshmflg=SHM_RDONLY，表示连接操作用来只读共享内存"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-znimlou",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160318-znimlou",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "相关函数的综合使用"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-dp607wx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910160318-dp607wx",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003cstdio.h\u003e\n#include \u003csys/ipc.h\u003e\n#include \u003csys/shm.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003cunistd.h\u003e\n\n#define PATH_NAME \"./\"  //定义我们的fotk()的路径名\n#define PROJ_ID 0x6666   //定义我们的fotk()项目标识符\n#define SIZE 4096  //定义共享内存的大小，建议是4kB的整数倍。\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-2fk5qi9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-2fk5qi9",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "server.c"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-1g45evs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910160318-1g45evs",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"comm.h\"\n\nint main(){\n\n    key_t key = ftok(PATH_NAME , PROJ_ID);// 获取到shmget()函数的key\n    if (key \u003c 0)\n    {\n        perror(\"ftok\");\n        return 1;\n    }\n\n    int shmid = shmget(key , SIZE , IPC_CREAT |IPC_EXCL|0666);//获取一个没有使用过得共享内存，0666是这片内存的权限。\n    if(shmid \u003c 0)\n    {\n        perror(\"shmget\");\n        return 2;\n    }\n\n    printf(\"key: %u , shmid:%d\\n\" , key , shmid);\n    sleep(10);\n\n    shmctl(shmid , IPC_RMID , NULL);//使用IPC_RMID , 释放共享内存,\n    printf(\"key 0x%X , shmid:%d -\u003e shm delete success\\n\" , key , shmid );\n    sleep(10);\n\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-2bxjd47",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-2bxjd47",
+				"updated": "20220910161403"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此程序的主要内容就是将打印共享内存的shmid，十秒后删除共享内存。\n这里使用了"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220910160658-favctnz"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "ipcs -m指令"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来监控共享内存的状态，除了使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "shmctl()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IPC_RMID"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来释放共享内存， 还可以使用"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220910160658-gk0v0z8"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "ipcrm -m 指令"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来删除共享内存。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910160418-smo1amz.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-b0r4wih",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-b0r4wih",
+				"updated": "20220910160434"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910160434-2qeyudg.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-hv4jw3m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160318-hv4jw3m",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "system V共享内存使用例子"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-1s00618",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-1s00618",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "comm.h"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-dz972y3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910160318-dz972y3",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003cstdio.h\u003e\n#include \u003csys/ipc.h\u003e\n#include \u003csys/shm.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003cunistd.h\u003e\n\n#define PATH_NAME \"./\"\n#define PROJ_ID 0x6666\n#define SIZE 4096\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-xs358im",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-xs358im",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "server.c 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-ha1k82c",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910160318-ha1k82c",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"comm.h\"\n\n\nint main(){\n    key_t key = ftok(PATH_NAME , PROJ_ID);\n    if (key \u003c 0)\n    {\n        perror(\"ftok\");\n        return 1;\n    }\n\n    int shmid = shmget(key , SIZE , IPC_CREAT |IPC_EXCL|0666);\n    if(shmid \u003c 0)\n    {\n        perror(\"shmget\");\n        return 2;\n    }\n\n    printf(\"key: %u , shmid:%d\\n\" , key , shmid);\n   // sleep(10);\n\n    char* mem = (char*)shmat(shmid , NULL , 0);\n    printf(\"attaches shm success\\n\");\n\n\n    //这里就是后面的通信逻辑\n    while(1)\n    {\n        sleep(1);\n        printf(\"%s\\n\", mem);\n    }\n\n    shmdt(mem);//负责将进程从共享内存上拆卸\n\n    shmctl(shmid , IPC_RMID , NULL);\n    printf(\"key 0x%X , shmid:%d -\u003e shm delete success\\n\" , key , shmid\n   // sleep(10);\n\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-u3blt7r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-u3blt7r",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "client.c 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-yh0zcd8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220910160318-yh0zcd8",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"comm.h\"\n\nint main(){\n    key_t key = ftok(PATH_NAME , PROJ_ID);\n    if(key \u003c 0)\n    {\n        perror(\"ftok\");\n        return 1;\n    }\n\n    printf(\"%u\\n\" , key);\n\n\n    int shmid = shmget(key , SIZE , IPC_CREAT);\n    if(shmid \u003c 0 )\n    {\n        perror(\"shmget\");\n        return 1;\n    }\n\n    char* mem = (char*)shmat(shmid , NULL , 0);\n    sleep(5);\n\n    printf(\"client process attaches success! \\n\");\n\n    //以下是通信区域\n    char c = 'A';\n    while(c \u003c= 'Z')\n    {\n        mem[c-'A'] = c;\n        c++;\n        mem[c-'A'] = 0;\n        sleep(2);\n    }\n\n    shmdt(mem);\n\n    printf(\"client process detaches success! \\n\");\n\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-yq0298v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-yq0298v",
+				"updated": "20220910160503"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行结果：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910160503-y3u4is9.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-6m5hnt8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-6m5hnt8",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：client 没有写入时，甚至没有启动的时候，server端也不会等待client写入。  共享内存不提供任何"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "同步或者互斥"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "机制，需要程序员自行保证数据安全。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160509-6z03q8w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160509-6z03q8w"
+			}
+		},
+		{
+			"ID": "20220910160318-gbf5zmq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220910160318-gbf5zmq",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "System V共享内存的注意事项"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-7bijm5b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-7bijm5b",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "共享内存不提供任何"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "同步或者互斥"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "机制，需要程序员自行保证数据安全。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160515-zpfggk8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160515-zpfggk8"
+			}
+		},
+		{
+			"ID": "20220910160318-o0zuukp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-o0zuukp"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "系统调用read 和 write 管道 和 system V共享内存的区别？"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-q78mlr9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-q78mlr9",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "read或者write的本质"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":将数据从内核拷贝到用户，或者从用户拷贝到内核\n读或者写的本质:将数据从内核拷贝到用户，或者从用户拷贝到内核。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-p7loce9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-p7loce9",
+				"updated": "20220910161012"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而共享内存一旦建立好并映射进自己进程的地址空间，改进程就可以直接看到该共享内存，就如同"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "malloc"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的空间一般，不需要任何系统调用接口!所以共享内存是所有进程间通信中最快的！"
+				}
+			]
+		},
+		{
+			"ID": "20220910160528-lv81sb8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160528-lv81sb8"
+			}
+		},
+		{
+			"ID": "20220910160318-13y8tea",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160318-13y8tea",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "shmget()中的参数 size"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-g18o1zq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-g18o1zq",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上文中提及，申请的共享内存建议是 4kb的整数倍。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-2i3ftd3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-2i3ftd3",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果我们申请的不是4kb的整数倍呢？"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-g86w8wy",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220910160318-g86w8wy",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220910160318-5v92dky",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220910160318-5v92dky",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "共享内存在内核中申请的基本单位是页，内存页(4kb)。\n如果我们申请的"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "4097 byte"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ，内核会给我们"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "4096*2 byte"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ", 但是我们仍然只有"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "4097byte"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可用，多余的空间就属于荒废的区域，所以建议使用4kb的整数倍来申请。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160602-aql7z4m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160602-aql7z4m"
+			}
+		},
+		{
+			"ID": "20220910160318-div68oa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220910160318-div68oa",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "消息队列"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-gcg56fz",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220910160318-gcg56fz",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"ID": "20220910160318-hq9gfgq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-hq9gfgq",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-lemx4f5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-lemx4f5",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "消息队列提供了一个从一个进程向另外一个进程发送一块数据的方法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910160318-kdk2t8i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-kdk2t8i",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-ns9tc7v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-ns9tc7v",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每个数据块都被认为是有一个类型，接收者进程接收的数据块可以有不同的类型值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910160318-q9bkswa",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-q9bkswa",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-lyyszf1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-lyyszf1",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "特性方面"
+								}
+							]
+						},
+						{
+							"ID": "20220910160318-68zn179",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220910160318-68zn179",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"ID": "20220910160318-qxmhoez",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220910160318-qxmhoez",
+										"updated": "20220910160318"
+									},
+									"Children": [
+										{
+											"ID": "20220910160318-0y6jsdj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220910160318-0y6jsdj",
+												"updated": "20220910160318"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "IPC资源必须删除，否则不会自动清除，除非重启，所以system V IPC资源的生命周期随内核"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160557-dbs02cp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160557-dbs02cp"
+			}
+		},
+		{
+			"ID": "20220910160318-8azaq0g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220910160318-8azaq0g",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "信号量"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-1pga9xt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-1pga9xt",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "信号量主要用于同步和互斥的，下面先来看看什么是同步和互斥。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-cnrhwts",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-cnrhwts",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "信号量不是以传输数据为目的的!通过共享“资源”的方式，来达到多个进程的同步和互斥的目的!"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-7lb2xwa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160318-7lb2xwa",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "信号量的本质，是 一个计数器，类似 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "int count;"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 用来衡量临界资源中的资源数目的。"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-8uj4shc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220910160318-8uj4shc",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程互斥"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-vudbl6r",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220910160318-vudbl6r",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"ID": "20220910160318-78h9ny4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-78h9ny4",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-jzpxkcv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-jzpxkcv",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由于各进程要求共享资源，而且有些资源需要互斥使用，因此各进程间竞争使用这些资源，进程的这种关系为进程的互斥"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910160318-9zkplbm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-9zkplbm",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-hix3zji",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-hix3zji",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "系统中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "被多个执行流同时能够访问的资源"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，称这样的资源为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "临界资源"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "互斥资源"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910160318-mt7n6ig",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-mt7n6ig",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-7w2m1uu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-7w2m1uu",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在进程中涉及到临界资源的程序段叫临界区"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910160318-i1m8xdt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-i1m8xdt",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-rfim5p6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-rfim5p6",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "特性方面"
+								}
+							]
+						},
+						{
+							"ID": "20220910160318-4d5cl24",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220910160318-4d5cl24",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"ID": "20220910160318-duyrdtb",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220910160318-duyrdtb",
+										"updated": "20220910160318"
+									},
+									"Children": [
+										{
+											"ID": "20220910160318-vb6sorj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220910160318-vb6sorj",
+												"updated": "20220910160318"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "IPC资源必须删除，否则不会自动清除，除非重启，所以system V IPC资源的生命周期随内核"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910160318-n10jh0b",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220910160318-n10jh0b",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-rahdsoe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-rahdsoe",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "什么事原子性？"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 一件事情要么不做，要做就做完，"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "没有中间态"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，就叫做原子性！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-sb38c3c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220910160318-sb38c3c",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "共享内存、消息队列和信号量的区别"
+				}
+			]
+		},
+		{
+			"ID": "20220910160318-x4leyc2",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220910160318-x4leyc2",
+				"updated": "20220910160318"
+			},
+			"Children": [
+				{
+					"ID": "20220910160318-8n3jbeo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220910160318-8n3jbeo",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-yk35wi6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-yk35wi6",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "接口类似。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220910160318-rssqdgz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220910160318-rssqdgz",
+						"updated": "20220910160318"
+					},
+					"Children": [
+						{
+							"ID": "20220910160318-cxycmll",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220910160318-cxycmll",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据结构的第一的结构类型是完全一样的！("
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "struct ipc_perm"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ")"
+								}
+							]
+						},
+						{
+							"ID": "20220910160318-me06sk4",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220910160318-me06sk4",
+								"updated": "20220910160318"
+							},
+							"Children": [
+								{
+									"ID": "20220910160318-yvhmxtg",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220910160318-yvhmxtg",
+										"updated": "20220910160318"
+									},
+									"Children": [
+										{
+											"ID": "20220910160318-i3d48uw",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220910160318-i3d48uw",
+												"updated": "20220910160318"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "在内核中，所有的ipc资源都是通过数组组织起来的!   所有的System V标准的IPC资源，XXXid_ds结构体的第一个成员都是ipc_perm(一样的)"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910154520-89ihqr5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910154520-89ihqr5",
+				"updated": "20220910154520"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220910154520-mgzcv14.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220910160631-xg6exm5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220910160631-xg6exm5"
+			}
+		}
+	]
+}

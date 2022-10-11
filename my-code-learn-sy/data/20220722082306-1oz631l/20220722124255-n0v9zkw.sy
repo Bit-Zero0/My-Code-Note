@@ -1,0 +1,6725 @@
+{
+	"ID": "20220722124255-n0v9zkw",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722124255-n0v9zkw",
+		"title": "继承",
+		"updated": "20220819225300"
+	},
+	"Children": [
+		{
+			"ID": "20220722124304-limaq7i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-limaq7i",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承的概念及定义"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-c7ikhl4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124304-c7ikhl4",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承的概念"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-203cfpz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-203cfpz",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "继承"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "(nheritance)机制是面向对象程序设计"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "使代码可以复用"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的最重要的手段，它允许程序员在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "保特原有类特性的基础上进行扩展"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，增加功能，这样产生新的类，称"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "派生类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-317lz7b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-317lz7b",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstring\u003e\n#include \u003ciostream\u003e\nusing namespace std;\n\nclass Person\n{\npublic:\n\tstring emm = \"abc\";\n\tint age = 10;\n\n\tvoid print()\n\t{\n\t\tcout \u003c\u003c emm.c_str() \u003c\u003c endl;\n\t\tcout \u003c\u003c age \u003c\u003c endl;\n\t}\n};\n\nclass student : public Person\n{\npublic:\n\tstring tele;\n};\n\n\nint main()\n{\n\tstudent s1;\n\ts1.print();\n\n\tcout \u003c\u003c s1.age \u003c\u003c endl;\n\tcout \u003c\u003c s1.emm.c_str() \u003c\u003c endl;\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-5wt6iju",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-5wt6iju",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承后父类的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Person"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的成员（成员函数+成员变量）都会变成子类的一部分。这里体现出了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "复用了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Person"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的成员。下面我们使用监视窗口查看"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "对象，可以看到变量的复用。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-zq74iba",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-zq74iba",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "调用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "print()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可以看到成员函数的复用。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-8y5zuhf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124304-8y5zuhf",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承定义"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-qn6q5vx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124304-qn6q5vx",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定义格式"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-5e5xxve",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-5e5xxve",
+				"updated": "20220722124635"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Person是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "父类"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，也称作"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "基类"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。Student是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "子类"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，也称作"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "派生类"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606123020.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ttehdj0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124304-ttehdj0",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承关系和访问限定符"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-m8smzyl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-m8smzyl",
+				"updated": "20220722124648"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606123117.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-adur096",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124304-adur096",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承基类成员访问方式的变化"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-sn9jh3h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-sn9jh3h",
+				"updated": "20220722124657"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606123146.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-vdfd8fw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124304-vdfd8fw",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-6alauxf",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220722124304-6alauxf",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"ID": "20220722124304-uxqafu3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220722124304-uxqafu3",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-8zt9sgm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-8zt9sgm",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "基类private成员"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "在派生类中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无论以什么方式继承都是不可见"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的。这里的不可见是指基类的私有成员还是被继承到了派生类对象中，但是语法上限制派生类对象不管在类里面还是类外面都不能去访问它。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-kuydnyt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220722124304-kuydnyt",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-tuia9t5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-tuia9t5",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "基类private成员"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "在派生类中是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不能被访问"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，如果基类成员不想在类外直接被访问，但需要在派生类中能访问，就"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "定义为protected。可以看出保护成员限定符是因继承才出现的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-vzfs04r",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220722124304-vzfs04r",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-43we7bq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-43we7bq",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实际上面的表格我们进行一下总结会发现，基类的私有成员在子类都是不可见。基类的其他成员在子类的访问方式 == Min(成员在基类的访问限定符，继承方式)，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "public \u003e protected \u003e private"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-049nq9g",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20220722124304-049nq9g",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-yt3o0ug",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-yt3o0ug",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用关键字class时默认的继承方式是private，使用struct时默认的继承方式是public，不过最好显示的写出继承方式。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-hz4et7g",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20220722124304-hz4et7g",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-gz96qlg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-gz96qlg",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在实际运用中一般使用都是public继承，几乎很少使用protetced/private继承"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，也不提倡使用protetced/private继承，因为protetced/private继承下来的成员都只能在派生类的类里面使用，实际中扩展维护性不强。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124725-6mppu15",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124725-6mppu15",
+				"updated": "20220722124727"
+			}
+		},
+		{
+			"ID": "20220722124304-d2fk1st",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-d2fk1st",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基类和派生类对象赋值转换"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-epwkigm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722124304-epwkigm",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"ID": "20220722124304-tniitji",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722124304-tniitji",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-lijoitv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-lijoitv",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "派生类对象"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 可以赋值给 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "基类的对象 / 基类的指针 / 基类的引用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。这里有个形象的说法叫"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "切片"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或者"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "切割"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。寓意把派生类中父类那部分切来赋值过去。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-m9k91k8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722124304-m9k91k8",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-ngbf5ae",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-ngbf5ae",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基类对象不能赋值给派生类对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-935egt8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722124304-935egt8",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-ecy468s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-ecy468s",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "基类的指针"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可以通过"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "强制类型转换赋值给派生类的指针"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。但是必须是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "基类的指针是指向派生类对象时才是安全的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。这里"
+								},
+								{
+									"Type": "NodeEmphasis",
+									"Data": "em",
+									"Children": [
+										{
+											"Type": "NodeEmA6kOpenMarker",
+											"Data": "*"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "基类如果是多态类型"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeEmA6kCloseMarker",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，可以使用 "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "RTTI"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(Run-Time Type Information) 的"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "dynamic_cast"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 来进行识别后进行安全转换。（ps：这个我们有会讲，这里了解一下）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-yekixsi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-yekixsi",
+				"updated": "20220722124739"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606124239.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-hwfwtkx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-hwfwtkx",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeEmphasis",
+					"Data": "em",
+					"Children": [
+						{
+							"Type": "NodeEmA6kOpenMarker",
+							"Data": "*"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "子类对象可以赋值给父类对象/指针/引用"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeEmA6kCloseMarker",
+							"Data": "*"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ag4nsz6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-ag4nsz6",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\nprivate:\n\tstring _name;\n\tstring _sex;\n\tint _age;\n};\n\nclass Student : public Person\n{\npublic:\n\tint _N0;\n};\n\n\nint main()\n{\n\tStudent s1;\n\tPerson p = s1;\n\n\tPerson* pp = \u0026s1;\n\n\tPerson\u0026 ref = s1;\n\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-qtlzs3k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-qtlzs3k",
+				"updated": "20220722124304"
+			}
+		},
+		{
+			"ID": "20220722124747-w7rqnlj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124747-w7rqnlj",
+				"updated": "20220722124808"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606125307.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606125341.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124824-r1seset",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124824-r1seset"
+			}
+		},
+		{
+			"ID": "20220722124304-zi9a7c3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-zi9a7c3",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeEmphasis",
+					"Data": "em",
+					"Children": [
+						{
+							"Type": "NodeEmA6kOpenMarker",
+							"Data": "*"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "基类对象不能赋值给派生类对象"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeEmA6kCloseMarker",
+							"Data": "*"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-z993jeh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-z993jeh",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\nprivate:\n\tstring _name;\n\tstring _sex;\n\tint _age;\n};\n\nclass Student : public Person\n{\npublic:\n\tint _N0;\n};\n\n\nint main()\n{\n\tStudent s1;\n\tPerson p;\n\n\ts1 = p;//基类对象不能赋值给派生类对象,所以这里是错误的\n\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-luhpsq1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-luhpsq1",
+				"updated": "20220722124839"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606125726.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n编译器直接报错。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124842-3hdu11k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124842-3hdu11k"
+			}
+		},
+		{
+			"ID": "20220722124304-r5t8tlz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-r5t8tlz",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeEmphasis",
+					"Data": "em",
+					"Children": [
+						{
+							"Type": "NodeEmA6kOpenMarker",
+							"Data": "*"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "基类的指针可以通过强制类型转换赋值给派生类的指针"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeEmA6kCloseMarker",
+							"Data": "*"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-9lg83c3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-9lg83c3",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\nprivate:\n\tstring _name;\n\tstring _sex;\n\tint _age;\n};\n\nclass Student : public Person\n{\npublic:\n\tint _No;\n};\n\n\nint main()\n{\n\tStudent sobj;\n\tPerson pobj = sobj;\n\tPerson* pp = \u0026sobj;\n\tPerson\u0026 rp = sobj;\n\n\n\t// 基类的指针可以通过强制类型转换赋值给派生类的指针\n\tpp = \u0026sobj;\n\tStudent * ps1 = (Student*)pp; // 这种情况转换时可以的。\n\tps1-\u003e_No = 10;\n\n\tpp = \u0026pobj;\n\tStudent* ps2 = (Student*)pp; // 这种情况转换时虽然可以，但是会存在越界访问的问题\n\tps2-\u003e_No = 10;\n\n\treturn 0;\n} \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-e2uehid",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-e2uehid",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意其中的这段代码"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-sxzdiz0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-sxzdiz0",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\tpp = \u0026pobj;\n\tStudent* ps2 = (Student*)pp; // 这种情况转换时虽然可以，但是会存在越界访问的问题\n\tps2-\u003e_No = 10;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-841t2cx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-841t2cx",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "pp"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的原指向的内容是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_name"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_age"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_sex"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_No"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  。\n当 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "pp = \u0026pobj"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 时 ， "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "pp"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 指向的就是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_name"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_age"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_sex"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 了。\nps2是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Student*"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 类型 ， 能指向的内容包含了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_name"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_age"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_sex"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_No"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， 但是当我们将 (student*)pp 赋值给他后，其实是容易形成越界访问。\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722124904-kfgw9b0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124904-kfgw9b0",
+				"updated": "20220722124909"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606172122.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124914-aysapuv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124914-aysapuv"
+			}
+		},
+		{
+			"ID": "20220722124304-pv277lh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-pv277lh",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承中的作用域"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-upr8sxb",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220722124304-upr8sxb",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"ID": "20220722124304-xhhx3su",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220722124304-xhhx3su",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-arrp1hm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-arrp1hm",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在继承体系中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "基类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "派生类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "独立的作用域"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-xk568jf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220722124304-xk568jf",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-andunma",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-andunma",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "子类和父类中有同名成员"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "子类成员将屏蔽父类对同名成员的直接访问，这种情况叫"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "隐藏"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "，也叫"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "重定义"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。（在子类成员函数中，可以使用基类 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "::"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 基类成员显示访问）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-oc4m63l",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220722124304-oc4m63l",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-w56awcu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-w56awcu",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "需要注意的是如果是成员函数的隐藏，只需要函数名相同就构成隐藏。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-7n0rm4h",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20220722124304-7n0rm4h",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-v7vkjw4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-v7vkjw4",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意在实际中在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "继承体系里"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "面最好"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不要定义同名的成员"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-s3hvhbx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124304-s3hvhbx",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "变量隐藏"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-0f61i8d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-0f61i8d",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\nprotected:\n\tstring _name = \"小李子\"; // 姓名\n\tint _num = 111; \t   // 身份证号\n};\n\nclass Student : public Person\n{\npublic:\n\tvoid Print()\n\t{\n\t\tcout \u003c\u003c \" 姓名:\" \u003c\u003c _name \u003c\u003c endl;\n\t\tcout \u003c\u003c _num \u003c\u003c endl; //student's\n\t\tcout \u003c\u003c Person::_num \u003c\u003c endl; //Person's\n\t}\nprotected:\n\tint _num = 999; // 学号\n};\n\nvoid test()\n{\n\tStudent s;\n\ts.Print();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ca6l6or",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-ca6l6or",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "print()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数中打印的第一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_num"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是子类 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Student"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_num"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，而第二个是父类Perosn中的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_num"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，使用了 域操作符"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "::"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 才能访问到。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-4l30wes",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-4l30wes",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Student"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_num"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Person"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_num"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "构成隐藏关系，可以看出这样代码虽然能跑，但是非常容易混淆。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-rryaxh8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124304-rryaxh8",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "函数隐藏"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-4k6v5yh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-4k6v5yh",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "需要注意的是如果是成员函数的隐藏，只需要"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "函数名相同"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "就构成"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "隐藏"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-gzmgpvd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-gzmgpvd",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A\n{\npublic:\n\tvoid fun()\n\t{\n\t\tcout \u003c\u003c \"func()\" \u003c\u003c endl;\n\t}\n};\n\nclass B : public A\n{\npublic:\n\tvoid fun(int i)\n\t{\n\t\tcout \u003c\u003c \"func(int i)-\u003e\" \u003c\u003c i \u003c\u003c endl;\n\t}\n};\n\nvoid test()\n{\n\tB b;\n\tb.fun(1); // 函数隐藏\n\tb.fun(); // 编译报错，被隐藏了，所以调不动\n\tb.A::fun(); //若要使用父类的fun() , 则使用 :: 操作符\n};\n\nint main()\n{\n\ttest();\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-q19p16a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-q19p16a",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "B中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "fun"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和A中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "fun"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不是构成重载"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，因为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "不在同一作用域"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\nB中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "fun"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和A中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "fun"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "构成隐藏"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "成员函数满足"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "函数名相同"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "就构成"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "隐藏"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-0wzjtlw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-0wzjtlw",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "派生类的默认成员函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-7enlr3n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-7enlr3n",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "6个默认成员函数，“"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "默认"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"的意思就是指我们不写，编译器会变我们自动生成一个，那么在派生类中，这几个成员函数是如何生成的呢？"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-3p29uup",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722124304-3p29uup",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722124304-dkaqtg4",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20220722124304-dkaqtg4",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-m3bubzq",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20220722124304-m3bubzq",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-3et951t",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-3et951t",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "派生类的"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "构造函数"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "必须调用基类的构造函数初始化基类的那一部分成员。如果基类没有默认的构造函数，则必须在派生类构造函数的初始化列表阶段显示调用。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124304-81ntshu",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20220722124304-81ntshu",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-h85vm1f",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-h85vm1f",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "派生类的"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "拷贝构造函数"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "必须调用基类的拷贝构造完成基类的拷贝初始化。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124304-rr3345x",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20220722124304-rr3345x",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-jmtvfgy",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-jmtvfgy",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "派生类的 "
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "operator="
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 必须要调用基类的 "
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "operatora="
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 完成基类的复制。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124304-e2ihkli",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NC4=",
+								"Num": 4
+							},
+							"Properties": {
+								"id": "20220722124304-e2ihkli",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-d3cgqdh",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-d3cgqdh",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "派生类的"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "析构函数"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "会在被调用完成后自动调用基类的析构函数清理基类成员。因为这样才能保证派生类对象先清理派生类成员再清理基类成员的顺序。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124304-0iz1wdm",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NS4=",
+								"Num": 5
+							},
+							"Properties": {
+								"id": "20220722124304-0iz1wdm",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-j436k3w",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-j436k3w",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "派生类对象初始化先调用基类构造再调派生类构造"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124304-vpy927s",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Ni4=",
+								"Num": 6
+							},
+							"Properties": {
+								"id": "20220722124304-vpy927s",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-pno4v66",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-pno4v66",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "派生类对象析构清理先调用派生类析构再调基类的析构"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-zojmv38",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-zojmv38",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeEmphasis",
+					"Data": "em",
+					"Children": [
+						{
+							"Type": "NodeEmA6kOpenMarker",
+							"Data": "*"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "总结：原则，继承下来的就调用父类处理的来处理，自己的按普通类基本规则。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeEmA6kCloseMarker",
+							"Data": "*"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-omstnwu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-omstnwu",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我我们没有写派生类的构造函数和析构函数时，是否会调用基类的构造和析构函数呢？"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ekclgxe",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-ekclgxe",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\npublic:\n\tPerson(const char* name = \"alex\")\n\t\t: _name(name)\n\t{\n\t\tcout \u003c\u003c \"Person()\" \u003c\u003c endl;\n\t}\n\n\tPerson(const Person\u0026 p)\n\t\t: _name(p._name)\n\t{\n\t\tcout \u003c\u003c \"Person(const Person\u0026 p)\" \u003c\u003c endl;\n\t}\n\n\tPerson\u0026 operator=(const Person\u0026 p)\n\t{\n\t\tcout \u003c\u003c \"Person operator=(const Person\u0026 p)\" \u003c\u003c endl;\n\t\tif (this != \u0026p)\n\t\t\t_name = p._name;\n\n\t\treturn *this;\n\t}\n\n\t~Person()\n\t{\n\t\tcout \u003c\u003c \"~Person()\" \u003c\u003c endl;\n\t\t//delete[] _ptr;\n\t}\nprotected:\n\tstring _name; // 姓名\n\t//int* _ptr = new int[10];\n};\n\nclass Student : public Person\n{\npublic:\n\nprotected:\n\tint _num; // 学号\n};\n\n\nint main()\n{\n\tStudent s; // 定义派生类对象\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-t3e9pox",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-t3e9pox",
+				"updated": "20220722125006"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606182222.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n实际证明，是会调用基类的构造和析构函数的。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ooe5eo5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124304-ooe5eo5",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么情况下必须自己写？"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-nlvtkoo",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722124304-nlvtkoo",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722124304-np8wbsk",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722124304-np8wbsk",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "1、父类没有默认构造，需要我们自己显示写构造。\n2、如果子类有资源需要释放，就需要自己显示写析构。\n3、如果子类存在浅拷贝问题，就需要自己实现拷贝构造和赋值解决浅拷贝问题。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-gjf3xmg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124304-gjf3xmg",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果我们要自己写怎么办？如何自已写？"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-lhpmmga",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-lhpmmga",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "父类成员调用父类的对应构造、拷贝构造、"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "operator="
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  和析构处理"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-2a1vbf4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-2a1vbf4",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "子类成员按普通类处理。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-2mg2839",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-2mg2839",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\npublic:\n\tPerson(const char* name = \"alex\")\n\t\t: _name(name)\n\t{\n\t\tcout \u003c\u003c \"Person()\" \u003c\u003c endl;\n\t}\n\n\tPerson(const Person\u0026 p)\n\t\t: _name(p._name)\n\t{\n\t\tcout \u003c\u003c \"Person(const Person\u0026 p)\" \u003c\u003c endl;\n\t}\n\n\tPerson\u0026 operator=(const Person\u0026 p)\n\t{\n\t\tcout \u003c\u003c \"Person operator=(const Person\u0026 p)\" \u003c\u003c endl;\n\t\tif (this != \u0026p)\n\t\t\t_name = p._name;\n\n\t\treturn *this;\n\t}\n\n\t~Person()\n\t{\n\t\tcout \u003c\u003c \"~Person()\" \u003c\u003c endl;\n\t\tdelete[] _ptr;\n\t}\nprotected:\n\tstring _name; // 姓名\n\tint* _ptr = new int[10];\n};\n\nclass Student : public Person\n{\npublic:\n\tStudent(const char* name = \"Alex\" , int num = 66)\n\t\t:Person(name) //_name 是父类的成员变量，所以调用父类的构造函数来处理\n\t\t,_num(num)\n\t{}\n\n\tStudent(const Student\u0026 s)\n\t\t:Person(s) //父类的所有成员由父类的拷贝构造来处理， Student-\u003ePerson 其实就是自动进行了切片。\n\t\t, _num(s._num)//这个子类的成员变量，由子类自己处理\n\t{}\n\n\tStudent\u0026 operator=(const Student\u0026 s)\n\t{\n\t\tif (this != \u0026s)\n\t\t{\n\t\t\tPerson::operator=(s); //必须使用 :: 操作符来限定 operator= 的作用域，不然调用的是自己的operator=，会造成栈溢出\n\t\t\t_num = s._num;\n\t\t}\n\n\t\treturn *this;\n\t}\n\n\t// 析构函数名字会被统一处理成destructor()。（ps：至于为什么会统一处理，多态章节会讲解）\n\t// 那么子类的析构函数跟父类的析构函数就构成隐藏\n\t~Student()//子类的析构函数调用完以后，会自动调用父类的析构函数。\n\t{\n\t\tdelete[] _a;//子类处理子类的，父类处理父类的\n\t\t//Person::~Person(); //会被隐藏，因为析构函数都会被解析为destructor()\n\t}\n\nprotected:\n\tint _num; // 学号\n\tint* _a = new int[128];\n};\n\n\nint main()\n{\n\tStudent s;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-zv5aznw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-zv5aznw",
+				"updated": "20220722125028"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606185739.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-4o2kx69",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-4o2kx69",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承与友元"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-29srg4v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-29srg4v",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "友元关系不能继承"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，也就是说基类友元不能访问子类私有和保护成员"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-zq22l2y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-zq22l2y",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以下这段代码是出错的 ， 因为友元函数是无法继承的。（ps：爸爸的朋友不是我的朋友）"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-aq3xnv5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-aq3xnv5",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Student;//因为在Person类中的有先使用 Student对象，所以先声明一下\nclass Person\n{\npublic:\n\tfriend void Display(const Person\u0026 p, const Student\u0026 s);\nprotected:\n\tstring _name; // 姓名\n};\n\nclass Student : public Person\n{\n//friend void Display(const Person\u0026 p, const Student\u0026 s);//添加了这段代码就是正确的了\nprotected:\n\tint _stuNum; // 学号\n};\n\nvoid Display(const Person\u0026 p, const Student\u0026 s)\n{\n\tcout \u003c\u003c p._name \u003c\u003c endl;\n\tcout \u003c\u003c s._stuNum \u003c\u003c endl;\n}\n\nvoid main()\n{\n\tPerson p;\n\tStudent s;\n\tDisplay(p, s);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-06awx9p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-06awx9p",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承与静态成员"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-e9bm2b9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-e9bm2b9",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基类定义了static静态成员，则整个继承体系里面只有一个这样的成员。无论派生出多少个子类，都只有一个static成员实例 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-7kjz0th",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-7kjz0th",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\npublic:\n\tPerson() { ++_count; }\nprotected:\n\tstring _name; // 姓名\npublic:\n\tstatic int _count; // 统计人的个数。\n};\n\nint Person::_count = 0;\n\nclass Student : public Person\n{\nprotected:\n\tint _stuNum; // 学号\n};\n\nclass Graduate : public Student\n{\nprotected:\n\tstring _seminarCourse; // 研究科目\n};\n\nint main()\n{ //因为两个子类都没构造函数，所以回去调用父类的构造函数，每次调用_count都会 +1\n\tPerson p;\n\tStudent s;\n\tGraduate g;\n\n\tcout \u003c\u003c Person::_count \u003c\u003c endl;\n\tcout \u003c\u003c Student::_count \u003c\u003c endl;\n\tcout \u003c\u003c Graduate::_count \u003c\u003c endl;\n\n\tcout \u003c\u003c \u0026Person::_count \u003c\u003c endl;\n\tcout \u003c\u003c \u0026Student::_count \u003c\u003c endl;\n\tcout \u003c\u003c \u0026Graduate::_count \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-4txqc1f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-4txqc1f",
+				"updated": "20220722125124"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606191831.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_count"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "static"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "修饰的，所以只会有一份。"
+				}
+			]
+		},
+		{
+			"ID": "20220722125109-z4ktbvo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125109-z4ktbvo"
+			}
+		},
+		{
+			"ID": "20220722124304-djvhm7v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-djvhm7v",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "复杂的菱形继承及菱形虚拟继承"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-2k79kwf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-2k79kwf",
+				"updated": "20220722125144"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "单继承"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一个子类只有一个直接父类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时称这个继承关系为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "单继承"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606192306.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-t4krwc3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-t4krwc3",
+				"updated": "20220722125152"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "多继承"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一个子类有两个或以上直接父类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时称这个继承关系为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "多继承"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606192335.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-e8hk3bm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-e8hk3bm",
+				"updated": "20220722125208"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "菱形继承"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：菱形继承是多继承的一种特殊情况。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606192458.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-i8d2h0n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124304-i8d2h0n",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "菱形继承的问题"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-4g6u4tw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722124304-4g6u4tw",
+				"updated": "20220722125226"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722124304-wkntdgu",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722124304-wkntdgu",
+						"updated": "20220722125226"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-fqm4r6n",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722124304-fqm4r6n",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-4atrkoj",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-4atrkoj",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "从下面的对象成员模型构造，可以看出菱形继承有"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "数据冗余"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "和"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "二义性"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "的问题。在Assistant的对象中Person成员会有两份。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124304-8jeapom",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722124304-8jeapom",
+								"updated": "20220722125226"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-z4vk602",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124304-z4vk602",
+										"updated": "20220722125226"
+									},
+									"Children": [
+										{
+											"Type": "NodeImage",
+											"Data": "span",
+											"Children": [
+												{
+													"Type": "NodeBang"
+												},
+												{
+													"Type": "NodeOpenBracket"
+												},
+												{
+													"Type": "NodeLinkText",
+													"Data": "assets/"
+												},
+												{
+													"Type": "NodeCloseBracket"
+												},
+												{
+													"Type": "NodeOpenParen"
+												},
+												{
+													"Type": "NodeLinkDest",
+													"Data": "assets/020220606192626.png"
+												},
+												{
+													"Type": "NodeCloseParen"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-e7pgahy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124304-e7pgahy",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "二义性问题"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-qbwubtj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-qbwubtj",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\npublic:\n\tstring _name; // 姓名\n\t//int _a[10000];\n};\n\nclass Student : public Person\n{\npublic:\n\tint _num; //学号\n};\n\nclass Teacher : public Person\n{\npublic:\n\tint _id; // 职工编号\n};\n\nclass Assistant : public Student, public Teacher\n{\nprotected:\n\tstring _majorCourse; // 主修课程\n};\n\n\nint main()\n{\n\tAssistant a;\n\ta._id = 101;\n\ta._num = 0206;\n\ta._name = \"张三\";\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-1kqqvst",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-1kqqvst",
+				"updated": "20220722125248"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606193735.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722125253-ltqt22v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125253-ltqt22v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "main"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "函数中 ， "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "a._id"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "a._num"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是正确的， 没有存在二义性， 但是在 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "a._name"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中，就存在二义性， 因为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Person"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Student"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类中，都存在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_name"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，当我们使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "a._name"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，编译器不清楚，我们指定的是哪一个。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-8qadzwi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722124304-8qadzwi",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方法："
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-gv5asxy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-gv5asxy",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用域操作符"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "::"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指定我们要赋值的对象的成员变量。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-sv9xr1f",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-sv9xr1f",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tAssistant a;\n\ta._id = 101;\n\ta._num = 0206;\n\ta.Person::_name = \"张三\";\n\ta.Student::_name = \"李四\";\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-3udk59c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-3udk59c",
+				"updated": "20220722125351"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法二：使用"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722124304-02tx9aj"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "解法方法"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "解决"
+				}
+			]
+		},
+		{
+			"ID": "20220722125418-fgydl19",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125418-fgydl19"
+			}
+		},
+		{
+			"ID": "20220722124304-wwi52t0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124304-wwi52t0",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据冗余"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-42t5h1p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-42t5h1p",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如我们要在Person类中开辟了一个10000个int的数组，如果按照想法，它会被下面的类继承，最终应该有40000个连续的int空间。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-pxvx37p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-pxvx37p",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\npublic:\n\tstring _name; // 姓名\n\tint _a[10000];\n};\n\nclass Student : public Person\n{\npublic:\n\tint _num; //学号\n};\n\nclass Teacher : public Person\n{\npublic:\n\tint _id; // 职工编号\n};\n\nclass Assistant : public Student, public Teacher\n{\nprotected:\n\tstring _majorCourse; // 主修课程\n};\n\n\nint main()\n{\n\tAssistant a;\n\tcout \u003c\u003c sizeof(a) \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-58iry08",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-58iry08",
+				"updated": "20220722125507"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606200759.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n但是实际上却开辟了八万多个int类型的空间，造成了严重的数据冗余。"
+				}
+			]
+		},
+		{
+			"ID": "20220722125623-guin43b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125623-guin43b"
+			}
+		},
+		{
+			"ID": "20220722124304-02tx9aj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722124304-02tx9aj",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解法方法"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-e0v7thf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-e0v7thf",
+				"updated": "20220722125534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚继承解决数据冗余和二义性 ，使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "virtual"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 关键字 ， 需要在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "腰部位置"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "去使用虚继承。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606201257.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n或\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220609205051.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-13d80yr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-13d80yr",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person\n{\npublic:\n\tstring _name; // 姓名\n\tint _a[10000];\n};\n\nclass Student : virtual public Person\n{\npublic:\n\tint _num; //学号\n};\n\nclass Teacher : virtual public Person\n{\npublic:\n\tint _id; // 职工编号\n};\n\nclass Assistant : public Student, public Teacher\n{\nprotected:\n\tstring _majorCourse; // 主修课程\n};\n\n\nint main()\n{\n\tAssistant a;\n\tAssistant a;\n\ta._id = 101;\n\ta._num = 0206;\n\ta._name = \"张三\";\n\ta.Person::_name = \"alex\";\n\ta.Student::_name = \"emm\";\n\tcout \u003c\u003c sizeof(a) \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-b8b6aso",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-b8b6aso",
+				"updated": "20220722125608"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606201400.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n不仅数据冗余问题解决了，二义性的问题也解决了，因为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "a._name = \"张三\"  "
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "a.Person::_name = \"alex\""
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "a.Student::_name = \"emm\";"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ",现在使用的都是同一个变量了，也解决了二义性问题。"
+				}
+			]
+		},
+		{
+			"ID": "20220722125615-4sesavx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125615-4sesavx"
+			}
+		},
+		{
+			"ID": "20220722124304-x01d7ve",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124304-x01d7ve",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚拟继承解决数据冗余和二义性的原理"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-n257iwt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-n257iwt",
+				"updated": "20220722125641"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606204814.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n为使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "virtual"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 虚基类的代码 ："
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-2umlh7v",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-2umlh7v",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\n#include \u003ciostream\u003e\nusing namespace std;\n \nclass A\n{\npublic:\n\tint _a;\n};\n \nclass B:public A\n{\npublic:\n\tint _b;\n};\n \nclass C :public A\n{\npublic:\n\tint _c;\n};\n \nclass D :public B,public C\n{\npublic:\n\tint _d;\n};\n \nint main()\n{\n\tD d;\n\td.B::_a = 1;\n\td.C::_a = 2;\n\td._b = 3;\n\td._c = 4;\n\td._d = 5;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-78dtz7j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-78dtz7j",
+				"updated": "20220722125703"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606204613.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n发现 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "d.B::_a"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "d.C::_a"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  在地址中是独立的两个变量。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-r49fwsq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-r49fwsq",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "变量地址顺序是以继承的顺序来规定的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n因为是先继承B的，所以B的成员变量在上面。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-k8b3s8b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-k8b3s8b",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接下来看加virtual关键字时的对象模型\n运行代码如下："
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-nqi9hs1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-nqi9hs1",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\nusing namespace std;\n \nclass A\n{\npublic:\n\tint _a;\n};\n \nclass B:virtual public A\n{\npublic:\n\tint _b;\n};\n \nclass C :virtual public A\n{\npublic:\n\tint _c;\n};\n \nclass D :public B,public C\n{\npublic:\n\tint _d;\n};\n \nint main()\n{\n\tD d;\n\td.B::_a = 1;\n\td.C::_a = 2;\n\td._b = 3;\n\td._c = 4;\n\td._d = 5;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ex63muw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-ex63muw",
+				"updated": "20220722125729"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606210826.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "虚基表中记录的就是变量到 公共成员的 "
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "偏移量/相对距离"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。而且在地址中， 当然是使用十六进制表示\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722125735-pdc7k6e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125735-pdc7k6e",
+				"updated": "20220722125741"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606211200.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nA一般叫做"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "虚基类"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n在D里面，A放到一个公共位置。那么有时B需要找A,C需要找A,就要通过虚基表中偏移量进行计算"
+				}
+			]
+		},
+		{
+			"ID": "20220722125746-cju2819",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125746-cju2819"
+			}
+		},
+		{
+			"ID": "20220722124304-7cs1j5i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722124304-7cs1j5i",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚基表"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-9j07ijh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-9j07ijh",
+				"updated": "20220722125804"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606211714.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-1v2rd1t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-1v2rd1t",
+				"updated": "20220722125818"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220606211835.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722125829-vmel2vt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125829-vmel2vt"
+			}
+		},
+		{
+			"ID": "20220722125831-h7p95do",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722125831-h7p95do"
+			}
+		},
+		{
+			"ID": "20220722124304-z67z6f5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124304-z67z6f5",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承的总结和反思"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-d21r92u",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220722124304-d21r92u",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"ID": "20220722124304-u170pd4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220722124304-u170pd4",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-uz2w7bc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-uz2w7bc",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "有了多继承，就存在菱形继承，有了菱形继承就有菱形虚拟继承，底层实现就很复杂。所以一般不建议设计出多继承，一定不要设计出菱形继承。否则在复杂度及性能上都有问题。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-nq3ea4x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220722124304-nq3ea4x",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-48hhih7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-48hhih7",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多继承可以认为是C++的缺陷之一，很多后来的OO语言都没有多继承，如Java。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124304-yez1lsv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220722124304-yez1lsv",
+						"updated": "20220722124304"
+					},
+					"Children": [
+						{
+							"ID": "20220722124304-jy5zfb4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124304-jy5zfb4",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "继承与组合"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124304-2puinui",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220722124304-2puinui",
+								"updated": "20220722124304"
+							},
+							"Children": [
+								{
+									"ID": "20220722124304-bvrzejo",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124304-bvrzejo",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"ID": "20220722124304-jn9gnre",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124304-jn9gnre",
+												"updated": "20220722124304"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "public继承是一种 "
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "is-a"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " 的关系。也就是说每个派生类对象都是一个基类对象。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20220722124304-1a9lxc8",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124304-1a9lxc8",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"ID": "20220722124304-6sqmq6n",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124304-6sqmq6n",
+												"updated": "20220722124304"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "组合是一种 "
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "has-a"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " 的关系。假设B组合了A，每个B对象中都有一个A对象。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20220722124304-5uhgxdh",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124304-5uhgxdh",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"ID": "20220722124304-bmato0i",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124304-bmato0i",
+												"updated": "20220722124304"
+											},
+											"Children": [
+												{
+													"Type": "NodeLink",
+													"Data": "span",
+													"Children": [
+														{
+															"Type": "NodeOpenBracket"
+														},
+														{
+															"Type": "NodeLinkText",
+															"Data": "优先使用对象组合，而不是类继承"
+														},
+														{
+															"Type": "NodeCloseBracket"
+														},
+														{
+															"Type": "NodeOpenParen"
+														},
+														{
+															"Type": "NodeLinkDest",
+															"Data": "[优先使用对象组合，而不是类继承 - 残雪余香 - 博客园 (cnblogs.com)](https://www.cnblogs.com/nexiyi/archive/2013/06/16/3138568.html)"
+														},
+														{
+															"Type": "NodeCloseParen"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " 。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20220722124304-3qj5k2d",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124304-3qj5k2d",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"ID": "20220722124304-muoxlad",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124304-muoxlad",
+												"updated": "20220722124304"
+											},
+											"Children": [
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeStrong",
+															"Data": "strong",
+															"Children": [
+																{
+																	"Type": "NodeStrongA6kOpenMarker",
+																	"Data": "**"
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "继承"
+																},
+																{
+																	"Type": "NodeStrongA6kCloseMarker",
+																	"Data": "**"
+																}
+															]
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "允许你根据基类的实现来定义派生类的实现。这种通过生成派生类的"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "复用"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "通常被称为"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "白箱复用"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "(white-box reuse)。术语“白箱”是相对可视性而言：在继承方式中，基类的内部细节对子类可见 。"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "继承一定程度破坏了基类的封装"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，基类的改变，对派生类有很大的影响。"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "派生类和基类间的依赖关系很强，耦合度高"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20220722124304-5ai9ha4",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124304-5ai9ha4",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"ID": "20220722124304-ugeg5hn",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124304-ugeg5hn",
+												"updated": "20220722124304"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "对象"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeStrong",
+															"Data": "strong",
+															"Children": [
+																{
+																	"Type": "NodeStrongA6kOpenMarker",
+																	"Data": "**"
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "组合"
+																},
+																{
+																	"Type": "NodeStrongA6kCloseMarker",
+																	"Data": "**"
+																}
+															]
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "是类继承之外的另一种"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "复用选择"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。新的更复杂的功能可以通过组装或组合对象来获得。对象组合要求被组合的对象具有良好定义的接口。这种复用风格被称为"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "黑箱复用"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "(black-box reuse)，因为对象的内部细节是不可见的。对象只以“黑箱”的形式出现。 "
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "组合类之间没有很强的依赖关系，耦合度低"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。优先使用对象组合有助于你保持每个类被封装。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20220722124304-oykelg7",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124304-oykelg7",
+										"updated": "20220722124304"
+									},
+									"Children": [
+										{
+											"ID": "20220722124304-ovn4lqv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124304-ovn4lqv",
+												"updated": "20220722124304"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "实际尽量多去用组合。组合的耦合度低，代码维护性好。不过继承也有用武之地的，有些关系就适合继承那就用继承，另外要实现多态，也必须要继承。类之间的关系可以用继承，可以用组合，就用组合。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-clhnr1f",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124304-clhnr1f",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A {\n\tint _a ;\n}\n\nclass B : public A  // 这是继承\n{\n\tint _b; \n}\n\nclass C {\n\tint _c ;\n}\n\nclass D {\n\tint _a ;\n\tc _obj;  //这是组合\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ziz25g8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-ziz25g8",
+				"updated": "20220722125900"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "A 与 B的关系就像 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "person"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "student"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， B只是A更具体的类。\nC 和 D 的关系就像 ，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "D是头"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "C是头上的眼睛"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220609210420.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124304-ewjwfkp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124304-ewjwfkp",
+				"updated": "20220722124304"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "完全符合 is-a,\n就用继承完全符合 has-a,\n就用组合都可以，优先用组合"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220819225300-bay6ek5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819225300-bay6ek5"
+			}
+		}
+	]
+}

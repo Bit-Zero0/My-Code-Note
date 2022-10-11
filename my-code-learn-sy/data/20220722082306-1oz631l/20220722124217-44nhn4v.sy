@@ -1,0 +1,6049 @@
+{
+	"ID": "20220722124217-44nhn4v",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722124217-44nhn4v",
+		"title": "多态",
+		"updated": "20220828104808"
+	},
+	"Children": [
+		{
+			"ID": "20220722124240-1jgxibl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124240-1jgxibl",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多态的概念"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-cay5j6a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-cay5j6a",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " 多态的概念："
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "通俗来说，就是多种形态，具体点就是去完成某个行为，当"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "不同的对象"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "去完成时会产生出不同的状态。"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（注意：是不同的的对象）"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-ncr98zl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-ncr98zl",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多态：多种形态\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "静态的多态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：函数重载，看起来调用同一个函数有不同行为。静态：原理是编译时实现。\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "动态的多态"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：一个父类的引用或指针去调用同一个函数，传递不同的对象，会调用不同的函数。动态：原理运行时实现。\n本质：不同人去做同一件事情，结果不同。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-osak8by",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-osak8by",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "本篇主要学习的是 动态的多态"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-z1xnj66",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722124240-z1xnj66",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722124240-yq8xen1",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722124240-yq8xen1",
+						"updated": "20220722124240"
+					},
+					"Children": [
+						{
+							"ID": "20220722124240-qr3fepk",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722124240-qr3fepk",
+								"updated": "20220722124240"
+							},
+							"Children": [
+								{
+									"ID": "20220722124240-cs2vgbu",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722124240-cs2vgbu",
+										"updated": "20220722124240"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "举个栗子：比如买票这个行为，当普通人买票时，是全价买票；学生买票时，是半价买票；军人买票时是优先买票。\n再举个栗子： 最近为了争夺在线支付市场，支付宝年底经常会做诱人的扫红包-支付-给奖励金的活动。那么大家想想为什么有人扫的红包又大又新鲜8块、10块...，而有人扫的红包都是1毛，5毛....。其实这背后也是一个多态行为。支付宝首先会分析你的账户数据，比如你是新用户、比如你没有经常支付宝支付等等，那么你需要被鼓励使用支付宝，那么就你扫码金额 random()%99；比如你经常使用支付宝支付或者支付宝账户中常年没钱，那么就不需要太鼓励你去使用支付宝，那么就你扫码金额 = random()%1；总结一下：同样是扫码动作，不同的用户扫得到的不一样的红包，这也是一种多态行为。ps：支付宝红包问题纯属瞎编，大家仅供娱乐。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-4iueqko",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722124240-4iueqko",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多态的构成条件"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-xmite8n",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220722124240-xmite8n",
+				"updated": "20220722130735"
+			},
+			"Children": [
+				{
+					"ID": "20220722124240-cnntws6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220722124240-cnntws6",
+						"updated": "20220722124240"
+					},
+					"Children": [
+						{
+							"ID": "20220722124240-k57y3ff",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124240-k57y3ff",
+								"updated": "20220722124240"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "必须通过"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "基类"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "的"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "指针或者引用"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "调用虚函数"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722124240-1gurhn4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220722124240-1gurhn4",
+						"updated": "20220722130735"
+					},
+					"Children": [
+						{
+							"ID": "20220722124240-hrfeoxp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722124240-hrfeoxp",
+								"updated": "20220722124240"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "被调用的函数必须是虚函数，且"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "派生类必须对基类的虚函数进行重写"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722124240-xu6zf25",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20220722124240-xu6zf25",
+								"updated": "20220722130735"
+							},
+							"Children": [
+								{
+									"ID": "20220722124240-65ys6lx",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124240-65ys6lx",
+										"updated": "20220722124240"
+									},
+									"Children": [
+										{
+											"ID": "20220722124240-evxbwqm",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124240-evxbwqm",
+												"updated": "20220722124240"
+											},
+											"Children": [
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "重写"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：子类满足"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "三同"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "(函数名、参数、返回值都相同)的，就是重写。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20220722124240-q17lxs9",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20220722124240-q17lxs9",
+										"updated": "20220722130735"
+									},
+									"Children": [
+										{
+											"ID": "20220722124240-bk2cttb",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20220722124240-bk2cttb",
+												"updated": "20220722130735"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "重写"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "要求"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "返回值"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "相同有一个例外: "
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeStrong",
+															"Data": "strong",
+															"Children": [
+																{
+																	"Type": "NodeStrongA6kOpenMarker",
+																	"Data": "**"
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "协变"
+																},
+																{
+																	"Type": "NodeStrongA6kCloseMarker",
+																	"Data": "**"
+																}
+															]
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " ---\u003e "
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "要求返回值是父子关系的指针或者引用"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "\n​"
+												},
+												{
+													"Type": "NodeImage",
+													"Data": "span",
+													"Children": [
+														{
+															"Type": "NodeBang"
+														},
+														{
+															"Type": "NodeOpenBracket"
+														},
+														{
+															"Type": "NodeLinkText",
+															"Data": "assets/"
+														},
+														{
+															"Type": "NodeCloseBracket"
+														},
+														{
+															"Type": "NodeOpenParen"
+														},
+														{
+															"Type": "NodeLinkDest",
+															"Data": "assets/020220609220946.png"
+														},
+														{
+															"Type": "NodeCloseParen"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-7o1vrdy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124240-7o1vrdy",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-b96rmkb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-b96rmkb",
+				"updated": "20220722130840"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚函数：即被 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "virtual"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 修饰的类成员函数称为虚函数。\n\t"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "virtual"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 修饰"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "继承"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，是"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722124304-02tx9aj"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "虚继承"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的含义。\n\t（它们只是使用了同一个关键字，但是在不同的地方时，表示不同的含义，就像 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\u0026"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 一样）"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-cypeh55",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124240-cypeh55",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person {\npublic:\n\tvirtual void BuyTicket() { cout \u003c\u003c \"买票-全价\" \u003c\u003c endl;}\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-4xe6sdr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722124240-4xe6sdr",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚函数的重写"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-r28gq5g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-r28gq5g",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：在重写基类虚函数时，派生类的虚函数在不加virtual关键字时，虽然也可以构成重写(因为继承后基类的虚函数被继承下来了在派生类依旧保持虚函数属性),但是该种写法不是很规范，不建议这样使用。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-czd6xps",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124240-czd6xps",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person {\npublic:\n\tvirtual void BuyTicket()\n\t{\n\t\tcout \u003c\u003c \"买票全价\" \u003c\u003c endl;\n\t}\n};\n\nclass Student : public Person\n{\npublic:\n\tvirtual void BuyTicket()//这里的virtual可以不加\n\t{\n\t\tcout \u003c\u003c \"买票半价\" \u003c\u003c endl;\n\t}\n};\n\nvoid Func(Person\u0026 p)//这里可以替换为指针\n{\n\tp.BuyTicket();\n}\n\n\nvoid test1()\n{\n\tPerson p;\n\tStudent s;\n\n\tFunc(s); \n\tFunc(p);\n}\n\nint main()\n{\n\ttest1();\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-lshes85",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-lshes85",
+				"updated": "20220722130911"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "!"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220609224427.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722130903-druwm67",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722130903-druwm67"
+			}
+		},
+		{
+			"ID": "20220722124240-h3beoj2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722124240-h3beoj2",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚函数重写的两个例外"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-lt21743",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-lt21743",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有两个例外： "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "协变"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "析构函数的重写"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-7o0ejaj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722124240-7o0ejaj",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "协变 (基类与派生类虚函数返回值类型不同)"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-zrhjo5c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-zrhjo5c",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "派生类重写基类虚函数时，与基类虚函数返回值类型不同。即"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "基类虚函数返回基类对象的指针或者引用"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "派生类虚函数返回派生类对象的指针或者引用"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，称为协变。（了解即可，企业中基本不会使用到协变）"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-hd8ic65",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124240-hd8ic65",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person {\npublic:\n\n\tvirtual Person* BuyTicket() { cout \u003c\u003c \"买票-全价\" \u003c\u003c endl; return nullptr; }\n};\n\nclass Student : public Person {\npublic:\n\tvirtual Student* BuyTicket() { cout \u003c\u003c \"买票-半价\" \u003c\u003c endl; return nullptr; }\n};\n\nvoid Func(Person\u0026 p)\n{\n\tp.BuyTicket();\n}\n\nvoid test1()\n{\n\tPerson p;\n\tStudent s;\n\n\tFunc(s);\n\tFunc(p);\n}\n\nint main()\n{\n\ttest1();\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722130920-ku7ka5e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722130920-ku7ka5e"
+			}
+		},
+		{
+			"ID": "20220722124240-q8qvw6u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20220722124240-q8qvw6u",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "析构函数的重写 (基类与派生类析构函数的名字不同)"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-nnvc51e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-nnvc51e",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "基类的析构函数为虚函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，此时派生类析构函数只要定义，无论是否加"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "virtual"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "关键字，都与基类的析构函数构成重写，虽然基类与派生类析构函数名字不同。虽然函数名不相同，看起来违背了重写的规则，其实不然，这里可以理解为编译器对析构函数的名称做了特殊处理，编译后析构函数的名称统一处理成"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "destructor"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722130922-mwqcdhd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722130922-mwqcdhd"
+			}
+		},
+		{
+			"ID": "20220722124240-xwrc27v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-xwrc27v",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "动态申请的对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，如果给了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "父类指针管理"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那么需要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "析构函数是虚函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-hgu01qx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124240-hgu01qx",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person {\npublic:\n\tvirtual void BuyTicket() { cout \u003c\u003c \"买票-全价\" \u003c\u003c endl; }\n\n\tvirtual ~Person() { cout \u003c\u003c \"~Person()\" \u003c\u003c endl; }\n};\n\nclass Student : public Person {\n\n\t// 虽然子类没写virtual，但是他是先继承了父类的虚函数的属性，再完成重写。那么他也算是虚函数\n\tvoid BuyTicket() { cout \u003c\u003c \"买票-半价\" \u003c\u003c endl; }\npublic:\n\t~Student() { cout \u003c\u003c \"~Student()\" \u003c\u003c endl; }\n};\n\nvoid Func(Person\u0026 p)\n{\n\tp.BuyTicket();\n}\n\nint main()\n{\n\t// 动态申请的对象，如果给了父类指针管理，那么需要析构函数是虚函数\n\tPerson* p1 = new Person; // operator new + 构造函数\n\tPerson* p2 = new Student; //是基类指针指向的，所以构成多态\n\t//Student* s1 = new Student; //这就不是多态了\n\n\n\t// 析构函数 + operator delete\n\t//            p1-\u003edestructor()   \n\tdelete p1;\n\tdelete p2;\n\t//            p2-\u003edestructor()\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-etj2qug",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-etj2qug",
+				"updated": "20220722130943"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220610123617.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20220722130948-qnczefl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722130948-qnczefl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果Person不是虚函数呢"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-3uxorwy",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722124240-3uxorwy",
+				"updated": "20220722124240"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person {\npublic:\n\t~Person() { cout \u003c\u003c \"~Person()\" \u003c\u003c endl; }\n};\n\nclass Student : public Person {\n\t~Student() { cout \u003c\u003c \"~Student()\" \u003c\u003c endl; }\n};\n\n\nint main()\n{\n\t// 动态申请的对象，如果给了父类指针管理，那么需要析构函数是虚函数\n\tPerson* p1 = new Person; // operator new + 构造函数\n\tPerson* p2 = new Student;\n\n\tdelete p1;\n\tdelete p2;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722124240-9enu427",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722124240-9enu427",
+				"updated": "20220722131020"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220610123801.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221319-yt85n2r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221319-yt85n2r"
+			}
+		},
+		{
+			"ID": "20220827221322-w8qfiri",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-w8qfiri",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "基本上只有上面这个例子的场景才需要在 析构函数上加 虚函数。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-ps7lze6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-ps7lze6",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其他的场景使用普通的析构函数也都能正确使用。"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-88laao9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-88laao9",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person {\npublic:\n\t~Person() { cout \u003c\u003c \"~Person()\" \u003c\u003c endl; }\n};\n\nclass Student : public Person {\npublic:\n\t~Student() { cout \u003c\u003c \"~Student()\" \u003c\u003c endl; }\n};\n\n\nint main()\n{\n\t// 普通对象，析构函数是否虚函数,是否完成重写，都正确调用了\n\t Person p;\n\t Student s;\n\n\tPerson* p1 = new Person; \n\tStudent* p2 = new Student;//注意这里是 派生类指针来管理了\n\n\tdelete p2;\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-9hsd3n7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-9hsd3n7",
+				"updated": "20220827223408"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "都正确的调用了\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220610124003.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827223418-hqz8cve",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827223418-hqz8cve"
+			}
+		},
+		{
+			"ID": "20220827221322-teaq2m5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220827221322-teaq2m5",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何在现有知识上构造一个无法被继承的类"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-dxw7vh0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-dxw7vh0",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在C++98及之前是 基类使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "private"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 限制 基类的[[c++默认成员函数#构造函数|构造器]]。"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-ppjxt3o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-ppjxt3o",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A \n{\nprivate:\n\tA(int a = 0)\n\t\t:_a(a)\n\t{}\npublic:\n\tint _a;\n}\n\nclass B : public A{\n\n}\n\nint main()\n{\n\tB bb;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-aask1ow",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-aask1ow",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以上代码，B就没有办法继承A，因为子类在构造之前需要先调用父类的构造函数，而父类A的构造函数是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "private"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的，所以子类B就无法构造。"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-lkjbupk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220827221322-lkjbupk",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "override 和 final"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-q8vbu9q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220827221322-q8vbu9q",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "final"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-diibrot",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220827221322-diibrot",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"ID": "20220827221322-m3b681r",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220827221322-m3b681r",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-btu4vc3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-btu4vc3",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "final 修饰类时，限制类不能被继承。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220827221322-xe7ucpx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220827221322-xe7ucpx",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-8m1qvtf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-8m1qvtf",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "final 修饰虚函数时，限制它不能被子类重写。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-2q0pjfq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220827221322-2q0pjfq",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "final修饰类"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-n3ocqwh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-n3ocqwh",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在类的后面加关键字 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "final"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-m07ffnq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-m07ffnq",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A final\n{\n\n};\n\nint main() {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-ll3lcrm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220827221322-ll3lcrm",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "final修饰虚函数"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-srq6ba8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-srq6ba8",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在虚函数的后面加关键字 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "final"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-6kn6eyu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-6kn6eyu",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A \n{\npublic:\n\tvirtual void Print() final \n\t{\n\t\tcout \u003c\u003c \"\" \u003c\u003c endl;\n\t}\n\n};\n\nint main() {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-a3vwx31",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220827221322-a3vwx31",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "override"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-wbt0nkw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-wbt0nkw",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "检查"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "子类虚函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是否"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重写"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "父类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "某个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "虚函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，如果没有重写编译报错。"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-yldvmcl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-yldvmcl",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "override"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "关键字写在子类虚函数的后面。"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-mkoxuai",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-mkoxuai",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Car {\npublic:\n\tvirtual void Drive() {}\n};\n\nclass Benz :public Car {\npublic:\n\tvirtual void Drive() override \n\t{ \n\t\tcout \u003c\u003c \"Benz-舒适\" \u003c\u003c endl; \n\t}\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-0q1manm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-0q1manm",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果父类不是虚函数，构成了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "隐藏"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，则override就会报错"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-33jetnj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-33jetnj",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Car {\npublic:\n\t void Drive() {}//父类不是虚函数了\n};\n\n\nclass Benz :public Car {\npublic:\n\tvirtual void Drive() override \n\t{ \n\t\tcout \u003c\u003c \"Benz-舒适\" \u003c\u003c endl; \n\t}\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-4v6b0dc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-4v6b0dc",
+				"updated": "20220827222529"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827083506"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827083506-20220827222529-fjzobgd.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-2upnqby",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220827221322-2upnqby",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-l80w3q4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220827221322-l80w3q4",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "概念"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-334m1hz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-334m1hz",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在虚函数的后面写上 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "=0"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，则这个函数为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "纯虚函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n包含"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "纯虚函数的类叫做抽象类（也叫接口类）"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "抽象类不能实例化出对象。派生类继承后也不能实例化出对象"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，只有"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重写纯虚函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "派生类才能实例化出对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "纯虚函数规范了派生类必须重写"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，另外纯虚函数更体现出了"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "接口继承"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-8yqemmb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-8yqemmb",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Car\n{\npublic:\n\tvirtual void Drive() = 0;\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-gdlrxms",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-gdlrxms",
+				"updated": "20220827222548"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "纯虚函数一般只声明，不实现，因为实现没有价值"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n抽象类是不能实例化出对象的\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827121949"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827121949-20220827222548-iiil12z.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-6v3gybe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220827221322-6v3gybe",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "面试题"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-pv72xq5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220827221322-pv72xq5",
+				"updated": "20220827222604"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220827221322-grelovq",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220827221322-grelovq",
+						"updated": "20220827222604"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "以下代码的中 base类的大小是多少？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-b5vyqyt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-b5vyqyt",
+				"updated": "20220827222621"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class base\n{\npublic:\n\tvirtual void func1()\n\t{\n\t\tcout \u003c\u003c \"func1()\" \u003c\u003c endl;\n\t}\n\nprivate:\n\tint _b = 1;\n\tchar _ch = 'a';\n};\n\nint main()\n{\n\tcout \u003c\u003c sizeof(base) \u003c\u003c endl;\n\tbase bb;\n\n\treturn 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-5gy2waj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-5gy2waj",
+				"updated": "20220827223445"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以上代码的调用过程\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827163912"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827163912-20220827223032-vk9klgp.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n篮圈选中的这些代码就是进入虚表找虚函数的过程。\n而 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "p.f()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数则直接调用。"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-tcau835",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220827221322-tcau835",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "同类型的对象，虚表指针是相同的指向同一张虚表"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-hcwix36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-hcwix36",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将main()函数中的代码改一下；"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-jla83rl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-jla83rl",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tPerson p1;\n\tPerson p2;\n\n\tStudent s1;\n\tStudent s2;\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-kdud6x5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-kdud6x5",
+				"updated": "20220827223458"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827170247"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827170247-20220827223043-jzlomy9.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n发现只要是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "相同类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的对象，虚表指针就是一样的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827170432"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827170432-20220827223050-nhfzmxb.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-qx3mom8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220827221322-qx3mom8",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220827221322-7ofywuh",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220827221322-7ofywuh",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "[!question] 普通函数和虚函数的存储位置是否一样？\n他们是一样的，都在代码段。只是虚函数要把地址存一份到虚表，方便实现多态"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-2g1m34d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-2g1m34d",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Base\n{\npublic:\n\tvirtual void Func1()\n\t{\n\t\tcout \u003c\u003c \"Base::Func1()\" \u003c\u003c endl;\n\t}\n\tvirtual void Func2()\n\t{\n\t\tcout \u003c\u003c \"Base::Func2()\" \u003c\u003c endl;\n\t}\n\tvoid Func3()\n\t{\n\t\tcout \u003c\u003c \"Base::Func3()\" \u003c\u003c endl;\n\t}\nprivate:\n\tint _b = 1;\n};\n\nclass Derive : public Base\n{\npublic:\n\tvirtual void Func1()\n\t{\n\t\tcout \u003c\u003c \"Derive::Func1()\" \u003c\u003c endl;\n\t}\nprivate:\n\tint _d = 2;\n};\n\nint main()\n{\n\tBase b;\n\tDerive d;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827222630-pkuyjqk",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220827222630-pkuyjqk",
+				"updated": "20220827222630"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220827222630-depn078",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220827222630-depn078",
+						"updated": "20220827222630"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "‍```\n大小是 12 byte"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827222630-nxdmxi5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827222630-nxdmxi5",
+				"updated": "20220827223511"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827123209"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827123209-20220827223511-n3eutcu.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "虚函数表指针"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " [简称：虚表指针] ，这里的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_vfptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就是虚表指针。其实就是一个"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "指针数组"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，数组中放的值就是虚函数的指针。"
+				}
+			]
+		},
+		{
+			"ID": "20220827223511-g82p665",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827223511-g82p665",
+				"updated": "20220827223511"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么是12 byte？就算加上char类型的字节对齐也才8byte啊，难道函数也占字节？  答案是？"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "虚函数有"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "虚函数表指针"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "是占用字节的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827222630-46hlxh3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827222630-46hlxh3",
+				"updated": "20220827222823"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827163622"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827163622-20220827222823-u0o3pln.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827222828-tx0mv23",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827222828-tx0mv23"
+			}
+		},
+		{
+			"ID": "20220827222630-qqpajc9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220827222630-qqpajc9",
+				"updated": "20220827222630"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多态的原理"
+				}
+			]
+		},
+		{
+			"ID": "20220827222630-ht860g8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220827222630-ht860g8",
+				"updated": "20220827222630"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚函数表"
+				}
+			]
+		},
+		{
+			"ID": "20220827222630-powwhit",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827222630-powwhit",
+				"updated": "20220827222630"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "基类的指针/引用，指向谁，就去谁的虚函数表中找到对应位置的虚函数进行调用。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n但是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "普通的函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是不用进入虚函数表的，是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "直接调用"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的。"
+				}
+			]
+		},
+		{
+			"ID": "20220827222935-65engb7",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220827222935-65engb7",
+				"updated": "20220827222935"
+			},
+			"Children": [
+				{
+					"ID": "20220827222935-tfepgvi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220827222935-tfepgvi",
+						"updated": "20220827222935"
+					},
+					"Children": [
+						{
+							"ID": "20220827222935-joo8fs0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827222935-joo8fs0",
+								"updated": "20220827222935"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不是多态，编译时确定地址"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220827222935-m69kg30",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220827222935-m69kg30",
+						"updated": "20220827222935"
+					},
+					"Children": [
+						{
+							"ID": "20220827222935-oyv5d2z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827222935-oyv5d2z",
+								"updated": "20220827222935"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多态调用，在编译时，不能确定调用的是哪个函数--\u003e 运行时，去p指向对象的虚表中--\u003e找到虚函数的地址"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827222936-kknc025",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827222936-kknc025",
+				"updated": "20220827222950"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person {\npublic:\n\tvirtual void BuyTicket()\n\t{ cout \u003c\u003c \"买票-全价\" \u003c\u003c endl; }\n\n\tvoid f()\n\t{\n\t\tcout \u003c\u003c \"f()\" \u003c\u003c endl;\n\t}\nprotected:\n\tint _a = 0;\n};\n\nclass Student : public Person {\npublic:\n\tvirtual void BuyTicket()\n\t{ cout \u003c\u003c \"买票-半价\" \u003c\u003c endl; }\nprotected:\n\tint _b = 0;\n};\n\nvoid Func(Person\u0026 p)\n{\n\t// 多态调用，在编译时，不能确定调用的是哪个函数\n\t// 运行时，去p指向对象的虚表中\n\t// 找到虚函数的地址。\n\tp.BuyTicket();\n\tp.f();\n}\n\nint main()\n{\n\tPerson Mike;\n\tFunc(Mike);\n\n\tStudent Johnson;\n\tFunc(Johnson);\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827223013-va5s9k7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827223013-va5s9k7",
+				"updated": "20220827223032"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以上代码的调用过程\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827163912"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827163912-20220827223032-vk9klgp.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n篮圈选中的这些代码就是进入虚表找虚函数的过程。\n而 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "p.f()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数则直接调用。"
+				}
+			]
+		},
+		{
+			"ID": "20220827223013-w8ag7cy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220827223013-w8ag7cy",
+				"updated": "20220827223013"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "同类型的对象，虚表指针是相同的指向同一张虚表"
+				}
+			]
+		},
+		{
+			"ID": "20220827223013-q7t3kpk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827223013-q7t3kpk",
+				"updated": "20220827223013"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将main()函数中的代码改一下；"
+				}
+			]
+		},
+		{
+			"ID": "20220827223013-s7d07n9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827223013-s7d07n9",
+				"updated": "20220827223013"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tPerson p1;\n\tPerson p2;\n\n\tStudent s1;\n\tStudent s2;\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827223013-c5gr7vk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827223013-c5gr7vk",
+				"updated": "20220827223050"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827170247"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827170247-20220827223043-jzlomy9.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n发现只要是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "相同类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的对象，虚表指针就是一样的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827170432"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827170432-20220827223050-nhfzmxb.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220827223117-2sffcvs",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220827223117-2sffcvs",
+				"updated": "20220827223124"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220827223117-lvfcvwp",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220827223117-lvfcvwp",
+						"updated": "20220827223124"
+					},
+					"Children": [
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "普通函数和虚函数的存储位置是否一样？"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n他们是一样的，都在代码段。只是虚函数要把地址存一份到虚表，方便实现多态"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827223117-vddtx6p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827223117-vddtx6p",
+				"updated": "20220827223117"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Base\n{\npublic:\n\tvirtual void Func1()\n\t{\n\t\tcout \u003c\u003c \"Base::Func1()\" \u003c\u003c endl;\n\t}\n\tvirtual void Func2()\n\t{\n\t\tcout \u003c\u003c \"Base::Func2()\" \u003c\u003c endl;\n\t}\n\tvoid Func3()\n\t{\n\t\tcout \u003c\u003c \"Base::Func3()\" \u003c\u003c endl;\n\t}\nprivate:\n\tint _b = 1;\n};\n\nclass Derive : public Base\n{\npublic:\n\tvirtual void Func1()\n\t{\n\t\tcout \u003c\u003c \"Derive::Func1()\" \u003c\u003c endl;\n\t}\nprivate:\n\tint _d = 2;\n};\n\nint main()\n{\n\tBase b;\n\tDerive d;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-ahjz91j",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220827221322-ahjz91j",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"ID": "20220827221322-3mg8jz7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220827221322-3mg8jz7",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-3t8s3ya",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-3t8s3ya",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "派生类对象 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "d"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 中也有一个虚表指针，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "d"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对象由两部分构成，一部分是父类继承下来的成员，虚表指针也就是存在部分的另一部分是自己的成员。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220827221322-zobdnsx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220827221322-zobdnsx",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-nnf6rnk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-nnf6rnk",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基类b对象和派生类 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "d"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对象虚表是不一样的，这里我们发现 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "Func1"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "完成了重写，所以 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "d"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 的虚表中存的是重写的"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "Derive::Func1"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "，所以虚函数的重写也叫作覆盖"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，覆盖就是指虚表中虚函数的覆盖。重写是语法的叫法，覆盖是原理层的叫法。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220827221322-5qpkycx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220827221322-5qpkycx",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-fqrtyys",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-fqrtyys",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "另外"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Func2"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "继承下来后是虚函数，所以放进了虚表，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Func3"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "也继承下来了，但是不是虚函数，所以不会放进虚表。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220827221322-3u1fafx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20220827221322-3u1fafx",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-w8f2nlp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-w8f2nlp",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "虚函数表本质是一个存虚函数指针的指针数组，一般情况这个数组最后面放了一个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "nullptr"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220827221322-uyh25ur",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20220827221322-uyh25ur",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-8oyxyy0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-8oyxyy0",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "总结一下派生类的虚表生成：\na. 先将基类中的虚表内容拷贝一份到派生类虚表中。\nb.如果派生类重写了基类中某个虚函数，用派生类自己的虚函数覆盖虚表中基类的虚函数 。\nc.派生类自己新增加的虚函数按其在派生类中的声明次序增加到派生类虚表的最后。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220827221322-f3ql9wg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20220827221322-f3ql9wg",
+						"updated": "20220827221322"
+					},
+					"Children": [
+						{
+							"ID": "20220827221322-o81r15e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220827221322-o81r15e",
+								"updated": "20220827221322"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这里还有一个童鞋们很容易混淆的问题："
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "虚函数存在哪的？虚表存在哪的？"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 答：虚函数存在虚表，虚表存在对象中。注意上面的回答的错的。但是很多童鞋都是这样深以为然的。"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "注意虚表存的是虚函数指针，不是虚函数，虚函数和普通函数一样的，都是存在代码段的"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只是他的指针又存到了虚表中"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。另外对象中存的不是虚表，存的是虚表指针。那么虚表存在哪的呢？实际我们去验证一下会发现vs 下是存在代码段的，Linux g++下大家自己去验证？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-c01fhx8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220827221322-c01fhx8",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚函数在哪？"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-9rcyryq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-9rcyryq",
+				"updated": "20220827223158"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们可以在图片中看到子类 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "d"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中继承父类的虚表中的虚函数地址不是真正的函数地址，和真正的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Derive::Func1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的地址是不一样的，原因就在于对其进行了封装。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827174146"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827174146-20220827223153-yyb34o1.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n使用反汇编就可以查看\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827174736"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827174736-20220827223158-y1e86qo.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20220827223202-9yjv819",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827223202-9yjv819"
+			}
+		},
+		{
+			"ID": "20220827221322-6fqrekj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220827221322-6fqrekj",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚函数表在哪？"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-c80n056",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-c80n056",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tint* p = (int*)malloc(4);\n\tprintf(\"堆:%p\\n\", p);\n\n\tint a = 0;\n\tprintf(\"栈:%p\\n\", \u0026a);\n\n\tstatic int b = 0;\n\tprintf(\"数据段:%p\\n\", \u0026b);\n\n\tconst char* str = \"aaaaaaa\";\n\tprintf(\"常量区:%p\\n\", str);\n\n\tprintf(\"代码段:%p\\n\", \u0026Base::Func1);\n\n\tBase bs;\n\tprintf(\"虚函数表:%p\\n\", *((int*)\u0026bs));\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-rohh37b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-rohh37b",
+				"updated": "20220827223218"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220827175347"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220827175347-20220827223218-gocej43.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n有图可见，虚表和常量区非常近，所以我们一般认为虚表在常量区"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-ce1xzdv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220827221322-ce1xzdv",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多继承的虚函数"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-m5df4ie",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220827221322-m5df4ie",
+				"updated": "20220827221322"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Base1 {\npublic:\n\tvirtual void func1() { cout \u003c\u003c \"Base1::func1\" \u003c\u003c endl; }\n\tvirtual void func2() { cout \u003c\u003c \"Base1::func2\" \u003c\u003c endl; }\nprivate:\n\tint b1;\n};\n\nclass Base2 {\npublic:\n\tvirtual void func1() { cout \u003c\u003c \"Base2::func1\" \u003c\u003c endl; }\n\tvirtual void func2() { cout \u003c\u003c \"Base2::func2\" \u003c\u003c endl; }\nprivate:\n\tint b2;\n};\n\nclass Derive : public Base1, public Base2 {\npublic:\n\tvirtual void func1() { cout \u003c\u003c \"Derive::func1\" \u003c\u003c endl; }\n\tvirtual void func3() { cout \u003c\u003c \"Derive::func3\" \u003c\u003c endl; }\nprivate:\n\tint d1;\n};\n\nint main()\n{\n\tDerive d;\n\tBase1* p1 = \u0026d;\n\tp1-\u003efunc1();\n\n\tBase2* p2 = \u0026d;\n\tp2-\u003efunc1();\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220827221322-7j245t6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827221322-7j245t6",
+				"updated": "20220827223223"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n多继承时，子类重写了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Base1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Base2"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "虚函数"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "func1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但是虚表中重写的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "func1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的地址确不一样但是没关系，他们最终调到还是同一个函数。"
+				}
+			]
+		},
+		{
+			"ID": "20220827223352-iwau3kf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220827223352-iwau3kf"
+			}
+		},
+		{
+			"ID": "20220828093714-460jwz2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220828093714-460jwz2",
+				"updated": "20220828101914"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承关系与虚表"
+				}
+			]
+		},
+		{
+			"ID": "20220828093714-ztvkla2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220828093714-ztvkla2",
+				"updated": "20220828093714"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打印单继承虚表"
+				}
+			]
+		},
+		{
+			"ID": "20220828093714-63mj96s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828093714-63mj96s",
+				"updated": "20220828093714"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打印函数虚表需要用到 函数指针。"
+				}
+			]
+		},
+		{
+			"ID": "20220828093714-5slg1ap",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220828093714-5slg1ap",
+				"updated": "20220828093836"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Person{\npublic:\n\tvirtual void BuyTicket() { cout \u003c\u003c \"Person::买票-全价\" \u003c\u003c endl; }\n};\n\nclass Student : public Person {\npublic:\n\tvirtual void BuyTicket() { cout \u003c\u003c \"Student::买票-半价\" \u003c\u003c endl; }\n};\n\ntypedef void(*VF_PTR)();//定义函数指针\n\nvoid Func(Person\u0026 p)\n{\n\tp.BuyTicket();\n}\n\nvoid PrintVFTable(VF_PTR* VF_table)//打印函数主体\n{\n\tfor (int i = 0; VF_table[i] != nullptr; i++)\n\t{\n\t\tprintf(\"vft[%d]: %p \\n\", i, VF_table[i]);\n\t\tVF_PTR f = VF_table[i]; //将函数指针数组中的赋值个函数指针f\n\t\tf();//调用函数\n\t}\n}\n\nint main()\n{\n\n\tStudent s;\n\tPrintVFTable((VF_PTR*)(*(void**)\u0026s));\n\n\tPerson p;\n\tPrintVFTable((VF_PTR*)(*(void**)\u0026p));\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220828093701-w1sxnvr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828093701-w1sxnvr",
+				"updated": "20220828093733"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220828093733-3iro7ls.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828093701-a63lzcf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828093701-a63lzcf"
+			}
+		},
+		{
+			"ID": "20220828101516-cdqmryq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220828101516-cdqmryq",
+				"updated": "20220828101516"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打印多继承虚表"
+				}
+			]
+		},
+		{
+			"ID": "20220828101516-rdfh67g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828101516-rdfh67g",
+				"updated": "20220828101516"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打印多继承虚表的难点在于有两个虚表，要怎么找到第二个虚表？ "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "因为在结构体中，所以数据都是连续的，通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sizeof"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 计算出第一个虚表的大小然后加上，则算出第二个虚表的地址。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828101516-fprtkve",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220828101516-fprtkve",
+				"updated": "20220828102249"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Base1 {\npublic:\n\tvirtual void func1() { cout \u003c\u003c \"Base1::func1\" \u003c\u003c endl; }\n\tvirtual void func2() { cout \u003c\u003c \"Base1::func2\" \u003c\u003c endl; }\nprivate:\n\tint b1;\n};\n\nclass Base2 {\npublic:\n\tvirtual void func1() { cout \u003c\u003c \"Base2::func1\" \u003c\u003c endl; }\n\tvirtual void func2() { cout \u003c\u003c \"Base2::func2\" \u003c\u003c endl; }\nprivate:\n\tint b2;\n};\n\nclass Derive : public Base1, public Base2 {\npublic:\n\tvirtual void func1() { cout \u003c\u003c \"Derive::func1\" \u003c\u003c endl; }\n\tvirtual void func3() { cout \u003c\u003c \"Derive::func3\" \u003c\u003c endl; }\nprivate:\n\tint d1;\n};\n\ntypedef void(*VF_PTR)();\n\nvoid PrintVFTable(VF_PTR* table)\n{\n\tfor (int i = 0; table[i] != nullptr; ++i)\n\t{\n\t\tprintf(\"vft[%d] : %p \\n\", i, table[i]);\n\t\tVF_PTR f = table[i];\n\t\tf();\n\t}\n\tcout \u003c\u003c endl \u003c\u003c endl;\n}\n\nint main()\n{\n\tBase1 b1;\n\tBase2 b2;\n\tDerive d; //此时在d中有两个虚表，\n\n\tPrintVFTable((VF_PTR*)*(void**)\u0026b1);\n\tPrintVFTable((VF_PTR*)*(void**)\u0026b2);\n\n\tPrintVFTable((VF_PTR*)*(void**)\u0026d);\n\tPrintVFTable((VF_PTR*)(*(void**)((char*)\u0026d + sizeof(Base1))));//因为地址的问题所以要先强制转化为 char* 类型，才能进行地址的加减\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220828101516-j6tbdvd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828101516-j6tbdvd",
+				"updated": "20220828101516"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行结果"
+				}
+			]
+		},
+		{
+			"ID": "20220828093839-x3rmrmc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828093839-x3rmrmc",
+				"updated": "20220828101446"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20220828101446-2n2zm7g.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828101520-tjsyh37",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828101520-tjsyh37",
+				"updated": "20220828101610"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么打印"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "d"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的时候，会打印出三个虚函数地址，先看内存布局"
+				}
+			]
+		},
+		{
+			"ID": "20220828101617-ah2ma4f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828101617-ah2ma4f",
+				"updated": "20220828101636"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20220828101026"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20220828101026-20220828101636-06vrs86.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828102433-ucfvzt9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828102433-ucfvzt9"
+			}
+		},
+		{
+			"ID": "20220828102745-vj4hzg7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220828102745-vj4hzg7",
+				"updated": "20220828102745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "菱形继承与虚表"
+				}
+			]
+		},
+		{
+			"ID": "20220828102745-r4jsjl8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828102745-r4jsjl8",
+				"updated": "20220828102745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实际中我们不建议设计出菱形继承及菱形虚拟继承，一方面太复杂容易出问题，另一方面这样的模型，访问基类成员有一定得性能损耗。\n所以菱形继承、菱形虚拟继承我们的虚表我们就不看了，一般我们也不需要研究清楚，因为实际中很少用。"
+				}
+			]
+		},
+		{
+			"ID": "20220828102745-az3lzkb",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220828102745-az3lzkb",
+				"updated": "20220828102745"
+			},
+			"Children": [
+				{
+					"ID": "20220828102745-d0t3b4d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220828102745-d0t3b4d",
+						"updated": "20220828102745"
+					},
+					"Children": [
+						{
+							"ID": "20220828102745-gqj8hdn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828102745-gqj8hdn",
+								"updated": "20220828102745"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "C++ 虚函数表解析"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://coolshell.cn/articles/12165.html"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828102745-7ub3rtr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220828102745-7ub3rtr",
+						"updated": "20220828102745"
+					},
+					"Children": [
+						{
+							"ID": "20220828102745-utn5kug",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828102745-utn5kug",
+								"updated": "20220828102745"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "C++ 对象的内存布局"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://coolshell.cn/articles/12176.html"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828104743-vnryuk0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828104743-vnryuk0"
+			}
+		},
+		{
+			"ID": "20220828104744-2a18vos",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828104744-2a18vos"
+			}
+		},
+		{
+			"ID": "20220828104745-lx88ici",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220828104745-lx88ici",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承和多态常见的面试问题"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-a78xxop",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220828104745-a78xxop",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "概念查考"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-wgd3y5u",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220828104745-wgd3y5u",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"ID": "20220828104745-k24er77",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220828104745-k24er77",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-bjd1xke",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-bjd1xke",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "下面哪种面向对象的方法可以让你变得富有( )\nA: 继承 B: 封装 C: 多态 D: 抽象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-3fzbsv2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220828104745-3fzbsv2",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-zyjl8ta",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-zyjl8ta",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "( )是面向对象程序设计语言中的一种机制。这种机制实现了方法的定义与具体的对象无关，而对方法的调用则可以关联于具体的对象。\nA: 继承 B: 模板 C: 对象的自身引用 D: 动态绑定"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-8m4m5gk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220828104745-8m4m5gk",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-k25ttcd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-k25ttcd",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "面向对象设计中的继承和组合，下面说法错误的是？（）\nA：继承允许我们覆盖重写父类的实现细节，父类的实现对于子类是可见的，是一种静态复用，也称为白盒复用\nB：组合的对象不需要关心各自的实现细节，之间的关系是在运行时候才确定的，是一种动态复用，也称为黑盒复用\nC：优先使用继承，而不是组合，是面向对象设计的第二原则\nD：继承可以使子类能自动继承父类的接口，但在设计模式中认为这是一种破坏了父类的封装性的表现"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-om9mbr7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20220828104745-om9mbr7",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-ccklro6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-ccklro6",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "以下关于纯虚函数的说法,正确的是( )\nA：声明纯虚函数的类不能实例化对象         B：声明纯虚函数的类是虚基类\nC：子类必须实现基类的纯虚函数            D：纯虚函数必须是空函数"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-hqhozh1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20220828104745-hqhozh1",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-zv329mr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-zv329mr",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "关于虚函数的描述正确的是( )\nA：派生类的虚函数与基类的虚函数具有不同的参数个数和类型   B：内联函数不能是虚函数\nC：派生类必须重新定义基类的虚函数      D：虚函数可以是一个static型的函数"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-76p5eho",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20220828104745-76p5eho",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-c33fo6a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-c33fo6a",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "关于虚表说法正确的是（ ）\nA：一个类只能有一张虚表\nB：基类中有虚函数，如果子类中没有重写基类的虚函数，此时子类与基类共用同一张虚表\nC：虚表是在运行期间动态生成的\nD：一个类的不同对象共享该类的虚表"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-v4m25kw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ny4=",
+						"Num": 7
+					},
+					"Properties": {
+						"id": "20220828104745-v4m25kw",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-yodgl03",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-yodgl03",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "假设A类中有虚函数，B继承自A，B重写A中的虚函数，也没有定义任何虚函数，则（ ）\nA：A类对象的前4个字节存储虚表地址，B类对象前4个字节不是虚表地址\nB：A类对象和B类对象前4个字节存储的都是虚基表的地址\nC：A类对象和B类对象前4个字节存储的虚表地址相同\nD：A类和B类虚表中虚函数个数相同，但A类和B类使用的不是同一张虚表"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-2w9onyj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OC4=",
+						"Num": 8
+					},
+					"Properties": {
+						"id": "20220828104745-2w9onyj",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-fcl35h0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-fcl35h0",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "下面程序输出结果是什么? （）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-h38od6o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220828104745-h38od6o",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include\u003ciostream\u003e\nusing namespace std;\nclass A {\npublic:\n\tA(char* s) { cout \u003c\u003c s \u003c\u003c endl; }\n\t~A() {}\n};\nclass B :virtual public A {\npublic:\n\tB(char* s1, char* s2) :A(s1) { cout \u003c\u003c s2 \u003c\u003c endl; }\n};\nclass C :virtual public A {\npublic:\n\tC(char* s1, char* s2) :A(s1) { cout \u003c\u003c s2 \u003c\u003c endl; }\n};\nclass D :public B, public C {\npublic:\n\tD(char* s1, char* s2, char* s3, char* s4) :B(s1, s2), C(s1, s3), A(s1)\n\t{\n\t\tcout \u003c\u003c s4 \u003c\u003c endl;\n\t}\n};\nint main() {\n\tD* p = new D(\"class A\", \"class B\", \"class C\", \"class D\");\n\tdelete p;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-w1p28tn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828104745-w1p28tn",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "A：class A class B class C class D"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "B：class D class B class C class A\nC：class D class C class B class A\nD：class A class C class B class D"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-t9roels",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220828104745-t9roels",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"ID": "20220828104745-3cgfzl8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OS4=",
+						"Num": 9
+					},
+					"Properties": {
+						"id": "20220828104745-3cgfzl8",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-lvm1w4q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-lvm1w4q",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多继承中指针偏移问题？下面说法正确的是( )"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-et9ciqs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220828104745-et9ciqs",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Base1 { public: int _b1; };\nclass Base2 { public: int _b2; };\nclass Derive : public Base1, public Base2 { public: int _d; };\n\nint main() {\n\tDerive d;\n\tBase1* p1 = \u0026d;\n\tBase2* p2 = \u0026d;\n\tDerive* p3 = \u0026d;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-woetakb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828104745-woetakb",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "A：p1 == p2 == p3\nB：p1 \u003c p2 \u003c p3\nC：p1 == p3 != p2\nD：p1 != p2 != p3"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-jmc570b",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220828104745-jmc570b",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"ID": "20220828104745-pqx6x12",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MTAu",
+						"Num": 10
+					},
+					"Properties": {
+						"id": "20220828104745-pqx6x12",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-lrouqje",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-lrouqje",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "以下程序输出结果是什么（）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-kpyqgvf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220828104745-kpyqgvf",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yysr"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A {\npublic:\n\tvirtual void func(int val = 1) { std::cout \u003c\u003c \"A-\u003e\" \u003c\u003c val \u003c\u003c std::endl; }\n\tvirtual void test() { func(); }\n};\nclass B : public A {\npublic:\n\tvoid func(int val = 0) { std::cout \u003c\u003c \"B-\u003e\" \u003c\u003c val \u003c\u003c std::endl; }\n};\nint main(int argc, char* argv[])\n{\n\tB* p = new B;\n\tp-\u003etest();\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-gd8f90w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828104745-gd8f90w",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "A: A-\u003e0\nB: B-\u003e1\nC: A-\u003e1\nD: B-\u003e0\nE: 编译出错\nF: 以上都不正确"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-8li4ew9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220828104745-8li4ew9",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "参考答案："
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-7021km8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220828104745-7021km8",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220828104745-6n7grjp",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20220828104745-6n7grjp",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-hnrxytn",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20220828104745-hnrxytn",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"ID": "20220828104745-zqpfmmp",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220828104745-zqpfmmp",
+										"updated": "20220828104745"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "A    2. D      3. C       4. A       5. B"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220828104745-zqlhrph",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20220828104745-zqlhrph",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"ID": "20220828104745-gq6uv7w",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220828104745-gq6uv7w",
+										"updated": "20220828104745"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "D     7. D      8. A      9. C     10. B"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-qx32m45",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220828104745-qx32m45",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "问答题"
+				}
+			]
+		},
+		{
+			"ID": "20220828104745-uz5o5mh",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20220828104745-uz5o5mh",
+				"updated": "20220828104745"
+			},
+			"Children": [
+				{
+					"ID": "20220828104745-iiq2it7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20220828104745-iiq2it7",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-9715aft",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-9715aft",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "什么是多态？答：参考本节课件内容"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-s2swyum",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20220828104745-s2swyum",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-qvimhl5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-qvimhl5",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "什么是重载、重写(覆盖)、重定义(隐藏)？答：参考本节课件内容"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-lwbomwi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20220828104745-lwbomwi",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-ogsdt8u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-ogsdt8u",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多态的实现原理？答：参考本节课件内容"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-tm26kfh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20220828104745-tm26kfh",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-b4x42rc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-b4x42rc",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "inline函数可以是虚函数吗？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "答：可以，不过编译器就忽略inline属性，这个函数就不再是inline，因为虚函数要放到虚表中去。"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-nrtrbbr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20220828104745-nrtrbbr",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-ze2pd4k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-ze2pd4k",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态成员可以是虚函数吗？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "答：不能，因为静态成员函数没有this指针，使用类型::成员函数的调用方式无法访问虚函数表，所以静态成员函数无法放进虚函数表。"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-r8qed81",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20220828104745-r8qed81",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-lezr5ll",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-lezr5ll",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造函数可以是虚函数吗？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "答：不能，因为对象中的虚函数表指针是在构造函数初始化列表阶段才初始化的。"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-al04bjy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ny4=",
+						"Num": 7
+					},
+					"Properties": {
+						"id": "20220828104745-al04bjy",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-m2ss7kt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-m2ss7kt",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "析构函数可以是虚函数吗？什么场景下析构函数是虚函数？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "答：可以，并且最好把基类的析构函数定义成虚函数。参考本节课件内容"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-d1syher",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OC4=",
+						"Num": 8
+					},
+					"Properties": {
+						"id": "20220828104745-d1syher",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-56aubdf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-56aubdf",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对象访问普通函数快还是虚函数更快？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "答：首先如果是普通对象，是一样快的。如果是指针对象或者是引用对象，则调用的普通函数快，因为构成多态，运行时调用虚函数需要到虚函数表中去查找。"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-y16rz7o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OS4=",
+						"Num": 9
+					},
+					"Properties": {
+						"id": "20220828104745-y16rz7o",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-j0mcsyc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-j0mcsyc",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "虚函数表是在什么阶段生成的，存在哪的？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "答：虚函数表是在编译阶段就生成的，一般情况下存在代码段(常量区)的。"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-a7ipqmu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MTAu",
+						"Num": 10
+					},
+					"Properties": {
+						"id": "20220828104745-a7ipqmu",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-slkbnxg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-slkbnxg",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "C++菱形继承的问题？虚继承的原理？答：参考继承课件。注意这里不要把虚函数表和虚基表搞混了。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220828104745-zua8l17",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MTEu",
+						"Num": 11
+					},
+					"Properties": {
+						"id": "20220828104745-zua8l17",
+						"updated": "20220828104745"
+					},
+					"Children": [
+						{
+							"ID": "20220828104745-55qhp3d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220828104745-55qhp3d",
+								"updated": "20220828104745"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "什么是抽象类？抽象类的作用？"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "答：参考（3.抽象类）。抽象类强制重写了虚函数，另外抽象类体现出了接口继承关系。"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220828104808-bfozn9n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220828104808-bfozn9n"
+			}
+		}
+	]
+}

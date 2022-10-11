@@ -1,0 +1,13 @@
+/* 设置4种样式的格式 */
+/* .p[data-node-id][data-type="NodeParagraph"][style*="background-color: var(--b3-card-"],
+.list[style*="background-color: var(--b3-card-"] {
+    padding: 16px 8px;
+} */
+
+/* 4种样式和13种背景中间的引用设置透明度 */
+.protyle-wysiwyg [style*="background-color"] .bq,
+.protyle-wysiwyg [style*="background-color"] .code-block,
+.protyle-wysiwyg [style*="background-color"] .render-node,
+.protyle-wysiwyg [style*="background-color"] tbody tr {
+    background-color: var(--b3-theme-background-tm) !important;
+}

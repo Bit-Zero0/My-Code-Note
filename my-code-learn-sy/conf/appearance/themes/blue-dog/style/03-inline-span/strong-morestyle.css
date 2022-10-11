@@ -1,0 +1,353 @@
+/* ———————————————自定义13种背景样式，前7种为彩虹色—————————————————— */
+/* strong[style="background-color: var(--b3-font-background1);"] {
+    border-bottom: 0.1em solid var(--b3-font-color1);
+}
+
+strong[style="background-color: var(--b3-font-background2);"] {
+    border-bottom: 0.1em solid var(--b3-font-color2);
+}
+
+strong[style="background-color: var(--b3-font-background3);"] {
+    border-bottom: 0.1em solid var(--b3-font-color3);
+}
+
+strong[style="background-color: var(--b3-font-background4);"] {
+    border-bottom: 0.1em solid var(--b3-font-color4);
+}
+
+strong[style="background-color: var(--b3-font-background5);"] {
+    border-bottom: 0.1em solid var(--b3-font-color5);
+}
+
+strong[style="background-color: var(--b3-font-background6);"] {
+    border-bottom: 0.1em solid var(--b3-font-color6);
+}
+
+strong[style="background-color: var(--b3-font-background7);"] {
+    border-bottom: 0.1em solid var(--b3-font-color7);
+}
+
+strong[style="background-color: var(--b3-font-background8);"] {
+    border-bottom: 0.1em solid var(--b3-font-color8);
+} */
+
+div[style="background-color: var(--b3-font-background9);"],
+strong[style="background-color: var(--b3-font-background9);"] {
+    color: var(--b3-font-color9);
+}
+
+div[style="background-color: var(--b3-font-background10);"],
+strong[style="background-color: var(--b3-font-background10);"] {
+    color: var(--b3-font-color10);
+}
+
+div[style="background-color: var(--b3-font-background11);"],
+strong[style="background-color: var(--b3-font-background11);"] {
+    color: var(--b3-font-color11);
+}
+
+div[style="background-color: var(--b3-font-background12);"],
+strong[style="background-color: var(--b3-font-background12);"] {
+    color: var(--b3-font-color12);
+}
+
+
+/* 为前8种后面设置数字 */
+/* strong[style="background-color: var(--b3-font-background1);"]::before,
+strong[style="background-color: var(--b3-font-background1);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color1);
+}
+
+strong[style="background-color: var(--b3-font-background2);"]::before,
+strong[style="background-color: var(--b3-font-background2);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color2);
+}
+
+strong[style="background-color: var(--b3-font-background3);"]::before,
+strong[style="background-color: var(--b3-font-background3);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color3);
+}
+
+strong[style="background-color: var(--b3-font-background4);"]::before,
+strong[style="background-color: var(--b3-font-background4);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color4);
+}
+
+strong[style="background-color: var(--b3-font-background5);"]::before,
+strong[style="background-color: var(--b3-font-background5);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color5);
+}
+
+strong[style="background-color: var(--b3-font-background6);"]::before,
+strong[style="background-color: var(--b3-font-background6);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color6);
+}
+
+strong[style="background-color: var(--b3-font-background7);"]::before,
+strong[style="background-color: var(--b3-font-background7);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color7);
+}
+
+strong[style="background-color: var(--b3-font-background8);"]::before,
+strong[style="background-color: var(--b3-font-background8);"]::after {
+    content: "·";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-font-color8);
+} */
+
+/* 设置第13个背景色为挖空效果 */
+strong[style="background-color: var(--b3-font-background13);"] {
+    color: transparent !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid gray !important;
+    border-radius: var(--b3-border-radius-none) !important;
+    /* padding: 2px 0px !important; */
+    font-weight: 400 !important;
+    transition: color 0.1s ease-in-out;
+}
+
+strong[style="background-color: var(--b3-font-background13);"]:hover {
+    color: inherit !important;
+}
+
+
+/* ———————————————自定义13种背景样式，前7种为彩虹色 END—————————————————— */
+
+/* ---------------------------------------修改文字更多样式中的字体效果----------------------------------------- */
+/* ———————————————修改字体样式和下划线—————————————————— */
+strong[style="color: var(--b3-font-color9);"] {
+    font-family: "宋体" !important;
+    color: inherit !important;
+}
+
+strong[style="color: var(--b3-font-color10);"] {
+    font-family: "楷体" !important;
+    color: inherit !important;
+}
+
+strong[style="color: var(--b3-font-color11);"] {
+    font-family: "微软雅黑" !important;
+    font-weight: bold;
+    color: inherit !important;
+}
+
+strong[style="color: var(--b3-font-color12);"] {
+    /* text-decoration: underline dashed gray;
+    text-underline-offset: 4px; */
+    color: inherit !important;
+    font-size: 1.3em;
+}
+
+strong[style="color: var(--b3-font-color13);"] {
+    /* text-decoration: underline wavy gray;
+    text-underline-offset: 3px; */
+    color: transparent !important;
+    background-color: #0066ff !important;
+    border-radius: 4px;
+}
+
+/* ---------------------------------------修改文字更多样式中的字体效果 END----------------------------------------- */
+/* --------------------------为更多样式中的字体增加文字提示---------------------- */
+/* ——————————————————————设置边框大小—————————————————————— */
+.b3-color__square {
+    height: 23px;
+    width: 23px;
+    border-radius: var(--b3-border-radius-noraml);
+    box-shadow: none;
+    border: var(--b3-border-normal);
+}
+
+/* ——————————————————————为样式中13种字体设置格式—————————————————————— */
+/* 设置统一的字体样式 */
+.b3-color__square[data-type="color"] {
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important;
+}
+
+.b3-color__square[data-type="color"][style*="background-color:var(--b3-font-"]:before {
+    display: inline-block;
+    position: absolute;
+    font-family: "微软雅黑";
+    font-weight: 600;
+    font-size: 1.3em;
+    left: center;
+    top: center;
+    z-index: -1;
+}
+
+/* 设置文字介绍 */
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color1)"]:before {
+    content: "红";
+    color: var(--b3-font-color1);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color2)"]:before {
+    content: "橙";
+    color: var(--b3-font-color2);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color3)"]:before {
+    content: "黄";
+    color: var(--b3-font-color3);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color4)"]:before {
+    content: "绿";
+    color: var(--b3-font-color4);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color5)"]:before {
+    content: "青";
+    color: var(--b3-font-color5);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color6)"]:before {
+    content: "蓝";
+    color: var(--b3-font-color6);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color7)"]:before {
+    content: "紫";
+    color: var(--b3-font-color7);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color8)"]:before {
+    content: "灰";
+    color: var(--b3-font-color8);
+}
+
+/* 设置字体样式 */
+.p[data-type="NodeParagraph"][style="background-color: var(--b3-font-color9);"],
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color9)"]:before {
+    content: "宋";
+    font-family: "宋体";
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color10)"]:before {
+    content: "楷";
+    font-family: "楷体";
+    font-size: 1.4em;
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color11)"]:before {
+    content: "黑";
+    font-family: "黑体";
+}
+
+/* 设置曲线样式 */
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color12)"]:before {
+    content: "+";
+    font-size: 2em;
+    position: absolute;
+    top: -0.33em;
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color13)"] {
+    content: url("../../src/zhihu.svg");
+    color: transparent !important;
+    background-color: #0066ff !important;
+}
+
+/* ——————————————————————为样式中13种背景设置格式—————————————————————— */
+/* 设置统一的背景样式 */
+.b3-color__square[data-type="backgroundColor"] {
+    position: relative;
+    z-index: 2;
+}
+
+.b3-color__square[data-type="backgroundColor"][style*="background-color:var(--b3-font-"]:before {
+    display: inline-block;
+    position: absolute;
+    font-family: "微软雅黑";
+    font-weight: 600;
+    font-size: 1.3em;
+    left: center;
+    top: center;
+    z-index: -1;
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background1)"]:before {
+    content: "红";
+    /* color: var(--b3-font-color1); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background2)"]:before {
+    content: "橙";
+    /* color: var(--b3-font-color2); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background3)"]:before {
+    content: "黄";
+    /* color: var(--b3-font-color3); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background4)"]:before {
+    content: "绿";
+    /* color: var(--b3-font-color4); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background5)"]:before {
+    content: "青";
+    /* color: var(--b3-font-color5); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background6)"]:before {
+    content: "蓝";
+    /* color: var(--b3-font-color6); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background7)"]:before {
+    content: "紫";
+    /* color: var(--b3-font-color7); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background8)"]:before {
+    content: "灰";
+    /* color: var(--b3-font-color8); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background9)"]:before {
+    content: "红";
+    color: var(--b3-font-color9);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background10)"]:before {
+    content: "黄";
+    color: var(--b3-font-color10);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background11)"]:before {
+    content: "蓝";
+    color: var(--b3-font-color11);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background12)"]:before {
+    content: "绿";
+    color: var(--b3-font-color12);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background13)"]:before {
+    content: "空";
+    color: transparent;
+    border-bottom: 2px solid var(--b3-theme-on-background) !important;
+    box-sizing: border-box;
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background13)"]:hover:before {
+    color: var(--b3-theme-on-background);
+}

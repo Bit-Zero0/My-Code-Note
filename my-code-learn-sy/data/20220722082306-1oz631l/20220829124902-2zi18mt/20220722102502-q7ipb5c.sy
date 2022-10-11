@@ -1,0 +1,1189 @@
+{
+	"ID": "20220722102502-q7ipb5c",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722102502-q7ipb5c",
+		"title": "C和C++的内存分布",
+		"updated": "20220722102638"
+	},
+	"Children": [
+		{
+			"ID": "20220722102514-z3od4df",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722102514-z3od4df",
+				"updated": "20220722102514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C/C++内存区域划分"
+				}
+			]
+		},
+		{
+			"ID": "20220722102514-b9763j7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722102514-b9763j7",
+				"updated": "20220722102514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内存区域划分图"
+				}
+			]
+		},
+		{
+			"ID": "20220722102514-uwwk8wz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102514-uwwk8wz",
+				"updated": "20220722102600"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220426121611.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102514-5enn4db",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722102514-5enn4db",
+				"updated": "20220722102613"
+			},
+			"Children": [
+				{
+					"ID": "20220722102514-ezeb7b1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722102514-ezeb7b1",
+						"updated": "20220722102514"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-z86ec2z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722102514-z86ec2z",
+								"updated": "20220722102514"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内核空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "一般占用500M~1G的空间"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722102514-fcccjn9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722102514-fcccjn9",
+						"updated": "20220722102514"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-ulkjg4y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722102514-ulkjg4y",
+								"updated": "20220722102514"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "栈"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 是"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在内存中是"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "向下增长"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的 ，在Linux系统下，空间大概有 "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "8M"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ， 栈空间的数据是 "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "后进先出"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的形式。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722102514-tjusosy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722102514-tjusosy",
+						"updated": "20220722102514"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-v5pnfyl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722102514-v5pnfyl",
+								"updated": "20220722102514"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存映射段"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  待学习..."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722102514-x7r6r0i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722102514-x7r6r0i",
+						"updated": "20220722102514"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-6dtlcrf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722102514-6dtlcrf",
+								"updated": "20220722102514"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "堆"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 在"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存中是向上增长"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的， 堆内存很大，32位系统下，大概2~4G，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "malloc"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "calloc"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ,"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "realloc"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 等函数开辟的空间就在堆区"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722102514-lj4v5jr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722102514-lj4v5jr",
+						"updated": "20220722102514"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-7t167iz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722102514-7t167iz",
+								"updated": "20220722102514"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数据段(静态区)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  存放 "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "静态变量"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 和 "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "全局变量"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的区域。如"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "static"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 修饰的函数 ^0c7d96"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722102514-0kblin0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722102514-0kblin0",
+						"updated": "20220722102613"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-0vzpn3r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722102514-0vzpn3r",
+								"updated": "20220722102613"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "代码段(常量区)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 存放 "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可执行的代码/只读常量"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ， "
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102514-kh7opkp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722102514-kh7opkp",
+				"updated": "20220722102514"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用代码类型的区域"
+				}
+			]
+		},
+		{
+			"ID": "20220722102514-h040w7c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102514-h040w7c",
+				"updated": "20220722102638"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220426122101.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102514-764be7g",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722102514-764be7g",
+				"updated": "20220722102514"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722102514-wr57fzv",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20220722102514-wr57fzv",
+						"updated": "20220722102514"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-k6hf73p",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20220722102514-k6hf73p",
+								"updated": "20220722102514"
+							},
+							"Children": [
+								{
+									"ID": "20220722102514-2zrvex6",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722102514-2zrvex6",
+										"updated": "20220722102514"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "选择题：\n选项: A.栈 B.堆 C.数据段 D.代码段\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "globalVar"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里？ "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "数据段"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "staticGlobalVar"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里？  "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "数据段"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "staticVar"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里？  "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "数据段"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "localVar"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里?  "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "代码段"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "num1"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 在哪里？ "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "栈"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "char2"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里？ "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "栈 ，char2是数组名，可以看作指向数组的指针"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "*char2"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里？ "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "栈 ，char2是一个数组，把后面常量串拷贝过来到数组中，数组在栈上，所以*char2在栈上 \n"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "pChar3"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "在哪里？  "
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "栈 ，因为pchar3是指针"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "\n"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "*pChar3"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "在哪里？"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "代码段 ，解引用后的字符串是在代码段的==\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "ptr1"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里？ "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "栈"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "*ptr1"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在哪里？ "
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "堆 ，  *ptr1得到的是动态申请空间的数据在堆区"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102514-hps2q4f",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722102514-hps2q4f",
+				"updated": "20220722102514"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722102514-0th3agj",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20220722102514-0th3agj",
+						"updated": "20220722102514"
+					},
+					"Children": [
+						{
+							"ID": "20220722102514-qgzuu4s",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20220722102514-qgzuu4s",
+								"updated": "20220722102514"
+							},
+							"Children": [
+								{
+									"ID": "20220722102514-jmrt3ki",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722102514-jmrt3ki",
+										"updated": "20220722102514"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "填空题：\n sizeof(num1) = __40__;//数组大小,10个整形数据一共40字节\n  sizeof(char2) = __5__;//包括\\0的空间\n  strlen(char2) = __4__;//不包括\\0的长度\n  sizeof(pChar3) = __4__;//pChar3为指针\n  strlen(pChar3) = __4__;//字符串“abcd”的长度，不包括\\0的长度\n  sizeof(ptr1) = __4__;//ptr1是指针"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

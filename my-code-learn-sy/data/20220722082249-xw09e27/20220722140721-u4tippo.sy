@@ -1,0 +1,1622 @@
+{
+	"ID": "20220722140721-u4tippo",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722140721-u4tippo",
+		"title": "gcc与g++的使用",
+		"updated": "20220722140750"
+	},
+	"Children": [
+		{
+			"ID": "20220722140734-473oaue",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722140734-473oaue",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "gcc如何完成"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-y4z7qx6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-y4z7qx6",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "格式： "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "gcc [选项] 要编译的文件 [选项] [目标文件]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-2wxwn3q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722140734-2wxwn3q",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "预处理(进行宏替换)"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-t9s63ev",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140734-t9s63ev",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140734-a40bhk5",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722140734-a40bhk5",
+						"updated": "20220722140734"
+					},
+					"Children": [
+						{
+							"ID": "20220722140734-k48zerm",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-k48zerm",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-wcqg0pa",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-wcqg0pa",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "预处理功能主要包括"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "替换宏定义,文件包含,条件编译,去注释"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "等。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140734-blu5j1c",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-blu5j1c",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-mzig1aj",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-mzig1aj",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "预处理指令是以#号开头的代码行。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140734-cwmhoea",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-cwmhoea",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-2y4qocn",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-2y4qocn",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "实例: "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "gcc –E hello.c –o hello.i"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140734-gg7gjif",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-gg7gjif",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-afkhrjr",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-afkhrjr",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "选项“"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "-E"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "”,该选项的作用是让 gcc 在预处理结束后停止编译过程。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140734-z4qbi4j",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-z4qbi4j",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-sw6f5ee",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-sw6f5ee",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "选项“"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "-o"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "”是指目标文件,“"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": ".i"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "”文件为已经过预处理的C原始程序。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-jkmyoob",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722140734-jkmyoob",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "编译（生成汇编）"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-q3jsmsk",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140734-q3jsmsk",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140734-l4pheb3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140734-l4pheb3",
+						"updated": "20220722140734"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "在这个阶段中,gcc 首先要"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "检查代码的规范性"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "、是否有"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "语法错误"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "等,以确定代码的实际要做的工作,在检查无误后,gcc 把代码翻译成汇编语言。\n用户可以使用“"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-S"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "”选项来进行查看,该选项只进行编译而不进行汇编,生成汇编代码, 生成"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": ".s"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 文件。\n实例: "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "gcc –S hello.i –o hello.s"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-8j0pmxr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722140734-8j0pmxr",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "汇编（生成机器可识别代码）"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-wbfglsz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140734-wbfglsz",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140734-6l4047h",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140734-6l4047h",
+						"updated": "20220722140734"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "汇编阶段是把编译阶段生成的“"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": ".s"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "”文件转成目标文件\n读者在此可使用选项“"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-c"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "”就可看到汇编代码已转化为“"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": ".o"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "”的二进制目标代码了\n实例: "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "gcc –c hello.s –o hello.o"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-nrcyx3f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722140734-nrcyx3f",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "连接（生成可执行文件或库文件）"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-r4hl64e",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140734-r4hl64e",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140734-gus4sf6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140734-gus4sf6",
+						"updated": "20220722140734"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "在成功编译之后,就进入了链接阶段。\n实例: "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "gcc hello.o –o hello"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-c7xxocr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-c7xxocr",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在这里涉及到一个重要的概念:函数库"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-mwkgkwr",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140734-mwkgkwr",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140734-jsbo5bn",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722140734-jsbo5bn",
+						"updated": "20220722140734"
+					},
+					"Children": [
+						{
+							"ID": "20220722140734-1cq2or3",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-1cq2or3",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-m6qwgoj",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-m6qwgoj",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "我们的C程序中，并没有定义“printf”的函数实现,且在预编译中包含的“stdio.h”中也只有该函数的声明,而没有定义函数的实现,那么,是在哪里实“printf”函数的呢?"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140734-pwlpbv2",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-pwlpbv2",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-btxvdax",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-btxvdax",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "最后的答案是:系统把这些函数实现都被做到名为 libc.so.6 的库文件中去了,在没有特别指定时,gcc 会到系统默认的搜索路径“/usr/lib”下进行查找,也就是链接到 libc.so.6 库函数中去,这样就能实现函数“printf”了,而这也就是链接的作用"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-ha37hbg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722140734-ha37hbg",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "函数库一般分为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "静态库"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "动态库"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "两种。"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-22fb1e7",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140734-22fb1e7",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140734-3ckt7g5",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722140734-3ckt7g5",
+						"updated": "20220722140734"
+					},
+					"Children": [
+						{
+							"ID": "20220722140734-8ogyeuj",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-8ogyeuj",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-5s2hqq5",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-5s2hqq5",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "静态库"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 是指编译链接时,把"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "库文件的代码全部加入到可执行文件中"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": ",因此生成的文件比较大,但在运行时也就不再需要库文件了。其后缀名一般为 “"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": ".a"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "”"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140734-vj8r4v9",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-vj8r4v9",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-2zoqshv",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-2zoqshv",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "动态库"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 与之相反,在编译链接时并没有把库文件的代码加入到可执行文件中,而是在程序执行时由运行时链接文件加载库,这样可以节省系统的开销。动态库一般后缀名为 “."
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "so"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "” ,如前面所述的 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "libc.so.6"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 就是动态库。"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "gcc 在编译时默认使用动态库"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "。"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "完成了链接之后,gcc 就可以生成可执行文件"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": ",如下所示。 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "gcchello.o –o hello"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140734-u2j5o8l",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140734-u2j5o8l",
+								"updated": "20220722140734"
+							},
+							"Children": [
+								{
+									"ID": "20220722140734-rou25mm",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140734-rou25mm",
+										"updated": "20220722140734"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "gcc默认生成的二进制程序，是动态链接"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "的，这点可以通过 file 命令验证。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-arnxymz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722140734-arnxymz",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "预处理、编译与汇编 的指令记忆"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-lodaw4p",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140734-lodaw4p",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140734-hkubodr",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140734-hkubodr",
+						"updated": "20220722140734"
+					},
+					"Children": [
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "ESc"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  预处理、编译与汇编 时的使用的指令\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "iso"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "    预处理、编译与汇编 后生成的后缀名"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-y5sryvj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722140734-y5sryvj",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "gcc选项"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-r25iu30",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-r25iu30",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-E"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 只激活预处理,这个不生成文件,你需要把它重定向到一个输出文件里面"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-3lygh2b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-3lygh2b",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-S "
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 编译到汇编语言不进行汇编和链接"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-ozmd73k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-ozmd73k",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  编译到目标代码"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-i6nqwvf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-i6nqwvf",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-o"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 文件输出到 文件"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-6kmnv0d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-6kmnv0d",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-static"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 此选项对生成的文件采用静态链接"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-j5daae6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-j5daae6",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-g"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 生成调试信息。GNU 调试器可利用该信息。"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-8gd62re",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-8gd62re",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-shared"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 此选项将尽量使用动态库，所以生成文件比较小，但是需要系统由动态库."
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-9s3kxbt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-9s3kxbt",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-O0"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " or "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-O1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " or"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-O2"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  or "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-O3"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "    编译器的优化选项的4个级别，-O0表示没有优化,-O1为缺省值，-O3优化级别最高"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-fufzslh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-fufzslh",
+				"updated": "20220722140734"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-w"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  不生成任何警告信息。"
+				}
+			]
+		},
+		{
+			"ID": "20220722140734-darcog0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140734-darcog0",
+				"updated": "20220722140750"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-Wall"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 生成所有警告信息。"
+				}
+			]
+		}
+	]
+}

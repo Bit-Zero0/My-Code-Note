@@ -1,0 +1,51 @@
+/* ----------------------------------------------------调整超级块的块间距------------------------------------------ */
+/* ————————————————————————————————————大超级块，不用设置边框—————————————————————————————— */
+/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* —————————————————————————————————————次超级块大小—————————————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div,
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div {
+    margin: 0.1em 2em 0.1em 0.1em;
+}
+
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:nth-last-child(2),
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:nth-last-child(2) {
+    margin-right: 0;
+}
+
+/* ——————————————————————————————————————每个子超级块—————————————————————————————————————— */
+/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div {
+    border-radius: var(--b3-border-radius-none);
+    box-sizing: border-box;
+    margin: 0.1em 0 0.1em 0.1em;
+} */
+
+/* 最后一个子超级块不设置右边距 */
+/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:nth-last-child(2) {
+    margin-right: 0.1em;
+} */
+
+
+
+
+/* 去掉超级块中标题和第一个段落的上边距 */
+div.sb div[data-type="NodeHeading"] {
+    margin-top: 0px !important;
+    border-radius: 0 !important;
+}
+
+
+/* 超级块中的标题颜色设置为默认的颜色 */
+div.sb>div[data-type="NodeHeading"] {
+    color: inherit !important;
+}
+
+
+
+
+
+
+/* ----------------------------------------------------调整超级块的块间距 END------------------------------------------ */

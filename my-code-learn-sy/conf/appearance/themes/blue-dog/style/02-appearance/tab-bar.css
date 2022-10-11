@@ -1,0 +1,96 @@
+/* 本主题标签页部分来自于 lisontowind 制作的 Roundark 主题  */
+/* 感谢 notion-theme 主题作者 Rc 和 city-in-dark主题的作者 Weihan-Chen 给予的帮助 */
+
+
+/* --------------------------------------------------标签页 Tab--------------------------------------------- */
+/* 标签页底部背景颜色,标签页数量较少时可以看到，颜色和标签页颜色保持一致 */
+.layout-tab-bar.fn__flex,
+ul.fn__flex.layout-tab-bar {
+    background-color: var(--b3-tab-background);
+}
+
+
+
+
+/* 标签页相关设置 */
+.layout-tab-bar .item {
+    position: relative;
+    background-color: var(--b3-tab-background);
+    /* flex: none; */
+    /* 设置标签页的宽度 */
+    /* max-width: 16em; */
+    min-width: 12em;
+    border: 1px solid #80808028;
+    border-radius: 0px;
+}
+
+
+/* 标签页中文字的相关设置 */
+.layout-tab-bar .item .item__text {
+    width: 6em;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline;
+}
+
+
+
+/* 设置当前标签页样式 */
+.layout-tab-bar .item--focus {
+    color: white;
+    background-image: linear-gradient(to right, #75a7f1, #65a3ff);
+    box-shadow: none !important;
+    border-radius: 0px;
+    border: 1px solid transparent !important;
+
+}
+
+/* 设置当前标签页文字样式 */
+.layout-tab-bar .item--focus .item__text {
+    color: white !important;
+}
+
+/* 设置当前标签页中的关闭图标颜色 */
+.layout-tab-bar .item--focus .item__close svg {
+    color: white;
+}
+
+/* 去掉默认主题的相关设置 */
+.layout-tab-bar .item:not(:last-child) {
+    box-shadow: none;
+}
+
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: inset 0 2px 0 0 transparent,
+        0px 0px 0.5px rgba(0, 0, 0, 0.055),
+        0px 0px 4px rgba(0, 0, 0, 0.11) !important;
+}
+
+/* 显示钉住的标签页中的文字 */
+.layout-tab-bar .item--pin .item__text {
+    display: block !important;
+}
+
+
+/* 去掉标签页上面的emoji */
+/* .layout-tab-bar .item__icon {
+    display: none;
+} */
+
+/* 给钉住的页面增加emoji图标 */
+li.item.item--pin::after {
+    content: "📌";
+    font-size: 0.7em;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+}
+
+/* 将标签页上的emoji调小 */
+.layout-tab-bar .item__icon>img, .layout-tab-bar .item__icon>svg {
+    height: 16px;
+    width: 16px;
+}
+
+/* --------------------------------------------------标签页 END--------------------------------------------- */

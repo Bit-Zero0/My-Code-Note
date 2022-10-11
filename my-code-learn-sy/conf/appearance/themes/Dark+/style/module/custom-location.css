@@ -1,0 +1,20 @@
+/* 当前文档浏览位置 */
+
+@import url(/appearance/themes/Dark+/style/module/config.css);
+@import url(/widgets/custom.css);
+
+/* 显示当前文档阅读进度 */
+.protyle-wysiwyg[custom-location]::before {
+    content: "\00A0👀\00A0"attr(custom-location)"\00A0";
+    font-size: 0.75em;
+    border: 1px solid var(--b3-theme-primary);
+    position: absolute;
+    top: var(--custom-breadcrumb-height);
+    right: 2rem;
+    z-index: 1;
+}
+
+/* 强制显示块滚动条 */
+/* .protyle-scroll.b3-tooltips.b3-tooltips__s {
+    display: block !important;
+} */

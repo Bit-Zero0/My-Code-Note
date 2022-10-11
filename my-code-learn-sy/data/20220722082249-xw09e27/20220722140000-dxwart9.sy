@@ -1,0 +1,545 @@
+{
+	"ID": "20220722140000-dxwart9",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722140000-dxwart9",
+		"title": "Linux 软件包管理器 yum",
+		"updated": "20220722140333"
+	},
+	"Children": [
+		{
+			"ID": "20220722140250-5z145tj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722140250-5z145tj",
+				"updated": "20220722140302"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "软件包管理器 yum"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-u844f9y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-u844f9y",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "yum相当于手机或电脑上的应用商店"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-7v6gppf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-7v6gppf",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用方法："
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-bdjnfg8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140250-bdjnfg8",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140250-og2se34",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140250-og2se34",
+						"updated": "20220722140250"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "查看软件包"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-rllfoq8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140250-rllfoq8",
+				"updated": "20220722140333"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140316-lavg5rd",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140316-lavg5rd",
+						"updated": "20220722140333"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "通过 yum list 命令可以罗列出当前一共有哪些软件包. 由于包的数目可能非常之多, 这里我们需要使用 "
+						},
+						{
+							"Type": "NodeBlockRef",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeBlockRefID",
+									"Data": "20220722135728-me728tr"
+								},
+								{
+									"Type": "NodeBlockRefSpace"
+								},
+								{
+									"Type": "NodeBlockRefDynamicText",
+									"Data": "grep"
+								},
+								{
+									"Type": "NodeCloseParen"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 命令只筛选出我们关注的包."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-uy52qyz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-uy52qyz",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如:"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-pqmmfk9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722140250-pqmmfk9",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "yum list | grep lrzsz\n\n\n#结果如下：\nlrzsz.x86_64            0.12.20-36.el7                 @base\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-lw1h496",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-lw1h496",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项:"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-7vi0qwn",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140250-7vi0qwn",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140250-eq8tru8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140250-eq8tru8",
+						"updated": "20220722140250"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "软件包名称: 主版本号.次版本号.源程序发行号-软件包的发行号.主机平台.cpu架构."
+						}
+					]
+				},
+				{
+					"ID": "20220722140250-0vg5qzx",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140250-0vg5qzx",
+						"updated": "20220722140250"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "\"x86_64\" 后缀表示64位系统的安装包, \"i686\" 后缀表示32位系统安装包. 选择包时要和系统匹配."
+						}
+					]
+				},
+				{
+					"ID": "20220722140250-vrw4994",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140250-vrw4994",
+						"updated": "20220722140250"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "\"el7\" 表示操作系统发行版的版本. \"el7\" 表示的是 centos7/redhat7. \"el6\" 表示 centos6/redhat6."
+						}
+					]
+				},
+				{
+					"ID": "20220722140250-80jdyq8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140250-80jdyq8",
+						"updated": "20220722140250"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "最后一列, base 表示的是 \"软件源\" 的名称, 类似于 \"小米应用商店\", \"华为应用商店\" 这样的概念"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-kewc7w8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722140250-kewc7w8",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何安装软件"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-d0fxhhh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-d0fxhhh",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过 yum, 我们可以通过很简单的一条命令完成 gcc 的安装."
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-qnc084b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722140250-qnc084b",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sudo yum install lrzsz\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-yxf5bnl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-yxf5bnl",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "yum 会自动找到都有哪些软件包需要下载, 这时候敲 \"y\" 确认安装."
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-34wwx4r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-34wwx4r",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "出现 \"complete\" 字样, 说明安装完成."
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-xz3pcl0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-xz3pcl0",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意事项:"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-w2s8rzm",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140250-w2s8rzm",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140250-1palaar",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20220722140250-1palaar",
+						"updated": "20220722140250"
+					},
+					"Children": [
+						{
+							"ID": "20220722140250-y8z2o5o",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140250-y8z2o5o",
+								"updated": "20220722140250"
+							},
+							"Children": [
+								{
+									"ID": "20220722140250-gqtsy0x",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140250-gqtsy0x",
+										"updated": "20220722140250"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "安装软件时由于需要向系统目录中写入内容, 一般需要 sudo 或者切到 root 账户下才能完成."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140250-lsrvmcf",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140250-lsrvmcf",
+								"updated": "20220722140250"
+							},
+							"Children": [
+								{
+									"ID": "20220722140250-wm6jhky",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140250-wm6jhky",
+										"updated": "20220722140250"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "yum安装软件只能一个装完了再装另一个. 正在yum安装一个软件的过程中, 如果再尝试用yum安装另外一个软件, yum会报错."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20220722140250-xpexmvo",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20220722140250-xpexmvo",
+								"updated": "20220722140250"
+							},
+							"Children": [
+								{
+									"ID": "20220722140250-iax8tjc",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20220722140250-iax8tjc",
+										"updated": "20220722140250"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "如果 yum 报错, 百度."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-9pe3ok5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722140250-9pe3ok5",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何卸载软件"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-jic355b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140250-jic355b",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "仍然是一条命令:"
+				}
+			]
+		},
+		{
+			"ID": "20220722140250-66n7otf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722140250-66n7otf",
+				"updated": "20220722140250"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bGludXg="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sudo yum remove lrzsz\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

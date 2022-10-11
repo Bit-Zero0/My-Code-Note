@@ -1,0 +1,709 @@
+{
+	"ID": "20220722102316-z30ftwb",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722102316-z30ftwb",
+		"title": "在使用读取string字符串时，容易出现的问题",
+		"updated": "20220722102442"
+	},
+	"Children": [
+		{
+			"ID": "20220722102331-92ecymo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722102331-92ecymo",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在使用读取string字符串时，容易出现的问题"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-u8lb6q4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-u8lb6q4",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们在C语言或C++中，使用scanf或cin读取字符串时，当我们读取到空格 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "' ' "
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或换行符 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\\n"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  的时候，就会读取结束。"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-afsbyn6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-afsbyn6",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如一下代码："
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-843ou7y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722102331-843ou7y",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tstring s;\n\n\tcin \u003e\u003e s; // 在输入时，输入“hello world”\n\n\tcout \u003c\u003c s \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-vdt80ak",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-vdt80ak",
+				"updated": "20220722102343"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220425121805.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-kts5b3e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722102331-kts5b3e",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因："
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-uq20f21",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-uq20f21",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这种情况是因为缓冲区在读取数据时，是以空格 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "' ' "
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或换行符 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\\n"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  来判断是否输入完成，当遇到两种中的其中一个时，他就会立马刷新缓冲区 ，所以我们上面的代码输入了 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "hello world"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  , 而输出结果为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "hello"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-sn43j98",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722102331-sn43j98",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方法"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-97cukjj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722102331-97cukjj",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getchar"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "cin.get()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-p5m4mt4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-p5m4mt4",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这两种方法都是一个字符一个字符的读取，当字符遇到换行符 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\\n"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 时停止，说明一行读取介绍。"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-dhx2l8l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722102331-dhx2l8l",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tstring s;\n\tchar ch = getchar();\n\n\twhile (ch != '\\n')//\n\t{\n\t\ts += ch; //将读取到的字符放到 s 中。\n\t\tch = getchar(); // 读取之后的字符\n\t}\n\n\tcout \u003c\u003c s \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-hqf1tyw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722102331-hqf1tyw",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tstring s;\n\tchar ch = cin.get();\n\n\twhile (ch != '\\n')\n\t{\n\t\ts += ch;\n\t\tch = cin.get();\n\t}\n\n\tcout \u003c\u003c s \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-6hqfxhu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-6hqfxhu",
+				"updated": "20220722102417"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220425124641.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102421-3gwqd6q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102421-3gwqd6q"
+			}
+		},
+		{
+			"ID": "20220722102331-uhujgcl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722102331-uhujgcl",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getline"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-bmnoakz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-bmnoakz",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getline"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数可以直接获取到一行，比上面的函数或方法要实用一些"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-txe091d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-txe091d",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getline"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 时，要使用 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "标准流提取操作符"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "cin"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  作为第一个参数"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-mb7n6sq",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722102331-mb7n6sq",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722102331-vaft6ii",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722102331-vaft6ii",
+						"updated": "20220722102331"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "getline( istream\u0026 in ,  string s );"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-7lqz060",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722102331-7lqz060",
+				"updated": "20220722102331"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tstring s;\n\n\tgetline(cin , s);\n\n\tcout \u003c\u003c s \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722102331-6fl3t1r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102331-6fl3t1r",
+				"updated": "20220722102441"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220425124729.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722102442-8pdgv5x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722102442-8pdgv5x"
+			}
+		}
+	]
+}

@@ -1,0 +1,192 @@
+{
+	"ID": "20221011095017-ssnyjqr",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221011095017-ssnyjqr",
+		"title": "环形队列单生产单消费模型代码",
+		"updated": "20221011095149"
+	},
+	"Children": [
+		{
+			"ID": "20221011095129-zdwpevq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011095129-zdwpevq",
+				"updated": "20221011095129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ring_queue.hpp"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011095129-h1q4p22",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011095129-h1q4p22",
+				"updated": "20221011095129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cvector\u003e\n#include \u003csemaphore.h\u003e\n\nnamespace fmy_ring_queue\n{\n    const int cap_default = 10;\n    template\u003cclass T\u003e\n    class RingQueue{\n    private:\n        std::vector\u003cT\u003e _ring_queue;\n        int _cap;\n\n        int _c_step;\n        int _p_step;\n  \n\t\tsem_t _blank_sem;//生产者关心空位置资源\n        sem_t _data_sem;// 消费者关心空位置资源\n\n\n    public:\n        RingQueue(int cap = cap_default)\n            :_ring_queue(cap)\n            ,_cap(cap)\n        {\n            sem_init(\u0026_blank_sem , 0 , cap);\n            sem_init(\u0026_data_sem , 0 , 0);\n            _c_step = _p_step = 0;\n        }\n\n        ~RingQueue()\n        {\n            sem_destroy(\u0026_blank_sem);\n            sem_destroy(\u0026_data_sem);\n        }\n\n        void Push(const T\u0026 in)//生产接口\n        {\n            sem_wait(\u0026_blank_sem);//P(空位置)\n            _ring_queue[_p_step] = in;\n            sem_post(\u0026_data_sem);//V(数据)\n\n            _p_step++;\n            _p_step %= _cap;\n        }\n\n        void Pop(T* out)//消费接口\n        {\n            sem_wait(\u0026_data_sem);//P(数据)\n            *out = _ring_queue[_c_step];\n            sem_post(\u0026_blank_sem);//V(空位置)\n\n            _c_step++;\n            _c_step %= _cap;\n        }\n    };\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011095129-iply2le",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011095129-iply2le",
+				"updated": "20221011095129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ring_cp.cc"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011095129-8315n7t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011095129-8315n7t",
+				"updated": "20221011095129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cpthread.h\u003e\n#include \u003ctime.h\u003e\n#include \u003cunistd.h\u003e\n\n#include \"ring_queue.hpp\"\n\nusing namespace fmy_ring_queue;\n\nvoid* consumer(void* args)\n{\n     RingQueue\u003cint\u003e* rq = (RingQueue\u003cint\u003e*)args;\n     while(true){\n         int data = 0;\n         rq-\u003ePop(\u0026data);\n         std::cout \u003c\u003c \"消费数据是: \" \u003c\u003c data \u003c\u003c std::endl;\n\t    //sleep(1);\n     }\n}\n\nvoid* producter(void* args)\n{\n     RingQueue\u003cint\u003e* rq = (RingQueue\u003cint\u003e*)args;\n     while(true){\n         int data = rand()%20 + 1;\n         std::cout \u003c\u003c \"生产数据是:  \" \u003c\u003c data \u003c\u003c std::endl;\n         rq-\u003ePush(data);\n        sleep(1);\n     }\n}\n\nint main()\n{\n\n    RingQueue\u003cint\u003e* rq = new RingQueue\u003cint\u003e();\n    pthread_t c,p;\n    pthread_create(\u0026c , nullptr , consumer , (void*)rq);\n    pthread_create(\u0026p , nullptr ,  producter, (void*)rq);\n  \n    pthread_join(c , nullptr);\n    pthread_join(p , nullptr);\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011095129-mqit6wq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011095129-mqit6wq",
+				"updated": "20221011095149"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221003172336"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221003172336-20221011095148-289xch0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}

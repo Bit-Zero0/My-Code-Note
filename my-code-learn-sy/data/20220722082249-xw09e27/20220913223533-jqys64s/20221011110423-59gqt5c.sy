@@ -1,0 +1,234 @@
+{
+	"ID": "20221011110423-59gqt5c",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221011110423-59gqt5c",
+		"title": "懒汉方式实现单例模式代码(线程不安全)",
+		"updated": "20221011111127"
+	},
+	"Children": [
+		{
+			"ID": "20221011110527-oqkoq94",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110527-oqkoq94",
+				"updated": "20221011110542"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "只要通过 Singleton 这个包装类来使用 T 对象, 则一个进程中只有一个 T 对象的实例.\n还是使用到了Task.hpp文件，但是和上面的一样。"
+				}
+			]
+		},
+		{
+			"ID": "20221011110527-pvfdo4o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110527-pvfdo4o",
+				"updated": "20221011110527"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "main.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011110527-q6oy1h3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011110527-q6oy1h3",
+				"updated": "20221011110527"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cctime\u003e\n#include \u003ccstdlib\u003e\n\n#include \"Task.hpp\"\n#include \"thread_pool.hpp\"\n\nusing namespace fmy_task;\nusing namespace fmy_threadPool;\n\nint main()\n{\n    std::cout \u003c\u003c \"当前正在运行我的进程其他代码...\" \u003c\u003c std::endl;\n    std::cout \u003c\u003c \"当前正在运行我的进程其他代码...\" \u003c\u003c std::endl;\n    std::cout \u003c\u003c \"当前正在运行我的进程其他代码...\" \u003c\u003c std::endl;\n    std::cout \u003c\u003c \"当前正在运行我的进程其他代码...\" \u003c\u003c std::endl;\n    std::cout \u003c\u003c \"当前正在运行我的进程其他代码...\" \u003c\u003c std::endl;\n    std::cout \u003c\u003c \"当前正在运行我的进程其他代码...\" \u003c\u003c std::endl;\n    std::cout \u003c\u003c \"当前正在运行我的进程其他代码...\" \u003c\u003c std::endl;\n\n    srand((long long)time(nullptr));\n\n    while(true)\n    {\n        sleep(1);\n        Task t(rand()%20+1 ,rand()%10+1 , \"+-*/%\"[rand()%5] );\n        ThreadPool\u003cTask\u003e :: GetInstance()-\u003ePushTask(t);\n        std::cout \u003c\u003c ThreadPool\u003cTask\u003e::GetInstance() \u003c\u003c std::endl;\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011110527-jikm443",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110527-jikm443",
+				"updated": "20221011110527"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "thread_pool.hpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n存在一个严重的问题, "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程不安全."
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n第一次调用 GetInstance 的时候, 如果两个线程同时调用, 可能会创建出两份 T 对象的实例.\n但是后续再次调用, 就没有问题了."
+				}
+			]
+		},
+		{
+			"ID": "20221011110527-aigcm5u",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011110527-aigcm5u",
+				"updated": "20221011111127"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003cqueue\u003e\n#include \u003cpthread.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring\u003e\n\nnamespace fmy_threadPool\n{\n    const int g_num = 5;\n\n    template\u003cclass T\u003e\n    class ThreadPool\n    {\n    private:\n        int _num;\n        std::queue\u003cT\u003e _task_queue;\n\n        pthread_mutex_t  _mtx;\n        pthread_cond_t _cond;\n\n        static ThreadPool\u003cT\u003e* ins;//这就是需要我们创建的对象，必须是静态的，不然将会重复创建\n\n    private:\n        ThreadPool(int num = g_num)\n            :_num(num)\n        {\n            pthread_mutex_init(\u0026_mtx , nullptr);\n            pthread_cond_init(\u0026_cond , nullptr);\n        }\n\n        ThreadPool(const ThreadPool\u003cT\u003e\u0026 tp) = delete;\n\n        ThreadPool\u003cT\u003e \u0026operator=(ThreadPool\u003cT\u003e \u0026tp) = delete;\n\n    public:\n        static ThreadPool\u003cT\u003e* GetInstance()\n        {\n            static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;\n\n            if(ins == nullptr)//存在一个严重的问题, 线程不安全.第一次调用 GetInstance 的时候, 如果两个线程同时调用, 可能会创建出两份 T 对象的实例. \n            {\n\t\tins = new ThreadPool\u003cT\u003e();\n\t\tins-\u003eInitThreadPool();//创建对对象成功后，则调用多线程。\n\t\tstd::cout \u003c\u003c \"首次加载对象\"\u003c\u003c std:: endl;   \n            }\n      \n            return ins;//如果已经存在对象，则返回对象。\n        }\n\n        void Lock()\n        {\n            pthread_mutex_lock(\u0026_mtx);\n        }\n\n        void Unlock()\n        {\n            pthread_mutex_unlock(\u0026_mtx);\n        }\n\n        void Wait()\n        {\n            pthread_cond_wait(\u0026_cond , \u0026_mtx);\n        }\n\n        void WakeUp()\n        {\n            pthread_cond_signal(\u0026_cond);\n        }\n\n        bool IsEmpty()\n        {\n            return _task_queue.empty();\n        }\n\n    public:\n        ~ThreadPool()\n        {\n            pthread_mutex_destroy(\u0026_mtx);\n            pthread_cond_destroy(\u0026_cond);\n        }\n\n        static void *Rountine(void* args)\n        {\n            pthread_detach(pthread_self());\n            ThreadPool\u003cT\u003e* tp = (ThreadPool\u003cT\u003e*)args;\n\n            while(true)\n            {\n                tp-\u003eLock();\n                while(tp-\u003eIsEmpty())\n                {\n                    tp-\u003eWait();\n                }\n                T t;\n                tp-\u003ePopTask(\u0026t);\n                tp-\u003eUnlock();\n                t();\n            }\n        }\n\n        void InitThreadPool()\n        {\n            pthread_t tid;\n            for(int i = 0 ; i \u003c _num; i++)\n            {\n                pthread_create(\u0026tid , nullptr , Rountine , (void*)this);\n            }\n        }\n\n        void PushTask(const T\u0026 in)\n        {\n            Lock();\n            _task_queue.push(in);\n\n            Unlock();\n            WakeUp();\n        }\n\n        void PopTask(T* out)\n        {\n            *out = _task_queue.front();\n            _task_queue.pop();\n        }\n    };\n\n    template \u003cclass T\u003e\n    ThreadPool\u003cT\u003e *ThreadPool\u003cT\u003e::ins = nullptr;// 因为ins是static的，所以需要对类中的ins进行初始化\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011110527-wj5yypm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110527-wj5yypm",
+				"updated": "20221011110717"
+			}
+		},
+		{
+			"ID": "20221011110719-kvtho35",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011110719-kvtho35",
+				"updated": "20221011110726"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Task.hpp"
+				}
+			]
+		},
+		{
+			"ID": "20221011110809-o82vced",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011110809-o82vced",
+				"updated": "20221011110809"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003cpthread.h\u003e\n\nnamespace fmy_task\n{\n    class Task\n    {\n    private:\n        int x_;\n        int y_;\n        char op_; //+/*/%\n    public:\n        Task() {}\n        Task(int x, int y, char op) : x_(x), y_(y), op_(op)\n        {\n        }\n        std::string Show()\n        {\n            std::string message = std::to_string(x_);\n            message += op_;\n            message += std::to_string(y_);\n            message += \"=?\";\n            return message;\n        }\n        int Run()\n        {\n            int res = 0;\n            switch (op_)\n            {\n            case '+':\n                res = x_ + y_;\n                break;\n            case '-':\n                res = x_ - y_;\n                break;\n            case '*':\n                res = x_ * y_;\n                break;\n            case '/':\n                res = x_ / y_;\n                break;\n            case '%':\n                res = x_ % y_;\n                break;\n            default:\n                std::cout \u003c\u003c \"bug??\" \u003c\u003c std::endl;\n                break;\n            }\n            std::cout \u003c\u003c \"当前任务正在被: \" \u003c\u003c pthread_self() \u003c\u003c \" 处理: \" \\\n            \u003c\u003c x_ \u003c\u003c op_ \u003c\u003c y_ \u003c\u003c \"=\" \u003c\u003c res \u003c\u003c std::endl;\n            return res;\n        }\n        int operator()()\n        {\n            return Run();\n        }\n        ~Task() {}\n    };\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

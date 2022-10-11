@@ -1,0 +1,1520 @@
+{
+	"ID": "20220722140818-rhpe03n",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722140818-rhpe03n",
+		"title": "gdb调试",
+		"updated": "20220722152218"
+	},
+	"Children": [
+		{
+			"ID": "20220722140824-d1yxz8p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722140824-d1yxz8p",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-hmkyd4n",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-hmkyd4n",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-pirdhs2",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-pirdhs2",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "程序的发布方式有两种，"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "debug"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "模式和 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "release"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 模式"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-wf1t80y",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-wf1t80y",
+				"updated": "20220722152147"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722152147-7ulfuhm",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722152147-7ulfuhm",
+						"updated": "20220722152147"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Linux gcc/g++"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "出来的二进制程序，"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "默认是 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "release"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 模式"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-wfawhow",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140824-wfawhow",
+				"updated": "20220722152151"
+			}
+		},
+		{
+			"ID": "20220722152217-x3g4exu",
+			"Type": "NodeSuperBlock",
+			"Properties": {
+				"id": "20220722152217-x3g4exu",
+				"updated": "20220722152218"
+			},
+			"Children": [
+				{
+					"Type": "NodeSuperBlockOpenMarker"
+				},
+				{
+					"Type": "NodeSuperBlockLayoutMarker",
+					"Data": "row"
+				},
+				{
+					"ID": "20220722140824-5fjyl3o",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-5fjyl3o",
+						"updated": "20220722152218"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "要使用gdb调试，必须在源代码生成二进制程序的时候, 加上"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": " -g"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "  选项"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722140824-qlqx2tj",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-qlqx2tj",
+						"updated": "20220722152218"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "记住要使用gdb调试，必须在源代码生成二进制程序的时候, 加上"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": " -g"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  选项"
+						}
+					]
+				},
+				{
+					"ID": "20220722140840-sh3rp9n",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140840-sh3rp9n",
+						"updated": "20220722152218"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "\n​"
+						},
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "assets/"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "assets/020220503184437.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeSuperBlockCloseMarker"
+				}
+			]
+		},
+		{
+			"ID": "20220722140847-e4kxpfr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140847-e4kxpfr"
+			}
+		},
+		{
+			"ID": "20220722140824-3zx3nvm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722140824-3zx3nvm",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "gdb中的常用调试命令"
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-qrwo0ip",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140824-qrwo0ip",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "退出gdb可以使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ctrl+d"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "quit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-uf339rw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-uf339rw",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-a44pivc",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-a44pivc",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "list／l 行号"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：显示binFile源代码，接着上次的位置往下列，每次列10行。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-rrd1ufs",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-rrd1ufs",
+				"updated": "20220722141005"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722141005-ftqlw70",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722141005-ftqlw70",
+						"updated": "20220722141005"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "list／l 函数名"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：列出某个函数的源代码。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-w57t0ay",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-w57t0ay",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-aoubvb0",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-aoubvb0",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "r或run"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：运行程序。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-7ij5fxl",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-7ij5fxl",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-ifsss7j",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-ifsss7j",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "n 或 next"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：单条执行。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-5g7fauo",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-5g7fauo",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-yzpjq6k",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-yzpjq6k",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "s或step"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：进入函数调用"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-gt4bzrd",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-gt4bzrd",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-lsorzys",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-lsorzys",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "break(b) 行号"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：在某一行设置断点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-a3344p5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-a3344p5",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-x8bzr6l",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-x8bzr6l",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "break 函数名"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：在某个函数开头设置断点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-clw0zr7",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-clw0zr7",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-udzhmak",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-udzhmak",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "info break "
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：查看断点信息。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-za94y6u",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-za94y6u",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-3o91vx8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-3o91vx8",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "fifinish"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：执行到当前函数返回，然后挺下来等待命令"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-0cdotpw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-0cdotpw",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-6a57ydp",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-6a57ydp",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "print(p)"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：打印表达式的值，通过表达式可以修改变量的值或者调用函数"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-bb3431i",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-bb3431i",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-1d9oh8s",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-1d9oh8s",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "p 变量"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：打印变量值。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-775lfmu",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-775lfmu",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-pw5bqy3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-pw5bqy3",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "set var"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：修改变量的值"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-egsi0lt",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-egsi0lt",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-u1bqazr",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-u1bqazr",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "continue(或c)"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：从当前位置开始连续而非单步执行程序"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-ydpvy6t",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-ydpvy6t",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-a0qt12z",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-a0qt12z",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "run(或r)"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：从开始连续而非单步执行程序"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-gm7m0oz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-gm7m0oz",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-3ju59cr",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-3ju59cr",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "delete breakpoints"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：删除所有断点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-vmp4yfp",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-vmp4yfp",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-1otjkmv",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-1otjkmv",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "delete breakpoints n"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：删除序号为n的断点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-zzczhyp",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-zzczhyp",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-aesarn0",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-aesarn0",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "disable breakpoints"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：禁用断点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-1opvl7y",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-1opvl7y",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-p6fsz22",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-p6fsz22",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "enable breakpoints"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：启用断点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-keydoqx",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-keydoqx",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-wx5wsj9",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-wx5wsj9",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "info(或i) breakpoints"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：参看当前设置了哪些断点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-x7ub629",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-x7ub629",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-xs52wqk",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-xs52wqk",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "display 变量名"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：跟踪查看一个变量，每次停下来都显示它的值"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-977qr1u",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-977qr1u",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-4d1904i",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-4d1904i",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "undisplay"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：取消对先前设置的那些变量的跟踪"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-i1raq8r",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-i1raq8r",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-lueyvt3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-lueyvt3",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "until X行号"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：跳至X行"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-lrhod1i",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-lrhod1i",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-ffhqaov",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-ffhqaov",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "breaktrace(或bt)"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：查看各级函数调用及参数"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-huxauhh",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-huxauhh",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-aa89df2",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-aa89df2",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "info（i) locals"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：查看当前栈帧局部变量的值"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140824-g2n2hqv",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722140824-g2n2hqv",
+				"updated": "20220722140824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722140824-ko2tyl9",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722140824-ko2tyl9",
+						"updated": "20220722140824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "quit"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：退出gdb"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722140958-mf7ptya",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722140958-mf7ptya"
+			}
+		}
+	]
+}

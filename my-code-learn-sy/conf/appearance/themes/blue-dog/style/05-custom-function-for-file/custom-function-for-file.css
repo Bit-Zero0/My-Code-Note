@@ -1,0 +1,83 @@
+/* ————————————————————设置文档的自定义属性 限制图片宽度———————————————————— */
+.protyle-wysiwyg[custom-f~=picwidth] img,
+.b3-typography[custom-f~=picwidth] img,
+.protyle-wysiwyg[custom-f~=tpkd] img,
+.b3-typography[custom-f~=tpkd] img {
+    max-width: 50em;
+}
+
+/* 设置文档自定义属性，去掉网络图标左上角的图标 */
+.protyle-wysiwyg[custom-f~=picno] .img__net {
+    display: none !important;
+}
+
+/* ————————————————————通过自定义属性修改字体———————————————————— */
+*[custom-f~=hm],
+*[custom-f~=hw] {
+    font-family: "HarmonyOS Sans SC";
+}
+
+*[custom-f~=yh] {
+    font-family: "Microsoft YaHei";
+}
+
+/* ————————————————————修改背景颜色———————————————————— */
+.protyle-wysiwyg[custom-f~=blue] {
+    background-color: rgba(128, 213, 206, 0.1) !important;
+}
+
+/* 2群"随船医"贡献护眼颜色 */
+/* 绿豆沙 */
+.protyle-wysiwyg[custom-f~=green] {
+    background-color: #c8edcc !important;
+}
+
+/* WPS护眼模式 */
+.protyle-wysiwyg[custom-f~=green1] {
+    background-color: #cce8cf !important;
+}
+
+/* 青草绿 */
+.protyle-wysiwyg[custom-f~=green2] {
+    background-color: #e3eccd !important;
+}
+
+/* 杏仁黄 */
+.protyle-wysiwyg[custom-f~=yellow] {
+    background-color: #faf8df !important;
+}
+
+/* 极光灰 */
+.protyle-wysiwyg[custom-f~=gray] {
+    background-color: #ebeaf0 !important;
+}
+
+/* 瑞雪白 */
+.protyle-wysiwyg[custom-f~=white] {
+    background-color: #f1ede1 !important;
+}
+
+/* 导出的字体格式 */
+.protyle-wysiwyg[custom-f~=daochu],
+.b3-typography[custom-f~=daochu] {
+    font-family: "Times New Roman", "宋体";
+}
+
+.protyle-wysiwyg[custom-f~=daochu] div[data-type="NodeHeading"],
+.b3-typography[custom-f~=daochu] div[data-type="NodeHeading"],
+[custom-f~=daochu] table thead {
+    font-family: "Times New Roman", "黑体";
+    font-weight: bold;
+}
+
+
+/* 禁止编辑 */
+.protyle-wysiwyg[custom-f~=no] {
+    pointer-events: none;
+}
+
+.protyle-wysiwyg[data-node-id][custom-f~=no] {
+    pointer-events: none;
+}
+
+/* -------------------------------------------------对整个文档实行自定义属性 END--------------------------------------------- */

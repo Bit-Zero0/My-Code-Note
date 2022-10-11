@@ -1,0 +1,2255 @@
+{
+	"ID": "20220722150533-sg909kl",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20220722150533-sg909kl",
+		"title": "Linux环境变量",
+		"updated": "20220905103109"
+	},
+	"Children": [
+		{
+			"ID": "20220722150539-nivkm8c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722150539-nivkm8c",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "环境变量的作用："
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-53askqe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-53askqe",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "命令，程序，工具... 本质上都是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可执行文件"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-r18pow6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-r18pow6",
+				"updated": "20220722150612"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：Linux中的命令。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521150532.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150612-uw02su8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150612-uw02su8",
+				"updated": "20220722150620"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521150551.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-lpovrkn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-lpovrkn",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们要运行我们写的可执行文件时，需要带上 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "./"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来指定当前目录，那为什么系统的指令就可以不用呢？\n原因就在于："
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "环境变量"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150626-4kiu6qt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150626-4kiu6qt"
+			}
+		},
+		{
+			"ID": "20220722150539-l53neis",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722150539-l53neis",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本概念"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-9kpiyjx",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20220722150539-9kpiyjx",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"ID": "20220722150539-60jst9g",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722150539-60jst9g",
+						"updated": "20220722150539"
+					},
+					"Children": [
+						{
+							"ID": "20220722150539-1w3rot0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722150539-1w3rot0",
+								"updated": "20220722150539"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "环境变量(environment variables)一般是指在操作系统中用来指定操作系统运行环境的一些参数。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722150539-9mz41w1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722150539-9mz41w1",
+						"updated": "20220722150539"
+					},
+					"Children": [
+						{
+							"ID": "20220722150539-lubvy0t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722150539-lubvy0t",
+								"updated": "20220722150539"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如：我们在编写C/C++代码的时候，在链接的时候，从来不知道我们的所链接的动态静态库在哪里，但是照样可以链接成功，生成可执行程序，原因就是有相关环境变量帮助编译器进行查找。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20220722150539-9xighxg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20220722150539-9xighxg",
+						"updated": "20220722150539"
+					},
+					"Children": [
+						{
+							"ID": "20220722150539-i6xmfyu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20220722150539-i6xmfyu",
+								"updated": "20220722150539"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "环境变量通常具有"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "某些特殊用途"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，还有在系统当中通常具有"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "全局特性"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-3z0xw58",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-3z0xw58",
+				"updated": "20220722150640"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521212704.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-7zvcp1l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722150539-7zvcp1l",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常见环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-3c8eipi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-3c8eipi",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PATH : 指定命令的搜索路径。\nHOME : 指定用户的主工作目录(即用户登陆到Linux系统中时,默认的目录)。\nSHELL : 当前Shell,它的值通常是/bin/bash。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-goq2zon",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-goq2zon",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看是需要使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "$"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 符号， 有点类似于 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "解引用操作"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-f875eyn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-f875eyn",
+				"updated": "20220722150714"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不适用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,就像只打印出指针，而不打印出指针指向的内容。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521151749.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "$"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521151851.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n而每个环境变量是以 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": ":"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  作为"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "分隔符"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150735-p0ucuxd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150735-p0ucuxd"
+			}
+		},
+		{
+			"ID": "20220722150539-4mhfd90",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722150539-4mhfd90",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "添加环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-h7v3qzd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-h7v3qzd",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果我们不想再执行我们自己写的可执行文件时，使用路径。就需要将我们的路径配置到环境变量中。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-kpmsjw4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722150539-kpmsjw4",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用export命令"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-ribclh4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722150539-ribclh4",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "错误做法："
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-ws2z6kr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-ws2z6kr",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如我们的文件的路径为："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "/home/whb/102/phase-102/code/lesson10"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-f4n06ns",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-f4n06ns",
+				"updated": "20220722150820"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "直接使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "export PATH=/home/whb/102/phase-102/code/lesson10"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521152433.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n此做法会覆盖了所有的环境变量。其他的所有环境变量就无法运行了。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521152704.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-7d9xlcv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-7d9xlcv",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方法：重启服务器。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-1xapj7z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722150539-1xapj7z",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "正确做法："
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-sd63pqn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-sd63pqn",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "export PATH=$PATH:/home/whb/102/phase-102/code/lesson10"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-mhguz1w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-mhguz1w",
+				"updated": "20220722150844"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521153059.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-79nhoop",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-79nhoop",
+				"updated": "20220722150900"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时不需要指定路径也可以运行了。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521153149.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150744-dwyi5lx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150744-dwyi5lx"
+			}
+		},
+		{
+			"ID": "20220722150539-igz7sdi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722150539-igz7sdi",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "set指令[本地变量]"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-6a7uwkj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-6a7uwkj",
+				"updated": "20220722150911"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "本地变量就是在当前session(会话)有用的变量。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521154712.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-15l3l9w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-15l3l9w",
+				"updated": "20220722150921"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当然也可以使用set来查看本地变量。\n使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "set | grep 变量名"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  来查询\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521183550.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如：这里的 myval在 env中是查不到的。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151207-4bf5sqq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151207-4bf5sqq"
+			}
+		},
+		{
+			"ID": "20220722150539-n9a3gxm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20220722150539-n9a3gxm",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将本地变量转化为环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-tmpkk34",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-tmpkk34",
+				"updated": "20220722151159"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用export导出，即可。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521184057.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151221-figczxt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151221-figczxt"
+			}
+		},
+		{
+			"ID": "20220722150539-w5tad6j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722150539-w5tad6j",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "unset指令[清除环境变量]"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-p9iu78e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-p9iu78e",
+				"updated": "20220722151218"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unset"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来清除环境变量。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521185006.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151224-p6ct9a2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151224-p6ct9a2"
+			}
+		},
+		{
+			"ID": "20220722150539-s4f207u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722150539-s4f207u",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过系统调用获取或设置环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20220722151312-9225jby",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20220722151312-9225jby",
+				"updated": "20220722151312"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20220722144823-577g5sa'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20220722151316-kkthroz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151316-kkthroz"
+			}
+		},
+		{
+			"ID": "20220722150539-v232pfg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722150539-v232pfg",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "命令行第三个参数"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-11zsi0w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-11zsi0w",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "  在上面的基础上，我们在添加一个参数 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "char* env[]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-2v5rt3d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722150539-2v5rt3d",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cstring.h\u003e\nint main(int argc , char* argv[] , char* env[])\n{\n\tfor(int i = 0 ;env[i] ; i++)\n\t{\n\t\tprintf(\"%d -\u003e %s\\n\" , i , env[i]);\n\t}\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-kzamshd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-kzamshd",
+				"updated": "20220905102935"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "env[]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的参数是OS填写的，无需我们填写。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521200924.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n一样的打印出了我们的环境变量。"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-bk44lao",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722150539-bk44lao",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过第三方变量environ 获取"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-5km56zg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-5km56zg",
+				"updated": "20220722151359"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "environ 其实是一个 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "二级指针"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521201915.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-ak6ba9p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722150539-ak6ba9p",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\textern char** environ;\n\tfor( int i = 0 ; environ[i] ; i++)\n\t{\n\t\tprintf(\"%s\\n\" , environ[i]);\n\t}\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-satvlxr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-satvlxr",
+				"updated": "20220722151409"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521201834.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-mrcyjjr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722150539-mrcyjjr",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getenv()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "   [最常用]"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-1431u9i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-1431u9i",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "需要导入头文件 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "stdlib.h"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-sitsda9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722150539-sitsda9",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tprintf(\"%s\\n\",getenv(\"PATH\"));\n\tprintf(\"%s\\n\",getenv(\"HOME\"));\n\tprintf(\"%s\\n\",getenv(\"SHELL\"));\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-dnlblrd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-dnlblrd",
+				"updated": "20220722151423"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521202733.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722151426-eb0j0vi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151426-eb0j0vi"
+			}
+		},
+		{
+			"ID": "20220722150539-lcw7loh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20220722150539-lcw7loh",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "环境变量通常是具有全局属性的"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-nmz4ftg",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20220722150539-nmz4ftg",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20220722150539-8mooqyy",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20220722150539-8mooqyy",
+						"updated": "20220722150539"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "环境变量通常具有全局属性，可以被子进程继承下去"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-mbf64kb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-mbf64kb",
+				"updated": "20220905103109"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "设定了一个"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "本地变量"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "my_env_string"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 然后再myproc进程中使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getenv()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数验证能读取"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "本地变量"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-843h222",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20220722150539-843h222",
+				"updated": "20220722150539"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003cunistd.h\u003e\nint main(int argc , char* argv[] , char* env[])\n{\n    printf(\"my_env_string: %s\\n\", getenv(\"my_env_string\"));\n    printf(\"I am a process pid: %d, ppid: %d\\n\", getpid(), getppid());\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-0mwvr36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-0mwvr36",
+				"updated": "20220722151445"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521204148.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-md86heh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-md86heh",
+				"updated": "20220722151457"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "看看ppid为何方神圣？\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521204613.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n命令行上启动的进程，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "父进程都是"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "bash"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "!"
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-jcbwdqe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-jcbwdqe",
+				"updated": "20220722151508"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "现在我们将 本地变量 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "my_env_string"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 改为环境变量。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521205017.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20220722150539-2x5b10m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722150539-2x5b10m",
+				"updated": "20220722151521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "现在查看一下子进程是否继承父进程"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "bash"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的 环境变量\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "assets/"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/020220521205123.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n成功了。"
+				}
+			]
+		},
+		{
+			"ID": "20220722151525-vu29wam",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220722151525-vu29wam"
+			}
+		}
+	]
+}
