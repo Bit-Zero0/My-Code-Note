@@ -1,0 +1,668 @@
+{
+	"ID": "20221012223734-mzjdo8o",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221012223734-mzjdo8o",
+		"title": "列表初始化",
+		"updated": "20221012224318"
+	},
+	"Children": [
+		{
+			"ID": "20221012223739-i3scytv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221012223739-i3scytv",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++98中{}的初始化问题"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-hy51ekq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223739-hy51ekq",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在C++98中，标准允许使用花括号{}对数组元素进行统一的列表初始值设定。比如："
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-5ljzo5u",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012223739-5ljzo5u",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int array1[] = {1,2,3,4,5}; \nint array2[5] = {0};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-3e2gwbm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223739-3e2gwbm",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对于一些自定义的类型，却无法使用这样的初始化。比如:\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "vector\u003cint\u003e v{1,2,3,4,5};"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n就无法通过编译，导致每次定义vector时，都需要先把vector定义出来，然后使用循环对其赋初始值，非常不方便。C++11扩大了用大括号括起的列表(初始化列表)的使用范围，使其可用于所有的内置类型和用户自定义的类型，使用初始化列表时，可添加等号(=)，也可不添加。"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-du0euac",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221012223739-du0euac",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内置类型的列表初始化"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-jhzood2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012223739-jhzood2",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main() \n {\n\t// 内置类型变量\n\tint x1 = {10};\n\tint x2{10};\n\tint x3 = 1+2;\n\tint x4 = {1+2};\n\tint x5{1+2}; \n\t// 数组\n\tint arr1[5] {1,2,3,4,5}; \n\tint arr2[]{1,2,3,4,5};\n\t// 动态数组，在C++98中不支持\n\tint* arr3 = new int[5]{1,2,3,4,5}; \n\t// 标准容器\n\tvector\u003cint\u003e v{1,2,3,4,5};\n\tmap\u003cint, int\u003e m{{1,1}, {2,2,},{3,3},{4,4}}; \n\treturn 0;\n }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-q9jkpsp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223739-q9jkpsp",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意:列表初始化可以在{}之前使用等号，其效果与不使用=没有什么区别。"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-wblglh0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221012223739-wblglh0",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自定义类型的列表初始化"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-5j524jp",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012223739-5j524jp",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"ID": "20221012223739-5fslf1u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221012223739-5fslf1u",
+						"updated": "20221012223739"
+					},
+					"Children": [
+						{
+							"ID": "20221012223739-6xjnbz4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012223739-6xjnbz4",
+								"updated": "20221012223739"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "标准库支持单个对象的列表初始化"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-3blare9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012223739-3blare9",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Point \n{\npublic:\n\tPoint(int x = 0, int y = 0): _x(x), _y(y) \n\t{}\nprivate: \n\tint _x; \n\tint _y;\n};\n\nint main() \n{\n\tPointer p{ 1, 2 }; \n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-v3xzvxb",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012223739-v3xzvxb",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"ID": "20221012223739-4fu6gvx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221012223739-4fu6gvx",
+						"updated": "20221012223739"
+					},
+					"Children": [
+						{
+							"ID": "20221012223739-b4xe3n9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012223739-b4xe3n9",
+								"updated": "20221012223739"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多个对象的列表初始化\n多个对象想要支持列表初始化，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "需给该类(模板类)添加一个带有"
+										},
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "initializer_list"
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "类型参数的构造函数即可"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。注意："
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "initializer_list"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是系统自定义的类模板，该类模板中主要有三个方法："
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "begin()、end()迭代器 以及获取区间中元素个数的方法size()"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-knpht2g",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012223739-knpht2g",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cinitializer_list\u003e \ntemplate\u003cclass T\u003e\nclass Vector { \npublic:\n// ...\n\tVector(initializer_list\u003cT\u003e l): _capacity(l.size()), _size(0) \n\t{\n\t\t_array = new T[_capacity]; \n\t\tfor(auto e : l)\n\t\t_array[_size++] = e;\n    }\n  \n\tVector\u003cT\u003e\u0026 operator=(initializer_list\u003cT\u003e l) { \n\t\tdelete[] _array;\n\t\tsize_t i = 0;\n\t\tfor (auto e : l)\n\t\t_array[i++] = e; \n\t\treturn *this;\n    }\n// ...\nprivate:\n\tT* _array;\n\tsize_t _capacity; \n\tsize_t _size;\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-qdrsz4q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221012223739-qdrsz4q",
+				"updated": "20221012223739"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "initializer_list"
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-zhrz04b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223739-zhrz04b",
+				"updated": "20221012223805"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在C++11中，基本上很多STL容器都支持了使用initializer_list 来初始化容器。"
+				}
+			]
+		},
+		{
+			"ID": "20221012223912-mkwboau",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223912-mkwboau"
+			}
+		},
+		{
+			"ID": "20221012223900-er7j0bh",
+			"Type": "NodeSuperBlock",
+			"Properties": {
+				"id": "20221012223900-er7j0bh",
+				"updated": "20221012223834"
+			},
+			"Children": [
+				{
+					"Type": "NodeSuperBlockOpenMarker"
+				},
+				{
+					"Type": "NodeSuperBlockLayoutMarker",
+					"Data": "col"
+				},
+				{
+					"ID": "20221012223834-pcqyfxd",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221012223834-pcqyfxd"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "\n​"
+						},
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Properties": {
+								"parent-style": "max-width: 471px;",
+								"style": "width: 461px;"
+							},
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "Pasted image 20221012163614"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "assets/Pasted image 20221012163614-20221012223805-pjz38kl.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						},
+						{
+							"Type": "NodeKramdownSpanIAL",
+							"Data": "{: style=\"width: 461px;\" parent-style=\"max-width: 471px;\"}"
+						}
+					]
+				},
+				{
+					"ID": "20221012223739-pq5zfri",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221012223739-pq5zfri",
+						"updated": "20221012223817"
+					},
+					"Children": [
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Properties": {
+								"parent-style": "max-width: 452px;",
+								"style": "width: 442px;"
+							},
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "Pasted image 20221012163455"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "assets/Pasted image 20221012163455-20221012223817-9sm824t.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						},
+						{
+							"Type": "NodeKramdownSpanIAL",
+							"Data": "{: style=\"width: 442px;\" parent-style=\"max-width: 452px;\"}"
+						}
+					]
+				},
+				{
+					"Type": "NodeSuperBlockCloseMarker"
+				}
+			]
+		},
+		{
+			"ID": "20221012223831-1a72ze6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223831-1a72ze6"
+			},
+			"Children": [
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221012223824-4ct7jfp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223824-4ct7jfp"
+			}
+		},
+		{
+			"ID": "20221012223824-hfl12ox",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223824-hfl12ox",
+				"updated": "20221012224143"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221012224056-dkn63hy"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "使用initializer_list来构造vector"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012223739-3r3dz5d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223739-3r3dz5d",
+				"updated": "20221012224314"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221012224002-wpw37s0"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "使用initializer_list构造来构造list"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224318-j8mplhd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224318-j8mplhd"
+			}
+		}
+	]
+}

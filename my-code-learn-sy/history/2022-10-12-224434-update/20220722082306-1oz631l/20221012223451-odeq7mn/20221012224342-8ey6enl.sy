@@ -1,0 +1,1043 @@
+{
+	"ID": "20221012224342-8ey6enl",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221012224342-8ey6enl",
+		"title": "变量类型推导",
+		"updated": "20221012224428"
+	},
+	"Children": [
+		{
+			"ID": "20221012224347-hnjg1ab",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221012224347-hnjg1ab",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么需要类型推导"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-iitfycm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224347-iitfycm",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在定义变量时，必须先给出变量的实际类型，编译器才允许定义，但有些情况下可能不知道需要实际类型怎么给，或者类型写起来特别复杂，比如:"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-x8hnbb3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-x8hnbb3",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cmap\u003e \n#include \u003cstring\u003e \nusing namespace std;\n\nint main()\n{\n\tshort a = 32670;\n\tshort b = 32670;\n\t// c如果给成short，会造成数据丢失，如果能够让编译器根据a+b的结果推导c的实际类型，就不会存 在问题\n\tshort c = a + b;\n\tstd::map\u003cstd::string, std::string\u003e m{ {\"apple\", \"苹果\"}, {\"banana\",\"香蕉\"} };\n\t// 使用迭代器遍历容器, 迭代器类型太繁琐\n\tstd::map\u003cstd::string, std::string\u003e::iterator it = m.begin();\n\twhile (it != m.end())\n\t{\n\t\tcout \u003c\u003c it-\u003efirst \u003c\u003c \" \" \u003c\u003c it-\u003esecond \u003c\u003c endl;\n\t\t++it;\n\t}\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-nnfgxhb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224347-nnfgxhb",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++11中，可以使用auto来根据变量初始化表达式类型推导变量的实际类型，可以给程序的书写提供许多)便。将程序中c与it的类型换成auto，程序可以通过编译，而且更加简洁。\nauto不再是一个存储类型指示符，而是作为一个新的类型指示符来指示编译器，auto声明的变量必须由编译器在编译时期推导而得。"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-0my4wtm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-0my4wtm",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int TestAuto()\n{\n\treturn 10;\n}\nint main()\n{\n\tint a = 10;\n\tauto b = a;\n\tauto c = 'a';\n\tauto d = TestAuto();\n\tcout \u003c\u003c typeid(b).name() \u003c\u003c endl;\n\tcout \u003c\u003c typeid(c).name() \u003c\u003c endl;\n\tcout \u003c\u003c typeid(d).name() \u003c\u003c endl;\n\t//auto e; 无法通过编译，使用auto定义变量时必须对其进行初始化 \n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224411-2oold1i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224411-2oold1i"
+			}
+		},
+		{
+			"ID": "20221012224347-frrdmuv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221012224347-frrdmuv",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "auto 使用细则"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-krgtl4r",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012224347-krgtl4r",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-kzraovn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221012224347-kzraovn",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-d5q9cvm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-d5q9cvm",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "auto与指针和引用结合起来使用"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-zl44qik",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221012224347-zl44qik",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221012224347-zzv2tnl",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221012224347-zzv2tnl",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "用"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "auto"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "声明指针类型时，用"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "auto"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "和"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "auto*"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "没有任何区别，但用"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "auto"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "声明引用类型时则必须加"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "\u0026"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-pr5se52",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-pr5se52",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\tint x = 10;\n\tauto a = \u0026x;\n\tauto* b = \u0026x;\n\tauto\u0026 c = x;\n\tcout \u003c\u003c typeid(a).name() \u003c\u003c endl;\n\tcout \u003c\u003c typeid(b).name() \u003c\u003c endl;\n\tcout \u003c\u003c typeid(c).name() \u003c\u003c endl;\n\t*a = 20;\n\t*b = 30;\n\tc = 40;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224421-gfj751a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224421-gfj751a"
+			}
+		},
+		{
+			"ID": "20221012224347-bohh2a3",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012224347-bohh2a3",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-kf8uor8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221012224347-kf8uor8",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-0biy7fs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-0biy7fs",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在同一行定义多个变量"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n当在同一行声明多个变量时，这些变量必须是相同的类型，否则编译器将会报错，因为编译器实际只对第一个类型进行推导，然后用推导出来的类型定义其他变量。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-m3k97k9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-m3k97k9",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "void TestAuto()\n{\n\tauto a = 1, b = 2;\n\tauto c = 3, d = 4.0; // 该行代码会编译失败，因为c和d的初始化表达式类型不同 \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224428-i2qty9g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224428-i2qty9g"
+			}
+		},
+		{
+			"ID": "20221012224347-ce66z3f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221012224347-ce66z3f",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "auto不能推导的场景"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-5tnhlis",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012224347-5tnhlis",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-7ydx9il",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221012224347-7ydx9il",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-ri318zq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-ri318zq",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "auto不能作为函数的参数"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-yap6dey",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-yap6dey",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 此处代码编译失败，auto不能作为形参类型，因为编译器无法对a的实际类型进行推导 \nvoid TestAuto(auto a)\n{}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-eob419n",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012224347-eob419n",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-bdarrfi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221012224347-bdarrfi",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-7b6184o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-7b6184o",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "auto不能直接用来声明数组"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-ppn1i3u",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-ppn1i3u",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "void TestAuto() \n{\n\tint a[] = {1,2,3}; \n\tauto b[] = {4，5，6};\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-wpictig",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012224347-wpictig",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-037e2ei",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221012224347-037e2ei",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-86gnav1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-86gnav1",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "为了避免与C++98中的auto发生混淆，C++11只保留了auto作为类型指示符的用法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221012224347-sq89yag",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221012224347-sq89yag",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-flb8rit",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-flb8rit",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "auto在实际中最常见的优势用法就是跟以后会讲到的C++11提供的新式for循环，还有lambda表达式等进行配合使用。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-fhrb1q3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221012224347-fhrb1q3",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "decltype类型推导"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-mgd6w7j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221012224347-mgd6w7j",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么需要decltype"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-tfigt1b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224347-tfigt1b",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "auto使用的前提是:必须要对auto声明的类型进行初始化，否则编译器无法推导出auto的实际类型。但有时候可能需要根据表达式运行完成之后结果的类型进行推导，因为编译期间、代码不会运行，此时auto也就无能为力。"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-4g7h4hi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-4g7h4hi",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "template\u003cclass T1, class T2\u003e\nT1 Add(const T1\u0026 left, const T2\u0026 right) \n{\n\treturn left + right; \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-qwe6nom",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224347-qwe6nom",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果能用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "加完之后结果的实际类型作为函数的返回值类型就不会出错"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但这需要程序运行完才能知道结果的实际类型，即"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "RTTI"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "(Run-Time Type ldentification运行时类型识别)。"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-ev92sfg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224347-ev92sfg",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++98中确实已经支持RTl:"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-3wnd8io",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221012224347-3wnd8io",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-yyroapv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221012224347-yyroapv",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-95ju7he",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-95ju7he",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "typeid只能查看类型不能用其结果类定义类型"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221012224347-kudhpv2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221012224347-kudhpv2",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-kmvgr1y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-kmvgr1y",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "dynamic_cast只能应用于含有虚函数的继承体系中"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-socw2gu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224347-socw2gu",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行时类型识别的缺陷是降低程序运行的效率。"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-x3ojtkl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221012224347-x3ojtkl",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "decltype的使用"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-vyirnnx",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012224347-vyirnnx",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-wn8u2yq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221012224347-wn8u2yq",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-8l1vaq9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-8l1vaq9",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "推演表达式类型作为变量的定义类型"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-px2tq2v",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-px2tq2v",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main() \n{\n\tint a = 10; \n\tint b = 20;\n\n\t// 用decltype推演a+b的实际类型，作为定义c的类型 \n\tdecltype(a+b) c;\n\tcout\u003c\u003ctypeid(c).name()\u003c\u003cendl; \n\treturn 0;\n}\n\nint main()\n{\n\tmap\u003cstring, string\u003e dict = { { \"sort\", \"排序\" }, { \"insert\", \"插入\" } };\n\tauto it = dict.begin();\n\t// decltype的一个使用场景\n\tauto copyIt = it;\n\tvector\u003cdecltype(it)\u003e v;\n\tv.push_back(it);\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-9glay67",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221012224347-9glay67",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"ID": "20221012224347-egztp1l",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221012224347-egztp1l",
+						"updated": "20221012224347"
+					},
+					"Children": [
+						{
+							"ID": "20221012224347-g28wozg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221012224347-g28wozg",
+								"updated": "20221012224347"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "推演函数返回值的类型"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221012224347-fdauj2m",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224347-fdauj2m",
+				"updated": "20221012224347"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "void* GetMemory(size_t size) \n{\nreturn malloc(size); \n}\nint main() \n{\n\t// 如果没有带参数，推导函数的类型\n\tcout \u003c\u003c typeid(decltype(GetMemory)).name() \u003c\u003c endl;\n\n\t// 如果带参数列表，推导的是函数返回值的类型,注意：此处只是推演，不会执行函数 \n\tcout \u003c\u003c typeid(decltype(GetMemory(0))).name() \u003c\u003cendl;\n\treturn 0; \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

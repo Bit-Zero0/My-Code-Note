@@ -632,3 +632,21 @@ int main()
 }
 ```
 ![[Pasted image 20220528152522.png]]
+
+
+## 使用initializer_list来构造vector
+使用[[列表初始化#initializer_list|initializer_list]]来构造vector
+```cpp
+vector(initializer_list<T> itl)
+	:_start(nullptr)
+	, _finish(nullptr)
+	, _end_of_storage(nullptr)
+{
+	vector<T> tmp;
+	for (auto e : itl)
+	{
+		tmp.push_back(e);
+	}
+	swap(tmp);
+}
+```

@@ -554,3 +554,19 @@ void test3()
 	print_list(lt3);//打印list
 }
 ```
+
+## 添加initializer_list构造函数
+[[列表初始化#initializer_list|initializer_list]]来构造list。
+```cpp
+list(std::initializer_list<T> ilt)
+{
+	_head = new Node();
+	_head->_next = _head;
+	_head->_prev = _head;
+
+	for (auto e : ilt)
+	{
+		push_back(e);
+	}
+}
+```
