@@ -1,0 +1,423 @@
+{
+	"ID": "20221013224045-bzs9pkf",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221013224045-bzs9pkf",
+		"title": "C++线程库",
+		"updated": "20221013224222"
+	},
+	"Children": [
+		{
+			"ID": "20221013224051-zxo6qa8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013224051-zxo6qa8",
+				"updated": "20221013224051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "thread类的简单介绍"
+				}
+			]
+		},
+		{
+			"ID": "20221013224051-a2nmd9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013224051-a2nmd9b",
+				"updated": "20221013224051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在C++11之前，涉及到多线程问题，都是和平台相关的，比如windows和linux下各有自己的接口，这使得代码的可移植性比较差。C++11中最重要的特性就是对线程进行支持了，使得C++在 并行编程时不需要依赖第三方库，而且在原子操作中还引入了原子类的概念。要使用标准库中的\n线程，必须包含"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\u003cthread\u003e"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "头文件。\n"
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "C++11中线程类"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "http://www.cplusplus.com/reference/thread/thread/?kw=thread"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013224056-tj3btwi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013224056-tj3btwi"
+			}
+		},
+		{
+			"ID": "20221013224051-d1hepx3",
+			"Type": "NodeTable",
+			"TableAligns": [
+				2,
+				1
+			],
+			"Properties": {
+				"colgroup": "|",
+				"id": "20221013224051-d1hepx3",
+				"updated": "20221013224101"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Data": "thead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Data": "tr",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "函数名"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "功能"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "thread()"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造一个线程对象，没有关联任何线程函数，即没有启动任何线程"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "thread(fn,args1, args2,...)"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造一个线程对象，并关联线程函数fn,args1,args2，...为线程函数的参数"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "get_id()"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取线程id"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "joinable()"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程是否还在执行，joinable代表的是一个正在执行中的线程。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "join()"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "该函数调用后会阻塞住线程，当该线程结束后，主线程继续执行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "detach()"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在创建线程对象后马上调用，用于把被创建线程与线程对象分离开，分离的线程变为后台线程，创建的线程的\"死活\"就与主线程无关"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用法和[[多线程"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Linux的多线程]]差不多。不过linux中的更多是面向过程的，C++中则是面向对象。"
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013224153-xryl4rr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013224153-xryl4rr"
+			}
+		},
+		{
+			"ID": "20221013224145-yvzke6r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013224145-yvzke6r",
+				"updated": "20221013224222"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用法和"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220913223533-jqys64s"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "Linux多线程"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "差不多。不过Linux中的更多是面向过程的，C++中则是面向对象。"
+				}
+			]
+		},
+		{
+			"ID": "20221013224051-lbjrrlj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013224051-lbjrrlj",
+				"updated": "20221013224051"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cthread\u003e\n#include \u003cvector\u003e\nvoid Print(int x)\n{\n\tfor (int i = 0; i \u003c x; ++i) {\n\t\tcout \u003c\u003c i \u003c\u003c endl;\n\t}\n}\n\nint main()\n{\n\tint n;\n\tcin \u003e\u003e n;\n\tvector\u003cthread\u003evthds;\n\tvthds.resize(n);\n\n\tfor (auto\u0026 t : vthds)\n\t{\n\t\tt = thread(Print, 100);\n\t}\n\n\tfor (auto\u0026 t : vthds)\n\t{\n\t\tt.join();\n\t}\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

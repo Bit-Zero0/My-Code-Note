@@ -1,0 +1,927 @@
+{
+	"ID": "20221013221916-km0sdej",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221013221916-km0sdej",
+		"title": "explicit 关键字",
+		"updated": "20221013222109"
+	},
+	"Children": [
+		{
+			"ID": "20221013221941-qvxjg38",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013221941-qvxjg38",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++ explicit关键字详解"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-8xl0riw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-8xl0riw",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "首先, C++中的"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "explicit关键字只能用于修饰"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "只有一个参数的类构造函数"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 它的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "作用是表明该构造函数是显示的, 而非隐式的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 跟它相对应的另一个关键字是"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20221013221959-no4a653",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221959-no4a653"
+			}
+		},
+		{
+			"ID": "20221013221941-6ikx8rx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-6ikx8rx",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么显示声明的构造函数和隐式声明的有什么区别呢? 我们来看下面的例子:"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-h7s09zn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013221941-h7s09zn",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class CxString  // 没有使用explicit关键字的类声明, 即默认为隐式声明  \n{  \npublic:  \n    char *_pstr;  \n    int _size;  \n    CxString(int size)  \n    {  \n        _size = size;                // string的预设大小  \n        _pstr = malloc(size + 1);    // 分配string的内存  \n        memset(_pstr, 0, size + 1);  \n    }  \n    CxString(const char *p)  \n    {  \n        int size = strlen(p);  \n        _pstr = malloc(size + 1);    // 分配string的内存  \n        strcpy(_pstr, p);            // 复制字符串  \n        _size = strlen(_pstr);  \n    }  \n    // 析构函数这里不讨论, 省略...  \n};  \n  \n    // 下面是调用:  \n  \n    CxString string1(24);     // 这样是OK的, 为CxString预分配24字节的大小的内存  \n    CxString string2 = 10;    // 这样是OK的, 为CxString预分配10字节的大小的内存  \n    CxString string3;         // 这样是不行的, 因为没有默认构造函数, 错误为: “CxString”: 没有合适的默认构造函数可用  \n    CxString string4(\"aaaa\"); // 这样是OK的  \n    CxString string5 = \"bbb\"; // 这样也是OK的, 调用的是CxString(const char *p)  \n    CxString string6 = 'c';   // 这样也是OK的, 其实调用的是CxString(int size), 且size等于'c'的ascii码  \n    string1 = 2;              // 这样也是OK的, 为CxString预分配2字节的大小的内存  \n    string2 = 3;              // 这样也是OK的, 为CxString预分配3字节的大小的内存  \n    string3 = string1;        // 这样也是OK的, 至少编译是没问题的, 但是如果析构函数里用\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-5vkdo51",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-5vkdo51",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "free释放_pstr内存指针的时候可能会报错, "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "完整的代码必须重载运算符\""
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "="
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\""
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 并在其中处理内存释放"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-uh1wr1b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-uh1wr1b",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的代码中, “"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "CxString string2 = 10;"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "” 这句为什么是可以的呢?"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-a9ehyvi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-a9ehyvi",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在C++中, 如果的构造函数只有一个参数时, 那么在编译的时候就会有一个缺省的转换操作:将该构造函数对应数据类型的数据转换为该类对象."
+				}
+			]
+		},
+		{
+			"ID": "20221013222017-6qduoo1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013222017-6qduoo1"
+			}
+		},
+		{
+			"ID": "20221013221941-358gr4c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-358gr4c",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "也就是说 “"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "CxString string2 = 10;"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "” 这段代码, 编译器自动将整型转换为CxString类对象, 实际上等同于下面的操作:"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-cy72li6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013221941-cy72li6",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "CxString string2(10);  \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013222020-fvoohas",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013222020-fvoohas"
+			}
+		},
+		{
+			"ID": "20221013221941-hlnrw8z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-hlnrw8z",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是, 上面的代码中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "_size"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "代表的是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "字符串内存分配的大小"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 那么调用的第二句 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "“CxString string2 = 10"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ";” 和第六句 “"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "CxString string6 = ‘c’;"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "” 就显得不伦不类, 而且容易让人疑惑. 有什么办法阻止这种用法呢? 答案就是使用 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "explicit"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "关键字"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ". 我们把上面的代码修改一下, 如下:"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-r62zm9k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013221941-r62zm9k",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class CxString  // 使用关键字explicit的类声明, 显示转换  \n{  \npublic:  \n    char *_pstr;  \n    int _size;  \n    explicit CxString(int size)  \n    {  \n        _size = size;  \n        // 代码同上, 省略...  \n    }  \n    CxString(const char *p)  \n    {  \n        // 代码同上, 省略...  \n    }  \n};  \n  \n    // 下面是调用:  \n  \n    CxString string1(24);     // 这样是OK的  \n    CxString string2 = 10;    // 这样是不行的, 因为explicit关键字取消了隐式转换  \n    CxString string3;         // 这样是不行的, 因为没有默认构造函数  \n    CxString string4(\"aaaa\"); // 这样是OK的  \n    CxString string5 = \"bbb\"; // 这样也是OK的, 调用的是CxString(const char *p)  \n    CxString string6 = 'c';   // 这样是不行的, 其实调用的是CxString(int size), 且size等于'c'的ascii码, 但explicit关键字取消了隐式转换  \n    string1 = 2;              // 这样也是不行的, 因为取消了隐式转换  \n    string2 = 3;              // 这样也是不行的, 因为取消了隐式转换  \n    string3 = string1;        // 这样也是不行的, 因为取消了隐式转换, 除非类实现操作符\"=\"的重载 \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-rmkh642",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-rmkh642",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "explicit关键字的作用就是防止类构造函数的隐式自动转换"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013222039-2pxv0te",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013222039-2pxv0te"
+			}
+		},
+		{
+			"ID": "20221013221941-uk87yur",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-uk87yur",
+				"updated": "20221013222038"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面也已经说过了, "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "explicit关键字"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只对有"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "一个参数的类构造函"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "数有效"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果类构造函数参数大于或等于两个时, 是不会产生隐式转换的, 所以"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "explicit"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "关键字也就无效了"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ". 例如:"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-hvcftyh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013221941-hvcftyh",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\nclass CxString  // explicit关键字在类构造函数参数大于或等于两个时无效  \n{  \npublic:  \n    char *_pstr;  \n    int _age;  \n    int _size;  \n    explicit CxString(int age, int size)  \n    {  \n        _age = age;  \n        _size = size;  \n        // 代码同上, 省略...  \n    }  \n    CxString(const char *p)  \n    {  \n        // 代码同上, 省略...  \n    }  \n};  \n  \n    // 这个时候有没有explicit关键字都是一样的  \n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013222045-djmykw1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013222045-djmykw1"
+			}
+		},
+		{
+			"ID": "20221013221941-cut99on",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-cut99on",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是, 也有一个"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "例外"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "就是当除了第一个参数以外的其他参数都有"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "缺省值"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "的时候"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "explicit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "关键字依然有效, "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "此时, 当调用构造函数时只传入一个参数, 等效于只有一个参数的类构造函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 例子如下:"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-om3upf0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013221941-om3upf0",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class CxString  // 使用关键字explicit声明  \n{  \npublic:  \n    int _age;  \n    int _size;  \n    explicit CxString(int age, int size = 0)  \n    {  \n        _age = age;  \n        _size = size;  \n        // 代码同上, 省略...  \n    }  \n    CxString(const char *p)  \n    {  \n        // 代码同上, 省略...  \n    }  \n};  \n  \n    // 下面是调用:  \n  \n    CxString string1(24);     // 这样是OK的  \n    CxString string2 = 10;    // 这样是不行的, 因为explicit关键字取消了隐式转换  \n    CxString string3;         // 这样是不行的, 因为没有默认构造函数  \n    string1 = 2;              // 这样也是不行的, 因为取消了隐式转换  \n    string2 = 3;              // 这样也是不行的, 因为取消了隐式转换  \n    string3 = string1;        // 这样也是不行的, 因为取消了隐式转换, 除非类实现操作符\"=\"的重载\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-pp5gfxq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-pp5gfxq",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以上即为C++ "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "explicit"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "关键字的详细介绍."
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-geo7o65",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013221941-geo7o65",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结："
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-e2f7sqe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-e2f7sqe",
+				"updated": "20221013221941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "explicit关键字只需用于类内的单参数构造函数前面。由于无参数的构造函数和多参数的构造函数总是显示调用，这种情况在构造函数前加explicit无意义。"
+				}
+			]
+		},
+		{
+			"ID": "20221013221941-r88tush",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221941-r88tush",
+				"updated": "20221013222109"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "google的c++规范中提到explicit的优点是可以避免不合时宜的类型变换，缺点无。所以google约定所有单参数的构造函数都必须是显示的，只有极少数情况下拷贝构造函数可以不声明称explicit。例如作为其他类的透明包装器的类。\neffective c++中说：被声明为explicit的构造函数通常比其non-explicit兄弟更受欢迎。因为它们禁止编译器执行非预期（往往也不被期望）的类型转换。除非我有一个好理由允许构造函数被用于隐式类型转换，否则我会把它声明为explicit，鼓励大家遵循相同的政策。"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,810 @@
+{
+	"ID": "20221013223026-rgbsiae",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221013223026-rgbsiae",
+		"title": "可变参数模板",
+		"updated": "20221013224621"
+	},
+	"Children": [
+		{
+			"ID": "20221013223035-90qr6fz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-90qr6fz",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++11的新特性可变参数模板能够让您创建可以接受可变参数的函数模板和类模板，相比C++98/03，类模版和函数模版中只能含固定数量的模版参数，可变模版参数无疑是一个巨大的改进。\n然而由于可变模版参数比较抽象，使用起来需要一定的技巧，所以这块还是比较晦涩的。现阶段呢，我们掌握一些基础的可变参数模板特性就够我们用了，所以这里我们点到为止，以后大家如果有需要，再可以深入学习。"
+				}
+			]
+		},
+		{
+			"ID": "20221013223050-3grlsf4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223050-3grlsf4"
+			}
+		},
+		{
+			"ID": "20221013223035-2drx3k6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-2drx3k6",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面就是一个基本可变参数的函数模板"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-1c3kw3r",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223035-1c3kw3r",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// Args是一个模板参数包，args是一个函数形参参数包\n// 声明一个参数包Args...args，这个参数包中可以包含0到任意个模板参数。 \ntemplate \u003cclass ...Args\u003e\nvoid ShowList(Args... args) \n{}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-30ww15e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-30ww15e",
+				"updated": "20221013224529"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的参数args前面有省略号，所以它就是一个可变模版参数，我们把带省略号的参数称为“参数包”，它里面包含了0到N（N\u003e=0）个模版参数。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "我们无法直接获取参数包args中的每个参数的，只能通过展开参数包的方式来获取参数包中的每个参数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这是使用可变模版参数的一个主要特点，也是最大的难点，即如何展开可变模版参数。由于语法不支持使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "args[i]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这样方式获取可变参数，所以我们的用一些奇招来一一获取参数包的值。"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-rksjua4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013223035-rksjua4",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "递归函数方式展开参数包"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-c5wyj63",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223035-c5wyj63",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 递归终止函数\ntemplate \u003cclass T\u003e\nvoid ShowList(const T\u0026 t)//当args中的只剩最后一个参数时，会调用这个ShowList\n{\n\tcout \u003c\u003c t \u003c\u003c endl \u003c\u003c endl;\n}\n\n// 展开函数\ntemplate \u003cclass T, class ...Args\u003e\nvoid ShowList(T value, Args... args)\n{\n\tcout \u003c\u003c value \u003c\u003c \" \";\n\tShowList(args...);//使用args当作下一个参数，当args中的只剩最后一个参数时，会调用上面的ShowList\n}\n\nint main()\n{\n\tShowList(1);\n\tShowList(1, 'A');\n\tShowList(1, 'A', std::string(\"sort\"));\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-iot9nfh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-iot9nfh",
+				"updated": "20221013223222"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221013212518"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221013212518-20221013223222-lsclhrc.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013223042-970bax1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223042-970bax1"
+			}
+		},
+		{
+			"ID": "20221013223035-yu3e2c2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013223035-yu3e2c2",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "逗号表达式展开参数包"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-qjxg6ny",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-qjxg6ny",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这种展开参数包的方式，不需要通过递归终止函数，是直接在expand函数体中展开的, printarg 不是一个递归终止函数，只是一个处理参数包中每一个参数的函数。这种就地展开参数包的方式实现的关键是逗号表达式。我们知道逗号表达式会按顺序执行逗号前面的表达式。"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-zf7ghg6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-zf7ghg6",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "expand函数中的逗号表达式："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "(printarg(args), 0)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，也是按照这个执行顺序，先执行"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "printarg(args)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，再"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "得到逗号表达式的结果0"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。同时还用到了C++11的另外一个特性——"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "初始化列表"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，通过初始化列表来"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "初始化一个变长数组"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ","
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "{(printarg(args), 0)...}"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "将会展开成"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "((printarg(arg1),0), (printarg(arg2),0), (printarg(arg3),0), etc... )"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，最终会创建一个元素值都为0的数组"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "int arr[sizeof...(Args)]"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。由于是逗号表达式，在创建数组的过程中会先执行逗号表达式前面的部分"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "printarg(args)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 打印出参数，也就是说在构造int数组的过程中就将参数包展开了，这个数组的目的纯粹是为了在数组构造的过程展开参数包。"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-ygi2zbh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223035-ygi2zbh",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//展开函数  \ntemplate \u003cclass T\u003e  \nvoid PrintArg(T t)  \n{  \n    cout \u003c\u003c t \u003c\u003c \" \";  \n}\n\ntemplate \u003cclass ...Args\u003e  \nvoid ShowList(Args... args)  \n{  \n    int arr[] = { (PrintArg(args), 0)... };  \n    cout \u003c\u003c endl;  \n}  \n\nint main()  \n{  \n    ShowList(1);  \n    ShowList(1, 'A');  \n    ShowList(1, 'A', std::string(\"sort\"));  \n    return 0;  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-t2a6t4h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-t2a6t4h",
+				"updated": "20221013223233"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221013213417"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221013213417-20221013223233-3ikhtwf.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-0x7ozx2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013223035-0x7ozx2",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "STL容器中的emplace相关接口函数"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-51x0pms",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-51x0pms",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "vector.emplace()"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "http://www.cplusplus.com/reference/vector/vector/emplace_back/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "list.emplace()"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "http://www.cplusplus.com/reference/list/list/emplace_back/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013223241-xw70azu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223241-xw70azu"
+			}
+		},
+		{
+			"ID": "20221013223035-b4i4c2s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-b4i4c2s",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "容器中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "emplace"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方法就是使用了可变参数模板。"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-wetmwxp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223035-wetmwxp",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "template \u003cclass... Args\u003e\nvoid emplace_back (Args\u0026\u0026... args);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-7kupxn6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223035-7kupxn6",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()  \n{  \n    std::list\u003c std::pair\u003cint, char\u003e \u003e mylist;  \n  \n\t// emplace_back支持可变参数，拿到构建pair对象的参数后自己去创建对象  \n\t// 那么在这里我们可以看到除了用法上，和push_back没什么太大的区别  \n    mylist.emplace_back(10, 'a');  \n    mylist.emplace_back(20, 'b');  \n    mylist.emplace_back(make_pair(30, 'c'));  \n    mylist.push_back(make_pair(40, 'd'));  \n    mylist.push_back({ 50, 'e' });  \n  \n    for (auto e : mylist)  \n        cout \u003c\u003c e.first \u003c\u003c \":\" \u003c\u003c e.second \u003c\u003c endl;  \n      \n    return 0;  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-lxxk50g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-lxxk50g",
+				"updated": "20221013223247"
+			}
+		},
+		{
+			"ID": "20221013224558-yxczptr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013224558-yxczptr",
+				"updated": "20221013224621"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中用到"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221013224251-h9rq73y"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "我们写的string"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-vnx5n70",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223035-vnx5n70",
+				"updated": "20221013223035"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()  \n{  \n// 下面我们试一下带有拷贝构造和移动构造的bit::string，再试试呢  \n// 我们会发现其实差别也不到，emplace_back是直接构造了，push_back是先构造，再移动构造，其实也还好。  \n    std::list\u003c std::pair\u003cint, bit::string\u003e \u003e mylist;  \n    mylist.emplace_back(10, \"sort\");  \n    mylist.emplace_back(make_pair(20, \"sort\"));  \n    mylist.push_back(make_pair(30, \"sort\"));  \n    mylist.push_back({ 40, \"sort\"});  \n    return 0;  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223035-wow85h0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223035-wow85h0",
+				"updated": "20221013223257"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221013215439"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221013215439-20221013223257-hccw3d1.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013223258-2nb5rnf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223258-2nb5rnf"
+			}
+		}
+	]
+}

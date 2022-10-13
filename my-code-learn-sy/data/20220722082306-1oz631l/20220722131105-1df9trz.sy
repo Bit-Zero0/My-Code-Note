@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20220722131105-1df9trz",
 		"title": "string",
-		"updated": "20220722132614"
+		"updated": "20221013223953"
 	},
 	"Children": [
 		{
@@ -4898,6 +4898,104 @@
 				{
 					"Type": "NodeCodeBlockCode",
 					"Data": "istream\u0026 operator\u003e\u003e(istream\u0026 in, string\u0026 s)\n{\n\ts.clear();\n\n\tchar ch = in.get();\n\n\twhile (ch != '\\n' \u0026\u0026 ch != ' ')\n\t{\n\t\ts += ch;\n\t\tch = in.get();\n\t}\n\n\treturn in;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223949-9x139vd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223949-9x139vd"
+			}
+		},
+		{
+			"ID": "20221013223950-tdz5l0x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221013223950-tdz5l0x",
+				"updated": "20221013223950"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "移动构造"
+				}
+			]
+		},
+		{
+			"ID": "20221013223950-fk0oebw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223950-fk0oebw",
+				"updated": "20221013223950"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 移动构造\nstring(string\u0026\u0026 s)\n\t:_str(nullptr)\n\t, _size(0)\n\t, _capacity(0)\n{\n\tcout \u003c\u003c \"string(string\u0026\u0026 s) -- 资源转移\" \u003c\u003c endl;\n\n\tthis-\u003eswap(s);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013223953-twt2xcy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013223953-twt2xcy"
+			}
+		},
+		{
+			"ID": "20221013223950-ezaan8w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221013223950-ezaan8w",
+				"updated": "20221013223950"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "移动赋值"
+				}
+			]
+		},
+		{
+			"ID": "20221013223950-ghjrbzw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013223950-ghjrbzw",
+				"updated": "20221013223950"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 移动赋值\nstring\u0026 operator=(string\u0026\u0026 s)\n{\n\tcout \u003c\u003c \"string\u0026 operator=(string\u0026\u0026 s) -- 转移资源\" \u003c\u003c endl;\n\tswap(s);\n\n\treturn *this;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",

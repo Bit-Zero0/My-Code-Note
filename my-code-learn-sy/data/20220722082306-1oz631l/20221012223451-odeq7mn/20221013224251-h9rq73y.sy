@@ -1,0 +1,38 @@
+{
+	"ID": "20221013224251-h9rq73y",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221013224251-h9rq73y",
+		"title": "用于C++11的string",
+		"updated": "20221013224411"
+	},
+	"Children": [
+		{
+			"ID": "20221013224313-o3qin1t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013224313-o3qin1t",
+				"updated": "20221013224411"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "namespace bit\n{\n\tclass string\n\t{\n\tpublic:\n\t\ttypedef char* iterator;\n\t\titerator begin()\n\t\t{\n\t\t\treturn _str;\n\t\t}\n\n\t\titerator end()\n\t\t{\n\t\t\treturn _str + _size;\n\t\t}\n\n\t\tstring(const char* str = \"\")\n\t\t\t:_size(strlen(str))\n\t\t\t, _capacity(_size)\n\t\t{\n\t\t\tcout \u003c\u003c \"string(char* str)\" \u003c\u003c endl;\n\n\t\t\t_str = new char[_capacity + 1];\n\t\t\tstrcpy(_str, str);\n\t\t}\n\n\t\t// s1.swap(s2)\n\t\tvoid swap(string\u0026 s)\n\t\t{\n\t\t\t::swap(_str, s._str);\n\t\t\t::swap(_size, s._size);\n\t\t\t::swap(_capacity, s._capacity);\n\t\t}\n\n\t\t// 拷贝构造\n\t\tstring(const string\u0026 s)\n\t\t\t:_str(nullptr)\n\t\t\t, _size(0)\n\t\t\t, _capacity(0)\n\t\t{\n\t\t\tcout \u003c\u003c \"string(const string\u0026 s) -- 深拷贝\" \u003c\u003c endl;\n\n\t\t\tstring tmp(s._str);\n\t\t\tswap(tmp);\n\t\t}\n\n\t\t// 移动构造\n\t\tstring(string\u0026\u0026 s)\n\t\t\t:_str(nullptr)\n\t\t\t, _size(0)\n\t\t\t, _capacity(0)\n\t\t{\n\t\t\tcout \u003c\u003c \"string(string\u0026\u0026 s) -- 资源转移\" \u003c\u003c endl;\n\n\t\t\tthis-\u003eswap(s);\n\t\t}\n\n\t\t// 移动赋值\n\t\tstring\u0026 operator=(string\u0026\u0026 s)\n\t\t{\n\t\t\tcout \u003c\u003c \"string\u0026 operator=(string\u0026\u0026 s) -- 转移资源\" \u003c\u003c endl;\n\t\t\tswap(s);\n\n\t\t\treturn *this;\n\t\t}\n\n\t\tstring\u0026 operator=(const string\u0026 s)\n\t\t{\n\t\t\tcout \u003c\u003c \"string\u0026 operator=(string s) -- 深拷贝\" \u003c\u003c endl;\n\t\t\tstring tmp(s);\n\t\t\tswap(tmp);\n\n\t\t\treturn *this;\n\t\t}\n\n\t\t~string()\n\t\t{\n\t\t\t//cout \u003c\u003c \"~string()\" \u003c\u003c endl;\n\n\t\t\tdelete[] _str;\n\t\t\t_str = nullptr;\n\t\t}\n\n\t\tchar\u0026 operator[](size_t pos)\n\t\t{\n\t\t\tassert(pos \u003c _size);\n\t\t\treturn _str[pos];\n\t\t}\n\n\t\tvoid reserve(size_t n)\n\t\t{\n\t\t\tif (n \u003e _capacity)\n\t\t\t{\n\t\t\t\tchar* tmp = new char[n + 1];\n\t\t\t\tstrcpy(tmp, _str);\n\t\t\t\tdelete[] _str;\n\t\t\t\t_str = tmp;\n\n\t\t\t\t_capacity = n;\n\t\t\t}\n\t\t}\n\n\t\tvoid push_back(char ch)\n\t\t{\n\t\t\tif (_size \u003e= _capacity)\n\t\t\t{\n\t\t\t\tsize_t newcapacity = _capacity == 0 ? 4 : _capacity * 2;\n\t\t\t\treserve(newcapacity);\n\t\t\t}\n\n\t\t\t_str[_size] = ch;\n\t\t\t++_size;\n\t\t\t_str[_size] = '\\0';\n\t\t}\n\n\t\t//string operator+=(char ch)\n\t\tstring\u0026 operator+=(char ch)\n\t\t{\n\t\t\tpush_back(ch);\n\t\t\treturn *this;\n\t\t}\n\n\t\tstring operator+(char ch)\n\t\t{\n\t\t\tstring tmp(*this);\n\t\t\tpush_back(ch);\n\n\t\t\treturn tmp;\n\t\t}\n\n\t\tconst char* c_str() const\n\t\t{\n\t\t\treturn _str;\n\t\t}\n\tprivate:\n\t\tchar* _str;\n\t\tsize_t _size;\n\t\tsize_t _capacity; // 不包含最后做标识的\\0\n\t};\n\n\tbit::string to_string(int value)\n\t{\n\t\tbit::string str;\n\t\twhile (value)\n\t\t{\n\t\t\tint val = value % 10;\n\t\t\tstr += ('0' + val);\n\t\t\tvalue /= 10;\n\t\t}\n\t\treverse(str.begin(), str.end());\n\n\t\treturn str;\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

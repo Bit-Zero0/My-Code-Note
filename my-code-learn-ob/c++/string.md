@@ -1056,3 +1056,30 @@ istream& operator>>(istream& in, string& s)
 	return in;
 }
 ```
+
+#### 移动构造
+```cpp
+// 移动构造
+string(string&& s)
+	:_str(nullptr)
+	, _size(0)
+	, _capacity(0)
+{
+	cout << "string(string&& s) -- 资源转移" << endl;
+
+	this->swap(s);
+}
+```
+
+
+#### 移动赋值
+```cpp
+// 移动赋值
+string& operator=(string&& s)
+{
+	cout << "string& operator=(string&& s) -- 转移资源" << endl;
+	swap(s);
+
+	return *this;
+}
+```

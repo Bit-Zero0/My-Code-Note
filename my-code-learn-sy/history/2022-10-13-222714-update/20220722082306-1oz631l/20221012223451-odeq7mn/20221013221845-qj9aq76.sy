@@ -1,0 +1,431 @@
+{
+	"ID": "20221013221845-qj9aq76",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221013221845-qj9aq76",
+		"title": "默认成员函数控制",
+		"updated": "20221013222158"
+	},
+	"Children": [
+		{
+			"ID": "20221013221853-eljzzip",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221853-eljzzip",
+				"updated": "20221013221853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在C++中对于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "空类编译器会生成一些默认的成员函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，比如:"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "构造函数、拷贝构造函数、运算符重载、析构函数和\u0026和const\u0026的重载、移动构造、移动拷贝构造等函数。如果在类中显式定义了，编译器将不会重新生成默认版本"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。有时候这样的规则可能被忘记，最常见的是声明了带参数的构造函数，必要时则需要定义不带参数的版本以实例化无参的对象。而且"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "有时编译器会生成，有时又不生成，容易造成混乱，于是C++11让程序员可以控制是否需要编译器生成"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221013221853-9toax5a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013221853-9toax5a",
+				"updated": "20221013221853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "显式缺省函数"
+				}
+			]
+		},
+		{
+			"ID": "20221013221853-wokg92u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221853-wokg92u",
+				"updated": "20221013221853"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在C++11中，可以在默认函数定义或者声明时加上"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "=default"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，从而显式的指示编译器生成该函数的默认版本，用"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "=default"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "修饰的函数称为"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "显式缺省函数"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221013221853-dbnbj65",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013221853-dbnbj65",
+				"updated": "20221013221853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A \n{ \npublic:\n\tA(int a): _a(a) \n\t{}\n\t// 显式缺省构造函数，由编译器生成 \n\tA() = default;\n\n\t// 在类中声明，在类外定义时让编译器生成默认赋值运算符重载 \n\tA\u0026 operator=(const A\u0026 a);\n\nprivate: \n\tint _a;\n};\n\nA\u0026 A::operator=(const A\u0026 a) = default; \nint main()\n{\n\tA a1(10); \n\tA a2;\n\ta2 = a1; \n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013221853-fdy80rg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221013221853-fdy80rg",
+				"updated": "20221013221853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "删除默认函数"
+				}
+			]
+		},
+		{
+			"ID": "20221013221853-jz15f9w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221853-jz15f9w",
+				"updated": "20221013221853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果能想要限制某些默认函数的生成，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在C++98中，是该函数设置成private"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，并且不给定义，这样只要其他人想要调用就会报错。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在C++11中更简单，只需在该函数声明加上"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "=delete"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "即可，该语法指示编译器不生成对应函数的默认版本，称"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "=delete"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "修饰的函数为"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "删除函数"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221013221853-zz2popj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221013221853-zz2popj",
+				"updated": "20221013221853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A \n{ \npublic:\n\tA(int a): _a(a) \n    {}\n  \n\t// 禁止编译器生成默认的拷贝构造函数以及赋值运算符重载 \n\tA(const A\u0026) = delete;\n\tA\u0026 operator(const A\u0026) = delete; \n\nprivate:\n\tint _a; \n};\nint main() \n{\n\tA a1(10);\n\t// 编译失败，因为该类没有拷贝构造函数 \n\n\t//A a2(a1);\n\t// 编译失败，因为该类没有赋值运算符重载 \n\tA a3(20);\n\ta3 = a2; \n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221013221853-upvy6j7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013221853-upvy6j7",
+				"updated": "20221013222139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：避免删除函数和"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221013221916-km0sdej"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "explicit 关键字"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "一起使用。"
+				}
+			]
+		},
+		{
+			"ID": "20221013222158-4wmwr9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221013222158-4wmwr9b"
+			}
+		}
+	]
+}
