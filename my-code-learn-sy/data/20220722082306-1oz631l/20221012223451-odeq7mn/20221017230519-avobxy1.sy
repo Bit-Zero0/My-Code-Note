@@ -1,0 +1,1317 @@
+{
+	"ID": "20221017230519-avobxy1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221017230519-avobxy1",
+		"title": "包装器",
+		"updated": "20221017230803"
+	},
+	"Children": [
+		{
+			"ID": "20221017230534-fo5yrr0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221017230534-fo5yrr0",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "function包装器"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-d5iyevn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-d5iyevn",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "function包装器  也叫作适配器。C++中的function本质是一个类模板，也是一个包装器。"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-g0b0wob",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-g0b0wob",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么count可能是被函数 ，函数指针、函数对象(仿函数对象)，也有可能\n是lamber表达式对象初始化，所以这些都是可调用的类型！如此丰富的类型，可能会导致模板的效率低下！\n为什么呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-bcaofd5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-bcaofd5",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "template\u003cclass F, class T\u003e  \nT useF(F f, T x)  \n{  \n   static int count = 0;  \n   cout \u003c\u003c \"count:\" \u003c\u003c ++count \u003c\u003c endl;  \n   cout \u003c\u003c \"count:\" \u003c\u003c \u0026count \u003c\u003c endl;  \n  \n   return f(x);  \n}  \n  \ndouble f(double i)  \n{  \n   return i / 2;  \n}  \n  \nstruct Functor  \n{  \n   double operator()(double d)  \n   {  \n      return d / 3;  \n   }  \n};\n\nint main()  \n{  \n   // 函数名  \n   cout \u003c\u003c useF(f, 11.11) \u003c\u003c endl;  \n  \n   // 函数对象  \n   cout \u003c\u003c useF(Functor(), 11.11) \u003c\u003c endl;  \n  \n   // lamber表达式  \n   cout \u003c\u003c useF([](double d)-\u003edouble{ return d / 4; }, 11.11) \u003c\u003c endl;  \n  \n   return 0;  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-ie66q4x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-ie66q4x",
+				"updated": "20221017230616"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221016181658"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221016181658-20221017230616-c3f4lse.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-cwbzqz9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-cwbzqz9",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解释运行结果：我们在函数模板内部实现打印静态成员变量，发现三次打印的cout地址不一样。然而静态成员变量是属于函数的，一个函数的静态成员变量无论调用多少次都只有一份。这说明是三个不同的函数调用。"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-3eicg3q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-3eicg3q",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实使用 function包装器就能解决这个问题。"
+				}
+			]
+		},
+		{
+			"ID": "20221017230627-0an45k7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230627-0an45k7"
+			}
+		},
+		{
+			"ID": "20221017230534-luhg78n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221017230534-luhg78n",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用方法"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-kbwn20k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-kbwn20k",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++11提供了包装器，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "包装器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可以将"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可调用对象统一包装成一个类型"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。function就是一个包装器，也可称为适配器"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-zsda6nw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-zsda6nw",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cfunctoinal\u003e\n\n// 类模板原型如下\ntemplate \u003cclass T\u003e function;     // undefined \n\ntemplate \u003cclass Ret, class... Args\u003e\nclass function\u003cRet(Args...)\u003e; \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-8abkys8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-8abkys8",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "模板参数说明："
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-6xivfoi",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221017230534-6xivfoi",
+				"updated": "20221017230639"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221017230534-srbarlx",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221017230534-srbarlx",
+						"updated": "20221017230534"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Ret"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 被调用函数的返回类型\n"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Args…"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：被调用函数的形参"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221017230639-ant5rax",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230639-ant5rax"
+			}
+		},
+		{
+			"ID": "20221017230534-v52ewhj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-v52ewhj",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int f(int a, int b)  \n{  \n   return a + b;  \n}  \n  \nstruct Functor  \n{  \npublic:  \n   int operator() (int a, int b)  \n   {  \n      return a * b;  \n   }  \n};  \n  \nclass Plus  \n{  \npublic:  \n   static int plusi(int a, int b)  \n   {  \n      return a + b + 1;  \n   }  \n  \n   double plusd(double a, double b)  \n   {  \n      return a + b;  \n   }  \n};  \n  \nint main()  \n{  \n    // 函数名(函数指针)  \n    std::function\u003cint(int, int)\u003e func1 = f;  \n    cout \u003c\u003c func1(1, 2) \u003c\u003c endl;  \n  \n    // 函数对象  \n    std::function\u003cint(int, int)\u003e func2 = Functor();  \n    cout \u003c\u003c func2(1, 2) \u003c\u003c endl;  \n  \n    // lamber表达式  \n    std::function\u003cint(int, int)\u003e func3 = [](const int a, const int b)  \n    {return a + b; };  \n    cout \u003c\u003c func3(1, 2) \u003c\u003c endl;  \n  \n    // 类的成员函数  \n    std::function\u003cint(int, int)\u003e func4 = \u0026Plus::plusi;  \n    cout \u003c\u003c func4(1, 2) \u003c\u003c endl;  \n    std::function\u003cdouble(Plus, double, double)\u003e func5 = \u0026Plus::plusd;  \n    cout \u003c\u003c func5(Plus(), 1.1, 2.2) \u003c\u003c endl;  \n    return 0;  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-macyplf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-macyplf",
+				"updated": "20221017230707"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "现在的count的地址就是同一份了\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221016184427"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221016184427-20221017230707-sbp1my9.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-9c5bg8o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221017230534-9c5bg8o",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装普通函数指针"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-dib4l9h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-dib4l9h",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int Plus(int x, int y){\n\treturn x + y;\n}\n\nint main(void){\n\tfunction\u003cint(int, int)\u003e f1 = Plus;//包装函数指针\n\n\tcout \u003c\u003c f1(12, 8) \u003c\u003c endl;\n\treturn 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-180epgz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221017230534-180epgz",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装仿函数"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-dm74edk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-dm74edk",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Plus{\npublic:\n\tint operator()(int x, int y)\n\t{\n\t\treturn (x + y);\n\t}\n};\nint main(void){\n\tfunction\u003cint(int, int)\u003e f2 = Plus();//包装仿函数\n\treturn 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-cv4gz4k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221017230534-cv4gz4k",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装静态类成员函数指针"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-cmnjrxm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-cmnjrxm",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装方法："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "function\u003cRet(Args……) 对象名 = \u0026类域::函数指针"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-hlicoez",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-hlicoez",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "\u0026"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以不加，不影响结果，但是加上要更优一些。"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-ulton93",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-ulton93",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Plus{\npublic:\n\tstatic int PlusStatic(int x, int y)\n\t{\n\t\treturn x + y;\n\t}\n};\n\nint main(void)\n{\n\tfunction\u003cint(int, int)\u003e f2 = \u0026Plus::SubStatic;\n\tcout \u003c\u003c f2(10, 3) \u003c\u003c endl;\n\n\tfunction\u003cint(int, int)\u003e f3 = Plus::SubStatic;\n\tcout \u003c\u003c f2(10, 3) \u003c\u003c endl;\n\n\treturn 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230722-3sokko6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230722-3sokko6"
+			}
+		},
+		{
+			"ID": "20221017230534-pwd0cka",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221017230534-pwd0cka",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装非静态类成员函数指针"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-cvdaelo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-cvdaelo",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装方法："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "function\u003cRet(类域名， Args……) 对象名 = 类域::函数指针"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-n81wmyi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-n81wmyi",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在调用是也需要传入一份对象，以供调用被包装的函数。"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-btdeps1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-btdeps1",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Plus{\npublic:\n\tint PlusMember(int x, int y){\n\t\treturn x + y;\n\t}\n};\n\nint main(void){\n\tfunction\u003cint(Plus, int, int)\u003e f4 = Sub::PlusMember;\n\tcout \u003c\u003c f4(Plus(), 3, 1) \u003c\u003c endl; //这里就传入了一份匿名对象 \n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230725-0up9tsm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230725-0up9tsm"
+			}
+		},
+		{
+			"ID": "20221017230534-0hqpvia",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221017230534-0hqpvia",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装lambda表达式"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-l6rnq4j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-l6rnq4j",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包装方法："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "function\u003cRet(Args……) 对象名 = lambda表达式"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-veufmla",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-veufmla",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main(void)\n{\n\tfunction\u003cdouble(double, double)\u003e f5 = [](double x, double y)mutable-\u003edouble {return x - y; };\n\tcout \u003c\u003c f5(2.23, 1.11) \u003c\u003c endl;\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230729-g21hwbo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230729-g21hwbo"
+			}
+		},
+		{
+			"ID": "20221017230534-bmu16xr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221017230534-bmu16xr",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "bind"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-wilnlok",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-wilnlok",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "std::bind"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "函数定义在头文件中，是一个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "函数模板，它就像一个函数包装器(适配器)，接受一个可\n调用对象（callable object）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "生成一个新的可调用对象来“适应”原对象的参数列表"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。一般而\n言，我们用它可以把一个原本接收N个参数的函数fn，通过绑定一些参数，返回一个接收M个（M\n可以大于N，但这么做没什么意义）参数的新函数。同时，使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "std::bind"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "函数还可以实现参数顺\n序调整等操作。"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-fe7ypm3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-fe7ypm3",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 原型如下：\ntemplate \u003cclass Fn, class... Args\u003e\n bind (Fn\u0026\u0026 fn, Args\u0026\u0026... args); \n\n// 带返回参数的\ntemplate \u003cclass Ret, class Fn, class... Args\u003e\nbind (Fn\u0026\u0026 fn, Args\u0026\u0026... args);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-hnc4i2x",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221017230534-hnc4i2x",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"ID": "20221017230534-5w57tl2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221017230534-5w57tl2",
+						"updated": "20221017230534"
+					},
+					"Children": [
+						{
+							"ID": "20221017230534-a59mihk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221017230534-a59mihk",
+								"updated": "20221017230534"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以将"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "bind"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "函数看作是一个通用的函数适配器，它接受一个可调用对象，生成一个新的可调用对象来“适应”原对象的参数列表。  调用bind的一般形式："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "auto newCallable = bind(callable,arg_list);"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221017230534-ubhu5at",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221017230534-ubhu5at",
+						"updated": "20221017230534"
+					},
+					"Children": [
+						{
+							"ID": "20221017230534-pzwfc5l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221017230534-pzwfc5l",
+								"updated": "20221017230534"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "其中，newCallable本身是一个可调用对象，arg_list是一个逗号分隔的参数列表，对应给定的callable的参数。"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "当我们调用newCallable时，newCallable会调用callable,并传给它arg_list中的参数"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221017230534-22r8592",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221017230534-22r8592",
+						"updated": "20221017230534"
+					},
+					"Children": [
+						{
+							"ID": "20221017230534-vchcyiz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221017230534-vchcyiz",
+								"updated": "20221017230534"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "arg_list中的参数可能包含形如 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "_n"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的名字，其中n是一个整数，这些参数是“"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "占位符"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "”，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "表示newCallable的参数"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，它们占据了传递给newCallable的参数的“位置”。数值n表示生成的可调用对象中参数的位置："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "_1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "为newCallable的第一个参数，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "_2"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "为第二个参数，以此类推。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221017230737-91dvr4p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230737-91dvr4p"
+			}
+		},
+		{
+			"ID": "20221017230534-keuzv9l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-keuzv9l",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "std::bind中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "placeholders::_n"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 表示是第n个参数。"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-164a9u0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221017230534-164a9u0",
+				"updated": "20221017230534"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 使用举例\n#include \u003cfunctional\u003e\nint Plus(int a, int b)\n{\n\treturn a + b;\n}\nclass Sub\n{\npublic:\n\tint sub(int a, int b)\n\t{\n\t\treturn a - b;\n\t}\n};\nint main()\n{\n\t//表示绑定函数plus 参数分别由调用 func1 的第一，二个参数指定\n\tstd::function\u003cint(int, int)\u003e func1 = std::bind(Plus, placeholders::_1, placeholders::_2);\n\t//auto func1 = std::bind(Plus, placeholders::_1, placeholders::_2); //可以使用auto进行自动推导\n\n\t// 使用placeholders::_n 指明是第几个参数\n\n\t//表示绑定函数 plus 的第一，二为： 1， 2\n\tauto func2 = std::bind(Plus, 1, 2); // 显式确定参数\n\tcout \u003c\u003c typeid(func1).name() \u003c\u003c endl;\n\tcout \u003c\u003c typeid(func2).name() \u003c\u003c endl;//因为bind的原因，func1和func2其实已经是两个不同的包装器了。\n\tcout \u003c\u003c func1(1, 2) \u003c\u003c endl;\n\tcout \u003c\u003c func2() \u003c\u003c endl;\n\n\tSub s; \n\t// 绑定成员函数\n\tstd::function\u003cint(int, int)\u003e func3 = std::bind(\u0026Sub::sub, s, placeholders::_1, placeholders::_2);//需要加一个对象进入bind函数中，这样之后就不用带调用func3时，传入对象了。\n\t\t\t\t//不一定要使用实例化的对象，匿名对象也是行的\n\tcout \u003c\u003c func3(1, 2) \u003c\u003c endl; // -1\n\n\t// 参数调换顺序\n\tstd::function\u003cint(int, int)\u003e func4 = std::bind(\u0026Sub::sub, s, placeholders::_2, placeholders::_1);//将形参的顺序进行调换\n\n\tcout \u003c\u003c func4(1, 2) \u003c\u003c endl; // 1\n\treturn 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221017230534-6nf5xze",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221017230534-6nf5xze",
+				"updated": "20221017230803"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221016192159"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221016192159-20221017230803-wqjislr.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}

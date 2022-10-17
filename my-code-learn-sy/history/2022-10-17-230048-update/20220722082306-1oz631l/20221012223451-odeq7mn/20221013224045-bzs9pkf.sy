@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20221013224045-bzs9pkf",
 		"title": "C++线程库",
-		"updated": "20221017230435"
+		"updated": "20221017230044"
 	},
 	"Children": [
 		{
@@ -3493,7 +3493,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-7vkpcya",
-				"updated": "20221017230114"
+				"updated": "20221017225222"
 			},
 			"Children": [
 				{
@@ -3532,27 +3532,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "了之后，跳转到catch处，可是"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "catch"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "并不能为你释放锁资源，那么也会导致死锁的问题"
+					"Data": "了之后，跳转到catch处，可是catch并不能为你释放锁资源，那么也会导致死锁的问题"
 				}
 			]
 		},
@@ -3561,92 +3541,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-2jt6kp9",
-				"updated": "20221017230127"
+				"updated": "20221017225222"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "如果代码是正常执行的话，那么并没有什么问题，可以如果是在多线程的环境下"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "new"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "一旦失败了，就会抛异常而"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "try"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 捕捉到了之后就会交给"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "catch"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "处理，可是"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "catch"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "也并没有去释放锁。"
+					"Data": "如果代码是正常执行的话，那么并没有什么问题，可以如果是在多线程的环境下new一旦失败了，就会抛异常而try 捕捉到了之后就会交给catch处理，可是catch也并没有去释放锁。"
 				}
 			]
 		},
@@ -3812,13 +3712,6 @@
 					"Data": "之后，并不会出现这样的问题"
 				}
 			]
-		},
-		{
-			"ID": "20221017230154-sb8b1f9",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20221017230154-sb8b1f9"
-			}
 		},
 		{
 			"ID": "20221017225222-xvhgfkq",
@@ -4565,46 +4458,14 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-81nwlv0",
-				"updated": "20221017230245"
+				"updated": "20221017225222"
 			},
 			"Children": [
 				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221017172529"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221017172529-20221017230245-v444fyq.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeText",
+					"Data": "![[Pasted image 20221017172529.png]]"
 				}
 			]
-		},
-		{
-			"ID": "20221017230310-bbibn1a",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20221017230310-bbibn1a"
-			}
 		},
 		{
 			"ID": "20221017225222-bm9s54x",
@@ -4641,37 +4502,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-lysuzes",
-				"updated": "20221017230301"
+				"updated": "20221017225222"
 			},
 			"Children": [
 				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221017171307"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221017171307-20221017230301-c58wvra.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeText",
+					"Data": "![[Pasted image 20221017171307.png]]"
 				}
 			]
 		},
@@ -5101,41 +4937,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-5eql17u",
-				"updated": "20221017230344"
+				"updated": "20221017225222"
 			},
 			"Children": [
 				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221017171834"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221017171834-20221017230344-79lodc2.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
-				},
-				{
 					"Type": "NodeText",
-					"Data": "\n"
+					"Data": "![[Pasted image 20221017171834.png]]\n"
 				},
 				{
 					"Type": "NodeCodeSpan",
@@ -5305,13 +5112,6 @@
 			]
 		},
 		{
-			"ID": "20221017230355-y4vy335",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20221017230355-y4vy335"
-			}
-		},
-		{
 			"ID": "20221017225222-08i9ngc",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -5420,45 +5220,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-kylmqne",
-				"updated": "20221017230412"
+				"updated": "20221017225222"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "不仅没有交替打印，而且出现了线程安全问题。\n​"
-				},
-				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221017165427"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221017165427-20221017230412-at4c6c9.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "\n没有交替打印是因为"
+					"Data": "不仅没有交替打印，而且出现了线程安全问题。\n![[Pasted image 20221017165427.png]]\n没有交替打印是因为"
 				},
 				{
 					"Type": "NodeMark",
@@ -5564,54 +5331,14 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-sc7eo3d",
-				"updated": "20221017230435"
+				"updated": "20221017225222"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "运行此时运行就没有问题了。\n​"
-				},
-				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221017170421"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221017170421-20221017230435-yxro863.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
+					"Data": "运行此时运行就没有问题了。\n![[Pasted image 20221017170421.png]]"
 				}
 			]
-		},
-		{
-			"ID": "20221017230426-9zyvhfi",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20221017230426-9zyvhfi"
-			}
 		},
 		{
 			"ID": "20221017225222-1kserbt",
