@@ -1,0 +1,3567 @@
+{
+	"ID": "20221018214834-jt5hrf0",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221018214834-jt5hrf0",
+		"title": "C++异常",
+		"updated": "20221018215930"
+	},
+	"Children": [
+		{
+			"ID": "20221018214851-8r1s8is",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214851-8r1s8is",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C语言传统的处理错误的方式"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-fwn0ede",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-fwn0ede",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "传统的错误处理机制："
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-oe1yp5i",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214851-oe1yp5i",
+				"updated": "20221018214921"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-yv9p1va",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214851-yv9p1va",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-d4ez7ur",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-d4ez7ur",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "终止程序"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，如assert，缺陷：用户难以接受。如发生内存错误，除0错误时就会终止程序。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-3swix3i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214851-3swix3i",
+						"updated": "20221018214921"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-wxqj3t4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-wxqj3t4",
+								"updated": "20221018214921"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回错误码"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，缺陷：需要程序员自己去查找对应的错误。如系统的很多库的接口函数都是通过把错误码\n放到"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "errno"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中，表示错误"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-j8vy6ir",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221018214851-j8vy6ir",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-xuck4ui",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-xuck4ui",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "C 标准库中"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "setjmp"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "longjmp"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "组合。这个不是很常用，了解一下\n实际中C语言基本都是使用返回错误码的方式处理错误，部分情况下使用终止程序处理非常严重的错误。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214925-v605384",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214925-v605384"
+			}
+		},
+		{
+			"ID": "20221018214851-evg39xa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214851-evg39xa",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++异常概念"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-xfz8rhr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-xfz8rhr",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常是一种处理错误的方式，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "当一个函数发现自己无法处理的错误时就可以抛出异常，让函数的直接或间接\n的调用者处理这个错误"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-8vxt991",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221018214851-8vxt991",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-vzr8896",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214851-vzr8896",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-4twscw2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-4twscw2",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "throw"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ": 当问题出现时，程序会抛出一个异常。这是通过使用  throw 关键字来完成的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-yc78nyo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214851-yc78nyo",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-ex7zv5v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-ex7zv5v",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "catch"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ": 在您想要处理问题的地方，通过异常处理程序捕获异常.catch 关键字用于捕获异常，可以有多个catch进行捕获。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-nr6hvq7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214851-nr6hvq7",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-krumvjg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-krumvjg",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "try"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ": try 块中的代码标识将被激活的特定异常,它后面通常跟着一个或多个 catch 块。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-78w5bv5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-78w5bv5",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果有一个块抛出一个异常，捕获异常的方法会使用 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "try"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "catch"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 关键字。"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "try"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 块中放置可能抛出异常的代\n码，"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "try"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 块中的代码被称为保护代码"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。使用 try/catch 语句的语法如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-xeuruoa",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214851-xeuruoa",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "try\n{\n\t// 保护的标识代码\n}catch( ExceptionName e1 ) \n{\n\t// catch 块\n}catch( ExceptionName e2 ) \n{\n\t// catch 块\n}catch( ExceptionName eN ) \n{\n\t// catch 块\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-mliesm1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214851-mliesm1",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常的使用"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-z1o74ew",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214851-z1o74ew",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常的抛出和捕获"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-kb59bde",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221018214851-kb59bde",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常的抛出和匹配原则"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-itcr9g9",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214851-itcr9g9",
+				"updated": "20221018214943"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-k72jmhw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214851-k72jmhw",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-7ela3qr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-7ela3qr",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常是通过"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "抛出对象而引发"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的，该"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象的类型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "决定了应该激活哪个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的处理代码。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-wakcmea",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214851-wakcmea",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-yqc5n3n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-yqc5n3n",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "被选中的处理代码"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是调用链中与"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "该对象类型匹配且离抛出异常位置最近"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的那一个。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-bjr6nlt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221018214851-bjr6nlt",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-8027iyn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-8027iyn",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抛出异常对象后，会生成一个异常对象的拷贝，因为抛出的异常对象可能是一个临时对象，所以会生成一个拷贝对象，这个拷贝的临时对象会在被"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "以后销毁。（这里的处理类似于函数的传值返回）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-x2xcjlc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221018214851-x2xcjlc",
+						"updated": "20221018214943"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-m7i6xvk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-m7i6xvk",
+								"updated": "20221018214943"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch(...)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可以捕获任意类型的异常，问题是不知道异常错误是什么。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-tm4r7ac",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221018214851-tm4r7ac",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-24z3i4v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-24z3i4v",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实际中抛出和捕获的匹配原则有个例外，并不都是类型完全匹配，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可以抛出的派生类对象，使用基类捕\n获，这个在实际中非常实用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，我们后面会详细讲解这个。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-cb7c5cz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221018214851-cb7c5cz",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在函数调用链中异常栈展开匹配原则"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-4y2z8xb",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214851-4y2z8xb",
+				"updated": "20221018215930"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-lojhq74",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214851-lojhq74",
+						"updated": "20221018215930"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-3w9pl2i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-3w9pl2i",
+								"updated": "20221018215930"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "首先检查"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "throw本身是否在try块内部，如果是再查找匹配的catch语句"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。如果有匹配的，则调到"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n的地方进行处理。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-s5zy2ky",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214851-s5zy2ky",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-upkz1l3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-upkz1l3",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "没有匹配的catch则退出当前函数栈，继续在调用函数的栈中进行查找匹配的catch。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-hz6zgh1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221018214851-hz6zgh1",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-mkg90fq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-mkg90fq",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "如果到达main函数的栈，依旧没有匹配的，则终止程序"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。上述这个沿着调用链查找匹配的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "子句的\n过程称为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "栈展开"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。所以实际中我们最后都要加一个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch(...)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "捕获任意类型的异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，否则当有异常没捕\n获，程序就会直接终止。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-ohcqzy5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221018214851-ohcqzy5",
+						"updated": "20221018215926"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-5sz3buc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-5sz3buc",
+								"updated": "20221018215926"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "找到匹配的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "子句并处理以后，会继续沿着"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "catch"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "子句后面继续执行。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-nolrnz5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-nolrnz5",
+				"updated": "20221018215048"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221018192255"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221018192255-20221018215048-oofsux4.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-m0a6r1t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214851-m0a6r1t",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "double Division(int a, int b)\n{\n\t// 当b == 0时抛出异常 \n\tif (b == 0)\n\t\tthrow \"Division by zero condition!\";\n\telse\n\t\treturn ((double)a / (double)b);\n}\nvoid Func()\n{\n\tint len, time;\n\tcin \u003e\u003e len \u003e\u003e time;\n\tcout \u003c\u003c Division(len, time) \u003c\u003c endl;\n}\nint main()\n{\n\ttry {\n\t\tFunc();\n\t}\n\tcatch (const char* errmsg){\n\t\tcout \u003c\u003c errmsg \u003c\u003c endl;\n\t}\n\tcatch (...) {//可捕获任意类型的异常\n\t\tcout \u003c\u003c \"unkown exception\" \u003c\u003c endl;\n\t}\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-beomofx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-beomofx",
+				"updated": "20221018215106"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221018192724"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221018192724-20221018215106-xk6v70b.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018215109-hal769d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018215109-hal769d"
+			}
+		},
+		{
+			"ID": "20221018214851-zk6dkkr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214851-zk6dkkr",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常重新抛出"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-h18a7il",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-h18a7il",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有可能单个的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "catch"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "不能完全处理一个异常，在进行一些校正处理以后，希望再交给更外层的调用链函数来处理,"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "catch"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "则可以通过重新抛出将异常传递给更上层的函数进行处理。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-x1e7pdt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214851-x1e7pdt",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "double Division(int a, int b)\n{\n\t// 当b == 0时抛出异常 \n\tif (b == 0)\n\t{\n\t\tthrow \"Division by zero condition!\";\n\t}\n\treturn (double)a / (double)b;\n}\nvoid Func()\n{\n\t// 这里可以看到如果发生除0错误抛出异常，另外下面的array没有得到释放。 \n\t// 所以这里捕获异常后并不处理异常，异常还是交给外面处理，这里捕获了再 \n\t// 重新抛出去。\n\tint* array = new int[10];\n\ttry {\n\t\tint len, time;\n\t\tcin \u003e\u003e len \u003e\u003e time;\n\t\tcout \u003c\u003c Division(len, time) \u003c\u003c endl;\n\t}\n\tcatch (...)\n\t{\n\t\tcout \u003c\u003c \"delete1 []\" \u003c\u003c array \u003c\u003c endl; // 拦截异常，不是要处理异常，而是要正常释放资源\n\t\tdelete[] array;\n\t\tthrow;// 捕获到什么对象就重新抛出什么对象\n\t}\n\t// ...\n\tcout \u003c\u003c \"delete []\" \u003c\u003c array \u003c\u003c endl;\n\tdelete[] array;\n}\nint main()\n{\n\ttry\n\t{\n\t\tFunc();\n\t}\n\tcatch (const char* errmsg)\n\t{\n\t\tcout \u003c\u003c errmsg \u003c\u003c endl;\n\t\t// 记录日志\n\t}\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-0a2okhu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214851-0a2okhu",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常安全"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-zvrl0ce",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221018214851-zvrl0ce",
+				"updated": "20221018215143"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-8vieqcf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214851-8vieqcf",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-l6xinnq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-l6xinnq",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "构造函数完成对象的构造和初始化，最好不要在构造函数中抛出异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，否则可能导致"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象不完整"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或没有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "完全初始化"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-5o0wzix",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214851-5o0wzix",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-fmiaagb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-fmiaagb",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "析构函数主要完成资源的清理，最好不要在析构函数内抛出异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，否则可能导致"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "资源泄漏"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(内存泄漏、句柄未关闭等)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-by6ou82",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214851-by6ou82",
+						"updated": "20221018215143"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-0jawlo5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-0jawlo5",
+								"updated": "20221018215143"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "C++中"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "异常经常会导致资源泄漏的问题"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，比如在"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "new"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "delete"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中抛出了异常，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "导致内存泄漏"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，在"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "lock"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "unlock"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "之间抛出了异常导致死锁，C++经常使用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeBlockRef",
+											"Data": "span",
+											"Children": [
+												{
+													"Type": "NodeOpenParen"
+												},
+												{
+													"Type": "NodeOpenParen"
+												},
+												{
+													"Type": "NodeBlockRefID",
+													"Data": "20221018214824-98suvzi"
+												},
+												{
+													"Type": "NodeBlockRefSpace"
+												},
+												{
+													"Type": "NodeBlockRefText",
+													"Data": "RAII"
+												},
+												{
+													"Type": "NodeCloseParen"
+												},
+												{
+													"Type": "NodeCloseParen"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来解决以上问题，关于"
+								},
+								{
+									"Type": "NodeBlockRef",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeBlockRefID",
+											"Data": "20221018214824-98suvzi"
+										},
+										{
+											"Type": "NodeBlockRefSpace"
+										},
+										{
+											"Type": "NodeBlockRefDynamicText",
+											"Data": "RAII"
+										},
+										{
+											"Type": "NodeCloseParen"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "我们智能指针这节进行讲解。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-09y7706",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214851-09y7706",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常规范"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-cs6faze",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214851-cs6faze",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-e3tmsp8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214851-e3tmsp8",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-0fb2iey",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-0fb2iey",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常规格说明的目的是为了让"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "函数使用者"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "知道"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "该函数可能抛出的异常有哪些"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。  可以在函数的后面接 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "throw"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(类型)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "列出这个函数可能抛掷的所有异常类型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-q8pi4kr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214851-q8pi4kr",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-51arahg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-51arahg",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "函数的后面接"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "throw()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，表示函数不抛异常。C++11 支持使用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "noexcept"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-r3uzy9m",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221018214851-r3uzy9m",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-dcx8lu7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-dcx8lu7",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "若无异常接口声明，则此函数可以抛掷任何类型的异常。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-ff1h6co",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214851-ff1h6co",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 这里表示这个函数会抛出A/B/C/D中的某种类型的异常 \nvoid fun() throw(A，B，C，D);\n\n// 这里表示这个函数只会抛出bad_alloc的异常\nvoid* operator new (std::size_t size) throw (std::bad_alloc); \n\n// 这里表示这个函数不会抛出异常\nvoid* operator new (std::size_t size, void* ptr) throw();\nvoid* operator new (std::size_t size, void* ptr) noexcept;//C++11新增\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-k0lqz3e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214851-k0lqz3e",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自定义异常体系"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-7dsg5a2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-7dsg5a2",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实际使用中很多公司都会自定义自己的异常体系进行规范的异常管理，因为一个项目中如果大家随意抛异常，那么外层的调用者基本就没办法玩了，所以实际中都会定义一套继承的规范体系。这样大家抛出的都是继承的派生类对象，捕获一个基类就可以了"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-wb1x1kn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-wb1x1kn",
+				"updated": "20221018215200"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221018194914"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221018194914-20221018215200-k0f9mlc.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-cilzs62",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214851-cilzs62",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "服务器开发中通常使用的异常继承体系"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-5q6y0eg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-5q6y0eg",
+				"updated": "20221018215221"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221018195337"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221018195337-20221018215221-ta4rt8l.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-dxq460g",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214851-dxq460g",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Exception\n{\npublic:\n\tException(const string\u0026 errmsg, int id)\n\t\t:_errmsg(errmsg)\n\t\t, _id(id)\n\t{}\n\n\tvirtual string what() const\n\t{\n\t\treturn _errmsg;\n\t}\nprotected:\n\tstring _errmsg;\n\tint _id;\n};\n\nclass SqlException : public Exception\n{\npublic:\n\tSqlException(const string\u0026 errmsg, int id, const string\u0026 sql)\n\t\t:Exception(errmsg, id)\n\t\t, _sql(sql)\n\t{}\n\n\tvirtual string what() const\n\t{\n\t\tstring str = \"SqlException:\";\n\t\tstr += _errmsg;\n\t\tstr += \"-\u003e\";\n\t\tstr += _sql;\n\n\t\treturn str;\n\t}\n\nprivate:\n\tconst string _sql;\n};\n\nclass CacheException : public Exception\n{\npublic:\n\tCacheException(const string\u0026 errmsg, int id)\n\t\t:Exception(errmsg, id)\n\t{}\n\n\tvirtual string what() const\n\t{\n\t\tstring str = \"CacheException:\";\n\t\tstr += _errmsg;\n\t\treturn str;\n\t}\n};\n\nclass HttpServerException : public Exception\n{\npublic:\n\tHttpServerException(const string\u0026 errmsg, int id, const string\u0026 type)\n\t\t:Exception(errmsg, id)\n\t\t, _type(type)\n\t{}\n\n\tvirtual string what() const\n\t{\n\t\tstring str = \"HttpServerException:\";\n\t\tstr += _type;\n\t\tstr += \":\";\n\t\tstr += _errmsg;\n\n\t\treturn str;\n\t}\n\nprivate:\n\tconst string _type;\n};\n\nvoid SQLMgr()\n{\n\tsrand(time(0));\n\tif (rand() % 7 == 0)\n\t{\n\t\tthrow SqlException(\"权限不足\", 100, \"select * from name = '张三'\");\n\t}\n}\n\nvoid CacheMgr()\n{\n\tsrand(time(0));\n\tif (rand() % 5 == 0)\n\t{\n\t\tthrow CacheException(\"权限不足\", 100);\n\t}\n\telse if (rand() % 6 == 0)\n\t{\n\t\tthrow CacheException(\"数据不存在\", 101);\n\t}\n\n\tSQLMgr();\n}\n\nvoid HttpServer()\n{\n\t// ...\n\tsrand(time(0));\n\tif (rand() % 3 == 0)\n\t{\n\t\tthrow HttpServerException(\"请求资源不存在\", 100, \"get\");\n\t}\n\telse if (rand() % 4 == 0)\n\t{\n\t\tthrow HttpServerException(\"权限不足\", 101, \"post\");\n\t}\n\n\tCacheMgr();\n}\n\nvoid ServerStart()\n{\n\twhile (1)\n\t{\n\t\tthis_thread::sleep_for(chrono::seconds(1));\n\n\t\ttry {\n\t\t\tHttpServer();\n\t\t}\n\t\tcatch (const Exception\u0026 e) // 这里捕获父类对象就可以\n\t\t{\n\t\t\t// 多态\n\t\t\tcout \u003c\u003c e.what() \u003c\u003c endl;\n\t\t}\n\t\tcatch (...)\n\t\t{\n\t\t\tcout \u003c\u003c \"Unkown Exception\" \u003c\u003c endl;\n\t\t}\n\t}\n}\n\nint main()\n{\n\tServerStart();\n\n\treturn 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-pbhs1qs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-pbhs1qs",
+				"updated": "20221018215233"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221018195222"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221018195222-20221018215233-5fg3xzv.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-9w4dru6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214851-9w4dru6",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++标准库的异常体系"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-ah5k5m7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-ah5k5m7",
+				"updated": "20221018215249"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++ 提供了一系列标准的异常，定义在  中，我们可以在程序中使用这些标准的异常。它们是以父子类层次结\n构组织起来的，如下所示：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221018200119"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221018200119-20221018215245-ew4aszi.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-ew3hrog",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-ew3hrog",
+				"updated": "20221018215254"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221018200129"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221018200129-20221018215254-gjcnjxl.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018215256-jyf0ktm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018215256-jyf0ktm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明：实际中我们可以可以去继承"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "exception"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类实现自己的异常类。但是实际中很多公司像上面一样自己定义\n一套异常继承体系。因为C++标准库设计的不够好用."
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-glodzf0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214851-glodzf0",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int main()\n{\n\ttry{\n\t\tvector\u003cint\u003e v(10, 5);\n\t\t// 这里如果系统内存不够也会抛异常\n\t\t//v.reserve(1000000000);\n\n\t\t// 这里越界会抛异常\n\t\tv.at(10) = 100;\n\t}\n\tcatch (const exception\u0026 e) // 这里使用标准库中的异常类来捕获父类对象就可以\n\t{\n\t\tcout \u003c\u003c e.what() \u003c\u003c endl;\n\t}\n\tcatch (...)\n\t{\n\t\tcout \u003c\u003c \"Unkown Exception\" \u003c\u003c endl;\n\t}\n\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-m5edhne",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214851-m5edhne",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常的优缺点"
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-zcsz34i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214851-zcsz34i",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++异常的优点："
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-v678mnv",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214851-v678mnv",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-pda70bn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214851-pda70bn",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-b2p6qyb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-b2p6qyb",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常对象定义好了，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "相比错误码的方式可以清晰准确的展示出错误的各种信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，甚至可以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "包含堆栈调用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的信息，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "这样可以帮助更好的定位程序的bug"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-0hikz68",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214851-0hikz68",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-dgfepii",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-dgfepii",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "返回错误码的传统方式有个很大的问题就是，在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "函数调用链中"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "深层"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的函数返回了错误，那么我们得层层返回错误，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "最外层才能拿到错误(很困难)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-n1gklo5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221018214851-n1gklo5",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-z09pvvy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-z09pvvy",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "很多的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "第三方库"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都包含异常，比如"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "boost"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "、"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "gtest"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "、"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "gmock"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "等等常用的库，那么我们使用它们也需要使用异常。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-vura9a3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221018214851-vura9a3",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-e2qo5t6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-e2qo5t6",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "很多测试框架都使用异常，这样能更好的使用单元测试等进行白盒的测试。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-d3qvpfz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221018214851-d3qvpfz",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-gavh802",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-gavh802",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "部分函数使用异常更好处理，比如构造函数没有返回值，不方便使用错误码方式处理。比如"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "T\u0026 operator[](size_t pos)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "这样的函数，如果pos越界了只能使用异常或者终止程序处理，没办法通过"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表示错误。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-3qztyu1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214851-3qztyu1",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++异常的缺点："
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-4qyjv53",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214851-4qyjv53",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"ID": "20221018214851-wdrnf6g",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214851-wdrnf6g",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-la8b8o6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-la8b8o6",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常会导致程序的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "执行流乱跳"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，并且非常的混乱，并且是运行时出错抛异常就会乱跳。这会导致我们"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "跟踪调试时以及分析程序时，比较困难"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-9yvcpsy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214851-9yvcpsy",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-12t0ks0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-12t0ks0",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常会有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一些性能的开销"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。当然在现代硬件速度很快的情况下，这个影响基本忽略不计。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-uj6qkmr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221018214851-uj6qkmr",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-lp6u9kn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-lp6u9kn",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "C++没有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "垃圾回收机制"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，资源需要自己管理。"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "有了异常非常容易导致内存泄漏、死锁等异常安全问题"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。\n这个需要使用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "RAII"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来处理资源的管理问题。学习成本较高。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-k9qll6t",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221018214851-k9qll6t",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-bnsd9d0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-bnsd9d0",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "C++标准库的异常体系定义的不好"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，导致大家各自定义各自的异常体系，非常的混乱。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214851-9axuf1d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221018214851-9axuf1d",
+						"updated": "20221018214851"
+					},
+					"Children": [
+						{
+							"ID": "20221018214851-heecmwd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214851-heecmwd",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常尽量规范使用，否则后果不堪设想，随意抛异常，外层捕获的用户苦不堪言。所以异常规范有两点："
+								}
+							]
+						},
+						{
+							"ID": "20221018214851-2a7k2h4",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221018214851-2a7k2h4",
+								"updated": "20221018214851"
+							},
+							"Children": [
+								{
+									"ID": "20221018214851-ti47hyw",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221018214851-ti47hyw",
+										"updated": "20221018214851"
+									},
+									"Children": [
+										{
+											"ID": "20221018214851-0vh2d1g",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221018214851-0vh2d1g",
+												"updated": "20221018214851"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "一、抛出异常类型都继承自一个基类。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20221018214851-tdio8ad",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221018214851-tdio8ad",
+										"updated": "20221018214851"
+									},
+									"Children": [
+										{
+											"ID": "20221018214851-d824dqy",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221018214851-d824dqy",
+												"updated": "20221018214851"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "二、函数是否抛异常、抛什么异常，都使用 "
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "func()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "  "
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "throw()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": ";的方式规范化。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214851-1ppz25k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214851-1ppz25k",
+				"updated": "20221018214851"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "总结"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：异常总体而言，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "利大于弊"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所以工程中我们还是鼓励使用异常的。另外OO的语言基本都是用异常处理错误，这也可以看出这是大势所趋。"
+				}
+			]
+		}
+	]
+}

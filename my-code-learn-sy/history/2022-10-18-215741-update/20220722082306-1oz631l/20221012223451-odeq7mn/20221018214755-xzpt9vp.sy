@@ -1,0 +1,3116 @@
+{
+	"ID": "20221018214755-xzpt9vp",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221018214755-xzpt9vp",
+		"title": "C++智能指针",
+		"updated": "20221018215720"
+	},
+	"Children": [
+		{
+			"ID": "20221018214824-67cd2rs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214824-67cd2rs",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么需要智能指针？"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-c4b5qmt",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214824-c4b5qmt",
+				"updated": "20221018215349"
+			},
+			"Children": [
+				{
+					"ID": "20221018214824-u5qppfn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214824-u5qppfn",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-e0rge6h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-e0rge6h",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "malloc"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "出来的空间，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "没有进行释放，存在内存泄漏的问题"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-qghhdq0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214824-qghhdq0",
+						"updated": "20221018215349"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-zwt3n0d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-zwt3n0d",
+								"updated": "20221018215349"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockRef",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeBlockRefID",
+											"Data": "20221018214851-0a2okhu"
+										},
+										{
+											"Type": "NodeBlockRefSpace"
+										},
+										{
+											"Type": "NodeBlockRefDynamicText",
+											"Data": "异常安全"
+										},
+										{
+											"Type": "NodeCloseParen"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "问题。如果在"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "malloc"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "free"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "之间如果存在抛异常，那么还是有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存泄漏"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。这种问题就叫"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "异常安全"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214826-legdv5k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214826-legdv5k"
+			}
+		},
+		{
+			"ID": "20221018214824-fjwilef",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214824-fjwilef",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内存泄漏"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-151ldtq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214824-151ldtq",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是内存泄漏，内存泄漏的危害"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-risu250",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-risu250",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "什么是内存泄漏"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内存泄漏指因为疏忽或错误造成程序未能释放已经不再使用的内存的情况"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。内存泄漏并不是指内存在物理上的消失，而是应用程序分配某段内存后，因为设计错误，失去了对该段内存的控制，因而造成了内存的浪费。\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "内存泄漏的危害"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：长期运行的程序出现内存泄漏，影响很大，如操作系统、后台服务等等，出现内存泄漏会导致响应越来越慢，最终卡死。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-855lkue",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214824-855lkue",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内存泄漏分类（了解）"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-po40red",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-po40red",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C/C++程序中一般我们关心两种方面的内存泄漏："
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-ucgz6r4",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221018214824-ucgz6r4",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"ID": "20221018214824-cmodh5i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214824-cmodh5i",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-9ijkb9w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-9ijkb9w",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "堆内存泄漏(Heap leak)"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221018214824-oteitls",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221018214824-oteitls",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"ID": "20221018214824-cgkf3zx",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221018214824-cgkf3zx",
+										"updated": "20221018214824"
+									},
+									"Children": [
+										{
+											"ID": "20221018214824-xxxdtdo",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221018214824-xxxdtdo",
+												"updated": "20221018214824"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "堆内存"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "指的是程序执行中依据须要分配通过"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "malloc / calloc / realloc / new"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "等从堆中分配的一块内存，用完后必须通过调用相应的 "
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "free"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "或者"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"Data": "code",
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "delete"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " 删掉。假设程序的设计错误导致这部分内存没有被释放，那么以后这部分空间将无法再被使用，就会产生"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "Heap Leak"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-rsbvbch",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214824-rsbvbch",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-6vfi3qt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-6vfi3qt",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "系统资源泄漏"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221018214824-nlf41of",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221018214824-nlf41of",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"ID": "20221018214824-2tryy6c",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221018214824-2tryy6c",
+										"updated": "20221018214824"
+									},
+									"Children": [
+										{
+											"ID": "20221018214824-bwdblm6",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221018214824-bwdblm6",
+												"updated": "20221018214824"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "指程序使用系统分配的资源，比方"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "套接字"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "、"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "文件描述符"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "、"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "管道"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "等"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "没有使用对应的函数释放"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "掉，导致系统资源的浪费，严重可导致系统效能减少，系统执行不稳定。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-l1opb6a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214824-l1opb6a",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何检测内存泄漏（了解）"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-8hz9nw8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221018214824-8hz9nw8",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"ID": "20221018214824-6ahpo9i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214824-6ahpo9i",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-1jfvd31",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-1jfvd31",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在linux下内存泄漏检测："
+								},
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "linux下几款内存泄漏检测工具"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://blog.csdn.net/gatieme/article/details/51959654"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-4oq5fov",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214824-4oq5fov",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-pxfxd4v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-pxfxd4v",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在windows下使用第三方工具："
+								},
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "VLD工具说明"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://blog.csdn.net/GZrhaunt/article/details/56839765"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-tqm135s",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214824-tqm135s",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-eug9ev1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-eug9ev1",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "其他工具："
+								},
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "内存泄漏工具比较"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://www.cnblogs.com/liangxiaofeng/p/4318499.html"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-r88te66",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214824-r88te66",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何避免内存泄漏"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-ov1mzwp",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214824-ov1mzwp",
+				"updated": "20221018215420"
+			},
+			"Children": [
+				{
+					"ID": "20221018214824-68fx9sq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214824-68fx9sq",
+						"updated": "20221018215420"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-f04kr84",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-f04kr84",
+								"updated": "20221018215420"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "工程前期良好的设计规范，养成良好的编码规范，申请的内存空间记着匹配的去释放。ps：这个理想状态。但是如果碰上"
+								},
+								{
+									"Type": "NodeBlockRef",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeBlockRefID",
+											"Data": "20221018214834-jt5hrf0"
+										},
+										{
+											"Type": "NodeBlockRefSpace"
+										},
+										{
+											"Type": "NodeBlockRefText",
+											"Data": "异常"
+										},
+										{
+											"Type": "NodeCloseParen"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时，就算注意释放了，还是可能会出问题。需要下一条智能指针来管理才有保证。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-0173cg8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214824-0173cg8",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-u5s43gs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-u5s43gs",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "采用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "RAII思想"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或者"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "智能指针"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来管理资源。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-1196ldl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221018214824-1196ldl",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-skvo5l1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-skvo5l1",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "有些公司内部规范使用内部实现的私有内存管理库。这套库自带内存泄漏检测的功能选项。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-ubzciqu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221018214824-ubzciqu",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-j338ojx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-j338ojx",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "出问题了使用内存泄漏工具检测。ps：不过很多工具都不够靠谱，或者收费昂贵。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-ko33xux",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-ko33xux",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "总结一下:"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n内存泄漏非常常见，解决方案分为两种："
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-o0kagmm",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214824-o0kagmm",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"ID": "20221018214824-2emvr8v",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214824-2emvr8v",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-gfwghsj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-gfwghsj",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事前预防型。如智能指针等。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-0ub8r8i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214824-0ub8r8i",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-m1ctykr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-m1ctykr",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事后查错型。如泄漏检测工具。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-1xklgi5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214824-1xklgi5",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "智能指针的使用及原理"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-98suvzi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214824-98suvzi",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "RAII"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-zzhs2jn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-zzhs2jn",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "RAII（Resource Acquisition Is Initialization）是一种"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "利用对象生命周期来控制程序资源"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（如内存、文件句\n柄、网络连接、互斥量等等）的简单技术。\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在对象构造时获取资源"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，接着控制对资源的访问使之在对象的生命周期内始终保持有效，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最后在对象析构的\n时候释放资源"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。借此，我们实际上把管理一份资源的责任托管给了一个对象。这种做法有两大好处："
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-dxfckn7",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221018214824-dxfckn7",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"ID": "20221018214824-3i1lnu5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214824-3i1lnu5",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-uv419rm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-uv419rm",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不需要显式地释放资源"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-x166hfz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221018214824-x166hfz",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-pxvlhgw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-pxvlhgw",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "采用这种方式，"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象所需的资源在其生命期内始终保持有效"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-qy95pt8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-qy95pt8",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 使用RAII思想设计的SmartPtr类\ntemplate\u003cclass T\u003e\nclass SmartPtr\n{\npublic:\n\tSmartPtr(T* ptr = nullptr)\n\t\t:_ptr(ptr)\n\t{}\n\n\t~SmartPtr()\n\t{\n\t\tcout \u003c\u003c \"delete:\" \u003c\u003c _ptr \u003c\u003c endl;\n\t\tdelete _ptr;\n\t}\n\n\t// 像指针一样使用\n\tT\u0026 operator*()\n\t{\n\t\treturn *_ptr;\n\t}\n\n\tT* operator-\u003e()\n\t{\n\t\treturn _ptr;\n\t}\nprivate:\n\tT* _ptr;\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-ep3oaw8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221018214824-ep3oaw8",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SmartPtr简单使用"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-vfwvheu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-vfwvheu",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "struct Date\n{\n\tint _year;\n\tint _month;\n\tint _day;\n};\n\nint main()\n{\n\tSmartPtr\u003cint\u003e sp1(new int); //使用构造函数进行初始化智能指针sp1\n\t*sp1 = 10;\n\tcout \u003c\u003c *sp1 \u003c\u003c endl;\n\tSmartPtr\u003cint\u003e sparray(new Date);//使用构造函数进行初始化智能指针sparray\n\t// 需要注意的是这里应该是sparray.operator-\u003e()-\u003e_year = 2018; \n\t// 本来应该是sparray-\u003e-\u003e_year这里语法上为了可读性，省略了一个-\u003e\n\tsparray-\u003e_year = 2018;\n\tsparray-\u003e_month = 1;\n\tsparray-\u003e_day = 1;\n}//生命周期结束时会调用析构函数回收我们开辟的空间\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-ormyob6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-ormyob6",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结一下智能指针的原理："
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-4xu2gx2",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221018214824-4xu2gx2",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"ID": "20221018214824-qgrvc43",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221018214824-qgrvc43",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-ghdozey",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-ghdozey",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "RAII特性"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221018214824-ltj48fx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221018214824-ltj48fx",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"ID": "20221018214824-nxg97qm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221018214824-nxg97qm",
+								"updated": "20221018214824"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "重载"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "operator*"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "opertaor-\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ，具有像指针一样的行为。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-da6qqv8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214824-da6qqv8",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "标准库提供的智能指针"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-rhoc2jy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-rhoc2jy",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++库中的智能指针都定义在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "\u003cmemory\u003e"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这个头文件中."
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-6uej4z7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221018214824-6uej4z7",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "std::auto_ptr"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-py1wjyz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-py1wjyz",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "std::auto_ptr文档"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "http://www.cplusplus.com/reference/memory/auto_ptr/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nC++98版本的库中就提供了auto_ptr的智能指针。下面演示的auto_ptr的使用及问题。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-25q07oa",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-25q07oa",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "auto_ptr\u003cstring\u003e p1 (new string (\"I reigned lonely as a cloud.\")); \nauto_ptr\u003cstring\u003e p2; \np2 = p1; //auto_ptr不会报错.\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-bui63gs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-bui63gs",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\n#include \u003cmemory\u003e \nclass Date\n{ \npublic:\n\tDate() { cout \u003c\u003c \"Date()\" \u003c\u003c endl;} \n\t~Date(){ cout \u003c\u003c \"~Date()\" \u003c\u003c endl;}\n\tint _year; \n\tint _month;\n\tint _day; \n};\n\nint main() \n{\n\tauto_ptr\u003cDate\u003e ap(new Date); \n\tauto_ptr\u003cDate\u003e copy(ap);\n\t// auto_ptr的问题：当对象拷贝或者赋值后，前面的对象就悬空了\n\t// C++98中设计的auto_ptr问题是非常明显的，所以实际中很多公司明确规定了不能使用auto_ptr \n\tap-\u003e_year = 2018;\n\treturn 0; \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-jtln9by",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-jtln9by",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "auto_ptr的实现原理：管理权转移的思想，下面"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "简化模拟实现"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "了一份"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "auto_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来了解它的原理"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-5njjvtg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-5njjvtg",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "template\u003cclass T\u003e\nclass auto_ptr\n{\npublic:\n\tauto_ptr(T* ptr)\n\t\t:_ptr(ptr)\n\t{}\n\n\t// 一旦发生拷贝，就将sp中资源转移到当前对象中，然后另sp与其所管理资源断开联系， \n\t// 这样就解决了一块空间被多个对象使用而造成程序奔溃问题\n\tauto_ptr(auto_ptr\u003cT\u003e\u0026 sp)\n\t\t:_ptr(sp._ptr)\n\t{\n\t\t// 管理权转移\n\t\tsp._ptr = nullptr;\n\t}\n\n\t~auto_ptr()\n\t{\n\t\tif (_ptr)\n\t\t{\n\t\t\tcout \u003c\u003c \"delete:\" \u003c\u003c _ptr \u003c\u003c endl;\n\t\t\tdelete _ptr;\n\t\t}\n\t}\n\n\tAutoPtr\u003cT\u003e\u0026 operator=(AutoPtr\u003cT\u003e\u0026 ap) \n    {\n\t\t// 检测是否为自己给自己赋值 \n\t\tif(this != \u0026ap)\n\t\t{\n\t\t\t// 释放当前对象中资源 \n\t\t\tif(_ptr)\n\t\t\t\tdelete _ptr;\n\t\t\n\t\t\t// 转移ap中资源到当前对象中 \n\t\t\t_ptr = ap._ptr;\n\t\t\tap._ptr = NULL;\n\t\t}\n\t\treturn *this;\n    }\n\n\tT\u0026 operator*()\n\t{\n\t\treturn *_ptr;\n\t}\n\n\tT* operator-\u003e()\n\t{\n\t\treturn _ptr;\n\t}\nprivate:\n\tT* _ptr;\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-lmru4lk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214824-lmru4lk",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "unique_ptr"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-ydxxil9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-ydxxil9",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++11中开始提供更靠谱的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "unique_ptr文档"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "http://www.cplusplus.com/reference/memory/unique_ptr/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-cyxd3ar",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-cyxd3ar",
+				"updated": "20221018215505"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "unique_ptr"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用于替换"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "auto_ptr"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，实现了独占式拥有概念，保证同一时间内只有一个智能指针可以指向该对象。为此，unique_ptr的拷贝构造和拷贝赋值均被声明为"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "delete"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "。因此"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "无法实施拷贝"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "和"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "赋值操作"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，但可以移动构造和移动赋值"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。它对于避免资源泄露(例如“以"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "new"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建对象后因为发生异常而忘记调用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "delete"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "”)特别有用。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-2c3mo9t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-2c3mo9t",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "unique_ptr\u003cstring\u003e p3 (new string (\"auto\"));  \nunique_ptr\u003cstring\u003e p4；                     \np4 = p3;//此时会报错！！\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-v2rxl09",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-v2rxl09",
+				"updated": "20221018215528"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "编译器认为p4=p3非法，避免了p3不再指向有效数据的问题。尝试复制p3时会编译期出错，而auto_ptr能通过编译期从而在运行期埋下出错的隐患。因此，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "比"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "auto_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "更安全。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-5ei1nte",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-5ei1nte",
+				"updated": "20221018215526"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "还有更聪明的地方：当程序试图将一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 赋值给另一个时，如果源 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是个临时右值，编译器允许这么做；如果源 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 将存在一段时间，编译器将禁止这么做，比如："
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-zm98yw4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-zm98yw4",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "unique_ptr\u003cstring\u003e pu1(new string (\"hello world\")); \nunique_ptr\u003cstring\u003e pu2; \npu2 = pu1;                                      // #1 不允许\nunique_ptr\u003cstring\u003e pu3; \npu3 = unique_ptr\u003cstring\u003e(new string (\"You\"));   // #2 允许\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-v8yth35",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-v8yth35",
+				"updated": "20221018215720"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "#1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "留下悬挂的unique_ptr(pu1)，这可能导致危害。而"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "##2"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "不会留下悬挂的unique_ptr，因为它调用 unique_ptr 的构造函数，该构造函数创建的临时对象在其所有权让给 pu3 后就会被销毁。这种随情况而已的行为表明，unique_ptr 优于允许两种赋值的auto_ptr 。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-zhg06rk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-zhg06rk",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果确实想执行类似与#1的操作，C++有一个标准库函数std::move()，让你能够将一个unique_ptr赋给另一个"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。例如："
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-pmxt9gs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-pmxt9gs",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "unique_ptr\u003cstring\u003e ps1, ps2;\nps1 = demo(\"hello\");\nps2 = move(ps1);\nps1 = demo(\"alexia\");\ncout \u003c\u003c *ps2 \u003c\u003c *ps1 \u003c\u003c endl;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-89yhjdw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221018214824-89yhjdw",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的模拟实现"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-a0cu475",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-a0cu475",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中没有实现 移动构造 和 移动赋值。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-zihsrcp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-zihsrcp",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "template\u003cclass T\u003e\nclass UniquePtr\n{\npublic:\n\tUniquePtr(T* ptr = nullptr)\n\t\t: _ptr(ptr)\n\t{}\n\n\t~UniquePtr()\n\t{\n\t\tif (_ptr)\n\t\t\tdelete _ptr;\n\t}\n\n\tT\u0026 operator*() { return *_ptr; }\n\tT* operator-\u003e() { return _ptr; }\n\n\nprivate:\n\t// C++98防拷贝的方式：只声明不实现+声明成私有 \n\tUniquePtr(UniquePtr\u003cT\u003e const\u0026);\n\tUniquePtr\u0026 operator=(UniquePtr\u003cT\u003e const\u0026);\n\n\t// C++11防拷贝的方式：delete\n\tUniquePtr(UniquePtr\u003cT\u003e const\u0026) = delete;\n\tUniquePtr\u0026 operator=(UniquePtr\u003cT\u003e const\u0026) = delete;\n\nprivate:\n\tT* _ptr;\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-7ddl0e7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221018214824-7ddl0e7",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "shared_ptr"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-owciidu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-owciidu",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "shared_ptr"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "实现共享式拥有概念。通过引用计数，多个智能指针可以指向相同对象，该对象和其相关资源会在最后一个引用被销毁时候释放。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-9w2wjh7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-9w2wjh7",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "它使用计数机制来表明资源被几个指针共享。可以通过成员函数"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "use_count()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来查看"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "资源的所有者个数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。除了可以通过"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "new"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来构造，还可以通过传入"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "auto_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,  "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "weak_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来构造。"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-d95jdou",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-d95jdou",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当复制一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "shared_ptr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "引用计数会"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "+1"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "当我们调用"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "release()"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "或者当一个"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "shared_ptr"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "离开作用域时，计数减1（普通的指针如果没有delete操作，离开作用域时并不会被释放，只有在进程结束后才会被释放）。当计数等于0时，则delete内存。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-vatx27b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221018214824-vatx27b",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "成员函数："
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-fygzlvt",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221018214824-fygzlvt",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221018214824-ywkdws3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221018214824-ywkdws3",
+						"updated": "20221018214824"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "use_count"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：返回引用计数的个数\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "unique"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：返回是否是独占所有权( use_count 为 1)\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "swap"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：交换两个 shared_ptr 对象(即交换所拥有的对象)\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "reset"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：放弃内部对象的所有权或拥有对象的变更, 会引起原有对象的引用计数的减少\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "get"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ：返回内部对象(指针)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-t59osif",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221018214824-t59osif",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "share_ptr模拟实现"
+				}
+			]
+		},
+		{
+			"ID": "20221018214824-wxn5g1b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221018214824-wxn5g1b",
+				"updated": "20221018214824"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

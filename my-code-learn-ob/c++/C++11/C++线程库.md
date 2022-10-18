@@ -144,7 +144,7 @@ int main()
 
 ```
 
-## ### mutex的种类
+## mutex的种类
 在C++11中，Mutex总共包了四个互斥量的种类：
 
 1.  std::mutex  
@@ -156,6 +156,7 @@ int main()
 |lock()|上锁：锁住互斥量|
 |unlock()|解锁：释放对互斥量的所有权|
 |try_lock()|尝试锁住互斥量，如果互斥量被其他线程占有，则当前线程也不会被阻塞|
+
 注意，线程函数调用lock()时，可能会发生以下三种情况：
 
 - 如果该互斥量当前没有被锁住，则调用线程将该互斥量锁住，直到调用 unlock之前，该线程一直拥有该锁
@@ -254,14 +255,14 @@ int main()
 ```
 
 # 原子性操作库(atomic)
-多线程最主要的问题是共享数据带来的问题(即线程安全)。如果共享数据都是只读的，那么没问题，因为只读操作不会影响到数据，更不会涉及对数据的修改，所以所有线程都会获得同样的数据。但是，当一个或多个线程要修改共享数据时，就会产生很多潜在的麻烦。
+多线程最主要的问题是共享数据带来的问题(即线程安全)。**如果共享数据都是只读的，那么没问题，因为只读操作不会影响到数据，更不会涉及对数据的修改，所以所有线程都会获得同样的数据**。但是，当一个或多个线程要修改共享数据时，就会产生很多潜在的麻烦。
 
-虽然加锁可以解决，但是加锁有一个缺陷就是：只要一个线程在对sum++时，其他线程就会被阻塞，会影响程序运行的效率，而且锁如果控制不好，还容易造成死锁。
+虽然加锁可以解决，但是**加锁有一个缺陷**就是：只要一个线程在对`sum++`时，**其他线程就会被阻塞，会影响程序运行的效率，而且锁如果控制不好，还容易造成==死锁==**。
 
 因此C++11中引入了原子操作。所谓原子操作：即不可被中断的一个或一系列操作，C++11引入的原子操作类型，使得线程间数据的同步变得非常高效。
 
 在C++11中，程序员不需要对原子类型变量进行加锁解锁操作，线程能够对原子类型变量互斥的访问。
-更为普遍的，程序员可以使用atomic类模板，定义出需要的任意原子类型
+更为普遍的，程序员可以使用 **`atomic`** 类模板，定义出需要的任意原子类型
 ```cpp
 atmoic<T> t;   // 声明一个类型为T的原子类型变量t
 ```
@@ -276,7 +277,7 @@ using namespace std;
 #include <thread> 
 #include <atomic>
 
-atomic_long sum{ 0 }; 
+atomic_long sum{ 0 }; //定义sum为原子变量
 
 void fun(size_t num)
 {
@@ -509,3 +510,189 @@ lock_guard的缺陷：太单一，用户没有办法对该锁进行控制，因�
 
 ## lock_guard 和 unique_lock详解链接
 [lock_guard/unique_lock详解](https://blog.csdn.net/zzhongcy/article/details/85230200)
+
+
+# 线程同步
+![[Pasted image 20221017172529.png]]
+
+## 条件变量函数
+### wait()
+![[Pasted image 20221017171307.png]]
+
+==**参数：**==  
+>==lck==: 传递unique_lock类型的对象 
+>==Predicate==： 模板参数，传递对应的可调用对象（lanmda表达式、函数指针、仿函数）, 可调用对象必须是具有返回值的，并且==返回值必须是一个bool类型==。
+
+等到通知当前线程（应该已经锁定了 lck 的互斥锁）的执行被阻塞，直到得到通知。
+
+在**阻塞线程的那一刻**，函数**自动调用** `lck.unlock()`，允许其他被锁定的线程继续。
+
+**一旦通知（明确地，由某个其他线程），该函数将解除阻塞并调用 `lck.lock()`**，使 lck 处于与调用函数时相同的状态。然后函数返回（注意最后一个互斥锁可能会在返回之前再次阻塞线程）。
+
+通常，函数通过调用另一个线程中的成员 `notify_one` 或成员 `notify_all` 来通知唤醒。但是某些实现可能会在没有调用任何这些函数的情况下产生虚假的唤醒呼叫。因此，该功能的用户应确保满足其恢复条件。
+
+**如果指定了 pred (2)，则该函数仅在 pred 返回 `false` 时阻塞，并且通知只能在它变为 `true` 时解除阻塞线程（这对于检查虚假唤醒调用特别有用**）。就像如此：`while (!pred()) wait(lck);`
+
+### notify_one() 和 notify_all()
+![[Pasted image 20221017171834.png]]
+`notify_one()`通知一个  
+- 解除阻塞`当前等待（这属于一个条件）`这个条件的线程之一。  
+- 如果没有线程在等待，该函数什么也不做。  
+- 如果多于一个，则未指定选择哪个线程。
+
+`notify_all()` 通知所有线程.
+
+
+## 线程同步案例
+看一个题了解线程同步
+==**支持两个线程交替打印，一个打印奇数，一个打印偶数**==
+t1打印奇数，t2打印偶数。
+
+目前代码中只加入了互斥锁。
+```cpp
+int main()
+{
+	int n = 100;
+	int i = 0;
+	mutex mtx;
+
+	//打印奇数
+	thread t1([n ,&i , &mtx] {
+		while(i < n)
+		{
+			unique_lock<mutex> lock(mtx);
+			cout << this_thread::get_id() << " -> " << i << endl;
+			++i;
+		}
+	});
+
+	//打印偶数
+	thread t2([n , &i, &mtx] {
+		while (i < n)
+		{
+			unique_lock<mutex> lock(mutex);
+			cout << this_thread::get_id() << " -> " << i << endl;
+			++i;
+		}
+	});
+
+	t1.join();
+	t2.join();
+	return 0;
+}
+```
+不仅没有交替打印，而且出现了线程安全问题。
+![[Pasted image 20221017165427.png]]
+没有交替打印是因为==**时间片**==的原因，每个线程的时间片是不同的，所有这是没有出现交替打印的原因。
+
+需要完美的实现这个案例，这就需要我们加入**条件变量**了
+```cpp
+int main()
+{
+	int n = 100;
+	int i = 0;
+	mutex mtx;
+	condition_variable cv;//定义条件变量
+	bool flag = false;
+
+
+	//打印奇数
+	thread t1([n ,&i , &mtx ,&cv , &flag] {
+		while(i < n)
+		{
+			unique_lock<mutex> lock(mtx);
+			// flag是false的时候，这里会一直阻塞，直到flag变成true
+			cv.wait(lock, [&flag] {return flag; });
+			cout << this_thread::get_id() << " :-> " << i << endl;
+			++i;
+
+			flag = false;
+			cv.notify_one();
+		}
+	});
+
+	//打印偶数
+	thread t2([n , &i, &mtx ,&cv , &flag] {
+		while (i < n)
+		{
+			unique_lock<mutex> lock(mtx);
+
+			// !flag是true,那么这里获取侯不会阻塞，优先运行了
+			cv.wait(lock, [&flag] {return !flag; });
+			cout << this_thread::get_id() << " :-> " << i << endl;
+			++i;
+
+			flag = true;// 保证下一个打印运行一定是t1，也可以防止t2连续打印运行
+			cv.notify_one();
+		}
+	});
+
+	t1.join();
+	t2.join();
+	return 0;
+}
+```
+运行此时运行就没有问题了。
+![[Pasted image 20221017170421.png]]
+
+
+以下代码多此案例进行了多添加了一些测试,t1打印偶数，t2打印奇数。
+```cpp
+int main()
+{
+	int n = 100;
+	int i = 0;
+	mutex mtx;
+	condition_variable cv;
+	bool flag = false;
+
+	// 奇数-后打印
+	thread t2([n, &i, &mtx, &cv, &flag] {
+		while (i < n)
+		{
+			// 模拟中间某次t2时间片用完了，竞争大，排队很，多休眠了一会
+			/*if (i == 50)
+			{
+			cout << this_thread::get_id() << "休眠3s" << endl;
+			this_thread::sleep_for(chrono::seconds(3));
+			}*/
+
+			unique_lock<mutex> lock(mtx);
+			// flag是false的时候，这里会一直阻塞，知道flag变成true
+			cv.wait(lock, [&flag]() {return flag; });
+
+			cout << this_thread::get_id() << ":->" << i << endl;
+			++i;
+
+			flag = false;
+
+			cv.notify_one();
+		}
+		});
+
+	// 偶数-先打印
+	thread t1([n, &i, &mtx, &cv, &flag] {
+		while (i < n)
+		{
+			unique_lock<mutex> lock(mtx);
+			// !flag是true,那么这里获取侯不会阻塞，优先运行了
+			cv.wait(lock, [&flag]() {return !flag; });
+
+			cout << this_thread::get_id() << "->:" << i << endl;
+			++i;
+
+			// 保证下一个打印运行一定是t1，也可以防止t1连续打印运行
+			flag = true;
+
+			cv.notify_one();
+		}
+		});
+
+	// 交替走
+
+	t1.join();
+	t2.join();
+
+	return 0;
+}
+```
