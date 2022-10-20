@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20220722153052-t26rxxj",
 		"title": "Linux IO操作",
-		"updated": "20221020162914"
+		"updated": "20221020160904"
 	},
 	"Children": [
 		{
@@ -12935,100 +12935,80 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220904134255-5ik2uvf",
-				"updated": "20221020161712"
+				"updated": "20220904141217"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "此方法比较实用，基本没有配置风险。\n"
+					"Data": "此方法比较实用，基本没有配置风险。\n==进入 "
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
+					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
-							"Type": "NodeMark2OpenMarker"
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
 						},
 						{
-							"Type": "NodeText",
-							"Data": "进入 "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
+							"Type": "NodeCodeSpan",
+							"Data": "code",
 							"Children": [
 								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
+									"Type": "NodeCodeSpanOpenMarker"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "/etc/ld.so.conf.d"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeCodeSpanContent",
+									"Data": "/etc/ld.so.conf.d"
 								},
 								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
+									"Type": "NodeCodeSpanCloseMarker"
 								}
 							]
 						},
 						{
-							"Type": "NodeText",
-							"Data": " 路径，新建一个 "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": ".conf"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 后缀的文件，文件名任意，新建与写入需要管理员权限。\n在文件中写入我们 库的路径"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
 						}
 					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": "\n​"
+					"Data": " 路径，新建一个 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": ".conf"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 后缀的文件，文件名任意，新建与写入需要管理员权限。\n在文件中写入我们 库的路径 ==\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -13117,32 +13097,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220904134255-qls5d2k",
-				"updated": "20221020162914"
+				"updated": "20220904141229"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "最后使用 "
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "ldconfig"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 指令编译。\n​"
+					"Data": "最后使用 idconfig 指令编译。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -13178,13 +13138,6 @@
 					"Data": "br"
 				}
 			]
-		},
-		{
-			"ID": "20221020162909-zoz9a7z",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20221020162909-zoz9a7z"
-			}
 		}
 	]
 }
