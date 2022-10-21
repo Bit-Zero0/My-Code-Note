@@ -292,7 +292,6 @@ public:
 		AddRef();
 	}
 
-
 	int AddRef()
 	{
 		return ++(*_pRefCount);
@@ -773,5 +772,44 @@ namespace fmy
 	private:
 		T* _ptr;
 	};
+}
+
+class A
+{
+public:
+	~A()
+	{
+		cout << "~A()" << endl;
+	}
+private:
+	int _a1 = 0;
+	int _a2 = 0;
+}; 
+
+struct DeleteFile
+{
+	void operator()(FILE* ptr)
+	{
+		cout << "fclose:" << ptr << endl;
+		fclose(ptr);
+	}
+};
+
+int main()
+{
+	// 我们自定义的删除器在类模板参数给 -- 类型
+	fmy::unique_ptr<A> up1(new A);
+	fmy::unique_ptr<A, DeleteArray<A>> up2(new A[10]);
+	fmy::unique_ptr<FILE, DeleteFile> up3(fopen("test.txt", "w"));
+
+	// 标椎库删除器在构造函数的参数给 -- 对象
+	std::shared_ptr<A> sp1(new A);
+	std::shared_ptr<A> sp2(new A[10], DeleteArray<A>());
+	std::shared_ptr<FILE> sp3(fopen("test.txt", "w"), DeleteFile());
+
+	std::shared_ptr<A> sp4(new A[10], [](A* p) {delete[] p; });
+	std::shared_ptr<FILE> sp5(fopen("test.txt", "w"), [](FILE* p) {fclose(p); });
+
+	return 0;
 }
 ```
