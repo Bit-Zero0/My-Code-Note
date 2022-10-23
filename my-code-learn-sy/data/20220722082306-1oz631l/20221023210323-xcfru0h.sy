@@ -1,0 +1,985 @@
+{
+	"ID": "20221023210323-xcfru0h",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221023210323-xcfru0h",
+		"title": "C++类型转换",
+		"updated": "20221023210350"
+	},
+	"Children": [
+		{
+			"ID": "20221023210350-xojq8rc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221023210350-xojq8rc",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C语言中的类型转换"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-0e283q9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-0e283q9",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " 在C语言中，如果"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "赋值运算符左右两侧类型不同，或者形参与实参类型不匹配，或者返回值类型与接收返回值类型不一致时，就需要发生类型转化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，C语言中总共有两种形式的类型转换:隐式类型转换和显式类型转换。"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-cmmlng4",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221023210350-cmmlng4",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"ID": "20221023210350-x2pwhms",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221023210350-x2pwhms",
+						"updated": "20221023210350"
+					},
+					"Children": [
+						{
+							"ID": "20221023210350-551szc2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221023210350-551szc2",
+								"updated": "20221023210350"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "隐式类型转化:编译器在编译阶段自动进行，能转就转，不能转就编译失败"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221023210350-3efp7sl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221023210350-3efp7sl",
+						"updated": "20221023210350"
+					},
+					"Children": [
+						{
+							"ID": "20221023210350-csrswkn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221023210350-csrswkn",
+								"updated": "20221023210350"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "显式类型转化:需要用户自己处理"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-j2m6g9d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221023210350-j2m6g9d",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "void Test ()\n{\n\tint i = 1; \n\t// 隐式类型转换 \n\tdouble d = i;\n\tprintf(\"%d, %.2f\\n\" , i, d); \n\n\tint* p = \u0026i;\n\t// 显示的强制类型转换 \n\tint address = (int) p;\n\n\tprintf(\"%x, %d\\n\" , p, address);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-ajun5ab",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-ajun5ab",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "缺陷：  转换的可视性比较差，所有的转换形式都是以一种相同形式书写，难以跟踪错误的转换"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221023210354-cohdqj4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210354-cohdqj4"
+			}
+		},
+		{
+			"ID": "20221023210350-y5mhwlq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221023210350-y5mhwlq",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++强制类型转换"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-mg6nhrg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-mg6nhrg",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "标准C++为了加强类型转换的可视性，引入了四种命名的强制类型转换操作符：\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "static_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "reinterpret_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "const_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "dynamic_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ."
+				}
+			]
+		},
+		{
+			"ID": "20221023210358-m0p9e3g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210358-m0p9e3g"
+			}
+		},
+		{
+			"ID": "20221023210350-e5ytrj7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221023210350-e5ytrj7",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "static_cast"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-wt26vzg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-wt26vzg",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "static_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "非多态类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的转换（静态转换），编译器隐式执行的任何类型转换都可用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "static_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但它"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不能用于两个不相关的类型进行转换"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-1cs70fe",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221023210350-1cs70fe",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": " int main()\n {\n\t double d = 12.34;\n\t int a = static_cast\u003cint\u003e(d);\n\t cout \u003c\u003c a \u003c\u003c endl;\n\t return 0;\n }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221023210401-cn8sdus",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210401-cn8sdus"
+			}
+		},
+		{
+			"ID": "20221023210350-xm6wcrl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221023210350-xm6wcrl",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "reinterpret_cast"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-taal8yg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-taal8yg",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "reinterpret_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "操作符通常为操作数的位模式提供较低层次的重新解释，"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "用于将一种类型转换为另一种不同的类型"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-ptje12n",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221023210350-ptje12n",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "typedef void (* FUNC)(); \nint DoSomething (int i)\n{\n\tcout\u003c\u003c\"DoSomething\" \u003c\u003cendl; \n\treturn 0;\n}\n\nvoid Test () \n{\n\t//\n\t// reinterpret_cast可以编译器以FUNC的定义方式去看待DoSomething函数\n\t// 所以非常的BUG，下面转换函数指针的代码是不可移植的，所以不建议这样用 \n\t// C++不保证所有的函数指针都被一样的使用，所以这样用有时会产生不确定的结果 \n\t//\n\tFUNC f = reinterpret_cast\u003c FUNC\u003e(DoSomething ); \n\tf();\n }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221023210405-788032f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210405-788032f"
+			}
+		},
+		{
+			"ID": "20221023210350-yabf9s9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221023210350-yabf9s9",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "const_cast"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-8bgzfkn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-8bgzfkn",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "const_cast"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最常用的用途就是删除变量的const属性，方便赋值"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,const属性被去掉以后，会被修改。小心跟编译器优化冲突误判 但是最好很voliate关键字一起使用。"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-z762p0v",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221023210350-z762p0v",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "void Test () \n {\n\tvoliate const int a = 2;\n\tint* p = const_cast\u003c int*\u003e(\u0026a ); //虽然使用了const_cast取消了常量属性，但是编译器还是会对其进行优化，所以最好在被const修饰的变量上使用voliate关键字\n\t*p = 3;\n\tcout\u003c\u003ca \u003c\u003cendl; \n }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221023210408-zsafc10",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210408-zsafc10"
+			}
+		},
+		{
+			"ID": "20221023210350-ga2hu3d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221023210350-ga2hu3d",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "dynamic_cast"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-8epelep",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-8epelep",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "dynamic_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "将一个父类对象的指针/引用转换为子类对象的指针或引用(动态转换)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "向上转型"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：子类对象指针/引用-\u003e父类指针/引用(不需要转换，赋值兼容规则)\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "向下转型"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：父类对象指针/引用-\u003e子类指针/引用(用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "dynamic_cast"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "转型是安全的)"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-bh6ycnf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-bh6ycnf",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-r44a9ne",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221023210350-r44a9ne",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"ID": "20221023210350-wngk2t2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221023210350-wngk2t2",
+						"updated": "20221023210350"
+					},
+					"Children": [
+						{
+							"ID": "20221023210350-atoqlfs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221023210350-atoqlfs",
+								"updated": "20221023210350"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "dynamic_cast"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只能用于含有虚函数的类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221023210350-9xxbeq1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221023210350-9xxbeq1",
+						"updated": "20221023210350"
+					},
+					"Children": [
+						{
+							"ID": "20221023210350-rp9uhtf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221023210350-rp9uhtf",
+								"updated": "20221023210350"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "dynamic_cast"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "会"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "先检查"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是否能转换成功，能成功则转换，不能则返回0."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-5y58fi7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221023210350-5y58fi7",
+				"updated": "20221023210350"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class A\n {\npublic :\n\texplicit A (int a) \n    {\n\t\tcout\u003c\u003c\"A(int a)\" \u003c\u003cendl;\n    }\n\n\tA(const A\u0026 a) \n    {\n\t    cout\u003c\u003c\"A(const A\u0026 a)\" \u003c\u003cendl;\n    } \nprivate :\n\tint _a ; \n };\n \nint main () \n {\n\tA a1 (1)\n\n\t// 隐式转换-\u003e A tmp(1); A a2(tmp); \n\tA a2 = 1;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221023210350-uvprneb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210350-uvprneb"
+			}
+		},
+		{
+			"ID": "20221023210849-8ahljnc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221023210849-8ahljnc"
+			}
+		}
+	]
+}
