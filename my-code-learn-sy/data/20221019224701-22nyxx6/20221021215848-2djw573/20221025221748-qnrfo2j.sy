@@ -1,0 +1,319 @@
+{
+	"ID": "20221025221748-qnrfo2j",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221025221748-qnrfo2j",
+		"title": "TCP套接字实现代码(线程池版)",
+		"updated": "20221025221925"
+	},
+	"Children": [
+		{
+			"ID": "20221025221810-cj7nbmf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221810-cj7nbmf",
+				"updated": "20221025221810"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现的是短链接版本，每个链接者只能发送一次消息。可以加while循环该为长链接。\n我们将server端获取数据的工作交给了Task，由Task对消息进行处理。"
+				}
+			]
+		},
+		{
+			"ID": "20221025221813-wwz4ww8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221813-wwz4ww8"
+			}
+		},
+		{
+			"ID": "20221025221810-mjspe4b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221810-mjspe4b",
+				"updated": "20221025221810"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "tcp_server.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221025221810-da75thl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221025221810-da75thl",
+				"updated": "20221025221810"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cstring\u003e\n#include \u003ccstring\u003e\n#include \u003ccerrno\u003e\n#include \u003csys/socket.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003carpa/inet.h\u003e\n#include \u003cnetinet/in.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003csignal.h\u003e\n#include \u003csys/wait.h\u003e\n#include \u003cpthread.h\u003e\n\n#include \"thread_pool.hpp\"\n#include \"Task.hpp\"\n\nusing namespace fmy_task;\nusing namespace fmy_threadPool;\n\nvoid Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage:\" \u003c\u003c proc \u003c\u003c \"port\" \u003c\u003c std::endl;\n}\n\nint main(int argc , char* argv[])\n{\n    if(argc != 2)\n    {\n        Usage(argv[0]);\n        return 1;\n    }\n\n    int listen_sock = socket(AF_INET , SOCK_STREAM , 0);\n    if(listen_sock \u003c 0)\n    {\n        std::cerr \u003c\u003c \"socket error\" \u003c\u003c errno \u003c\u003c std::endl;\n        return 2;\n    }\n\n    struct sockaddr_in local;\n    memset(\u0026local , 0 , sizeof(local));\n    local.sin_port = htons(atoi(argv[1]));\n    local.sin_family = AF_INET;\n    local.sin_addr.s_addr = INADDR_ANY;\n\n    if(bind(listen_sock , (struct sockaddr *)\u0026local , sizeof(local)) \u003c 0)\n    {\n        std::cerr \u003c\u003c \"bind error \" \u003c\u003c errno \u003c\u003c std::endl;\n        return 3;\n    }\n\n\n    const int back_log = 5;\n    if(listen(listen_sock ,back_log) \u003c 0)\n    {\n        std::cerr \u003c\u003c \"listen error\" \u003c\u003c errno \u003c\u003c std::endl;\n        return 4;\n    }\n\n    signal(SIGCHLD , SIG_IGN);//在Linux中父进程忽略子进程的SIGCHLD信号，子进程会自动退出释放资源\n\n    while(true)\n    {\n        struct sockaddr_in peer;\n        socklen_t len = sizeof(peer);\n        int new_sock = accept(listen_sock ,(struct sockaddr*)\u0026peer , \u0026len);\n        if(new_sock \u003c 0)\n        {\n            continue;\n        }\n        uint16_t cli_port = ntohs(peer.sin_port);\n        std::string cli_ip = inet_ntoa(peer.sin_addr);\n\n        std::cout \u003c\u003c \"get a new link -\u003e [\" \u003c\u003c cli_ip \u003c\u003c \":\" \u003c\u003c cli_port \u003c\u003c \"]#\" \u003c\u003c new_sock \u003c\u003c std::endl;\n\n        Task t(new_sock);\n        ThreadPool\u003cTask\u003e::GetInstance()-\u003ePushTask(t);\n\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221025221818-nrxae9r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221818-nrxae9r"
+			}
+		},
+		{
+			"ID": "20221025221810-607ow55",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221810-607ow55",
+				"updated": "20221025221810"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Task.hpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221025221919-2liuq0p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221919-2liuq0p",
+				"updated": "20221025221925"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对数据进行处理"
+				}
+			]
+		},
+		{
+			"ID": "20221025221810-kelryiw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221025221810-kelryiw",
+				"updated": "20221025221810"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003ccstring\u003e\n#include \u003cunistd.h\u003e\n\nnamespace fmy_task\n{\n    class Task\n    {\n    private:\n        int _sock;\n    public:\n        Task() :_sock(-1){}\n\n        Task(int sock) : _sock(sock)\n        {}\n\n        int Run() //接收并打印client端发送的信息，实现的是短链接，\n        {\n            // while(true) //使用while既是长链接\n            // {\n            char buffer[1024];\n            memset(buffer , 0  , sizeof(buffer));\n            ssize_t s = read(_sock , buffer , sizeof(buffer));\n            if(s \u003e 0)\n            {\n                buffer[s] = 0;\n                std::cout \u003c\u003c \"client#\" \u003c\u003c buffer \u003c\u003c std::endl;\n\n                std::string echo_string = \"\u003e\u003e\u003eserver\u003c\u003c\u003c\";\n                echo_string+=buffer;\n\n                write(_sock , echo_string.c_str() , echo_string.size());\n            }\n            else if (s == 0)\n            {\n                std::cout \u003c\u003c \"client quit ...\" \u003c\u003c std::endl;\n                //break;\n            }\n            else{\n                std::cerr \u003c\u003c \"read error\" \u003c\u003c std::endl;\n                //break;\n            }\n            // }\n\n            close(_sock); //用完就关闭，以免一直占用这个fd\n        }\n\n        ~Task() {}\n    };\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221025221828-tgoya7m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221828-tgoya7m"
+			}
+		},
+		{
+			"ID": "20221025221810-581ggp4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221810-581ggp4",
+				"updated": "20221025221810"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "thread_pool.hpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n线程池文件，使用的是单例模式构建的线程池"
+				}
+			]
+		},
+		{
+			"ID": "20221025221810-r7liaoc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221025221810-r7liaoc",
+				"updated": "20221025221810"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003cqueue\u003e\n#include \u003cpthread.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring\u003e\n\nnamespace fmy_threadPool\n{\n    const int g_num = 5;\n\n    template\u003cclass T\u003e\n    class ThreadPool\n    {\n    private:\n        int _num;\n        std::queue\u003cT\u003e _task_queue;\n\n        pthread_mutex_t  _mtx;\n        pthread_cond_t _cond;\n\n        static ThreadPool\u003cT\u003e* ins;\n\n    private:\n        ThreadPool(int num = g_num)// 构造函数必须得实现，但是必须的私有化\n            :_num(num)\n        {\n            pthread_mutex_init(\u0026_mtx , nullptr);\n            pthread_cond_init(\u0026_cond , nullptr);\n        }\n\n        ThreadPool(const ThreadPool\u003cT\u003e\u0026 tp) = delete;\n\n        ThreadPool\u003cT\u003e \u0026operator=(ThreadPool\u003cT\u003e \u0026tp) = delete;\n\n    public:\n        static ThreadPool\u003cT\u003e* GetInstance()\n        {\n            static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;\n\n            if(ins == nullptr)//双判定，减少锁的争用，提高获取单例的效率！\n            {\n                pthread_mutex_lock(\u0026lock);\n                if(ins == nullptr)\n                {\n                    ins = new ThreadPool\u003cT\u003e();\n                    ins-\u003eInitThreadPool();\n                    std::cout \u003c\u003c \"首次加载对象\"\u003c\u003c std:: endl;\n                }\n\n                pthread_mutex_unlock(\u0026lock);\n            }\n            return ins;\n        }\n\n        void Lock()\n        {\n            pthread_mutex_lock(\u0026_mtx);\n        }\n\n        void Unlock()\n        {\n            pthread_mutex_unlock(\u0026_mtx);\n        }\n\n        void Wait()\n        {\n            pthread_cond_wait(\u0026_cond , \u0026_mtx);\n        }\n\n        void WakeUp()\n        {\n            pthread_cond_signal(\u0026_cond);\n        }\n\n        bool IsEmpty()\n        {\n            return _task_queue.empty();\n        }\n\n    public:\n        ~ThreadPool()\n        {\n            pthread_mutex_destroy(\u0026_mtx);\n            pthread_cond_destroy(\u0026_cond);\n        }\n\n        // 在类中要让线程执行类内成员方法，是不可行的！\n        // 必须让线程执行静态方法\n        static void *Rountine(void* args)\n        {\n            pthread_detach(pthread_self());\n            ThreadPool\u003cT\u003e* tp = (ThreadPool\u003cT\u003e*)args;\n\n            while(true)\n            {\n                tp-\u003eLock();\n                while(tp-\u003eIsEmpty())\n                {\n                    tp-\u003eWait();\n                }\n\n                T t;\n                tp-\u003ePopTask(\u0026t);\n                tp-\u003eUnlock();\n                t.Run();\n            }\n        }\n\n        void InitThreadPool()\n        {\n            pthread_t tid;\n            for(int i = 0 ; i \u003c _num; i++)\n            {\n                pthread_create(\u0026tid , nullptr , Rountine , (void*)this);\n            }\n        }\n\n        void PushTask(const T\u0026 in)\n        {\n            Lock();\n            _task_queue.push(in);\n\n            Unlock();\n            WakeUp();\n        }\n\n        void PopTask(T* out)\n        {\n            *out = _task_queue.front();\n            _task_queue.pop();\n        }\n\n\n    };\n\n    template \u003cclass T\u003e\n    ThreadPool\u003cT\u003e *ThreadPool\u003cT\u003e::ins = nullptr;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221025221859-pzi8wvm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221859-pzi8wvm"
+			}
+		},
+		{
+			"ID": "20221025221810-hipvj2o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221810-hipvj2o",
+				"updated": "20221025221848"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时当连接者退出时，相应的fd也会关闭了\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221025204927"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221025204927-20221025221848-f806q0g.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		}
+	]
+}

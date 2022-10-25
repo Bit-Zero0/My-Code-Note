@@ -1,0 +1,166 @@
+{
+	"ID": "20221025221603-axmbw44",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221025221603-axmbw44",
+		"title": "TCP套接字实现代码（多线程版）",
+		"updated": "20221025221658"
+	},
+	"Children": [
+		{
+			"ID": "20221025221631-kuy4ybm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221631-kuy4ybm",
+				"updated": "20221025221631"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "曾经被主线程打开的fd，新线程是否能看到，是否共享？能看到，是共享的"
+				}
+			]
+		},
+		{
+			"ID": "20221025221631-ut6qtel",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221631-ut6qtel",
+				"updated": "20221025221643"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "tcp.server.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221025221631-pybpkhb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221025221631-pybpkhb",
+				"updated": "20221025221631"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cstring\u003e\n#include \u003ccstring\u003e\n#include \u003ccerrno\u003e\n#include \u003csys/socket.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003carpa/inet.h\u003e\n#include \u003cnetinet/in.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003csignal.h\u003e\n#include \u003csys/wait.h\u003e\n#include \u003cpthread.h\u003e\n\nvoid Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage:\" \u003c\u003c proc \u003c\u003c \"port\" \u003c\u003c std::endl;\n}\n\nvoid ServiceIO(int new_sock)\n{\n    while(true)\n    {\n        char buffer[1024];\n        memset(buffer , 0  , sizeof(buffer));\n        ssize_t s = read(new_sock , buffer , sizeof(buffer));\n        if(s \u003e 0)\n        {\n            buffer[s] = 0;\n            std::cout \u003c\u003c \"client#\" \u003c\u003c buffer \u003c\u003c std::endl;\n\n            std::string echo_string = \"\u003e\u003e\u003eserver\u003c\u003c\u003c\";\n            echo_string+=buffer;\n\n            write(new_sock , echo_string.c_str() , echo_string.size());\n        }\n        else if (s == 0)\n        {\n            std::cout \u003c\u003c \"client quit ...\" \u003c\u003c std::endl;\n            break;\n        }\n        else{\n            std::cout \u003c\u003c \"client quit ...\" \u003c\u003c std::endl;\n            break;\n        }\n    }\n}\n\nvoid *HandlerRequest(void *args)\n{\n    pthread_detach(pthread_self());\n    int sock = *(int *)args;\n    delete (int*)args;\n\n    ServiceIO(sock);\n    close(sock);\n}\n\nint main(int argc , char* argv[])\n{\n    if(argc != 2)\n    {\n        Usage(argv[0]);\n        return 1;\n    }\n\n    int listen_sock = socket(AF_INET , SOCK_STREAM , 0);\n    if(listen_sock \u003c 0)\n    {\n        std::cerr \u003c\u003c \"socket error\" \u003c\u003c errno \u003c\u003c std::endl;\n        return 2;\n    }\n\n    struct sockaddr_in local;\n    memset(\u0026local , 0 , sizeof(local));\n    local.sin_port = htons(atoi(argv[1]));\n    local.sin_family = AF_INET;\n    local.sin_addr.s_addr = INADDR_ANY;\n\n    if(bind(listen_sock , (struct sockaddr *)\u0026local , sizeof(local)) \u003c 0)\n    {\n        std::cerr \u003c\u003c \"bind error \" \u003c\u003c errno \u003c\u003c std::endl;\n        return 3;\n    }\n\n\n    const int back_log = 5;\n    if(listen(listen_sock ,back_log) \u003c 0)\n    {\n        std::cerr \u003c\u003c \"listen error\" \u003c\u003c errno \u003c\u003c std::endl;\n        return 4;\n    }\n\n    signal(SIGCHLD , SIG_IGN);//在Linux中父进程忽略子进程的SIGCHLD信号，子进程会自动退出释放资源\n\n    while(true)\n    {\n        struct sockaddr_in peer;\n        socklen_t len = sizeof(peer);\n        int new_sock = accept(listen_sock ,(struct sockaddr*)\u0026peer , \u0026len);\n        if(new_sock \u003c 0)\n        {\n            continue;\n        }\n        uint16_t cli_port = ntohs(peer.sin_port);\n        std::string cli_ip = inet_ntoa(peer.sin_addr);\n\n        std::cout \u003c\u003c \"get a new link -\u003e [\" \u003c\u003c cli_ip \u003c\u003c \":\" \u003c\u003c cli_port \u003c\u003c \"]#\" \u003c\u003c new_sock \u003c\u003c std::endl;\n\n       pthread_t tid;\n       int* pram = new int(new_sock);\n       pthread_create(\u0026tid, nullptr, HandlerRequest, pram);\n    }\n\n\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221025221650-20xzlsz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221650-20xzlsz"
+			}
+		},
+		{
+			"ID": "20221025221631-5ekp5l9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221025221631-5ekp5l9",
+				"updated": "20221025221631"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "tcp_client.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221025221631-opec63f",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221025221631-opec63f",
+				"updated": "20221025221631"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n#include \u003cnetinet/in.h\u003e\n#include \u003carpa/inet.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003csys/socket.h\u003e\n#include \u003ccerrno\u003e\n#include \u003ccstring\u003e\n#include \u003cstring\u003e\n\nvoid Usage(std::string proc )\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" server_ip server_port\" \u003c\u003c std::endl;\n}\n\nint main(int argc , char* argv[])\n{\n    if(argc != 3)\n    {\n        Usage(argv[0]);\n        return 1;\n    }\n\n    std::string svr_ip = argv[1];\n    uint16_t svr_port = (uint16_t)atoi(argv[2]);\n\n    int sock = socket(AF_INET , SOCK_STREAM , 0);\n    if(sock \u003c  0)\n    {\n        std::cerr \u003c\u003c \"socket error!\" \u003c\u003c std::endl;\n        return 2;\n    }\n\n    struct sockaddr_in server ;\n    bzero(\u0026server , sizeof(server));\n    server.sin_family = AF_INET;\n    server.sin_port =htons(svr_port);\n    server.sin_addr.s_addr =  inet_addr(svr_ip.c_str());\n\n    if(connect(sock , (struct sockaddr*)\u0026server , sizeof(server)) \u003c 0)\n    {\n        std::cout \u003c\u003c \"connect server failed !\" \u003c\u003c std::endl;\n        return 3;\n    }\n\n    std::cout \u003c\u003c \"connect success!\" \u003c\u003c std::endl;\n\n    while(true)\n    {\n        std::cout \u003c\u003c \"Please Enter# \";\n        char buffer[1024];\n\n        fgets(buffer , sizeof(buffer)-1 , stdin);\n\n        write(sock , buffer , sizeof(buffer));\n        ssize_t s = read(sock , buffer , sizeof(buffer)-1);\n\n        if(s \u003e 0)\n        {\n            buffer[s] = 0;\n            std::cout \u003c\u003c \"server echo# \"\u003c\u003c buffer \u003c\u003c std::endl;\n        }\n    }\n\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}
