@@ -1,0 +1,405 @@
+{
+	"ID": "20221026225732-wq0yetn",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221026225732-wq0yetn",
+		"title": "方案二代码",
+		"updated": "20221026230034"
+	},
+	"Children": [
+		{
+			"ID": "20221026225417-ym8etbg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-ym8etbg",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Protocol.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n协议文件，增加了使用json来进行序列化和反序列化的过程"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-fjuxkph",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-fjuxkph",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cstring\u003e\n#include \u003cjsoncpp/json/json.h\u003e\n\nusing namespace std;\n\ntypedef  struct response{\n    int code ; // server运算完毕的计算状态: code(0:success), code(-1: div 0)\n    int result; // 计算结果， 能否区分是正常的计算结果，还是异常的退出结果\n}response_t;\n\n\ntypedef struct request{\n    int x ;\n    int y ;\n    char op;\n}request_t;\n\n//request_t -\u003e string\nstd::string SerializeRequest(const request_t\u0026 req)\n{\n    //序列化\n    Json::Value root;//可以承装任何对象， json是一种kv式的序列化方案\n    root[\"data_x\"] = req.x;\n    root[\"data_y\"] = req.y;\n    root[\"operator\"] = req.op;\n\n\n    Json::FastWriter writer;\n    std::string json_string = writer.write(root);\n\n    return json_string;\n}\n\n// string -\u003e request_t\nvoid DeserializeRequest(const std::string\u0026 json_string , request_t\u0026 out)\n{\n    //反序列化\n    Json::Reader reader;\n    Json::Value root;\n\n    reader.parse(json_string , root);\n    out.x = root[\"data_x\"].asInt();\n    out.y = root[\"data_y\"].asInt();\n    out.op = (char)root[\"operator\"].asInt();\n}\n\n\nstd::string SerializeResponse(const response_t\u0026 resp)\n{\n    //序列化\n    Json::Value root;\n    root[\"code\"] = resp.code;\n    root[\"result\"] = resp.result;\n\n    Json::FastWriter writer;\n    std::string res = writer.write(root);\n\n    return res;\n}\n\nvoid DeserializeResponse(const std::string\u0026 json_string  , response_t\u0026 out)\n{\n    //反序列化\n    Json::Reader reader;\n    Json:: Value root;\n\n    reader.parse(json_string , root);\n    out.code = root[\"code\"].asInt();\n    out.result = root[\"result\"].asInt();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225740-ltwdbl4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225740-ltwdbl4"
+			}
+		},
+		{
+			"ID": "20221026225417-c6d2ikn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-c6d2ikn",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Sock.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-gia9ewc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-gia9ewc",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n#include \u003carpa/inet.h\u003e\n#include \u003csys/socket.h\u003e\n#include \u003cnetinet/in.h\u003e\n#include \u003ccstring\u003e\n#include \u003cstring\u003e\n\nusing namespace std;\n\nclass Sock{\npublic:\n    static int Socket()\n    {\n        int sock = socket(AF_INET , SOCK_STREAM , 0);\n        if(sock \u003c 0)\n        {\n            cerr \u003c\u003c \"socket error\" \u003c\u003c endl;\n            exit(2);\n        }\n        return sock;\n    }\n\n    static void Bind(int sock , uint16_t port)\n    {\n        struct sockaddr_in local;\n        memset(\u0026local , 0 , sizeof(local));\n        local.sin_family = AF_INET;\n        local.sin_port = htons(port);\n        local.sin_addr.s_addr = INADDR_ANY;\n\n        if(bind(sock , (struct sockaddr*)\u0026local , sizeof(local) ) \u003c 0)\n        {\n            cerr\u003c\u003c \"bind error\" \u003c\u003c endl;\n            exit(3);\n        }\n    }\n\n    static void  Listen(int sock)\n    {\n        if(listen(sock , 5) \u003c 0)\n        {\n            cerr \u003c\u003c \"listen error\" \u003c\u003c endl;\n            exit(4);\n        }\n    }\n\n    static int Accept(int sock)\n    {\n        struct sockaddr_in peer;\n        socklen_t len = sizeof(peer);\n        int fd = accept(sock , (struct sockaddr*)\u0026peer , \u0026len);\n\n        if(fd \u003e= 0)\n        {\n            return fd;\n        }\n        return -1;\n    }\n\n    static void Connect(int sock , std::string ip , uint16_t port)\n    {\n        struct sockaddr_in server;\n        memset(\u0026server , 0 , sizeof(server) );\n        server.sin_family = AF_INET;\n        server.sin_port = htons(port);\n        server.sin_addr.s_addr = inet_addr(ip.c_str());\n\n        if(connect(sock , (struct sockaddr*)\u0026server , sizeof(server)) == 0)\n            cout \u003c\u003c \"Connect Success!\" \u003c\u003c endl;\n        else\n        {\n            cout \u003c\u003c \"Connect Error\" \u003c\u003c endl;\n            exit(5);\n        }\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225741-6v9df4c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225741-6v9df4c"
+			}
+		},
+		{
+			"ID": "20221026225417-8lxyyty",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-8lxyyty",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "CalServer.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-1lpz048",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-1lpz048",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cpthread.h\u003e\n#include \"Sock.hpp\"\n#include \"Protocol.hpp\"\n\nvoid Usage(string proc)\n{\n    cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c endl;\n    exit(1);\n}\n\nvoid* HandlerRequest(void* args)\n{\n    int sock = *(int*)args;\n    delete (int*)args;\n    pthread_detach(pthread_self());\n\n\n    char buffer[1024];\n    request_t req;\n    ssize_t s = read(sock , buffer , sizeof(buffer)-1);\n\n    if(s \u003e 0)\n    {\n        buffer[s] = 0;\n        cout \u003c\u003c \"get a new request: \" \u003c\u003c buffer \u003c\u003c endl;\n        std::string str = buffer;\n        DeserializeRequest(str , req);//反序列化请求\n\n        response_t resp = {0, 0};\n        switch (req.op)\n        {\n        case '+':\n            resp.result = req.x + req.y;\n            break;\n        case '-':\n            resp.result = req.x - req.y;\n            break;\n        case '*':\n            resp.result = req.x * req.y;\n            break;\n        case '/':\n            if (req.y == 0)\n                resp.code = -1; //代表除0\n            else\n                resp.result = req.x / req.y;\n            break;\n        case '%':\n            if (req.y == 0)\n                resp.code = -2; //代表模0\n            else\n                resp.result = req.x % req.y;\n            break;\n        default:\n            resp.code = -3; //代表请求方法异常\n            break;\n        }\n         cout \u003c\u003c \"request: \" \u003c\u003c req.x \u003c\u003c req.op \u003c\u003c req.y \u003c\u003c endl;\n         std::string send_string = SerializeResponse(resp);\n         write(sock , send_string.c_str() , send_string.size());\n         cout \u003c\u003c \"服务结束: \" \u003c\u003c send_string \u003c\u003c endl;\n    }\n    close(sock);\n}\n\nint main(int argc , char* argv[])\n{\n    if(argc != 2)\n    {\n        Usage(argv[1]);\n    }\n\n    uint16_t port = atoi(argv[1]);\n\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock , port);\n    Sock::Listen(listen_sock);\n\n    while(true)\n    {\n        int sock = Sock::Accept(listen_sock);\n        if(sock \u003e= 0)\n        {\n            int* pram = new int(sock);\n            pthread_t tid;\n            pthread_create(\u0026tid, nullptr , HandlerRequest , pram);\n        }\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225741-e1pvh0s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225741-e1pvh0s"
+			}
+		},
+		{
+			"ID": "20221026225417-z4el4f2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-z4el4f2",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "CalClient.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-8amq35p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-8amq35p",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"Protocol.hpp\"\n#include \"Sock.hpp\"\n\nvoid Usage(string proc)\n{\n    cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" server_ip server_port\" \u003c\u003c endl;\n}\n\nint main(int argc , char* argv[])\n{\n    if(argc != 3)\n    {\n        Usage(argv[0]);\n        exit(0);\n    }\n\n    int sock = Sock::Socket();\n    Sock::Connect(sock , argv[1] , atoi(argv[2]));\n\n    request_t req ;\n    memset(\u0026req , 0  , sizeof(req));\n    cout \u003c\u003c \"Please Enter Data One# \";\n    cin \u003e\u003e req.x;\n    cout \u003c\u003c \"Please Enter Data Two# \";\n    cin \u003e\u003e req.y;\n    cout \u003c\u003c \"Please Enter operator# \";\n    cin \u003e\u003e req.op;\n\n    std::string json_string = SerializeRequest(req);\n    //ssize_t s = write(sock , \u0026req , sizeof(req));\n    ssize_t s  = write(sock , json_string.c_str() , json_string.size());\n\n    char buffer[1024];\n    s = read(sock , buffer , sizeof(buffer)-1);\n    if(s \u003e 0)\n    {\n        response_t resp;\n        buffer[s] = 0;\n        std::string str = buffer;\n        DeserializeResponse(str , resp);\n\n        cout \u003c\u003c \"code[0 : success]:\" \u003c\u003c resp.code \u003c\u003c endl;\n        cout \u003c\u003c \"result: \" \u003c\u003c resp.result \u003c\u003c std::endl;\n    }\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225817-gyl9a36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225817-gyl9a36",
+				"updated": "20221026230034"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"parent-style": "max-width: 687px;",
+						"style": "width: 677px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221026220601"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221026220601-20221026225925-bwwgt87.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 677px;\" parent-style=\"max-width: 687px;\"}"
+				}
+			]
+		},
+		{
+			"ID": "20221026225818-g66fm4m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225818-g66fm4m",
+				"updated": "20221026230034"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"parent-style": "max-width: 679px;",
+						"style": "width: 669px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221026220708"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221026220708-20221026225939-0x84dzw.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 669px;\" parent-style=\"max-width: 679px;\"}"
+				}
+			]
+		},
+		{
+			"ID": "20221026225942-qd4h3ia",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225942-qd4h3ia"
+			}
+		}
+	]
+}

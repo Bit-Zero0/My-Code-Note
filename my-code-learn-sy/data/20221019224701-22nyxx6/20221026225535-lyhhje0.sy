@@ -1,0 +1,465 @@
+{
+	"ID": "20221026225535-lyhhje0",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221026225535-lyhhje0",
+		"title": "序列化和反序列化",
+		"updated": "20221026230151"
+	},
+	"Children": [
+		{
+			"ID": "20221026225550-fk7ghz4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221026225550-fk7ghz4",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是序列化"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-zgi8aal",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221026225550-zgi8aal",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221026225550-eo1d8k4",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221026225550-eo1d8k4",
+						"updated": "20221026225550"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "程序猿在编写应用程序的时候往往须要将程序的某些数据存储在内存中，然后将其写入某个文件或是将它传输到网络中的还有一台计算机上以实现通讯。这个将程序数据转化成能被存储并传输的格式的过程被称为“序列化”（Serialization），而它的逆过程则可被称为“反序列化”（Deserialization）。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-pae6pyq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-pae6pyq",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "简单来说，序列化就是将对象实例的状态转换为可保持或传输的格式的过程。与序列化相对的是反序列化，它依据流重构对象。这两个过程结合起来，能够轻松地存储和数据传输。比如，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "能够序列化一个对象，然后使用 HTTP 通过 Internet 在client和server之间传输该对象。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-fd2l866",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-fd2l866",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "序列化：将对象变成字节流的形式传出去。"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "反序列化：从字节流恢复成原来的对象。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225553-d5e6j0a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225553-d5e6j0a"
+			}
+		},
+		{
+			"ID": "20221026225550-l5drywq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221026225550-l5drywq",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么要序列化？优点在哪里？"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-vx1c6pu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-vx1c6pu",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "简单来说，对象序列化通经常使用于两个目的："
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-b9dh8en",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221026225550-b9dh8en",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221026225550-mko1ite",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221026225550-mko1ite",
+						"updated": "20221026225550"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "（1） 将对象存储于硬盘上 ，便于以后反序列化使用"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "（2）在网络上传送对象的字节序列"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-wni19uu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-wni19uu",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对象序列化的优点在哪里？网络传输方面的便捷性、灵活性就不说了，这里举个我们常常可能发生的需求：你有一个数据结构，里面存储的数据是经过非常多其他数据通过非常复杂的算法生成的，因为数据量非常大，算法又复杂，因此生成该数据结构所用数据的时间可能要非常久（或许几个小时，甚至几天），生成该数据结构后又要用作其他的计算，那么你在调试阶段，每次执行个程序，就光生成数据结构就要花上这么长的时间，无疑代价是非常大的。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "假设你确定生成数据结构的算法不会变或不常变，那么就能够通过序列化技术生成数据结构数据存储到磁盘上，下次又一次执行程序时仅仅须要从磁盘上读取该对象数据就可以，所花费时间也就读一个文件的时间，可想而知是多么的快，节省了我们的开发时间。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225559-qez5osb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225559-qez5osb"
+			}
+		},
+		{
+			"ID": "20221026225550-01mcmtz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221026225550-01mcmtz",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "怎么实现序列化与反序列化"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-lfuyito",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-lfuyito",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用的序列化有：ProtoBuf序列化 ，  Json序列化 ， Xml序列化"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-hnjl1eg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-hnjl1eg",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是我们主要学习的是使用json序列化"
+				}
+			]
+		},
+		{
+			"ID": "20221026225624-cir0luc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225624-cir0luc"
+			}
+		},
+		{
+			"ID": "20221026225550-fzllyhl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221026225550-fzllyhl",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "json序列化"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-8ixuwsa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221026225550-8ixuwsa",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "jsoncpp安装"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-1j9sgu0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-1j9sgu0",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在linux中，要在C++中使用Json的话需要下载库。"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-65dsoip",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-65dsoip",
+				"updated": "20221026230151"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722140000-dxwart9"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefText",
+							"Data": "yum"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "下载指令"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-dc3j5x5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225550-dc3j5x5",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sudo yum install -y jsoncpp-devel\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225620-9nc5p2o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225620-9nc5p2o"
+			}
+		},
+		{
+			"ID": "20221026225550-ose730n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221026225550-ose730n",
+				"updated": "20221026225550"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "json使用注意事项"
+				}
+			]
+		},
+		{
+			"ID": "20221026225550-og25dsl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225550-og25dsl",
+				"updated": "20221026225612"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "json是外部库，所以需要进行在makefile中对库进行连接 .\n"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220904134255-hux4oyz"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "动态库的使用"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,561 @@
+{
+	"ID": "20221026225404-wlq8q6e",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221026225404-wlq8q6e",
+		"title": "网络基础2",
+		"updated": "20221026230109"
+	},
+	"Children": [
+		{
+			"ID": "20221026225417-ixn6dl4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221026225417-ixn6dl4",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "再谈协议"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-tevvc3b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-tevvc3b",
+				"updated": "20221026225424"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221019224713-ahcoy7z"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "认识 \"协议\""
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中，我们初步认识了协议，那协议应该具体实现呢。"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-40w28b9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-40w28b9",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用一个例子进行说明"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-mdfiz3t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221026225417-mdfiz3t",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "网络版计算器"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-oo7hq2l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-oo7hq2l",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如, 我们需要实现一个服务器版的加法器. 我们需要客户端把要计算的两个加数发过去, 然后由服务器进行计算, 最\n后再把结果返回给客户端."
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-26u4ts8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221026225417-26u4ts8",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221026225417-x14cr0x",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221026225417-x14cr0x",
+						"updated": "20221026225417"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "约定方案一"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ":\n客户端发送一个形如\""
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "1+1"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\"的字符串;\n这个字符串中有两个操作数, 都是整形;\n两个数字之间会有一个字符是运算符, 运算符只能是 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "+"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ;\n数字和运算符之间没有空格;\n..."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-qv83yhe",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221026225417-qv83yhe",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221026225417-57hhhfy",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221026225417-57hhhfy",
+						"updated": "20221026225417"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "约定方案二:"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n定义结构体来表示我们需要交互的信息;\n发送数据时将这个结构体按照一个规则转换成字符串, 接收到数据的时候再按照相同的规则把字符串转化回结构体;\n这个过程叫做 \""
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "序列化"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\" 和 \""
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "反序列化"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-pcj453u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221026225417-pcj453u",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方案一"
+				}
+			]
+		},
+		{
+			"ID": "20221026225433-vaw9894",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225433-vaw9894",
+				"updated": "20221026225442"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221026225442-9g650ob"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "方案一代码"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-npvs180",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221026225417-npvs180",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方案二"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-u6a6l93",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-u6a6l93",
+				"updated": "20221026225658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221026225535-lyhhje0"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "序列化和反序列化"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n我们使用的是 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221026225550-fzllyhl"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "json序列化"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来进行序列化传输。"
+				}
+			]
+		},
+		{
+			"ID": "20221026225712-c8d9sq0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225712-c8d9sq0",
+				"updated": "20221026225733"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221026225732-wq0yetn"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "方案二代码"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-ayd1yks",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-ayd1yks",
+				"updated": "20221026225909"
+			}
+		},
+		{
+			"ID": "20221026225417-uthum6n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221026225417-uthum6n",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "http协议"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-jl65z46",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-jl65z46",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"Sock.hpp\"\n#include \u003cpthread.h\u003e\n\nvoid Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c std::endl;\n}\n\nvoid* HandlerHttpRequest(void* args)\n{\n    int sock = *(int*)args;\n    delete (int*)args;\n    pthread_detach(pthread_self());\n\n#define SIZE 1024*10\n\n    char buffer[SIZE];\n    memset(buffer , 0 ,sizeof(buffer));\n\n    ssize_t s = recv(sock , buffer , sizeof(buffer) , 0 );\n    if(s \u003e 0)\n    {\n        buffer[s] = 0;\n        std::cout \u003c\u003c buffer;//查看http的请求格式! for test\n\n        std::string http_response = \"http/1.0 200 OK\\n\";\n        http_response += \"Content-Type: text/plain\\n\";//text/plain,正文是普通的文本\n        http_response += \"\\n\"; //传说中的空行\n        http_response += \"hello bit , hello fmy\";\n\n        send(sock , http_response.c_str() , http_response.size() , 0);\n    }\n\n    close(sock);\n    return nullptr;\n\n}\n\nint main(int argc , char* argv[])\n{\n    if( argc != 2 )\n    {\n        Usage(argv[0]);\n        exit(1);\n    }\n\n    uint16_t port = atoi(argv[1]);\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock , port);\n    Sock::Listen(listen_sock);\n\n    while(true)\n    {\n        int sock = Sock::Accept(listen_sock);\n        if(sock \u003e 0)\n        {\n            pthread_t tid;\n            int* pram = new int(sock);\n            pthread_create(\u0026tid , nullptr , HandlerHttpRequest , pram);\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-sktzruh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-sktzruh",
+				"updated": "20221026230109"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221026225322"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221026225322-20221026230109-0aso58n.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}

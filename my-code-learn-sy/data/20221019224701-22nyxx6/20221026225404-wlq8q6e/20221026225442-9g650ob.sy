@@ -1,0 +1,337 @@
+{
+	"ID": "20221026225442-9g650ob",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221026225442-9g650ob",
+		"title": "方案一代码",
+		"updated": "20221026225417"
+	},
+	"Children": [
+		{
+			"ID": "20221026225417-2tddjtm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-2tddjtm",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "protocol.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n这其实就是我们的自定义的协议"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-be8p0tq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-be8p0tq",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cstring\u003e\n\nusing namespace std;\n\ntypedef  struct response{\n    int code ; // server运算完毕的计算状态: code(0:success), code(-1: div 0)\n    int result; // 计算结果， 能否区分是正常的计算结果，还是异常的退出结果\n}response_t;\n\n\ntypedef struct request{\n    int x ;\n    int y ;\n    char op;\n}request_t;\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225456-i2pcsa6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225456-i2pcsa6"
+			}
+		},
+		{
+			"ID": "20221026225417-2wqxpts",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-2wqxpts",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Sock.hpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n对tcp套接字进的封装"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-u0uf8yv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-u0uf8yv",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n#include \u003carpa/inet.h\u003e\n#include \u003csys/socket.h\u003e\n#include \u003cnetinet/in.h\u003e\n#include \u003ccstring\u003e\n#include \u003cstring\u003e\n\nusing namespace std;\n\nclass Sock{\npublic:\n    static int Socket()\n    {\n        int sock = socket(AF_INET , SOCK_STREAM , 0);\n        if(sock \u003c 0)\n        {\n            cerr \u003c\u003c \"socket error\" \u003c\u003c endl;\n            exit(2);\n        }\n        return sock;\n    }\n\n    static void Bind(int sock , uint16_t port)\n    {\n        struct sockaddr_in local;\n        memset(\u0026local , 0 , sizeof(local));\n        local.sin_family = AF_INET;\n        local.sin_port = htons(port);\n        local.sin_addr.s_addr = INADDR_ANY;\n\n        if(bind(sock , (struct sockaddr*)\u0026local , sizeof(local) ) \u003c 0)\n        {\n            cerr\u003c\u003c \"bind error\" \u003c\u003c endl;\n            exit(3);\n        }\n    }\n\n    static void  Listen(int sock)\n    {\n        if(listen(sock , 5) \u003c 0)\n        {\n            cerr \u003c\u003c \"listen error\" \u003c\u003c endl;\n            exit(4);\n        }\n    }\n\n    static int Accept(int sock)\n    {\n        struct sockaddr_in peer;\n        socklen_t len = sizeof(peer);\n        int fd = accept(sock , (struct sockaddr*)\u0026peer , \u0026len);\n\n        if(fd \u003e= 0)\n        {\n            return fd;\n        }\n        return -1;\n    }\n\n    static void Connect(int sock , std::string ip , uint16_t port)\n    {\n        struct sockaddr_in server;\n        memset(\u0026server , 0 , sizeof(server) );\n        server.sin_family = AF_INET;\n        server.sin_port = htons(port);\n        server.sin_addr.s_addr = inet_addr(ip.c_str());\n\n        if(connect(sock , (struct sockaddr*)\u0026server , sizeof(server)) == 0)\n            cout \u003c\u003c \"Connect Success!\" \u003c\u003c endl;\n        else\n        {\n            cout \u003c\u003c \"Connect Error\" \u003c\u003c endl;\n            exit(5);\n        }\n    }\n\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225502-q6bblxm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225502-q6bblxm"
+			}
+		},
+		{
+			"ID": "20221026225417-m7k66of",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-m7k66of",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "CalClinet.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n客户端文件"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-xcolrmq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-xcolrmq",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"Protocol.hpp\"\n#include \"Sock.hpp\"\nvoid Usage(string proc)\n{\n    cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" server_ip server_port\" \u003c\u003c endl;\n}\n\nint main(int argc , char* argv[])\n{\n    if(argc != 3)\n    {\n        Usage(argv[0]);\n        exit(0);\n    }\n\n    int sock = Sock::Socket();\n    Sock::Connect(sock , argv[1] , atoi(argv[2]));\n\n\n    request_t req ;\n    memset(\u0026req , 0  , sizeof(req));\n    cout \u003c\u003c \"Please Enter Data One# \";\n    cin \u003e\u003e req.x;\n    cout \u003c\u003c \"Please Enter Data Two# \";\n    cin \u003e\u003e req.y;\n    cout \u003c\u003c \"Please Enter operator# \";\n    cin \u003e\u003e req.op;\n\n    ssize_t s = write(sock , \u0026req , sizeof(req));\n\n    response_t resp;\n    s = read(sock , \u0026resp , sizeof(resp));\n    if(s == sizeof(resp))\n    {\n        cout \u003c\u003c \"code[0 : success]:\" \u003c\u003c resp.code \u003c\u003c endl;\n        cout \u003c\u003c \"result: \" \u003c\u003c resp.result \u003c\u003c std::endl;\n    }\n\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225504-99uobq0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225504-99uobq0"
+			}
+		},
+		{
+			"ID": "20221026225417-nc0p0ed",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225417-nc0p0ed",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "CalServer.cpp"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n服务端文件"
+				}
+			]
+		},
+		{
+			"ID": "20221026225417-24vsqr8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221026225417-24vsqr8",
+				"updated": "20221026225417"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cpthread.h\u003e\n#include \"Sock.hpp\"\n#include \"Protocol.hpp\"\n\n\n\nvoid* HandlerRequest(void* args)\n{\n    int sock = *(int*)args;\n    delete (int*)args;\n\n    pthread_detach(pthread_self());\n\n    request_t req;\n    ssize_t s = read(sock , \u0026req , sizeof(req));\n\n    if(s == sizeof(req))\n    {\n        response_t resp = {0 , 0};\n\n        switch (req.op)\n        {\n        case '+':\n            resp.result = req.x + req.y;\n            break;\n        case '-':\n            resp.result = req.x - req.y;\n            break;\n        case '*':\n            resp.result = req.x * req.y;\n            break;\n        case '/':\n            if (req.y == 0)\n                resp.code = -1; //代表除0\n            else\n                resp.result = req.x / req.y;\n            break;\n        case '%':\n            if (req.y == 0)\n                resp.code = -2; //代表模0\n            else\n                resp.result = req.x % req.y;\n            break;\n        default:\n            resp.code = -3; //代表请求方法异常\n            break;\n        }\n        write(sock , \u0026resp , sizeof(resp));\n    }\n\n}\n\n\nvoid Usage(string proc)\n{\n    cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c endl;\n    exit(1);\n}\n\nint main(int argc , char* argv[])\n{\n    if(argc != 2)\n    {\n        Usage(argv[1]);\n    }\n\n    uint16_t port = atoi(argv[1]);\n\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock , port);\n    Sock::Listen(listen_sock);\n\n\n    while(true)\n    {\n        int sock = Sock::Accept(listen_sock);\n        if(sock \u003e= 0)\n        {\n            //cout \u003c\u003c \"get a new client ...\" \u003c\u003c endl;\n            int* pram = new int(sock);\n            pthread_t tid;\n            pthread_create(\u0026tid, nullptr , HandlerRequest , pram);\n        }\n    }\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221026225517-4yd39xh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225517-4yd39xh"
+			}
+		},
+		{
+			"ID": "20221026225517-bu3x7pv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225517-bu3x7pv"
+			}
+		},
+		{
+			"ID": "20221026225504-jzab29l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221026225504-jzab29l"
+			}
+		}
+	]
+}
