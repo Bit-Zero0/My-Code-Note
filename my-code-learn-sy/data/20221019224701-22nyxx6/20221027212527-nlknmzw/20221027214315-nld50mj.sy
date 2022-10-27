@@ -1,0 +1,385 @@
+{
+	"ID": "20221027214315-nld50mj",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221027214315-nld50mj",
+		"title": "HTTP实现代码(带资源版)",
+		"updated": "20221027215036"
+	},
+	"Children": [
+		{
+			"ID": "20221027212537-zfrr9pf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027212537-zfrr9pf",
+				"updated": "20221027212537"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将客户端在网址中连接时，在网站中显示我们编写的html文件，此资源文件放在wwwroot文件夹下"
+				}
+			]
+		},
+		{
+			"ID": "20221027215036-me60sxm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215036-me60sxm"
+			}
+		},
+		{
+			"ID": "20221027214952-8i98stk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214952-8i98stk",
+				"updated": "20221027215035"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还需要"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221027214625-5z950jo"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "Sock.hpp"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件"
+				}
+			]
+		},
+		{
+			"ID": "20221027214953-0fqixi2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214953-0fqixi2"
+			}
+		},
+		{
+			"ID": "20221027214350-ctdiq0a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214350-ctdiq0a",
+				"updated": "20221027214405"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Http.cpp"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221027212537-lt0a2zb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221027212537-lt0a2zb",
+				"updated": "20221027212537"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"Sock.hpp\"\n#include \u003cpthread.h\u003e\n#include \u003cfstream\u003e\n#include \u003csys/types.h\u003e\n#include \u003csys/stat.h\u003e\n#include \u003cunistd.h\u003e\n\n#define WWWROOT \"./wwwroot/\"  //用于寻找资源\n#define HOME_PAGE \"index.html-abc\"\n\nvoid Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c std::endl;\n}\n\nvoid *HandlerHttpRequest(void *args)\n{\n    int sock = *(int *)args;\n    delete (int *)args;\n    pthread_detach(pthread_self());\n\n#define SIZE 1024 * 10\n\n    char buffer[SIZE];\n    memset(buffer, 0, sizeof(buffer));\n\n    ssize_t s = recv(sock, buffer, sizeof(buffer), 0); // 这种读法是不正确的，只不过在现在没有被暴露出来罢了\n    if (s \u003e 0)\n    {\n        buffer[s] = 0;\n        std::cout \u003c\u003c buffer; //查看http的请求格式! for test\n      \n        std::string html_file = WWWROOT;\n        html_file += HOME_PAGE;\n\n        std::ifstream in(html_file); \n        if (!in.is_open())//资源文件不存在\n        {\n            std::string http_response = \"http/1.0 404 NOT FOUND\\n\";\n            http_response += \"Content-Type: text/html ; charset=utf-8\\n\"; // text/html,正文是html文件格式，编码为UTF-8\n            http_response += \"\\n\";                       //传说中的空行\n            http_response += \"\u003chtml\u003e\u003cp\u003e你访问的资源不存在\u003c/p\u003e\u003c/html\u003e\";\n\n            send(sock, http_response.c_str(), http_response.size(), 0);\n\n            in.close();\n        }\n        else//资源文件存在，\n        {\n            struct stat st;\n            stat(html_file.c_str(), \u0026st);\n\n            std::string http_response = \"http/1.0 200 OK\\n\";\n            http_response += \"Content-Type: text/html; charset=uft-8\\n\";\n            http_response += \"Content-Length: \";\n            http_response += std::to_string(st.st_size);\n            http_response += \"\\n\";\n            http_response += \"\\n\";\n\n\t\t\t//将资源内容添加到到HTTP的正文中的\n            std::string content;\n            std::string line;\n            while (std::getline(in, line))\n            {\n                content += line;\n            }\n            http_response += content;\n\n            in.close();\n            send(sock, http_response.c_str(), http_response.size(), 0);\n        }\n    }\n\n    close(sock);\n    return nullptr;\n}\n\nint main(int argc, char *argv[])\n{\n    if (argc != 2)\n    {\n        Usage(argv[0]);\n        exit(1);\n    }\n\n    uint16_t port = atoi(argv[1]);\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock, port);\n    Sock::Listen(listen_sock);\n\n    while (true)\n    {\n        int sock = Sock::Accept(listen_sock);\n        if (sock \u003e 0)\n        {\n            pthread_t tid;\n            int *pram = new int(sock);\n            pthread_create(\u0026tid, nullptr, HandlerHttpRequest, pram);\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221027214344-7jm2c8j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214344-7jm2c8j"
+			}
+		},
+		{
+			"ID": "20221027212537-1xwptjm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027212537-1xwptjm",
+				"updated": "20221027212537"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "wwwroot/index.html"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n在wwwroot文件夹下的资源文件index.html"
+				}
+			]
+		},
+		{
+			"ID": "20221027212537-oauh2b4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221027212537-oauh2b4",
+				"updated": "20221027212537"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\n\u003chead\u003e\n    \u003cmeta charset=\"UTF-8\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003ctitle\u003eDocument\u003c/title\u003e\n\u003c/head\u003e\n\n\u003cbody\u003e\n    \u003ch5\u003ehello 我是首页!\u003c/h5\u003e\n\n    \u003ch5\u003ehello 我是表单!\u003c/h5\u003e\n\n    \u003cform action=\"/a/b/handler_from\" method=\"POST\"\u003e//method可以是 GET 也 可以是POST，\n        姓名: \u003cinput type=\"text\" name=\"name\"\u003e\u003cbr /\u003e\n        密码: \u003cinput type=\"password\" name=\"passwd\"\u003e\u003cbr /\u003e\n        \u003cinput type=\"submit\" value=\"登陆\"\u003e\n    \u003c/form\u003e\n\u003c/body\u003e\n\n\u003c/html\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221027214345-e36swp8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214345-e36swp8"
+			}
+		},
+		{
+			"ID": "20221027212537-0cftsth",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027212537-0cftsth",
+				"updated": "20221027214440"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在资源文件中使用 GET 方法进行推送数据时，我们的输入信息会在输入框中，所以GET是不安全的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221027183205"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221027183205-20221027214440-mdvpvsa.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20221027214443-razn2hj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214443-razn2hj",
+				"updated": "20221027214558"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "POST方法比较私密("
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "私密 != 安全"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ") ，使用抓包工具，还是能获取到POST提交的信息。"
+				}
+			]
+		},
+		{
+			"ID": "20221027214449-batql3l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214449-batql3l"
+			}
+		},
+		{
+			"ID": "20221027212537-8denk8e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027212537-8denk8e",
+				"updated": "20221027214509"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：我们404状态码，是客户端的问题，因为客户不可能想要什么，服务端就有什么。该文件或资源是在服务端中没有的\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221027183458"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221027183458-20221027214505-lzo20uv.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221027214511-vinv0si",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214511-vinv0si"
+			}
+		},
+		{
+			"ID": "20221027214515-zeg6mdw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214515-zeg6mdw"
+			}
+		}
+	]
+}

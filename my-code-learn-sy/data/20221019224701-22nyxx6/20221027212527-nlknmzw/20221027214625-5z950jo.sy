@@ -1,0 +1,38 @@
+{
+	"ID": "20221027214625-5z950jo",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221027214625-5z950jo",
+		"title": "Sock.hpp",
+		"updated": "20221027214943"
+	},
+	"Children": [
+		{
+			"ID": "20221027214625-e3eeq86",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221027214625-e3eeq86",
+				"updated": "20221027214943"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n#include \u003carpa/inet.h\u003e\n#include \u003csys/socket.h\u003e\n#include \u003csys/types.h\u003e\n#include \u003cnetinet/in.h\u003e\n#include \u003ccstring\u003e\n#include \u003cstring\u003e\n\n\nusing namespace std;\n\nclass Sock{\npublic:\n    static int Socket()\n    {\n        int sock = socket(AF_INET , SOCK_STREAM , 0);\n        if(sock \u003c 0)\n        {\n            cerr \u003c\u003c \"socket error\" \u003c\u003c endl;\n            exit(2);\n        }\n        return sock;\n    }\n\n    static void Bind(int sock , uint16_t port)\n    {\n        struct sockaddr_in local;\n        memset(\u0026local , 0 , sizeof(local));\n        local.sin_family = AF_INET;\n        local.sin_port = htons(port);\n        local.sin_addr.s_addr = INADDR_ANY;\n\n        if(bind(sock , (struct sockaddr*)\u0026local , sizeof(local) ) \u003c 0)\n        {\n            cerr\u003c\u003c \"bind error\" \u003c\u003c endl;\n            exit(3);\n        }\n    }\n\n    static void  Listen(int sock)\n    {\n        if(listen(sock , 5) \u003c 0)\n        {\n            cerr \u003c\u003c \"listen error\" \u003c\u003c endl;\n            exit(4);\n        }\n    }\n\n    static int Accept(int sock)\n    {\n        struct sockaddr_in peer;\n        socklen_t len = sizeof(peer);\n        int fd = accept(sock , (struct sockaddr*)\u0026peer , \u0026len);\n\n        if(fd \u003e= 0)\n        {\n            return fd;\n        }\n        return -1;\n    }\n\n    static void Connect(int sock , std::string ip , uint16_t port)\n    {\n        struct sockaddr_in server;\n        memset(\u0026server , 0 , sizeof(server) );\n        server.sin_family = AF_INET;\n        server.sin_port = htons(port);\n        server.sin_addr.s_addr = inet_addr(ip.c_str());\n\n        if(connect(sock , (struct sockaddr*)\u0026server , sizeof(server)) == 0)\n            cout \u003c\u003c \"Connect Success!\" \u003c\u003c endl;\n        else\n        {\n            cout \u003c\u003c \"Connect Error\" \u003c\u003c endl;\n            exit(5);\n        }\n    }\n\n};\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

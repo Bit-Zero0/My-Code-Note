@@ -1,0 +1,226 @@
+{
+	"ID": "20221027213812-7zjbrdf",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221027213812-7zjbrdf",
+		"title": "HTTP实现代码(简陋版)",
+		"updated": "20221027215027"
+	},
+	"Children": [
+		{
+			"ID": "20221027213854-nqexagd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027213854-nqexagd",
+				"updated": "20221027213854"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此版本有很多细节没有实现。\n如Content-Length，和读取问题等"
+				}
+			]
+		},
+		{
+			"ID": "20221027213854-dvwcnrg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027213854-dvwcnrg",
+				"updated": "20221027213854"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "recv"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数读取http协议的报文时是有问题的，tcp给我们的数据有可能是连续的 ，而recv读取的报文大小的固定的，所以读取的时候有可能会出现的少读或读到下一个报文的数据，所以不建议使用。（下面代码不出错是因为，每次读取时只有一条报文）"
+				}
+			]
+		},
+		{
+			"ID": "20221027215022-28qtwz9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215022-28qtwz9"
+			}
+		},
+		{
+			"ID": "20221027215018-plqfclo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215018-plqfclo",
+				"updated": "20221027215027"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还需要"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221027214625-5z950jo"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "Sock.hpp"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件"
+				}
+			]
+		},
+		{
+			"ID": "20221027215018-eojsu47",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215018-eojsu47"
+			}
+		},
+		{
+			"ID": "20221027213932-4mlhiqp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027213932-4mlhiqp",
+				"updated": "20221027214805"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Http.cpp"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221027213854-yyy1fry",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221027213854-yyy1fry",
+				"updated": "20221027213854"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"Sock.hpp\"\n#include \u003cpthread.h\u003e\n\nvoid Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c std::endl;\n}\n\nvoid* HandlerHttpRequest(void* args)\n{\n    int sock = *(int*)args;\n    delete (int*)args;\n    pthread_detach(pthread_self());\n\n#define SIZE 1024*10\n\n    char buffer[SIZE];\n    memset(buffer , 0 ,sizeof(buffer));\n\n    ssize_t s = recv(sock, buffer, sizeof(buffer), 0); // 这种读法是不正确的，只不过在现在没有被暴露出来罢了\n    if(s \u003e 0)\n    {\n        buffer[s] = 0;\n        std::cout \u003c\u003c buffer;//查看http的请求格式! for test\n\n        std::string http_response = \"http/1.0 200 OK\\n\";\n        http_response += \"Content-Type: text/plain\\n\";//text/plain,正文是普通的文本\n        http_response += \"\\n\"; //传说中的空行\n        http_response += \"hello bit , hello fmy\";\n\n        send(sock , http_response.c_str() , http_response.size() , 0);\n    }\n\n    close(sock);\n    return nullptr;\n\n}\n\nint main(int argc , char* argv[])\n{\n    if( argc != 2 )\n    {\n        Usage(argv[0]);\n        exit(1);\n    }\n\n    uint16_t port = atoi(argv[1]);\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock , port);\n    Sock::Listen(listen_sock);\n\n    while(true)\n    {\n        int sock = Sock::Accept(listen_sock);\n        if(sock \u003e 0)\n        {\n            pthread_t tid;\n            int* pram = new int(sock);\n            pthread_create(\u0026tid , nullptr , HandlerHttpRequest , pram);\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221027213935-80e0dl7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027213935-80e0dl7",
+				"updated": "20221027213948"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221026225322"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221026225322-20221026230109-0aso58n.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}

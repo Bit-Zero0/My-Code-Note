@@ -1,0 +1,359 @@
+{
+	"ID": "20221027214707-dk54sqc",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221027214707-dk54sqc",
+		"title": "HTTP实现代码(重定向版)",
+		"updated": "20221027215143"
+	},
+	"Children": [
+		{
+			"ID": "20221027212537-olms19g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027212537-olms19g",
+				"updated": "20221027214738"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "301"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "302"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态码都会在响应头里使用字段 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Location"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，指明后续要跳转的 URL，浏览器会自动重定向新的 URL"
+				}
+			]
+		},
+		{
+			"ID": "20221027215041-6luqir1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215041-6luqir1"
+			}
+		},
+		{
+			"ID": "20221027215041-cdnkhth",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215041-cdnkhth",
+				"updated": "20221027215042"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还需要"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221027214625-5z950jo"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "Sock.hpp"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件"
+				}
+			]
+		},
+		{
+			"ID": "20221027215043-5xaq8ag",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215043-5xaq8ag"
+			}
+		},
+		{
+			"ID": "20221027214747-r86ly16",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027214747-r86ly16",
+				"updated": "20221027214827"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Http.cpp"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221027212537-546ew36",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221027212537-546ew36",
+				"updated": "20221027212537"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"Sock.hpp\"\n#include \u003cpthread.h\u003e\n#include \u003cfstream\u003e\n#include \u003csys/types.h\u003e\n#include \u003csys/stat.h\u003e\n#include \u003cunistd.h\u003e\n\n#define WWWROOT \"./wwwroot/\"\n#define HOME_PAGE \"index.html\"\n\nvoid Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c std::endl;\n}\n\nvoid *HandlerHttpRequest(void *args)\n{\n    int sock = *(int *)args;\n    delete (int *)args;\n    pthread_detach(pthread_self());\n\n#define SIZE 1024 * 10\n\n    char buffer[SIZE];\n    memset(buffer, 0, sizeof(buffer));\n\n    ssize_t s = recv(sock, buffer, sizeof(buffer), 0); // 这种读法是不正确的，只不过在现在没有被暴露出来罢了\n    if (s \u003e 0)\n    {\n        buffer[s] = 0;\n        std::cout \u003c\u003c buffer; //查看http的请求格式! for test\n\n        // std::string response = \"http/1.1 301 Permanently moved\\n\"; //永久重定向\n        std::string response = \"http/1,1 302 Found\\n\";//临时重定向\n        response += \"Location: https://www.qq.com\\n\"; //必须含有Location\n        response += \"\\n\";\n\n        send(sock, response.c_str(), response.size(), 0);\n\n        close(sock);\n        return nullptr;\n    }\n}\n\nint main(int argc, char *argv[])\n{\n    if (argc != 2)\n    {\n        Usage(argv[0]);\n        exit(1);\n    }\n\n    uint16_t port = atoi(argv[1]);\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock, port);\n    Sock::Listen(listen_sock);\n\n    while (true)\n    {\n        int sock = Sock::Accept(listen_sock);\n        if (sock \u003e 0)\n        {\n            pthread_t tid;\n            int *pram = new int(sock);\n            pthread_create(\u0026tid, nullptr, HandlerHttpRequest, pram);\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221027212537-5pk2ho1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027212537-5pk2ho1",
+				"updated": "20221027215143"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221027210230"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221027210230-20221027215105-9y9lt5x.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221027210052"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221027210052-20221027215143-xu2xkg6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221027212537-edck8xe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027212537-edck8xe",
+				"updated": "20221027215154"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"parent-style": "max-width: 1091px;",
+						"style": "width: 1081px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221027205736"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221027205736-20221027215154-yqeu7mt.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 1081px;\" parent-style=\"max-width: 1091px;\"}"
+				}
+			]
+		},
+		{
+			"ID": "20221027215144-b9r5qmr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221027215144-b9r5qmr"
+			}
+		}
+	]
+}
