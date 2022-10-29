@@ -1,0 +1,1261 @@
+{
+	"ID": "20221029230645-al5o9lg",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221029230645-al5o9lg",
+		"title": "UDP协议",
+		"updated": "20221029230937"
+	},
+	"Children": [
+		{
+			"ID": "20221029230658-k9d813i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221029230658-k9d813i",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "UDP协议概述"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-8asicaa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-8asicaa",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "传输层另一个重要的协议就是用户数据报协议 UDP。UDP 只在 IP 的数据报服务之上增加了很少一点的功能，这就是复用和分用的功能以及差错检测的功能。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-tbqt8yl",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221029230658-tbqt8yl",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221029230658-twttfcf",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221029230658-twttfcf",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "\u003c注\u003e UDP(User Datagram Protocol，用户数据报协议)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230855-olcvn8b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230855-olcvn8b"
+			}
+		},
+		{
+			"ID": "20221029230658-yabnw3i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-yabnw3i",
+				"updated": "20221029230847"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "UDP的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主要特点"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是：\n（1）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "UDP 是无连接的"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。即发送数据之前不需要建立连接（当然，发送数据结束时也没有连接可释放），因此减少了开销和发送数据之前的时延。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230901-w2riqer",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230901-w2riqer"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n（2）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "UDP 使用尽最大努力交付"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。即不保证可靠交付，因此主机不需要维护复杂的连接状态表（这里面有许多参数）。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230903-in1rycr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230903-in1rycr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n（3）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "UDP 是面向报文的"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。发送方的 UDP 对应用程序交下来的报文，在添加首部后就向下交付 IP 层。\n\t- "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "UDP 对应用层交下来的报文，既不合并，也不分拆，而是保留这些报文的边界"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。这就是说，应用层交给 UDP 多长的报文，UDP 就照样发送，即"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一次发送一个报文"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n\t- 在接收方的 UDP，对 IP 层交上来的 UDP 用户数据报，在去除首部后就原封不动地交付上层的应用进程。也就是说，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "UDP 一次交付一个完整的报文"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。因此，应用程序必须选择合适大小的报文。若报文太长，UDP 把它交给 IP 层后，IP 层在传送时可能要进行分片处理，这会降低 IP 层的效率。反之，若报文太短，UDP 把它交给 IP 层后，会使 IP 数据报的首部的相对长度太大，这也降低了 IP 层的效率。\n\t- "
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221029144320"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221029144320-20221029230847-61oneir.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20221029230908-0e0cjwp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230908-0e0cjwp"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（4）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "UDP 没有拥塞控制"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。因此网络出现的拥塞不会使源主机的发送速率降低。这对某些实时应用是很重要的。很多的实时应用（如：IP电话、实时视频会议等）要求源主机以恒定的速率发送数据，并且允许在网络出现拥塞时丢失一部分数据，但却不允许数据有太大的时延。UDP 协议正好适合这种要求。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230913-14cg5gq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230913-14cg5gq"
+			}
+		},
+		{
+			"ID": "20221029230658-wolho00",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-wolho00",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（5）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "UDP 支持一对一、一对多、多对一和多对多的交互通信"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230915-0j7l6x1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230915-0j7l6x1"
+			}
+		},
+		{
+			"ID": "20221029230658-nbgznyq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-nbgznyq",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（6）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "UDP的首部开销小，只有 8 个字节，比 TCP 的 20 个字节的首部要短。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230918-8oyw8gk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230918-8oyw8gk"
+			}
+		},
+		{
+			"ID": "20221029230658-zbgpuyq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-zbgpuyq",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（7）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "有接收缓冲区，没有发送缓冲区"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n\t- 对于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "发送"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来说，发送端直接将数据交给系统内核，发送端不关心接收端是否接收到数据，再其发送数据后就不管了，所以不用发送缓冲区来记录数据编号（重传时才有用）\n\t- 对于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "接收"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来说，接收端可以接收到多个数据报，接收端处理数据的速度可能比接收数据的速度慢，此时就需要接收缓冲区来临时保存数据，待处理完该数据，就从缓冲区删掉，另外当接收缓冲区满了，此时接收到的数据就会直接丢弃"
+				}
+			]
+		},
+		{
+			"ID": "20221029230922-r1b12j0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230922-r1b12j0"
+			}
+		},
+		{
+			"ID": "20221029230658-ypjciww",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-ypjciww",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（8）"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "大小受限"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " \n\t- UDP协议首部有一个16位UDP长度，代表UDP一次能传输数据的最大长度为64k（包含UDP首部）"
+				}
+			]
+		},
+		{
+			"ID": "20221029230926-5zbet5e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230926-5zbet5e"
+			}
+		},
+		{
+			"ID": "20221029230658-pdzykru",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-pdzykru",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虽然某些实时应用需要使用没有拥塞控制的 UDP，但当很多的源主机同时都向网络发送高速率的视频流时，网络就有可能发生拥塞，结果大家都无法正常接收。因此，不使用拥塞控制功能的 UDP 有可能会引起网络发生严重的拥塞问题。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-ncqb447",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-ncqb447",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还有一些使用 UDP 的实时应用，需要对 UDP 的不可靠的传输进行适当的改进，以减少数据的丢失。在这种情况下，应用进程本身可以在不影响应用实时性的前提下，增加一些可靠性的措施，如采用前向纠错或重传已丢失的报文。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-e8up8hc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221029230658-e8up8hc",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "UDP协议端格式"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-z6oqj2p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-z6oqj2p",
+				"updated": "20221029230937"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221029141804"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221029141804-20221029230937-91d7ng0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-4z47lrp",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221029230658-4z47lrp",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221029230658-45ivkgm",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221029230658-45ivkgm",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "源端口号：表示数据从哪里发送\n目的端口号：表示数据要发送到哪里区\n16位UDP长度, 表示整个数据报(UDP首部+UDP数据)的最大长度;\n如果校验和出错, 就会直接丢弃;"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-wckvlmo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221029230658-wckvlmo",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基于UDP的应用层协议 "
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-sgw5rl8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221029230658-sgw5rl8",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"ID": "20221029230658-2ld6lsi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-2ld6lsi",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-osdvwy0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-osdvwy0",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NFS：网络文件系统"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230658-jpxuk7z",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-jpxuk7z",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-axeutmu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-axeutmu",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "TFTP：简单文件传输协议"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230658-erfp00d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-erfp00d",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-m8g3al2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-m8g3al2",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DHCP：动态主机配置协议"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230658-y3byzpf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-y3byzpf",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-je9czci",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-je9czci",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BOOTP：启动协议（用于无盘设备启动）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230658-b2gqe7a",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-b2gqe7a",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-8jrp090",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-8jrp090",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DNS：域名解析协议"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-vmtvkcy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221029230658-vmtvkcy",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "UDP协议与TCP协议对比"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-cmvq3f2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221029230658-cmvq3f2",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "特点对比"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-ypakk1p",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221029230658-ypakk1p",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"ID": "20221029230658-es6od1b",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-es6od1b",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-frgvxmi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-frgvxmi",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UDP：无连接，不可靠，面向数据报，有接收缓冲区，没有发送缓冲区，大小受限"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230658-ohujq69",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-ohujq69",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-5q9dre5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-5q9dre5",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "TCP：有连接，可靠，面向字节流，有发送缓冲区和接收缓冲区，大小不受限"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-aqooiu6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221029230658-aqooiu6",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用场景对比"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-jqzth1c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-jqzth1c",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "讲过上述特点对比，可以看出TCP协议最大的特点是可靠，也就是保证数据能让对方接收到，而UDP协议最大的特点是传输效率高，速度快"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-efdi2mm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221029230658-efdi2mm",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"ID": "20221029230658-ju7k4mp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-ju7k4mp",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-y7y3pkb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-y7y3pkb",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "TCP协议使用场景：用于文件传输，重要状态更新等场景"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230658-9uercp9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230658-9uercp9",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"ID": "20221029230658-sln2obd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230658-sln2obd",
+								"updated": "20221029230658"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UDP协议使用场景：用于语音传输，视频传输等场景，我们日常中发现视频和语音电话中，往往会有卡顿，但是不影响我们使用"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-rvy730f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221029230658-rvy730f",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "经典面试题"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-g4q6l4b",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221029230658-g4q6l4b",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221029230658-x41hrcm",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221029230658-x41hrcm",
+						"updated": "20221029230658"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "基于传输层UDP协议，如何实现可靠传输？"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n答：UDP协议是传输层的协议，是不可靠的，无连接的，也就是说传输层我们不能改变，也不能扩展，所以只能在应用层进行扩展，而实现方式可以参考TCP协议是如何保证数据进行可靠传输的，如添加确认应答，超时重传，连接管理等机制确保数据可以被接收，从而实现数据的可靠传输"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-9y2s4nb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221029230658-9y2s4nb",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "参考文章"
+				}
+			]
+		},
+		{
+			"ID": "20221029230658-nvm6tch",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230658-nvm6tch",
+				"updated": "20221029230658"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "【计算机网络】UDP协议_X_H学Java的博客-CSDN博客_udp协议"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://blog.csdn.net/qq_58710208/article/details/126117854"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "UDP协议详解_yunfan188的博客-CSDN博客_udp"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://blog.csdn.net/u010429831/article/details/120010948"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}
