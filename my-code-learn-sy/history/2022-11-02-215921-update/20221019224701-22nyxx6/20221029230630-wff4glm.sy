@@ -1,0 +1,7408 @@
+{
+	"ID": "20221029230630-wff4glm",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221029230630-wff4glm",
+		"title": "TCP协议",
+		"updated": "20221102215527"
+	},
+	"Children": [
+		{
+			"ID": "20221029230640-9ijdknu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221029230640-9ijdknu",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP基本认识"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-h6yjo5v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221029230640-h6yjo5v",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是 TCP ？"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-q1tbr9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-q1tbr9b",
+				"updated": "20221029231045"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP 是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "面向连接的、可靠的、基于字节流"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的传输层通信协议。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221029170648"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221029170648-20221029231045-elzzb3i.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-gyh61ai",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221029230640-gyh61ai",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"ID": "20221029230640-nbhl6ub",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-nbhl6ub",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-trl70py",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-trl70py",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "面向连接"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：一定是「一对一」才能连接，不能像 UDP 协议可以一个主机同时向多个主机发送消息，也就是一对多是无法做到的；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-v82no3n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-v82no3n",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-cf577zh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-cf577zh",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可靠的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：无论的网络链路中出现了怎样的链路变化，TCP 都可以保证一个报文一定能够到达接收端；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-no366uk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-no366uk",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-xjl1ytt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-xjl1ytt",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字节流"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：用户消息通过 TCP 协议传输时，消息可能会被操作系统「分组」成多个的 TCP 报文，如果接收方的程序如果不知道「消息的边界」，是无法读出一个有效的用户消息的。并且 TCP 报文是「有序的」，当「前一个」TCP 报文没有收到的时候，即使它先收到了后面的 TCP 报文，那么也不能扔给应用层去处理，同时对「重复」的 TCP 报文会自动丢弃。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029231105-1tgly8d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231105-1tgly8d"
+			}
+		},
+		{
+			"ID": "20221029230640-lmpztjl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221029230640-lmpztjl",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP 头格式有哪些？"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-buk8gf4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-buk8gf4",
+				"updated": "20221029231059"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "标注颜色的表示与本文关联比较大的字段\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221029170109"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221029170109-20221029231059-8u9cniq.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-wlzf1o1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-wlzf1o1",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "序列号"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：在建立连接时由计算机生成的随机数作为其初始值，通过 SYN 包传给接收端主机，每发送一次数据，就「累加」一次该「数据字节数」的大小。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用来解决网络包乱序问题。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029231110-3n0gpoi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231110-3n0gpoi"
+			}
+		},
+		{
+			"ID": "20221029230640-bf70nd7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-bf70nd7",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "确认应答号"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：指下一次「期望」收到的数据的序列号，发送端收到这个确认应答以后可以认为在这个序号以前的数据都已经被正常接收。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用来解决丢包的问题。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029231113-jwqnuvt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231113-jwqnuvt"
+			}
+		},
+		{
+			"ID": "20221029230640-x5id5g1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-x5id5g1",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "控制位："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-4d1k7o8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221029230640-4d1k7o8",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"ID": "20221029230640-pkq7sdk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-pkq7sdk",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-ukxana7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-ukxana7",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "_URG_: 紧急指针是否有效"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-bowzx5h",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-bowzx5h",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-q2761us",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-q2761us",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "_ACK_：该位为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 时，「确认应答」的字段变为有效，TCP 规定除了最初建立连接时的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 包之外该位必须设置为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-p7i3lyy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-p7i3lyy",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-xrp0iw3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-xrp0iw3",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "_PSH_: 提示接收端应用程序立刻从TCP缓冲区把数据读走"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-5sz5nlk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-5sz5nlk",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-9lx2u3c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-9lx2u3c",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "_RST_：该位为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 时，表示 TCP 连接中出现异常必须强制断开连接。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-a86n7dv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-a86n7dv",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-e8ls0f1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-e8ls0f1",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "_SYN_：该位为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 时，表示希望建立连接，并在其「序列号」的字段进行序列号初始值的设定。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-izk9phw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-izk9phw",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-i80qtkl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-i80qtkl",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "_FIN_：该位为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 时，表示今后不会再有数据发送，希望断开连接。当通信结束希望断开连接时，通信双方的主机之间就可以相互交换 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 位为 1 的 TCP 段。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-xys0knv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-xys0knv",
+				"updated": "20221029230640"
+			}
+		},
+		{
+			"ID": "20221029231121-ifepdy2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231121-ifepdy2"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "窗口大小(16位)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：用来做流量控制"
+				}
+			]
+		},
+		{
+			"ID": "20221029231122-z0soag7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231122-z0soag7"
+			}
+		},
+		{
+			"ID": "20221029230640-bqi6gkd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-bqi6gkd",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "校验和(16位)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 发送端填充, CRC校验. 接收端校验不通过, 则认为数据有问题. 此处的检验和不光包含TCP首部, 也\n包含TCP数据部分."
+				}
+			]
+		},
+		{
+			"ID": "20221029231131-fagd0o4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231131-fagd0o4"
+			}
+		},
+		{
+			"ID": "20221029231124-l73f53f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231124-l73f53f"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "紧急指针(16位)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 标识哪部分数据是紧急数据;"
+				}
+			]
+		},
+		{
+			"ID": "20221029231137-w3ooh36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231137-w3ooh36"
+			}
+		},
+		{
+			"ID": "20221029230640-i7isal6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221029230640-i7isal6",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么需要 TCP 协议？ TCP 工作在哪一层？"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-107tsuv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-107tsuv",
+				"updated": "20221029231154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "IP"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 层是「不可靠」的，它不保证网络包的交付、不保证网络包的按序交付、也不保证网络包中的数据的完整性。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221029170528"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221029170528-20221029231154-txhod9m.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如果需要保障网络数据包的可靠性，那么就需要由上层（传输层）的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TCP"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 协议来负责。"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-ypnukwy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-ypnukwy",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为 TCP 是一个工作在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "传输层"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可靠"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据传输的服务，它能确保接收端接收的网络包是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "无损坏、无间隔、非冗余和按序的。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-mnxpfa6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-mnxpfa6",
+				"updated": "20221029231219"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221029230645-al5o9lg"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "UDP协议"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 也在传输层"
+				}
+			]
+		},
+		{
+			"ID": "20221029231220-st4psn8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231220-st4psn8"
+			}
+		},
+		{
+			"ID": "20221029230640-a5y4ehu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221029230640-a5y4ehu",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是TCP连接"
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-cc7pmb6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029230640-cc7pmb6",
+				"updated": "20221029231234"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221029170949"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221029170949-20221029231234-4a97ez6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n所以我们可以知道，建立一个 TCP 连接是需要客户端与服务端端达成上述三个信息的共识。"
+				}
+			]
+		},
+		{
+			"ID": "20221029231234-7bga3u8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221029231234-7bga3u8",
+				"updated": "20221029231234"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "简单来说就是，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用于保证可靠性和流量控制维护的某些状态信息，这些信息的组合，包括Socket、序列号和窗口大小称为连接。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221029230640-3zspm8f",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221029230640-3zspm8f",
+				"updated": "20221029230640"
+			},
+			"Children": [
+				{
+					"ID": "20221029230640-zwhgnh7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-zwhgnh7",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-spg89oq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-spg89oq",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Socket"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：由 IP 地址和端口号组成"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-ylczp7g",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-ylczp7g",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-vwfofu0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-vwfofu0",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "序列号"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：用来解决乱序问题等"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221029230640-6a09klv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221029230640-6a09klv",
+						"updated": "20221029230640"
+					},
+					"Children": [
+						{
+							"ID": "20221029230640-7dncw5g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221029230640-7dncw5g",
+								"updated": "20221029230640"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "窗口大小"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：用来做流量控制"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205457-7qndb1h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205457-7qndb1h"
+			}
+		},
+		{
+			"ID": "20221030205458-gfdlw5y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-gfdlw5y"
+			}
+		},
+		{
+			"ID": "20221030205458-zsyqf8c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221030205458-zsyqf8c",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP连接建立"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-nyyy7gl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221030205458-nyyy7gl",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP 三次握手过程是怎样的？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-6709wo3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-6709wo3",
+				"updated": "20221030205633"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP 是面向连接的协议，所以使用 TCP 前必须先建立连接，而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "建立连接是通过三次握手来进行的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。三次握手的过程如下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030131453"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030131453-20221030205633-svwes6f.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-gcnqbsq",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-gcnqbsq",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-vzqe4cu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-vzqe4cu",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-j8upx3q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-j8upx3q",
+								"updated": "20221030205644"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一开始，客户端和服务端都处于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "CLOSE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。先是服务端主动监听某个端口，处于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "LISTEN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221030131525"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221030131525-20221030205644-cnskytn.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-0tkbnxj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-0tkbnxj",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-3oa6uom",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-3oa6uom",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端会随机初始化序号（"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "client_isn"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "），将此序号置于 TCP 首部的「序号」字段中，同时把 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 标志位置为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ，表示 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文。接着把第一个 SYN 报文发送给服务端，表示向服务端发起连接，该报文不包含应用层数据，之后客户端处于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN-SENT"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205701-uwn3yt3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205701-uwn3yt3",
+				"updated": "20221030205701"
+			}
+		},
+		{
+			"ID": "20221030205458-e210ypp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-e210ypp",
+				"updated": "20221030205655"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030131635"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030131635-20221030205655-nymimef.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-m2ye75d",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-m2ye75d",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-jsj60n2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-jsj60n2",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-a7d0xxk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-a7d0xxk",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务端收到客户端的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文后，首先服务端也随机初始化自己的序号（"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "server_isn"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "），将此序号填入 TCP 首部的「序号」字段中，其次把 TCP 首部的「确认应答号」字段填入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "client_isn + 1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ", 接着把 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 和 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 标志位置为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。最后把该报文发给客户端，该报文也不包含应用层数据，之后服务端处于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN-RCVD"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205706-bso7eni",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205706-bso7eni",
+				"updated": "20221030205707"
+			}
+		},
+		{
+			"ID": "20221030205458-p6p999p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-p6p999p",
+				"updated": "20221030205717"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030131828"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030131828-20221030205717-b8tq9v0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-0b2nsm8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-0b2nsm8",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-jd1w9fd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-jd1w9fd",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-gak24i5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-gak24i5",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端收到服务端报文后，还要向服务端回应最后一个应答报文，首先该应答报文 TCP 首部 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 标志位置为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ，其次「确认应答号」字段填入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "server_isn + 1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ，最后把报文发送给服务端，这次报文可以携带客户到服务端的数据，之后客户端处于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ESTABLISHED"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-561mdah",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-561mdah",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-034g6ke",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-034g6ke",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务端收到客户端的应答报文后，也进入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ESTABLISHED"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-7b1luoz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-7b1luoz",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "从上面的过程可以发现"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "第三次握手是可以携带数据的，前两次握手是不可以携带数据的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这也是面试常问的题。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-cq2t7io",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-cq2t7io",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一旦完成三次握手，双方都处于 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ESTABLISHED"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态，此时连接就已建立完成，客户端和服务端就可以相互发送数据了。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205736-y245zzq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205736-y245zzq"
+			}
+		},
+		{
+			"ID": "20221030205458-91utfml",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221030205458-91utfml",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么是三次握手？不是两次、四次？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-k52navp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-k52navp",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "相信大家比较常回答的是：“因为三次握手才能保证双方具有接收和发送的能力。”"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-y9m0yvp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-y9m0yvp",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这回答是没问题，但这回答是片面的，并没有说出主要的原因。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-cqtt4jg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-cqtt4jg",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在前面我们知道了什么是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "TCP 连接"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-lxawmg8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-lxawmg8",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-mhrfd3p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-mhrfd3p",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-f1j1kma",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-f1j1kma",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用于保证可靠性和流量控制维护的某些状态信息，这些信息的组合，包括"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Socket、序列号和窗口大小"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "称为连接。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-h8ezabj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-h8ezabj",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以，重要的是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "为什么三次握手才可以初始化Socket、序列号和窗口大小并建立 TCP 连接。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-oafk1kc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-oafk1kc",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接下来，以三个方面分析三次握手的原因："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-c7cx8rr",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-c7cx8rr",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-vfeqx7y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-vfeqx7y",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-b4mx75s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-b4mx75s",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "三次握手才可以阻止重复历史连接的初始化（主要原因）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-vka97vf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-vka97vf",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-xomvqme",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-xomvqme",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "三次握手才可以同步双方的初始序列号"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-xmin7dx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-xmin7dx",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-zew6yu1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-zew6yu1",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "三次握手才可以避免资源浪费"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-pzfpowx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221030205458-pzfpowx",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因一：避免历史连接"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-z5hs0ep",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-z5hs0ep",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们来看看 RFC 793 指出的 TCP 连接使用三次握手的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "首要原因"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：\n简单来说，三次握手的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "首要原因是为了防止旧的重复连接初始化造成混乱。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-enr2juv",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221030205458-enr2juv",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221030205458-z17ztpc",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221030205458-z17ztpc",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "我们考虑一个场景，客户端先发送了 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "（seq = 90） 报文，然后客户端宕机了，而且这个 SYN 报文还被网络阻塞了，服务端并没有收到，接着客户端重启后，又重新向服务端建立连接，发送了 SYN（seq = 100） 报文（"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "注意！不是重传 SYN，重传的 SYN 的序列号是一样的"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "）。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-5rrru5o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-5rrru5o",
+				"updated": "20221030205809"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "看看三次握手是如何阻止历史连接的：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030135813"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030135813-20221030205809-n1it1ta.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-bty1qi0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-bty1qi0",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "客户端连续发送多次 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " （都是同一个四元组）建立连接的报文，在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "网络拥堵"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "情况下："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-492o3c5",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-492o3c5",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-xelja94",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-xelja94",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-o1p15gr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-o1p15gr",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一个「旧 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文」比「最新的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 」 报文早到达了服务端，那么此时服务端就会回一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN + ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文给客户端，此报文中的确认号是 91（90+1）。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-ou1gcpv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-ou1gcpv",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-21g2mi7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-21g2mi7",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端收到后，发现自己期望收到的确认号应该是 100+1，而不是 90 + 1，于是就会回 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "RST"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-iln1cbh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-iln1cbh",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-4el6v86",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-4el6v86",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务端收到 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "RST"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文后，就会释放连接。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-0g68cn2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-0g68cn2",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-ajrt9cl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-ajrt9cl",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "后续最新的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 抵达了服务端后，客户端与服务端就可以正常的完成三次握手了。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-nbjnq4f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-nbjnq4f",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上述中的「旧 SYN 报文」称为历史连接，TCP 使用三次握手建立连接的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最主要原因就是防止「历史连接」初始化了连接"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205816-nbj0tof",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205816-nbj0tof"
+			}
+		},
+		{
+			"ID": "20221030205458-tej7xen",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-tej7xen",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "如果是两次握手连接，就无法阻止历史连接"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，那为什么 TCP 两次握手为什么无法阻止历史连接呢？"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n我先直接说结论，主要是因为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在两次握手的情况下，服务端没有中间状态给客户端来阻止历史连接，导致服务端可能建立一个历史连接，造成资源浪费"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-7st1j77",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221030205458-7st1j77",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221030205458-di6t14i",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221030205458-di6t14i",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "你想想，在两次握手的情况下，服务端在收到 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 报文后，就进入 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ESTABLISHED"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 状态，意味着这时可以给对方发送数据，但是客户端此时还没有进入 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ESTABLISHED"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 状态，假设这次是历史连接，客户端判断到此次连接为历史连接，那么就会回 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "RST"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 报文来断开连接，而服务端在第一次握手的时候就进入 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ESTABLISHED"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 状态，所以它可以发送数据的，但是它并不知道这个是历史连接，它只有在收到 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "RST"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 报文后，才会断开连接。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-glhp5b7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-glhp5b7",
+				"updated": "20221030205824"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030141009"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030141009-20221030205824-ensh0t0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n可以看到，如果采用两次握手建立 TCP 连接的场景下，服务端在向客户端发送数据前，并没有阻止掉历史连接，导致服务端建立了一个历史连接，又白白发送了数据，妥妥地浪费了服务端的资源。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205836-vsinqxh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205836-vsinqxh"
+			}
+		},
+		{
+			"ID": "20221030205458-h5obeya",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-h5obeya",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因此，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "要解决这种现象，最好就是在服务端发送数据前，也就是建立连接之前，要阻止掉历史连接，这样就不会造成资源浪费，而要实现这个功能，就需要三次握手"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-acutgfm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-acutgfm",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "TCP 使用三次握手建立连接的最主要原因是防止「历史连接」初始化了连接。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205831-84ewopj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205831-84ewopj"
+			}
+		},
+		{
+			"ID": "20221030205458-vipw67q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221030205458-vipw67q",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因二：同步双方初始序列号"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-tqgk4ez",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-tqgk4ez",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP 协议的通信双方， 都必须维护一个「"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "序列号"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "」， 序列号是可靠传输的一个关键因素，它的作用："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-dfgae94",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-dfgae94",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-ay7lirl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-ay7lirl",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-5gkvtdn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-5gkvtdn",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "接收方可以去除重复的数据；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-snm8oge",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-snm8oge",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-xj96h23",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-xj96h23",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "接收方可以根据数据包的序列号按序接收；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-e15qamg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-e15qamg",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-8s1acc2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-8s1acc2",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以标识发送出去的数据包中， 哪些是已经被对方收到的（通过 ACK 报文中的序列号知道）；"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-th2rbiu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-th2rbiu",
+				"updated": "20221030205843"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可见，序列号在 TCP 连接中占据着非常重要的作用，所以当客户端发送携带「初始序列号」的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文的时候，需要服务端回一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 应答报文，表示客户端的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文已被服务端成功接收，那当服务端发送「初始序列号」给客户端的时候，依然也要得到客户端的应答回应，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "这样一来一回，才能确保双方的初始序列号能被可靠的同步。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-debg0rx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-debg0rx",
+				"updated": "20221030205850"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030141303"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030141303-20221030205850-tz832mh.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n四次握手其实也能够可靠的同步双方的初始化序号，但由于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "第二步和第三步可以优化成一步"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所以就成了「三次握手」。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-legzknb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-legzknb",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而两次握手只保证了一方的初始序列号能被对方成功接收，没办法保证双方的初始序列号都能被确认接收。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205856-nprwikx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205856-nprwikx"
+			}
+		},
+		{
+			"ID": "20221030205458-wtcj43x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221030205458-wtcj43x",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因三：避免资源浪费"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-w3q9qbs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-w3q9qbs",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果只有「两次握手」，当客户端发送的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文在网络中阻塞，客户端没有接收到 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，就会重新发送 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "由于没有第三次握手，服务端不清楚客户端是否收到了自己回复的 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ACK"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 报文，所以服务端每收到一个 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 就只能先主动建立一个连接"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这会造成什么情况呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-gntk3jc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-gntk3jc",
+				"updated": "20221030205918"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030141823"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030141823-20221030205918-6158ktp.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n即两次握手会造成消息滞留情况下，服务端重复接受无用的连接请求 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，而造成重复分配资源。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205918-96suw6t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205918-96suw6t",
+				"updated": "20221030205918"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果客户端发送的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文在网络中阻塞了，重复发送多次 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，那么服务端在收到请求后就会"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "建立多个冗余的无效链接，造成不必要的资源浪费。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-pbjmp6k",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221030205458-pbjmp6k",
+				"updated": "20221030210011"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221030205458-zfmt9x6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221030205458-zfmt9x6",
+						"updated": "20221030210011"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "Tip\n很多人问，两次握手不是也可以根据上下文信息丢弃 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 历史报文吗？\n我这里两次握手是假设「由于没有第三次握手，服务端不清楚客户端是否收到了自己发送的建立连接的 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "ACK"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 确认报文，所以每收到一个 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 就只能先主动建立一个连接」这个场景。\n当然你要实现成类似三次握手那样，根据上下文丢弃 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 历史报文也是可以的，两次握手没有具体的实现，怎么假设都行。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-r50opum",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221030205458-r50opum",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "小结"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-bse3eqf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-bse3eqf",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP 建立连接时，通过三次握手"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "能防止历史连接的建立，能减少双方不必要的资源开销，能帮助双方同步初始化序列号"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。序列号能够保证数据包不重复、不丢弃和按序传输。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-hdc8ppd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-hdc8ppd",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不使用「两次握手」和「四次握手」的原因："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-sk8qdml",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-sk8qdml",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-i6itiuv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-i6itiuv",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-14itpxd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-14itpxd",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "「两次握手」：无法防止历史连接的建立，会造成双方资源的浪费，也无法可靠的同步双方序列号；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-wddcttv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-wddcttv",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-uqojef6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-uqojef6",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "「四次握手」：三次握手就已经理论上最少可靠连接建立，所以不需要使用更多的通信次数。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-t83nz70",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221030205458-t83nz70",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第一次握手丢失了，会发生什么？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-4nr7cni",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-4nr7cni",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当客户端想和服务端建立 TCP 连接的时候，首先第一个发的就是 SYN 报文，然后进入到 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN_SENT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-4f561tq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-4f561tq",
+				"updated": "20221030210206"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在这之后，如果客户端迟迟收不到服务端的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN-ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文（第二次握手），就会触发「"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "超时重传"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "」机制，重传 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN "
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "报文，而且"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重传的 SYN 报文的序列号都是一样的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-disdwkp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-disdwkp",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不同版本的操作系统可能超时时间不同，有的 1 秒的，也有 3 秒的，这个超时时间是写死在内核里的，如果想要更改则需要重新编译内核，比较麻烦。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-l6lsohl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-l6lsohl",
+				"updated": "20221030210220"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当客户端在 1 秒后没收到服务端的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN-ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文后，客户端就会重发 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，那到底重发几次呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-v3pmrnp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-v3pmrnp",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 Linux 里，客户端的 SYN 报文"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最大重传次数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "由 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tcp_syn_retries"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "内核参数控制，这个参数是可以自定义的，默认值一般是 5。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-tclsp0z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221030205458-tclsp0z",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# cat /proc/sys/net/ipv4/tcp_syn_retries\n5\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221030210318-oaklzs9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210318-oaklzs9"
+			}
+		},
+		{
+			"ID": "20221030205458-wpv275j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-wpv275j",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通常，第一次超时重传是在 1 秒后，第二次超时重传是在 2 秒，第三次超时重传是在 4 秒后，第四次超时重传是在 8 秒后，第五次是在超时重传 16 秒后。没错，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每次超时的时间是上一次的 2 倍"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-ow39xyy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-ow39xyy",
+				"updated": "20221030210326"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当第五次超时重传后，会继续等待 32 秒，如果服务端仍然没有回应 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，客户端就不再发送 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 包，然后断开 TCP 连接。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-9z27vhy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-9z27vhy",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以，总耗时是 1+2+4+8+16+32=63 秒，大约 1 分钟左右。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-4hbqw2h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-4hbqw2h",
+				"updated": "20221030210352"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举个例子，假设"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": " tcp_syn_retries"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 参数值为 3，那么当客户端的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文一直在网络中丢失时，会发生下图的过程：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030134009"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030134009-20221030210352-cztzs63.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-5ozyslc",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221030205458-5ozyslc",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221030205458-nubz5yr",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221030205458-nubz5yr",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "具体过程：\n当客户端超时重传 3 次 SYN 报文后，由于 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "tcp_syn_retries"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 为 3，已达到最大重传次数，于是再等待一段时间（时间为上一次超时时间的 2 倍），如果还是没能收到服务端的第二次握手（SYN-ACK 报文），那么客户端就会断开连接。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030210404-75vpt18",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210404-75vpt18"
+			}
+		},
+		{
+			"ID": "20221030205458-d6fa5tx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221030205458-d6fa5tx",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第二次握手丢失了，会发生什么？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-aywxd5h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-aywxd5h",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当服务端收到客户端的第一次握手后，就会回 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN-ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文给客户端，这个就是第二次握手，此时服务端会进入 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN_RCVD"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-kt6yags",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-kt6yags",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第二次握手的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN-ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文其实有两个目的 ："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-w09g89q",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-w09g89q",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-ym4wwza",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-ym4wwza",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-9vptxbu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-9vptxbu",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第二次握手里的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "， 是对第一次握手的确认报文；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-xn759s5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-xn759s5",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-mgkh8rr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-mgkh8rr",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第二次握手里的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，是服务端发起建立 TCP 连接的报文；"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030210416-cbianl4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210416-cbianl4"
+			}
+		},
+		{
+			"ID": "20221030205458-64t4rz2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-64t4rz2",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以，如果第二次握手丢了，就会发生比较有意思的事情，具体会怎么样呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-y2849jy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-y2849jy",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为第二次握手报文里是包含对客户端的第一次握手的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": " ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 确认报文，所以，如果客户端迟迟没有收到第二次握手，那么客户端就觉得可能自己的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文（第一次握手）丢失了，于是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "客户端就会触发超时重传机制，重传 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 报文"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-1wmpw38",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-1wmpw38",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "然后，因为第二次握手中包含服务端的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，所以当客户端收到后，需要给服务端发送 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 确认报文（第三次握手），服务端才会认为该 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文被客户端收到了。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-9khh4a1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-9khh4a1",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么，如果第二次握手丢失了，服务端就收不到第三次握手，于是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "服务端这边会触发超时重传机制，重传 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "SYN-ACK"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 报文"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-ozckbpm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-ozckbpm",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 Linux 下，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN-ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文的最大重传次数由 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tcp_synack_retries"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "内核参数决定，默认值是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "5"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-2p3ss11",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221030205458-2p3ss11",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# cat /proc/sys/net/ipv4/tcp_synack_retries\n5\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-uxpl7bo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-uxpl7bo",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因此，当第二次握手丢失了，客户端和服务端都会重传："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-eabvsvq",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-eabvsvq",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-leka0ax",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-leka0ax",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-dlkez0k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-dlkez0k",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端会重传 SYN 报文，也就是第一次握手，最大重传次数由 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "tcp_syn_retries"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "内核参数决定；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-l9c791n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-l9c791n",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-1eqf7jb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-1eqf7jb",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务端会重传 SYN-ACK 报文，也就是第二次握手，最大重传次数由 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "tcp_synack_retries"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 内核参数决定。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030210441-h1hum5j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210441-h1hum5j"
+			}
+		},
+		{
+			"ID": "20221030205458-f9dwhqp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-f9dwhqp",
+				"updated": "20221030210454"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举个例子，假设"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tcp_syn_retries"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 参数值为 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "1"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tcp_synack_retries"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 参数值为 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "2"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那么当第二次握手一直丢失时，发生的过程如下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030134727"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030134727-20221030210454-9sbwx12.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n具体过程："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-b3s0yae",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-b3s0yae",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-44au104",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-44au104",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-y4iynt1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-y4iynt1",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当客户端超时重传 1 次 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文后，由于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "tcp_syn_retries"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 为 1，已达到最大重传次数，于是再等待一段时间（时间为上一次超时时间的 2 倍），如果还是没能收到服务端的第二次握手（"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN-ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文），那么客户端就会断开连接。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-0z167h6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-0z167h6",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-aoxhknf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-aoxhknf",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当服务端超时重传 2 次 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYN-ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文后，由于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "tcp_synack_retries"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 为 2，已达到最大重传次数，于是再等待一段时间（时间为上一次超时时间的 2 倍），如果还是没能收到客户端的第三次握手（"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文），那么服务端就会断开连接。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030210503-dii3ots",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210503-dii3ots"
+			}
+		},
+		{
+			"ID": "20221030205458-lsdf97o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221030205458-lsdf97o",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第三次握手丢失了，会发生什么？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-jjzi48b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-jjzi48b",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "客户端收到服务端的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN-ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文后，就会给服务端回一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，也就是第三次握手，此时客户端状态进入到 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ESTABLISH"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-qwpx4an",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-qwpx4an",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为这个第三次握手的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是对第二次握手的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的确认报文，所以当第三次握手丢失了，如果"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "服务端那一方迟迟收不到这个确认报文，就会触发"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "超时重传机制"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，重传 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SYN-ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，直到收到第三次握手，或者达到最大重传次数。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-fi22x2d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-fi22x2d",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ACK 报文是不会有重传的，当 ACK 丢失了，就由对方重传对应的报文"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-lnolg79",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-lnolg79",
+				"updated": "20221030210557"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举个例子，假设"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": " tcp_synack_retries"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 参数值为 2，那么当第三次握手一直丢失时，发生的过程如下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030132734"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030132734-20221030210557-z2wxbh5.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n具体过程："
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-34p4uk6",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-34p4uk6",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-2406b6q",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-2406b6q",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-lzsou9h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-lzsou9h",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当服务端超时重传 2 次"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": " SYN-ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文后，由于 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "tcp_synack_retries"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 为 2，已达到最大重传次数，于是再等待一段时间（时间为上一次超时时间的 2 倍），如果还是没能收到客户端的第三次握手（"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文），那么服务端就会断开连接。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-o72gyf6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221030205458-o72gyf6",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP连接断开"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-kiydzfx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-kiydzfx",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "天下没有不散的宴席，对于 TCP 连接也是这样， TCP 断开连接是通过"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "四次挥手"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方式。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-3a3qxr3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-3a3qxr3",
+				"updated": "20221030210643"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "双方都可以主动断开连接，断开连接后主机中的「资源」将被释放，四次挥手的过程如下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"parent-style": "max-width: 382px;",
+						"style": "width: 372px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030142856"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030142856-20221030210636-8vdrvey.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 372px;\" parent-style=\"max-width: 382px;\"}"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20221030210647-1zxpyum",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210647-1zxpyum"
+			}
+		},
+		{
+			"ID": "20221030210650-ny70qwy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210650-ny70qwy",
+				"updated": "20221030210653"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"parent-style": "max-width: 382px;",
+						"style": "width: 372px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221030143016"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221030142856-20221030210636-8vdrvey.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 372px;\" parent-style=\"max-width: 382px;\"}"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-5bluyvm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-5bluyvm",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-tyvds8i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-tyvds8i",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-gdhct6m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-gdhct6m",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端打算关闭连接，此时会发送一个 TCP 首部 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 标志位被置为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的报文，也即 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文，之后客户端进入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN_WAIT_1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-ntrzp9f",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-ntrzp9f",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-wgka719",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-wgka719",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务端收到该报文后，就向客户端发送 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 应答报文，接着服务端进入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "CLOSE_WAIT"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-zqb27jw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-zqb27jw",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-octd6tx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-octd6tx",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端收到服务端的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 应答报文后，之后进入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN_WAIT_2"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-yocjox8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-yocjox8",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-gij2ho3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-gij2ho3",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "等待服务端处理完数据后，也向客户端发送 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文，之后服务端进入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "LAST_ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-t4nioen",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-t4nioen",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-wv672wn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-wv672wn",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端收到服务端的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文后，回一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 应答报文，之后进入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "TIME_WAIT"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-lvgroc2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-lvgroc2",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-9c6t0rt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-9c6t0rt",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务端收到了 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 应答报文后，就进入了 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "CLOSE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态，至此服务端已经完成连接的关闭。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-fgzrr6s",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-fgzrr6s",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-dnq2o6p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-dnq2o6p",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端在经过 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "2MSL"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 一段时间后，自动进入 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "CLOSE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 状态，至此客户端也完成连接的关闭。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-k3kkq4i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-k3kkq4i",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "你可以看到，每个方向都需要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一个 FIN 和一个 ACK"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，因此通常被称为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "四次挥手"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-bcy674u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-bcy674u",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这里一点需要注意是："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主动关闭连接的，才有 TIME_WAIT 状态。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-8whts60",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221030205458-8whts60",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么挥手需要四次？"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-902mga8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-902mga8",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "再来回顾下四次挥手双方发 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FIN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 包的过程，就能理解为什么需要四次了。"
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-oe3zj4x",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221030205458-oe3zj4x",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"ID": "20221030205458-qzsdbk1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-qzsdbk1",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-pn00ujl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-pn00ujl",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "关闭连接时，客户端向服务端发送 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 时，仅仅表示客户端不再发送数据了但是还能接收数据。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221030205458-b7ws7y2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221030205458-b7ws7y2",
+						"updated": "20221030205458"
+					},
+					"Children": [
+						{
+							"ID": "20221030205458-soc561b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221030205458-soc561b",
+								"updated": "20221030205458"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务端收到客户端的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文时，先回一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ACK"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 应答报文，而服务端可能还有数据需要处理和发送，等服务端不再发送数据时，才发送 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FIN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 报文给客户端来表示同意现在关闭连接。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221030205458-x1e24zb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030205458-x1e24zb",
+				"updated": "20221030205458"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "从上面过程可知，服务端通常需要等待完成数据的发送和处理，所以服务端的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FIN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 一般都会分开发送，因此是需要四次挥手。"
+				}
+			]
+		},
+		{
+			"ID": "20221030210716-h6v8l5k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221030210716-h6v8l5k"
+			}
+		},
+		{
+			"ID": "20221101224638-jsv6iyx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221101224638-jsv6iyx"
+			}
+		},
+		{
+			"ID": "20221102215516-lvknvww",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215516-lvknvww"
+			}
+		},
+		{
+			"ID": "20221102215517-rc9b089",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-rc9b089"
+			}
+		},
+		{
+			"ID": "20221102215517-071qtmt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-071qtmt"
+			}
+		},
+		{
+			"ID": "20221102215517-jvcv2ps",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-jvcv2ps"
+			}
+		},
+		{
+			"ID": "20221102215517-ykvtavw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-ykvtavw"
+			}
+		},
+		{
+			"ID": "20221102215517-z0b2hqq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-z0b2hqq"
+			}
+		},
+		{
+			"ID": "20221102215517-nvccy51",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-nvccy51"
+			}
+		},
+		{
+			"ID": "20221102215517-mrt5wq4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-mrt5wq4"
+			}
+		},
+		{
+			"ID": "20221102215517-7a9z59x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-7a9z59x"
+			}
+		},
+		{
+			"ID": "20221102215517-fzyzo0o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-fzyzo0o"
+			}
+		},
+		{
+			"ID": "20221102215517-nq9uai2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-nq9uai2"
+			}
+		},
+		{
+			"ID": "20221102215517-nw9yo11",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-nw9yo11"
+			}
+		},
+		{
+			"ID": "20221102215517-1xgu2pb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-1xgu2pb",
+				"updated": "20221102215527"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tcp_orphan_retries"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102215517-hvyb6rx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-hvyb6rx"
+			}
+		},
+		{
+			"ID": "20221102215517-6uw0ahm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215517-6uw0ahm"
+			}
+		},
+		{
+			"ID": "20221102215518-u9wnicx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102215518-u9wnicx"
+			}
+		}
+	]
+}

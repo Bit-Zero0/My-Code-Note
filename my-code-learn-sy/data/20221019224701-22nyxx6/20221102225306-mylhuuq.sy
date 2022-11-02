@@ -1,0 +1,2372 @@
+{
+	"ID": "20221102225306-mylhuuq",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221102225306-mylhuuq",
+		"title": "IP协议",
+		"updated": "20221102230302"
+	},
+	"Children": [
+		{
+			"ID": "20221102225927-kl2lb5n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221102225927-kl2lb5n",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IP 基本认识"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-rp7y1a3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-rp7y1a3",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IP 在 TCP/IP 参考模型中处于第三层，也就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "网络层"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-2xf136n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-2xf136n",
+				"updated": "20221102230039"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "网络层的主要作用是："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "实现主机与主机之间的通信，也叫点对点（end to end）通信。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225411"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225411-20221102230026-xpmlvjc.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-a5za35q",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-a5za35q",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-41omwmo",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-41omwmo",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "网络层与数据链路层有什么关系呢？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-ggletk2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-ggletk2",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有的小伙伴分不清 IP（网络层） 和 MAC （数据链路层）之间的区别和关系。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-psm5111",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-psm5111",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实很容易区分，在上面我们知道 IP 的作用是主机之间通信用的，而 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "MAC 的作用则是实现「直连」的两个设备之间通信，而 IP 则负责在「没有直连」的两个网络之间进行通信传输。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-66ovs4p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-66ovs4p",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举个生活的栗子，小林要去一个很远的地方旅行，制定了一个行程表，其间需先后乘坐飞机、地铁、公交车才能抵达目的地，为此小林需要买飞机票，地铁票等。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-3ff14cx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-3ff14cx",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "飞机票和地铁票都是去往特定的地点的，每张票只能够在某一限定区间内移动，此处的「区间内」就如同通信网络中数据链路。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-xamj4zg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-xamj4zg",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在区间内移动相当于数据链路层，充当区间内两个节点传输的功能，区间内的出发点好比源 MAC 地址，目标地点好比目的 MAC 地址。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-jllmjjr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-jllmjjr",
+				"updated": "20221102230111"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "整个旅游行程表就相当于网络层，充当远程定位的功能，行程的开始好比源 IP，行程的终点好比目的 IP 地址。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225428"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225428-20221102230111-wfqz3na.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如果小林只有行程表而没有车票，就无法搭乘交通工具到达目的地。相反，如果除了车票而没有行程表，恐怕也很难到达目的地。因为小林不知道该坐什么车，也不知道该在哪里换乘。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-xmgcco9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-xmgcco9",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因此，只有两者兼备，既有某个区间的车票又有整个旅行的行程表，才能保证到达目的地。与此类似，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "计算机网络中也需要「数据链路层」和「网络层」这个分层才能实现向最终目标地址的通信。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-eu50oxi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-eu50oxi",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还有重要一点，旅行途中我们虽然不断变化了交通工具，但是旅行行程的起始地址和目的地址始终都没变。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-7rg5op8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-7rg5op8",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实，在网络中数据包传输中也是如此，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "源IP地址和目标IP地址在传输过程中是不会变化的（前提：没有使用 NAT 网络），只有源 MAC 地址和目标 MAC 一直在变化。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-ktz0v82",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221102225927-ktz0v82",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IP 地址的基础知识"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-mp5q9zz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-mp5q9zz",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 TCP/IP 网络通信时，为了保证能正常通信，每个设备都需要配置正确的 IP 地址，否则无法实现正常的通信。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-cz0vwwh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-cz0vwwh",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IP 地址（IPv4 地址）由 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "32"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 位正整数来表示，IP 地址在计算机是以二进制的方式处理的。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-4svu4iz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-4svu4iz",
+				"updated": "20221102230122"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而人类为了方便记忆采用了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "点分十进制"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的标记方式，也就是将 32 位 IP 地址以每 8 位为组，共分为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "4"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 组，每组以「"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "."
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "」隔开，再将每组转换成十进制。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225503"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225503-20221102230122-k9yy6qv.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-arjvhhw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-arjvhhw",
+				"updated": "20221102230128"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么，IP 地址最大值也就是\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225524"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225524-20221102230128-kfqe96a.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-grjtpbz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-grjtpbz",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "也就说，最大允许 43 亿台计算机连接到网络。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-l474h95",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-l474h95",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实际上，IP 地址并不是根据主机台数来配置的，而是以网卡。像服务器、路由器等设备都是有 2 个以上的网卡，也就是它们会有 2 个以上的 IP 地址。"
+				}
+			]
+		},
+		{
+			"ID": "20221102230457-3luvx89",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102230457-3luvx89",
+				"updated": "20221102230526"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225542"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225542-20221102230526-lzwb44f.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n因此，让 43 亿台计算机全部连网其实是不可能的，更何况 IP 地址是由「网络标识」和「主机标识」这两个部分组成的，所以实际能够连接到网络的计算机个数更是少了很多。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-y2v9367",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-y2v9367",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-bolxv5i",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-bolxv5i",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "可能有的小伙伴提出了疑问，现在不仅电脑配了 IP， 手机、IPad 等电子设备都配了 IP 呀，照理来说肯定会超过 43 亿啦，那是怎么能够支持这么多 IP 的呢？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-240mxxh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-240mxxh",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为会根据一种可以更换 IP 地址的技术 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "NAT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，使得可连接计算机数超过 43 亿台。 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "NAT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 技术后续会进一步讨论和说明。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-9dcylpw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221102225927-9dcylpw",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IP 地址的分类"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-2c8xy5m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-2c8xy5m",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "互联网诞生之初，IP 地址显得很充裕，于是计算机科学家们设计了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "分类地址"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-zwvphvn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-zwvphvn",
+				"updated": "20221102230611"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IP 地址分类成了 5 种类型，分别是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "A 类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "B 类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "C 类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "D 类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "E 类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225611"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225611-20221102230143-44jt86w.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n上图中黄色部分为分类号，用以区分 IP 地址类别。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-wpe5vfo",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-wpe5vfo",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-ehptdf9",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-ehptdf9",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "什么是 A、B、C 类地址？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-3355usu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-3355usu",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中对于 A、B、C 类主要分为两个部分，分别是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "网络号和主机号"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。这很好理解，好比小林是 A 小区 1 栋 101 号，你是 B 小区 1 栋 101 号。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-15uri61",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-15uri61",
+				"updated": "20221102230224"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们可以用下面这个表格， 就能很清楚的知道 A、B、C 分类对应的地址范围、最大主机个数。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225621"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225621-20221102230224-eibw4k0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-r16czj1",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-r16czj1",
+				"updated": "20221102230707"
+			},
+			"Children": [
+				{
+					"ID": "20221102230707-w1ohw6q",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102230707-w1ohw6q"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "A、B、C 分类地址最大主机个数是如何计算的呢？"
+						}
+					]
+				},
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-1afenkx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-1afenkx",
+				"updated": "20221102230237"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "最大主机个数，就是要看主机号的位数，如 C 类地址的主机号占 8 位，那么 C 类地址的最大主机个数：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225638"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225638-20221102230232-5pu7fhv.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n为什么要减 2 呢？\n因为在 IP 地址中，有两个 IP 是特殊的，分别是主机号全为 1 和 全为 0 地址。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225654"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225654-20221102230237-0zvyb5m.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-vvkjuta",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221102225927-vvkjuta",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"ID": "20221102225927-el8cgk3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-el8cgk3",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-hsllwde",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-hsllwde",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "主机号全为 1 指定某个网络下的所有主机，用于广播"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221102225927-yf9oy8z",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-yf9oy8z",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-0jwo4ck",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-0jwo4ck",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "主机号全为 0 指定某个网络"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-b9kkj6j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-b9kkj6j",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因此，在分配过程中，应该去掉这两种情况。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-odop6zb",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-odop6zb",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-7joejq8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-7joejq8",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "广播地址用于什么？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-wle65jz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-wle65jz",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "广播地址用于在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "同一个链路中相互连接的主机之间发送数据包"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-ldnkni3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-ldnkni3",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "学校班级中就有广播的例子，在准备上课的时候，通常班长会喊：“上课， 全体起立！”，班里的同学听到这句话是不是全部都站起来了？这个句话就有广播的含义。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-a21bd73",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-a21bd73",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当主机号全为 1 时，就表示该网络的广播地址。例如把 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "172.20.0.0/16"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 用二进制表示如下："
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-0gfrvdt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-0gfrvdt",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "10101100.00010100.00000000.00000000"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-58qac0q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-58qac0q",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将这个地址的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主机部分全部改为 1"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，则形成广播地址："
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-8q2hvw1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-8q2hvw1",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "10101100.00010100."
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "11111111.11111111"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-mgiuqui",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-mgiuqui",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "再将这个地址用十进制表示，则为 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "172.20.255.255"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-bq35ko6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-bq35ko6",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "广播地址可以分为本地广播和直接广播两种。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-jbuqc2h",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221102225927-jbuqc2h",
+				"updated": "20221102230302"
+			},
+			"Children": [
+				{
+					"ID": "20221102225927-b8fqpla",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-b8fqpla",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-sbn1ery",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-sbn1ery",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在本网络内广播的叫做本地广播"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。例如网络地址为 192.168.0.0/24 的情况下，广播地址是 192.168.0.255 。因为这个广播地址的 IP 包会被路由器屏蔽，所以不会到达 192.168.0.0/24 以外的其他链路上。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221102225927-oa939pn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-oa939pn",
+						"updated": "20221102230302"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-nittapb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-nittapb",
+								"updated": "20221102230302"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在不同网络之间的广播叫做直接广播"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。例如网络地址为 192.168.0.0/24 的主机向 192.168.1.255/24 的目标地址发送 IP 包。收到这个包的路由器，将数据转发给 192.168.1.0/24，从而使得所有 192.168.1.1~192.168.1.254 的主机都能收到这个包（由于直接广播有一定的安全问题，多数情况下会在路由器上设置为不转发。） 。\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Properties": {
+										"parent-style": "max-width: 772px;",
+										"style": "width: 762px;"
+									},
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221102225709"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221102225709-20221102230302-aj7xv5s.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeKramdownSpanIAL",
+									"Data": "{: style=\"width: 762px;\" parent-style=\"max-width: 772px;\"}"
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-kfl4x3d",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-kfl4x3d",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-x3g0ll8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-x3g0ll8",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "什么是 D、E 类地址？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-5qnnxea",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-5qnnxea",
+				"updated": "20221102230327"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而 D 类和 E 类地址是没有主机号的，所以不可用于主机 IP，D 类常被用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "多播"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，E 类是预留的分类，暂时未使用。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225725"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225725-20221102230327-w5zjk29.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-jlt4r1s",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-jlt4r1s",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-cwrxstn",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-cwrxstn",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "多播地址用于什么？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-34u2c9x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-34u2c9x",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多播用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "将包发送给特定组内的所有主机。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-9rc91sy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-9rc91sy",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还是举班级的栗子，老师说：“最后一排的同学，上来做这道数学题。”，老师指定的是最后一排的同学，也就是多播的含义了。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-wd7y4s9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-wd7y4s9",
+				"updated": "20221102230335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于广播无法穿透路由，若想给其他网段发送同样的包，就可以使用可以穿透路由的多播。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225739"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225739-20221102230335-2qn94k5.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n多播使用的 D 类地址，其前四位是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "1110"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就表示是多播地址，而剩下的 28 位是多播的组编号。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-crmim79",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-crmim79",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "从 224.0.0.0 ~ 239.255.255.255 都是多播的可用范围，其划分为以下三类："
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-l2n5sz5",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221102225927-l2n5sz5",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"ID": "20221102225927-1gdqyvw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-1gdqyvw",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-j30qjtu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-j30qjtu",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "224.0.0.0 ~ 224.0.0.255 为预留的组播地址，只能在局域网中，路由器是不会进行转发的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221102225927-qskgkx5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-qskgkx5",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-1bqmgrk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-1bqmgrk",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "224.0.1.0 ~ 238.255.255.255 为用户可用的组播地址，可以用于 Internet 上。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221102225927-il3369e",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-il3369e",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-sv5bpwu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-sv5bpwu",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "239.0.0.0 ~ 239.255.255.255 为本地管理组播地址，可供内部网在内部使用，仅在特定的本地范围内有效。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-k96avc9",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-k96avc9",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-kymsji1",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-kymsji1",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "IP 分类的优点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-6ue4twd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-6ue4twd",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不管是路由器还是主机解析到一个 IP 地址时候，我们判断其 IP 地址的首位是否为 0，为 0 则为 A 类地址，那么就能很快的找出网络地址和主机地址。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-nuls3t2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-nuls3t2",
+				"updated": "20221102230347"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其余分类判断方式参考如下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221102225831"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221102225831-20221102230347-xeyre8y.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n所以，这种分类地址的优点就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "简单明了、选路（基于网络地址）简单"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-7yh2kln",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221102225927-7yh2kln",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221102225927-mtryd6e",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221102225927-mtryd6e",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "IP 分类的缺点"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-ah6ohtz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-ah6ohtz",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "缺点一"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "同一网络下没有地址层次"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，比如一个公司里用了 B 类地址，但是可能需要根据生产环境、测试环境、开发环境来划分地址层次，而这种 IP 分类是没有地址层次划分的功能，所以这就"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "缺少地址的灵活性"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-s372pna",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-s372pna",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "缺点二"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nA、B、C类有个尴尬处境，就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不能很好的与现实网络匹配"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-udm9zj0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221102225927-udm9zj0",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"ID": "20221102225927-nj4doy1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-nj4doy1",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-4c2drvs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-4c2drvs",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "C 类地址能包含的最大主机数量实在太少了，只有 254 个，估计一个网吧都不够用。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221102225927-hdp90q5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221102225927-hdp90q5",
+						"updated": "20221102225927"
+					},
+					"Children": [
+						{
+							"ID": "20221102225927-jvce9kh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221102225927-jvce9kh",
+								"updated": "20221102225927"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "而 B 类地址能包含的最大主机数量又太多了，6 万多台机器放在一个网络下面，一般的企业基本达不到这个规模，闲着的地址就是浪费。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221102225927-493gcdl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221102225927-493gcdl",
+				"updated": "20221102225927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这两个缺点，都可以在 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "CIDR"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 无分类地址解决。"
+				}
+			]
+		}
+	]
+}
