@@ -56,3 +56,362 @@ IO多路转接: 虽然从流程图上看起来和阻塞IO类似. 实际上最核
 ## 小结
 任何IO过程中, 都包含两个步骤. **第一是等待, 第二是拷贝**. 而且在实际的应用场景中, 等待消耗的时间往 
 往都远远高于拷贝的时间. 让IO更高效, 最核心的办法就是让等待的时间尽量少.
+
+
+| |BIO|	NIO	|IO多路	|信号驱动IO	|异步IO|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|第一阶段|	阻塞|	非阻塞|	阻塞|	非阻塞|	非阻塞|
+|第二阶段|阻塞	|阻塞	|阻塞	|阻塞	|非阻塞|
+![[Pasted image 20221107120859.png]]
+
+
+# 网络IO的重要概念
+## 同步通信 vs 异步通信(synchronous communication/ asynchronous communication)
+### 同步和异步关注的是消息通信机制.
+>- 所谓同步，就是在发出一个调用时，在没有得到结果之前，该调用就不返回. 但是一旦调用返回，就得到返回值了; 换句话说，就是由调用者主动等待这个调用的结果;
+>- 异步则是相反，调用在发出之后，这个调用就直接返回了，所以没有返回结果; 换句话说，当一个异步过程调用发出后，调用者不会立刻得到结果; 而是在调用发出后，被调用者通过状态、通知来通知调用者，或通过回调函数处理这个调用.
+
+另外, 我们回忆在讲多进程多线程的时候, 也提到同步和互斥. 这里的同步通信和进程之间的同步是完全不想干的概念.
+>- 进程/线程同步也是进程/线程之间直接的制约关系
+>- 是为完成某种任务而建立的两个或多个线程，这个线程需要在某些位置上协调他们的工作次序而等待、传递信息所产生的制约关系. 尤其是在访问临界资源的时候.
+
+**以后在看到 "同步" 这个词, 一定要先搞清楚大背景是什么. 这个同步, 是同步通信异步通信的同步, 还是同步 
+与互斥的同步.**
+
+### 阻塞 vs 非阻塞
+阻塞和非阻塞关注的是程序在等待调用结果（消息，返回值）时的状态.
+>- 阻塞调用是指调用结果返回之前，当前线程会被挂起. 调用线程只有在得到结果之后才会返回. 
+>- 非阻塞调用指在不能立刻得到结果之前，该调用不会阻塞当前线程.
+
+
+# 非阻塞IO
+## fcntl函数
+一个文件描述符, 默认都是阻塞IO.
+![[Pasted image 20221108160823.png]]
+
+传入的cmd的值不同, 后面追加的参数也不相同. 
+
+fcntl函数有5种功能:
+>- 复制一个现有的描述符（cmd=F_DUPFD）.
+>- 获得/设置文件描述符标记(cmd=F_GETFD或F_SETFD). 
+>- 获得/设置文件状态标记(cmd=F_GETFL或F_SETFL). 
+>- 获得/设置异步I/O所有权(cmd=F_GETOWN或F_SETOWN). 
+>- 获得/设置记录锁(cmd=F_GETLK,F_SETLK或F_SETLKW).
+
+我们此处只是用第三种功能, 获取/设置文件状态标记, 就可以将一个文件描述符设置为非阻塞.
+
+## 实现函数SetNoBlock
+基于`fcntl()`, 我们实现一个SetNoBlock函数, 将文件描述符设置为==**非阻塞**==.
+```cpp
+void SetNonBlock(int fd)
+{
+    int fl = fcntl(fd, F_GETFL);//取得 fd的标志位
+    if(fl<0)
+    {
+        perror("fcntl");
+        return;
+    }
+
+    fcntl(fd, F_SETFL, fl | O_NONBLOCK); //设置 fd 的标志位
+}
+```
+- 使用`F_GETFL`将当前的文件描述符的属性取出来(这是一个位图).
+- 然后再使用`F_SETFL`将文件描述符设置回去. 设置回去的同时, 加上一个`O_NONBLOCK`参数.
+![[Pasted image 20221108163225.png]]
+
+
+```cpp
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include <errno.h>
+#include <stdlib.h>
+
+void setNoBlock(int fd)
+{
+	int f1 = fcntl(fd, F_GETFL);
+
+	if (f1 < 0)
+	{
+		perror("fcntl");
+		exit(1);
+	}
+
+	fcntl(fd, F_SETFL, f1 | O_NONBLOCK);
+}
+
+int main()
+{
+	setNoBlock(0);
+
+	while (1)
+	{
+		char buffer[1024];
+		ssize_t s = read(1, buffer, strlen(buffer));
+		if (s > 0)
+		{
+			buffer[s] = 0;
+			write(1, buffer, strlen(buffer));
+			printf("read success , s:%d , errno:%d \n", s, errno);
+		}
+		else
+		{
+			if (errno == EAGAIN || errno == EWOULDBLOCK)
+			{
+				printf("数据没有准备好，再试试吧!\n");
+				printf("read failed, s: %d, errno: %d\n", s, errno);
+				//做做其他事情
+				sleep(1);
+				continue;
+			}
+		}
+	}
+}
+```
+![[Pasted image 20221108173010.png]]
+
+>==在非阻塞情况下，我们读取数据，如果数据没有就绪，系统是以出错的形式返回的(不是错误)，**没有就绪** 和**真正的错误**使用的是同样的方式标识，如何进一步区分呢??==
+>那就是`errno` 中的  `EAGAIN` 表示的就是没有就绪。
+
+# 多路转接IO
+ 多路IO转接服务器也叫做多任务IO服务器。该类服务器实现的主旨思想是，不再由应用程序自己监视客户端连接，取而代之由内核替应用程序监视文件。
+ 
+ 主要使用的方法有三种: **select** , **poll** , **epoll**
+
+select，poll，epoll都是IO多路复用的机制。I/O多路复用就是通过一种机制，一个进程可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的读写操作。但select，poll，epoll本质上都是同步I/O，因为他们都需要在读写事件就绪后自己负责进行读写，也就是说这个读写过程是阻塞的，而异步I/O则无需自己负责进行读写，异步I/O的实现会负责把数据从内核拷贝到用户空间。
+
+## select
+系统提供select函数来实现多路复用输入/输出模型.
+>- select系统调用是用来让我们的程序监视多个文件描述符的状态变化的;
+>- 程序会停在select这里等待，直到被监视的文件描述符有一个或多个发生了状态改变;
+
+### select函数分析
+需要导入头文件 `sys/select.h`
+![[Pasted image 20221108151253.png]]
+>==nfds==: 监控的文件描述符集里最大文件描述符加1，因为此参数会告诉内核检测前多少个文件描述符的状态
+>==readfds==： 监控有读数据到达文件描述符集合，传入传出参数
+>==writefds==： 监控写数据到达文件描述符集合，传入传出参数
+>==exceptfds==： 监控异常发生达文件描述符集合,如带外数据到达异常，传入传出参数
+>==timeout==： 定时阻塞监控时间。
+>	- NULL：则表示`select()`没有timeout，select将一直被阻塞，直到某个文件描述符上发生了事件;
+>	- 0：仅检测描述符集合的状态，然后立即返回，并不等待外部事件的发生。
+>	- 特定的时间值：使用timeval设置，如果在指定的时间段里没有事件发生，`select()`将超时返回。
+
+#### timeout的取值
+timeval结构用于描述一段时间长度，如果在这个时间内，需要监视的描述符没有事件发生则函数返回，返回值为0。
+```cpp
+struct timeval {
+	long tv_sec; /* seconds */
+	long tv_usec; /* microseconds */
+};
+```
+
+
+#### fd_set的结构
+![[Pasted image 20221108152720.png]]
+
+![[Pasted image 20221108152817.png]]
+
+其实这个结构就是一个整数数组, 更严格的说, 是一个 "**位图**". 使用位图中对应的位来表示要监视的文件描述符.
+
+fd_set 的大小是 `128byte` ，但是使用的位图结构，所以能存储 `128 * 8`的fd
+
+#### 函数返回值：
+- 执行成功则返回文件描述词状态已改变的个数
+- 如果返回0代表在描述词状态改变前已超过timeout时间，没有返回
+- 当有错误发生时则返回-1，错误原因存于errno，此时参数readfds，writefds, exceptfds和timeout的值变成不可预测。
+
+>错误值可能为：
+>EBADF 文件描述词为无效的或该文件已关闭 
+>EINTR 此调用被信号所中断
+>EINVAL 参数n 为负值。 
+>ENOMEM 核心内存不足
+
+
+### 用来操作fd_set 的接口
+```cpp
+void FD_CLR(int fd, fd_set *set); //把文件描述符集合里fd清0
+
+int FD_ISSET(int fd, fd_set *set); //测试文件描述符集合里fd是否置1
+
+void FD_SET(int fd, fd_set *set); //把文件描述符集合里fd位置1
+
+void FD_ZERO(fd_set *set); //把文件描述符集合里所有位清0
+```
+
+
+### 理解select执行过程
+ 理解select模型的关键在于理解fd_set,为说明方便，取fd_set长度为1字节，fd_set中的每一bit可以对应一个文件描述符fd。则1字节长的fd_set最大可以对应8个fd.
+
+这是执行一次的过程
+>(1)执行`fd_set set`; `FD_ZERO(&set)`;则set用位表示是**0000,0000**。
+>(2)若`fd＝5`,执行`FD_SET(fd,&set)`; 后set变为**0001,0000**(第5位置为1)
+（3）若再加入`fd＝2`，`fd=1`,则**set**变为**0001,0011** 
+（4）执行 `select(6,&set,0,0,0)`阻塞等待 
+（5）若`fd=1,fd=2`上都发生可读事件，则select返回，此时set变为**0000,0011**。注意：**没有事件发生的`fd=5`被清空**。
+
+`select()`因为使用输入输出型参数标识不同的含义，**意味着后面每一次，都需要对fd_set进行重新设置**!!
+
+==但是你的程序，怎么知道你都有那些fd呢?**所以用户必须定义数组或者其他容器结构，来把历史fd全部保存起来，需要使用第三方数组**==
+
+上面的执行过程其实是有一个文件的，也就是 `0` fd，怎么表示呢，为什么在上面的案例中没有？
+其实不是没有，而是选择性省略了这个 `0` fd 所在的位置，可以这样想象，在一个数组中，0号fd对应的就是下标0，3号fd对应的就是下标3，6号fd对应的就是下标6，以此类推。所以0号fd不是没有对应的bit位，而是被选择性省略了。
+
+### socket 就绪条件
+#### 读就绪
+- socket内核中, 接收缓冲区中的字节数, 大于等于低水位标记SO_RCVLOWAT. 此时可以无阻塞的读该文件描述符, 并且返回值大于0;
+- socket TCP通信中, 对端关闭连接, 此时对该socket读, 则返回0; 
+- 监听的socket上有新的连接请求;
+- socket上有未处理的错误;
+
+#### 写就绪
+- socket内核中, 发送缓冲区中的可用字节数(发送缓冲区的空闲位置大小), 大于等于低水位标记 
+- SO_SNDLOWAT, 此时可以无阻塞的写, 并且返回值大于0;
+- socket的写操作被关闭(close或者shutdown). 对一个写操作被关闭的socket进行写操作, 会触发SIGPIPE信号;
+- socket使用非阻塞connect连接成功或失败之后;
+- socket上有未读取的错误;
+
+## poll
+poll 和 [[网络IO模型#select|select]] 的实现机制类似，本质上没有多大差别，也是管理多个套接字文件描述符，也是由内核进行轮询并根据描述符的状态进行处理，**但是 poll() 没有最大文件 描述符数量的限制**，勉强算是`select()`函数的升级版。poll 的函数原型如下
+![[Pasted image 20221109124637.png]]
+>参数解析
+>==fds==: 是一个 pollfd 结构类型的数组的首地址，用于存放需要检测其状态的Socket描述符
+>==nfds==: 监控数组中有多少文件描述符需要被监控
+>==timeout==: 毫秒级等待
+>		 `-1`：阻塞等，#define INFTIM -1（Linux中没有定义此宏，可以自己定义）
+>		 `0`：立即返回，不阻塞进程
+>		 `>0`：等待指定毫秒数，如当前系统时间精度不够毫秒，向上取值
+
+### pollfd解析
+==**pollfd的结构**==
+```c
+struct pollfd {
+	int fd;        /* 文件描述符：用户设置关注的文件描述符（用户填充） */
+	short events; /* 监控的事件：用户关注的事件类型（用户填充） */
+	short revents; /* 监控事件中满足条件返回的事件：/由内核填充，就绪的事件类型 */
+};
+```
+
+  
+==**pollfd 结构监控的事件类型**==
+|宏|含义|
+|:-:|:-|
+|`POLLIN` | 普通或带外优先数据可读,即`POLLRDNORM|POLLRDBAND` |
+| `POLLRDNORM`|数据可读 |
+|`POLLRDBAND` |优先级带数据可读|
+|`POLLPRI`| 高优先级可读数据|
+| `POLLOUT` |普通或带外数据可写|
+| `POLLWRNORM`| 数据可写|
+|`POLLWRBAND`| 优先级带数据可写|
+| `POLLERR`| 发生错误|
+|`POLLHUP` |发生挂起|
+|`POLLNVAL` |描述字不是一个打开的文件|
+
+
+
+### poll 特点
+相对于 Linux 下 select 和 epoll，poll 特点如下：
+
+- 相较于select而言，poll的优势：
+	1. 传入、传出事件分离。无需每次调用时，重新设定监听事件（重新初始化）。
+	2. 文件描述符上限，可突破1024限制。能监控的最大上限数可使用配置文件调整。
+	3. 相比同步阻塞型 IO 模型，poll 用单线程（进程）执行，占用资源少，不消耗太多 CPU，同时能够为多客户端提供服务。
+
+- 缺点和select一样：
+	1. 大量遍历：只是返回变化的套接字文件描述符的个数，具体哪个变化需要遍历；
+	2. 不必要的拷贝：监听的文件描述集合在应用层和内核之间来回拷贝；
+	3. 大量并发时，少量触发（即只有少量描述符被触发）时遍历低效。
+
+
+## epoll
+epoll是在2.6内核中提出的，是之前的select和poll的增强版本。相对于select和poll来说，epoll更加灵活，没有描述符限制。epoll使用一个文件描述符管理多个描述符，将用户关系的文件描述符的事件存放到内核的一个事件表中，这样在用户空间和内核空间的copy只需一次。
+
+### epoll 函数
+epoll操作过程需要三个接口，分别如下：
+```cpp
+int epoll_create(int size)；//创建一个epoll的句柄，size用来告诉内核这个监听的数目一共有多大
+int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event)；
+int epoll_wait(int epfd, struct epoll_event * events, int maxevents, int timeout);
+```
+
+#### epoll_create()
+![[Pasted image 20221109131619.png]]
+创建一个epoll的句柄(文件描述符)，`size`用来告诉内核这个监听的数目一共有多大，这个参数不同于`select()`中的第一个参数，给出最大监听的fd+1的值，**参数size并不是限制了epoll所能监听的描述符最大个数，只是对内核初始分配内部数据结构的一个建议**。  
+当创建好epoll句柄后，它就会占用一个fd值，在linux下如果查看/proc/进程id/fd/，是能够看到这个fd的，所以在使用完epoll后，必须调用`close()`关闭，否则可能导致fd被耗尽。
+
+#### epoll_ctl()
+![[Pasted image 20221109131841.png]]
+>函数解析
+>- ==epfd==：是`epoll_create()`的返回值。 
+>- ==op==：表示op操作，用三个宏来分别表示添加、删除和修改对fd的监听事件。：
+>		- 添加`EPOLL_CTL_ADD`
+>		- 删除`EPOLL_CTL_DEL`
+>		- 修改`EPOLL_CTL_MOD`  
+>- ==fd==：是需要监听的fd（文件描述符）  
+>- ==epoll_event==：是告诉内核需要监听什么事，
+
+==**struct epoll_event结构如下：**==
+```cpp
+struct epoll_event {
+  uint32_t events;  /* Epoll events */
+  epoll_data_t data;  /* User data variable */
+};
+
+
+//epoll_data_t data的结构
+typedef union epoll_data{
+	void* ptr;
+	int fd;
+	uint32_t u32;
+	uint64_t u64;
+}epoll_data_t;
+
+//events可以是以下几个宏的集合：
+EPOLLIN ：表示对应的文件描述符可以读（包括对端SOCKET正常关闭）；
+EPOLLOUT：表示对应的文件描述符可以写；
+EPOLLPRI：表示对应的文件描述符有紧急的数据可读（这里应该表示有带外数据到来）；
+EPOLLERR：表示对应的文件描述符发生错误；
+EPOLLHUP：表示对应的文件描述符被挂断；
+EPOLLET： 将EPOLL设为边缘触发(Edge Triggered)模式，这是相对于水平触发(Level Triggered)来说的。
+EPOLLONESHOT：只监听一次事件，当监听完这次事件之后，如果还需要继续监听这个socket的话，需要再次把这个socket加入到EPOLL队列里
+```
+
+
+#### epoll_wait()
+![[Pasted image 20221109131905.png]]
+- 参数`events`是分配好的`epoll_event`结构体数组.
+- epoll将会把发生的事件赋值到`events`数组中 (`events`不可以是空指针，内核只负责把数据复制到这个`events`数组中，不会去帮助我们在用户态中分配内存).
+- `maxevents`告之内核这个`events`有多大，这个 `maxevents`的值不能大于创建`epoll_create()`时的`size`. 
+- 参数timeout是超时时间 (毫秒，0会立即返回，-1是永久阻塞).
+- 返回值：如果函数调用成功，返回对应I/O上已准备好的文件描述符数目，如返回**0**表示已超时, 返回**小于0**表示函数失败.
+
+### epoll原理
+1.  首先调用epoll_create()创建一个epoll实例----在内核区，是一个eventpoll结构体类型；返回值是一个文件描述符，可以通过这个文件描述符操作内核中这块内存（通过epoll提供的API进行操作）
+![[Pasted image 20221109152121.png]]
+
+
+2. 生成的eventpoll内部，有两个类型：
+		- rb_root，红黑树结构；–记录需要检测的文件描述符
+		- list_head，链表 --要求检测的文件描述符中，哪些文件描述符是有数据的
+优点： 与select和poll相比，直接在内核中创建一块内存，没有用户态到内核态的开销。
+![[Pasted image 20221109152202.png]]
+
+
+3. 委托内核检测，epoll_ctl()函数
+		- `epollfd`就是epoll_create()函数的返回值；
+		- `EPOLL_CTL_ADD`：指定做什么操作
+		- `lfd`：需要检测的文件描述符
+		- `ev`：内核需要检测的事件；
+				- `ev`参数的类型是：`epoll_event`
+				- `ev.events = EPOLLIN`，检测读事件；
+				- `ev.data.fd = lfd`，检测的文件描述符值
+注意：现在只是将需要检测的文件描述符添加到红黑树rbr结构中；–比如添加了5个需要检测。
+![[Pasted image 20221109152412.png]]
+
+4.  `epoll_wait()`，调用后，内核就会在内核中的红黑树结构中进行检测；
+	    - 比如红黑树中需要检测5个文件描述符，有3个文件描述符发生了变化，将这3个文件描述符添加到链表rdlist中；
+	    - 并且rdlist中数据会返回出去，速度是很快的（注意：可以返回具体是哪几个文件描述符）
+![[Pasted image 20221109152448.png]]
+
+![[Pasted image 20221109152454.png]]
