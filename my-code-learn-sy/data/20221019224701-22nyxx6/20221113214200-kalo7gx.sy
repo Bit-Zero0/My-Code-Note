@@ -1,0 +1,1336 @@
+{
+	"ID": "20221113214200-kalo7gx",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221113214200-kalo7gx",
+		"title": "Reactor",
+		"updated": "20221113214529"
+	},
+	"Children": [
+		{
+			"ID": "20221113214239-xumsvfl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-xumsvfl",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "该内容其实可以当作一个小型项目了。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-4uahbjo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-4uahbjo",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "Reactor 反应堆模式"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ": 通过多路转接方案，被动的采用事件派发的方式，去反向的调用对应的回调函数"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-6osn7x7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-6osn7x7",
+				"updated": "20221113214257"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主要是设计一个 "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "epoll"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221113211217-ayuqlkt"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "ET 模式"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "版本的计算器，但本次项目中只实现了 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "+"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 号，想要更改数据的处理其实可以把 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Service.hpp 和 util.hpp文件中Deserialize函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的数据处理逻辑修改即可。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-9k999ln",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221113214239-9k999ln",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "设计思路"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-qfbk7i3",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221113214239-qfbk7i3",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"ID": "20221113214239-2jmzumn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221113214239-2jmzumn",
+						"updated": "20221113214239"
+					},
+					"Children": [
+						{
+							"ID": "20221113214239-qg01lsu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221113214239-qg01lsu",
+								"updated": "20221113214239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们需要给每一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "fd"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，都要有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自己专属的输入输出缓冲区"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "!"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221113214239-c6w1s94",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221113214239-c6w1s94",
+						"updated": "20221113214239"
+					},
+					"Children": [
+						{
+							"ID": "20221113214239-on7hs12",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221113214239-on7hs12",
+								"updated": "20221113214239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "虽然已经对等和拷贝在接口层面已经进行了分离，但是在代码逻辑上，依旧是耦合在一起的。"
+								}
+							]
+						},
+						{
+							"ID": "20221113214239-fxlroov",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221113214239-fxlroov",
+								"updated": "20221113214239"
+							},
+							"Children": [
+								{
+									"ID": "20221113214239-cp5sx71",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221113214239-cp5sx71",
+										"updated": "20221113214239"
+									},
+									"Children": [
+										{
+											"ID": "20221113214239-68io4m3",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221113214239-68io4m3",
+												"updated": "20221113214239"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "通过"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "回调"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "的方式来"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "解耦"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221113214239-f7tcx5r",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221113214239-f7tcx5r",
+						"updated": "20221113214239"
+					},
+					"Children": [
+						{
+							"ID": "20221113214239-cdwzoke",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221113214239-cdwzoke",
+								"updated": "20221113214239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "epoll最大的优势在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "就绪事件通知机制"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "!"
+								}
+							]
+						},
+						{
+							"ID": "20221113214239-murdxvn",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221113214239-murdxvn",
+								"updated": "20221113214239"
+							},
+							"Children": [
+								{
+									"ID": "20221113214239-u4zgykc",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221113214239-u4zgykc",
+										"updated": "20221113214239"
+									},
+									"Children": [
+										{
+											"ID": "20221113214239-88oe5dj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221113214239-88oe5dj",
+												"updated": "20221113214239"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "使用"
+												},
+												{
+													"Type": "NodeMark",
+													"Data": "mark",
+													"Children": [
+														{
+															"Type": "NodeMark2OpenMarker"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "派发器"
+														},
+														{
+															"Type": "NodeMark2CloseMarker"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "来"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "处理就绪时间派发逻辑"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " , 也就是sock就绪的读写回调。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-854gnk5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-854gnk5",
+				"updated": "20221113214312"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221113153322"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221113153322-20221113214312-s10yzdx.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-7rc8eoo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-7rc8eoo",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个小项目总共有六个文件，主文件是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "epoll_server.cpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , 也就是最顶层的文件，其余文件分别是: "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Reactor.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,  "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Serivce.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Accepter.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " . "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Sock.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " , "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Util.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221113214321-les34qm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214321-les34qm"
+			}
+		},
+		{
+			"ID": "20221113214239-iqu30nk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-iqu30nk",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Reactor.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " : 主要 含有"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Event类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Reactor类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，集成事件派发器 ， 以及IO事件的开关。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214323-qzww14q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214323-qzww14q"
+			}
+		},
+		{
+			"ID": "20221113214239-q8v8aw6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-q8v8aw6",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Serivce.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " :IO事件的读取。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214325-64w1spg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214325-64w1spg"
+			}
+		},
+		{
+			"ID": "20221113214239-bv8w8kt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-bv8w8kt",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Accepter.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " :链接管理器，负责将新到来的连接，链接到Reactor中。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214327-kdlzbju",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214327-kdlzbju"
+			}
+		},
+		{
+			"ID": "20221113214239-rcyj64r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-rcyj64r",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Util.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":是一个工具文件，用来设置sock的非阻塞，数据的分包和反序列化."
+				}
+			]
+		},
+		{
+			"ID": "20221113214328-g41awhl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214328-g41awhl"
+			}
+		},
+		{
+			"ID": "20221113214239-zmyyxmb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214239-zmyyxmb",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Sock.hpp"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":有一个Sock类，用来封装套接字。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214332-5noalr0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113214332-5noalr0"
+			}
+		},
+		{
+			"ID": "20221113214239-uz2syco",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"fold": "1",
+				"id": "20221113214239-uz2syco",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "epoll_server.cpp"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-ry0730o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-ry0730o",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主文件，负责所有模块的调度。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-u4o0t9z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-u4o0t9z",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \"Reactor.hpp\"\n#include \"Sock.hpp\"\n#include \"Accepter.hpp\"\n#include \"Util.hpp\"\n\nstatic void Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c std::endl;\n}\n\nint main(int argc, char* argv[])\n{\n    if (argc != 2)\n    {\n        Usage(argv[0]);\n        exit(1);\n    }\n\n    // 1. 创建socket，监听\n    int listen_sock = Sock::Socket();\n    SetNonBlock(listen_sock);\n    Sock::Bind(listen_sock, (uint16_t)atoi(argv[1]));\n    Sock::Listen(listen_sock);\n\n    // 2. 创建Reactor对象\n    // Reactor 反应堆模式: 通过多路转接方案，被动的采用事件派发的方式，去反向的调用对应的回调函数\n    Reactor* R = new Reactor();\n    R-\u003eInitReactor();\n\n    // 3. 给Reactor反应堆中加柴火\n    // 3.1 有柴火\n    Event* evp = new Event;\n    evp-\u003esock = listen_sock;\n    evp-\u003eR = R;\n\n    // Accepter: 链接管理器\n    evp-\u003eRegisterCallback(Accepter, nullptr, nullptr);\n    // 3.2 将准备好的柴火放入反应堆Reactor中\n    R-\u003eInsertEvent(evp, EPOLLIN | EPOLLET);\n\n    // 4. 开始进行事件派发！\n    int timeout = 1000;\n    while (true)\n    {\n        R-\u003eDispatcher(timeout);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-ilkyodh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"fold": "1",
+				"id": "20221113214239-ilkyodh",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Reactor.hpp"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-6bbtzxx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-6bbtzxx",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主要 含有Event类 和 Reactor类 ，集成事件派发器 ， 以及IO事件的开关。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-bwfukak",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-bwfukak",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003csys/epoll.h\u003e\n#include \u003cstring\u003e\n#include \u003cunordered_map\u003e\n#include \u003cunistd.h\u003e\n\n// 一般处理IO的时候，我们只有三种接口需要处理\n// 处理读取\n// 处理写入\n// 处理异常\n#define SIZE 128\n#define NUM 64\n\nclass Reactor;\nclass Event;\n\ntypedef int (*callback_t)(Event* ev);\n\nclass Event\n{\npublic:\n    int sock;              //对应的文件描述符\n    std::string inbuffer;  //对应的sock,对应的输入缓冲区\n    std::string outbuffer; //对应的sock,对应的输出缓冲区\n\n    callback_t recver;  // 处理读取\n    callback_t sender;  // 处理写入\n    callback_t errorer; // 处理异常\n\n    Reactor* R; // Event回指Reactor的指针\n\n    Event()\n    {\n        sock = -1;\n        recver = nullptr;\n        sender = nullptr;\n        errorer = nullptr;\n        R = nullptr;\n    }\n\n    void RegisterCallback(callback_t _recver, callback_t _sender, callback_t _errorer)\n    {\n        recver = _recver;\n        sender = _sender;\n        errorer = _errorer;\n    }\n\n    ~Event()\n    {\n    }\n};\n\n// 不需要关心任何sock的类型(listen，读，写)\n// 如何进行使用该类，对Event进行管理\n// Reactor : Event = 1 : n;\nclass Reactor\n{\nprivate:\n    int epfd;\n    std::unordered_map\u003cint, Event*\u003e events; //我的Epoll类管理的所有的Event的集合\n\npublic:\n    Reactor()\n        : epfd(-1)\n    {\n    }\n\n    void InitReactor()\n    {\n        epfd = epoll_create(SIZE);\n        if (epfd \u003c 0)\n        {\n            std::cerr \u003c\u003c \"epoll_create error\" \u003c\u003c std::endl;\n            exit(2);\n        }\n        std::cout \u003c\u003c \"InitReactor success\" \u003c\u003c std::endl;\n    }\n\n    bool InsertEvent(Event* evp, uint32_t evs)\n    {\n        // 1. 将sock中的sock插入到epoll中\n        struct epoll_event ev;\n        ev.events = evs;\n        ev.data.fd = evp-\u003esock;\n        if (epoll_ctl(epfd, EPOLL_CTL_ADD, evp-\u003esock, \u0026ev) \u003c 0)\n        {\n            std::cerr \u003c\u003c \"epoll_ctl add event failed\" \u003c\u003c std::endl;\n            return false;\n        }\n        // 2. 将ev本身插入到unordered_map中\n        events.insert({ evp-\u003esock, evp });\n    }\n\n    void DeleteEvent(Event* evp)\n    {\n        int sock = evp-\u003esock;\n        auto iter = events.find(sock);\n        if (iter != events.end())\n        {\n            // 1. 将sock中的sock从epoll中删除它\n            epoll_ctl(epfd, EPOLL_CTL_DEL, sock, nullptr);\n            // 2. 将特定的ev从 unordered_map中 移除\n            events.erase(iter);\n            // 3. close\n            close(sock);\n            // 4. 删除event节点\n            delete evp;\n        }\n    }\n\n    //关于修改,使能读写\n    bool EnableRW(int sock, bool enbread, bool enbwrite)\n    {\n        struct epoll_event ev;\n        ev.events = EPOLLET | (enbread ? EPOLLIN : 0) | (enbwrite ? EPOLLOUT : 0);\n        ev.data.fd = sock;\n\n        if (epoll_ctl(epfd, EPOLL_CTL_MOD, sock, \u0026ev) \u003c 0)\n        {\n            std::cerr \u003c\u003c \"epoll_ctl mod event failed\" \u003c\u003c std::endl;\n            return false;\n        }\n    }\n  \n    //判断该sock在events是否存在\n    bool IsSockOk(int sock)\n    {\n        auto iter = events.find(sock);\n        return iter != events.end();\n    }\n\n    //就绪事件的派发器逻辑\n    void Dispatcher(int timeout)\n    {\n        struct epoll_event revs[NUM];\n        int n = epoll_wait(epfd, revs, NUM, timeout);\n        for (int i = 0; i \u003c n; i++)\n        {\n            int sock = revs[i].data.fd;\n            uint32_t revents = revs[i].events;\n\n            //代表差错处理, 将所有的错误问题全部转化成为让IO函数去解决\n            if (revents \u0026 EPOLLERR)\n                revents |= (EPOLLIN | EPOLLOUT);\n            if (revents \u0026 EPOLLHUP)\n                revents |= (EPOLLIN | EPOLLOUT);\n\n            if (revents \u0026 EPOLLIN)\n            {\n                //直接调用回调方法，执行对应的读取\n                if (IsSockOk(sock) \u0026\u0026 events[sock]-\u003erecver)\n                    events[sock]-\u003erecver(events[sock]);\n            }\n\n            if (revents \u0026 EPOLLOUT)\n            {\n                //直接调用回调方法，执行对应的读取\n                if (IsSockOk(sock) \u0026\u0026 events[sock]-\u003esender)\n                    events[sock]-\u003esender(events[sock]);\n            }\n        }\n    }\n    ~Reactor() {}\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-17i66qk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"fold": "1",
+				"id": "20221113214239-17i66qk",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Service.hpp"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-hms9yb3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-hms9yb3",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主要进行IO事件的读取"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-xh2yxdr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-xh2yxdr",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \"Reactor.hpp\"\n#include \"Util.hpp\"\n#include \u003ccerrno\u003e\n#include \u003cvector\u003e\n\n#define ONCE_SIZE 128\n// 1: 本轮读取全部完成\n//-1: 读取出错\n// 0: 对端关闭链接\nstatic int RecverCore(int sock, std::string\u0026 inbuffer)\n{\n    while (true)\n    {\n        char buffer[ONCE_SIZE];\n        ssize_t s = recv(sock, buffer, ONCE_SIZE - 1, 0);\n        if (s \u003e 0)\n        {\n            buffer[s] = '\\0';\n            inbuffer += buffer;\n        }\n        else if (s \u003c 0)\n        {\n            if (errno == EINTR) // IO被信号打断，概率特别低\n                continue;\n\n            if (errno == EAGAIN || errno == EWOULDBLOCK) //读完，底层没数据了\n                return 1;\n\n            return -1; // 真的出错了\n        }\n        else // s == 0\n            return 0;\n    }\n}\n\nint Recver(Event* evp)\n{\n    std::cout \u003c\u003c \"Recver been called \" \u003c\u003c std::endl;\n\n    // 1. 真正的读取\n    int result = RecverCore(evp-\u003esock, evp-\u003einbuffer);\n    if (result \u003c= 0)\n    {\n        //差错处理\n        if (evp-\u003eerrorer)\n            evp-\u003eerrorer(evp);\n\n        return -1;\n    }\n\n    //  2. 分包-- 一个或者多个报文 -- 解决粘包问题\n    std::vector\u003cstd::string\u003e tokens;\n    std::string sep = \"X\";\n    SplitSegment(evp-\u003einbuffer, \u0026tokens, sep);\n    // 3. 反序列化 -- 针对一个报文 -- 提取有效参与计算或者存储的信息\n    for (auto\u0026 seg : tokens)\n    {\n        std::string data1, data2;\n\n        //就是和业务强相关啦,可根据实际业务要求进行修改\n        if (Deserialize(seg, \u0026data1, \u0026data2))\n        {\n            // 4. 业务逻辑 -- 得到结果\n            int x = atoi(data1.c_str());\n            int y = atoi(data2.c_str());\n            int z = x + y;\n\n            // 5. 构建响应 -- 添加到evp-\u003eoutbuffer!!\n            // 2+3X -\u003e 2+3=5X\n            std::string res = data1;\n            res += \"+\";\n            res += data2;\n            res += \"=\";\n            res += std::to_string(z);\n            res += sep;\n\n            evp-\u003eoutbuffer += res; //发送数据\n        }\n    }\n    // 6. 尝试直接间接进行发送 -- 后续说明\n    // 必须条件成熟了(写事件就绪)，你才能发送呢？？\n    // 一般只要将报文处理完毕，才需要发送\n    // 写事件一般基本都是就绪的，但是用户不一定是就绪的！\n    // 对于写事件，我们通常是   按   需    设置！！\n    if (!(evp-\u003eoutbuffer).empty())\n    {\n        // 写打开的时候，默认就是就绪的！即便是发送缓冲区已经满了\n        // epoll 只要用户重新设者了OUT事件，EPOLLOUT至少会在触发一次！\n        evp-\u003eR-\u003eEnableRW(evp-\u003esock, true, true);\n    }\n    return 0;\n}\n\n// 1: 全部将数据发送完成\n// 0: 数据没有发完，但是不能再发了\n//-1: 发送失败\nbool SenderCore(int sock, std::string\u0026 outbuffer)\n{\n    while (true)\n    {\n        int total = 0;\n        const char* start = outbuffer.c_str();\n        int size = outbuffer.size();\n        ssize_t curr = send(sock, start + total, size - total, 0);\n        if (curr \u003e 0)\n        {\n            total += curr;\n            if (total == size) //全部将数据发送完成\n            {\n                outbuffer.clear();\n                return 1;\n            }\n        }\n        else\n        {\n            if (errno == EINTR)\n                continue;\n\n            //数据没有发完，但是不能再发了！\n            if (errno == EAGAIN || errno == EWOULDBLOCK)\n            {\n                outbuffer.erase(0, total);\n                return 0;\n            }\n\n            return -1;\n        }\n    }\n}\n\nint Sender(Event* evp)\n{\n    std::cout \u003c\u003c \"Sender been called\" \u003c\u003c std::endl;\n\n    int result = SenderCore(evp-\u003esock, evp-\u003eoutbuffer);\n    if (result == 1)\n    {\n        evp-\u003eR-\u003eEnableRW(evp-\u003esock, true, false); //按需设置\n    }\n    else if (result == 0)\n    {\n        evp-\u003eR-\u003eEnableRW(evp-\u003esock, true, true); //按需设置\n    }\n    else\n    {\n        if (evp-\u003eerrorer)\n            evp-\u003eerrorer(evp);\n    }\n}\n\nint Errorer(Event* evp)\n{\n    std::cout \u003c\u003c \"Errorer been called\" \u003c\u003c std::endl;\n    evp-\u003eR-\u003eDeleteEvent(evp);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-qn23bbv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"fold": "1",
+				"id": "20221113214239-qn23bbv",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Accpter.hpp"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-ezmdzg7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-ezmdzg7",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "链接管理器，负责将新到来的连接，链接到Reactor中。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-dux1kh1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-dux1kh1",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \"Reactor.hpp\"\n#include \"Sock.hpp\"\n#include \"Service.hpp\"\n#include \"Util.hpp\"\n\nint Accepter(Event* evp)\n{\n    std::cout \u003c\u003c \"有新的链接到来了,就绪的sock是: \" \u003c\u003c evp-\u003esock \u003c\u003c std::endl;\n    while (true)\n    {\n        int sock = Sock::Accept(evp-\u003esock);\n        if (sock \u003c 0)\n        {\n            std::cout \u003c\u003c \"Accept Done!\" \u003c\u003c std::endl;\n            break;\n        }\n        std::cout \u003c\u003c \"Accept success: \" \u003c\u003c sock \u003c\u003c std::endl;\n        SetNonBlock(sock);\n        Event* other_ev = new Event();\n        other_ev-\u003esock = sock;\n        other_ev-\u003eR = evp-\u003eR;\n\n        //为什么要让所有的Event指向自己所属的Reactor??\n        // recver, sender, errorer,就是我们代码中的较顶层，只负责真正的读取！\n        other_ev-\u003eRegisterCallback(Recver, Sender, Errorer);\n        evp-\u003eR-\u003eInsertEvent(other_ev, EPOLLIN | EPOLLET);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-utau4g3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"fold": "1",
+				"id": "20221113214239-utau4g3",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Util.hpp"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-2uq9n3h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-2uq9n3h",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "是一个工具文件，用来设置sock的非阻塞，数据的分包和反序列化."
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-tish4pi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-tish4pi",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#pragma once\n\n#include \u003ciostream\u003e\n#include \u003cfcntl.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring\u003e\n#include \u003cvector\u003e\n\n//设置一个sock成为非阻塞\nvoid SetNonBlock(int sock)\n{\n    int f1 = fcntl(sock, F_GETFL);\n    if (f1 \u003c 0)\n    {\n        std::cerr \u003c\u003c \"fcntl failed\" \u003c\u003c std::endl;\n        return;\n    }\n    fcntl(sock, F_SETFL, f1 | O_NONBLOCK);\n}\n\n//分包\nvoid SplitSegment(std::string\u0026 inbuffer, std::vector\u003cstd::string\u003e* tokens, std::string sep)\n{\n    while (true)\n    {\n        std::cout \u003c\u003c \"inbuffer: \" \u003c\u003c inbuffer \u003c\u003c std::endl;\n        auto pos = inbuffer.find(sep);\n        if (pos == std::string::npos)\n        {\n            break;\n        }\n        std::string sub = inbuffer.substr(0, pos);\n        tokens-\u003epush_back(sub);\n        inbuffer.erase(0, pos + sep.size());\n    }\n}\n\n//反序列化\nbool Deserialize(std::string\u0026 seg, std::string* out1, std::string* out2) //就是和业务强相关啦\n{\n    std::string op = \"+\";\n    auto pos = seg.find(op);\n\n    if (pos == std::string::npos)\n        return false;\n\n    *out1 = seg.substr(0, pos);\n    *out2 = seg.substr(pos + op.size());\n    return true;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-861erym",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"fold": "1",
+				"id": "20221113214239-861erym",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Sock.hpp"
+				}
+			]
+		},
+		{
+			"ID": "20221113214239-iyzn1i8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214239-iyzn1i8",
+				"updated": "20221113214239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有一个Sock类，用来封装套接字。"
+				}
+			]
+		},
+		{
+			"ID": "20221113214525-2k27z0u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214525-2k27z0u",
+				"updated": "20221113214529"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221113213910-4qaavqy"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "Sock.hpp(端口复用版)"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221113214505-egstsnp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"fold": "1",
+				"heading-fold": "1",
+				"id": "20221113214505-egstsnp"
+			}
+		}
+	]
+}

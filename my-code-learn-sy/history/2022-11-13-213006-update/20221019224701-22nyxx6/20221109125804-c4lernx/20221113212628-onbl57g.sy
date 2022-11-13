@@ -1,0 +1,52 @@
+{
+	"ID": "20221113212628-onbl57g",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221113212628-onbl57g",
+		"title": "select实例代码",
+		"updated": "20221113212650"
+	},
+	"Children": [
+		{
+			"ID": "20221113211217-93ejbba",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113211217-93ejbba"
+			}
+		},
+		{
+			"ID": "20221113212650-95x99f2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221113212650-95x99f2"
+			}
+		},
+		{
+			"ID": "20221113211217-pev2m0t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221113211217-pev2m0t",
+				"updated": "20221113212553"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003csys/select.h\u003e\n\n#include \"Sock.hpp\"\n\n#define NUM (sizeof(fd_set) * 8)\n\nint fd_array[NUM]; //\u003e=0 有内容,合法的fd; 如果是-1,该位置没有fd\n\nstatic void Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c std::endl;\n}\n\nint main(int argc, char* argv[])\n{\n    if (argc != 2)\n    {\n        Usage(argv[0]);\n        exit(1);\n    }\n\n    uint16_t port = (uint16_t)atoi(argv[1]);\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock, port);\n    Sock::Listen(listen_sock);\n\n    for (int i = 0; i \u003c NUM; i++) // 对fd_array 初始化为-1 ， 表示没有fd进行管理。\n    {\n        fd_array[i] = -1;\n    }\n\n    //注意，这里不能使用accept ， 因为accept的本质叫做通过listen_sock获取新链接\n    // 前提是listen_sock上面有新链接，accept怎么知道有新链接呢？？\n    // 不知道！！！accept阻塞式等待\n    // 站在多路转接的视角，我们认为，链接到来，对于listen_sock,就是读事件就绪！！！\n    // 对于所有的服务器，最开始的时候，只有listen_sock\n\n    fd_set rfds;\n    fd_array[0] = listen_sock;\n    while (true)\n    {\n        FD_ZERO(\u0026rfds);           //把文件描述符集合里所有位清0\n        int max_fd = fd_array[0]; //最大的fd\n\n        for (int i = 0; i \u003c NUM; i++)\n        {\n            if (fd_array[i] == -1)\n                continue;\n\n            //下面的都是合法的fd\n            FD_SET(fd_array[i], \u0026rfds); //所有要关心读事件的fd，添加到rfds中\n\n            if (max_fd \u003c fd_array[i])\n                max_fd = fd_array[i]; //更新最大fd\n        }\n\n        struct timeval timeout = { 0, 0 };\n\n        // 我们的服务器上的所有的fd(包括listen_sock),都要交给select进行检测！！\n        // recv,read,write,send,accept : 只负责自己最核心的工作：真正的读写(listen_sock:accept)\n\n        int n = select(max_fd + 1, \u0026rfds, nullptr, nullptr, nullptr);\n        switch (n)\n        {\n        case -1: //当有错误发生时则返回 -1，错误原因存于errno\n            std::cerr \u003c\u003c \"select error\" \u003c\u003c std::endl;\n            break;\n        case 0: //返回 0 代表在描述词状态改变前已超过timeout时间\n            std::cout \u003c\u003c \"select timeout\" \u003c\u003c std::endl;\n            break;\n        default: //执行成功则 返回文件描述词状态已改变的个数\n            std::cout \u003c\u003c \"有fd对应的事件就绪啦!\" \u003c\u003c std::endl;\n            for (int i = 0; i \u003c NUM; i++)\n            {\n                if (fd_array[i] == -1)\n                    continue;\n\n                //下面的fd都是合法的fd，但合法的fd不一定是就绪的fd\n                if (FD_ISSET(fd_array[i], \u0026rfds)) //测试文件描述符集合里fd是否置1\n                {\n                    std::cout \u003c\u003c \"sock: \" \u003c\u003c fd_array[i] \u003c\u003c \" 上面有了读事件，可以读取了\" \u003c\u003c std::endl;\n                    // 一定是读事件就绪了！！！\n                    // 就绪的fd就在fd_array[i]保存！\n                    // read, recv时，一定不会被阻塞！\n                    // 读事件就绪，就一定是可以recv，read吗？？不一定！！\n                    if (fd_array[i] == listen_sock)\n                    {\n                        std::cout \u003c\u003c \"listen_sock: \" \u003c\u003c listen_sock \u003c\u003c \" 有了新的链接到来\" \u003c\u003c std::endl;\n                        // accept\n                        int sock = Sock::Accept(listen_sock);\n                        if (sock \u003e= 0)\n                        {\n                            std::cout \u003c\u003c \"listen_sock: \" \u003c\u003c listen_sock \u003c\u003c \" 获取新的链接成功\" \u003c\u003c std::endl;\n                            // 获取成功\n                            // recv,read了呢？绝对不能！\n                            // 新链接到来，不意味着有数据到来！！什么时候数据到来呢?不知道\n                            // 可是，谁可以最清楚的知道那些fd，上面可以读取了？select！\n                            // 无法直接将fd设置进select，但是，好在我们有fd_array[]!\n                            int pos = 1;\n                            for (; pos \u003c NUM; pos++)\n                            {\n                                if (fd_array[pos] == -1)\n                                    break;\n                            }\n\n                            // 1. 找到了一个位置没有被使用\n                            if (pos \u003c NUM)\n                            {\n                                std::cout \u003c\u003c \"新链接: \" \u003c\u003c sock \u003c\u003c \" 已经被添加到了数组[\" \u003c\u003c pos \u003c\u003c \"]的位置\" \u003c\u003c std::endl;\n                                fd_array[pos] = sock;\n                            }\n                            else\n                            {\n                                // 2. 找完了所有的fd_array[],都没有找到没有被使用位置\n                                // 说明服务器已经满载，没法处理新的请求了\n                                std::cout \u003c\u003c \"服务器已经满载了，关闭新的链接\" \u003c\u003c std::endl;\n                                close(sock);\n                            }\n                        }\n                    }\n                    else\n                    {\n                        // 普通的sock，读事件就绪啦！\n                        // 可以进行读取啦，recv，read\n                        // 可是，本次读取就一定能读完吗？读完，就一定没有所谓的数据包粘包问题吗？\n                        // 但是，我们今天没法解决！我们今天没有场景！仅仅用来测试\n                        std::cout \u003c\u003c \"sock: \" \u003c\u003c fd_array[i] \u003c\u003c \" 上面有普通读取\" \u003c\u003c std::endl;\n\n                        char recv_buffer[1024] = { 0 };\n                        ssize_t s = recv(fd_array[i], recv_buffer, sizeof(recv_buffer) - 1, 0);\n                        if (s \u003e 0)\n                        {\n                            recv_buffer[s] = '\\0';\n                            std::cout \u003c\u003c \"client[ \" \u003c\u003c fd_array[i] \u003c\u003c \"]# \" \u003c\u003c recv_buffer \u003c\u003c std::endl;\n                        }\n                        else if (s == 0) //对端关闭了链接\n                        {\n                            std::cout \u003c\u003c \"sock: \" \u003c\u003c fd_array[i] \u003c\u003c \"关闭了, client退出啦!\" \u003c\u003c std::endl;\n                            //对端关闭了链接\n                            close(fd_array[i]);\n                            std::cout \u003c\u003c \"已经在数组下标fd_array[\" \u003c\u003c i \u003c\u003c \"]\"\n                                \u003c\u003c \"中,去掉了sock: \" \u003c\u003c fd_array[i] \u003c\u003c std::endl;\n                            fd_array[i] = -1; //该fd已关闭，所以必须把该位置 -1。\n                        }\n                        else //读取失败\n                        {\n                            close(fd_array[i]);\n                            std::cout \u003c\u003c \"已经在数组下标fd_array[\" \u003c\u003c i \u003c\u003c \"]\"\n                                \u003c\u003c \"中,去掉了sock: \" \u003c\u003c fd_array[i] \u003c\u003c std::endl;\n                            fd_array[i] = -1;\n                        }\n                    }\n                }\n            }\n            break;\n        }\n    }\n    return 0;\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}
