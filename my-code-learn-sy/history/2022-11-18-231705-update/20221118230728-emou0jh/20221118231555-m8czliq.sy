@@ -1,0 +1,2875 @@
+{
+	"ID": "20221118231555-m8czliq",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221118231555-m8czliq",
+		"title": "表的约束",
+		"updated": "20221118231647"
+	},
+	"Children": [
+		{
+			"ID": "20221118231601-o16oa57",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-o16oa57",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "真正约束字段的是数据类型，但是数据类型约束很单一，需要有一些额外的约束，更好的保证数据的合法性，从业务逻辑角度保证数据的正确性。比如有一个字段是email，要求是唯一的。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-tul0q86",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-tul0q86",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "表的约束很多，这里主要介绍如下几个：   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "null/not null"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ","
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "default"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "comment"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "zerofill"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "primary key"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ","
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "auto_increment"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unique key"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-46h6okg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-46h6okg",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "空属性"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-8tu061r",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-8tu061r",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-xg8783d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-xg8783d",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-fk5i1xd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-fk5i1xd",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "两个值："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "null"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（默认的）和 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "not null"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(不为空)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-hpxzrw2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-hpxzrw2",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-z4szbsl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-z4szbsl",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据库默认字段基本都是字段为空，但是实际开发时，尽可能保证字段不为空，因为数据为空没办法参与运算。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-wj5etc0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-wj5etc0",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e select null; \n+------+\n| NULL | \n+------+ \n| NULL | \n+------+\n1 row in set (0.00 sec)\n\nmysql\u003e select 1+null; \n+--------+\n| 1+null | \n+--------+ \n|   NULL | \n+--------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231608-sij6pjr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231608-sij6pjr"
+			}
+		},
+		{
+			"ID": "20221118231601-64dqdu1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-64dqdu1",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例：\n创建一个班级表，包含班级名和班级所在的教室。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-ev37ljc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-ev37ljc",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "站在正常的业务逻辑中：\n\t- 如果班级没有名字，你不知道你在哪个班级\n\t- 如果教室名字可以为空，就不知道在哪上课\n所以我们在设计数据库表的时候，一定要在表中进行限制，满足上面条件的数据就不能插入到表中。这就是“约束”。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-3ntjrez",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-3ntjrez",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table myclass(\nclass_name varchar(20) not null, \nclass_room varchar(10) not null\n); \n\n\nmysql\u003e desc myclass;\n+------------+-------------+------+-----+---------+-------+ \n| Field     | Type         | Null | Key | Default | Extra | \n+------------+-------------+------+-----+---------+-------+\n| class_name | varchar(20) | NO   |     | NULL    |       | \n| class_room | varchar(10) | NO   |     | NULL    |       | \n+------------+-------------+------+-----+---------+-------+\n \n--插入数据时,没有给教室数据插入失败：\nmysql\u003e insert into myclass(class_name) values('class1');\nERROR 1364 (HY000): Field 'class_room' doesn't have a default value\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231617-0pap8fi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231617-0pap8fi"
+			}
+		},
+		{
+			"ID": "20221118231601-ik1vd9n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-ik1vd9n",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "默认值 default"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-9b9wcc0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-9b9wcc0",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "默认值：某一种数据会经常性的出现某个具体的值，可以在一开始就指定好，在需要真实数据的时候，用户可以选择性的使用默认值。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-kzult6o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-kzult6o",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table tt10 (\nname varchar(20) not null,\nage tinyint unsigned default 0, \nsex char(2) default '男'\n);\n\nmysql\u003e desc tt10;\n+-------+---------------------+------+-----+---------+-------+ \n| Field | Type                | Null | Key | Default | Extra | \n+-------+---------------------+------+-----+---------+-------+ \n| name  | varchar(20)         | NO   |     | NULL    |       | \n| age   | tinyint(3) unsigned | YES  |     | 0       |       | \n| sex   | char(2)             | YES  |     | 男      |       | \n+-------+---------------------+------+-----+---------+-------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231623-vwl1lln",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231623-vwl1lln"
+			}
+		},
+		{
+			"ID": "20221118231601-smn47o7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-smn47o7",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "默认值的生效：数据在插入的时候不给该字段赋值，就使用默认值"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-e6rgid1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-e6rgid1",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into tt10(name) values('zhangsan'); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select * from tt10; \n+----------+------+------+ \n| name     | age   | sex | \n+----------+------+------+ \n| zhangsan |    0 | 男   | \n+----------+------+------+\n--注意：只有设置了default的列，才可以在插入值的时候，对列进行省略\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-ywfqd67",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-ywfqd67",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "列描述 comment"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-gg402he",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-gg402he",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "列描述：comment，没有实际含义，专门用来描述字段，会根据表创建语句保存，用来给程序员或DBA来进行了\n解。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-3esm2ir",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-3esm2ir",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table tt12 (\nname varchar(20) not null comment '姓名',\nage tinyint unsigned default 0 comment '年龄', \nsex char(2) default '男' comment '性别'\n);\n--注意：not null和defalut一般不需要同时出现，因为default本身有默认值，不会为空\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231630-m78rebg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231630-m78rebg"
+			}
+		},
+		{
+			"ID": "20221118231601-m0jqerp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-m0jqerp",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过desc查看不到注释信息："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-kgbx0hb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-kgbx0hb",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e desc tt12;\n+-------+---------------------+------+-----+---------+-------+ \n| Field | Type               | Null | Key | Default | Extra | \n+-------+---------------------+------+-----+---------+-------+ \n| name | varchar(20)         | NO   |     | NULL   |       | \n| age   | tinyint(3) unsigned | YES |     | 0       |       | \n| sex   | char(2)             | YES |     | 男     |       | \n+-------+---------------------+------+-----+---------+-------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231632-0fthsta",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231632-0fthsta"
+			}
+		},
+		{
+			"ID": "20221118231601-pm5d9aj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-pm5d9aj",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "show create table 表名"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以看到："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-bsiyvbo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-bsiyvbo",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e show create table tt12\\G\n*************************** 1. row *************************** \n      Table: tt12\nCreate Table: CREATE TABLE `tt12` (\n\t`name` varchar(20) NOT NULL COMMENT '姓名',\n\t`age` tinyint(3) unsigned DEFAULT '0' COMMENT '年龄', \n\t`sex` char(2) DEFAULT '男' COMMENT '性别'\n) ENGINE=MyISAM DEFAULT CHARSET=gbk \n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-w31b8uj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-w31b8uj",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "zeroﬁll"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-imbd8qz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-imbd8qz",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "刚开始学习数据库时，很多人对数字类型后面的长度很迷茫。通过show看看tt3表的建表语句："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-zstgimo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-zstgimo",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e show create table tt3\\G\n***************** 1. row ***************** \n      Table: tt3\nCreate Table: CREATE TABLE `tt3` ( \n`a` int(10) unsigned DEFAULT NULL, \n`b` int(10) unsigned DEFAULT NULL\n) ENGINE=MyISAM DEFAULT CHARSET=gbk \n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-duzzxb3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-duzzxb3",
+				"updated": "20221118231641"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "int(10)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ",这个代表什么意思呢？整型不是4字节码？这个10又代表什么呢？其实没有"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "zeroﬁll"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这个属性，括号内的数字是毫无意义的。a和b列就是前面插入的数据，如下："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-ahd7qrz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-ahd7qrz",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into tt3 values(1,2); \nQuery OK, 1 row affected (0.00 sec) \nmysql\u003e select * from tt3;\n+------+------+ \n|a     | b    | \n+------+------+ \n|1     | 2    | \n+------+------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231645-kg7l2pn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231645-kg7l2pn"
+			}
+		},
+		{
+			"ID": "20221118231601-q4fwue4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-q4fwue4",
+				"updated": "20221118231647"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是对列添加了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "zeroﬁll"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "属性后，显示的结果就有所不同了。修改tt3表的属性："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-r4b2v1d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-r4b2v1d",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e alter table tt3 change a a int(5) unsigned zerofill; \nmysql\u003e show create table tt3\\G\n*************************** 1. row *************************** \n\t\tTable: tt3\nCreate Table: CREATE TABLE `tt3` (\n`a` int(5) unsigned zerofill DEFAULT NULL,  --具有了zerofill \n`b` int(10) unsigned DEFAULT NULL\n) ENGINE=MyISAM DEFAULT CHARSET=gbk \n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-y9bwoab",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-y9bwoab",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对a列添加了zeroﬁll属性，再进行查找，返回如下结果："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-ipgjmav",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-ipgjmav",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e select * from tt3; \n+-------+------+\n| a     | b    | \n+-------+------+ \n| 00001 | 2    | \n+-------+------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-noq5h70",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-noq5h70",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这次可以看到a的值由原来的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "1"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "变成"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "00001"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这就是zeroﬁll属性的作用，如果宽度小于设定的宽度（这里设置的是5），自动填充0。要注意的是，这只是最后显示的结果，在MySQL中实际存储的还是1。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-bygxfqd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-bygxfqd",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主键"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-wtj3cqo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-wtj3cqo",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主键：primary key用来唯一的约束该字段里面的数据，不能重复，不能为空，一张表中最多只能有一个主键；主键所在的列通常是整数类型。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-jhtg2ss",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-jhtg2ss",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-9gw1g30",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-9gw1g30",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-p7lelei",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-p7lelei",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-z46n62m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-z46n62m",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建表的时候直接在字段上指定主键"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-2sj8jpk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-2sj8jpk",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table tt13(\nid int unsigned primary key comment '学号不为空' ,\nname varchar(20) not null\n);\nQuery OK, 0 rows affected (0.03 sec)\n\nmysql\u003e desc tt13;\n+-------+------------------+------+-----+---------+-------+\n| Field | Type             | Null | Key | Default | Extra |\n+-------+------------------+------+-----+---------+-------+\n| id    | int(10) unsigned | NO   | PRI | NULL    |       |\n| name  | varchar(20)      | NO   |     | NULL    |       |\n+-------+------------------+------+-----+---------+-------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-75f2i7b",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-75f2i7b",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-ma887k2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-ma887k2",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-tcvkvh2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-tcvkvh2",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "主键约束："
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "主键对应的字段中不能重复，一旦重复，操作失败"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-e29a9a0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-e29a9a0",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into tt13 values(1, 'aaa'); \nQuery OK, 1 row affected (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-0qiiuut",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-0qiiuut",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into tt13 values(1, 'aaa');\nERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-locb0tz",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-locb0tz",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-e3i73me",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-e3i73me",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-15boryi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-15boryi",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当表创建好以后但是没有主键的时候，可以再次追加主键"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-0mqvx3r",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-0mqvx3r",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "alter table 表名 add primary key(字段列表);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-4zmrubq",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-4zmrubq",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-rlz238y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-rlz238y",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-51evagu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-51evagu",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "删除主键"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-aafevfz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-aafevfz",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "alter table 表名 drop primary key;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-lv52f4e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-lv52f4e",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "alter table tt13 drop primary key;\n\nmysql\u003e desc tt13;\n+-------+------------------+------+-----+---------+-------+\n| Field | Type             | Null | Key | Default | Extra |\n+-------+------------------+------+-----+---------+-------+\n| id    | int(10) unsigned | NO   |     | NULL    |       |\n| name  | varchar(20)      | NO   |     | NULL    |       |\n+-------+------------------+------+-----+---------+-------+\n2 rows in set (0.01 sec)\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-7eajkil",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231601-7eajkil",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "复合主键"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-vjzatkm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-vjzatkm",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在创建表的时候，在所有字段之后，使用primary key(主键字段列表)来创建主键，如果有多个字段作为主键，可以使用复合主键。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-u7yv2y9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-u7yv2y9",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table tt14( \nid int unsigned,\ncourse char(10) comment '课程代码',\nscore tinyint unsigned default 60 comment '成绩', \nprimary key(id, course) -- id和course为复合主键 \n );\nQuery OK, 0 rows affected (0.01 sec) \n\nmysql\u003e desc tt14;\n+--------+---------------------+------+-----+---------+-------+\n| Field  | Type                | Null | Key | Default | Extra |\n+--------+---------------------+------+-----+---------+-------+\n| id     | int(10) unsigned    | NO   | PRI | NULL    |       |\n| course | char(10)            | NO   | PRI | NULL    |       |\n| score  | tinyint(3) unsigned | YES  |     | 60      |       |\n+--------+---------------------+------+-----+---------+-------+\n3 rows in set (0.00 sec)\n\nmysql\u003e insert into tt14 (id,course)values(1, '123');\nQuery OK, 1 row affected (0.02 sec)\n\nmysql\u003e insert into tt14 (id , course) values(2 , '123');\nQuery OK, 1 row affected (0.01 sec)\n\nmysql\u003e insert into tt14 (id,course)values(1, '123');\nERROR 1062 (23000): Duplicate entry '1-123' for key 'PRIMARY' -- 主键冲突\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-snvtrff",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-snvtrff",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "复合主键只有两个主键都冲突了，才会提示错误"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-ks88ewq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-ks88ewq",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自增长"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-uzl6c3f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-uzl6c3f",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "auto_increment"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：当对应的字段，不给值，会自动的被系统触发，系统会从当前字段中已经有的最大值+1操作，得到一个新的不同的值。通常和主键搭配使用，作为逻辑主键。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-agm396e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-agm396e",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自增长的特点:"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-wlicnih",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-wlicnih",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-b66f01v",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-b66f01v",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-s36hbfp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-s36hbfp",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "任何一个字段要做自增长，前提是本身是一个索引（key一栏有值）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-pdrwb27",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-pdrwb27",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-ndndypo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-ndndypo",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自增长字段必须是整数"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-ynz3mar",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-ynz3mar",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-8veqj9p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-8veqj9p",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一张表最多只能有一个自增长"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-9wdtpit",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-9wdtpit",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-gblxq1b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-gblxq1b",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt21(\n-\u003e id int unsigned primary key auto_increment, \n-\u003e name varchar(10) not null default ''\n-\u003e );\n\nmysql\u003e insert into tt21(name) values('a');\n\nmysql\u003e insert into tt21(name) values('b');\n\nmysql\u003e select * from tt21;\n+----+------+ \n| id | name | \n+----+------+ \n| 1  | a    |  \n| 2  | b    | \n+----+------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-ika8du8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-ika8du8",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在插入后获取上次插入的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "AUTO_INCREMENT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的值（批量插入获取的是第一个值）"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-se2rxok",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-se2rxok",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql \u003e select last_insert_id(); \n+------------------+\n| last_insert_id() | \n+------------------+\n|                 1|\n+------------------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-8pjx0x5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-8pjx0x5",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "索引："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-rchkj1b",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-rchkj1b",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-5vhnziy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-5vhnziy",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-h7515mm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-h7515mm",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在关系数据库中，索引是一种单独的、物理的对数据库表中一列或多列的值进行排序的一种存储结构，它是某个表中 一列或若干列值的集合和相应的指向表中物理标识这些值的数据页的逻辑指针清单。索引的作用相当于图书的目录， 可以根据目录中的页码快速找到所需的内容。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-b21wl0z",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-b21wl0z",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-6qbhax7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-6qbhax7",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "索引提供指向存储在表的指定列中的数据值的指针，然后根据您指定的排序顺序对这些指针排序。数据库使用索引以 找到特定值，然后顺指针找到包含该值的行。这样可以使对应于表的SQL语句执行得更快，可快速访问数据库表中的特定信息。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-aiu2g32",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-aiu2g32",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "唯一键"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-8pg899h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-8pg899h",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一张表中有往往有很多字段需要唯一性，数据不能重复，但是一张表中只能有一个主键：唯一键就可以解决表中有多个字段需要唯一性约束的问题。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-uyw2mrb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-uyw2mrb",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "唯一键的本质和主键差不多，唯一键允许为空，而且可以多个为空，空字段不做唯一性比较。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-umj32a0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-umj32a0",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "关于唯一键和主键的区别："
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n我们可以简单理解成，主键更多的是标识唯一性的。而唯一键更多的是保证在业务上，不要和别的信息出现重复。乍一听好像没啥区别，我们举一个例子\n "
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-qipy0dc",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221118231601-qipy0dc",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221118231601-x9l1u6x",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221118231601-x9l1u6x",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "假设一个场景(当然，具体可能并不是这样，仅仅为了帮助大家理解)"
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-vqw1hqd",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221118231601-vqw1hqd",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-o9zm2th",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221118231601-o9zm2th",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"ID": "20221118231601-fckx11z",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221118231601-fckx11z",
+										"updated": "20221118231601"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "比如在公司，我们需要一个员工管理系统，系统中有一个员工表，员工表中有两列信息，一个身份证号码，一个是员工工号，我们可以选择身份号码作为主键。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221118231601-w5eyyys",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221118231601-w5eyyys",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"ID": "20221118231601-6q7msks",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221118231601-6q7msks",
+										"updated": "20221118231601"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "而我们设计员工工号的时候，需要一种约束：而所有的员工工号都不能重复。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221118231601-hfz42rn",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221118231601-hfz42rn",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"ID": "20221118231601-v1gjz5f",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221118231601-v1gjz5f",
+										"updated": "20221118231601"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "具体指的是在公司的业务上不能重复，我们设计表的时候，需要这个约束，那么就可以将员工工号设计成为唯一键。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221118231601-uev8b3o",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221118231601-uev8b3o",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"ID": "20221118231601-wwk9p2k",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221118231601-wwk9p2k",
+										"updated": "20221118231601"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "一般而言，我们建议将主键设计成为和当前业务无关的字段，这样，当业务调整的时候，我们可以尽量不会对主键做过大的调整。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-y281jd9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-y281jd9",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-r40jb7w",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-r40jb7w",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table student (\n-\u003e id char(10) unique comment '学号，不能重复，但可以为空', \n-\u003e name varchar(10)\n-\u003e );\nQuery OK, 0 rows affected (0.01 sec)\n\nmysql\u003e insert into student(id, name) values('01', 'aaa'); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e insert into student(id, name) values('01', 'bbb'); --唯一约束不能重复 \nERROR 1062 (23000): Duplicate entry '01' for key 'id'\n\nmysql\u003e insert into student(id, name) values(null, 'bbb'); -- 但可以为空 \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select * from student; \n+------+------+\n| id   | name | \n+------+------+ \n| 01   | aaa  | \n| NULL | bbb  | \n+------+------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-uiqj1pc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-uiqj1pc",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "外键"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-9cqo7k5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-9cqo7k5",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "外键用于定义主表和从表之间的关系：外键约束主要定义在从表上，主表则必须是有主键约束或unique约束。当定义外键后，要求外键列数据必须在主表的主键列存在或为null。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-yx4g197",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-yx4g197",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-i3p8sc4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-i3p8sc4",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "foreign key (字段名) references 主表(列)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-d8yvoek",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-d8yvoek",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例：\n![[Pasted image 20221117204954.png]]"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-e7kjrtr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-e7kjrtr",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对上面的示意图进行设计："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-yq6et4e",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-yq6et4e",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-nj4axj4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-nj4axj4",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-z57yhsi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-z57yhsi",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "先创建主键表"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-ivtl0zm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-ivtl0zm",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table myclass (\nid int primary key,\nname varchar(30) not null comment'班级名' \n);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-fdvmzjz",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-fdvmzjz",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-hasf1gr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-hasf1gr",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-ob3wv49",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-ob3wv49",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "再创建从表"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-3ya6qj0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-3ya6qj0",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table stu (\nid int primary key,\nname varchar(30) not null comment '学生名', \nclass_id int,\nforeign key (class_id) references myclass(id) \n);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-p4582gq",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-p4582gq",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-6omjjvp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-6omjjvp",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-ewq40az",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-ewq40az",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "正常插入数据"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-5iul5rb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-5iul5rb",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into myclass values(10, 'C++大牛班'),(20, 'java大神班'); \nQuery OK, 2 rows affected (0.03 sec)\nRecords: 2  Duplicates: 0  Warnings: 0\n\nmysql\u003e insert into stu values(100, '张三', 10),(101, '李四',20); \nQuery OK, 2 rows affected (0.01 sec)\nRecords: 2  Duplicates: 0  Warnings: 0\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-cdo2go0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-cdo2go0",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-jur20s2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-jur20s2",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-eyqssp5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-eyqssp5",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "插入一个班级号为30的学生，因为没有这个班级，所以插入不成功"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-8xwt9ju",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-8xwt9ju",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into stu values(102, 'wangwu',30); \nERROR 1452 (23000): Cannot add or update a child row:\na foreign key constraint fails (mytest.stu, CONSTRAINT stu_ibfk_1 \nFOREIGN KEY (class_id) REFERENCES myclass (id))\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-t7d5jhm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-t7d5jhm",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-ha5t1qy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-ha5t1qy",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-a6yb368",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-a6yb368",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "插入班级id为null，比如来了一个学生，目前还没有分配班级"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-g7ickza",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-g7ickza",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into stu values(102, 'wangwu', null);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-xal4bbq",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-xal4bbq",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-cgvzc4f",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-cgvzc4f",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-2vbl57q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-2vbl57q",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "如何理解外键约束"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-94p8ht2",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221118231601-94p8ht2",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221118231601-6n9y1c8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221118231601-6n9y1c8",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "首先我们承认，这个世界是数据很多都是相关性的。\n理论上，上面的例子，我们不创建外键约束，就正常建立学生表，以及班级表，该有的字段我们都有。"
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-nd15rc0",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221118231601-nd15rc0",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "此时，在实际使用的时候，可能会出现什么问题？\n有没有可能插入的学生信息中有具体的班级，但是该班级却没有在班级表中？\n比如比特只开了比特100班，比特101班，但是在上课的学生里面竟然有比特102班的学生(这个班目前并不存在)，这很明显是有问题的。"
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-61u2650",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221118231601-61u2650",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "因为此时两张表在业务上是有相关性的，但是在业务上没有建立约束关系，那么就可能出现问题。\n解决方案就是通过外键完成的。建立外键的本质其实就是把相关性交给mysql去审核了，提前告诉mysql表之间的约束关系，那么当用户插入不符合业务逻辑的数据的时候，mysql不允许你插入。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-wth9owb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231601-wth9owb",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "综合案例 (阅读即可)"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-l0u2vg4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-l0u2vg4",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有一个商店的数据，记录客户及购物情况，有以下三个表组成："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-w5h07zj",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-w5h07zj",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-6wy4jbc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-6wy4jbc",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-q4yqexd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-q4yqexd",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "商品goods(商品编号goods_id，商品名goods_name, 单价unitprice, 商品类别category, 供应商provider)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-5g9erp0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-5g9erp0",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-3fp2nml",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-3fp2nml",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户customer(客户号customer_id,姓名name,住址address,邮箱email,性别sex，身份证card_id)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-yldnu4o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-yldnu4o",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-eodi6mo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-eodi6mo",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "购买purchase(购买订单号order_id,客户号customer_id,商品号goods_id,购买数量nums)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-kf42wju",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-kf42wju",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "要求："
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-nzttwps",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231601-nzttwps",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"ID": "20221118231601-ax7knds",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-ax7knds",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-xoa0huv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-xoa0huv",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每个表的主外键"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-7omwfxu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-7omwfxu",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-j6wprfy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-j6wprfy",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户的姓名不能为空值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231601-e9js3vj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231601-e9js3vj",
+						"updated": "20221118231601"
+					},
+					"Children": [
+						{
+							"ID": "20221118231601-fdgfqfe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231601-fdgfqfe",
+								"updated": "20221118231601"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "邮箱不能重复"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-y75gvtv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231601-y75gvtv",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SQL:"
+				}
+			]
+		},
+		{
+			"ID": "20221118231601-3bsfgfj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231601-3bsfgfj",
+				"updated": "20221118231601"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 创建数据库\ncreate database if not exists bit32mall \ndefault character set utf8 ;\n-- 选择数据库\nuse bit32mall;\n\n-- 创建数据库表 \n-- 商品\ncreate table if not exists goods \n(\n   goods_id  int primary key auto_increment comment '商品编号', \n   goods_name varchar(32) not null comment '商品名称',\n   unitprice  int  not null default 0  comment '单价，单位分', \n   category  varchar(12) comment '商品分类',\n   provider  varchar(64) not null comment '供应商名称' \n);\n\n-- 客户\ncreate table if not exists customer \n(\n   customer_id  int primary key auto_increment comment '客户编号', \n   name varchar(32) not null comment '客户姓名',\n   address  varchar(256)  comment '客户地址',\n   email  varchar(64)  unique key comment '电子邮箱', \n   sex  enum('男','女') not null comment '性别',\n   card_id char(18) unique key comment '身份证' \n);\n-- 购买\ncreate table if not exists purchase \n(\n   order_id  int primary key auto_increment comment '订单号', \n   customer_id int comment '客户编号',\n   goods_id  int  comment '商品编号',\n   nums  int  default 0 comment '购买数量',\n   foreign key (customer_id) references customer(customer_id), \n   foreign key (goods_id) references goods(goods_id)\n);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

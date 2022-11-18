@@ -1,0 +1,3210 @@
+{
+	"ID": "20221118231228-2593t1j",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221118231228-2593t1j",
+		"title": "数据类型",
+		"updated": "20221118231510"
+	},
+	"Children": [
+		{
+			"ID": "20221118231229-oheo5fk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-oheo5fk",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据类型本身就是一种约束，一旦数据不满足条件，就被被直接终止。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-b6zk05b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-b6zk05b",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而数据库的数据类型判定比编程语言要严格的多，因为数据库就是专门存放数据的，必须保证数据的万无一失，所以数据库是没有隐式类型转换的。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-2yaa6d6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231229-2yaa6d6",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据类型分类"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-x00odrr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-x00odrr",
+				"updated": "20221118231246"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221116213655"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221116213655-20221118231246-o8hqqv2.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231249-ee36ec1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231249-ee36ec1"
+			}
+		},
+		{
+			"ID": "20221118231229-w9ttjy4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231229-w9ttjy4",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数值类型"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-xce4imd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-xce4imd",
+				"updated": "20221118231258"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221116213744"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221116213744-20221118231258-n0f09qm.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231301-1vo6j1e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231301-1vo6j1e"
+			}
+		},
+		{
+			"ID": "20221118231229-u7yuvn4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231229-u7yuvn4",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "tinyint类型"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-rta9i9e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-rta9i9e",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数值越界测试："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-6yq98et",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-6yq98et",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt1(num tinyint); \nQuery OK, 0 rows affected (0.02 sec)\n\nmysql\u003e insert  into tt1 values(1); \nQuery OK, 1 row affected (0.00 sec)\nmysql\u003e insert  into tt1 values(128); -- 越界插入，报错\nERROR 1264 (22003): Out of range value for column 'num' at row 1 \n\nmysql\u003e select * from tt1;\n+------+ \n| num  | \n+------+ \n|    1 | \n+------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-1tvyulz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-1tvyulz",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明:"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-3a5vau6",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-3a5vau6",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-ajvcajy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-ajvcajy",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-bduh734",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-bduh734",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在MySQL中，整型可以指定是有符号的和无符号的，默认是有符号的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-q6w5t12",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-q6w5t12",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-npdlflb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-npdlflb",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "UNSIGNED"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来说明某个字段是无符号的"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231305-0w3s6xq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231305-0w3s6xq"
+			}
+		},
+		{
+			"ID": "20221118231229-o2an9th",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-o2an9th",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "无符号案例"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-bjatcy5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-bjatcy5",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt2(num tinyint unsigned);\nmysql\u003e insert into tt2 values(-1); -- 无符号，范围是：    0 - 255 \nERROR 1264 (22003): Out of range value for column 'num' at row 1 \n\nmysql\u003e insert into tt2 values(255);\nQuery OK, 1 row affected (0.02 sec) \n\nmysql\u003e select * from tt2;\n+------+ \n| num | \n+------+ \n|  255 | \n+------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-k71k6x5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231229-k71k6x5",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其他类型自己推导"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-hrf41b3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-hrf41b3",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：尽量不使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "unsigned"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，对于int类型可能存放不下的数据，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "int unsigned"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "同样可能存放不下，与其如此，还不如设计时，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "将int类型提升为bigint类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-e1nrfvl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231229-e1nrfvl",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "bit类型"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-5rdek23",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-5rdek23",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本语法："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-fii04go",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-fii04go",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "bit[(M)] : 位字段类型。M表示每个值的位数，范围从1到64。如果M被忽略，默认为1。\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-kwqj3gx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-kwqj3gx",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举例："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-txstss4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-txstss4",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt4 ( id int, a bit(8)); \nQuery OK, 0 rows affected (0.01 sec)\n\nmysql\u003e insert into tt4 values(10, 10); \nQuery OK, 1 row affected (0.01 sec)\n\nmysql\u003e select * from tt4; #发现很怪异的现象，a的数据10没有出现 \n+------+------+\n| id   | a   | \n+------+------+ \n|   10 |     | \n+------+------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-g2j7lz3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221118231229-g2j7lz3",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "bit使用的注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-phjathh",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-phjathh",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-j24fnlv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-j24fnlv",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-60fpm6c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-60fpm6c",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "bit字段在显示时，是按照"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "ASCII码"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "对应的值显示。部分ASCII码是无法显示的。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-mnq35qc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-mnq35qc",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e insert into tt4 values(75, 65);  #65对应的ASCII码就是A\nmysql\u003e select * from tt4;\n+------+------+ \n| id   | a    | \n+------+------+ \n|   10 |      | \n|   75 | A    | \n+------+------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-5a6gojw",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-5a6gojw",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-6hq58dx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-6hq58dx",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-htzow97",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-htzow97",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果我们有这样的值，只存放0或1，这时可以定义"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "bit(1)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。这样可以节省空间。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-xkypbox",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-xkypbox",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt5(gender bit(1)); \nmysql\u003e insert into tt5 values(0); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e insert into tt5 values(1); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e insert into tt5 values(2); -- 当插入2时，已经越界了\nERROR 1406 (22001): Data too long for column 'gender' at row 1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-1asprfa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231229-1asprfa",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "小数类型"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-w7ktl0a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221118231229-w7ktl0a",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ﬂoat"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-etiycba",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-etiycba",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-ik129c4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-ik129c4",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "float[(m, d)] [unsigned] : M指定显示长度，d指定小数位数，占用空间4个字节\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-nkd3d30",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-nkd3d30",
+				"updated": "20221118231318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例：\n小数："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ﬂoat(4,2)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表示的范围是-99.99 ~ 99.99，MySQL在保存值时会进行四舍五入。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-84nbk2d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-84nbk2d",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt6(id int, salary float(4,2)); \nQuery OK, 0 rows affected (0.01 sec)\n\nmysql\u003e insert into tt6 values(100, -99.99); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e insert into tt6 values(101, -99.991); #多的这一点被拿掉了 \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select * from tt6; \n+------+--------+\n| id   | salary | \n+------+--------+ \n|  100 | -99.99 | \n|  101 | -99.99 | \n+------+--------+\n2 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231322-xrheuwj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231322-xrheuwj"
+			}
+		},
+		{
+			"ID": "20221118231229-59x318c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-59x318c",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果定义的是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ﬂoat(4,2) unsigned"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 这时，因为把它指定为无符号的数，范围是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": " 0 ~ 99.99"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-isqceoo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-isqceoo",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt7(id int, salary float(4,2) unsigned); \nQuery OK, 0 rows affected (0.01 sec)\n\nmysql\u003e insert into tt7 values(100, -0.1); \nQuery OK, 1 row affected, 1 warning (0.00 sec)\n\nmysql\u003e show warnings;\n+---------+------+-------------------------------------------------+\n| Level   | Code | Message                                         |\n+---------+------+-------------------------------------------------+ \n| Warning | 1264 | Out of range value for column 'salary' at row 1 | \n+---------+------+-------------------------------------------------+\n1 row in set (0.00 sec)\n\nmysql\u003e insert into tt7 values(100, -0); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e insert into tt7 values(100, 99.99); \nQuery OK, 1 row affected (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231327-7gu3wj2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231327-7gu3wj2"
+			}
+		},
+		{
+			"ID": "20221118231229-yigr5g2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221118231229-yigr5g2",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "decimal"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-0rlpl1m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-0rlpl1m",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-hl4i18e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-hl4i18e",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "decimal(m, d) [unsigned] : 定点数m指定长度，d表示小数点的位数\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-h9gfgh3",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-h9gfgh3",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-qkdcj86",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-qkdcj86",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-l0hax02",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-l0hax02",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "decimal(5,2)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 表示的范围是 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "-999.99 ~ 999.99"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-dm5plzv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-dm5plzv",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-4e9srsr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-4e9srsr",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "decimal(5,2) unsigned"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 表示的范围"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": " 0 ~ 999.99"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\ndecimal和ﬂoat很像，但是有区别:"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231330-lbfg2m9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231330-lbfg2m9"
+			}
+		},
+		{
+			"ID": "20221118231229-zjd9zi1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221118231229-zjd9zi1",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ﬂoat和decimal的区别"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-c9dxs27",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-c9dxs27",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ﬂoat和decimal表示的精度不一样"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-8oinvyr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-8oinvyr",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt8 ( id int, salary float(10,8), salary2 decimal(10,8)); \nmysql\u003e insert into tt8 values(100,23.12345612, 23.12345612);\nQuery OK, 1 row affected (0.00 sec) \nmysql\u003e select * from tt8;\n+------+-------------+-------------+\n|  id  | salary      | salary2     |\n+------+-------------+-------------+\n|  100 | 23.12345695 | 23.12345612 | #发现decimal的精度更准确，因此如果我们希望某个数据表示高精度，选择decimal\n+------+-------------+-------------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-3n5w8hh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-3n5w8hh",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "发现decimal的精度更准确，因此如果我们希望某个数据表示高精度，选择decimal.\n说明："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ﬂoat表示的精度大约是7位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-iagsgsn",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-iagsgsn",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-64djhbo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-64djhbo",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-xqi73c8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-xqi73c8",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "decimal整数最大位数m为65。支持小数最大位数d是30。如果d被省略，默认为0.如果m被省略，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "默认是10"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-eqmumur",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221118231229-eqmumur",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221118231229-wys83q2",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221118231229-wys83q2",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "建议：如果希望小数的精度高，推荐使用decimal。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-6cxm2s2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231229-6cxm2s2",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "字符串类型"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-ic9uhww",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231229-ic9uhww",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "char"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-wdwnody",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-wdwnody",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-kcuci67",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-kcuci67",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "char(L): 固定长度字符串，L是可以存储的长度，单位为字符，最大长度值可以为255\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-be7f4ed",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-be7f4ed",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-hdvx6rd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-hdvx6rd",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt9(id int, name char(2)); \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e insert into tt9 values(100, 'ab'); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e insert into tt9 values(101, '中国'); \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select * from tt9; \n+------+--------+\n| id   | name   | \n+------+--------+ \n| 100  | ab     | \n| 101  | 中国   | \n+------+--------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-1x11dr7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-1x11dr7",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-tfghgzv",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-tfghgzv",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-00ck9y8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-00ck9y8",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-e10s0xx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-e10s0xx",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "char(2) 表示可以存放两个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字符"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，可以是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字母或汉字"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，但是不能超过2个，  最多只能是255."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-m2cw2pq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-m2cw2pq",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-xi4q788",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-xi4q788",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一个汉字也是表示一个字符 , ("
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "注意：不是字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ")"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-u1z8j81",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-u1z8j81",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt10(id int ,name char(256));\nERROR 1074 (42000): Column length too big for column 'name' (max = 255); use BLOB or TEXT instead\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-4axgbwf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231229-4axgbwf",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "varchar"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-ohu1cbd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-ohu1cbd",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-jq9n595",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-jq9n595",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "varchar(L): 可变长度字符串，L表示字符长度，最大长度65535个字节\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-savdv55",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-savdv55",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-aqg3xqp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-aqg3xqp",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt10(id int ,name varchar(6)); --表示这里可以存放6个字符\n\nmysql\u003e insert into tt10 values(100, 'hello');\n\nmysql\u003e insert into tt10 values(100, '我爱你，中国');\n\nmysql\u003e select * from tt10;\n+------+--------------------+\n| id   | name               |\n+------+--------------------+\n|  100 | hello              |\n| 100  | 我爱你，中国        |\n+------+--------------------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-j15o58k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-j15o58k",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "说明：\n关于"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "varchar(len)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "len到底是多大，这个len值，和表的编码密切相关"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-jgdpuae",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-jgdpuae",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-rhzztlh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-rhzztlh",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-40ctjwd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-40ctjwd",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "varchar长度可以指定为0到65535之间的值，但是有1 - 3 个字节用于记录数据大小，所以说有效字节数是\n65532。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-l4tebw6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-l4tebw6",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-mdwvrlu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-mdwvrlu",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当我们的表的编码是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "utf8"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "varchar(n)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的参数n最大值是65532/3=21844[因为utf中，一个字符占用3个字节]，如果编码是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "gbk"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "varchar(n)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的参数n最大是65532/2=32766（因为gbk中，一个字符占用2字节）。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-clk4833",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-clk4833",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e create table tt11(name varchar(21845))charset=utf8; --验证了utf8确实是不能超过21844 \nERROR 1118 (42000): Row size too large. The maximum row size for the used table type,not counting BLOBs, is 65535. You have to change some columns to TEXT or BLOBs \n\nmysql\u003e create table tt11(name varchar(21844)) charset=utf8;\nQuery OK, 0 rows affected (0.01 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-02xalj8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221118231229-02xalj8",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "char和varchar比较"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-iwcupry",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-iwcupry",
+				"updated": "20221118231354"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221116220052"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221116220052-20221118231354-92cy87c.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n如何选择定长或变长字符串？"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-8gii5li",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-8gii5li",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-9spfayr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-9spfayr",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-kigj78d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-kigj78d",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果数据确定长度都一样，就使用定长（char），比如：身份证，手机号，md5"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-kqwr0sc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-kqwr0sc",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-p3e4dk0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-p3e4dk0",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果数据长度有变化,就使用变长(varchar), 比如：名字，地址，但是你要保证最长的能存的进去。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-p4avxyi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-p4avxyi",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-wrxgid3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-wrxgid3",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定长的磁盘空间比较浪费，但是效率高。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-zjhtf1f",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-zjhtf1f",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-vwgvflf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-vwgvflf",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "变长的磁盘空间比较节省，但是效率低。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-j91ypf7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-j91ypf7",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-lr1i0px",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-lr1i0px",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "定长的意义是，直接开辟好对应的空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-i1z0lga",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-i1z0lga",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-66luxax",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-66luxax",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "变长的意义是，在不超过自定义范围的情况下，用多少，开辟多少"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-pb3ftbv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231229-pb3ftbv",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "日期和时间类型"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-kddeuh1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-kddeuh1",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用的日期有如下三个："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-hgsj4pi",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-hgsj4pi",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-y2a8jzt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-y2a8jzt",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-17ng0f2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-17ng0f2",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "date :日期 '"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "yyyy-mm-dd"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "' ，占用三字节"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-7am6mgy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-7am6mgy",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-qiti2nd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-qiti2nd",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "datetime：时间日期格式   '"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "yyyy-mm-dd HH:ii:ss"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "' ,表示范围从 1000 到 9999 ，占用八字节"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-x8ftc7c",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-x8ftc7c",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-7m3rdmu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-7m3rdmu",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "timestamp: ："
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "时间戳"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，从1970年开始的   "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "yyyy-mm-dd HH:ii:ss"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 格式和 datetime 完全一致，占用四字节"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-iktcuel",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-iktcuel",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-3gt64nw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-3gt64nw",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//创建表\nmysql\u003e create table birthday (t1 date, t2 datetime, t3 timestamp); \nQuery OK, 0 rows affected (0.01 sec)\n\n//插入数据：\nmysql\u003e insert into birthday(t1,t2) values('1997-7-1','2008-8-8 12:1:1'); --插入两种时间 \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select * from birthday;\n+------------+---------------------+---------------------+\n| t1         | t2                  | t3                  |\n+------------+---------------------+---------------------+\n| 1997-07-01 | 2008-08-08 12:01:01 | 2017-11-12 18:28:55 | --添加数据时，时间戳自动补上当前时间 \n+------------+---------------------+---------------------+\n\n//更新数据：\nmysql\u003e update birthday set t1='2000-1-1'; \nQuery OK, 1 row affected (0.00 sec)\nRows matched: 1  Changed: 1  Warnings: 0 \nmysql\u003e select * from birthday;\n+------------+---------------------+---------------------+\n| t1         | t2                  | t3                  | \n+------------+---------------------+---------------------+\n| 2000-01-01 | 2008-08-08 12:01:01 | 2017-11-12 18:32:09 | -- 更新数据，时间戳会更新成当前时间 \n+------------+---------------------+---------------------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-df4rgu9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221118231229-df4rgu9",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "enum和set"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-xr140v2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-xr140v2",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法：\n"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "enum"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "枚举，“单选”类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-hwiisjf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-hwiisjf",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "enum('选项1','选项2','选项3',...);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-h8kz8yc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-h8kz8yc",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "该设定只是提供了若干个选项的值，最终一个单元格中，实际只存储了其中一个值；而且出于效率考虑，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "这些值实际存储的是“数字”，因为这些选项的每个选项值依次对应如下数字：1,2,3,....最多65535个"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；当我们"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "添加枚举值时，也可以添加对应的数字编号"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-8dfpd36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-8dfpd36",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "set"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "集合，“多选”类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-cdffpb1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-cdffpb1",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "set('选项值1','选项值2','选项值3', ...);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-et9hpid",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-et9hpid",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "该设定只是提供了若干个选项的值，最终一个单元格中，设计可存储了其中任意多个值；而且出于效率考虑，这些值实际存储的是“数字”，因为这些选项的每个选项值依次对应如下数字：1,2,4,8,16,32，.... 最多64个。"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-n12di08",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221118231229-n12di08",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221118231229-phwhdhy",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221118231229-phwhdhy",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "说明：不建议在添加枚举值，集合值的时候采用数字的方式，因为不利于阅读。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-yod1vbt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-yod1vbt",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例：\n有一个调查表votes，需要调查人的喜好， 比如（登山，游泳，篮球，武术）中去选择(可以多选)，（男，女）[单选]"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-0aqh8nh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-0aqh8nh",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table votes\n( \n\tusername varchar(30),\n\thobby set('登山','游泳','篮球','武术'), --注意：使用数字标识每个爱好的时候，想想Linux权限，采用比特位位置来个set中的爱好对应起来\n\tgender enum('男','女')  --注意：使用数字标识的时候，就是正常的数组下标 \n);  \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231503-7vdwqsq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231503-7vdwqsq"
+			}
+		},
+		{
+			"ID": "20221118231229-vvfrraq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-vvfrraq",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "插入数据："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-5tzk7nd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-5tzk7nd",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "insert into votes values('雷锋', '登山,武术', '男'); \ninsert into votes values('Juse','登山,武术',2);  # 2就是表示了enum数据中的第二个数据 \n\nselect * from votes where gender=2;\n+----------+---------------+--------+ \n| username | hobby         | gender | \n+----------+---------------+--------+\n| Juse     | 登山,武术      | 女     |\n+----------+---------------+--------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231505-52ps4uj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231505-52ps4uj"
+			}
+		},
+		{
+			"ID": "20221118231229-gs6pnju",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-gs6pnju",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有如下数据，想查找所有喜欢登山的人："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-4105fuw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-4105fuw",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e select * from votes where hobby='登山';\n+----------+--------+--------+\n| username | hobby  | gender |\n+----------+--------+--------+\n| LiLei    | 登山   | 男     |\n+----------+--------+--------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-5shy70n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-5shy70n",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不能查询出所有，爱好为登山的人"
+				}
+			]
+		},
+		{
+			"ID": "20221118231510-tvlg5mf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231510-tvlg5mf"
+			}
+		},
+		{
+			"ID": "20221118231229-du6vrbx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-du6vrbx",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "集合查询使用"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "find_ in_ set"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "函数:"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-78faki7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-78faki7",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "find_in_set(sub,str_list)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-gp6wiu2",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221118231229-gp6wiu2",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"ID": "20221118231229-i30eg78",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-i30eg78",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-2kbsti5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-2kbsti5",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sub"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "在"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "str_list"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中，则返回下标;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221118231229-qt5mnhl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221118231229-qt5mnhl",
+						"updated": "20221118231229"
+					},
+					"Children": [
+						{
+							"ID": "20221118231229-crnl011",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221118231229-crnl011",
+								"updated": "20221118231229"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果不在，返回0;str_1ist用逗号分隔的字符串。。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-llkrfza",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-llkrfza",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ysql\u003e select find_in_set('a', 'a,b,c');\n+---------------------------+ \n| find_in_set('a', 'a,b,c') | \n+---------------------------+ \n|                          1| \n+---------------------------+\nmysql\u003e select find_in_set('d', 'a,b,c');\n+---------------------------+ \n| find_in_set('d', 'a,b,c') | \n+---------------------------+ \n|                          0| \n+---------------------------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-liq74bl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221118231229-liq74bl",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查询爱好登山的人："
+				}
+			]
+		},
+		{
+			"ID": "20221118231229-fp7r83e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221118231229-fp7r83e",
+				"updated": "20221118231229"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e select * from votes where find_in_set('登山' , hobby);\n+----------+---------------+--------+\n| username | hobby         | gender |\n+----------+---------------+--------+\n| 雷锋     | 登山,武术     | 男     |\n| Juse     | 登山,武术     | 女     |\n| LiLei    | 登山          | 男     |\n+----------+---------------+--------+\n3 rows in set (0.00 sec)\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}
