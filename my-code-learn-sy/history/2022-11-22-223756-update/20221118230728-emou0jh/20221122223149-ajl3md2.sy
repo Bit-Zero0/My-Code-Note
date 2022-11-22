@@ -1,0 +1,773 @@
+{
+	"ID": "20221122223149-ajl3md2",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221122223149-ajl3md2",
+		"title": "内外链接",
+		"updated": "20221122223226"
+	},
+	"Children": [
+		{
+			"ID": "20221122223154-3ldfvm4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-3ldfvm4",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "表的连接分为内连和外连"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-vvkzoms",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122223154-vvkzoms",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内连接"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-32ep9u1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-32ep9u1",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内连接实际上就是利用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "where子句"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "对两种表形成的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "笛卡儿积"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行筛选，我们前面学习的查询都是内连接，也是在开发过程中使用的最多的连接查询。"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-vb2xj4s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-vb2xj4s",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-ypd32ff",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-ypd32ff",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select 字段    from 表1 inner join 表2 on 连接条件    and 其他条件；\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223158-03uthl0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223158-03uthl0"
+			}
+		},
+		{
+			"ID": "20221122223154-78d3juz",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122223154-78d3juz",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"ID": "20221122223154-h8i33ky",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122223154-h8i33ky",
+						"updated": "20221122223154"
+					},
+					"Children": [
+						{
+							"ID": "20221122223154-1rdc86c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122223154-1rdc86c",
+								"updated": "20221122223154"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "显示SMITH的名字和部门名称"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-wn2yh3a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-wn2yh3a",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 用前面的写法\nselect ename, dname from EMP, DEPT where EMP.deptno=DEPT.deptno and ename='SMITH'; \n\n-- 用标准的内连接写法\nselect ename, dname from EMP inner join DEPT on EMP.deptno=DEPT.deptno and ename='SMITH';\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223204-woufr6q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223204-woufr6q"
+			}
+		},
+		{
+			"ID": "20221122223154-3g0n699",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122223154-3g0n699",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "外连接"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-4x9n0gl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-4x9n0gl",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "外连接分为左外连接和右外连接"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-oe2wfyk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122223154-oe2wfyk",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "左外连接"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-qmk6vk9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-qmk6vk9",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果联合查询，左侧的表完全显示我们就说是左外连接。"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-jz97sp8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-jz97sp8",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-hwrxynu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-hwrxynu",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select 字段名     from 表名1 left join 表名2 on 连接条件\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-h3i8fyr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122223154-h3i8fyr",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-g4wti3p",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122223154-g4wti3p",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"ID": "20221122223154-kvdnbre",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122223154-kvdnbre",
+						"updated": "20221122223154"
+					},
+					"Children": [
+						{
+							"ID": "20221122223154-tpjkotf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122223154-tpjkotf",
+								"updated": "20221122223154"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "建两张表"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-867yjau",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-867yjau",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 建两张表\ncreate table stu (id int, name varchar(30)); -- 学生表\ninsert into stu values(1,'jack'),(2,'tom'),(3,'kity'),(4,'nono'); \n\ncreate table exam (id int, grade int); -- 成绩表\ninsert into exam values(1, 56),(2,76),(11, 8);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223217-fobmw0r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223217-fobmw0r"
+			}
+		},
+		{
+			"ID": "20221122223154-cl7nabz",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122223154-cl7nabz",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"ID": "20221122223154-jfgnj20",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122223154-jfgnj20",
+						"updated": "20221122223154"
+					},
+					"Children": [
+						{
+							"ID": "20221122223154-4gwpgaw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122223154-4gwpgaw",
+								"updated": "20221122223154"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询所有学生的成绩，如果这个学生没有成绩，也要将学生的个人信息显示出来"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-owuwa3g",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-owuwa3g",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 当左边表和右边表没有匹配时，也会显示左边表的数据\n select * from stu left join exam on stu.id=exam.id;\n+------+------+------+-------+\n| id   | name | id   | grade |\n+------+------+------+-------+\n|    1 | jack |    1 |    56 |\n|    2 | tom  |    2 |    76 |\n|    3 | kity | NULL |  NULL |\n|    4 | nono | NULL |  NULL |\n+------+------+------+-------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223214-wvw0f5t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223214-wvw0f5t"
+			}
+		},
+		{
+			"ID": "20221122223154-11wfj4h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122223154-11wfj4h",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "右外连接"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-suizj9q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-suizj9q",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果联合查询，右侧的表完全显示我们就说是右外连接。"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-phuse5n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-phuse5n",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-w2v8cne",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-w2v8cne",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select 字段    from 表名1 right join 表名2  on  连接条件；\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-5ftkos0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122223154-5ftkos0",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-v0wt9j3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-v0wt9j3",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "沿用上面的stu和exam表；"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-0nqq0w6",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122223154-0nqq0w6",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"ID": "20221122223154-stvsn49",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122223154-stvsn49",
+						"updated": "20221122223154"
+					},
+					"Children": [
+						{
+							"ID": "20221122223154-f7cmgc2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122223154-f7cmgc2",
+								"updated": "20221122223154"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对stu表和exam表联合查询，把所有的成绩都显示出来，即使这个成绩没有学生与它对应，也要显示出来"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-tqy0rji",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-tqy0rji",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select * from stu1 right join exam on stu1.id=exam.id;\n+------+------+------+-------+\n| id   | name | id   | grade |\n+------+------+------+-------+\n|    1 | jack |    1 |    56 |\n|    2 | tom  |    2 |    76 |\n| NULL | NULL |   11 |     8 |\n+------+------+------+-------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-o7zuvcr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122223154-o7zuvcr",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "练习"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-o75gv6v",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122223154-o75gv6v",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"ID": "20221122223154-tul1rmq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122223154-tul1rmq",
+						"updated": "20221122223154"
+					},
+					"Children": [
+						{
+							"ID": "20221122223154-8g5qdmh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122223154-8g5qdmh",
+								"updated": "20221122223154"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "列出部门名称和这些部门的员工信息，同时列出没有员工的部门\n(使用scott这个数据库中的测试表)\n方法一；左外连接"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-662e5tv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-662e5tv",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select d.dname , e.* from dept d left join emp e on d.deptno=e.deptno;\n+------------+--------+--------+-----------+------+---------------------+---------+---------+--------+\n| dname      | empno  | ename  | job       | mgr  | hiredate            | sal     | comm    | deptno |\n+------------+--------+--------+-----------+------+---------------------+---------+---------+--------+\n| ACCOUNTING | 007934 | MILLER | CLERK     | 7782 | 1982-01-23 00:00:00 | 1300.00 |    NULL |     10 |\n| ACCOUNTING | 007839 | KING   | PRESIDENT | NULL | 1981-11-17 00:00:00 | 5000.00 |    NULL |     10 |\n| ACCOUNTING | 007782 | CLARK  | MANAGER   | 7839 | 1981-06-09 00:00:00 | 2450.00 |    NULL |     10 |\n| RESEARCH   | 007902 | FORD   | ANALYST   | 7566 | 1981-12-03 00:00:00 | 3000.00 |    NULL |     20 |\n| RESEARCH   | 007876 | ADAMS  | CLERK     | 7788 | 1987-05-23 00:00:00 | 1100.00 |    NULL |     20 |\n| RESEARCH   | 007788 | SCOTT  | ANALYST   | 7566 | 1987-04-19 00:00:00 | 3000.00 |    NULL |     20 |\n| RESEARCH   | 007566 | JONES  | MANAGER   | 7839 | 1981-04-02 00:00:00 | 2975.00 |    NULL |     20 |\n| RESEARCH   | 007369 | SMITH  | CLERK     | 7902 | 1980-12-17 00:00:00 |  800.00 |    NULL |     20 |\n| SALES      | 007900 | JAMES  | CLERK     | 7698 | 1981-12-03 00:00:00 |  950.00 |    NULL |     30 |\n| SALES      | 007844 | TURNER | SALESMAN  | 7698 | 1981-09-08 00:00:00 | 1500.00 |    0.00 |     30 |\n| SALES      | 007698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 00:00:00 | 2850.00 |    NULL |     30 |\n| SALES      | 007654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 00:00:00 | 1250.00 | 1400.00 |     30 |\n| SALES      | 007521 | WARD   | SALESMAN  | 7698 | 1981-02-22 00:00:00 | 1250.00 |  500.00 |     30 |\n| SALES      | 007499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 00:00:00 | 1600.00 |  300.00 |     30 |\n| OPERATIONS |   NULL | NULL   | NULL      | NULL | NULL                |    NULL |    NULL |   NULL |\n+------------+--------+--------+-----------+------+---------------------+---------+---------+--------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122223226-saw61li",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223226-saw61li"
+			}
+		},
+		{
+			"ID": "20221122223154-aj02k8i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122223154-aj02k8i",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法二：右外连接"
+				}
+			]
+		},
+		{
+			"ID": "20221122223154-bmpibgi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122223154-bmpibgi",
+				"updated": "20221122223154"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select d.dname , e.* from emp e right join dept d on e.deptno=d.deptno;\n+------------+--------+--------+-----------+------+---------------------+---------+---------+--------+\n| dname      | empno  | ename  | job       | mgr  | hiredate            | sal     | comm    | deptno |\n+------------+--------+--------+-----------+------+---------------------+---------+---------+--------+\n| ACCOUNTING | 007934 | MILLER | CLERK     | 7782 | 1982-01-23 00:00:00 | 1300.00 |    NULL |     10 |\n| ACCOUNTING | 007839 | KING   | PRESIDENT | NULL | 1981-11-17 00:00:00 | 5000.00 |    NULL |     10 |\n| ACCOUNTING | 007782 | CLARK  | MANAGER   | 7839 | 1981-06-09 00:00:00 | 2450.00 |    NULL |     10 |\n| RESEARCH   | 007902 | FORD   | ANALYST   | 7566 | 1981-12-03 00:00:00 | 3000.00 |    NULL |     20 |\n| RESEARCH   | 007876 | ADAMS  | CLERK     | 7788 | 1987-05-23 00:00:00 | 1100.00 |    NULL |     20 |\n| RESEARCH   | 007788 | SCOTT  | ANALYST   | 7566 | 1987-04-19 00:00:00 | 3000.00 |    NULL |     20 |\n| RESEARCH   | 007566 | JONES  | MANAGER   | 7839 | 1981-04-02 00:00:00 | 2975.00 |    NULL |     20 |\n| RESEARCH   | 007369 | SMITH  | CLERK     | 7902 | 1980-12-17 00:00:00 |  800.00 |    NULL |     20 |\n| SALES      | 007900 | JAMES  | CLERK     | 7698 | 1981-12-03 00:00:00 |  950.00 |    NULL |     30 |\n| SALES      | 007844 | TURNER | SALESMAN  | 7698 | 1981-09-08 00:00:00 | 1500.00 |    0.00 |     30 |\n| SALES      | 007698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 00:00:00 | 2850.00 |    NULL |     30 |\n| SALES      | 007654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 00:00:00 | 1250.00 | 1400.00 |     30 |\n| SALES      | 007521 | WARD   | SALESMAN  | 7698 | 1981-02-22 00:00:00 | 1250.00 |  500.00 |     30 |\n| SALES      | 007499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 00:00:00 | 1600.00 |  300.00 |     30 |\n| OPERATIONS |   NULL | NULL   | NULL      | NULL | NULL                |    NULL |    NULL |   NULL |\n+------------+--------+--------+-----------+------+---------------------+---------+---------+--------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

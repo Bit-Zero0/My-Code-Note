@@ -1,0 +1,7489 @@
+{
+	"ID": "20221122224231-nugy4ws",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221122224231-nugy4ws",
+		"title": "事务",
+		"updated": "20221122230752"
+	},
+	"Children": [
+		{
+			"ID": "20221122224239-7tlj52z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-7tlj52z",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "CURD不加控制，会有什么问题？"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-xaqwjbt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-xaqwjbt",
+				"updated": "20221122224250"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221122174635"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221122174635-20221122224250-0r9gd8y.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224252-wl6n879",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224252-wl6n879"
+			}
+		},
+		{
+			"ID": "20221122224239-unfrypx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-unfrypx",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "CURD满足什么属性，能解决上述问题?"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-r7fwsfv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-r7fwsfv",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1.买票的过程得是原子的吧\n2.买票互相应该不能影响吧\n3.买完票应该要永久有效吧\n4.买前，和买后都要是确定的状态吧"
+				}
+			]
+		},
+		{
+			"ID": "20221122224255-wiv1ko3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224255-wiv1ko3"
+			}
+		},
+		{
+			"ID": "20221122224239-6hs31i9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-6hs31i9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是事务?"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-iifvli8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-iifvli8",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务就是一组DML语句组成，这些语句在逻辑上存在相关性，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "这一组DML语句要么全部成功，要么全部失败，是一个整体"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。MySQL提供一种机制，保证我们达到这样的效果。事务还规定不同的客户端看到的数据是不相同的。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-2rpdsmr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-2rpdsmr",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务就是要做的或所做的事情，主要用于处理操作量大，复杂度高的数据。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-qm4s6q9",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221122224239-qm4s6q9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221122224239-nhg2gb1",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-nhg2gb1",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "假设一种场景:\n你毕业了，学校的教务系统后台MysQL中，不在需要你的数据，要删除你的所有信息(一般不会:))那么要删除你的基本信息(姓名，电话，籍贯等)的同时，也删除和你有关的其他信息，比如:你的各科成绩，你在校表现，甚至你在论坛发过的文章等。这样，就需要多条MysQL语句构成，那么所有这些操作合起来，就构成了一个事务。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-0wnj7su",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-0wnj7su",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "正如我们上面所说，一个MySQL数据库，可不止你一个事务在运行，同一时刻，甚至有大量的请求被包装成事务，在向MySQL服务器发起事务处理请求。而每条事务至少一条SQL，最多很多SQL,这样如果大家都访问同样的表数据，在不加保护的情况，就绝对会出现问题。甚至，因为事务由多条SQL构成，那么，也会存在执行到一半出错或者不想再执行的情况，那么已经执行的怎么办呢?"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-r61yuud",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-r61yuud",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所有，一个完整的事务，绝对不是简单的sq1集合，还需要满足如下四个属性:"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-64e7at7",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-64e7at7",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-1ywtmv2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-1ywtmv2",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-ulufy4y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-ulufy4y",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "原子性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":一个事务(transaction）中的所有操作，要么全部完成，要么全部不完成不会结束在中间某个环节。事务在执行过程中发生错误，会被回滚(Rollback)到事务开始前的状态，就像这个事务从来没有执行过一样。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-0fe64bp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-0fe64bp",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-yo0h8rs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-yo0h8rs",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一致性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":在事务开始之前和事务结束以后，数据库的完整性没有被破坏。这表示写入的资料必须完全符合所有的预设规则，这包含资料的精确度、串联性以及后续数据库可以自发性地完成预定的工作。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-vmtwcy7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-vmtwcy7",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-3mxixob",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-3mxixob",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "隔离性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致。事务隔离分为不同级别，包括读未提交（Read uncommitted )、读提交( read committed）、可重复读(repeatable read）和串行化( serializab1e)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-hai08ro",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-hai08ro",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-fti6ga2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-fti6ga2",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "持久性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-j47zpu3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-j47zpu3",
+				"updated": "20221122224314"
+			}
+		},
+		{
+			"ID": "20221122224239-vt50w63",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221122224239-vt50w63",
+				"updated": "20221122224333"
+			},
+			"Children": [
+				{
+					"ID": "20221122224316-hi7pz0u",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224316-hi7pz0u",
+						"updated": "20221122224333"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "上面四个属性，可以简称为ACID。"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221122224239-i9shjt5",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-i9shjt5",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "原子性(Atomicity，或称不可分割性)\n—致性(Consistency)\n隔离性(lsolation，又称独立性)\n持久性(Durability)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224307-l2apiov",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224307-l2apiov"
+			}
+		},
+		{
+			"ID": "20221122224239-ew2xq4s",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-ew2xq4s",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么会出现事务"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-v8o75ow",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-v8o75ow",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务被MySQL编写者设计出来,本质是为了当应用程序访问数据库的时候,事务能够简化我们的编程模型,不需要我们去考虑各种各样的潜在错误和并发问题."
+				}
+			]
+		},
+		{
+			"ID": "20221122224347-dg3g2w9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224347-dg3g2w9"
+			}
+		},
+		{
+			"ID": "20221122224239-8tj48u0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-8tj48u0",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以想一下当我们使用事务时,要么提交,要么回滚,我们不会去考虑网络异常了, 服务器宕机了,同时更改一个数据怎么办对吧?"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "因此事务本质上是为了应用层服务的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ".而不是伴随着数据库系统天生就有的."
+				}
+			]
+		},
+		{
+			"ID": "20221122224345-xisg1xr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224345-xisg1xr"
+			}
+		},
+		{
+			"ID": "20221122224239-4h0y4l6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-4h0y4l6",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "备注:我们后面把MysQL中的一行信息，称为一行记录"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-z4nv0o2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-z4nv0o2",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务的版本支持"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-msc38yr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-msc38yr",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "MySQL"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "中只有 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "Innodb"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 数据库引擎的数据库支持事务， "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "MyISAM"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不支持"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-xzj1bvb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-xzj1bvb",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e show engines;           -- 表格显示 \nmysql\u003e show engines \\G         -- 行显示\n*************************** 1. row *************************** \n     Engine: InnoDB    -- 引擎名称\n    Support: DEFAULT   -- 默认引擎\n    Comment: Supports transactions, row-level locking, and foreign keys -- 描述 \nTransactions: YES       -- 支持事务\n         XA: YES\nSavepoints: YES       -- 支持事务保存点\n*************************** 2. row *************************** \n     Engine: MRG_MYISAM\n    Support: YES\n    Comment: Collection of identical MyISAM tables \nTransactions: NO\n         XA: NO \nSavepoints: NO\n*************************** 3. row *************************** \n     Engine: MEMORY    --内存引擎\n    Support: YES\n    Comment: Hash based, stored in memory, useful for temporary tables \nTransactions: NO\n         XA: NO\nSavepoints: NO\n*************************** 4. row *************************** \n     Engine: BLACKHOLE\n    Support: YES\n    Comment: /dev/null storage engine (anything you write to it disappears) \nTransactions: NO\n         XA: NO \nSavepoints: NO\n*************************** 5. row *************************** \n     Engine: MyISAM    \n    Support: YES\n    Comment: MyISAM storage engine \nTransactions: NO           -- MyISAM不支持事务 \n         XA: NO\nSavepoints: NO\n*************************** 6. row *************************** \n     Engine: CSV\n    Support: YES\n    Comment: CSV storage engine \nTransactions: NO\n         XA: NO \nSavepoints: NO\n*************************** 7. row *************************** \n     Engine: ARCHIVE\n    Support: YES\n    Comment: Archive storage engine \nTransactions: NO\n         XA: NO \nSavepoints: NO\n*************************** 8. row *************************** \n     Engine: PERFORMANCE_SCHEMA\n    Support: YES\n    Comment: Performance Schema \nTransactions: NO\n         XA: NO \nSavepoints: NO\n*************************** 9. row *************************** \n     Engine: FEDERATED\n    Support: NO\n    Comment: Federated MySQL storage engine \nTransactions: NULL\n         XA: NULL \nSavepoints: NULL\n9 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-6r8l4v1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-6r8l4v1",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务的提交方式"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-qd0m2tr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-qd0m2tr",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务的提交方式常见的有两种："
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-c9b5om3",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-c9b5om3",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-ts2o4b5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-ts2o4b5",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-bp4e8e2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-bp4e8e2",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自动提交"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-v782n1k",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-v782n1k",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-hj3mwlw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-hj3mwlw",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "手动提交"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224452-lfdbvdv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224452-lfdbvdv"
+			}
+		},
+		{
+			"ID": "20221122224454-cmsk408",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224454-cmsk408"
+			}
+		},
+		{
+			"ID": "20221122224453-co665p2",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224453-co665p2",
+				"updated": "20221122224505"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-n8b5g5f",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-n8b5g5f",
+						"updated": "20221122224505"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-162moc1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-162moc1",
+								"updated": "20221122224505"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "查看事务提交方式"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-ttavu7b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-ttavu7b",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "show variables like 'autocommit'; \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit    | ON   | \n+---------------+-------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-r0tv97r",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-r0tv97r",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-d74oour",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-d74oour",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-hsbq4hp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-hsbq4hp",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "用 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "SET"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 来改变MySQL的自动提交方式"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-v00r066",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-v00r066",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SET AUTOCOMMIT=0;            --SET AUTOCOMMIT=0 禁止自动提交 \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e show variables like 'autocommit'; \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit    | OFF   | \n+---------------+-------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-ite8esu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-ite8esu",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SET AUTOCOMMIT=1;           --SET AUTOCOMMIT=1 开启自动提交 \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e show variables like 'autocommit'; \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit    | ON   | \n+---------------+-------+\n1 row in set (0.01 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-xqebhbr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-xqebhbr",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务常见操作方式"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-3ri55i9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-3ri55i9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "简单银行用户表"
+				}
+			]
+		},
+		{
+			"ID": "20221122224509-tsij71x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224509-tsij71x"
+			}
+		},
+		{
+			"ID": "20221122224239-7w49ap9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-7w49ap9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "select @@transaction_isolation;"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 指令可以查看隔离级别。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-yfqpl2o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-yfqpl2o",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select @@transaction_isolation;\n+-------------------------+\n| @@transaction_isolation |\n+-------------------------+\n| REPEATABLE-READ         |  -- 表示 可重复读 ，也是默认的隔离级别 \n+-------------------------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224529-34wwkxd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224529-34wwkxd"
+			}
+		},
+		{
+			"ID": "20221122224239-19mltay",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-19mltay",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了便于演示，我们将mysql的默认隔离级别设置成  "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "读未提交"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-p0yu6xm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-p0yu6xm",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": " set global transaction isolation level READ UNCOMMITTED; \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-4zqwk8s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-4zqwk8s",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "READ UNCOMMITTED 表示的就是 读未提交。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224535-uq6flt4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224535-uq6flt4"
+			}
+		},
+		{
+			"ID": "20221122224239-4ej1gh1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-4ej1gh1",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "设置后需要重启终端，进行查看"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224536-glr76yd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224536-glr76yd"
+			}
+		},
+		{
+			"ID": "20221122224239-4i1o9e6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-4i1o9e6",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时的隔离级别就是 读未提交 了。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-kn0ukw3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-kn0ukw3",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select @@transaction_isolation;\n+-------------------------+\n| @@transaction_isolation |\n+-------------------------+\n| READ-UNCOMMITTED        |\n+-------------------------+\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224542-i1fyxtz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224542-i1fyxtz"
+			}
+		},
+		{
+			"ID": "20221122224239-nlvcx37",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-nlvcx37",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-b0ksxlf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-b0ksxlf",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-3o0agzi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-3o0agzi",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建测试表"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-w8e83jx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-w8e83jx",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table if not exists account( \nid int primary key,\nname varchar(50) not null default '',\nblance decimal(10,2) not null default 0.0 \n)ENGINE=InnoDB DEFAULT CHARSET=UTF8;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224547-brzhd13",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224547-brzhd13"
+			}
+		},
+		{
+			"ID": "20221122224239-8c90l4c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-8c90l4c",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "正常演示 - 证明事务的开始与回滚"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-n76bal1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-n76bal1",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e show variables like 'autocommit';  -- 查看事务是否自动提交。我们故意设置成自动提交，看看该选项是否影响begin\n+---------------+-------+ \n| Variable_name | Value | \n+---------------+-------+\n| autocommit    | ON   | \n+---------------+-------+\n1 row in set (0.00 sec)\n\nmysql\u003e start transaction;               -- 开始一个事务begin也可以，推荐begin \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e savepoint save1;                -- 创建一个保存点save1 \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e insert into account values (1, '张三', 100);   -- 插入一条记录 \nQuery OK, 1 row affected (0.05 sec)\n\nmysql\u003e savepoint save2;                 -- 创建一个保存点save2 \nQuery OK, 0 rows affected (0.01 sec)\n\nmysql\u003e insert into account values (2, '李四', 10000);  -- 在插入一条记录 \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select * from account;             -- 两条记录都在了 \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n|  1 | 张三   |   100.00 | \n|  2 | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e rollback to save2;                 -- 回滚到保存点save2 \nQuery OK, 0 rows affected (0.03 sec)\n\nmysql\u003e select * from account;             -- 一条记录没有了 \n+----+--------+--------+\n| id | name   | blance | \n+----+--------+--------+ \n|  1 | 张三   | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n\nmysql\u003e rollback;                          -- 直接rollback，回滚在最开始 \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e select * from account;             -- 所有刚刚的记录没有了 \nEmpty set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224552-3ih8a6g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224552-3ih8a6g"
+			}
+		},
+		{
+			"ID": "20221122224239-mi0irze",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-mi0irze",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非正常演示1 - 证明未commit，客户端崩溃，MySQL自动会回滚（隔离级别设置为读未提交）"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-hgn4xkq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-hgn4xkq",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "需要分为两个终端进行测试"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-sw7g43d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-sw7g43d",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 终端A\nmysql\u003e select * from account;          -- 当前表内无数据 \nEmpty set (0.00 sec)\n\nmysql\u003e show variables like 'autocommit'; -- 依旧自动提交 \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit   | ON   | \n+---------------+-------+\n1 row in set (0.00 sec)\n\nmysql\u003e begin;                            --开启事务 \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e insert into account values (1, '张三', 100);   -- 插入记录 \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select * from account;           --数据已经存在，但没有commit，此时同时查看终端B \n+----+--------+--------+\n| id | name   | blance | \n+----+--------+--------+ \n|  1 | 张三   | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n\nmysql\u003e Aborted                          -- ctrl + \\ 异常终止MySQL\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-5n3fbhw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-5n3fbhw",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端B \nmysql\u003e select * from account;           --终端A崩溃前 \n+----+--------+--------+\n| id | name   | blance | \n+----+--------+--------+ \n|  1 | 张三   | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n\nmysql\u003e select * from account;          --数据自动回滚 \nEmpty set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224923-v8ve3g0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224923-v8ve3g0"
+			}
+		},
+		{
+			"ID": "20221122224239-tu269oj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-tu269oj",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非正常演示2 - 证明commit了，客户端崩溃，MySQL数据不会在受影响，已经持久化"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-p34eqy0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-p34eqy0",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端 A\nmysql\u003e show variables like 'autocommit'; -- 依旧自动提交 \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit    | ON    | \n+---------------+-------+\n1 row in set (0.00 sec)\n\nmysql\u003e select * from account;   -- 当前表内无数据 \nEmpty set (0.00 sec)\n\nmysql\u003e begin;  -- 开启事务\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e insert into account values (1, '张三', 100); -- 插入记录\nQuery OK, 1 row affected (0.00 sec) \n\nmysql\u003e commit;   --提交事务\nQuery OK, 0 rows affected (0.04 sec) \n\nmysql\u003e Aborted   -- ctrl + \\ 异常终止MySQL\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-bm1etev",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-bm1etev",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端 B\nmysql\u003e select * from account; --数据存在了，所以commit的作用是将数据持久化到MySQL中\n+----+--------+--------+\n| id | name | blance | \n+----+--------+--------+ \n| 1 | 张三 | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122225137-viaj5hx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225137-viaj5hx"
+			}
+		},
+		{
+			"ID": "20221122224239-ubnmtxc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-ubnmtxc",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非正常演示3 - 对比试验。证明begin操作会自动更改提交方式，不会受MySQL是否自动提交影响"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-x9nv5lm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-x9nv5lm",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 终端    A\nmysql\u003e select *from account;  --查看历史数据\n+----+--------+--------+\n| id | name   | blance | \n+----+--------+--------+ \n| 1 | 张三    | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n\nmysql\u003e show variables like 'autocommit';   --查看事务提交方式 \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit    | ON    | \n+---------------+-------+\n1 row in set (0.00 sec)\n\nmysql\u003e set autocommit=0;   --关闭自动提交\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e show variables like 'autocommit';   --查看关闭之后结果 \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit    | OFF   | \n+---------------+-------+\n1 row in set (0.00 sec)\n\nmysql\u003e begin; --开启事务\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e insert into account values (2, '李四', 10000);   --插入记录 \nQuery OK, 1 row affected (0.00 sec)\n\nmysql\u003e select *from account;  --查看插入记录，同时查看终端B\n+----+--------+----------+ \n| id | name | blance     | \n+----+--------+----------+ \n| 1 | 张三  | 100.00     | \n| 2 | 李四  | 10000.00   | \n+----+--------+----------+\n2 rows in set (0.00 sec) \n\nmysql\u003e Aborted   --再次异常终止\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-btu5yyq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-btu5yyq",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 终端B\n--再次异常终止\nSQL\nmysql\u003e select * from account;       --终端A崩溃前 \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 100.00   |   \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e select * from account;      --终端A崩溃后，自动回滚 \n+----+--------+--------+\n| id | name   | blance | \n+----+--------+--------+ \n| 1  | 张三   | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122225142-z6htgtf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225142-z6htgtf"
+			}
+		},
+		{
+			"ID": "20221122224239-b3t0gwx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-b3t0gwx",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非正常演示4 - 证明单条SQL与事务的关系"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-mytsxol",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-mytsxol",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实验一"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-0h1lzj7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-0h1lzj7",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 终端A\nmysql\u003e select * from account; \n+----+--------+--------+\n| id | name   | blance | \n+----+--------+--------+ \n| 1  | 张三   | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n\nmysql\u003e show variables like 'autocommit'; \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit    | ON    | \n+---------------+-------+\n1 row in set (0.00 sec)\n\nmysql\u003e set autocommit=0;  --关闭自动提交\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e insert into account values (2, '李四', 10000);   --插入记录\nQuery OK, 1 row affected (0.00 sec) \n\nmysql\u003e select *from account;  --查看结果，已经插入。此时可以在查看终端B\n+----+--------+----------+ \n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 100.00   | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec) \n\nmysql\u003e Bye\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-1eeag2h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-1eeag2h",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端B\nmysql\u003e select * from account;   --终端A崩溃前\n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 100.00   | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e select * from account;  --终端A崩溃后\n+----+--------+--------+\n| id | name   | blance | \n+----+--------+--------+ \n| 1  | 张三   | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122225147-41xpp5d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225147-41xpp5d"
+			}
+		},
+		{
+			"ID": "20221122224239-mfhws45",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-mfhws45",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实验二"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-w7hj7yn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-w7hj7yn",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端A\nmysql\u003e show variables like 'autocommit'; --开启默认提交 \n+---------------+-------+\n| Variable_name | Value | \n+---------------+-------+ \n| autocommit | ON | \n+---------------+-------+\n1 row in set (0.00 sec)\n\nmysql\u003e select * from account;   --数据已经插入\n+----+--------+--------+\n| id | name | blance | \n+----+--------+--------+ \n| 1 | 张三 | 100.00 | \n+----+--------+--------+\n1 row in set (0.00 sec)\n\nmysql\u003e insert into account values (2, '李四', 10000); \nQuery OK, 1 row affected (0.01 sec)\n\nmysql\u003e Aborted   --异常终止\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122225150-w34dh9p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225150-w34dh9p"
+			}
+		},
+		{
+			"ID": "20221122224239-59fk9pa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-59fk9pa",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结论:"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-zwsf82w",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-zwsf82w",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-zcrxu60",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-zcrxu60",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-d2r12xy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-d2r12xy",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "只要输入"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "begin"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或者"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "start transaction"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，事务便必须要通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "commit"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "提交，才会持久化，与是否设置"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "set autocommit"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "无关。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-8g5vpl3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-8g5vpl3",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-j06luuy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-j06luuy",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事务可以手动回滚，同时，当操作异常，MySQL会自动回滚"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-qs95hgi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-qs95hgi",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-431ex5a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-431ex5a",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对于"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "InnoDB"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "每一条SQL语言都默认封装成事务，自动提交"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。(select有特殊情况，因为MysQL有MVCC)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-9ym6otp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-9ym6otp",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-4y36tjd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-4y36tjd",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从上面的例子，我们能看到事务本身的原子性(回滚)，持久性(commit)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122225153-q02qmtv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225153-q02qmtv"
+			}
+		},
+		{
+			"ID": "20221122224239-rudn6t0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-rudn6t0",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务操作注意事项"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-8j2ds1q",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-8j2ds1q",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-e879mr1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-e879mr1",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-9dmy7o2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-9dmy7o2",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "savepoint"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "设置保存点,   如果没有设置保存点，也可以回滚，只能回滚到事务的开始。直接使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "rollback"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(前提是事务还没有提交)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-g9sjgch",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-g9sjgch",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-g9zc2dn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-g9zc2dn",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果一个事务被提交了(commit)，则不可以回退(rollback)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-n1sc5wm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-n1sc5wm",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-tb29rnv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-tb29rnv",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以选择回退到哪个保存点"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-qvj3nrc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-qvj3nrc",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-y5vw3sz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-y5vw3sz",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "InnoDB"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "支持事务，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "MyISAM"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "不支持事务"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-bhi22kt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-bhi22kt",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-vac9hs2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-vac9hs2",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "开始事务可以使"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "start transaction"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或者"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "begin"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122225157-lop0746",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225157-lop0746"
+			}
+		},
+		{
+			"ID": "20221122224239-h3kuurt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-h3kuurt",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务隔离级别"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-psvcj8r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-psvcj8r",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何理解隔离性"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-ujwsrgl",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-ujwsrgl",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-2xq0hf5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-2xq0hf5",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-1mekrc4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-1mekrc4",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "MySQL服务可能会同时被多个客户端进程(线程)访问，访问的方式以事务方式进行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-1zw6mky",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-1zw6mky",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-mlgl6zl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-mlgl6zl",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一个事务可能由多条SQL构成，也就意味着，任何一个事务，都有执行前，执行中，执行后的阶段。而所谓的原子性，其实就是让用户层，要么看到执行前，要么看到执行后。执行中出现问题，可以随时回滚"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。所以单个事务，对用户表现出来的特性，就是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "原子性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-7ytuir1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-7ytuir1",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-lrjnzgq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-lrjnzgq",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "但，毕竟所有事务都要有个执行过程，那么在多个事务各自执行多个SQL的时候，就还是有可能会出现互相影响的情况。比如：多个事务同时访问同一张表，甚至同一行数据。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-jt6aak1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-jt6aak1",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-fdv2m2z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-fdv2m2z",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数据库中，为了保证事务执行过程中尽量不受干扰，就有了一个重要特征："
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "隔离性"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-y7movfu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-y7movfu",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-svopn3a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-svopn3a",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数据库中，允许事务受不同程度的干扰，就有了一种重要特征："
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "隔离级别"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122225335-2iz9a73",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225335-2iz9a73"
+			}
+		},
+		{
+			"ID": "20221122224239-daev9lp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-daev9lp",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "隔离级别"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-9a4gvx8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-9a4gvx8",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-ix9o9d7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-ix9o9d7",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-5rsr7nn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-5rsr7nn",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "读未提交【Read Uncommitted】"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "： 在该隔离级别，所有的事务都可以看到其他事务没有提交的执行结果。 （实际生产中不可能使用这种隔离级别的），但是相当于没有任何隔离性，也会有很多并发问题，如脏读，幻读，不可重复读等，我们上面为了做实验方便，用的就是这个隔离性。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-yrba3qa",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-yrba3qa",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-m1zscc8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-m1zscc8",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "读提交【Read Committed】"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ：该隔离级别是大多数数据库的默认的隔离级别（不是 MySQL 默认的）。它满足了隔离的简单定义:一个事务只能看到其他的已经提交的事务所做的改变。这种隔离级别会引起不可重复读，即一个事务执行时，如果多次 select， 可能得到不同的结果。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-blky93p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-blky93p",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-8zp8ljq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-8zp8ljq",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可重复读【Repeatable Read】"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：  这是 MySQL 默认的隔离级别，它确保同一个事务，在执行中，多次读取操作数据时，会看到同样的数据行。但是会有幻读问题 , 在MySQL中不会出现幻读现象。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-21wd14y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-21wd14y",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-fmzcbaj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-fmzcbaj",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "串行化【Serializable】"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ": 这是事务的最高隔离级别，它通过强制事务排序，使之不可能相互冲突，从而解决了幻读的问题。它在每个读的数据行上面加上共享锁，。但是可能会导致超时和锁竞争（这种隔离级别太极端，实际生产基本不使用）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-g29oge5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-g29oge5",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "隔离级别如何实现：隔离，基本都是通过锁实现的，不同的隔离级别，锁的使用是不同的。常见有，表锁，行锁，读锁，写锁，间隙锁(GAP),Next-Key锁(GAP+行锁)等。不过，我们目前现有这个认识就行，先关注上层使用。"
+				}
+			]
+		},
+		{
+			"ID": "20221122225454-ejb2zim",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225454-ejb2zim"
+			}
+		},
+		{
+			"ID": "20221122224239-2ticrwc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-2ticrwc",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看与设置隔离性"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-2alyxbq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-2alyxbq",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-eo356xn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-eo356xn",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\nmysql\u003e select @@global.transaction_isolation;   --查看全局隔级别 \n+-----------------------+\n| @@global.tx_isolation | \n+-----------------------+ \n| REPEATABLE-READ | \n+-----------------------+\n1 row in set, 1 warning (0.00 sec)\n\nmysql\u003e SELECT @@session.transaction_isolation;   --查看会话(当前)全局隔级别 \n+------------------------+\n| @@session.tx_isolation | \n+------------------------+ \n| REPEATABLE-READ | \n+------------------------+\n1 row in set, 1 warning (0.00 sec)\n\nmysql\u003e SELECT @@transaction_isolation; --默认同session\n+-----------------+\n| @@tx_isolation | \n+-----------------+ \n| REPEATABLE-READ |\n+-----------------+\n1 row in set, 1 warning (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122225459-cq6c5jw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225459-cq6c5jw"
+			}
+		},
+		{
+			"ID": "20221122224239-hesqtq1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-hesqtq1",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "设置"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-20t2gr3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-20t2gr3",
+				"updated": "20221122225535"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "设置当前会话    or  全局隔离级别语法"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-fcwuihx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-fcwuihx",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-uugs6yf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-uugs6yf",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--设置当前会话隔离性，另起一个会话，看不多，只影响当前会话\nmysql\u003e set session transaction isolation level serializable; -- 设置为 串行化 \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e SELECT @@global.transaction_isolation;     --全局隔离性还是RR \n+-----------------------+\n| @@globaltransaction_isolation | \n+-----------------------+ \n| REPEATABLE-READ       | \n+-----------------------+\n1 row in set, 1 warning (0.00 sec)\n\nmysql\u003e SELECT @@session.transaction_isolation;    --会话隔离性成为串行化 \n+------------------------+\n| @@session.transaction_isolation | \n+------------------------+\n| SERIALIZABLE           |              \n+------------------------+\n1 row in set, 1 warning (0.00 sec)\n\nmysql\u003e SELECT @@transaction_isolation;    --同上\n+----------------+\n| @@tx_isolation | \n+----------------+ \n| SERIALIZABLE   | \n+----------------+\n1 row in set, 1 warning (0.00 sec)\n\n--设置全局隔离性，另起一个会话，会被影响\nmysql\u003e set global transaction isolation level READ UNCOMMITTED; \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e SELECT @@global.transaction_isolation; \n+-----------------------+\n| @@global.transaction_isolation | \n+-----------------------+ \n| READ-UNCOMMITTED      | \n+-----------------------+\n1 row in set, 1 warning (0.00 sec) \n\nmysql\u003e SELECT @@session.transaction_isolation;\n+------------------------+ \n| @@session.transaction_isolation | \n+------------------------+\n| READ-UNCOMMITTED       | \n+------------------------+\n1 row in set, 1 warning (0.00 sec)\n\nmysql\u003e SELECT @@transaction_isolation; \n+------------------+\n| @@transaction_isolation   | \n+------------------+ \n| READ-UNCOMMITTED | \n+------------------+\n1 row in set, 1 warning (0.00 sec)\n-- 注意，如果没有现象，关闭mysql客户端，重新连接。\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122225543-b58k3k5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225543-b58k3k5"
+			}
+		},
+		{
+			"ID": "20221122224239-ymg6t5r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-ymg6t5r",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读未提交【Read Uncommitted】"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-wkh6aag",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-wkh6aag",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--几乎没有加锁，虽然效率高，但是问题太多，严重不建议采用 \n--终端A\n-- 设置隔离级别为    读未提交\nmysql\u003e set global transaction isolation level read uncommitted; \nQuery OK, 0 rows affected (0.00 sec)\n\n--重启客户端\n\nmysql\u003e select @@transaction_isolation; \n+------------------+\n| @@transaction_isolation | \n+------------------+ \n| READ-UNCOMMITTED | \n+------------------+\n1 row in set, 1 warning (0.00 sec)\n\nmysql\u003e select * from account; \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 100.00   | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e begin;\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e update account set blance=123.0 where id=1;  --更新指定行 \nQuery OK, 1 row affected (0.05 sec)\nRows matched: 1  Changed: 1  Warnings: 0 \n\n--注意：没有commit哦！！！\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-4nrwnos",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-4nrwnos",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\n--终端B \nmysql\u003e begin;\nmysql\u003e select * from account;\n+----+--------+----------+\n| id | name   | blance   |\n+----+--------+----------+\n|  1 | 张三   |   123.00 |  --读到终端A更新但是未commit的数据[insert，delete同样]\n|  2 | 李四   | 10000.00 |\n+----+--------+----------+\n2 rows in set (0.00 sec)\n\n--一个事务在执行中，读到另一个执行中事务的更新(或其他操作)但是未commit的数据，这种现象叫做脏读(dirty read)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122225546-qk14w2x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122225546-qk14w2x"
+			}
+		},
+		{
+			"ID": "20221122224239-oaed50l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-oaed50l",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "脏读"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-zmrecoa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-zmrecoa",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果一个事务「读到」了另一个「未提交事务修改过的数据」，就意味着发生了「脏读」现象。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-9760eck",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221122224239-9760eck",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221122224239-47msz2t",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-47msz2t",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "举个栗子"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n假设有 A 和 B 这两个事务同时在处理，事务 A 先开始从数据库中读取小林的余额数据，然后再执行更新操作，如果此时事务 A 还没有提交事务，而此时正好事务 B 也从数据库中读取小林的余额数据，那么事务 B 读取到的余额数据是刚才事务 A 更新后的数据，即使没有提交事务。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-clcgnng",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-clcgnng",
+				"updated": "20221122225829"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221122202247"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221122202247-20221122225829-t8ke6g4.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-7d02e80",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-7d02e80",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为事务 A 是还没提交事务的，也就是它随时可能发生回滚操作，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果在上面这种情况事务 A 发生了回滚，那么事务 B 刚才得到的数据就是过期的数据，这种现象就被称为脏读。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-uql7ugb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-uql7ugb",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读提交【Read Committed】"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-6l8pypk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-6l8pypk",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 终端A\nmysql\u003e set global transaction isolation level read committed; \nQuery OK, 0 rows affected (0.00 sec)\n\n--重启客户端\nmysql\u003e select * from account;    --查看当前数据 \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1 | 张三    | 123.00   | \n| 2 | 李四    | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e begin;\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e update account set blance=321.0 where id=1;   --更新张三数据 \nQuery OK, 1 row affected (0.00 sec)\nRows matched: 1  Changed: 1  Warnings: 0 \n\n--切换终端到终端B，查看数据。\n\nmysql\u003e commit;\nQuery OK, 0 rows affected (0.01 sec)\n\n--切换终端到终端B，查看数据。\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-fwud9k6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-fwud9k6",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端B \nmysql\u003e begin;   --手动开启事务，和终端A一前一后\nQuery OK, 0 rows affected (0.00 sec) \n\nmysql\u003e select * from account; \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1 | 张三    | 123.00   |   --老的值\n| 2 | 李四    | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\n--终端A commit之后，看到了！\n--but，此时还在当前事务中，并未commit，那么就造成了，同一个事务内，同样的读取\n--在不同的时间段(依旧还在事务操作中！)，读取到了不同的值，这种现象叫做不可重复读(non reapeatable read)！！（这个是问题吗？？）\nmysql\u003e select *from account;\n+----+--------+----------+\n| id | name   | blance   |\n+----+--------+----------+\n|  1 | 张三   |   321.00 |   --新的值\n|  2 | 李四   | 10000.00 |\n+----+--------+----------+\n2 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-r91r16h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-r91r16h",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读提交 的缺点"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-adxha1x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-adxha1x",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在一个事务内多次读取同一个数据，如果出现前后两次读到的数据不一样的情况，就意味着发生了「不可重复读」现象。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-2op1dvs",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221122224239-2op1dvs",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221122224239-7xpyvsi",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-7xpyvsi",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "举个例子"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n假设有 A 和 B 这两个事务同时在处理，事务 A 先开始从数据库中读取小林的余额数据，然后继续执行代码逻辑处理，"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "在这过程中如果事务 B 更新了这条数据，并提交了事务，那么当事务 A 再次读取该数据时，就会发现前后两次读到的数据是不一致的，这种现象就被称为不可重复读。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-vwwni99",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-vwwni99",
+				"updated": "20221122230622"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221122201838"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221122201838-20221122230622-osj2249.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122230624-x59m4tm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122230624-x59m4tm"
+			}
+		},
+		{
+			"ID": "20221122224239-0pjsbyr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-0pjsbyr",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可重复读【Repeatable Read】"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-q8pzyth",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-q8pzyth",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端A\nmysql\u003e set global transaction isolation level repeatable read;  --设置全局隔离级别RR \nQuery OK, 0 rows affected (0.01 sec)\n\n--关闭终端重启\n\nmysql\u003e select @@tx_isolation; \n+-----------------+\n| @@tx_isolation | \n+-----------------+\n| REPEATABLE-READ | \n+-----------------+\n1 row in set, 1 warning (0.00 sec)\n\n--隔离级别RR\nmysql\u003e select *from account;   --查看当前数据 \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 321.00   | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e begin;\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e update account set blance=4321.0 where id=1; --更新数据 \nQuery OK, 1 row affected (0.00 sec)\nRows matched: 1  Changed: 1  Warnings: 0 \n\n--切换到终端B，查看另一个事务是否能看到\n\nmysql\u003e commit;   --提交事务 \n\n--切换终端到终端B，查看数据。 \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-0gnoop5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-0gnoop5",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端B\nmysql\u003e begin;\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e select * from account;  --终端A中事务    commit之前，查看当前表中数据，数据未更新 \n+----+--------+----------+\n| id | name   | blance | \n+----+--------+----------+ \n| 1  | 张三   | 321.00 | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e select * from account; --终端A中事务    commit 之后，查看当前表中数据，数据未更新 \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 321.00   | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\n--可以看到，在终端B中，事务无论什么时候进行查找，看到的结果都是一致的，这叫做可重复读！\n\nmysql\u003e commit;   --结束事务\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e select * from account;   --再次查看，看到最新的更新数据 \n+----+--------+----------+\n| id | name   | blance | \n+----+--------+----------+ \n| 1  | 张三   | 4321.00 | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122230629-2clm1bp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122230629-2clm1bp"
+			}
+		},
+		{
+			"ID": "20221122224239-50ijbgl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-50ijbgl",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果将上面的终端A中的update操作，改成insert操作，会有什么问题？？"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-734noti",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-734noti",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端A\nmysql\u003e select *from account; \n+----+--------+----------+\n| id | name   | blance | \n+----+--------+----------+ \n| 1  | 张三   | 321.00 | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e begin;\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e insert into account (id,name,blance) values(3, '王五', 5432.0); \nQuery OK, 1 row affected (0.00 sec)\n\n--切换到终端B，查看另一个事务是否能看到\n\nmysql\u003e commit; \nQuery OK, 0 rows affected (0.00 sec)\n\n--切换终端到终端B，查看数据。\n\nmysql\u003e select * from account; \n+----+--------+----------+\n| id | name   | blance | \n+----+--------+----------+ \n| 1  | 张三   | 4321.00 | \n| 2  | 李四   | 10000.00 | \n| 3  | 王五   | 5432.00 | \n+----+--------+----------+\n3 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-anvcyut",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-anvcyut",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端B\nmysql\u003e begin;   --开启事务\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e select * from account; --终端A commit前    查看 \n+----+--------+----------+\n| id | name | blance | \n+----+--------+----------+ \n| 1 | 张三 | 4321.00 | \n| 2 | 李四 | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e select * from account; --终端A commit后    查看 \n+----+--------+----------+\n| id | name | blance | \n+----+--------+----------+ \n| 1 | 张三 | 4321.00 | \n| 2 | 李四 | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e select * from account; --多次查看，发现终端A在对应事务中insert的数据，在终端B的事务周期中，也没有什么影响，也符合可重复的特点。但是，一般的数据库在可重复读情况的时候，无法屏蔽其他事务insert的数据\n--为什么？ \n--因为隔离性实现是对数据加锁完成的，而insert待插入的数据因为并不存在，那么一般加锁无法屏蔽这类问题),会造成虽然大部分内容是可重复读的，但是insert的数据在可重复读情况被读取出来，导致多次查找时，会多查找出来新的记录，就如同产生了幻觉。这种现象，叫做幻读(phantom read)。\n--很明显，MySQL在RR级别的时候，是解决了幻读问题的(解决的方式是用Next-Key锁(GAP+行锁)解决的。这块比较难，有兴趣同学了解一下)。\n+----+--------+----------+ \n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 4321.00  | \n| 2  | 李四   | 10000.00 | \n+----+--------+----------+\n2 rows in set (0.00 sec)\n\nmysql\u003e commit;   --结束事务\nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e select * from account; --看到更新 \n+----+--------+----------+\n| id | name   | blance   | \n+----+--------+----------+ \n| 1  | 张三   | 4321.00 | \n| 2  | 李四   | 10000.00 | \n| 3  | 王五   | 5432.00 | \n+----+--------+----------+\n3 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-pcwxlrk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-pcwxlrk",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "幻读"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-9qghibp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-9qghibp",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在一个事务内多次查询某个符合查询条件的「记录数量」，如果出现前后两次查询到的记录数量不一样的情况，就意味着发生了「幻读」现象。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-5lxcx1g",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221122224239-5lxcx1g",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221122224239-dbg37sd",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-dbg37sd",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "举个栗子"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n假设有 A 和 B 这两个事务同时在处理，事务 A 先开始从数据库查询账户余额大于 100 万的记录，发现共有 5 条，然后事务 B 也按相同的搜索条件也是查询出了 5 条记录。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-1ti65i7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-1ti65i7",
+				"updated": "20221122230647"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221122204548"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221122204548-20221122230647-c9159yx.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n接下来，事务 A 插入了一条余额超过 100 万的账号，并提交了事务，此时数据库超过 100 万余额的账号个数就变为 6。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-v9l0jnw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-v9l0jnw",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "然后事务 B 再次查询账户余额大于 100 万的记录，此时查询到的记录数量有 6 条，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "发现和前一次读到的记录数量不一样了，就感觉发生了幻觉一样，这种现象就被称为幻读。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-gu4dy9j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-gu4dy9j",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "注意： MySQL在RR级别的时候，是解决了幻读问题的"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-6mae4ou",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-6mae4ou",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "串行化【serializable】"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-1kchdnz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-1kchdnz",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对所有操作全部加锁，进行串行化，不会有问题，但是只要串行化，效率很低，几乎完全不会被采用"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-sto1fya",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-sto1fya",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端A\nmysql\u003e set global transaction isolation level serializable; \nQuery OK, 0 rows affected (0.00 sec)\n\nmysql\u003e select @@transaction_isolation; \n+----------------+\n| @@transaction_isolation | \n+----------------+ \n| SERIALIZABLE  | \n+----------------+\n1 row in set, 1 warning (0.00 sec)\n\nmysql\u003e begin;\nQuery OK, 0 rows affected (0.00 sec)\n\n--开启事务，终端B同步开启\nmysql\u003e select * from account; --两个读取不会串行化，共享锁 \n+----+--------+----------+\n| id | name   | blance | \n+----+--------+----------+ \n| 1  | 张三   | 4321.00 | \n| 2  | 李四   | 10000.00 | \n| 3  | 王五   | 5432.00 | \n+----+--------+----------+\n3 rows in set (0.00 sec)\n\nmysql\u003e update account set blance=1.00 where id=1; --终端A中有更新或者其他操作，会阻塞。直到终端B事务提交。\nQuery OK, 1 row affected (18.19 sec) \nRows matched: 1  Changed: 1  Warnings: 0\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-7ov80q9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-7ov80q9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--终端B \nmysql\u003e begin;\nQuery OK, 0 rows affected (0.00 sec)\nmysql\u003e select * from account;    --两个读取不会串行化 \n+----+--------+----------+\n| id | name | blance | \n+----+--------+----------+ \n| 1 | 张三 | 4321.00 | \n| 2 | 李四 | 10000.00 | \n| 3 | 王五 | 5432.00 |\n+----+--------+----------+ \n3 rows in set (0.00 sec)\n\nmysql\u003e commit; --提交之后，终端A中的update才会提交。 \nQuery OK, 0 rows affected (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-tfffoa1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-tfffoa1",
+				"updated": "20221122230701"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221122204005"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221122204005-20221122230701-7e3lds4.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122230722-72xo6jl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122230722-72xo6jl"
+			}
+		},
+		{
+			"ID": "20221122224239-tws113p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-tws113p",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结："
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-99rs0zp",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-99rs0zp",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-hn0xfbd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-hn0xfbd",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-8m04e0k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-8m04e0k",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "其中隔离级别越严格，安全性越高，但数据库的并发性能也就越低，往往需要在两者之间找一个平衡点"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-flz5rh1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-flz5rh1",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-81a19t9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-81a19t9",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不可重复读的重点是修改和删除"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：同样的条件, 你读取过的数据,再次读取出来发现值不一样了  幻读的重点在于新增：同样的条件, 第1次和第2次读出来的记录数不一样"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-dwd9mg2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-dwd9mg2",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-r8ytv4s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-r8ytv4s",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "说明: "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mysql  默认的隔离级别是"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "可重复读"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ",一般情况下不要修改"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-ah3ucjc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-ah3ucjc",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-pgw0zpq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-pgw0zpq",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "上面的例子可以看出，事务也有长短事务这样的概念。事务间互相影响，指的是事务在并行执行的时候，即都没有commit的时候，影响会比较大。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-f8okep4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-f8okep4",
+				"updated": "20221122230736"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221122204213"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221122204213-20221122230736-wwxctrq.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122230738-8i9wkrm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122230738-8i9wkrm"
+			}
+		},
+		{
+			"ID": "20221122224239-wuxyrkm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221122224239-wuxyrkm",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据库并发的三种场景："
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-szqier9",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-szqier9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-o9fsujf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-o9fsujf",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-3sisre3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-3sisre3",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "读-读"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":不存在任何问题，也不需要并发控制"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-pt47pjg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-pt47pjg",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-42ahwjm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-42ahwjm",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "读-写"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":有线程安全问题，可能会造成事务隔离性问题，可能遇到脏读，幻读，不可重复读"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-jkisyqw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-jkisyqw",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-brj2qg5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-brj2qg5",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "写-写"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":有线程安全问题，可能会存在更新丢失问题，比如第一类更新丢失，第二类更新丢失(后面补充)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122230743-k11iri5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122230743-k11iri5"
+			}
+		},
+		{
+			"ID": "20221122224239-6v3h5zn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-6v3h5zn",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读-写"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-11bh87v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-11bh87v",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多版本并发控制[MVCC]  是一种用来解决读-写冲突的无锁并发控制"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-b1vxliq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-b1vxliq",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为事务分配单向增长的事务ID，为每个修改保存一个版本，版本与事务ID关联，读操作只读该事务开始前的数据库的快照。  所以 MVCC 可以为数据库解决以下问题"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-nycn56j",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-nycn56j",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-767z6jj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-767z6jj",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-fzewf2x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-fzewf2x",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在并发读写数据库时，可以做到在读操作时不用阻塞写操作，写操作也不用阻塞读操作，提高了数据库并发读写的性能"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-ks2kxp4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-ks2kxp4",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-w3dcrqz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-w3dcrqz",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "同时还可以解决脏读，幻读，不可重复读等事务隔离问题，但不能解决更新丢失问题"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-la4tgyk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-la4tgyk",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "理解 MVCC 需要知道三个前提知识："
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-p5i2018",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-p5i2018",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-88uivtd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-88uivtd",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-8nx8nki",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-8nx8nki",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "3个记录隐藏字段"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-loa5snj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-loa5snj",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-8t63c9g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-8t63c9g",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "undo 日志"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-yq9wxqd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-yq9wxqd",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-0l992qh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-0l992qh",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Read View"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-4azofou",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221122224239-4azofou",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "3个记录隐藏列字段"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-xkhqswp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-xkhqswp",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DB_TRX_ID"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ：6 byte，最近修改( 修改/插入  )事务ID，记录创建这条记录/最后一次修改该记录的事务ID"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-jr22wzh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-jr22wzh",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DB_ROLL_PTR"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " : 7 byte，回滚指针，指向这条记录的上一个版本（简单理解成，指向历史版本就行，这些数据一般在 undo log 中）"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-z63fsta",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-z63fsta",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DB_ROW_ID"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " : 6 byte，隐含的自增ID（隐藏主键)，如果数据表没有主键，InnoDB会自动以"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DB_ROW_ID"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "产生一个聚簇索引"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-ictrnwg",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-ictrnwg",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-c29s3i5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-c29s3i5",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-at9f7w5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-at9f7w5",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "补充: "
+								},
+								{
+									"Type": "NodeEmphasis",
+									"Data": "em",
+									"Children": [
+										{
+											"Type": "NodeEmA6kOpenMarker",
+											"Data": "*"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实际还有一个删除flag隐藏字段,既记录被更新或删除并不代表真的删除，而是删除flag变了"
+										},
+										{
+											"Type": "NodeEmA6kCloseMarker",
+											"Data": "*"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122230752-h5qdg74",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122230752-h5qdg74"
+			}
+		},
+		{
+			"ID": "20221122224239-815u5op",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-815u5op",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "假设测试表结构是："
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-nv016ow",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-nv016ow",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table if not exists student(\nname varchar(11) not null, \nage int not null\n);\n\nmysql\u003e insert into student (name, age) values ('张三', 28); \nQuery OK, 1 row affected (0.05 sec)\n\nmysql\u003e select * from student; \n+--------+-----+\n| name   | age | \n+--------+-----+ \n| 张三   | 28  | \n+--------+-----+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-nbr42jh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-nbr42jh",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面描述的意思是：\n![[Pasted image 20221122211724.png]]\n我们目前并不知道创建该记录的事务ID，隐式主键，我们就默认设置成null，1。第一条记录也没有其他版本，我们\n设置回滚指针为null。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-ir37ue8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221122224239-ir37ue8",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "undo 日志"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-k5lgtmb",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-k5lgtmb",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-yvb9nuy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-yvb9nuy",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-cyn4ggs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-cyn4ggs",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "MysQL将来是以服务进程的方式，在内存中运行。我们之前所讲的所有机制:索引，事务，隔离性，日志等，都是在内存中完成的，即在MysQL内部的相关缓冲区中，保存相关数据，完成各种判断操作。然后在合适的时候，将相关数据刷新到磁盘当中的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-pw3ir1q",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-pw3ir1q",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-re1oa93",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-re1oa93",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所以，我们这里理解undo log，简单理解成，就是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "MySQL中的一段内存缓冲区，用来保存日志数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的就行。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-u10a5gc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221122224239-u10a5gc",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "模拟 MVCC"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-14piht9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-14piht9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "现在有一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "事务10"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "(仅仅为了好区分)，对student表中记录进行修改(update):将name(张三)改成name(李四)。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-xhur4p1",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-xhur4p1",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-rw2ikrn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-rw2ikrn",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-oid5fem",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-oid5fem",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "事务10"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ",因为要修改，所以要先给该记录加行锁。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-cc8phi6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-cc8phi6",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-r74mtch",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-r74mtch",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "修改前，现将改行记录拷贝到"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "undo log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中，所以，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "undo log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中就有了一行副本数据.(原理就是写时拷贝)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-n4b54y8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-n4b54y8",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-x526ce9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-x526ce9",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所以现在MySQL中有两行同样的记录。现在修改原始记录中的name，改成'李四'。并且修改原始记录的隐藏字段DB_TRX_ID为当前"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "事务10"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的ID, 我们默认从10开始，之后递增。而原始记录的回滚指针"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DB_ROLL_PTR"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "列,里面写入"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "undo log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中副本数据的地址，从而指向副本记录，既表示我的上一个版本就是它。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-t3u7bn2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-t3u7bn2",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-301r5e1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-301r5e1",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事务10提交，释放锁。\n![[Pasted image 20221122212858.png]]\n备注：此时，最新的记录是’李四‘那条记录。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-xqzu4bk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-xqzu4bk",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "现在又有一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "事务11"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，对student表中记录进行修改(update)：将age(28)改成age(38)。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-4b35ay9",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-4b35ay9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-zw1x77x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-zw1x77x",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-na5mgyl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-na5mgyl",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": " 事务11"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ",因为也要修改，所以要先给该记录加行锁。（该记录是那条？）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-tqdz2um",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-tqdz2um",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-8jlgn41",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-8jlgn41",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "修改前，现将改行记录拷贝到undo log中，所以，undo log中就又有了一行副本数据。此时，新的副本，我们采用头插方式，插入undo log。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-03nkg3p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-03nkg3p",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-mbm5rzu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-mbm5rzu",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "现在修改原始记录中的age，改成 38。并且修改原始记录的隐藏字段 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DB_TRX_ID"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 为当前"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "事务11"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的ID。而原始记录的回滚指针 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DB_ROLL_PTR"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 列，里面写入"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "undo log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中副本数据的地址，从而指向副本记录，既表示我的上一个版本就是它。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-02baslq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-02baslq",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-l8ipy6a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-l8ipy6a",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "事务11"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "提交，释放锁\n![[Pasted image 20221122213218.png]]\n这样，我们就有了一个基于链表记录的历史版本链。所谓的回滚，无非就是用历史数据，覆盖当前数据。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-4bwz555",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-4bwz555",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的一个一个版本，我们可以称之为一个一个的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "快照"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-yb7qu15",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221122224239-yb7qu15",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221122224239-ctzlb30",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-ctzlb30",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "思考一下\n上面是以更新（"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "upadte"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "）主讲的,如果是"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "delete"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "呢？一样的，别忘了，删数据不是清空，而是设置flag为删除即可。也可以形成版本。"
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-oeacqa6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-oeacqa6",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "如果是"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "insert"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "呢？因为"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "insert"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "是插入，也就是之前没有数据，那么"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "insert"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "也就没有历史版本。但是一般为了回滚操作，insert的数据也是要被放入undo log中，如果当前事务commit了，那么这个undo log 的历史insert记录就可以被清空了。"
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-iebx7t3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-iebx7t3",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "总结一下，也就是我们可以理解成，"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "update"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "和"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "delete"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可以形成版本链，"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "insert"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "暂时不考虑。"
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-kk61n1k",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-kk61n1k",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "那么"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "select"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "呢？\n首先，"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "select"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不会对数据做任何修改，所以，为"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "select"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "维护多版本，没有意义。不过，此时有个问题，就是：\nselect读取，是读取最新的版本呢？还是读取历史版本？\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "当前读"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：读取最新的记录，就是当前读。增删改，都叫做当前读，"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "select"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "也有可能当前读，比如：select lock in share mode(共享锁), select for update （这个好理解，我们后面不讨论）\n"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "快照读"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：读取历史版本(一般而言)，就叫做快照读。(这个我们后面重点讨论)\n我们可以看到，在多个事务同时删改查的时候，都是当前读，是要加锁的。那同时有"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "select"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "过来，如果也要读取最新版(当前读)，那么也就需要加锁，这就是串行化。\n但如果是快照读，读取历史版本的话，是不受加锁限制的。也就是可以并行执行！换言之，提高了效率，即MVCC的意义所在。"
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-z2am77q",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-z2am77q",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "那么，"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是什么决定了，select是当前读，还是快照读呢？"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "隔离级别"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "!"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n那为什么要有隔离级别呢？\n事务都是原子的。所以，无论如何，事务总有先有后。"
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-tofqrqw",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-tofqrqw",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "但是经过上面的操作我们发现，事务从begin-\u003eCURD-\u003ecommit，是有一个阶段的。也就是事务有执行前，执行中，执行后的阶段。但，不管怎么启动多个事务，总是有先有后的。"
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-y1ov69h",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-y1ov69h",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "那么多个事务在执行中，CURD操作是会交织在一起的。那么，为了保证事务的“有先有后”，是不是应该让不同的事务看到它该看到的内容，这就是所谓的隔离性与隔离级别要解决的问题。"
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-1oouzkk",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-1oouzkk",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "先来的事务，应不应该看到后来的事务所做的修改呢? 不该。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-atq1uhm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-atq1uhm",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么，如何保证，不同的事务，看到不同的内容呢?也就是如何如何实现隔离级别?"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-e2qhitw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221122224239-e2qhitw",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Read view"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-bjafkn9",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-bjafkn9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-ceowilv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-ceowilv",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-jp3kptw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-jp3kptw",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Read View就是事务进行"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "快照读"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "操作的时候生产的读视图(Read View)"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在该事务执行的快照读的那一刻，会生成数据库系统当前的一个快照，记录并维护系统当前活跃事务的ID(当每个事务开启时，都会被分配一个ID,这个ID是递增的，所以最新的事务，ID值越大)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-25edm36",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-25edm36",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-xnh15d4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-xnh15d4",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Read view在MySQL源码中就是一个类，本质是用来进行可见性判断的。即当我们某个事务执行快照读的时候,对该记录创建一个Read view读视图，把它比作条件,用来判断当前事务能够看到哪个版本的数据，既可能是当前最新的数据，也有可能是该行记录的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "undo log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "里面的某个版本的数据。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-qoaykf0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-qoaykf0",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class ReadView { \n// 省略... \nprivate:\n\t/** 高水位，大于等于这个ID的事务均不可见*/ \n\ttrx_id_t m_low_limit_id\n\n\t/** 低水位：小于这个ID的事务均可见    */ \n\ttrx_id_t m_up_limit_id;\n\n\t/** 创建该    Read View 的事务ID*/ \n\ttrx_id_t m_creator_trx_id;\n\n\t/** 创建视图时的活跃事务id列表*/ \n\tids_t m_ids;\n\n\t/** 配合purge，标识该视图不需要小于m_low_limit_no的UNDO LOG， \n\t* 如果其他视图也不需要，则可以删除小于m_low_limit_no的UNDO LOG*/\n\ttrx_id_t m_low_limit_no; \n\n\t/** 标记视图是否被关闭*/\n\tbool m_closed; \n\n\t// 省略...\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-3tj6fl5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-3tj6fl5",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " 其中最重要的字段"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-e3dslt3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-e3dslt3",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "m_ids;           //一张列表，用来维护Read View生成时刻，系统正活跃的事务ID \nup_limit_id;     //记录m_ids列表中事务ID最小的ID(没有写错)\nlow_limit_id;    //ReadView生成时刻系统尚未分配的下一个事务ID，也就是目前已出现过的事务ID的最大值+1(也没有写错)\ncreator_trx_id   //创建该ReadView的事务ID\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-qxaxwyr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-qxaxwyr",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们在实际读取数据版本链的时候，是能读取到每一个版本对应的事务ID的，即：当前记录的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DB_TRX_ID"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。\n那么，我们现在手里面有的东西就有，当前快照读的 ReadView 和 版本链中的某一个记录的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DB_TRX_ID"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 。\n所以现在的问题就是，当前快照读，应不应该读到当前版本记录。一张图，解决所有问题！\n![[Pasted image 20221122214655.png]]"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-bftt5v5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-bftt5v5",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对应源码策略:\n![[Pasted image 20221122214717.png]]\n如果查到不应该看到当前版本，接下来就是遍历下一个版本，直到符合条件，即可以看到。上面的readview 是当你进行select的时候，会自动形成。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-dtiqolb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 5,
+			"Properties": {
+				"id": "20221122224239-dtiqolb",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "整体流程"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-31w4aa3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-31w4aa3",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "假设当前有条记录\n![[Pasted image 20221122215011.png]]"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-bmy359z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-bmy359z",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务操作：\n![[Pasted image 20221122215035.png]]"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-9un2kk4",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-9un2kk4",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-ygnf0em",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-ygnf0em",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-nbh3pg5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-nbh3pg5",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事务4:修改name(张三)变成name(李四)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-5rv1ogc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-5rv1ogc",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-sg6oto6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-sg6oto6",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当事务2对某行数据执行了"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "快照读"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，数据库为该行事务2生成一个Read view读视图"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-wpsrgv8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-wpsrgv8",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//事务2的    Read View\n\nm_ids;           // 1,3\nup_limit_id;     // 1\nlow_limit_id;    // 4 + 1 = 5，原因：ReadView生成时刻，系统尚未分配的下一个事务ID \ncreator_trx_id   // 2\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-7rdjwp0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-7rdjwp0",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时版本链是：\n![[Pasted image 20221122215351.png]]"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-1jhyas3",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-1jhyas3",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-klk20ez",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-klk20ez",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-acr4j6l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-acr4j6l",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "只有事务4修改过该行记录，并在事务2执行快照读前，就提交了事务。\n![[Pasted image 20221122215405.png]]"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-03gaqew",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-03gaqew",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "我们的事务2在快照读该行记录的时候，就会拿该行记录的 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "DB_TRX_ID"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 去跟 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "up_limit_id"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " , "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "low_limit_id"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "和活\n跃事务ID列表(trx_list) 进行比较，判断当前事务2能看到该记录的版本。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-pcrjfla",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-pcrjfla",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//事务2的    Read View\n\nm_ids;           // 1,3\nup_limit_id;     // 1\nlow_limit_id;    // 4 + 1 = 5，原因：ReadView生成时刻，系统尚未分配的下一个事务ID \ncreator_trx_id   // 2\n\n//事务4提交的记录对应的事务ID \nDB_TRX_ID=4\n\n//比较步骤\nDB_TRX_ID（4）\u003c up_limit_id（1） ? 不小于，下一步 \nDB_TRX_ID（4）\u003e= low_limit_id(5) ? 不大于，下一步\nm_ids.contains(DB_TRX_ID) ? 不包含，说明，事务4不在当前的活跃事务中。 \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-x3qqfbe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-x3qqfbe",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "结论"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n故，事务4的更改，应该看到。\n所以事务2能读到的最新数据记录是事务4所提交的版本，而事务4提交的版本也是全局角度上最新的版本"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-dvt853b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-dvt853b",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "RR 与 RC的本质区别"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-7i7z0x8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-7i7z0x8",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当前读和快照读在RR级别下的区别"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-2haqxc0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-2haqxc0",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面的代码经过测试，是完全没有问题的。"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-axcwmom",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221122224239-axcwmom",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221122224239-7h16zzw",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221122224239-7h16zzw",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "select * from user lock in share mode"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ,以加共享锁方式进行读取，对应的就是当前读。此处只作为测试使用，不重讲。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-3g9ztmq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-3g9ztmq",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "测试表："
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-l9m5l3y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221122224239-l9m5l3y",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "--设置RR模式下测试\nmysql\u003e set global transaction isolation level REPEATABLE READ; \nQuery OK, 0 rows affected (0.00 sec)\n\n--重启终端\n\nmysql\u003e select @@transaction_isolation; \n+-----------------+\n| @@transaction_isolation | \n+-----------------+ \n| REPEATABLE-READ | \n+-----------------+\n1 row in set, 1 warning (0.00 sec) \n\n--依旧用之前的表\ncreate table if not exists account( \nid int primary key,\nname varchar(50) not null default '', \nblance decimal(10,2) not null default 0.0\n)ENGINE=InnoDB DEFAULT CHARSET=UTF8;\n\n--插入一条记录，用来测试\ninsert into user (id, age, name) values (1, 15,'黄蓉'); \nQuery OK, 1 row affected (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-o5cw4fx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-o5cw4fx",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "测试用例1-表1："
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n![[Pasted image 20221122220450.png]]"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-tlfka0e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-tlfka0e",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "测试用例2-表2："
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n![[Pasted image 20221122220524.png]]"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-cxwn85s",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-cxwn85s",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-mpgs1dk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-mpgs1dk",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-441soyh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-441soyh",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用例1与用例2:唯一区别仅仅是表1的事务B在事务A修改age前快照读过一次age数据"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-tmtooy6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-tmtooy6",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-yaaxyol",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-yaaxyol",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "而表2的事务B在事务A修改age前没有进行过快照读。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-nr7c06w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-nr7c06w",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "结论"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-9wko6zf",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-9wko6zf",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-5tcnp4j",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-5tcnp4j",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-6jm003q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-6jm003q",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事务中快照读的结果是非常依赖该事务首次出现快照读的地方，即某个事务中首次出现快照读，决定该事务后续快照读结果的能力"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-1a0h062",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-1a0h062",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-ibbkslh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-ibbkslh",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "delete同样如此"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-02785u7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-02785u7",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "RR 与 RC的本质区别"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-opmnw14",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-opmnw14",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-4bm8oje",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-4bm8oje",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-sq9t5o1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-sq9t5o1",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "正是Read View生成时机的不同，从而造成RC,RR级别下快照读的结果的不同"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-lxzjfec",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-lxzjfec",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-4cfslml",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-4cfslml",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在RR级别下的某个事务的对某条记录的第一次快照读会创建一个快照及Read View, 将当前系统活跃的其他事务记录起来"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-8qanqie",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-8qanqie",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-0gcefzt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-0gcefzt",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此后在调用快照读的时候，还是使用的是同一个Read View，所以只要当前事务在其他事务提交更新之前使用过快照读，那么之后的快照读使用的都是同一个Read View，所以对之后的修改不可见；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-ko9oae2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-ko9oae2",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-bav68hu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-bav68hu",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "即RR级别下，快照读生成Read View时，Read View会记录此时所有其他活动事务的快照，这些事务的修改对于当前事务都是不可见的。而早于Read View创建的事务所做的修改均是可见"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-7rr67gb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-7rr67gb",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-7v0nkx6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-7v0nkx6",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "而在RC级别下的，事务中，每次快照读都会新生成一个快照和Read View, 这就是我们在RC级别下的事务中可以看到别的事务提交的更新的原因"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-vioj90j",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-vioj90j",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-o20hcpz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-o20hcpz",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "总之在RC隔离级别下，是每个快照读都会生成并获取最新的Read View；而在RR隔离级别下，则是同一个事务中的第一个快照读才会创建Read View, 之后的快照读获取的都是同一个Read View。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-9zle4k4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-9zle4k4",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-fp15vcl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-fp15vcl",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "正是RC每次快照读，都会形成Read View，所以，RC才会有不可重复读问题。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-zt7jut5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-zt7jut5",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读-读"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-930pvrm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-930pvrm",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不讨论"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-ig5lxk4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221122224239-ig5lxk4",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "写-写"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-1h4hqd9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-1h4hqd9",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "现阶段，直接理解成都是当前读，当前不做深究"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-grloz9l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-grloz9l",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一致性(Consistency)"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-v34tcmh",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221122224239-v34tcmh",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"ID": "20221122224239-oq7mt0w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-oq7mt0w",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-lmp7ado",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-lmp7ado",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事务执行的结果，必须使数据库从一个一致性状态，变到另一个一致性状态。当数据库只包含事务成功提交的结果时，数据库处于一致性状态。如果系统运行发生中断，某个事务尚未完成而被迫中断，而改未完成的事务对数据库所做的修改已被写入数据库，此时数据库就处于一种不正确（不一致）的状态。因此一致性是通过原子性来保证的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-tkpfi9d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-tkpfi9d",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-gn5tmcr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-gn5tmcr",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "其实一致性和用户的业务逻辑强相关，一般MySQL提供技术支持，但是一致性还是要用户业务逻辑做支撑，也就是，一致性，是由用户决定的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221122224239-jil9m8j",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221122224239-jil9m8j",
+						"updated": "20221122224239"
+					},
+					"Children": [
+						{
+							"ID": "20221122224239-nxbls4s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221122224239-nxbls4s",
+								"updated": "20221122224239"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "而技术上，通过AID保证"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-c3ts665",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221122224239-c3ts665",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "推荐阅读"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-14ozlkn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-14ozlkn",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "https://www.jianshu.com/p/398d788e1083\nhttps://tech.meituan.com/2014/08/20/innodb-lock.html\nhttps://www.cnblogs.com/aspirant/p/9177978.html"
+				}
+			]
+		},
+		{
+			"ID": "20221122224239-ye9kd3u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221122224239-ye9kd3u",
+				"updated": "20221122224239"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "https://blog.csdn.net/SnailMann/article/details/94724197\nhttps://www.cnblogs.com/f-ck-need-u/archive/2018/05/08/9010872.html\nhttps://blog.csdn.net/chenghan_yang/article/details/97630626"
+				}
+			]
+		}
+	]
+}
