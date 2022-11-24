@@ -501,6 +501,437 @@ console.log(arr['hello']);
 `arr['hello']`就是在给`arr`这个对象,**新增了一个属性.属性的名字是hello，属性的值是10**.
 
 
+# 函数
+## 语法格式
+```js
+// 创建函数/函数声明/函数定义 
+function 函数名(形参列表) { 
+    函数体
+    return 返回值; 
+}
+
+// 函数调用
+函数名(实参列表)           // 不考虑返回值 
+返回值 = 函数名(实参列表)   // 考虑返回值
+```
+
+
+- 函数定义并不会执行函数体内容, 必须要调用才会执行. 调用几次就会执行几次.
+```js
+function hello() {
+    console.log("hello"); 
+}
+// 如果不调用函数, 则没有执行打印语句 
+hello();
+```
+
+- 调用函数的时候进入函数内部执行, 函数结束时回到调用位置继续执行. 可以借助调试器来观察. 
+- **函数的定义和调用的先后顺序没有要求**. (这一点和变量不同, 变量必须先定义再使用)
+```js
+// 调用函数
+hello();
+
+// 定义函数
+function hello() {
+    console.log("hello"); 
+}
+```
+
+## 关于参数个数
+实参和形参之间的个数可以不匹配. **但是实际开发一般要求形参和实参个数要匹配** 
+
+```js
+function sum(num1 , num2)
+{
+	return num1+num2;
+}
+```
+
+1) 如果实参个数比形参个数多, 则多出的参数不参与函数运算
+```js
+sum(10 ,20 , 30); //30不参与运算
+```
+
+2) 如果实参个数比形参个数少, 则此时多出来的形参值为 undefined
+```js
+sum(10); // NaN, 相当于 num2 为 undefined.
+```
+
+>JS 的函数传参比较灵活, 这一点和其他语言差别较大. 事实上这种灵活性往往不是好事.
+
+
+## 函数表达式
+另外一种函数的定义方式
+```js
+var add = function() { 
+	var sum = 0;
+    for (var i = 0; i < arguments.length; i++) { 
+        sum += arguments[i];
+    }
+    return sum; 
+}
+console.log(add(10, 20));            // 30
+console.log(add(1, 2, 3, 4));        // 10
+console.log(typeof add);             // function
+```
+
+此时形如   `function() { }` 这样的写法定义了一个匿名函数, 然后将这个匿名函数用一个变量来表示. 后面就可以通过这个 add 变量来调用函数了.
+
+>JS 中函数是一等公民, 可以用变量保存, 也可以作为其他函数的参数或者返回值.
+
+
+## 作用域
+某个标识符名字在代码中的有效范围. 
+
+在 ES6 标准之前, 作用域主要分成两个
+- 全局作用域: 在整个 script 标签中, 或者单独的 js 文件中生效. 
+- 局部作用域/函数作用域: 在函数内部生效.
+
+```js
+// 全局变量
+var num = 10; 
+console.log(num); 
+function test() {
+    // 局部变量
+    var num = 20;
+    console.log(num); 
+}
+
+function test2() { 
+    // 局部变量
+    var num = 30;
+    console.log(num); 
+}
+
+test();
+test2();
+console.log(num);
+```
+
+执行结果
+```
+10
+20
+30
+10
+```
+
+
+创建变量时如果不写 var, 则得到一个全局变量.
+```js
+function test() { 
+	num = 100;
+}
+test();
+console.log(num); 
+
+// 执行结果
+100
+```
+
+另外, 很多语言的局部变量作用域是按照代码块(大括号)来划分的, JS 在 ES6 之前不是这样的.
+```js
+if (1 < 2) { 
+	var a = 10;
+}
+console.log(a);
+```
+
+
+
+## 作用域链
+背景:
+- 函数可以定义在函数内部
+- 内层函数可以访问外层函数的局部变量.
+
+内部函数可以访问外部函数的变量. 采取的是链式查找的方式. 从内到外依次进行查找.
+```js
+
+var num = 1;
+function test1() {
+    var num = 10;
+    function test2() { 
+        var num = 20;
+        console.log(num); 
+    }
+    
+    test2(); 
+}
+test1(); 
+
+// 执行结果
+20
+```
+
+执行 `console.log(num)`的时候, 会现在 **test2** 的局部作用域中查找 **num**. 如果没找到, 则继续去 **test1** 中 
+查找. 如果还没找到, 就去全局作用域查找.
+![[Pasted image 20221123111941.png]]
+
+
+
+
+# 对象
+ 
+## 基本概念
+对象是指一个具体的事物.
+>"电脑" 不是对象, 而是一个泛指的类别. 而 "我的联想笔记本" 就是一个对象.
+
+在 JS 中, 字符串, 数值, 数组, 函数都是对象. 
+
+每个对象中包含若干的属性和方法.
+- 属性: 事物的特征. 
+- 方法: 事物的行为.
+
+>例如, 你有一个女票.
+>她的身高体重三围这些都是属性. 
+>她的唱歌, 跳舞, 暖床都是方法.
+
+对象需要保存的属性有多个, 虽然数组也能用于保存多个数据, 但是不够好.
+>例如表示一个学生信息. (姓名蔡徐坤, 身高 175cm, 体重 170斤) 
+>`var student = ['蔡徐坤', 175, 170];`
+>但是这种情况下到底 175 和 170 谁表示身高, 谁表示体重, 就容易分不清
+
+JavaScript 的对象  和 Java 的对象概念上基本一致. 只是具体的语法表项形式差别较大.
+
+## 对象的创建与使用
+### 使用  字面量  创建对象 （常用）
+使用`{}` 创建对象
+```js
+var a = {};  // 创建了一个空的对象 
+
+var student = {
+    name: '蔡徐坤', 
+    height: 175, 
+    weight: 170,
+    sayHello: function() { 
+        console.log("hello"); 
+    }
+};
+```
+- 使用 { } 创建对象
+- 属性和方法使用**键值对**的形式来组织.
+- 键值对之间使用 `,` 分割. 最后一个属性后面的 , 可有可无 
+- 键和值之间使用 `:` 分割.
+- 方法的值是一个匿名函数.
+
+
+==**使用对象的属性和方法:**==
+```js
+// 1. 使用 . 成员访问运算符来访问属性 `.` 可以理解成 "的" 
+console.log(student.name);
+
+// 2. 使用 [ ] 访问属性, 此时属性需要加上引号 
+console.log(student['height']);
+
+// 3. 调用方法, 别忘记加上 () 
+student.sayHello();
+```
+
+### 使用 new Object 创建对象
+```js
+var student = new Object(); // 和创建数组类似
+
+student.name = "蔡徐坤";
+student.height = 175;
+student['weight'] = 170;
+student.sayHello = function () { 
+	console.log("hello");
+}
+
+console.log(student.name); 
+console.log(student['weight']); 
+student.sayHello();
+```
+注意, 使用 `{}` 创建的对象也可以随时使用   `student.name = "蔡徐坤";` 这样的方式来新增属性.
+
+
+### 使用  构造函数  创建对象
+前面的创建对象方式只能创建一个对象. 而使用构造函数可以很方便  的创建  多个对象. 
+
+例如: 创建几个猫咪对象
+```js
+var mimi = {
+    name: "咪咪",
+    type: "中华田园喵",
+    miao: function () { 
+        console.log("喵"); 
+    }
+};
+
+var xiaohei = {
+    name: "小黑",
+    type: "波斯喵",
+    miao: function () {
+        console.log("猫呜"); 
+    }
+}
+
+var ciqiu = {
+    name: "刺球",
+    type: "金渐层",
+    miao: function () {
+        console.log("咕噜噜"); 
+    }
+}
+```
+此时写起来就比较麻烦. 使用构造函数可以把相同的属性和方法的创建提取出来,  简化开发过程.
+```js
+function 构造函数名(形参) { 
+    this.属性    = 值;
+    this.方法    = function... 
+}
+	
+var obj = new 构造函数名(实参);
+```
+
+注意:
+- 在构造函数内部使用 `this` 关键字来表示当前正在构建的对象. 
+- 构造函数的**函数名首字母**一般是**大写**的.
+- 构造函数不需要 `return`
+- 创建对象的时候必须使用 `new` 关键字.
+
+>this 相当于 "我"
+
+使用构造函数重新创建猫咪对象
+```js
+function Cat(name, type, sound) {
+    this.name = name;
+    this.type = type;
+    this.miao = function () {
+        console.log(sound); // 别忘了作用域的链式访问规则 
+    }
+}
+
+var mimi = new Cat('咪咪', '中华田园喵', '喵');
+var xiaohei = new Cat('小黑', '波斯喵', '猫呜');
+var ciqiu = new Cat('刺球', '金渐层', '咕噜噜');
+
+console.log(mimi); 
+mimi.miao();
+```
+
+
+## 理解 new 关键字
+`new`  的执行过程:
+1. 先在内存中创建一个**空的对象** `{ }`
+2. `this` 指向刚才的空对象(将上一步的对象作为 `this` 的上下文)
+3. 执行构造函数的代码, 给对象创建属性和方法
+4. 返回这个对象 (构造函数本身不需要 `return`, 由 `new` 代劳了)
+
+参看：[new 运算符 - JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
+ 
+
+## JavaScript 的对象和 Java 的对象的区别 
+### JavaScript 没有 "类" 的概念
+- **对象**其实就是 **"属性" + "方法"** .
+- 类相当于把一些具有共性的对象的属性和方法单独提取了出来, 相当于一个 "月饼模子" 
+- 在 JavaScript 中的 "构造函数" 也能起到类似的效果.
+- 而且即使不是用构造函数, 也可以随时的通过 `{}`  的方式指定出一些对象
+>在 ES6 中也引入了 `class` 关键字, 就能按照类似于 Java 的方式创建类和对象了.
+
+### JavaScript 对象不区分 "属性" 和 "方法"
+- JavaScript 中的函数是 "一等公民", 和普通的变量一样. 存储了函数的变量能够通过 ( ) 来进行调用执行.
+
+### JavaScript 对象没有 private / public 等访问控制机制.
+- 对象中的属性都可以被外界随意访问.
+
+###  JavaScript 对象没有 "继承"
+- 继承本质就是 "让两个对象建立关联". 或者说是让一个对象能够重用另一个对象的属性/方法. 
+- JavaScript 中使用 "原型" 机制实现类似的效果.
+
+例如: 创建一个 cat 对象和 dog 对象, 让这两个对象都能使用 animal 对象中的 eat 方法. 
+通过   `__proto__` 属性来建立这种关联关系 (proto 翻译作 "原型")
+![[Pasted image 20221124174127.png]]
+当eat方法被调用的时候，先在自己的方法列表中寻找， 如果找不到，就去找原型中的方法， 如果原型中找不到，  就去原型的原型中去寻找......  最后找到Object那里，  如果还找不到，  那就是未定义了。
+
+![[Pasted image 20221124174258.png]]
+
+ ### JavaScript 没有 "多态"
+- 多态的本质在于 "程序猿不必关注具体的类型, 就能使用其中的某个方法".
+- C++ / Java 等静态类型的语言对于类型的约束和校验比较严格. 因此通过  子类继承父类, 并重写父类的方法的方式  来实现多态的效果.
+- 但是在 JavaScript 中本身就支持动态类型, 程序猿在使用对象的某个方法的时候本身也不需要对对象的类型做出明确区分. 因此并不需要在语法层面上支持多态.
+
+例如:
+在 Java 中已经学过 ArrayList 和 LinkedList. 为了让程序猿使用方便, 往往写作
+`List<String> list = new ArrayList<>()` 
+然后我们可以写一个方法:
+```js
+void add(List<String> list, String s) { 
+	list.add(s);  
+}
+```
+我们不必关注 list 是 ArrayList 还是 LinkedList, 只要是 List 就行. 因为 List 内部带有 add 方法. 
+当我们使用 JavaScript 的代码的时候
+```js
+function add(list, s) { 
+	list.add(s)
+}
+```
+add 对于 list 这个参数的类型本身就没有任何限制. 只需要 list 这个对象有 add 方法即可. 就不必 
+像 Java 那样先继承再重写绕一个圈子.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 引用文章
 [JS中var和let的区别_Mastersheaven的博客-CSDN博客_js let var](https://blog.csdn.net/weixin_43108539/article/details/108514200)
