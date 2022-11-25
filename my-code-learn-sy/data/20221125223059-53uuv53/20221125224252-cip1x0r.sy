@@ -1,0 +1,5792 @@
+{
+	"ID": "20221125224252-cip1x0r",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221125224252-cip1x0r",
+		"title": "WebAPI",
+		"updated": "20221125224829"
+	},
+	"Children": [
+		{
+			"ID": "20221125224254-w0sdezt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-w0sdezt",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "WebAPI 背景知识"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-pyythnz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-pyythnz",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是 WebAPI"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-kx09gos",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-kx09gos",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "前面学习的 JS 分成三个大的部分"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-0y0ug7o",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-0y0ug7o",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-b23lirs",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-b23lirs",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-iwbt0cu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-iwbt0cu",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ECMAScript: 基础语法部分"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-hhmxt4f",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-hhmxt4f",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-n5sjeuv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-n5sjeuv",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DOM API: 操作页面结构"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-1we7sg0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-1we7sg0",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-vrz5g5s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-vrz5g5s",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BOM API: 操作浏览器"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-yoxqkug",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-yoxqkug",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "WebAPI"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就包含了 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "DOM + BOM"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-qx16ayw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-qx16ayw",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个是 W3C 组织规定的. (和制定 ECMAScript 标准的大佬们不是一伙人)."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-jwsq1pd",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-jwsq1pd",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-23nosqv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-23nosqv",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-uw0me8w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-uw0me8w",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "前面学的 JS 基础语法主要学的是 ECMAScript, 这让我们建立基本的编程思维. 相当于练武需要先扎马步."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-kftkc40",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-kftkc40",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-ov6sehs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-ov6sehs",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "但是真正来写一个更加复杂的有交互式的页面, 还需要 WebAPI 的支持. 相当于各种招式."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-e0b3nei",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-e0b3nei",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是 API"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-d5ec5vr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-d5ec5vr",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "API 是一个更广义的概念. 而 WebAPI 是一个更具体的概念, 特指 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "DOM+BOM"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n所谓的 API 本质上就是一些现成的函数/对象, 让程序猿拿来就用, 方便开发."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-dqjnkz8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-dqjnkz8",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-lwmjlgx",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-lwmjlgx",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "相当于一个工具箱. 只不过程序猿用的工具箱数目繁多, 功能复杂."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-61pxpke",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-61pxpke",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "API 参考文档"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-srk4ud0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-srk4ud0",
+				"updated": "20221125224312"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-qvoyqvs",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-qvoyqvs",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-fy75w2u",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-fy75w2u",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "可以在搜索引擎中按照 \"MDN + API 关键字\" 的方式搜索, 也能快速找到需要的 API 文档."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224344-tnn5669",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224344-tnn5669"
+			}
+		},
+		{
+			"ID": "20221125224254-9qo9c0i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-9qo9c0i",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "DOM 基本概念"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-sc3l12t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-sc3l12t",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是 DOM"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-x0zvwrn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-x0zvwrn",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "DOM 全称为 Document Object Model."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-qahd3p8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-qahd3p8",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "W3C 标准给我们提供了一系列的函数, 让我们可以操作:"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-dc5orn2",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-dc5orn2",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-y65fe3p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-y65fe3p",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-4p7u6rs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-4p7u6rs",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "网页内容"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-c9pd2k5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-c9pd2k5",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-bv5gku2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-bv5gku2",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "网页结构"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-zrt24em",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-zrt24em",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-c3bv2o7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-c3bv2o7",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "网页样式"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-gv089vv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-gv089vv",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "DOM 树"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-qjy5912",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-qjy5912",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一个页面的结构是一个树形结构, 称为 DOM 树."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-q8we5oh",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-q8we5oh",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-mjrtlst",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-mjrtlst",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "树形结构在数据结构阶段会介绍. 就可以简单理解成类似于 \"家谱\" 这种结构"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-gyskr61",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-gyskr61",
+				"updated": "20221125224355"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "页面结构形如"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124214802"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124214802-20221125224355-v823q5o.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221125224402-rf8buxf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224402-rf8buxf"
+			}
+		},
+		{
+			"ID": "20221125224254-os6slwc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-os6slwc",
+				"updated": "20221125224408"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "DOM 树结构形如:"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124214830"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124214830-20221125224408-ibzi2pu.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-tcvi34c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-tcvi34c",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "重要概念:"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-hh542r5",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-hh542r5",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-jdhrbm7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-jdhrbm7",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-9pm5eqc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-9pm5eqc",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "文档: 一个页面就是一个  文档, 使用 document 表示."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-f18n65n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-f18n65n",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-b1ts7y2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-b1ts7y2",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "元素: 页面中所有的标签都称为  元素. 使用 element 表示."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-a24g1gc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-a24g1gc",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-b2emxvk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-b2emxvk",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "节点: 网页中所有的内容都可以称为  节点(标签节点, 注释节点, 文本节点, 属性节点等). 使用 node表示."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-4zz8u5v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-4zz8u5v",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这些文档等概念在 JS 代码中就对应一个个的对象."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-38a21qz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-38a21qz",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-i1mhbru",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-i1mhbru",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "所以才叫 \"文档对象模型\" ."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224415-gcfmd5q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224415-gcfmd5q"
+			}
+		},
+		{
+			"ID": "20221125224254-gqoxszs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-gqoxszs",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取元素"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-fg25ph3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-fg25ph3",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这部分工作类似于 CSS 选择器的功能."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-80q07rf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-80q07rf",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "querySelector"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-7pe971g",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-7pe971g",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-plezt3i",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-plezt3i",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "这个是 HTML5 新增的, IE9 及以上版本才能使用."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-2x6chu0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-2x6chu0",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "前面的几种方式获取元素的时候都比较麻烦. 而使用 querySelector 能够完全复用前面学过的 CSS 选择\n器知识, 达到更快捷更精准的方式获取到元素对象."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-dtdg2iq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-dtdg2iq",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "var element = document.querySelector(selectors);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-kv5bgcv",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-kv5bgcv",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-doj86kh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-doj86kh",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-gz4g3hi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-gz4g3hi",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "selectors 包含一个或多个要匹配的选择器的 DOM字符串 "
+								},
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "DOMString"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 。  该字符串必须是有效的CSS选择器字符串；如果不是，则引发 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SYNTAX_ERR"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 异常"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-6hslb4v",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-6hslb4v",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-9bslssv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-9bslssv",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "表示文档中与指定的一组CSS选择器匹配的第一个元素的 html元素Element"
+								},
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Element"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API/Element"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-p43bc9l",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-p43bc9l",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-3k7ybws",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-3k7ybws",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果您需要与指定选择器匹配的所有元素的列表，则应该使用 "
+								},
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "querySelectorAll"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-rf1fbq5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-rf1fbq5",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-crc6gi8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-crc6gi8",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-59xxuja",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-59xxuja",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-92yehxy",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-92yehxy",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "正因为参数是选择器, 所以一定要通过特殊符号指定是哪种选择器.\n例如 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": ".box"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 是类选择器, "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "#star"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 是 id 选择器  等."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-el0dxzi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-el0dxzi",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"box\"\u003eabc\u003c/div\u003e \n\u003cdiv id=\"id\"\u003edef\u003c/div\u003e\n\u003ch3\u003e\u003cspan\u003e\u003cinput type=\"text\"\u003e\u003c/span\u003e\u003c/h3\u003e \n\n\u003cscript\u003e\n    var elem1 = document.querySelector('.box'); \n    console.log(elem1);\n    var elem2 = document.querySelector('#id'); \n    console.log(elem2);\n    var elem3 = document.querySelector('h3 span input'); \n    console.log(elem3);\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224425-ihewm4s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224425-ihewm4s"
+			}
+		},
+		{
+			"ID": "20221125224254-kp9yfta",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-kp9yfta",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "querySelectorAll"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-xwtve28",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-xwtve28",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "querySelectorAll"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的用法和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "querySelector"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类似,不过是一个数组, 存放所有的我们指定的元素。"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-hq9z128",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-hq9z128",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"box\"\u003eabc\u003c/div\u003e \n\u003cdiv id=\"id\"\u003edef\u003c/div\u003e\n\u003cscript\u003e\n    var elems = document.querySelectorAll('div'); \n\tconsole.log(elems);\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-nxzns1i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-nxzns1i",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事件初识"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-xwwm3ze",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-xwwm3ze",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本概念"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-08dfv1v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-08dfv1v",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JS 要构建动态页面, 就需要感知到用户的行为."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-6c9xsar",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-6c9xsar",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用户对于页面的一些操作(点击, 选择, 修改等) 操作都会在浏览器中产生一个个事件, 被 JS 获取到, 从而进行更复杂的交互操作."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-tl90e48",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-tl90e48",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-d7dsowf",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-d7dsowf",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "浏览器就是一个哨兵, 在侦查敌情(用户行为). 一旦用户有反应(触发具体动作), 哨兵就会点燃烽火\n台的狼烟(事件), 后方就可以根据狼烟来决定下一步的对敌策略."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-g8jej26",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-g8jej26",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事件三要素"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-01yvkj7",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221125224254-01yvkj7",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-ljayym8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221125224254-ljayym8",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-0lj4786",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-0lj4786",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事件源: 哪个元素触发的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-28951we",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221125224254-28951we",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-6rouxs6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-6rouxs6",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事件类型: 是点击, 选中, 还是修改?"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-6mkle24",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221125224254-6mkle24",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-lsxhwzo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-lsxhwzo",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事件处理程序: 进一步如何处理. 往往是一个回调函数."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-j3wumph",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-j3wumph",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "简单示例"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-p646pqf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-p646pqf",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cbutton id=\"btn\"\u003e点我一下\u003c/button\u003e \n\u003cscript\u003e\n    var btn = document.getElementById('btn'); \n    btn.onclick = function () {\n        alert(\"hello world\"); \n    }\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-rr7pqnx",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-rr7pqnx",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-csn6dqu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-csn6dqu",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-icb30kq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-icb30kq",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "btn 按钮就是事件源."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-u1pmguz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-u1pmguz",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-74bdekg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-74bdekg",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "点击就是事件类型"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-42zcsf9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-42zcsf9",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-wfv2msb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-wfv2msb",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "function 这个匿名函数就是事件处理程序"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-4c2vtzi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-4c2vtzi",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-vn51ckr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-vn51ckr",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "其中   "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "btn.onclick = function()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 这个操作称为  注册事件/绑定事件\n注意: 这个匿名函数相当于一个回调函数, 这个函数不需要程序猿主动来调用, 而是交给浏览器, 由浏览器自动在合适的时机(触发点击操作时) 进行调用."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-1ea4huu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-1ea4huu",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "操作元素"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-mfbdyqw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-mfbdyqw",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取/修改元素内容"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-quu7fii",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-quu7fii",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "innerText"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-k81rwa3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-k81rwa3",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Element.innerText"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 属性表示一个节点及其后代的“渲染”文本内容"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-w6583qf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-w6583qf",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 读操作\nvar renderedText = HTMLElement.innerText; \n\n// 写操作\nHTMLElement.innerText = string;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-pcmptjc",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-pcmptjc",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-0bgoc0l",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-0bgoc0l",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "不识别 html 标签. 是非标准的(IE发起的). 读取结果不保留html源码中的  换行  和  空格."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-pmeufpp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-pmeufpp",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv\u003e\n    \u003cspan\u003ehello world\u003c/span\u003e \n    \u003cspan\u003ehello world\u003c/span\u003e \n\u003c/div\u003e\n\u003cscript\u003e\n    var div = document.querySelector('div'); \n    // 读取 div 内部内容\n    console.log(div.innerText);\n    // 修改 div 内部内容, 界面上就会同步修改\n    div.innerText = 'hello js \u003cspan\u003ehello js\u003c/span\u003e'; \n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-1gai1q4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-1gai1q4",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到, 通过 innerText 无法获取到 div 内部的 html 结构, 只能得到文本内容.\n修改页面的时候也会把 span 标签当成文本进行设置."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-hdla8te",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-hdla8te",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "innerHTML"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-bucpfjz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-bucpfjz",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Element.innerHTML"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 属性设置或获取HTML语法表示的元素的后代."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-7krti54",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-7krti54",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 读操作\nvar content = element.innerHTML; \n// 写操作\nelement.innerHTML = htmlString; \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-quz3sl7",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221125224254-quz3sl7",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-tsdnagb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221125224254-tsdnagb",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-2urydhp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-2urydhp",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "先获取到事件源的元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-0ahfl1h",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221125224254-0ahfl1h",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-1nzizm3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-1nzizm3",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注册事件"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-958i1fy",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-958i1fy",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-hzej4nk",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-hzej4nk",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "识别 html 标签. W3C 标准的. 读取结果保留html源码中的 换行 和 空格."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-xi78h04",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-xi78h04",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv\u003e\n    \u003cspan\u003ehello world\u003c/span\u003e \n    \u003cspan\u003ehello world\u003c/span\u003e \n\u003c/div\u003e\n\n\u003cscript\u003e\n    var div = document.querySelector('div'); \n    // 读取页面内容\n    console.log(div.innerHTML); \n    // 修改页面内容\n    div.innerHTML = '\u003cspan\u003ehello js\u003c/span\u003e' \n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-q2txhnb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-q2txhnb",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到 innerHTML 不光能获取到页面的 html 结构, 同时也能修改结构. 并且获取到的内容保留的空\n格和换行."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-9fy2cmz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-9fy2cmz",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-zjmkq64",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-zjmkq64",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "innerHTML 用的场景比 innerText 更多."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224524-bj9zlo9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224524-bj9zlo9"
+			}
+		},
+		{
+			"ID": "20221125224254-rgbop5z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-rgbop5z",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取/修改元素属性"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-mpnbibh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-mpnbibh",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以通过 Element 对象的属性来直接修改, 就能影响到页面显示效果."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-sh5mzd3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-sh5mzd3",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cimg src=\"rose.jpg\" alt=\"这是一朵花\" title=\"玫瑰花\"\u003e \n\u003cscript\u003e\n    var img = document.querySelector('img'); \n    console.dir(img);\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-m0p8ws8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-m0p8ws8",
+				"updated": "20221125224534"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时可以看到img这个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Element"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "对象中有很多属性\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124224329"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124224329-20221125224534-5fthmty.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221125224544-ewcyp0w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224544-ewcyp0w"
+			}
+		},
+		{
+			"ID": "20221125224254-4f9k5lt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-4f9k5lt",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们可以在代码中直接通过这些属性来获取属性的值."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-7b9d6ij",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-7b9d6ij",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cimg src=\"rose.jpg\" alt=\"这是一朵花\" title=\"玫瑰花\"\u003e \n\u003cscript\u003e\n    var img = document.querySelector('img'); \n    // console.dir(img);\n    console.log(img.src);\n    console.log(img.title);\n    console.log(img.alt); \n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-tkm6k2n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-tkm6k2n",
+				"updated": "20221125224552"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124224358"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124224358-20221125224552-ik4t4h6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224554-bkx6hk6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224554-bkx6hk6"
+			}
+		},
+		{
+			"ID": "20221125224254-uhh18tr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-uhh18tr",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还可以直接修改属性"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-1s5h579",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-1s5h579",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cimg src=\"rose.jpg\" alt=\"这是一朵花\" title=\"玫瑰花\"\u003e \n\u003cscript\u003e\n    var img = document.querySelector('img'); \n    img.onclick = function () {\n        if (img.src.lastIndexOf('rose.jpg') !== -1) { \n            img.src = './rose2.png';\n        } else {\n            img.src = './rose.jpg'; \n        }\n    }\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-02fmwfx",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-02fmwfx",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-aujypvp",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-aujypvp",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "此时点击图片就可以切换图片显示状态. (需要提前把两个图片准备好)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-6n5pkt0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-6n5pkt0",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取/修改表单元素属性"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-002jhlu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-002jhlu",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "表单(主要是指 input 标签)的以下属性都可以通过 DOM 来修改"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-5b4m9pj",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-5b4m9pj",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-zkf6i9j",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-zkf6i9j",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-eim3920",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-eim3920",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "value: input 的值."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-kejhyod",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-kejhyod",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-op3rrqh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-op3rrqh",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "disabled: 禁用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-3fust75",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-3fust75",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-2tuno80",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-2tuno80",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "checked: 复选框会使用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-g5kjky8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-g5kjky8",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-jzkt41q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-jzkt41q",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "selected: 下拉框会使用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-edgnnd3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-edgnnd3",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-3ymyom4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-3ymyom4",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "type: input 的类型(文本, 密码, 按钮, 文件等)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224604-0e3hyyx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224604-0e3hyyx"
+			}
+		},
+		{
+			"ID": "20221125224254-3e3cyck",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-3e3cyck",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码示例:"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 切换按钮的文本."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-9kr3mc0",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-9kr3mc0",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-xqdtzu6",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-xqdtzu6",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "假设这是个播放按钮, 在 \"播放\" - \"暂停\" 之间切换."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-yuy35y2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-yuy35y2",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cinput type=\"button\" value=\"播放\"\u003e \n\u003cscript\u003e\n    var btn = document.querySelector('input'); \n    btn.onclick = function () {\n        if (btn.value === '播放') { \n            btn.value = '暂停'; \n        } else {\n            btn.value = '播放'; \n        }\n    }\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224600-mrpsntp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224600-mrpsntp"
+			}
+		},
+		{
+			"ID": "20221125224600-00qh3wn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224600-00qh3wn"
+			}
+		},
+		{
+			"ID": "20221125224601-cehtsx4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224601-cehtsx4"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码示例"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 点击计数"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-c714fhs",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-c714fhs",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-9kby77i",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-9kby77i",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "使用一个输入框输入初始值(整数). 每次点击按钮, 值 + 1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-5tejrlt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-5tejrlt",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cinput type=\"text\" id=\"text\" value=\"0\"\u003e\n\u003cinput type=\"button\" id=\"btn\" value='点我+1'\u003e \n\n\u003cscript\u003e\n    var text = document.querySelector('#text'); \n    var btn = document.querySelector('#btn');\n    btn.onclick = function () { \n        var num = +text.value; \n        console.log(num);\n        num++;\n        text.value = num; \n    }\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-6r6592s",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-6r6592s",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-f2n0d4p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-f2n0d4p",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-c3365rq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-c3365rq",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "input 具有一个重要的属性 value, 这个 value 决定了表单元素的内容"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-txkrc3w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-txkrc3w",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-k7sbjcl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-k7sbjcl",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果是输入框, value 表示输入框的内容, 修改这个值会影响到界面显式; 在界面上修改这个值也会影响到代码中的属性"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-3hf3fto",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-3hf3fto",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-5yi9aqd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-5yi9aqd",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果是按钮, value 表示按钮的内容. 可以通过这个来实现按钮中文本的替换"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224619-pajkynt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224619-pajkynt"
+			}
+		},
+		{
+			"ID": "20221125224620-v02jq05",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224620-v02jq05"
+			}
+		},
+		{
+			"ID": "20221125224254-u6m6mgv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-u6m6mgv",
+				"updated": "20221125224618"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码示例"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 全选/取消全选按钮\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124225406"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124225406-20221125224618-k3vxstt.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-idxzlky",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221125224254-idxzlky",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-zpely2x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221125224254-zpely2x",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-ukmqnvp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-ukmqnvp",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "点击全选按钮, 则选中所有选项"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-ji5wao4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221125224254-ji5wao4",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-24ecsvo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-24ecsvo",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "只要某个选项取消, 则自动取消全选按钮的勾选状态."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-90esnjo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-90esnjo",
+				"updated": "20221125224634"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cinput type=\"checkbox\" id=\"all\"\u003e我全都要    \u003cbr\u003e \n\u003cinput type=\"checkbox\" class=\"girl\"\u003e貂蝉    \u003cbr\u003e \n\u003cinput type=\"checkbox\" class=\"girl\"\u003e小乔    \u003cbr\u003e \n\u003cinput type=\"checkbox\" class=\"girl\"\u003e安琪拉    \u003cbr\u003e \n\u003cinput type=\"checkbox\" class=\"girl\"\u003e妲己    \u003cbr\u003e\n\n\u003cscript\u003e\n    // 1. 获取到元素\n    var all = document.querySelector('#all');\n    var girls = document.querySelectorAll('.girl');\n     \n    // 2. 给 all 注册点击事件, 选中/取消所有选项\n    all.onclick = function () {\n        for (var i = 0; i \u003c girls.length; i++) { \n            girls[i].checked = all.checked;\n        } \n    }\n    \n    // 3. 给 girl 注册点击事件\n    for (var i = 0; i \u003c girls.length; i++) { \n        girls[i].onclick = function () {\n            // 检测当前是不是所有的 girl 都被选中了. \n            all.checked = checkGirls(girls); \n        }\n    }\n    \n    // 4. 实现 checkGirls\n    function checkGirls(girls) {\n        for (var i = 0; i \u003c girls.length; i++) { \n            if (!girls[i].checked) {\n                // 只要一个 girl 没被选中, 就认为结果是 false(找到了反例) \n                return false;\n            } \n        }\n        // 所有 girl 中都没找到反例, 结果就是全选中 \n        return true;\n    }\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-uo2lyyw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-uo2lyyw",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取/修改样式属性"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-4g5ldt5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-4g5ldt5",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "CSS 中指定给元素的属性, 都可以通过 JS 来修改."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-a6gryll",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-a6gryll",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "行内样式操作"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-q89mbzp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-q89mbzp",
+				"updated": "20221125224647"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "element.style.[属性名] = [属性值]; \nelement.style.cssText = [属性名+属性值];\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-ku5egty",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-ku5egty",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\"行内样式\", 通过 style 直接在标签上指定的样式. 优先级很高.\n适用于改的样式少的情况"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-vucaxo2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-vucaxo2",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码示例"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 点击文字则放大字体."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-anqxx81",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-anqxx81",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-80gnt5l",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-80gnt5l",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "style 中的属性都是使用  驼峰命名  的方式和  CSS 属性对应的.\n例如: "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "font-size"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " =\u003e"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "fontSize"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ", "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "background-color"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " =\u003e "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "backgroundColor"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "  等\n这种方式修改只影响到特定样式, 其他内联样式的值不变."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-dedje8z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-dedje8z",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv style=\"font-size: 20px; font-weight: 700;\"\u003e \n    哈哈\n\u003c/div\u003e \n\u003cscript\u003e\n    var div = document.querySelector('div'); \n    div.onclick = function () {\n        var curFontSize = parseInt(this.style.fontSize); \n        curFontSize += 10;\n        this.style.fontSize = curFontSize + \"px\"; \n    }\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224656-lbb0vte",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224656-lbb0vte"
+			}
+		},
+		{
+			"ID": "20221125224254-tp76kp9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-tp76kp9",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类名样式操作"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-u21t6h7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-u21t6h7",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "element.className = [CSS 类名];\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-0idq30d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-0idq30d",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "修改元素的 CSS 类名. 适用于要修改的样式很多的情况."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-6vde53z",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-6vde53z",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-dmtoaln",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-dmtoaln",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "由于  class   是 JS 的保留字, 所以名字叫做  className"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224714-em8yoal",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224714-em8yoal"
+			}
+		},
+		{
+			"ID": "20221125224715-bruf5tf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224715-bruf5tf"
+			}
+		},
+		{
+			"ID": "20221125224254-asrwmp2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-asrwmp2",
+				"updated": "20221125224705"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码示例"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 开启夜间模式\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124230056"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124230056-20221125224705-vf461z5.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-0okjel5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-0okjel5",
+				"updated": "20221125224709"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124230106"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124230106-20221125224709-dzwcnhf.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-ki9wn8x",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-ki9wn8x",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-9uerz98",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-9uerz98",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-xg06uoe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-xg06uoe",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "点击页面切换到夜间模式(背景变成黑色)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-ofvd93u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-ofvd93u",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-eutjoxo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-eutjoxo",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "再次点击恢复日间模式(背景变成白色)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-rfkdmzs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-rfkdmzs",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"container light\"\u003e \n    这是一大段话. \u003cbr\u003e\n   这是一大段话. \u003cbr\u003e \n   这是一大段话. \u003cbr\u003e \n   这是一大段话. \u003cbr\u003e \n\u003c/div\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-9ax7hx7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-9ax7hx7",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Nz"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "* {\n    margin: 0; \n    padding: 0; \n}\n\nhtml, \nbody {\n    width: 100%; \n    height: 100%; \n}\n\n.container {\n    width: 100%; \n    height: 100%;\n}\n\n.light {\n    background-color: #f3f3f3; \n    color: #333;\n}\n\n.dark {\n    background-color: #333; \n    color: #f3f3f3;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-hjqg1x2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-hjqg1x2",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "var div = document.querySelector('div'); \ndiv.onclick = function () {\n    console.log(div.className);\n    if (div.className.indexOf('light') != -1) {  //indexOF方法返回-1表示找不到\n        div.className = 'container dark';\n    } else {\n        div.className = 'container light'; \n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224725-ygqrs85",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224725-ygqrs85"
+			}
+		},
+		{
+			"ID": "20221125224254-r2p1cle",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-r2p1cle",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "操作节点"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-8n8a4sn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-8n8a4sn",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "新增节点"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-cqvx97k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-cqvx97k",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "分成两个步骤"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-i0ly5x2",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221125224254-i0ly5x2",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-qpm2hlu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221125224254-qpm2hlu",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-uqlv14y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-uqlv14y",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建元素节点"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-apmq5cq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221125224254-apmq5cq",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-ac4gosv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-ac4gosv",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "把元素节点插入到 dom 树中."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-h0gu8cd",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-h0gu8cd",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-nld6ued",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-nld6ued",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "第一步相当于生了个娃, 第二步相当于给娃上户口."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224730-xiwe8fi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224730-xiwe8fi"
+			}
+		},
+		{
+			"ID": "20221125224254-t772rnq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221125224254-t772rnq",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1. 创建元素节点"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-kkyzr2z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-kkyzr2z",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 createElement 方法来创建一个元素. options 参数暂不关注."
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-wf5a4tq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-wf5a4tq",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "var element = document.createElement(tagName[, options]);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-65g3rby",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-65g3rby",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码示例:"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-a8wp3b0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-a8wp3b0",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"container\"\u003e \n\n\u003c/div\u003e\n\n\u003cscript\u003e\n    var div = document.createElement('div'); \n    div.id = 'mydiv';\n    div.className = 'box'; \n\tdiv.innerHTML = 'hehe';\n    console.log(div); \n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-gzpwyr1",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-gzpwyr1",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-6pz88mv",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125224254-6pz88mv",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "上面介绍的只是创建元素节点, 还可以使用"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-q9mpyr7",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221125224254-q9mpyr7",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-uqo0o29",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-uqo0o29",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-550ligx",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-550ligx",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "createTextNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 创建文本节点"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-dnfleov",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-dnfleov",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-nwav36v",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-nwav36v",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "createComment"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 创建注释节点"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-e7o31vc",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-e7o31vc",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-rp5nt2l",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-rp5nt2l",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "createAttribute"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 创建属性节点\n我们以 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "createElement"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 为主即可."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224737-2m7pbk2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224737-2m7pbk2"
+			}
+		},
+		{
+			"ID": "20221125224254-ghsyo7q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221125224254-ghsyo7q",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2. 插入节点到 dom 树中"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-hj8lwlr",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221125224254-hj8lwlr",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-g7c8acs",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221125224254-g7c8acs",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-k2inroy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-k2inroy",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "使用 appendChild 将节点插入到指定节点的最后一个孩子之后"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-ochj2v7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-ochj2v7",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "element.appendChild(aChild)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-c9qg489",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-c9qg489",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"container\"\u003e \n\n\u003c/div\u003e\n\n\u003cscript\u003e\n    var div = document.createElement('div');\n    div.id = 'mydiv';\n    div.className = 'box';\n    div.innerHTML = 'hehe';\n    \n    var container = document.querySelector('.container'); \n    container.appendChild(div);\n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-qd1ppp8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-qd1ppp8",
+				"updated": "20221125224745"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221125111347"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221125111347-20221125224745-e3qqxpn.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224748-dal2uob",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224748-dal2uob",
+				"updated": "20221125224749"
+			}
+		},
+		{
+			"ID": "20221125224254-ib3mb6x",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221125224254-ib3mb6x",
+				"updated": "20221125224754"
+			},
+			"Children": [
+				{
+					"ID": "20221125224754-9dby6nn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221125224754-9dby6nn",
+						"updated": "20221125224754"
+					},
+					"Children": [
+						{
+							"ID": "20221125224754-hnatcyj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224754-hnatcyj",
+								"updated": "20221125224754"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "使用 insertBefore 将节点插入到指定节点之前"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-t8u2dh0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-t8u2dh0",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "var insertedNode = parentNode.insertBefore(newNode , refenceNode);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-oqtpaff",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-oqtpaff",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-64h6hja",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221125224254-64h6hja",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-sco9jjf",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-sco9jjf",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-lkwzf2s",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-lkwzf2s",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "insertedNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": ":被插入节点(newNode)"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-n7ys1v0",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-n7ys1v0",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-w27itgr",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-w27itgr",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "parentNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": ":新插入节点的父节点newNode用于插入的节点"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-62mbtbm",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-62mbtbm",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-j94o7my",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-j94o7my",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "referenceNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " : "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "newNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "将要插在这个节点之前\n如果"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "referenceNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "为"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "null"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "则"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "newNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "将被插入到子节点的末尾.\n注意: "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "referenceNode"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "引用节点不是可选参数."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-w0de48p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-w0de48p",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"container\"\u003e \n    \u003cdiv\u003e11\u003c/div\u003e\n    \u003cdiv\u003e22\u003c/div\u003e \n    \u003cdiv\u003e33\u003c/div\u003e \n    \u003cdiv\u003e44\u003c/div\u003e \n\u003c/div\u003e\n\n\u003cscript\u003e\n        var newdiv = document.createElement('div');\n        newdiv.innerHTML = '这是一个新节点';\n        var container = document.querySelector('.container');\n        console.log(container.children);\n        container.insertBefore(newdiv, container.children[0]);\n    \u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-q63bixb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-q63bixb",
+				"updated": "20221125224805"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221125112946"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221125112946-20221125224805-oqds5ht.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-emic36b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-emic36b",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意1:  如果针对一个节点插入两次, 则只有最后一次生效(相当于把元素移动了)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-4iskx4g",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-4iskx4g",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"container\"\u003e \n    \u003cdiv\u003e11\u003c/div\u003e\n    \u003cdiv\u003e22\u003c/div\u003e \n    \u003cdiv\u003e33\u003c/div\u003e \n    \u003cdiv\u003e44\u003c/div\u003e \n\u003c/div\u003e\n\u003cscript\u003e\n    var newDiv = document.createElement('div'); \n    newDiv.innerHTML = '我是新的节点';\n    \n    var container = document.querySelector('.container'); \n    console.log(container.children);\n    // 此处的 children 里有 4 个元素\n    container.insertBefore(newDiv, container.children[0]);\n    \n    // 此处的 children 里有 5 个元素(上面新插了一个), 0 号元素是    新节点, \n    // 1 号元素是 11, 2号节点是 22, 所以是插入到 22 之前.\n    container.insertBefore(newDiv, container.children[2]); \n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-nvd24en",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-nvd24en",
+				"updated": "20221125224812"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221125113326"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221125113326-20221125224812-9ymmaw3.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-grlnrir",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-grlnrir",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意2: 一旦一个节点插入完毕, 再针对刚刚的节点对象进行修改, 能够同步影响到 DOM 树中的内容."
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-70aijy3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-70aijy3",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdiv class=\"container\"\u003e \n    \u003cdiv\u003e11\u003c/div\u003e\n    \u003cdiv\u003e22\u003c/div\u003e \n    \u003cdiv\u003e33\u003c/div\u003e \n    \u003cdiv\u003e44\u003c/div\u003e \n\u003c/div\u003e\n\u003cscript\u003e\n    var newDiv = document.createElement('div'); \n    newDiv.innerHTML = '我是新的节点';\n     \n    var container = document.querySelector('.container'); \n    console.log(container.children);\n    container.insertBefore(newDiv, container.children[0]);\n    // 插入完毕后再次修改 newDiv 的内容 \n    newDiv.innerHTML = '我是新节点2'; \n\u003c/script\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-1cf25n5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-1cf25n5",
+				"updated": "20221125224819"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221125113554"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221125113554-20221125224819-vip6smg.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224821-hmsbcjl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224821-hmsbcjl"
+			}
+		},
+		{
+			"ID": "20221125224254-6iasjbt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221125224254-6iasjbt",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "删除节点"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-bu06vri",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-bu06vri",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "removeChild"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 删除子节点"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-onjr8wi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-onjr8wi",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "oldChild = element.removeChild(child);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-u6ifvi1",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125224254-u6ifvi1",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125224254-szrlp52",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221125224254-szrlp52",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-ppzt7vx",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-ppzt7vx",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-zq8i4oy",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-zq8i4oy",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "child"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 为待删除节点"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-mazpfem",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-mazpfem",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-m9w4inh",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-m9w4inh",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "element"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 为 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "child"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 的父节点"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-5vaqqsd",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-5vaqqsd",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-1eq1yqg",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-1eq1yqg",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "返回值为该被删除节点"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-tzexagx",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-tzexagx",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-fzavgyb",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-fzavgyb",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "被删除节点只是从 dom 树被删除了, 但是仍然在内存中, 可以随时加入到 dom 树的其他位置."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221125224254-timwoyb",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221125224254-timwoyb",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"ID": "20221125224254-bfrr0iv",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221125224254-bfrr0iv",
+										"updated": "20221125224254"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "如果上例中的 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "child"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "节点  不是"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "element"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "节点的子节点,则该方法会抛出异常."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-u5ae1ud",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-u5ae1ud",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码案例: 猜数字"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-7au4x6s",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-7au4x6s",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "预期效果"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-ntx6gyu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-ntx6gyu",
+				"updated": "20221125224829"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221125120828"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221125120828-20221125224829-wy68jdu.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-uj40x4o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-uj40x4o",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码实现"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-hhzdhyr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-hhzdhyr",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\n    \u003cmeta charset=\"UTF-8\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003ctitle\u003e猜数字游戏\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n    \u003cbutton id=\"resetBtn\"\u003e重新开始一局游戏\u003c/button\u003e\u003cbr\u003e\n    \u003cspan\u003e要猜的数字: \u003c/span\u003e \n    \u003cinput type=\"text\"\u003e\n    \u003cbutton id=\"guessBtn\"\u003e猜\u003c/button\u003e\u003cbr\u003e\n    \u003cspan\u003e结果: \u003c/span\u003e\u003cspan id=\"result\"\u003e\u003c/span\u003e\u003cbr\u003e\n    \u003cspan\u003e已经猜的次数: \u003c/span\u003e\u003cspan id=\"guessCount\"\u003e0\u003c/span\u003e\n\n    \u003cscript\u003e\n        // 1. 先把上面需要用到的元素都拿到. \n        let resetBtn = document.querySelector('#resetBtn');\n        let input = document.querySelector('input');\n        let guessBtn = document.querySelector('#guessBtn');\n        let resultSpan = document.querySelector('#result');\n        let guessCountSpan = document.querySelector('#guessCount');\n\n        // 2. 生成一个 1-100 的随机整数. \n        let toGuess = Math.floor(Math.random() * 100) + 1; \n        console.log(toGuess);\n\n        // 3. 实现点击 猜 按钮的逻辑. \n        guessBtn.onclick = function() {\n            // 1. 读取到 input 中输入的内容, 并转成整数. \n            if (input.value == '') {\n                return;\n            }\n            let curNum = parseInt(input.value);\n            // 2. 判定大小关系, 并给出提示. \n            if (curNum \u003c toGuess) {\n                resultSpan.innerHTML = '低了'\n                resultSpan.style.color = 'red';\n            } else if (curNum \u003e toGuess) {\n                resultSpan.innerHTML = '高了';\n                resultSpan.style.color = 'red';\n            } else {\n                resultSpan.innerHTML = '猜对了!';\n                resultSpan.style.color = 'green';\n            }\n            // 3. 更新猜的次数. \n            let guessCount = parseInt(guessCountSpan.innerHTML);\n            guessCountSpan.innerHTML = guessCount + 1;\n        }\n\n        // 4. 实现 reset 操作的逻辑(开始新游戏)\n        resetBtn.onclick = function() {\n            // 让页面刷新即可~\n            // location 是和 document 并列关系的对象. \n            // location 用来控制页面的链接/地址. 通过 reload 操作就可以刷新页面. \n            location.reload();\n        }\n\n    \u003c/script\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-w8ms0ht",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125224254-w8ms0ht",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码案例: 表白墙"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-a7e5kxa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-a7e5kxa",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "预期效果"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-oh9vssn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125224254-oh9vssn",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码实现"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-uvk8i9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125224254-uvk8i9b",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一些值得学习的CSS"
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-o7tdv8p",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125224254-o7tdv8p",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"ID": "20221125224254-vsafuvk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-vsafuvk",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-18u4hn1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-18u4hn1",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "align-items - CSS（层叠样式表） | MDN (mozilla.org)"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-nqtr45o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-nqtr45o",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-xc92y80",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-xc92y80",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "display: flex - CSS（层叠样式表） | MDN (mozilla.org)"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/display"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125224254-bmqxhlx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125224254-bmqxhlx",
+						"updated": "20221125224254"
+					},
+					"Children": [
+						{
+							"ID": "20221125224254-bbezk93",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125224254-bbezk93",
+								"updated": "20221125224254"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "justify-content - CSS（层叠样式表） | MDN (mozilla.org)"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125224254-l4zooz1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125224254-l4zooz1",
+				"updated": "20221125224254"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\n    \u003cmeta charset=\"UTF-8\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003ctitle\u003e表白墙\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n    \u003cstyle\u003e\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        .container {\n            width: 100%;\n        }\n\n        h3 {\n            text-align: center;\n            padding: 30px 0;\n            font-size: 24px;\n        }\n\n        p {\n            text-align: center;\n            color: #999;\n            padding: 10px 0;\n        }\n\n        .row {\n            width: 400px;\n            height: 50px;\n            margin: 0 auto;\n\n            display: flex;\n            justify-content: center;\n            align-items: center;\n        }\n\n        .row span {\n            width: 60px;\n            font-size: 20px;\n        }\n\n        .row input {\n            width: 300px;\n            height: 40px;\n            line-height: 40px;\n            font-size: 20px;\n            text-indent: 0.5em;\n            /* 去掉输入框的轮廓线 */\n            outline: none;\n        }\n\n        .row #submit {\n            width: 300px;\n            height: 40px;\n            font-size: 20px;\n            line-height: 40px;\n            margin: 0 auto;\n\n            color: white;\n            background-color: orange;\n            /* 去掉边框 */\n            border: none;\n\n            border-radius: 10px;\n        }\n\n        .row #submit:active {\n            background-color: gray;\n        }\n    \u003c/style\u003e\n    \u003cdiv class=\"container\"\u003e\n        \u003ch3\u003e表白墙\u003c/h3\u003e\n        \u003cp\u003e输入后点击提交, 会将信息显示在表格中\u003c/p\u003e\n        \u003cdiv class=\"row\"\u003e\n            \u003cspan\u003e谁: \u003c/span\u003e\n            \u003cinput type=\"text\"\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\"row\"\u003e\n            \u003cspan\u003e对谁: \u003c/span\u003e\n            \u003cinput type=\"text\"\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\"row\"\u003e\n            \u003cspan\u003e说: \u003c/span\u003e\n            \u003cinput type=\"text\"\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\"row\"\u003e\n            \u003cbutton id=\"submit\"\u003e提交\u003c/button\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\n    \u003cscript\u003e\n        // 当用户点击 submit, 就会获取到 input 中的内容, 从而把内容构造成一个 div, 插入到页面末尾. \n        let submitBtn = document.querySelector('#submit');\n        submitBtn.onclick = function() {\n            // 1. 获取到 3 个 input 中的内容. \n            let inputs = document.querySelectorAll('input');\n            let from = inputs[0].value;\n            let to = inputs[1].value;\n            let msg = inputs[2].value;\n            if (from == '' || to == '' || msg == '') {\n                // 用户还没填写完, 暂时先不提交数据. \n                return;\n            }\n            // 2. 生成一个新的 div, 内容就是 input 里的内容. 把这个新的 div 加到页面中. \n            let div = document.createElement('div');\n            div.innerHTML = from + ' 对 ' + to + ' 说: ' + msg;\n            div.className = 'row';\n            let container = document.querySelector('.container');\n            container.appendChild(div);\n            // 3. 清空之前输入框的内容. \n            for (let i = 0; i \u003c inputs.length; i++) {\n                inputs[i].value = '';\n            }\n        }\n    \u003c/script\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

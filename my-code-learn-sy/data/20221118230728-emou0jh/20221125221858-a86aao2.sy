@@ -1,0 +1,2574 @@
+{
+	"ID": "20221125221858-a86aao2",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221125221858-a86aao2",
+		"title": "C语言连接数据库",
+		"updated": "20221125222945"
+	},
+	"Children": [
+		{
+			"ID": "20221125221902-gv2zfib",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-gv2zfib",
+				"updated": "20221125221908"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "方法一："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n我们是通过yum安装的mysql，所以mysql的头文件和动静态库，我们都是拥有的。如果只有动静态库， 但是没有头文件可以看这篇文章："
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Linux Centos7 找不到mysql.h文件（转） - 混元真人 - 博客园 (cnblogs.com)"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.cnblogs.com/huojing/articles/16419671.html"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-58h5t40",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-58h5t40",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "本次主要使用的方式就是"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法一"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-n3cu91l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-n3cu91l",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "方法二"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：\n可以去"
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "官网"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "[MySQL :: MySQL Community Downloads](https://dev.mysql.com/downloads/)"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "下载适合自己平台的MySQL接口库进行链接。\n如果是 .tar.gz后缀结尾的压缩包，可以使用以下命令"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-765wxhs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-765wxhs",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "tar -xzf 文件名\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-omhbsiw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-omhbsiw",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解压后，就可以得到相关库个头文件了，使用[[Linux文件系统#硬链接 and 软链接|软硬连接]]  连接到项目中即可。"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-0espstn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125221902-0espstn",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "库与头文件"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-9y39clf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-9y39clf",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "头文件在哪？"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-1d15mze",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-1d15mze",
+				"updated": "20221125221939"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-kr32qrn"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "find"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-f6klr40",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-f6klr40",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "find / -name mysql.h\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221943-gm4exk0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221943-gm4exk0"
+			}
+		},
+		{
+			"ID": "20221125221902-235j2dc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-235j2dc",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果：\n如果找不到"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mysql.h"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，请看文章："
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Linux Centos7 找不到mysql.h文件（转） - 混元真人 - 博客园 (cnblogs.com)"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.cnblogs.com/huojing/articles/16419671.html"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-k1wlgdp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-k1wlgdp",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2g="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/usr/include/mysql/mysql.h\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-w1q6a6x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-w1q6a6x",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到我们的头文件在此路径 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "/usr/include/mysql"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中"
+				}
+			]
+		},
+		{
+			"ID": "20221125221946-4bgfkc6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221946-4bgfkc6"
+			}
+		},
+		{
+			"ID": "20221125221902-kw5d3pw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-kw5d3pw",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "库在哪里？"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-jlfl8ly",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-jlfl8ly",
+				"updated": "20221125221955"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20220722135728-kr32qrn"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "find"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指令"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-e4u7354",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-e4u7354",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "find / -name *mysqlclient*\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221958-wvxutiq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221958-wvxutiq"
+			}
+		},
+		{
+			"ID": "20221125221902-eq3jvyl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-eq3jvyl",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果："
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-ax7gxub",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-ax7gxub",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/usr/lib64/mysql/libmysqlclient.so.21\n/usr/lib64/mysql/libmysqlclient.so.18\n/usr/lib64/mysql/libmysqlclient_r.so.18.1.0\n/usr/lib64/mysql/libmysqlclient.so.18.1.0\n/usr/lib64/mysql/libmysqlclient.a\n/usr/lib64/mysql/libmysqlclient.so.21.2.31\n/usr/lib64/mysql/libmysqlclient.so\n/usr/lib64/mysql/libmysqlclient_r.so.18\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-99pzqwp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-99pzqwp",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到我们的 库在 此路径 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "/usr/lib64/mysql"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-nvvnoyi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125221902-nvvnoyi",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "尝试链接"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-7m745xf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-7m745xf",
+				"updated": "20221125222515"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "makefile 文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221125222100-vbyp2t4"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "Linux动静态库"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-g4wlg0t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-g4wlg0t",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bWFrZWZpbGU="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql_test:test.cc\n    g++ -o $@ $^ -std=c++11  -I/usr/include/mysql -L/usr/lib64/mysql -lmysqlclient\n\n.PHONY:clean\nclean:\n    rm -f mysql_test\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-i64ulhv",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221125221902-i64ulhv",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221125221902-l4pczg0",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221125221902-l4pczg0",
+						"updated": "20221125221902"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-L"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 指明库文件搜索路径\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-l"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 指明要链接哪一个库\n"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-I"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 指明头文件搜索路径"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125222529-tpo0ap6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222529-tpo0ap6"
+			}
+		},
+		{
+			"ID": "20221125221902-y9u89yu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-y9u89yu",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "尝试链接mysql client"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n通过 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mysql_get_client_info()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 函数，来验证我们的引入是否成功"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-cd40k97",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-cd40k97",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cmysql/mysql.h\u003e\n\nint main()\n{\n\tstd::cout \u003c\u003c\"mysql client version :\" \u003c\u003c mysql_get_client_info() \u003c\u003cstd::endl\n\treturn 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-f18je7z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-f18je7z",
+				"updated": "20221125222821"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "连接成功:\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124165022"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124165022-20221125222821-p71n78z.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221125222841-vqa0ta4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222841-vqa0ta4"
+			}
+		},
+		{
+			"ID": "20221125221902-ui5tj2c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125221902-ui5tj2c",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql接口介绍"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-mvv5kgj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-mvv5kgj",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_init()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-ifn3fs7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-ifn3fs7",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "要使用库，必须先进行初始化！"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-24dr6z3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-24dr6z3",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "MYSQL* mysql_init(MYSQL *mysql);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-6pin7le",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-6pin7le",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个函数用来分配或者初始化一个MYSQL句柄，用于连接mysql服务端。如果你传入的参数是NULL指针，它将自动为你分配一个MYSQL对象。"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-evna1ag",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-evna1ag",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "MYSQL* mfp = mysql_init(nullptr);"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-3i2k9cc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-3i2k9cc",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意：不使用MySQL时，一定要使用 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "mysql_close()"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 关闭此指针，避免野指针现象。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125222844-0m1xax7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222844-0m1xax7"
+			}
+		},
+		{
+			"ID": "20221125221902-goft0ew",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-goft0ew",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_real_connect()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-6fypsd2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-6fypsd2",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "初始化完毕之后，必须先链接数据库，在进行后续操作。（mysql网络部分是基于TCP/IP的）"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-8mogs90",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-8mogs90",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "MYSQL *mysql_real_connect(MYSQL *mysql, \n\t\t\t\t\t\t  const char *host,\n\t                      const char *user,\n\t                      const char *passwd,\n\t                      const char *db,\n\t                      unsigned int port,\n\t                      const char *unix_socket, \n\t                      unsigned long clientflag);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-c1r2qqt",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125221902-c1r2qqt",
+				"updated": "20221125222855"
+			},
+			"Children": [
+				{
+					"ID": "20221125221902-ctdljcq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125221902-ctdljcq",
+						"updated": "20221125221902"
+					},
+					"Children": [
+						{
+							"ID": "20221125221902-wvy0zu5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125221902-wvy0zu5",
+								"updated": "20221125221902"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第一个参数 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "MYSQL"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是 C api中一个非常重要的变量（"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "mysql_init()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的返回值），里面内存非常丰富，有"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "port"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ","
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "dbname"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ","
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "charset"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "等连接基本参数。它也包含了一个叫 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "st_mysql_methods"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的结构体变量，该变量里面保存着很多函数指针，这些函数指针将会在数据库连接成功以后的各种数据操作中被调用。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125221902-wskipm2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125221902-wskipm2",
+						"updated": "20221125222855"
+					},
+					"Children": [
+						{
+							"ID": "20221125221902-nfk28yi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125221902-nfk28yi",
+								"updated": "20221125222855"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "mysql_real_connect()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "函数中各参数，基本都是顾名思意。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-afwfmul",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-afwfmul",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_query()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-h038ta7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-h038ta7",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用于下发mysql命令"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-tw0n25d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-tw0n25d",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int mysql_query(MYSQL *mysql, const char *q);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-ubm43lq",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125221902-ubm43lq",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"ID": "20221125221902-81hplaq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125221902-81hplaq",
+						"updated": "20221125221902"
+					},
+					"Children": [
+						{
+							"ID": "20221125221902-7ukvh8p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125221902-7ukvh8p",
+								"updated": "20221125221902"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第一个参数上面已经介绍过"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125221902-r2equ7u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125221902-r2equ7u",
+						"updated": "20221125221902"
+					},
+					"Children": [
+						{
+							"ID": "20221125221902-qcit9xb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125221902-qcit9xb",
+								"updated": "20221125221902"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第二个参数为要执行的sql语句,如“select * from table”。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125222900-us4nq9x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222900-us4nq9x"
+			}
+		},
+		{
+			"ID": "20221125221902-bbm873l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-bbm873l",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_store_result()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-g6ex5pd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-g6ex5pd",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取执行结果"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-bgpmxel",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-bgpmxel",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "sql执行完以后，如果是查询语句，我们当然还要读取数据，如果"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "update"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "insert"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "等语句，那么就看下操作成功与否即可。"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-uuxp05z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-uuxp05z",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们来看看如何获取查询结果： 如果"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mysql_query()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "返回成功，那么我们就通过"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mysql_store_result()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这个函数来读取结果。\n原型如下："
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-2ez98ga",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-2ez98ga",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "MYSQL_RES *mysql_store_result(MYSQL *mysql);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-juyfexe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-juyfexe",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "该函数会调用MYSQL变量中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "st_mysql_methods"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "read_rows"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "函数指针"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来获取查询的结果。同时该函数会返回"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "MYSQL_RES"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 这样一个变量，该变量主要用于保存查询的结果。"
+				}
+			]
+		},
+		{
+			"ID": "20221125222906-8gqp9p9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222906-8gqp9p9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n同时该函数"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "malloc"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "了一片内存空间来存储查询过来的数据，所以我们"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一定要记得 "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "mysql_free_result(result)"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，不然是肯定会造成内存泄漏的。 执行完"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mysql_store_result"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "以后，其实数据都已经在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "MYSQL_RES"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 变量中了"
+				}
+			]
+		},
+		{
+			"ID": "20221125222908-w2kvjk0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222908-w2kvjk0"
+			}
+		},
+		{
+			"ID": "20221125221902-3jd3tgs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-3jd3tgs",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面的api基本就是读取"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "MYSQL_RES"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中的数据。"
+				}
+			]
+		},
+		{
+			"ID": "20221125222908-e1msbcx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222908-e1msbcx"
+			}
+		},
+		{
+			"ID": "20221125221902-nptp1iv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-nptp1iv",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_num_rows()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-3uy4k89",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-3uy4k89",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取结果行数"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-vlwncd9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-vlwncd9",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "my_ulonglong mysql_num_rows(MYSQL_RES *res);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125222911-yhhrnz4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222911-yhhrnz4"
+			}
+		},
+		{
+			"ID": "20221125221902-buzbjoe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-buzbjoe",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_num_ﬁelds()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-opj65fs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-opj65fs",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取结果列数"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-2wvjqhr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-2wvjqhr",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "unsigned int mysql_num_fields(MYSQL_RES *res);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125222913-k5g98lv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222913-k5g98lv"
+			}
+		},
+		{
+			"ID": "20221125221902-qrv2rvs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-qrv2rvs",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_fetch_ﬁelds"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-z2pdnx7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-z2pdnx7",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取列名"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-g3ntsz6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-g3ntsz6",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "MYSQL_FIELD *mysql_fetch_fields(MYSQL_RES *res);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-jft5p5g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-jft5p5g",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如："
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-4ojxm4g",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-4ojxm4g",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int fields = mysql_num_fields(res);\nMYSQL_FIELD *field = mysql_fetch_fields(res); \n\nfor(int i = 0; i \u003c fields; i++){\n\tcout\u003c\u003cfield[i].name\u003c\u003c\" \"; \n}\ncout\u003c\u003cendl;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125222916-7aket1d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222916-7aket1d"
+			}
+		},
+		{
+			"ID": "20221125221902-v8y5zqq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-v8y5zqq",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_fetch_row()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-jog5fxb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-jog5fxb",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取结果内容"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-j3o82s6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-j3o82s6",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "MYSQL_ROW mysql_fetch_row(MYSQL_RES *result);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-owqn60b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-owqn60b",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "它会返回一个MYSQL_ROW变量，MYSQL_ROW其实就是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "char **"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ". 就当成一个二维数组来用吧。"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-qcbc7vc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-qcbc7vc",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如："
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-rxrh0m9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-rxrh0m9",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "for(int i = 0 ; i \u003c rows ; i++)\n{\n\tMYSQL_ROW line = mysql_fetch_row(result);\n\tfor(int j = 0 ; j \u003c cols; j++)\n\t{\n\t\tstd::cout \u003c\u003c line[j] \u003c\u003c '\\t';\n\t}\n\tstd::cout \u003c\u003c std::endl;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125222918-ednvnot",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222918-ednvnot"
+			}
+		},
+		{
+			"ID": "20221125221902-82u37e3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-82u37e3",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql_close()"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-pp5zjs2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-pp5zjs2",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关闭mysql链接"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-1vhqz5s",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-1vhqz5s",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "void mysql_close(MYSQL *sock);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125222921-abcprzd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222921-abcprzd"
+			}
+		},
+		{
+			"ID": "20221125221902-s11ebm7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221125221902-s11ebm7",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其他接口"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-7u0xr7u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-7u0xr7u",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "mysql C api还支持事务等常用操作，大家下来自行了解:"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-e6bype3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-e6bype3",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "my_bool STDCALL mysql_autocommit(MYSQL * mysql, my_bool auto_mode); \n\nmy_bool STDCALL mysql_commit(MYSQL * mysql);\n\nmy_bool STDCALL mysql_rollback(MYSQL * mysql);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125222923-udmc1qc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125222923-udmc1qc"
+			}
+		},
+		{
+			"ID": "20221125221902-1mn49a6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125221902-1mn49a6",
+				"updated": "20221125222945"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码案例"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-7ubw9ra",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125221902-7ubw9ra",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003ciostream\u003e\n#include \u003cmysql/mysql.h\u003e\n#include \u003cstring\u003e\n#include \u003ccstdio\u003e\n\nconst std::string host = \"127.0.0.1\";\nconst std::string user = \"root\";\nconst std::string password = \"panda7671773\";\nconst std::string db = \"mydb\";\nconst unsigned int  port = 3306;\n\nint main()\n{\n    std::cout \u003c\u003c\"mysql client version :\" \u003c\u003c mysql_get_client_info() \u003c\u003cstd::endl;\n\n    //0. 创建mysql句柄\n    MYSQL* my = mysql_init(nullptr);\n\n\t//1. 链接数据库\n    if(mysql_real_connect(my , host.c_str() , user.c_str(), password.c_str() ,db.c_str() , port , nullptr , 0 ) == nullptr )\n    {\n        std::cout \u003c\u003c \"connect failed\" \u003c\u003c std::endl;\n        return 1;\n    }\n\n\t//1.1: 需要设置链接的编码格式\n    mysql_set_character_set(my , \"utf8\");\n    std::cout \u003c\u003c \"connect success\" \u003c\u003c std::endl;\n\n\t//2. 访问 数据库.test id, name\n    //std::string sql = \"create table emm(id int  primary key , name varchar(20))\";\n    std::string sql = \"select * from emm\";\n\n\t//2.1 select 其实是最不好处理的！！select sql执行完，只是第一步，还需要对数据进一步解析！\n    //std::string sql = \"select name from emm  where id = 4\";\n    int code = mysql_query(my , sql.c_str()); //返回0表示成功\n    if(code != 0)\n    {\n        std::cout \u003c\u003c \"execute: \" \u003c\u003c sql \u003c\u003c \" failed\" \u003c\u003c std::endl;\n        return 2;\n    }\n    std::cout \u003c\u003c \"execut: \"\u003c\u003c sql \u003c\u003c \"success\" \u003c\u003c std::endl;\n\n\t//2.2 解析数据 -- 获取行号和列号\n    MYSQL_RES* result = mysql_store_result(my);\n    int rows = mysql_num_rows(result);\n    int cols = mysql_num_fields(result);\n    std::cout \u003c\u003c \"行数: \" \u003c\u003c rows \u003c\u003c \", 列数: \" \u003c\u003c cols \u003c\u003c std::endl;\n\n\t//2.3 解析数据 -- 获取表中列名 -- 一般不用，仅仅是为了测试代码的完整性\n    MYSQL_FIELD* fields = mysql_fetch_field(result);\n    for(int i = 0 ; i \u003c cols ; i++)\n    {\n        std::cout \u003c\u003c fields[i].name \u003c\u003c '\\t';\n    }\n    std::cout \u003c\u003c std::endl;\n\n\t//2.4 解析数据 -- 获取表中的数据 -- 重要\n    for(int i = 0 ; i \u003c rows ; i++)\n    {\n        MYSQL_ROW line = mysql_fetch_row(result);//获取完整的一行记录[可能包含了多列]\n        for(int j = 0 ; j \u003c cols; j++)\n        {\n            std::cout \u003c\u003c line[j] \u003c\u003c '\\t';//将记录内部的多列字符串依次打印！\n        }\n        std::cout \u003c\u003c std::endl;\n    }\n\n\t//3. 关闭数据库\n    mysql_free_result(result);\n    mysql_close(my);\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-3d8ou2h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-3d8ou2h",
+				"updated": "20221125222936"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行结果：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221124172345"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221124172345-20221125222936-1xjlaex.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-zbwidcn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125221902-zbwidcn",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "引用文章"
+				}
+			]
+		},
+		{
+			"ID": "20221125221902-2bbmqfz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125221902-2bbmqfz",
+				"updated": "20221125221902"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Linux Centos7 找不到mysql.h文件（转） - 混元真人 - 博客园 (cnblogs.com)"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.cnblogs.com/huojing/articles/16419671.html"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		}
+	]
+}

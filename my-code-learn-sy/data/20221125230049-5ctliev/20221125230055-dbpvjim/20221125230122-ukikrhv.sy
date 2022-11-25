@@ -1,0 +1,1511 @@
+{
+	"ID": "20221125230122-ukikrhv",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221125230122-ukikrhv",
+		"title": "数组类",
+		"updated": "20221125230227"
+	},
+	"Children": [
+		{
+			"ID": "20221125230129-h82qtyy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125230129-h82qtyy",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "核心考点：数组相关，特性观察，时间复杂度把握"
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-tvwx6b0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-tvwx6b0",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "二维数组中的查找_牛客题霸_牛客网 (nowcoder.com)"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13\u0026tqId=11154\u0026tPage=1\u0026rp=1\u0026ru=/ta/coding-interviews\u0026qru=/ta/coding-interviews/question-ranking"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-t6bsfod",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125230129-t6bsfod",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//数组操作问题\n//解决思路：\n\n//如数组样式如下：\n//   1 2 3 4\n//   2 3 4 5\n//   3 4 5 6\n//正常查找的过程，本质就是排除的过程，如果双循环查找，本质是一次排除一个，效率过低\n//根据题面要求，我们可以采取从右上角（或左下角）进行比较（想想为什么？），这样可以做到一次排除一行或者一列\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-1pjyoqv",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125230129-1pjyoqv",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"ID": "20221125230129-ho6ot17",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-ho6ot17",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-mi6bqvx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-mi6bqvx",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查找的过程其实就是排除的过程"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-ocpqokh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-ocpqokh",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-q1u01ro",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-q1u01ro",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "该题因为排序规则，其实可以一次排除一行或一列"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230136-b102dx9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230136-b102dx9"
+			}
+		},
+		{
+			"ID": "20221125230129-aju542h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-aju542h",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "C++"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-qy1kkdl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125230129-qy1kkdl",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    bool Find(int target, vector\u003cvector\u003cint\u003e \u003e array) {\n        int i = 0;\n        int j = array[0].size() -1; //从第一行的最右处开始寻找\n\n        while( i \u003c array.size() \u0026\u0026 j \u003e= 0)\n        {\n            if(target \u003c array[i][j]) //如果 target 小于此行的最大值，则可以排除这一列，向左寻找\n                j--;\n            else if(target \u003e array[i][j])//如果 target 大于此行的最大值，排除改该行，则一直向下一行寻找\n                i++;\n            else\n                return true;   \n        }\n        return false;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125230139-ny1mqgq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230139-ny1mqgq"
+			}
+		},
+		{
+			"ID": "20221125230129-l6jzsq2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-l6jzsq2",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "java"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-6i1bs52",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125230129-6i1bs52",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Solution {\n    public boolean Find(int target, int [][] array) {\n        if(array == null)\n        {\n            return false;\n        }\n      \n        int i = 0 ; \n        int j = array[0].length-1;//从第一行的最右处开始寻找\n\n        while(i \u003c array.length \u0026\u0026 j \u003e= 0){\n            if(target \u003c array[i][j])//如果 target 小于此行的最大值，则一直向左寻找\n                j--;\n            else if(target \u003e array[i][j])//如果 target 大于此行的最大值，则一直向下一行寻找\n                i++;\n            else\n                return true; \n        }\n        return false;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125230142-6k4h3ik",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230142-6k4h3ik"
+			}
+		},
+		{
+			"ID": "20221125230129-mlylc08",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125230129-mlylc08",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "核心考点：数组理解，二分查找，临界条件"
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-p1r13ia",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-p1r13ia",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "旋转数组的最小数字_牛客题霸_牛客网 (nowcoder.com)"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba?tpId=13\u0026tqId=11159\u0026rp=1\u0026ru=/ta/coding-interviews\u0026qru=/ta/coding-interviews/question-ranking"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。  输入一个非递减排序的数组的一个旋\n转，输出旋转数组的最小元素。  例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。 NOTE：给出的\n所有元素都大于0，若数组大小为0，请返回0。"
+				}
+			]
+		},
+		{
+			"ID": "20221125230147-r3bv89w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230147-r3bv89w"
+			}
+		},
+		{
+			"ID": "20221125230129-euk7naz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-euk7naz",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数组问题，本质其实是一个求最小值问题"
+				}
+			]
+		},
+		{
+			"ID": "20221125230146-13umwy7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230146-13umwy7"
+			}
+		},
+		{
+			"ID": "20221125230129-ow5cdsv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-ow5cdsv",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法一：理论上，遍历一次即可，但是我们可以根据题面使用稍微高效且更简单一点的做法"
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-rolpdv4",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125230129-rolpdv4",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"ID": "20221125230129-wahuds7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-wahuds7",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-iukzsyg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-iukzsyg",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "按照要求，要么是一个非递减排序的数组（最小值在最开始），要么是一个旋转(最小值在中间某个地方)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-pq07rau",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-pq07rau",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-kx2pllv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-kx2pllv",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "而且，旋转之后有个特征，就是在遍历的时候，原始数组是非递减的，旋转之后，就有可能出现递减，引起递减的数字，就是最小值"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230153-zm9nqku",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230153-zm9nqku"
+			}
+		},
+		{
+			"ID": "20221125230129-ewa15tl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-ewa15tl",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "方法二：采用二分查找的方式，进行定位(主要学习)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-4jvwee4",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125230129-4jvwee4",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"ID": "20221125230129-3o2hhdk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-3o2hhdk",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-pwpt0na",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-pwpt0na",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义首尾下标，因为是非递减数组旋转，所以旋转最后可以看做成两部分，前半部分整体非递减，后半部分整体非递减，前半部分整体大于后半部分。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-f3r54pi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-f3r54pi",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-6jozuno",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-6jozuno",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所以，我们假设如下定义，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "left"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "指向最左侧，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "right"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "指向最右侧，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "为二分之后的中间位置。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-08pwbr1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-08pwbr1",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-dwqua75",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-dwqua75",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "则，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "a[mid] \u003e= a[left]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ",说明"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "位置在原数组前半部分，进一步说明，目标最小值，在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的右侧，让"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "left=mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-k5flvuc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-k5flvuc",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-eonr5vp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-eonr5vp",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "a[mid] \u003c a[left]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ", 说明"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "位置在原数组后半部分，进一步说明，目标最小值，在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的左侧，让"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "right=mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-33974i6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-33974i6",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-ytk6h7l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-ytk6h7l",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这个过程，会让 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "[left, right]"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 区间缩小"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-hz2htes",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-hz2htes",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-5okaeyj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-5okaeyj",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这个过程中，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "left"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "永远在原数组前半部分，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "right"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "永远在原数组的后半部分，而范围会一直缩小"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-g1ptb3a",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-g1ptb3a",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-rcipo5w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-rcipo5w",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "left"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "right"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "相邻时，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "right"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "指向的位置，就是最小元素的位置"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-1ab5zjs",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-1ab5zjs",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-xfjin3z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-xfjin3z",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "但是，因为题目说的是非递减，也就意味着数据允许重复，因为有重复发，就可能会有"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "a[left] == a[mid] == a[right]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的情况，我们就无法判定数据在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "mid"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "左侧还是右侧。（注意，只要有两者不相等，我们就能判定应该如何缩小范围）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230157-35gnwqd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230157-35gnwqd"
+			}
+		},
+		{
+			"ID": "20221125230129-5sfk9qm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-5sfk9qm",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "C++"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-hv1mmnl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125230129-hv1mmnl",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//方法一\nclass Solution {\npublic:\n    int minNumberInRotateArray(vector\u003cint\u003e rotateArray) {\n      if(rotateArray.empty())\n      {\n        return 0;\n      }\n\n      for(int i = 0 ; i \u003c rotateArray.size()- 1 ; i++)\n      {\n          if (rotateArray[i] \u003e rotateArray[i+1])\n            return rotateArray[i+1];\n      }\n\n      return rotateArray[0];\n  \n    }\n};\n\n//方法二\nclass Solution {\npublic:\n    int minNumberInRotateArray(vector\u003cint\u003e rotateArray) {\n        if(rotateArray.empty())\n        {\n            return 0;\n        }\n      \n        int left = 0;\n        int right = rotateArray.size() -1;\n        int mid = 0;\n\n        //要一直满足该条件，以证明旋转特性\n        while(rotateArray[left] \u003e= rotateArray[right])\n        {\n            if(right - left == 1)\n            {\n                //两个下标已经相邻了\n                mid = right;\n                break;\n            }\n            mid = left+((right-left)/2);\n            if(rotateArray[mid] == rotateArray[left] \u0026\u0026 rotateArray[mid] == rotateArray[right])//无法判定目标数据在mid左侧，还是右侧我们采用线性遍历方式\n            {\n                int result = rotateArray[left];\n                for(int i = left+1 ; i \u003c right ; i++)\n                {\n                    if(result \u003e rotateArray[i])\n                    {\n                        result = rotateArray[i];\n                    }\n                }\n                return result;\n            }\n\n            if(rotateArray[mid] \u003e= rotateArray[left])\n            {\n                //试想两者相等，隐含条件rotateArray[left] \u003e= rotateArray[right]\n                //说明mid在前半部分\n                left = mid;\n            }\n            else //说明mid在后半部分\n            {\n                right = mid;\n            }\n        }\n        return rotateArray[mid];\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125230201-ry0my71",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230201-ry0my71"
+			}
+		},
+		{
+			"ID": "20221125230129-ssww39t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-ssww39t",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "java"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-wlw1rqp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125230129-wlw1rqp",
+				"updated": "20221125230206"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//方法一\nimport java.util.ArrayList; \npublic class Solution {\n\tpublic int minNumberInRotateArray(int [] array) { \n       if(array == null || array.length == 0){\n           return 0; \n\t   }\n       for(int i = 0; i \u003c array.length-1; i++){ \n           if(array[i] \u003e array[i+1]){\n               return array[i+1]; \n\t       }\n\t   }\n       return array[0]; \n        }\n}\n\n\n//方法二\nimport java.util.ArrayList; \npublic class Solution {\n   public int minNumberInRotateArray(int [] array) { \n       if(array == null || array.length == 0){\n           return 0; \n\t   }\n       int left = 0;\n       int right = array.length - 1;\n       int mid = 0;\n       while(array[left] \u003e= array[right]){ \n           \n           if(right - left == 1){\n               mid = right; \n               break;\n\t       }\n\t       \n           mid = left + ((right - left)\u003e\u003e1);\n           \n           if(array[left] == array[right] \u0026\u0026 array[mid] == array[left]){ //1 \n               int result = array[left];\n               for(int i = left+1; i \u003c right; i++){ //left和right值是相等的 \n                   if(array[i] \u003c result){\n                       result = array[i]; \n\t\t           }\n\t\t       }\n               return result; \n\t       }\n           \n           if(array[mid] \u003e= array[left]){\n\t           //说明mid在原数组的前半部分\n               //如果array[mid] == array[left]，    上面1处的条件不满足且array[left] \u003e= array[right]，则，array[mid] \u003e array[right]\n               left = mid; \n\t       }\n           else{\n               right = mid; \n\t       }\n\t   }\n       return array[mid]; \n   }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125230219-ucq3s5b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230219-ucq3s5b"
+			}
+		},
+		{
+			"ID": "20221125230129-bvbu4t4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221125230129-bvbu4t4",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "核心考点：数组操作，排序思想的扩展使用"
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-pehtlba",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-pehtlba",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "调整数组顺序使奇数位于偶数前面_牛客题霸_牛客网 (nowcoder.com)"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593?tpId=13\u0026tqId=11166\u0026rp=1\u0026ru=/ta/coding-interviews\u0026qru=/ta/coding-interviews/question-ranking"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位\n于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。"
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-no3nt2r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-no3nt2r",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路："
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-k1r3swj",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221125230129-k1r3swj",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"ID": "20221125230129-jqvjcyv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-jqvjcyv",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-79bkzk9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-79bkzk9",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这道题原题是不需要保证奇偶位置不变的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221125230129-04dbsf7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221125230129-04dbsf7",
+						"updated": "20221125230129"
+					},
+					"Children": [
+						{
+							"ID": "20221125230129-uuzx83t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221125230129-uuzx83t",
+								"updated": "20221125230129"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "现在新增了需求，解决方法也比较多，我们用较优方式解决一下，借鉴一下插入排序的思想"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230225-kinxss7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230225-kinxss7"
+			}
+		},
+		{
+			"ID": "20221125230129-586bioe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-586bioe",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "C++"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-19a5g3l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125230129-19a5g3l",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    void reOrderArray(vector\u003cint\u003e \u0026array) {\n        int k = 0 ; //放到K下标处的数，就可以不用在移动了\n        for (int i = 0 ; i \u003c array.size() ; i++)\n        {\n            if(array[i] \u0026 1)//从左向右，每次遇到的，都是最前面的奇数，一定将来要被放在k下标处\n            {\n                int temp = array[i];//现将当前奇数保存起来\n                int j = i;\n                while(j \u003e k)//将该奇数之前的内容(偶数序列)，整体后移一个位置\n                {\n                    array[j] = array[j-1];\n                    j--;\n                }\n                array[k++] = temp;//将奇数保存在它将来改在的位置，因为我们是从左往右放的，没有跨越奇数，所以一定是相对位置不变的\n            }\n        }\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221125230227-zwa1lft",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230227-zwa1lft"
+			}
+		},
+		{
+			"ID": "20221125230129-qfmusl6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221125230129-qfmusl6",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "java"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221125230129-8ver621",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221125230129-8ver621",
+				"updated": "20221125230129"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Solution {\n   public void reOrderArray(int [] array) { \n       int k = 0;\n       for(int i = 0; i \u003c array.length; i++){\n           if((array[i] \u0026 1) == 1){//从左向右，每次遇到的，都是最前面的奇数，一定将来要被放在k下标处 \n               int temp = array[i];//现将当前奇数保存起来\n               int j = i;\n               while(j \u003e k){//将该奇数之前的内容(偶数序列)，整体后移一个位置 \n                   array[j] = array[j-1];\n                   j--; \n\t\t       }\n               array[k++] = temp;//将奇数保存在它将来改在的位置，因为我们是从左往右放的，没有跨越奇数，所以一定是相对位置不变的\n\t       } \n\t   }\n\t} \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}
