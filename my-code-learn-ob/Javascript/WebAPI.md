@@ -426,5 +426,357 @@ div.onclick = function () {
 2. 把元素节点插入到 dom 树中.
 >第一步相当于生了个娃, 第二步相当于给娃上户口.
  
-### 创建元素节点
+ ### 1. 创建元素节点
 使用 createElement 方法来创建一个元素. options 参数暂不关注.
+```js
+var element = document.createElement(tagName[, options]);
+```
+
+代码示例:
+```html
+<div class="container"> 
+
+</div>
+
+<script>
+    var div = document.createElement('div'); 
+    div.id = 'mydiv';
+    div.className = 'box'; 
+	div.innerHTML = 'hehe';
+    console.log(div); 
+</script>
+```
+
+>==上面介绍的只是创建元素节点, 还可以使用==
+>- `createTextNode` 创建文本节点
+>- `createComment` 创建注释节点
+>- `createAttribute` 创建属性节点
+我们以 `createElement` 为主即可.
+
+### 2. 插入节点到 dom 树中
+1) **使用 appendChild 将节点插入到指定节点的最后一个孩子之后**
+```js
+element.appendChild(aChild)
+```
+
+```html
+<div class="container"> 
+
+</div>
+
+<script>
+    var div = document.createElement('div');
+    div.id = 'mydiv';
+    div.className = 'box';
+    div.innerHTML = 'hehe';
+    
+    var container = document.querySelector('.container'); 
+    container.appendChild(div);
+</script>
+```
+![[Pasted image 20221125111347.png]]
+
+
+2) **使用 insertBefore 将节点插入到指定节点之前**.
+```js
+var insertedNode = parentNode.insertBefore(newNode , refenceNode);
+```
+
+>- `insertedNode`:被插入节点(newNode)
+>- `parentNode`:新插入节点的父节点newNode用于插入的节点
+>- `referenceNode` : `newNode`将要插在这个节点之前
+如果`referenceNode`为`null`则`newNode`将被插入到子节点的末尾.
+注意: `referenceNode`引用节点不是可选参数.
+
+```html
+<div class="container"> 
+    <div>11</div>
+    <div>22</div> 
+    <div>33</div> 
+    <div>44</div> 
+</div>
+
+<script>
+        var newdiv = document.createElement('div');
+        newdiv.innerHTML = '这是一个新节点';
+        var container = document.querySelector('.container');
+        console.log(container.children);
+        container.insertBefore(newdiv, container.children[0]);
+    </script>
+```
+![[Pasted image 20221125112946.png]]
+
+**注意1:  如果针对一个节点插入两次, 则只有最后一次生效(相当于把元素移动了)**
+```html
+<div class="container"> 
+    <div>11</div>
+    <div>22</div> 
+    <div>33</div> 
+    <div>44</div> 
+</div>
+<script>
+    var newDiv = document.createElement('div'); 
+    newDiv.innerHTML = '我是新的节点';
+    
+    var container = document.querySelector('.container'); 
+    console.log(container.children);
+    // 此处的 children 里有 4 个元素
+    container.insertBefore(newDiv, container.children[0]);
+    
+    // 此处的 children 里有 5 个元素(上面新插了一个), 0 号元素是    新节点, 
+    // 1 号元素是 11, 2号节点是 22, 所以是插入到 22 之前.
+    container.insertBefore(newDiv, container.children[2]); 
+</script>
+```
+![[Pasted image 20221125113326.png]]
+
+
+**注意2: 一旦一个节点插入完毕, 再针对刚刚的节点对象进行修改, 能够同步影响到 DOM 树中的内容.**
+```html
+<div class="container"> 
+    <div>11</div>
+    <div>22</div> 
+    <div>33</div> 
+    <div>44</div> 
+</div>
+<script>
+    var newDiv = document.createElement('div'); 
+    newDiv.innerHTML = '我是新的节点';
+     
+    var container = document.querySelector('.container'); 
+    console.log(container.children);
+    container.insertBefore(newDiv, container.children[0]);
+    // 插入完毕后再次修改 newDiv 的内容 
+    newDiv.innerHTML = '我是新节点2'; 
+</script>
+```
+![[Pasted image 20221125113554.png]]
+
+
+### 删除节点
+使用 `removeChild` 删除子节点
+```js
+oldChild = element.removeChild(child);
+```
+>- `child` 为待删除节点 
+>- `element` 为 `child` 的父节点 
+>- **返回值为该被删除节点**
+>- 被删除节点只是从 dom 树被删除了, 但是仍然在内存中, 可以随时加入到 dom 树的其他位置.
+>- 如果上例中的 `child`节点  不是`element`节点的子节点,则该方法会抛出异常.
+
+
+
+# 代码案例: 猜数字
+## 预期效果
+![[Pasted image 20221125120828.png]]
+
+## 代码实现
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+</head>
+<body>
+    <button id="resetBtn">重新开始一局游戏</button><br>
+    <span>要猜的数字: </span> 
+    <input type="text">
+    <button id="guessBtn">猜</button><br>
+    <span>结果: </span><span id="result"></span><br>
+    <span>已经猜的次数: </span><span id="guessCount">0</span>
+
+    <script>
+        // 1. 先把上面需要用到的元素都拿到. 
+        let resetBtn = document.querySelector('#resetBtn');
+        let input = document.querySelector('input');
+        let guessBtn = document.querySelector('#guessBtn');
+        let resultSpan = document.querySelector('#result');
+        let guessCountSpan = document.querySelector('#guessCount');
+
+        // 2. 生成一个 1-100 的随机整数. 
+        let toGuess = Math.floor(Math.random() * 100) + 1; 
+        console.log(toGuess);
+
+        // 3. 实现点击 猜 按钮的逻辑. 
+        guessBtn.onclick = function() {
+            // 1. 读取到 input 中输入的内容, 并转成整数. 
+            if (input.value == '') {
+                return;
+            }
+            let curNum = parseInt(input.value);
+            // 2. 判定大小关系, 并给出提示. 
+            if (curNum < toGuess) {
+                resultSpan.innerHTML = '低了'
+                resultSpan.style.color = 'red';
+            } else if (curNum > toGuess) {
+                resultSpan.innerHTML = '高了';
+                resultSpan.style.color = 'red';
+            } else {
+                resultSpan.innerHTML = '猜对了!';
+                resultSpan.style.color = 'green';
+            }
+            // 3. 更新猜的次数. 
+            let guessCount = parseInt(guessCountSpan.innerHTML);
+            guessCountSpan.innerHTML = guessCount + 1;
+        }
+
+        // 4. 实现 reset 操作的逻辑(开始新游戏)
+        resetBtn.onclick = function() {
+            // 让页面刷新即可~
+            // location 是和 document 并列关系的对象. 
+            // location 用来控制页面的链接/地址. 通过 reload 操作就可以刷新页面. 
+            location.reload();
+        }
+
+    </script>
+</body>
+</html>
+```
+
+
+
+# 代码案例: 表白墙
+## 预期效果
+
+
+
+## 代码实现
+一些值得学习的CSS
+- [align-items - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items)
+- [display: flex - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display)
+- [justify-content - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白墙</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        h3 {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 24px;
+        }
+
+        p {
+            text-align: center;
+            color: #999;
+            padding: 10px 0;
+        }
+
+        .row {
+            width: 400px;
+            height: 50px;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row span {
+            width: 60px;
+            font-size: 20px;
+        }
+
+        .row input {
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            text-indent: 0.5em;
+            /* 去掉输入框的轮廓线 */
+            outline: none;
+        }
+
+        .row #submit {
+            width: 300px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 0 auto;
+
+            color: white;
+            background-color: orange;
+            /* 去掉边框 */
+            border: none;
+
+            border-radius: 10px;
+        }
+
+        .row #submit:active {
+            background-color: gray;
+        }
+    </style>
+    <div class="container">
+        <h3>表白墙</h3>
+        <p>输入后点击提交, 会将信息显示在表格中</p>
+        <div class="row">
+            <span>谁: </span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <span>对谁: </span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <span>说: </span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <button id="submit">提交</button>
+        </div>
+    </div>
+
+    <script>
+        // 当用户点击 submit, 就会获取到 input 中的内容, 从而把内容构造成一个 div, 插入到页面末尾. 
+        let submitBtn = document.querySelector('#submit');
+        submitBtn.onclick = function() {
+            // 1. 获取到 3 个 input 中的内容. 
+            let inputs = document.querySelectorAll('input');
+            let from = inputs[0].value;
+            let to = inputs[1].value;
+            let msg = inputs[2].value;
+            if (from == '' || to == '' || msg == '') {
+                // 用户还没填写完, 暂时先不提交数据. 
+                return;
+            }
+            // 2. 生成一个新的 div, 内容就是 input 里的内容. 把这个新的 div 加到页面中. 
+            let div = document.createElement('div');
+            div.innerHTML = from + ' 对 ' + to + ' 说: ' + msg;
+            div.className = 'row';
+            let container = document.querySelector('.container');
+            container.appendChild(div);
+            // 3. 清空之前输入框的内容. 
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+```
+
+
+
+
+
+
