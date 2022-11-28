@@ -1,0 +1,1533 @@
+{
+	"ID": "20221128084258-gez68xr",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221128084258-gez68xr",
+		"title": "Tomcat",
+		"updated": "20221128084626"
+	},
+	"Children": [
+		{
+			"ID": "20221128084310-dpsds04",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-dpsds04",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Tomcat是一个免费的开源的Servlet容器，它是Apache基金会的Jakarta项目中的一个核心项目，由Apache，Sun（现在已属于Oracle）和其它一些公司及个人共同开发而成。由于有了Sun的参与和支持，最新的Servlet和JSP规范总能在Tomcat中得到体现"
+				}
+			]
+		},
+		{
+			"ID": "20221128084315-h2u2z56",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084315-h2u2z56",
+				"updated": "20221128084345"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126154251"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126154251-20221128084345-lppwcia.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084349-b2mlx9n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084349-b2mlx9n"
+			}
+		},
+		{
+			"ID": "20221128084310-1nfmau0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128084310-1nfmau0",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "安装"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-huumoq7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-huumoq7",
+				"updated": "20221128084332"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "到"
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "官网"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://tomcat.apache.org/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行下载，推荐使用 大版本为8的版本,jdk也建议使用8版本。\n\n选择其中的 zip 压缩包, 下载后解压缩即可."
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-ebacvcn",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128084310-ebacvcn",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128084310-74ahqz5",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221128084310-74ahqz5",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "解压缩的目录最好不要带 \"中文\" 或者  特殊符号."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084353-ccx2yvx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084353-ccx2yvx"
+			}
+		},
+		{
+			"ID": "20221128084310-5fc6py5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128084310-5fc6py5",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "tomcat目录结构"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-9g6mtyb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-9g6mtyb",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "针对 tomcat 目录解压缩之后, 可以看到如下结构"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-j6753uu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128084310-j6753uu",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "apache-tomcat-8.5.47\\\n    bin\\        存放各种启动、停止脚本的。*.sh 是以后在 linux 上用的，*.bat 是在 windows上用的\n        startup.bat     启动服务，双击即可使用 \n    conf\\       相关的配置文件，目前我们不用关心 \n    lib\\        运行 tomcat 需要的类库，我们不关心\n    logs\\       运行时的日志文件，我们有时需要查看日志，来发现定位一些问题 \n    temp\\       临时文件夹，不关心\n    webapps\\    存放我们要运行的 web application 的文件夹，对于我们最常用的一个文件夹 \n    work\\       Tomcat 内部进行预编译的文件夹，我们不关心\n\n下面都是一些文档，有兴趣的同学可以自行阅读 \n    BUIDING.txt\n    CONTRIBUTING.md \n    LICENSE\n    NOTICE\n    README.md \n    RELEASE-NOTES \n    RUNNING.txt\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-z4xtn4e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-z4xtn4e",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中我们最关注的目录就是 webapps 目录.  web applications 的简称, 意思是用来存放 web 应用的文件夹."
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-44d9nmh",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128084310-44d9nmh",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128084310-kpzkqep",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221128084310-kpzkqep",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "理解 \"web 应用\""
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n一个具有独立完整功能的 \"网站\", 我们就可以称为一个 \"web 应用\".\n例如  搜狗搜索  实现了独立完整的 \"搜索引擎功能\", 淘宝网  实现了独立完整的 \"电商功能\" .\n一个 Tomcat 服务器上是可以同时部署多个这样的 web 应用的. 这些 web 应用以目录的形式被放到 webapps 目录中."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-yccwaa1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-yccwaa1",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进入 webapps 目录"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-ljn6qj8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128084310-ljn6qj8",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "webapps\\\n    docs\\\n    examples\\ \n    host-manager\\ \n    manager\\ \n    ROOT\\\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-1vr35sh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-1vr35sh",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每个文件夹都对应着一个 web 应用, 可以在浏览器中分别访问每个 web 应用."
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-8kon1tu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128084310-8kon1tu",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "启动服务器"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-ilubhcu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-ilubhcu",
+				"updated": "20221128084408"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 bin 目录中, 双击   startup.bat 即可启动 Tomcat 服务器\n看到形如以下内容的日志, 说明启动成功.\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126154616"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126154616-20221128084408-ror8mkw.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-rlun1j4",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128084310-rlun1j4",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128084310-b5tw2qz",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221128084310-b5tw2qz",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "注意: 在 Windows 上通过 cmd 方式启动 Tomcat 会出现乱码. "
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "但是不影响 Tomcat 的使用"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ".\n乱码的原因是 Tomcat 默认按照 UTF-8 的编码方式处理中文. 而 windows 的 cmd 默认是 GBK 编码.\n如果使用 Linux 或者 IDEA 中的终端来启动 Tomcat, 则没有乱码问题. "
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "因此此处的乱码我们暂时不处理"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-ykhhnq0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-ykhhnq0",
+				"updated": "20221128084419"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在浏览器中输入   127.0.0.1:8080 即可看到 Tomcat 的默认欢迎页面.\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126154838"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126154838-20221128084419-2p5e1xt.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-2dmvl7d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-2dmvl7d",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果启动失败怎么办?"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-49ckpem",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221128084310-49ckpem",
+				"updated": "20221128084439"
+			},
+			"Children": [
+				{
+					"ID": "20221128084310-kgxi3gk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128084310-kgxi3gk",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"ID": "20221128084310-kxx0peb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128084310-kxx0peb",
+								"updated": "20221128084310"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "最常见的启动失败原因是端口号被占用."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128084310-8uxxeqe",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128084310-8uxxeqe",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"ID": "20221128084310-5w49ger",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128084310-5w49ger",
+								"updated": "20221128084310"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Tomcat 启动的时候默认会绑定 8080 和 8005 端口."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128084310-zjwlvlc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128084310-zjwlvlc",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"ID": "20221128084310-f0jaijx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128084310-f0jaijx",
+								"updated": "20221128084310"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果有其他进程已经绑定了这两个端口中的任意一个, 都会导致 Tomcat 不能启动."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128084310-jm8ncjb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128084310-jm8ncjb",
+						"updated": "20221128084439"
+					},
+					"Children": [
+						{
+							"ID": "20221128084310-1ayofri",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128084310-1ayofri",
+								"updated": "20221128084439"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在命令行中使用  "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": " netstat -ano | findstr 8080"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 确定看 8080 是否被其他进程绑定, 把对方进程干掉, 再重新启动 Tomcat 一般就可以解决问题.\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221126154930"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221126154930-20221128084439-naaol68.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-9bbgc85",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128084310-9bbgc85",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128084310-oa6qvqm",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221128084310-oa6qvqm",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "形如这样的结果说明 8080 端口已经被占用. 占用的进程是 13348 这个进程.\n然后就可以在任务管理器中找到这个进程, 并干掉这个进程."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-wshqugv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128084310-wshqugv",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "部署静态页面"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-6qdffk5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-6qdffk5",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "理解 \"静态\""
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "静态页面"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "也就是内容始终固定的页面. 即使  "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用户不同/时间不同/输入的参数不同 , 页面内容也不会发生变化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ". (除非网站的开发人员修改源代码, 否则页面内容始终不变)."
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-jkqjevr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-jkqjevr",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对应的, "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "动态页面"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指的就是  "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用户不同/时间不同/输入的参数不同, 页面内容会发生变化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-kkigor7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-kkigor7",
+				"updated": "20221128084454"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举个栗子:\nTomcat 的主页   https://tomcat.apache.org/ 就是一个静态页面.\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126155140"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126155140-20221128084454-gvfxosc.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221128084457-p5syun1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084457-p5syun1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而 B 站的主页   https://www.bilibili.com/ 则是一个动态页面.\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126155146"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126155146-20221128084507-6cihov2.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-w39zh2z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-w39zh2z",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "之前咱们写的 HTML, 都是写成固定的内容, 就可以理解成是 \"静态页面\""
+				}
+			]
+		},
+		{
+			"ID": "20221128084521-hzltgra",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084521-hzltgra"
+			}
+		},
+		{
+			"ID": "20221128084310-f390tx4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128084310-f390tx4",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "部署单个 HTML"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-xyp0ca3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-xyp0ca3",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们可以把自己写好的 HTML 部署到 Tomcat 中."
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-zvhmt5o",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128084310-zvhmt5o",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"ID": "20221128084310-pcthnai",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128084310-pcthnai",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"ID": "20221128084310-6outfre",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128084310-6outfre",
+								"updated": "20221128084310"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建 hello.html"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-u5l4zsn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128084310-u5l4zsn",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aHRtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!doctype html\u003e \n\u003chtml lang=\"en\"\u003e \n\u003chead\u003e\n    \u003cmeta charset=\"UTF-8\"\u003e \n    \u003cmeta name=\"viewport\"\n          content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\"\u003e \n    \u003ctitle\u003ehello\u003c/title\u003e\n\u003c/head\u003e \n\u003cbody\u003e\n    \u003cdiv\u003ehello\u003c/div\u003e \n\u003c/body\u003e\n\u003c/html\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-15brll6",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128084310-15brll6",
+				"updated": "20221128084546"
+			},
+			"Children": [
+				{
+					"ID": "20221128084310-i2tyd5n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128084310-i2tyd5n",
+						"updated": "20221128084538"
+					},
+					"Children": [
+						{
+							"ID": "20221128084310-gdf3d70",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128084310-gdf3d70",
+								"updated": "20221128084538"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "把 hello.html 拷贝到 Tomcat 的 webapps/ROOT 目录中.\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221126160050"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221126160050-20221128084538-y9i8bft.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128084310-438z3rt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128084310-438z3rt",
+						"updated": "20221128084546"
+					},
+					"Children": [
+						{
+							"ID": "20221128084310-cwhy32s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128084310-cwhy32s",
+								"updated": "20221128084546"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在浏览器中通过 URL "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "http://127.0.0.1:8080/hello.html"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 来访问\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221126160128"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221126160128-20221128084546-ois4agq.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-lka6wv0",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128084310-lka6wv0",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128084310-p5fxlw1",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221128084310-p5fxlw1",
+						"updated": "20221128084310"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "注意: 127.0.0.1 为环回 IP, 表示当前主机. 此时我们无法通过这个 IP 访问到别人电脑上的页面."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084548-y4nxf5q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084548-y4nxf5q"
+			}
+		},
+		{
+			"ID": "20221128084310-8sw54wr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128084310-8sw54wr",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "部署带有 CSS / JavaScript / 图片  的 HTML"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-3hztivw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-3hztivw",
+				"updated": "20221128084556"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实际开发时我们的 HTML 不仅仅是单一文件, 还需要依赖一些其他的资源: CSS, JavaScript, 图片等.\n这些资源也要一起部署过去\n我们这里就将我们写过的 [[WebAPI"
+				},
+				{
+					"Type": "NodeTag",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeTagOpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码案例: 猜数字|猜数字]] 和 [[WebAPI"
+						},
+						{
+							"Type": "NodeTagCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "代码案例: 表白墙|表白墙]]进行部署吧\n将文件拷贝到Tomcat 的   "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "webapps/ROOT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中.\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126160826"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126160826-20221128084556-gyy0c94.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-fibxlvn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-fibxlvn",
+				"updated": "20221128084601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时就可以在浏览器中进行访问了\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126161054"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126161054-20221128084601-546cnxh.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-gsn7d0n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128084310-gsn7d0n",
+				"updated": "20221128084310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "部署动态页面"
+				}
+			]
+		},
+		{
+			"ID": "20221128084310-sl0hbjx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084310-sl0hbjx",
+				"updated": "20221128084626"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221128084612-msp01xb"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "Servlet"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行构建动态页面"
+				}
+			]
+		},
+		{
+			"ID": "20221128084604-fpx3g0z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084604-fpx3g0z"
+			}
+		}
+	]
+}

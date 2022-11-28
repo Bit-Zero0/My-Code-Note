@@ -1,0 +1,4171 @@
+{
+	"ID": "20221128083839-8qd1p9v",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221128083839-8qd1p9v",
+		"title": "数据类型与变量",
+		"updated": "20221128084205"
+	},
+	"Children": [
+		{
+			"ID": "20221128083853-pcjyvr9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083853-pcjyvr9",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "字面常量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-47r43cw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-47r43cw",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在上节课HelloWorld程序中， "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "System.Out.println(\"Hello World\");"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  语句，不论程序何时运行，输出的都是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Hello World"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，其实\""
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Hello World"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"就是字面常量。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-8qsrb9z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-8qsrb9z",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "常量即程序运行期间，固定不变的量称为常量"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，比如：一个礼拜七天，一年12个月等。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-pbf9y5t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-pbf9y5t",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Demo{\n   public static void main(String[] args){\n        System.Out.println(\"hello world!\");\n        System.Out.println(100);\n        System.Out.println(3.14);\n        System.Out.println('A');\n        System.Out.println(true);\n        System.Out.println(false); \n  }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-4no97zo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-4no97zo",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "100"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "3.14"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "'A'"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "true/false"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "都是常量，将其称为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "字面常量"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083907-yucyhxg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083907-yucyhxg"
+			}
+		},
+		{
+			"ID": "20221128083853-xdilw8c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-xdilw8c",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "字面常量的分类："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-1rh58rn",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-1rh58rn",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-mi5qu50",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-mi5qu50",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-4gmdquj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-4gmdquj",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "字符串常量：由\"\"括起来的，比如“12345”、“hello”、“你好”。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-ah6k8xr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-ah6k8xr",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-bobam1e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-bobam1e",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "整形常量：程序中直接写的数字(注意没有小数点)，比如：100、1000"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-ixu1i0o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-ixu1i0o",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-wxb8d1q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-wxb8d1q",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "浮点数常量：程序中直接写的小数，比如：3.14、0.49"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-zqf1g9w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083853-zqf1g9w",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-w784lf5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-w784lf5",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "字符常量：由  单引号  括起来的当个字符，比如：‘A’、‘1’"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-t0d77t5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221128083853-t0d77t5",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-8wsw9ij",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-8wsw9ij",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "布尔常量：只有两种true和false"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-c9ef15y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20221128083853-c9ef15y",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-5z2ltbg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-5z2ltbg",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "空常量：null(后面了讲)\n注意：字符串、整形、浮点型、字符型以及布尔型，在Java中都称为数据类型。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083917-t2omwks",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083917-t2omwks"
+			}
+		},
+		{
+			"ID": "20221128083853-7dp171w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083853-7dp171w",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据类型"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-iou2y5n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-iou2y5n",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中数据类型主要分为两类：基本数据类型和引用数据类型。\n基本数据类型有四类八种："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-vab7lxj",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-vab7lxj",
+				"updated": "20221128083925"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-4nkwqd0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-4nkwqd0",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-q4eezng",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-q4eezng",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "四类：整型、浮点型、字符型以及布尔型"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-tv50h5s",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-tv50h5s",
+						"updated": "20221128083925"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-j4jyd9n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-j4jyd9n",
+								"updated": "20221128083925"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "八种：\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221126122309"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221126122309-20221128083925-tlevvjb.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n注意："
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-1n5aaqx",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221128083853-1n5aaqx",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-tqyfrey",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083853-tqyfrey",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-jp2ncym",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-jp2ncym",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不论是在16位系统还是32位系统，int都占用4个字节，long都占8个字节"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-sd7xhaj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083853-sd7xhaj",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-belz3lz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-belz3lz",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "整形和浮点型都是带有符号的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-mc7e5a7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083853-mc7e5a7",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-csea581",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-csea581",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "整型默认为int型，浮点型默认为double"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-ty5skkj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083853-ty5skkj",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-a27p7vo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-a27p7vo",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "字符串属于引用类型，该中类型后序介绍。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-ax28y81",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128083853-ax28y81",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128083853-yqxpbge",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221128083853-yqxpbge",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "什么是字节?"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-cwxbfcd",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221128083853-cwxbfcd",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-5q31ng1",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083853-5q31ng1",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"ID": "20221128083853-j9jpabi",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083853-j9jpabi",
+										"updated": "20221128083853"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "字节是计算机中表示空间大小的基本单位."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083853-0ar6awx",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083853-0ar6awx",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"ID": "20221128083853-lkguyb9",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083853-lkguyb9",
+										"updated": "20221128083853"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "计算机使用二进制表示数据. 我们认为 8 个二进制位(bit) 为一个字节(Byte)."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083853-98xuzmu",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083853-98xuzmu",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"ID": "20221128083853-vu1sv3f",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083853-vu1sv3f",
+										"updated": "20221128083853"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "我们平时的计算机为 8GB 内存, 意思是 8G 个字节."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083853-o226ol9",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083853-o226ol9",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"ID": "20221128083853-zbrwkw2",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083853-zbrwkw2",
+										"updated": "20221128083853"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "其中 "
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "1KB = 1024 Byte"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": ", "
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "1MB = 1024 KB"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": ", "
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "1GB = 1024 MB"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083853-ahbb7o4",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083853-ahbb7o4",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"ID": "20221128083853-vbe5nzg",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083853-vbe5nzg",
+										"updated": "20221128083853"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "所以 8GB 相当于 80 多亿个字节."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-edcqj9a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083853-edcqj9a",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-g1ywaoi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-g1ywaoi",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "变量概念"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-fv71asa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-fv71asa",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在程序中，除了有始终不变的常量外，有些内容可能会经常改变，比如：人的年龄、身高、成绩分数、数学函数的计算结果等，对于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "这些经常改变的内容，在Java程序中，称为变量。而数据类型就是用来定义不同种类变量的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-a8l2u1o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-a8l2u1o",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法格式"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-0ybazmi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-0ybazmi",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定义变量的语法格式为："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-whyd0ih",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-whyd0ih",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int a = 10;   // 定义整形变量a，a是变量名也称为标识符，该变量中放置的值为10 \ndouble d = 3.14;\nchar c = 'A';\nboolean b = true;\n\nSystem.Out.println(a);\nSystem.Out.println(d);\nSystem.Out.println(c);\nSystem.Out.println(b);\n\na = 100;  // a是变量，a中的值是可以修改的，注意：= 在java中表示赋值，即将100交给a，a中保存的值就是100 \nSystem.Out.println(a);\n\n// 注意：在一行可以定义多个相同类型的变量 \nint a1 = 10, a2 = 20, a3 = 30;\nSystem.Out.println(a1);\nSystem.Out.println(a2);\nSystem.Out.println(a3);\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083938-dxnl03t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083938-dxnl03t"
+			}
+		},
+		{
+			"ID": "20221128083853-9v0lf4m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-9v0lf4m",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "整型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-syco5rf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-syco5rf",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "int 整型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-l5gp7wb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-l5gp7wb",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 方式一：在定义时给出初始值 \nint a = 10;\nSystem.Out.println(a);\n\n// 方式二：在定义时没有给初始值，但使用前必须设置初值 \nint b;\nb = 10;\nSystem.Out.println(b);\n\n// 使用方式二定义后，在使用前如果没有赋值，则编译期间会报错 \nint c;\nSystem.Out.println(c);\nc = 100;\n\n// int型变量所能表示的范围：\nSystem.Out.println(Integer.MIN_VALUE);\nSystem.Out.println(Integer.MAX_VALUE);\n\n// 注意：在定义int性变量时，所赋值不能超过int的范围\nint d = 12345678901234;  // 编译时报错，初值超过了int的范围\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-0o8hkvc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-0o8hkvc",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-sbpn61m",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-sbpn61m",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-o1znuhd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-o1znuhd",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-k131w8n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-k131w8n",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "int不论在何种系统下都是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "4个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-rdvoa8n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-rdvoa8n",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-l4p2f3v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-l4p2f3v",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "推荐使用方式一定义，如果没有合适的初始值，可以设置为0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-y9vf02g",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-y9vf02g",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-pzrex4h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-pzrex4h",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在给变量设置初始值时，值不能超过int的表示范围，否则会导致溢出"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-lnxgmg9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083853-lnxgmg9",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-a2qas8p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-a2qas8p",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "变量在使用之前必须要赋初值，否则编译报错"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-8jp9ig7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221128083853-8jp9ig7",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-1b5ymkt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-1b5ymkt",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "int的包装类型为 Integer(可以理解为int的加强版)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083945-61qswar",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083945-61qswar"
+			}
+		},
+		{
+			"ID": "20221128083853-cvsb9yf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-cvsb9yf",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "long 长整型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-6wks9kj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-6wks9kj",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int a = 10;\nlong b = 10;   // long定义的长整型变量\n\nlong c = 10L; // 为了区分int和long类型，一般建议：long类型变量的初始值之后加L或者l\nlong d = 10l; // 一般更加以加大写L，因为小写l与1不好区分\n\n// long型变量所能表示的范围：这个数据范围远超过    int 的表示范围. 足够绝大部分的工程场景使用. \nSystem.Out.println(Long.MIN_VALUE);\nSystem.Out.println(Long.MAX_VALUE);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-myn3cle",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-myn3cle",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-mm7a357",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-mm7a357",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-nfkk0yr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-nfkk0yr",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-szbwn0f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-szbwn0f",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "长整型变量的初始值后加L或者l，推荐加L"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-i5qr5gx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-i5qr5gx",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-wkgq7r3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-wkgq7r3",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "长整型不论在那个系统下都占"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "8个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-785lp93",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-785lp93",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-xeu7lgr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-xeu7lgr",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "长整型的表示范围为："
+								},
+								{
+									"Type": "NodeInlineMath",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeInlineMathOpenMarker"
+										},
+										{
+											"Type": "NodeInlineMathContent",
+											"Data": "-2^{31}"
+										},
+										{
+											"Type": "NodeInlineMathCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ~ "
+								},
+								{
+									"Type": "NodeInlineMath",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeInlineMathOpenMarker"
+										},
+										{
+											"Type": "NodeInlineMathContent",
+											"Data": "2^{31}-1"
+										},
+										{
+											"Type": "NodeInlineMathCloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-lmzg7yz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083853-lmzg7yz",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-q0blw6j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-q0blw6j",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "long的包装类型为Long(可以理解为long的加强版)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083949-rukbb9d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083949-rukbb9d"
+			}
+		},
+		{
+			"ID": "20221128083853-d2yrpac",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-d2yrpac",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "short 短整型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-4wza23n",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-4wza23n",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "short a = 10;\nSystem.Out.println(a);\n\n// short型变量所能表示的范围：\nSystem.Out.println(Short.MIN_VALUE); \nSystem.Out.println(Short.MAX_VALUE);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-n0gz1kd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-n0gz1kd",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-wm92fv6",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-wm92fv6",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-q64z5sk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-q64z5sk",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-4w8zhxr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-4w8zhxr",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "short在任何系统下都占"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "2个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-j50knl6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-j50knl6",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-sd5shje",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-sd5shje",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "short的表示范围为：-32768 ~ 32767"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-zr43wm4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-zr43wm4",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-c4a3l6t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-c4a3l6t",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用时注意不要超过范围(一般使用比较少)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-qwpripe",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083853-qwpripe",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-ad614r2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-ad614r2",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "short的包装类型为Short"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083952-s43mma7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083952-s43mma7"
+			}
+		},
+		{
+			"ID": "20221128083853-at5gu8k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-at5gu8k",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "字节型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-x8xztaq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-x8xztaq",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "byte b = 10;\nSystem.Out.println(b);\n\n// byte型变量所能表示的范围：\nSystem.Out.println(Byte.MIN_VALUE); \nSystem.Out.println(Byte.MAX_VALUE);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-z6u58qw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-z6u58qw",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-97cg6mi",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-97cg6mi",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-u7hrpis",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-u7hrpis",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-2jvibhk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-2jvibhk",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "byte在任何系统下都占"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "1个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-hamtult",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-hamtult",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-j3w5mxh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-j3w5mxh",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "byte的范围是：-128 ~ 127"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-cwomhns",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-cwomhns",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-d8e0zwq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-d8e0zwq",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "字节的包装类型为Byte"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083956-gbyqgvb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083956-gbyqgvb"
+			}
+		},
+		{
+			"ID": "20221128083853-7f9wfd6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-7f9wfd6",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "思考：byte、short、int、long都可以定义整形变量，为什么要给出4中不同类型呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-gl0iyns",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-gl0iyns",
+				"updated": "20221128084004"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这就好比买衣服时的尺码：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221126123104"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221126123104-20221128084004-8c35rnk.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221128084006-ydtc9u5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084006-ydtc9u5"
+			}
+		},
+		{
+			"ID": "20221128083853-uepouyh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-uepouyh",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "浮点型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-d0mxogs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-d0mxogs",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "double双精度浮点型"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-w8h1n0p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-w8h1n0p",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "double d = 3.14; \nSystem.Out.println(d);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084034-hzjawq0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084034-hzjawq0"
+			}
+		},
+		{
+			"ID": "20221128083853-4a0d5um",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-4a0d5um",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "神奇的代码一："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-pojslv9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-pojslv9",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int a = 1; \nint b = 2;\nSystem.out.println(a / b);   // 输出 0.5 吗? 不会 结果为0\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084027-u8y853f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084027-u8y853f"
+			}
+		},
+		{
+			"ID": "20221128083853-ew981s1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-ew981s1",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在 Java 中, int 除以 int 的值仍然是 int(会直接舍弃小数部分)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。如果想得到 0.5, 需要使用 double 类型计算."
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-415ati3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-415ati3",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "double a = 1.0; \ndouble b = 2.0;\nSystem.out.println(a / b);   // 输出0.5\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084030-tsqxvqq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084030-tsqxvqq"
+			}
+		},
+		{
+			"ID": "20221128083853-trivbu9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-trivbu9",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "神奇的代码二："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-280n8o0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-280n8o0",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "double num = 1.1;\nSystem.out.println(num * num);  // 输出1.21吗？ \n\n// 执行结果\n1.2100000000000002\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-q6tsbqf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-q6tsbqf",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-hykssbm",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-hykssbm",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-txqys59",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-txqys59",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-gdxv8b6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-gdxv8b6",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "double在任何系统下都占"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "8个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-i3gfc99",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-i3gfc99",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-9t0a2m3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-9t0a2m3",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "浮点数与整数在内存中的存储方式不同，不能单纯使用 "
+								},
+								{
+									"Type": "NodeInlineMath",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeInlineMathOpenMarker"
+										},
+										{
+											"Type": "NodeInlineMathContent",
+											"Data": "2^n"
+										},
+										{
+											"Type": "NodeInlineMathCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的形式来计算"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-lr2p7pc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-lr2p7pc",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-9lylmuf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-9lylmuf",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "double的包装类型为Double"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-57qqzp5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083853-57qqzp5",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-i2qxiux",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-i2qxiux",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "double 类型的内存布局遵守 IEEE 754 标准(和C语言一样), 尝试使用有限的内存空间表示可能无限的小数, 势必\n会存在一定的精度误差，因此浮点数是个近似值，并不是精确值。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128084040-hvt1dzx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084040-hvt1dzx"
+			}
+		},
+		{
+			"ID": "20221128083853-g16apeh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-g16apeh",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "float 单精度浮点型"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-jsx6yja",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-jsx6yja",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "float num = 1.0f;    // 写作    1.0F 也可以 \nSystem.out.println(num);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-l389s18",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-l389s18",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ﬂoat 类型在 Java 中占四个字节, 同样遵守 IEEE 754 标准. 由于表示的数据精度范围较小, 一般在工程上用到浮点数都优先考虑 double, 不太推荐使用 ﬂoat. ﬂoat的包装类型为Float。"
+				}
+			]
+		},
+		{
+			"ID": "20221128084046-iy08ymg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084046-iy08ymg"
+			}
+		},
+		{
+			"ID": "20221128083853-effrna8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-effrna8",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "字符型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-akef1um",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-akef1um",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "char c1 = 'A';    // 大写字母 \nchar c2 = '1';    // 数字字符\n\nSystem.out.println(c1);\nSystem.out.println(c2);\n\n// 注意：java中的字符可以存放整形 \nchar c3 = '帅';\nSystem.out.println(c3);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-l5hmn88",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-l5hmn88",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项:"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-yvajp16",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-yvajp16",
+				"updated": "20221128084052"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-nvvf2yj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-nvvf2yj",
+						"updated": "20221128084052"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-5lvryc6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-5lvryc6",
+								"updated": "20221128084052"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 中使用  "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": " 单引号 + 单个字母"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的形式表示字符字面值."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-9ll3kx5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-9ll3kx5",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-6xchnpq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-6xchnpq",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "计算机中的字符本质上是一个整数. 在 C 语言中使用 ASCII 表示字符, 而 Java 中使用 Unicode 表示字符. 因此一个字符占用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "两个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ", 表示的字符种类更多, 包括中文."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-pe0rh7a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-pe0rh7a",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "char ch = '呵';\nSystem.out.println(ch);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084059-uv4mdnr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084059-uv4mdnr"
+			}
+		},
+		{
+			"ID": "20221128083853-vg1naa8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-vg1naa8",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行 javac 的时候可能出现以下错误:"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-2y7o6tw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-2y7o6tw",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Test.java:3: 错误: 未结束的字符文字 \n       char ch = '鍛?';\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084101-xzhtx4e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084101-xzhtx4e"
+			}
+		},
+		{
+			"ID": "20221128083853-k5pa3xx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-k5pa3xx",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时我们在执行 javac 时加上 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-encoding UTF-8"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 选项即可"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-7cnunf8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-7cnunf8",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "javac -encoding UTF-8 Test.java\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-amadhcj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-amadhcj",
+				"updated": "20221128084108"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关于字符编码方式的讨论, 参见\n"
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "https://zhuanlan.zhihu.com/p/35172335"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://zhuanlan.zhihu.com/p/35172335"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-c6h4j4v",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-c6h4j4v",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-mrbht0x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-mrbht0x",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-idmdfj1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-idmdfj1",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "char的包装类型为Character"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-pby42h9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-pby42h9",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "布尔型变量"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-58dd9ve",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-58dd9ve",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "布尔类型常用来表示真假，在现实生活中也是经常出现的，比如：听说xxx同学买彩票中了一个亿...，听到后估计大\n部分人第一反应就是：我x，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "真的假的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "？"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-acd7nzp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-acd7nzp",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "boolean b = true; \nSystem.out.println(b);\n\nb = false;\nSystem.out.println(b);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-vtpgsg0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-vtpgsg0",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-ip9zrwy",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-ip9zrwy",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-fyrxfn7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-fyrxfn7",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-4b7xudt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-4b7xudt",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "boolean 类型的变量只有两种取值, true 表示真, false 表示假."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-zcuhirc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-zcuhirc",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-9kpg6rp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-9kpg6rp",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 的 boolean 类型和 int 不能相互转换, "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不存在 1 表示 true, 0 表示 false 这样的用法"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-htqvy03",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-htqvy03",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "boolean value = true;\nSystem.out.println(value + 1); \n// 代码编译会出现如下错误\nTest.java:4: 错误: 二元运算符    '+' 的操作数类型错误 \n       System.out.println(value + 1);\n                                ^ \n 第一个类型:  boolean\n 第二个类型: int \n 1 个错误\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-hh8fr6r",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-hh8fr6r",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-6ysp2ph",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-6ysp2ph",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-l4x3bcg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-l4x3bcg",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java虚拟机规范中，并没有明确规定boolean占几个字节，也没有专门用来处理boolean的字节码指令，在 Oracle公司的虚拟机实现中，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "boolean占1个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-9l2n69u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083853-9l2n69u",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-bu5e5vm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-bu5e5vm",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "boolean的包装类型为Boolean。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-xn4lq0r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-xn4lq0r",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类型转换"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-wyja9d2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-wyja9d2",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 作为一个强类型编程语言, 当不同类型之间的变量相互赋值的时候, 会有教严格的校验."
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-ocyzfn6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-ocyzfn6",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int a = 10;\nlong b = 100L;\n\nb = a;   // 可以通过编译 \na = b;   // 编译失败\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-vnrbs1g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-vnrbs1g",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中，当参与运算数据类型不一致时，就会进行类型转换。Java中类型转换主要分为两类：自动类型转换(隐式)\n和  强制类型转换(显式)。"
+				}
+			]
+		},
+		{
+			"ID": "20221128084150-28zycvl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084150-28zycvl"
+			}
+		},
+		{
+			"ID": "20221128083853-qb11hal",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-qb11hal",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自动类型转换(隐式)"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-oyurs6d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-oyurs6d",
+				"updated": "20221128084201"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自动类型转换即："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码不需要经过任何处理，在代码编译时，编译器会自动进行处理。特点：数据范围小的转为数据范围大的时会自动进行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-s6kjn2b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-s6kjn2b",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "System.Out.println(1024);   // 整型默认情况下是int \nSystem.Out.println(3.14);   // 浮点型默认情况下是double\n\nint a = 100; \nlong b = 10L;\nb = a;   // a和b都是整形，a的范围小，b的范围大，当将a赋值给b时，编译器会自动将a提升为long类型，然后赋值 \na = b;   // 编译报错，long的范围比int范围大，会有数据丢失，不安全\n\nfloat f = 3.14F; \ndouble d = 5.12;\nd = f; // 编译器会将f转换为double，然后进行赋值\nf = d; // double表示数据范围大，直接将float交给double会有数据丢失，不安全 \n\nbyte b1 = 100;  // 编译通过，100没有超过byte的范围，编译器隐式将100转换为byte\nbyte b2 = 257;  // 编译失败，257超过了byte的数据范围，有数据丢失\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128084205-styxoni",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128084205-styxoni"
+			}
+		},
+		{
+			"ID": "20221128083853-xt3owxd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-xt3owxd",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "强制类型转换(显式)"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-dwqyq24",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-dwqyq24",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "强制类型转换：当进行操作时，代码需要经过一定的格式处理，不能自动完成。特点：数据范围大的到数据范围小的。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-zxkvfc4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-zxkvfc4",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int a = 10; \nlong b = 100L;\nb = a;        // int--\u003elong，数据范围由小到大，隐式转换\na = (int)b;   // long--\u003eint, 数据范围由大到小，需要强转，否则编译失败 \n\nfloat f = 3.14F;\ndouble d = 5.12;\nd = f;        // float--\u003edouble，数据范围由小到大，隐式转换\nf = (float)d; // double--\u003efloat, 数据范围由大到小，需要强转，否则编译失败 \n\na = d;   // 报错，类型不兼容\na = (int)d;   // double没有int表示的数据范围大，需要强转，小数点之后全部丢弃 \n\nbyte b1 = 100;        // 100默认为int，没有超过byte范围，隐式转换\nbyte b2 = (byte)257;  // 257默认为int，超过byte范围，需要显示转换，否则报错 \n\nboolean flag = true;\na = flag;   // 编译失败：类型不兼容 \nflag = a;   // 编译失败：类型不兼容\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-1xmf3l9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-1xmf3l9",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-2w3c7kv",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-2w3c7kv",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-m20bqbd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-m20bqbd",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-ig87h2c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-ig87h2c",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不同数字类型的变量之间赋值, 表示范围更小的类型能隐式转换成范围较大的类型"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-yfcp0cg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-yfcp0cg",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-1hlglcg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-1hlglcg",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果需要把范围大的类型赋值给范围小的, 需要强制类型转换, 但是可能精度丢失"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-z794s3o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083853-z794s3o",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-8m1602j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-8m1602j",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将一个字面值常量进行赋值的时候, Java 会自动针对数字范围进行检查"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-04d4v33",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083853-04d4v33",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-qt0o39r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-qt0o39r",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "强制类型转换不一定能成功，不相干的类型不能互相转换"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-3q4xbo0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083853-3q4xbo0",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类型提升"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-fw9yl9n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-fw9yl9n",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不同类型的数据之间相互运算时，数据类型小的会被提升到数据类型大的。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-0a81if7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-0a81if7",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1. int与long之间：int会被提升为long"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-4ecmt2d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-4ecmt2d",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int a = 10; \nlong b = 20;\nint c = a + b;    // 编译出错: a + b==》int + long--\u003e long + long 赋值给int时会丢失数据 \nlong d = a + b;   // 编译成功：a + b==\u003eint + long---\u003elong + long 赋值给long  \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-0wf17zy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221128083853-0wf17zy",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2. byte与byte的运算"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-pa3yu2k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-pa3yu2k",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "byte a = 10;\nbyte b = 20;\nbyte c = a + b; \nSystem.out.println(c);\n// 编译报错\nTest.java:5: 错误: 不兼容的类型: 从int转换到byte可能会有损失 \n               byte c = a + b;\n\t\t\t\t          ^\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-0zgk4sm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-0zgk4sm",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结论: byte 和 byte 都是相同类型, 但是出现编译报错. 原因是, 虽然 a 和 b 都是 byte, 但是计算 a + b 会先将 a 和 b 都提升成 int, 再进行计算, 得到的结果也是 int, 这是赋给 c, 就会出现上述错误.\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "由于计算机的 CPU 通常是按照 4 个字节为单位从内存中读写数据. 为了硬件上实现方便, 诸如 byte 和 short 这\n种低于 4 个字节的类型, 会先提升成 int, 再参与计算."
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-2si1ok8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-2si1ok8",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "正确的写法:"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-es1rwit",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-es1rwit",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "byte a = 10;\nbyte b = 20;\nbyte c = (byte)(a + b); \nSystem.out.println(c);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-ujmkyt9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-ujmkyt9",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "【类型提升小结:】"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-dyjgt8n",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-dyjgt8n",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-iffn5f4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-iffn5f4",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-7a1eyen",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-7a1eyen",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不同类型的数据混合运算, 范围小的会提升成范围大的."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083853-gpnpsh6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-gpnpsh6",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-fr6efbf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-fr6efbf",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于 short, byte 这种比 4 个字节小的类型, 会先提升成 4 个字节的 int , 再运算."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-rylndyq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083853-rylndyq",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "字符串类型"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-qlj8ztr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-qlj8ztr",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中使用String类定义字符串类型，比如"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-tzc4pyk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-tzc4pyk",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void main(String[] args) { \n   String s1 = \"hello\";\n   String s2 = \" world\";\n   System.out.println(s1);\n   System.out.println(s2);\n   System.out.println(s1+s2);   // s1+s2表示：将s1和s2进行拼接 \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-togpby9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-togpby9",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在有些情况下，需要将字符串和整形数字之间进行转换："
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-k4yuetd",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-k4yuetd",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-29dz9do",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083853-29dz9do",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-lrjdzs9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-lrjdzs9",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "int 转成 String"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-dgrtp4i",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-dgrtp4i",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int num = 10; \n\n// 方法1\nString str1 = num + \"\";  \n\n// 方法2\nString str2 = String.valueOf(num);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-47rfob4",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083853-47rfob4",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"ID": "20221128083853-89fk6g4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083853-89fk6g4",
+						"updated": "20221128083853"
+					},
+					"Children": [
+						{
+							"ID": "20221128083853-60wzxcd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083853-60wzxcd",
+								"updated": "20221128083853"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "String 转成 int"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-eg1rtob",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083853-eg1rtob",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "String str = \"100\";\nint num = Integer.parseInt(str);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083853-yvm9hal",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083853-yvm9hal",
+				"updated": "20221128083853"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "本节对只是对字符串进行简单的介绍，大家能够正常使用即可，后序会详细给大家介绍。"
+				}
+			]
+		}
+	]
+}

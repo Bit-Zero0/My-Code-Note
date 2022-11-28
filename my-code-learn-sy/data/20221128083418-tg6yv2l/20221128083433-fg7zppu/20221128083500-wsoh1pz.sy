@@ -1,0 +1,1859 @@
+{
+	"ID": "20221128083500-wsoh1pz",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221128083500-wsoh1pz",
+		"title": "初识Java",
+		"updated": "20221128083832"
+	},
+	"Children": [
+		{
+			"ID": "20221128083521-son4jf3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083521-son4jf3",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "初识Java的main方法"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-y6dpd4f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083521-y6dpd4f",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "main方法示例"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-8pllzr6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083521-8pllzr6",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class HelloWorld{\n\tpublic static void main(String[] args){ \n\t\tSystem.out.println(\"Hello,world\");\n\t} \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-uvad76a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-uvad76a",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如上展示的就是最简单的一个Java程序，可能同学们看到后一头雾水，可以说，Java的main方法应该是当前主流编程语言中最“长”的。\n通过上述代码，我们可以看到一个完整的Java程序的结构，Java程序的结构由如下三个部分组成："
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-k7idunm",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128083521-k7idunm",
+				"updated": "20221128083531"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128083521-ft5wc7s",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20221128083521-ft5wc7s",
+						"updated": "20221128083531"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-bjuf9fa",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20221128083521-bjuf9fa",
+								"updated": "20221128083531"
+							},
+							"Children": [
+								{
+									"ID": "20221128083521-nosel6b",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083521-nosel6b",
+										"updated": "20221128083531"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "源文件（扩展名为"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "*.java"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": ")：源文件带有类的定义。类用来表示程序的一个组件，小程序或许只会有一个类。 类的内容必须包含在花括号里面。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083521-s19382d",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20221128083521-s19382d",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"ID": "20221128083521-9z66c1o",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083521-9z66c1o",
+										"updated": "20221128083521"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "类：类中带有一个或多个方法。方法必须在类的内部声明。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083521-zgxko6k",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20221128083521-zgxko6k",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"ID": "20221128083521-adtxofk",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083521-adtxofk",
+										"updated": "20221128083521"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "方法：在方法的花括号中编写方法应该执行的语句。\n总结一下：类存在于源文件里面；方法存在于类中；语句存在于方法中。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-6m56sl1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-6m56sl1",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意：在一个源文件中只能有一个"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "public"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "修饰的类，而且源文件名字必须与"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "public"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "修饰的类名字相同。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n好了，代码编写完了，如何让它“运行”起来呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-e1vtp1w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083521-e1vtp1w",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行Java程序"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-tqa8703",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-tqa8703",
+				"updated": "20221128083718"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java是一门半编译型、半解释型语言。先通过javac编译程序把源文件进行编译，编译后生成的.class文件是由字节码组成的平台无关、面向JVM的文件。最后启动java虚拟机来运行.class文件，此时JVM会将字节码转换成平台能够理解的形式来运行。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221125231325"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221125231325-20221128083702-va87day.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n注意：在运行Java程序前，必须先安装好JDK(Java Development Kit即Java开发工具包)，JDK里面就包含了javac和java工具，Java程序最终是在JVM( Java虚拟机)中运行的。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-vxu5wn0",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221128083521-vxu5wn0",
+				"updated": "20221128083738"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221128083521-s4guone",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221128083521-s4guone",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "【面试题】JDK、JRE、JVM之间的关系？"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-k9au8ln",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221128083521-k9au8ln",
+						"updated": "20221128083738"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-jzep814",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083521-jzep814",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"ID": "20221128083521-a2gsdmr",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083521-a2gsdmr",
+										"updated": "20221128083521"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "JDK"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "( Java Development Kit):Java开发工具包，提供给Java程序员使用，包含了JRE，同时还包含了编译器javac与自带的调试工具Jconsole、jstack等。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083521-wi2h62u",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083521-wi2h62u",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"ID": "20221128083521-je71hin",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083521-je71hin",
+										"updated": "20221128083521"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "JRE"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "( Java Runtime Environment):Java运行时环境，包含了JVM，Java基础类库。是使用Java语言编写程序运行的所需环境。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221128083521-uzztek0",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221128083521-uzztek0",
+								"updated": "20221128083738"
+							},
+							"Children": [
+								{
+									"ID": "20221128083521-kthqiup",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221128083521-kthqiup",
+										"updated": "20221128083738"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "JVM"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：Java虚拟机，运行Java代码\n​"
+										},
+										{
+											"Type": "NodeImage",
+											"Data": "span",
+											"Children": [
+												{
+													"Type": "NodeBang"
+												},
+												{
+													"Type": "NodeOpenBracket"
+												},
+												{
+													"Type": "NodeLinkText",
+													"Data": "Pasted image 20221125231527"
+												},
+												{
+													"Type": "NodeCloseBracket"
+												},
+												{
+													"Type": "NodeOpenParen"
+												},
+												{
+													"Type": "NodeLinkDest",
+													"Data": "assets/Pasted image 20221125231527-20221128083738-6ir6cq7.png"
+												},
+												{
+													"Type": "NodeCloseParen"
+												}
+											]
+										},
+										{
+											"Type": "NodeBr",
+											"Data": "br"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-kmo5y3w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-kmo5y3w",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "编写和运行第一个Java程序时，可能会遇到的一些错误："
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-3wm1fw6",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083521-3wm1fw6",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"ID": "20221128083521-3z89bka",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083521-3z89bka",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-q5gchni",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-q5gchni",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "源文件名后缀不是"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": ".java"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-pa3qaai",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083521-pa3qaai",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-47a91om",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-47a91om",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类名与文件名不一致"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-vqpdmo2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083521-vqpdmo2",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-qaka687",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-qaka687",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "main方法名字写错：mian"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-u7f83mm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083521-u7f83mm",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-p1netlf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-p1netlf",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类没有使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "public"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "修饰"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-tzgo4u6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221128083521-tzgo4u6",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-xdjokr9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-xdjokr9",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "方法中语句没有以分号结尾"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-55zy5wk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20221128083521-55zy5wk",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-hfnm2dz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-hfnm2dz",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "中文格式的分号"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-m9g7gl7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ny4=",
+						"Num": 7
+					},
+					"Properties": {
+						"id": "20221128083521-m9g7gl7",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-fhkc1n7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-fhkc1n7",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JDK环境没有配置好，操作系统不能识别"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "javac"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或者"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "命令"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-1wlozq9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083521-1wlozq9",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注释"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-qznssrs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-qznssrs",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java中的注释主要分为以下三种"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-6gmup4o",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221128083521-6gmup4o",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"ID": "20221128083521-foxr8xz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-foxr8xz",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-wtuzs2o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-wtuzs2o",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "单行注释："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "// 注释内容"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（用的最多）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-1wd75cb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-1wd75cb",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-x15rryw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-x15rryw",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多行注释："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "/* 注释内容*/"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（不推荐）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-uhg4lbv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-uhg4lbv",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-jbhs72l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-jbhs72l",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "文档注释： "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "/** 文档注释 */"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（常见于方法和类之上描述方法和类的作用)，可以被javadoc工具解析，生成一套以网页文件形式体现的程序说明文档"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083811-p156b4t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083811-p156b4t"
+			}
+		},
+		{
+			"ID": "20221128083521-ngiekun",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-ngiekun",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-mjodwp8",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083521-mjodwp8",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"ID": "20221128083521-u9ded4m",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083521-u9ded4m",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-gv12mbo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-gv12mbo",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多行注释不能嵌套使用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-x4l4q7u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083521-x4l4q7u",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-fkfe0cy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-fkfe0cy",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不论是单行还是多行注释，都不参与编译，即编译之后生成的.class文件中不包含注释信息。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-kptj4hc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221128083521-kptj4hc",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n文档注释：\n\t@version v1.0.0 \n\t@author will\n\t作用HelloWorld类，入门第一个程序练习 \n*/\npublic class HelloWorld{ \n\t/*\n\t\t多行注释：\n\t\t1. main方法是Java程序的入口方法\n\t\t2. main函数的格式是固定的，必须为public static void main(String[] args) \n\t*/\n\n\t/**\n\t\tmain方法是程序的入口函数 \n\t\t@param args 命令行参数。 \n\t*/\n   public static void main(String[] args){\n   // 单行注释：System.out.println是Java中标准输出，会将内容输出到控制台 \n   System.out.println(\"Hello World\");\n\t} \n}\n------------------------------------------------------------------------------------\n// 在cmd中，使用javadoc工具从Java源码中抽离出注释 \n// -d 创建目录         myHello为目录名\n// -author 显示作者 \n// -version 显示版本号\n// -encoding UTF-8 -charset UTF-8 字符集修改为UTF-8\njavadoc -d myHello -author -version -encoding UTF-8 -charset UTF-8 HelloWorld.java\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221128083816-78iwlbo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083816-78iwlbo"
+			}
+		},
+		{
+			"ID": "20221128083521-56ot08m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221128083521-56ot08m",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注释规范"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-a0b72sb",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221128083521-a0b72sb",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"ID": "20221128083521-w91phj8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221128083521-w91phj8",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-oqcvco1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-oqcvco1",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "内容准确: 注释内容要和代码一致, 匹配, 并在代码修改时及时更新."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-rw8qktj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221128083521-rw8qktj",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-wfwn0l2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-wfwn0l2",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "篇幅合理: 注释既不应该太精简, 也不应该长篇大论."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-1wm8epa",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221128083521-1wm8epa",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-t6v51cp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-t6v51cp",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用中文: 一般中国公司都要求使用中文写注释, 外企另当别论."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-qjhxfqo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221128083521-qjhxfqo",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-ij92zlt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-ij92zlt",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "积极向上: 注释中不要包含负能量(例如  领导 SB 等)."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083818-b8ra4sx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083818-b8ra4sx"
+			}
+		},
+		{
+			"ID": "20221128083521-4qfae61",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083521-4qfae61",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "标识符"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-jaa8u99",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-jaa8u99",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在上述程序中，Test称为类名，main称为方法名，也可以将其称为标识符，即："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在程序中由用户给类名、方法名或者变量所取的名字。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-1i1hnyv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-1i1hnyv",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "【硬性规则】"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-puqvia8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221128083521-puqvia8",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"ID": "20221128083521-k6tkhd0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-k6tkhd0",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-pjkmvpi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-pjkmvpi",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "标识符中可以包含：字母、数字以及  下划线和 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "$"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 符号等等。"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-zqvojh3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-zqvojh3",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-zp41mn4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-zp41mn4",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "注意：标识符不能以数字开头，也不能是关键字，且严格区分大小写。"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083822-1cyrpw5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083822-1cyrpw5"
+			}
+		},
+		{
+			"ID": "20221128083521-9pg5xe5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-9pg5xe5",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "【软性建议】"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-r60o8yy",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221128083521-r60o8yy",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"ID": "20221128083521-vdsm2ud",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-vdsm2ud",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-yekchzh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-yekchzh",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类名：每个单词的首字母大写(大驼峰)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-9ntlmke",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-9ntlmke",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-zv46akx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-zv46akx",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "方法名：首字母小写，后面每个单词的首字母大写(小驼峰)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221128083521-psl2bgv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221128083521-psl2bgv",
+						"updated": "20221128083521"
+					},
+					"Children": [
+						{
+							"ID": "20221128083521-0tj5h0i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221128083521-0tj5h0i",
+								"updated": "20221128083521"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "变量名：与方法名规则相同\n一个大型的工程，是由多名工程师协同开发的，如果每个人都按照自己的方式随意取名，比如："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "person"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "、"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "PERSON"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "、"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Person"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "、"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "_person"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，将会使程序非常混乱。如果大家在取名时能够遵守一定的约束(即规范)，那多人写除的代码仿佛一个人写的。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-3extmsc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-3extmsc",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面那些标识符是合法的？\nA：class     B：HelloWorld       C：main         D：123abc       E：ARRAY_SIZE         F: $name         G: name:jim"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-9wz1xht",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221128083521-9wz1xht",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关键字"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-0wfoa1q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-0wfoa1q",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过观察上述程序可以发现，public、class以及static等颜色会发生变化，将这些具有特殊含义的标识符称为关键字。即：关键字是由Java语言提前定义好的，有特殊含义的标识符，或者保留字。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-334ont4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-334ont4",
+				"updated": "20221128083521"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：用户不能使用关键字定义标识符。"
+				}
+			]
+		},
+		{
+			"ID": "20221128083521-sg8uo4o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221128083521-sg8uo4o",
+				"updated": "20221128083832"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中关键字有很多，这里给大家列出来一部分，先了解下后序在逐一详细解释。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221125232207"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221125232207-20221128083832-e96uyxb.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		}
+	]
+}
