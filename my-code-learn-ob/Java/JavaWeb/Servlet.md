@@ -1199,30 +1199,776 @@ Connection: keep-alive
 ```
 
 
+## 代码示例: 服务器版表白墙
+结合上述 API, 我们可以把之前实现的表白墙程序修改成服务器版本. 这样即使页面关闭, 表白墙的内容也不会丢失.
+
+1. 告诉服务器,当前留言了一条啥样的数据
+![[Pasted image 20221129130743.png]]
+
+
+2. 从服务器获取到,当前都有哪些留言数据
+![[Pasted image 20221129130941.png]]
+ 
+### 必知点
+![[Pasted image 20221129131404.png]]
+
+- ObjectMapper 的 readValue 方法也能直接从一个 InputStream 对象读取数据. 
+- ObjectMapper 的 writeValueAsString 方法也能把一个对象数组直接转成 JSON 格式的字符串.
+
+#### 对象和JSON字符串之间的转换
+**Java**
+`objectMapper.readValue`把 json字符串转成对象
+`objectMapper.writeValueAsString` 把对象转成json字符串
+
+**JS**
+`JSON.parse`把 json字符串转成对象
+`JSON.stringify`把对象转成json字符串
+
+### 项目代码
+- 新建一个项目：message_wall
+
+- pox.xml 文件配置
+```xml
+<?xml version="1.0" encoding="UTF-8"?>  
+<project xmlns="http://maven.apache.org/POM/4.0.0"  
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+    <modelVersion>4.0.0</modelVersion>  
+  
+    <groupId>org.example</groupId>  
+    <artifactId>message_wall</artifactId>  
+    <version>1.0-SNAPSHOT</version>  
+  
+    <properties>        
+	    <maven.compiler.source>8</maven.compiler.source>  
+        <maven.compiler.target>8</maven.compiler.target>  
+    </properties>  
+    <dependencies>        
+	    <dependency>            
+		    <groupId>javax.servlet</groupId>  
+            <artifactId>javax.servlet-api</artifactId>  
+            <version>3.1.0</version>  
+            <scope>provided</scope>  
+        </dependency>        
+        
+        <dependency>            
+	        <groupId>com.fasterxml.jackson.core</groupId>  
+            <artifactId>jackson-databind</artifactId>  
+            <version>2.13.0</version>  
+        </dependency>  
+        
+        <dependency>            
+	        <groupId>mysql</groupId>  
+            <artifactId>mysql-connector-java</artifactId>  
+            <version>8.0.28</version>  
+        </dependency>    
+    </dependencies>  
+</project>
+```
+
+**表白墙：love_wall.html**
+在文件中加入ajax代码来与服务器进行交互。
+```html
+<!DOCTYPE html>  
+<html lang="en">  
+  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>表白墙</title>  
+</head>  
+  
+<body>  
+<style>  
+    * {  
+        margin: 0;  
+        padding: 0;  
+        box-sizing: border-box;  
+    }  
+  
+    .container {  
+        width: 100%;  
+    }  
+  
+    h3 {  
+        text-align: center;  
+        padding: 30px 0;  
+        font-size: 24px;  
+    }  
+  
+    p {  
+        text-align: center;  
+        color: #999;  
+        padding: 10px 0;  
+    }  
+  
+    .row {  
+        width: 400px;  
+        height: 50px;  
+        margin: 0 auto;  
+  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+    }  
+  
+    .row span {  
+        width: 60px;  
+        font-size: 20px;  
+    }  
+  
+    .row input {  
+        width: 300px;  
+        height: 40px;  
+        line-height: 40px;  
+        font-size: 20px;  
+        text-indent: 0.5em;  
+        /* 去掉输入框的轮廓线 */        outline: none;  
+    }  
+  
+    .row #submit {  
+        width: 300px;  
+        height: 40px;  
+        font-size: 20px;  
+        line-height: 40px;  
+        margin: 0 auto;  
+  
+        color: white;  
+        background-color: orange;  
+        /* 去掉边框 */        border: none;  
+  
+        border-radius: 10px;  
+    }  
+  
+    .row #submit:active {  
+        background-color: gray;  
+    }  
+</style>  
+<div class="container">  
+    <h3>表白墙</h3>  
+    <p>输入后点击提交, 会将信息显示在表格中</p>  
+    <div class="row">  
+        <span>谁: </span>  
+        <input type="text">  
+    </div>    <div class="row">  
+        <span>对谁: </span>  
+        <input type="text">  
+    </div>    <div class="row">  
+        <span>说: </span>  
+        <input type="text">  
+    </div>    <div class="row">  
+        <button id="submit">提交</button>  
+    </div></div>  
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+<script>  
+    // 加入ajax的代码，此处加入导入逻辑有两个部分  
+    // 点击按钮提交的时候，ajax要构造数据发给服务器  
+    // 页面加载时，从服务器获取消息列表， 并在界面上直接显示  
+    function getMessages() {  
+        $.ajax({  
+            type: "get",  
+            url: "message",  
+            success: function (body) {  
+                // 当前body以及是一个js对象的数组了，ajax会根据响应的content type来自动进行解析  
+                // 如果服务器返回的content-type 已经是 application/json 了， ajax就会把body自动转成js的对象  
+                // 如果客户端没有自动转换，也可以通过 JSON.parse() 这个函数来手动转换  
+  
+                let container = document.querySelector('.container');  
+                for (let message of body) {  
+                    let div = document.createElement('div');  
+                    div.innerHTML = message.from + ' 对 ' + message.to + ' 说 ' + message.message;  
+                    div.className = 'row';  
+                    container.appendChild(div);  
+                }  
+            }  
+        });  
+    }  
+  
+    getMessages();  
+    // 当用户点击 submit, 就会获取到 input 中的内容, 从而把内容构造成一个 div, 插入到页面末尾.  
+    let submitBtn = document.querySelector('#submit');  
+    submitBtn.onclick = function () {  
+        // 1. 获取到 3 个 input 中的内容.  
+        let inputs = document.querySelectorAll('input');  
+        let from = inputs[0].value;  
+        let to = inputs[1].value;  
+        let msg = inputs[2].value;  
+        if (from == '' || to == '' || msg == '') {  
+            // 用户还没填写完, 暂时先不提交数据.  
+            return;  
+        }  
+        // 2. 生成一个新的 div, 内容就是 input 里的内容. 把这个新的 div 加到页面中.  
+        let div = document.createElement('div');  
+        div.innerHTML = from + ' 对 ' + to + ' 说: ' + msg;  
+        div.className = 'row';  
+        let container = document.querySelector('.container');  
+        container.appendChild(div);  
+        // 3. 清空之前输入框的内容.  
+        for (let i = 0; i < inputs.length; i++) {  
+            inputs[i].value = '';  
+        }  
+  
+        //4. 把当前获取到的输入框的内容，构造成一个HTTP Post请求，通过ajax发个服务器  
+        let body = {  
+            from: from,  
+            to: to,  
+            message: msg  
+        };  
+  
+        $.ajax({  
+            type: "post",  
+            url: "message",  
+            contentType: "application/json; charset=utf8",  
+            data: JSON.stringify(body),  
+            success: function (body) {  
+                alert("消息提交成功");  
+            },  
+            error: function () {  
+                alert("消息提交失败");  
+            }  
+        });  
+    }  
+  
+  
+</script>  
+</body>  
+  
+</html>
+```
+
+
+**创建 MessageServlet 类**
+其中包含了 Message类， Message类就是每一条数据的格式
+```java
+import com.fasterxml.jackson.databind.ObjectMapper;  
+  
+import javax.servlet.ServletException;  
+import javax.servlet.annotation.WebServlet;  
+import javax.servlet.http.HttpServlet;  
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpServletResponse;  
+import java.io.IOException;  
+import java.sql.Connection;  
+import java.sql.PreparedStatement;  
+import java.sql.ResultSet;  
+import java.sql.SQLException;  
+import java.util.ArrayList;  
+import java.util.List;  
+  
+  
+class Message {  
+    public String from;  
+    public String to;  
+    public String message;  
+}  
+  
+@WebServlet("/message")  
+public class MessageServlet extends HttpServlet {  
+    private ObjectMapper objectMapper = new ObjectMapper();  
+  
+    // 改成数据库, 就不需要这个变量了  
+    // private List<Message> messages = new ArrayList<>();  
+  
+    @Override  
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {  
+        // 处理提交消息请求  
+        Message message = objectMapper.readValue(req.getInputStream(), Message.class);  
+        // 最简单的保存方法就是保存到内存中.  
+        // messages.add(message);        // 通过 ContentType 来告知页面, 返回的数据是 json 格式.  
+        // 有了这样的声明, 此时 jquery ajax 就会自动的帮我们把字符串转成 js 对象.  
+        // 如果没有, jquery ajax 就只是当成字符串来处理的~~  
+        save(message);  
+        resp.setContentType("application/json; charset=utf8");  
+        resp.getWriter().write("{ \"ok\": true }");  
+    }  
+  
+    @Override  
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {  
+        // 获取到消息列表. 只要把消息列表中的内容整个的都返回给客户端即可  
+        // 此处需要使用 ObjectMapper 把 Java 对象, 转成 JSON 格式字符串~  
+        List<Message> messages = load();  
+        String jsonString = objectMapper.writeValueAsString(messages);  
+        System.out.println("jsonString: " + jsonString);  
+        resp.setContentType("application/json; charset=utf8");  
+        resp.getWriter().write(jsonString);  
+    }  
+  
+    private void save(Message message) {  
+        // 把一条消息保存到数据库中  
+        Connection connection = null;  
+        PreparedStatement statement = null;  
+        try {  
+            // 1. 和数据库建立连接  
+            connection = DBUtil.getConnection();  
+            // 2. 构造 SQL            
+            String sql = "insert into message values(?, ?, ?)";  
+            statement = connection.prepareStatement(sql);  
+            statement.setString(1, message.from);  
+            statement.setString(2, message.to);  
+            statement.setString(3, message.message);  
+            // 3. 执行 SQL            statement.executeUpdate();  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        } finally {  
+            DBUtil.close(connection, statement, null);  
+        }  
+    }  
+  
+    private List<Message> load() {  
+        // 从数据库中获取到所有的消息  
+        List<Message> messages = new ArrayList<>();  
+        Connection connection = null;  
+        PreparedStatement statement = null;  
+        ResultSet resultSet = null;  
+        try {  
+            connection = DBUtil.getConnection();  
+            String sql = "select * from message";  
+            statement = connection.prepareStatement(sql);  
+            resultSet = statement.executeQuery();  
+            while (resultSet.next()) {  
+                Message message = new Message();  
+                message.from = resultSet.getString("from");  
+                message.to = resultSet.getString("to");  
+                message.message =  resultSet.getString("message");  
+                messages.add(message);  
+            }  
+        } catch (SQLException throwables) {  
+            throwables.printStackTrace();  
+        } finally {  
+            DBUtil.close(connection, statement, resultSet);  
+        }  
+        return messages;  
+    }  
+}
+```
+
+
+**DBUtil类**
+这里我在mysql中创建了一个message_wall库,在库中创建了message表
+```sql
+create database message_wall;
+
+use message_wall;
+
+create table message(`from` varchar(100) , `to` varchar(100) , to text);
+```
+from 和 to是sql中的关键字.当关键字作为表名/列名的时候,需要加上反引号 
+
+
+```java
+import com.mysql.cj.jdbc.MysqlDataSource;  
+  
+import javax.sql.DataSource;  
+import java.sql.Connection;  
+import java.sql.PreparedStatement;  
+import java.sql.ResultSet;  
+import java.sql.SQLException;  
+  
+public class DBUtil {  
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/message_wall?characterEncoding=utf8&useSSL=false";  
+    private static final String USERNAME = "root";  
+    private static final String PASSWORD = "back7671773";  
+  
+    private volatile static DataSource dataSource = null;  
+  
+    private static DataSource getDataSource() {   // getConnection 是在多线程环境下执行的，所以有线程安全问题，所以在这里使用了双判定
+        if (dataSource == null) {  
+            synchronized (DBUtil.class) {  
+                if (dataSource == null) {  
+                    dataSource = new MysqlDataSource();  
+                    ((MysqlDataSource)dataSource).setUrl(URL);  
+                    ((MysqlDataSource)dataSource).setUser(USERNAME);  
+                    ((MysqlDataSource)dataSource).setPassword(PASSWORD);  
+                }  
+            }  
+        }  
+        return dataSource;  
+    }  
+  
+    public static Connection getConnection() throws SQLException {  
+        return getDataSource().getConnection();  
+    }  
+  
+    public static void close(Connection connection, PreparedStatement statement, ResultSet resultSet) {  
+        if (resultSet != null) {  
+            try {  
+                resultSet.close();  
+            } catch (SQLException e) {  
+                e.printStackTrace();  
+            }  
+        }  
+        if (statement != null) {  
+            try {  
+                statement.close();  
+            } catch (SQLException e) {  
+                e.printStackTrace();  
+            }  
+        }  
+        if (connection != null) {  
+            try {  
+                connection.close();  
+            } catch (SQLException e) {  
+                e.printStackTrace();  
+            }  
+        }  
+    }  
+}
+```
+
+
+## 小结
+开发 一个表白墙网站的基本步骤
+1. 约定前后端交互的接口
+2. 开发服务器代码
+	1) 先编写 Servlet能够处理前端发来的请求
+	2) 编写数据库代码 ， 来存储/获取关键数据
+3. 开发客户端代码
+	1) 基于ajax能够构造请求以及解析响应
+	2) 能够响应用户的操作(点击按钮之后,触发给服务器发送请求的行为)
+
+
+其实也就是MVC (Model , View , Controller)
+
+Controller(控制器,处理请求之后的关键逻辑)
+Model(操作数据存取的逻辑)
+View(给用户展示的界面)
+
+![[Pasted image 20221129132402.png]]
 
 
 
 
 
+# Cookie 和 Session
+
+## 回顾 Cookie
+HTTP 协议自身是属于 "无状态" 协议.
+>=="无状态" 的含义指的是==:
+>默认情况下 HTTP 协议的客户端和服务器之间的这次通信, 和下次通信之间没有直接的联系.
+
+但是实际开发中, 我们很多时候是需要知道请求之间的关联关系的.
+>例如登陆网站成功后, 第二次访问的时候服务器就能知道该请求是否是已经登陆过了.
+![[Pasted image 20221129134254.png]]
+
+图中的 "令牌" 通常就存储在 Cookie 字段中.
+回忆之前的例子:
+1. 到了医院先挂号. 挂号时候需要提供身份证, 同时得到了一张 "就诊卡", 这个就诊卡就相当于患者的 "令牌".
+2. 后续去各个科室进行检查, 诊断, 开药等操作, 都不必再出示身份证了, 只要凭就诊卡即可识别 出当前患者的身份.
+3. 看完病了之后, 不想要就诊卡了, 就可以注销这个卡. 此时患者的身份和就诊卡的关联就销毁了. (类似于网站的注销操作)
+4. 又来看病, 可以办一张新的就诊卡, 此时就得到了一个新的 "令牌"此时在服务器这边就需要记录令牌信息, 以及令牌对应的用户信息, 这个就是 Session 机制所做的工作.
+
+此时在服务器这边就需要记录令牌信息, 以及令牌对应的用户信息, 这个就是 Session 机制所做的工作.
+
+
+## 理解会话机制 (Session)
+服务器同一时刻收到的请求是很多的. 服务器需要清楚的区分每个请求是从属于哪个用户, 就需要在 服务器这边记录每个用户令牌以及用户的信息的对应关系.
+>在上面的例子中, 就诊卡就是一张 "令牌". 要想让这个令牌能够生效, 就需要医院这边通过系统记录每个就诊卡和患者信息之间的关联关系.
+
+会话的本质就是一个 "哈希表", 存储了一些键值对结构. key 就是令牌的 ID(token/sessionId), value 就是用户信息(用户信息可以根据需求灵活设计).
+>sessionId 是由服务器生成的一个 "唯一性字符串", 从 session 机制的角度来看, 这个唯一性字符串称为 "sessionId". 但是站在整个登录流程中看待, 也可以把这个唯一性字符串称为 "token".
+>
+>sessionId 和 token 就可以理解成是同一个东西的不同叫法(不同视角的叫法).
+
+![[Pasted image 20221129134607.png]]
+
+- 当用户登陆的时候, 服务器在 Session 中新增一个新记录, 并把 sessionId / token 返回给客户端. (例如通过 HTTP 响应中的 Set-Cookie 字段返回).
+- 客户端后续再给服务器发送请求的时候, 需要在请求中带上 sessionId/ token. (例如通过 HTTP 请求中的 Cookie 字段带上).
+- 服务器收到请求之后, 根据请求中的 sessionId / token 在 Session 信息中获取到对应的用户信息, 再进行后续操作.
+
+>Servlet 的 Session 默认是保存在内存中的. 如果重启服务器则 Session 数据就会丢失.
+
+### Cookie 和 Session 的区别
+- Cookie 是客户端的机制. Session 是服务器端的机制.
+- Cookie 和 Session 经常会在一起配合使用. 但是不是必须配合.
+	- 完全可以用 Cookie 来保存一些数据在客户端. 这些数据不一定是用户身份信息, 也不一定是 token / sessionId
+	- Session 中的 token / sessionId 也不需要非得通过 Cookie / Set-Cookie 传递.
+
+
+## 核心方法
+### HttpServletRequest 类中的相关方法
+
+|方法|描述|
+|:-:|:--|
+|`HttpSession getSession()`|在服务器中获取会话. 参数如果为 true, 则当不存在会话时新建会话; 参数如果为 false, 则当不存在会话时返回 null|
+|`Cookie[] getCookies()`|返回一个数组, 包含客户端发送该请求的所有的 Cookie 对象. 会自动把 Cookie 中的格式解析成键值对.|
+
+#### 调用getSession的时候具体要做的事情
+`getSession`方法，既能用于获取到服务器上的会话,也能用于创建会话.具体行为，取决于参数.
+- 如果参数为**true**:
+	- 会话不存在,则创建
+	- 会话存在,则获取
+- 如果参数为**false**:
+	- 会话不存在,则返回null
+	- 会话存在,则获取
+
+**1. 创建会话**
+首先先获取到请求中cookie里面的sessionld字段(相当于会话的身份标识)判定这个sessionld是否在当前服务器上存在, 如果不存在,则进入创建会话逻辑
+
+创建会话,会创建一个HttpSession对象,并且生成一个sessionld (是一个很长的数字，通常是用十六进制来表示,能够保证唯一性)
+接下来就会把这个sessionld 作为 key,把这个HttpSession对象，作为 value,把这个键值对,给保存到服务器内存的一个"哈希表”这样的结构中
+>实际的实现不一定真是Hash表,但是一定是类似的能够存储键值对的结构并且这个数据是在内存中的!!
+
+再然后,服务器就会返回一个HTTP响应，把 sessionld通过Set-Cookie 字段返回给浏览器.
+浏览器就可以保存这个sessionld 到Cookie中了.
+
+**2.获取会话**
+先获取到请求中的cookie里面的sessionld字段(也就是会话的身份标识)
+判定这个sessionld是否在当前服务器上存在(也就是在这个哈希表中是否有)
+如果有,就直接查询出这个HttpSession对象，并且通过返回值返回回去
+
+#### 调用getCookie的时候具体要做的事情
+![[Pasted image 20221129141415.png]]
+
+
+### HttpServletResponse 类中的相关方法
+|方法|描述|
+|:-:|:--|
+|`void addCookie(Cookie cookie)`|把指定的 cookie 添加到响应中.|
+响应中就可以根据addCookie这个方法,来添加一个Cookie信息到响应报文中.
+这里添加进来的键值对,就会作为HTTP响应中的Set-Cookie字段来表示
+
+### HttpSession 类中的相关方法
+一个 HttpSession 对象里面包含多个键值对. 我们可以往 HttpSession 中存任何我们需要的信息.
+|方法|描述|
+|:-:|:--|
+|`Object getAttribute(String name)`|该方法返回在该 session 会话中具有指定名称的对象，如果没有指定名称的对象，则返回 null.|
+|`void setAttribute(String name, Object value)`|该方法使用指定的名称绑定一个对象到该 session 会话|
+|`boolean isNew()`|判定当前是否是新创建出的会话|
+
+### Cookie 类中的相关方法
+每个 Cookie 对象就是一个键值对.
+|方法|描述|
+|:-:|:--|
+|`String getName()`|该方法返回 cookie 的名称。名称在创建后不能改变。(这个值是 Set-Cooke 字段设置给浏览器的)|
+|`String getValue()`|该方法获取与 cookie 关联的值|
+|`void setValue(String newValue)`|该方法设置与 cookie 关联的值。|
+- HTTP 的 Cooke 字段中存储的实际上是多组键值对. 每个键值对在 Servlet 中都对应了一个 Cookie对象. 
+- 通过`HttpServletRequest.getCookies()`获取到**请求中**的一系列 Cookie 键值对. 
+- 通过`HttpServletResponse.addCookie()`可以向**响应中**添加新的 Cookie 键值对.
+
+
+
+## 代码示例: 网页登陆
+**实现逻辑**
+![[Pasted image 20221129141747.png]]
+
+**登录交互**
+![[Pasted image 20221129141852.png]]
+
+**LoginServlet类**
+```java
+import javax.servlet.ServletException;  
+import javax.servlet.annotation.WebServlet;  
+import javax.servlet.http.HttpServlet;  
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpServletResponse;  
+import javax.servlet.http.HttpSession;  
+import java.io.IOException;  
+  
+@WebServlet("/login")  
+public class LoginServlet extends HttpServlet {  
+    @Override  
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {  
+        // 处理用户请求  
+        String username = req.getParameter("username");  
+        String password = req.getParameter("password");  
+        
+        // 判定用户名或者密码是否正确~~  
+        // 正常来说这个判定操作是要放到数据库中进行存取的.  
+        // 此处为了简单, 就直接在代码里写死了. 假设有效的用户名和密码是 "fmy", "123"        
+        if ("fmy".equals(username) && "123".equals(password)) {  
+            // 登录成功!  
+            // 创建会话, 并保存必要的身份信息.  
+            HttpSession httpSession = req.getSession(true);  
+            // 往会话中存储键值对. 必要的身份信息  
+            httpSession.setAttribute("username", username);  
+            // 初始情况下, 把登录次数设为 0            
+            httpSession.setAttribute("count", 0);  //这里会将 0 自动装箱为Integer
+            resp.sendRedirect("index");  
+        } else {  
+            // 登录失败!  
+            resp.getWriter().write("login failed!");  
+        }  
+    }  
+}
+```
+
+
+**IndexServlet类**
+```java
+import javax.servlet.ServletException;  
+import javax.servlet.annotation.WebServlet;  
+import javax.servlet.http.HttpServlet;  
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpServletResponse;  
+import javax.servlet.http.HttpSession;  
+import java.io.IOException;  
+  
+@WebServlet("/index")  
+public class IndexServlet extends HttpServlet {  
+    @Override  
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {  
+        // 返回一个主页. (主页就是一个简单的 html 片段)  
+        // 此处需要得到用户名是啥, 从 HttpSession 中就能拿到.  
+        // 此处 getSession 的参数必须是 false. 前面在登录过程中, 已经创建过会话了. 此处是要直接获取到之前的会话.  
+        HttpSession session = req.getSession(false);  
+        String username = (String) session.getAttribute("username");  
+        // 还从会话中取出 count.        
+        Integer count = (Integer) session.getAttribute("count");  
+        count += 1;  
+        
+        // 把自增之后的值写回到会话中.  
+        session.setAttribute("count", count);  
+  
+        resp.setContentType("text/html;charset=utf8");  
+        resp.getWriter().write("<h3>欢迎你! " + username + " 这是第 " + count + " 次访问主页 </h3>");  
+    }  
+}
+```
+
+
+**login.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="login" method="post">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <input type="submit" value="登录">
+    </form>
+
+</body>
+
+</html>
+```
+**action**的值就是构造请求的路径.
+如果值是`/login`表示这是一个绝对路径
+直接把`/login` 作为请求中的路径了~~
+正确的做法,应该是在这里使用相对路径没有`/`，光是一个`login` 
+路径这个写法,哪里要加`/`    哪里不加`/`一定要多加注意
+
+在 `http://localhost:8080/ServletHelloWorld/login.html` 中输入 **fmy** 和 **123**
+![[Pasted image 20221129145506.png]]
+
+![[Pasted image 20221129145520.png]]
+
+
+![[Pasted image 20221129150247.png]]
 
 
 
 
+# 上传文件
+上传文件也是日常开发中的一类常见需求. 在 Servlet 中也进行了支持.
+
+## 核心方法
+### HttpServletRequest 类方法
+|方法|描述|
+|:-:|:--|
+|`Part getPart(String name)`|获取请求中给定 name 的文件|
+|`Collection<Part> getParts()`|获取所有的文件|
+上传文件的时候,在前端需要用到form表单
+form表单中需要使用特殊的类型  `form-data`
+
+此时提交文件的时候,浏览器就会把文件内容以`form-data`的格式构造到HTTP请求中.服务器就可以通过`getPart()`来获取了
 
 
+### Part 类方法
+|方法|描述|
+|:-:|:--|
+|`String getSubmittedFileName()`|获取提交的文件名|
+|`String getContentType()`| 获取提交的文件类型|
+|`long getSize()`|获取文件的大小|
+|`void write(String path)`|把提交的文件数据写入磁盘文件|
+
+一个HTTP请求,可以一次性的提交多个文件的
+
+每个文件都称为一个Part 
+每个Part 都有一个name(身份标识)
+服务器代码中就可以根据name找到对应的Part
+基于这个Part就可以进一步的获取到文件信息,并进行下一阶段操作
 
 
+### 代码案例
+实现程序, 通过网页提交一个图片到服务器上.
+
+**1. 创建 upload.html, 放到 webapp 目录中.**
+```html
+<form action="upload" method="post" enctype="multipart/form-data">
+	   <input type="file" name="MyImage">
+	   <input type="submit" value="提交图片">
+</form>
+```
+- 上传文件一般通过 POST 请求的表单实现. 
+- 在 form 中要加上   `multipart/form-data` 字段.
 
 
+上传文件的时候,在前端需要用到form表单
+form表单中需要使用特殊的类型  `form-data`
+
+此时提交文件的时候,浏览器就会把文件内容以`form-data`的格式构造到HTTP请求中.服务器就可以通过`getPart()`来获取了
 
 
+**2. 创建 UploadServlet 类**
+```java
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import java.io.IOException;
+
+@MultipartConfig
+@WebServlet("/upload")
+public class UploadServlet extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Part part = req.getPart("MyImage");
+        System.out.println(part.getSubmittedFileName());
+        System.out.println(part.getContentType());
+        System.out.println(part.getSize());
+        part.write("S:\images/123.png");// 写到该目录中，可对文件进行修改，现在的文件名就是aaa.jpg
+        resp.setContentType("text/html; charset=utf8");
+        resp.getWriter().write("上传成功!");
+    }
+}
+```
+
+- 需要给UploadServlet加上`@Multipartconfig`注解.否则服务器代码无法使用`getPart()`方法
+- `getPart()`的参数需要和form中input标签的name属性对应.
+- 客户端一次可以提交多个文件.(使用多个input标签).此时服务器可以通过`getParts` 获取所有的Part对象.
 
 
+![[Pasted image 20221129153506.png]]
 
 
+部署程序, 在浏览器中通过 URL `http://localhost:8080/ServletHelloWorld/upload.html` 访问
+![[Pasted image 20221129154213.png]]
 
+![[Pasted image 20221129154318.png]]
 
+此时可以看到服务器端的打印日志
+```
+df69b2b0f6d22f69a4698b7e7762e77.png
+image/png
+2521596
+```
 
+同时在 s 盘中生成了 123.png
+![[Pasted image 20221129154557.png]]
 
-
-
+抓包时可以发现
+![[Pasted image 20221129154756.png]]

@@ -121,4 +121,4 @@ Tomcat 的主页   https://tomcat.apache.org/ 就是一个静态页面.
 
 
 # 部署动态页面
-通过[[Servler]]进行构建动态页面
+通过[[Servlet]]进行构建动态页面
