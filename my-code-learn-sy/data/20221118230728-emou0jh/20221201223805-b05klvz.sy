@@ -1,0 +1,5524 @@
+{
+	"ID": "20221201223805-b05klvz",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221201223805-b05klvz",
+		"title": "Java的JDBC编程",
+		"updated": "20221201223815"
+	},
+	"Children": [
+		{
+			"ID": "20221201223815-fayhr7a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-fayhr7a",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据库驱动包：不同的数据库，对应不同的编程语言提供了不同的数据库驱动包，如：MySQL提供了Java的驱动包mysql-connector-java，需要基于Java操作MySQL即需要该驱动包。同样的，要基于Java操作Oracle数据库则需要Oracle的数据库驱动包ojdbc。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223834-yqdyrln",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223834-yqdyrln"
+			}
+		},
+		{
+			"ID": "20221201223815-gpjj4n6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221201223815-gpjj4n6",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java的数据库编程：JDBC"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-banpe0k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-banpe0k",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDBC，即Java Database Connectivity，java数据库连接。是一种用于执行SQL语句的Java API，它是 Java中的数据库连接规范。这个API由 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "java.sql.*"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ","
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "javax.sql.*"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 包中的一些类和接口组成，它为Java 开发人员操作数据库提供了一个标准的API，可以为多种关系数据库提供统一访问。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223831-8ox3dut",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223831-8ox3dut"
+			}
+		},
+		{
+			"ID": "20221201223815-q99xhya",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-q99xhya",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDBC本质"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-6kr4kt5",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-6kr4kt5",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-ku5a2or",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-ku5a2or",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-bl08ysq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-bl08ysq",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "官方（sun公司）定义的一套操作所有关系型数据库的规则，即接口"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-2m9mv0b",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-2m9mv0b",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-3i8u6g9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-3i8u6g9",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "各个数据库厂商去实现这套接口，提供数据库驱动jar包"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-txoehde",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-txoehde",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-cq6thk7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-cq6thk7",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们可以使用这套接口（JDBC）编程，真正执行的代码是驱动jar包中的实现类"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-dtm2kcr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-dtm2kcr",
+				"updated": "20221201223850"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDBC好处"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-vgld88x",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-vgld88x",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-ybaja4h",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-ybaja4h",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-o7lpong",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-o7lpong",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "各数据库厂商使用相同的接口，Java代码不需要针对不同数据库分别开发"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-b9ao3pu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-b9ao3pu",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-zqpbboh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-zqpbboh",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可随时替换底层数据库，访问数据库的Java代码基本不变 (C++er 已经馋哭了)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-0sh5m35",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-0sh5m35",
+				"updated": "20221201223905"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以后编写操作数据库的代码只需要面向JDBC（接口），操作哪儿个关系型数据库就需要导入该数据库的驱动包，如需要操作MySQL数据库，就需要再项目中导入MySQL数据库的驱动包。如下图就是MySQL驱动包\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221130085357"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221130085357-20221201223905-tf8pzy7.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221201223908-puyx0zv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223908-puyx0zv"
+			}
+		},
+		{
+			"ID": "20221201223815-izaut0b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-izaut0b",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDBC快速入门"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ejf86p2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-ejf86p2",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "编写代码步骤"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-7t9impx",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221201223815-7t9impx",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-jxub6uf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221201223815-jxub6uf",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-p3mzdi0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-p3mzdi0",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建数据库连接Connection"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-34v1zjk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221201223815-34v1zjk",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-9pakumh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-9pakumh",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建操作命令Statement"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-hvj8ft1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221201223815-hvj8ft1",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-8mwb8oi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-8mwb8oi",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用操作命令来执行SQL"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-b263ux9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221201223815-b263ux9",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-arjg9s9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-arjg9s9",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "处理结果集ResultSet"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-sfk350s",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221201223815-sfk350s",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-we2w62u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-we2w62u",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "释放资源"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-9g26luy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-9g26luy",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "具体代码"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-nfqcklu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-nfqcklu",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主要使用 DataSource 连接数据库。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-8270t7g",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-8270t7g",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import com.mysql.cj.jdbc.MysqlDataSource;  \n  \nimport javax.sql.DataSource;  \nimport java.sql.Connection;  \nimport java.sql.PreparedStatement;  \nimport java.sql.SQLException;  \nimport java.util.Scanner;  \n  \npublic class TestJDBC {  \n    public static void main(String[] args) throws SQLException {  \n        Scanner scanner = new Scanner(System.in);  \n  \n        // 1. 创建好数据源  \n        DataSource dataSource = new MysqlDataSource();  \n        // 设置数据库所在的地址  \n        ((MysqlDataSource) dataSource).setURL(\"jdbc:mysql://127.0.0.1:3306/mydb?characterEncoding=utf8\u0026useSSL=false\");  \n        // 设置登录数据库的用户名  \n        ((MysqlDataSource) dataSource).setUser(\"root\");  \n        // 这个是设置登录数据库的密码  \n        ((MysqlDataSource) dataSource).setPassword(\"back7671773\");  \n  \n        // 2. 让代码和数据库服务器建立连接  \n        Connection connection = dataSource.getConnection();  \n  \n        // 2.5 让用户通过控制台输入一下待插入的数据  \n        System.out.println(\"请输入学号: \");  \n        int id = scanner.nextInt();  \n        System.out.println(\"请输入姓名: \");  \n        String name = scanner.next();  \n  \n        // 3. 操作数据库. 以插入数据为例.  \n        //    关键所在就是构造一个 SQL 语句~  \n        //    在 JDBC 中构造的 SQL, 不必带上 ;      \n        //    ; 只是在命令行中用来区分不同的语句. 现在是直接在代码中操作  \n        String sql = \"insert into student values(? ,?)\";  \n        // 此处光是一个 String 类型的 sql 还不行, 需要把这个 String 包装成一个 \"语句对象\"  \n        PreparedStatement statement = connection.prepareStatement(sql);  \n  \n        // 进行替换操作  \n        statement.setInt(1 , id);  \n        statement.setString(2, name);  \n        System.out.println(\"statement:\"+ statement);  \n  \n        // 4. 执行 SQL   \n        //    SQL 里面如果是 insert, update, delete, 都使用 executeUpdate 方法.  \n        //    SQL 里面如果是 select, 则使用 executeQuery 方法.  \n        //    返回值就表示这个操作, 影响到了 几行. 就相当于在控制台里输入 sql 之后, 得到的数字  \n        int ret = statement.executeUpdate();  \n        System.out.println(ret);  \n  \n        // 5. 此时 SQL 已经执行完毕. 然后还需要释放资源.  \n        statement.close();  \n        connection.close();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223913-wodl77r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223913-wodl77r"
+			}
+		},
+		{
+			"ID": "20221201223815-i2bomiq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221201223815-i2bomiq",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDBC API 详解"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-3r154rk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-3r154rk",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "DriverManager"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-0ndv3kw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-0ndv3kw",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "DriverManager（驱动管理类）作用："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-4xsl4s0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-4xsl4s0",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-h4f70f4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-h4f70f4",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-rfyqn9e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-rfyqn9e",
+								"updated": "20221201223920"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注册驱动\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221130095555"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221130095555-20221201223920-ff3q69n.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-rhd844g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-rhd844g",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "registerDriver方法是用于注册驱动的，但是我们之前做的入门案例并不是这样写的。而是如下实现"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-c5q0cuz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-c5q0cuz",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "    Class.forName(\"com.mysql.jdbc.Driver\");  \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223937-140slt8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223937-140slt8"
+			}
+		},
+		{
+			"ID": "20221201223815-3vhtmm3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-3vhtmm3",
+				"updated": "20221201223945"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们查询MySQL提供的Driver类，看它是如何实现的，源码如下：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221130095653"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221130095653-20221201223945-3vfhb0m.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n在该类中的静态代码块中已经执行了 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DriverManager"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 对象的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "registerDriver()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 方法进行驱动的注册了，那么我们只需要加载 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Driver"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 类，该静态代码块就会执行。而 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Class.forName(\"com.mysql.jdbc.Driver\");"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就可以加载 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Driver"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 类。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-jt8n710",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221201223815-jt8n710",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221201223815-tcby1ab",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-tcby1ab",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "提示："
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-x0n560c",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221201223815-x0n560c",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-0b6igul",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-0b6igul",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-55uvrxk",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-55uvrxk",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "MySQL 5之后的驱动包，可以省略注册驱动的步骤"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-yezqhdf",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-yezqhdf",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-6qi2yg9",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-6qi2yg9",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "自动加载jar包中META-INF/services/java.sql.Driver文件中的驱动类"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-h72o2cm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-h72o2cm",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-iufccsv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-iufccsv",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-24adgdh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-24adgdh",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取数据库连接\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image-20210725171355278"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "file://D:\\%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\\java%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0\\%E9%BB%91%E9%A9%ACJavaWeb\\day03-JDBC\\ppt\\assets\\image-20210725171355278.png?lastModify=1669773249"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-yk3dyea",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-yk3dyea",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "参数说明："
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-xbxciqc",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221201223815-xbxciqc",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-oti85mo",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221201223815-oti85mo",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"ID": "20221201223815-x1lojpu",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221201223815-x1lojpu",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "url"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " ： 连接路径"
+												}
+											]
+										},
+										{
+											"ID": "20221201223815-95hz0n7",
+											"Type": "NodeBlockquote",
+											"Properties": {
+												"id": "20221201223815-95hz0n7",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"Type": "NodeBlockquoteMarker",
+													"Data": "\u003e"
+												},
+												{
+													"ID": "20221201223815-dj4v6ht",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-dj4v6ht",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "语法："
+														},
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "jdbc:mysql://ip地址(域名):端口号/数据库名称?参数键值对1\u0026参数键值对2…"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeText",
+															"Data": "\n示例："
+														},
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "jdbc:mysql://127.0.0.1:3306/db1"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20221201223815-klovbnt",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-klovbnt",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeMark",
+															"Data": "mark",
+															"Children": [
+																{
+																	"Type": "NodeMark2OpenMarker"
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "细节："
+																},
+																{
+																	"Type": "NodeMark2CloseMarker"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20221201223815-7wdy96b",
+													"Type": "NodeList",
+													"ListData": {},
+													"Properties": {
+														"id": "20221201223815-7wdy96b",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"ID": "20221201223815-4zbomne",
+															"Type": "NodeListItem",
+															"ListData": {
+																"BulletChar": 42,
+																"Marker": "Kg=="
+															},
+															"Properties": {
+																"id": "20221201223815-4zbomne",
+																"updated": "20221201223815"
+															},
+															"Children": [
+																{
+																	"ID": "20221201223815-njoxvfn",
+																	"Type": "NodeParagraph",
+																	"Properties": {
+																		"id": "20221201223815-njoxvfn",
+																		"updated": "20221201223815"
+																	},
+																	"Children": [
+																		{
+																			"Type": "NodeText",
+																			"Data": "如果连接的是本机mysql服务器，并且mysql服务默认端口是3306，则url可以简写为："
+																		},
+																		{
+																			"Type": "NodeCodeSpan",
+																			"Data": "code",
+																			"Children": [
+																				{
+																					"Type": "NodeCodeSpanOpenMarker"
+																				},
+																				{
+																					"Type": "NodeCodeSpanContent",
+																					"Data": "jdbc:mysql:///数据库名称?参数键值对"
+																				},
+																				{
+																					"Type": "NodeCodeSpanCloseMarker"
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"ID": "20221201223815-pgn1qam",
+															"Type": "NodeListItem",
+															"ListData": {
+																"BulletChar": 42,
+																"Marker": "Kg=="
+															},
+															"Properties": {
+																"id": "20221201223815-pgn1qam",
+																"updated": "20221201223815"
+															},
+															"Children": [
+																{
+																	"ID": "20221201223815-k6up7sa",
+																	"Type": "NodeParagraph",
+																	"Properties": {
+																		"id": "20221201223815-k6up7sa",
+																		"updated": "20221201223815"
+																	},
+																	"Children": [
+																		{
+																			"Type": "NodeText",
+																			"Data": "配置 "
+																		},
+																		{
+																			"Type": "NodeCodeSpan",
+																			"Data": "code",
+																			"Children": [
+																				{
+																					"Type": "NodeCodeSpanOpenMarker"
+																				},
+																				{
+																					"Type": "NodeCodeSpanContent",
+																					"Data": "useSSL=false"
+																				},
+																				{
+																					"Type": "NodeCodeSpanCloseMarker"
+																				}
+																			]
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": " 参数，禁用安全连接方式，解决警告提示"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20221201223815-2o0u3xt",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221201223815-2o0u3xt",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"ID": "20221201223815-18fh530",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221201223815-18fh530",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "user"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " ：用户名"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20221201223815-1gmtb84",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221201223815-1gmtb84",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"ID": "20221201223815-mv0nqrh",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221201223815-mv0nqrh",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "poassword"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": " ：密码"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223950-i6dzd57",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223950-i6dzd57"
+			}
+		},
+		{
+			"ID": "20221201223815-h1onyae",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-h1onyae",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Connection"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-voru430",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-voru430",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Connection（数据库连接对象）作用："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-s3xe028",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-s3xe028",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-xipbtdp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-xipbtdp",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-8o8fkmf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-8o8fkmf",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取执行 SQL 的对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-4q1lvx5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-4q1lvx5",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-jpg4e4h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-jpg4e4h",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "管理事务"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-u6lu228",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-u6lu228",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Connection接口实现类由数据库提供，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "获取Connection对象通常有两种方式"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ho97t1k",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-ho97t1k",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-a2c5tnr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-a2c5tnr",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-1r5l1h9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-1r5l1h9",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一种是通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DriverManager"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（驱动管理类）的静态方法获取："
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-3nkhz8b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-3nkhz8b",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 加载JDBC驱动程序\nClass.forName(\"com.mysql.jdbc.Driver\"); \n// 创建数据库连接\nConnection connection = DriverManager.getConnection(url);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-b2fv0vq",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-b2fv0vq",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-vhxvoa4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-vhxvoa4",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-2qg7kc4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-2qg7kc4",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一种是通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DataSource"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（数据源）对象获取。"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实际应用中会使用DataSource对象"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-kyz9ul8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-kyz9ul8",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "DataSource ds = new MysqlDataSource();\n((MysqlDataSource) ds).setUrl(\"jdbc:mysql://localhost:3306/test\"); \n((MysqlDataSource) ds).setUser(\"root\");\n((MysqlDataSource) ds).setPassword(\"root\"); \nConnection connection = ds.getConnection();\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-u5gvl1z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-u5gvl1z",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以上两种方式的区别是："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-400noab",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221201223815-400noab",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-nru5qcc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221201223815-nru5qcc",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-doan9gw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-doan9gw",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "DriverManager"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "类来获取的Connection连接，是无法重复利用的，每次使用完以后释放资源时，通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "connection.close()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都是关闭物理连接。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-h6nor3o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221201223815-h6nor3o",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-44ue62s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-44ue62s",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "DataSource"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "提供连接池的支持。连接池在初始化时将创建一定数量的数据库连接，这些连接是可以复用的，每次使用完数据库连接，释放资源调用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "connection.close()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都是将Conncetion连接对象回收。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223959-p3wfd0j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223959-p3wfd0j"
+			}
+		},
+		{
+			"ID": "20221201223815-147aoia",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-147aoia",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取执行对象"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-s1te25v",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-s1te25v",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-nt7pn1v",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-nt7pn1v",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-bmyw3tz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-bmyw3tz",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "普通执行SQL对象"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-e9sqqb6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-e9sqqb6",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Statement createStatement()\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-uefy6tb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-uefy6tb",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "入门案例中就是通过该方法获取的执行对象。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-8e4eh8c",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-8e4eh8c",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-pjikxpa",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-pjikxpa",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-eltk5pn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-eltk5pn",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "预编译SQL的执行SQL对象：防止SQL注入"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-7bo27ta",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-7bo27ta",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "PreparedStatement  prepareStatement(sql)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-gk68r2i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-gk68r2i",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过这种方式获取的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "PreparedStatement"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " SQL语句执行对象是我们一会重点要进行讲解的，它可以防止SQL注入。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-adsh0ru",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-adsh0ru",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-z8cxxp0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-z8cxxp0",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-u2067r3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-u2067r3",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行存储过程的对象"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-mfo14xg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-mfo14xg",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "CallableStatement prepareCall(sql)\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-63wjzmr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-63wjzmr",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过这种方式获取的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "CallableStatement"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 执行对象是用来执行存储过程的，而存储过程在MySQL中不常用，所以这个我们将不进行讲解。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-lj94m0d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-lj94m0d",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "事务管理"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-bosowdr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-bosowdr",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "先回顾一下MySQL事务管理的操作："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-iomet7r",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-iomet7r",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-yce4c0c",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-yce4c0c",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-czxrtze",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-czxrtze",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "开启事务 ： BEGIN; 或者 START TRANSACTION;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-91oaz59",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-91oaz59",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-7368sdm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-7368sdm",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提交事务 ： COMMIT;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-ntap6jr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-ntap6jr",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-wt3or0k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-wt3or0k",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "回滚事务 ： ROLLBACK;"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ecr1jjs",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221201223815-ecr1jjs",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221201223815-h1c1bdq",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-h1c1bdq",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "MySQL默认是自动提交事务"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-pvxelaw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-pvxelaw",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接下来学习JDBC事务管理的方法。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-c5b1n9y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-c5b1n9y",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Connection几口中定义了3个对应的方法："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-aw9dpru",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-aw9dpru",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-8drqaxq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-8drqaxq",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-aceilzr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-aceilzr",
+								"updated": "20221201224009"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "开启事务\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221130100148"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221130100148-20221201224009-g0yxp7s.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n参与autoCommit 表示是否自动提交事务，true表示自动提交事务，false表示手动提交事务。而开启事务需要将该参数设为为false。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-su20z8k",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-su20z8k",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-qx8dwj0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-qx8dwj0",
+								"updated": "20221201224058"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提交事务\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221130100242"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221130100242-20221201224058-9qg4d42.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201224104-p6t0ocj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224104-p6t0ocj",
+				"updated": "20221201224104"
+			}
+		},
+		{
+			"ID": "20221201224104-aqnm11l",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201224104-aqnm11l",
+				"updated": "20221201224104"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-vepouc2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-vepouc2",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-emcy1vo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-emcy1vo",
+								"updated": "20221201224048"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "回滚事务\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221130100224"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221130100224-20221201224018-8af730f.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201224108-dfamdmw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224108-dfamdmw"
+			}
+		},
+		{
+			"ID": "20221201223815-h9tqtnx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221201223815-h9tqtnx",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "具体代码实现如下："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-r684g5s",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-r684g5s",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * JDBC API 详解：Connection\n */\npublic class JDBCDemo3_Connection {\n\n    public static void main(String[] args) throws Exception {\n        //1. 注册驱动\n        //Class.forName(\"com.mysql.jdbc.Driver\");\n        //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写\n        String url = \"jdbc:mysql:///db1?useSSL=false\";\n        String username = \"root\";\n        String password = \"1234\";\n        Connection conn = DriverManager.getConnection(url, username, password);\n        //3. 定义sql\n        String sql1 = \"update account set money = 3000 where id = 1\";\n        String sql2 = \"update account set money = 3000 where id = 2\";\n        //4. 获取执行sql的对象 Statement\n        Statement stmt = conn.createStatement();\n\n        try {\n            // ============开启事务==========\n            conn.setAutoCommit(false);\n            //5. 执行sql\n            int count1 = stmt.executeUpdate(sql1);//受影响的行数\n            //6. 处理结果\n            System.out.println(count1);\n            int i = 3/0;\n            //5. 执行sql\n            int count2 = stmt.executeUpdate(sql2);//受影响的行数\n            //6. 处理结果\n            System.out.println(count2);\n\n            // ============提交事务==========\n            //程序运行到此处，说明没有出现任何问题，则需求提交事务\n            conn.commit();\n        } catch (Exception e) {\n            // ============回滚事务==========\n            //程序在出现异常时会执行到这个地方，此时就需要回滚事务\n            conn.rollback();\n            e.printStackTrace();\n        }\n\n        //7. 释放资源\n        stmt.close();\n        conn.close();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-twz9bnr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-twz9bnr",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Statement"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-saj0ovm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-saj0ovm",
+				"updated": "20221201224210"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221130102328"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221130102328-20221201224159-wgd7558.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221201223815-lj94m0d"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "事务管理"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-uifv5d8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-uifv5d8",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "概述"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-qkx982p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-qkx982p",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Statement对象的作用就是用来执行SQL语句。而针对不同类型的SQL语句使用的方法也不一样。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ql8ggku",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-ql8ggku",
+				"updated": "20221201224228"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-t7vf4w1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-t7vf4w1",
+						"updated": "20221201224221"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-0yigb6x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-0yigb6x",
+								"updated": "20221201224221"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行DDL、DML语句\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221130100547"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221130100547-20221201224221-dc28440.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-l9bade2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-l9bade2",
+						"updated": "20221201224228"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-fktatfi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-fktatfi",
+								"updated": "20221201224228"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行DQL语句\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221130100559"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221130100559-20221201224228-6vby6y1.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n该方法涉及到了 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ResultSet"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 对象，而这个对象我们还没有学习，一会再重点讲解。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201224231-g2icbom",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224231-g2icbom"
+			}
+		},
+		{
+			"ID": "20221201223815-k9cjb6l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-k9cjb6l",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码实现"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-6euwgws",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-6euwgws",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-z5e9het",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-z5e9het",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-4eu7t14",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-4eu7t14",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行DML语句"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-4lmpdzr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-4lmpdzr",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void testDML() throws  Exception {\n    //1. 注册驱动\n    //Class.forName(\"com.mysql.jdbc.Driver\");\n    //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写\n    String url = \"jdbc:mysql:///db1?useSSL=false\";\n    String username = \"root\";\n    String password = \"1234\";\n    Connection conn = DriverManager.getConnection(url, username, password);\n    //3. 定义sql\n    String sql = \"update account set money = 3000 where id = 1\";\n    //4. 获取执行sql的对象 Statement\n    Statement stmt = conn.createStatement();\n    //5. 执行sql\n    int count = stmt.executeUpdate(sql);//执行完DML语句，受影响的行数\n    //6. 处理结果\n    //System.out.println(count);\n    if(count \u003e 0){\n        System.out.println(\"修改成功~\");\n    }else{\n        System.out.println(\"修改失败~\");\n    }\n    //7. 释放资源\n    stmt.close();\n    conn.close();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-h89c2s0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-h89c2s0",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-k086lkk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-k086lkk",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-38bon86",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-38bon86",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行DDL语句"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-m64rvpb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-m64rvpb",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n  * 执行DDL语句\n  * @throws Exception\n  */\n@Test\npublic void testDDL() throws  Exception {\n    //1. 注册驱动\n    //Class.forName(\"com.mysql.jdbc.Driver\");\n    //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写\n    String url = \"jdbc:mysql:///db1?useSSL=false\";\n    String username = \"root\";\n    String password = \"1234\";\n    Connection conn = DriverManager.getConnection(url, username, password);\n    //3. 定义sql\n    String sql = \"drop database db2\";\n    //4. 获取执行sql的对象 Statement\n    Statement stmt = conn.createStatement();\n    //5. 执行sql\n    int count = stmt.executeUpdate(sql);//执行完DDL语句，可能是0\n    //6. 处理结果\n    System.out.println(count);\n\n    //7. 释放资源\n    stmt.close();\n    conn.close();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-bg5q6r3",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-bg5q6r3",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-ojw63wp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-ojw63wp",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-543bnhk",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20221201223815-543bnhk",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20221201223815-vflt2il",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-vflt2il",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "注意："
+										}
+									]
+								},
+								{
+									"ID": "20221201223815-fmykh0n",
+									"Type": "NodeList",
+									"ListData": {},
+									"Properties": {
+										"id": "20221201223815-fmykh0n",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"ID": "20221201223815-0zlmuge",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20221201223815-0zlmuge",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"ID": "20221201223815-050jtc6",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-050jtc6",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "以后开发很少使用java代码操作DDL语句"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-853groz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-853groz",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ResultSet"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-iitmspr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-iitmspr",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "概述"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-5ezvqfr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-5ezvqfr",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ResultSet（结果集对象）作用："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-m9y35fd",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-m9y35fd",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-rowcc3x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-rowcc3x",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-s3mgv9d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-s3mgv9d",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "封装了SQL查询语句的结果。"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ai6fnwu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-ai6fnwu",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而执行了DQL语句后就会返回该对象，对应执行DQL语句的方法如下："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-zddfuux",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-zddfuux",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ResultSet  executeQuery(sql)：执行DQL 语句，返回 ResultSet 对象\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-5vuyvua",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-5vuyvua",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么我们就需要从 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ResultSet"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 对象中获取我们想要的数据。"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ResultSet"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 对象提供了操作查询结果数据的方法，如下："
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-r4oc3qi",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221201223815-r4oc3qi",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221201223815-l1raq8h",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-l1raq8h",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "boolean next()"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-nr0kccm",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221201223815-nr0kccm",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-607wcxx",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-607wcxx",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-ilj4y2h",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-ilj4y2h",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "将光标从当前位置向前移动一行"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-6tqzwsi",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-6tqzwsi",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-jf1j2xx",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-jf1j2xx",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "判断当前行是否为有效行"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-0n0x6dq",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-0n0x6dq",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "方法返回值说明："
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-2aysp7q",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221201223815-2aysp7q",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-v0lwyjq",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-v0lwyjq",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-ii5wyjg",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-ii5wyjg",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "true ： 有效航，当前行有数据"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-wwrxxua",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-wwrxxua",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-lykkgac",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-lykkgac",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "false ： 无效行，当前行没有数据"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-sour1sa",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221201223815-sour1sa",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221201223815-0esnb07",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-0esnb07",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "xxx getXxx(参数)"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "：获取数据"
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-ltu9tf4",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221201223815-ltu9tf4",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-n81ex4b",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-n81ex4b",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-ecd7re6",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-ecd7re6",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "xxx : 数据类型；如： int getInt(参数) ；String getString(参数)"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-6gr6rwe",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-6gr6rwe",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-yivuvo8",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-yivuvo8",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "参数"
+										}
+									]
+								},
+								{
+									"ID": "20221201223815-lwcst1g",
+									"Type": "NodeList",
+									"ListData": {},
+									"Properties": {
+										"id": "20221201223815-lwcst1g",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"ID": "20221201223815-unrz1gl",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20221201223815-unrz1gl",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"ID": "20221201223815-lx2qtn3",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-lx2qtn3",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "int类型的参数：列的编号，从1开始"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20221201223815-vz7nq41",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20221201223815-vz7nq41",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"ID": "20221201223815-nl3anj3",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-nl3anj3",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "String类型的参数： 列的名称"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ojooqkc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-ojooqkc",
+				"updated": "20221201224243"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如下图为执行SQL语句后的结果\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221130101004"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221130101004-20221201224243-t6w71ge.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n一开始光标指定于第一行前，如图所示红色箭头指向于表头行。当我们调用了 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "next()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 方法后，光标就下移到第一行数据，并且方法返回true，此时就可以通过 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getInt(\"id\")"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 获取当前行id字段的值，也可以通过 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getString(\"name\")"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 获取当前行name字段的值。如果想获取下一行的数据，继续调用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "next()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 方法，以此类推。"
+				}
+			]
+		},
+		{
+			"ID": "20221201224246-7540pj7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224246-7540pj7"
+			}
+		},
+		{
+			"ID": "20221201223815-dp32zod",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-dp32zod",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码实现"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-6kxdyqi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-6kxdyqi",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n  * 执行DQL\n  * @throws Exception\n  */\n@Test\npublic void testResultSet() throws  Exception {\n    //1. 注册驱动\n    //Class.forName(\"com.mysql.jdbc.Driver\");\n    //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写\n    String url = \"jdbc:mysql:///db1?useSSL=false\";\n    String username = \"root\";\n    String password = \"1234\";\n    Connection conn = DriverManager.getConnection(url, username, password);\n    //3. 定义sql\n    String sql = \"select * from account\";\n    //4. 获取statement对象\n    Statement stmt = conn.createStatement();\n    //5. 执行sql\n    ResultSet rs = stmt.executeQuery(sql);\n    //6. 处理结果， 遍历rs中的所有数据\n    /* // 6.1 光标向下移动一行，并且判断当前行是否有数据\n        while (rs.next()){\n            //6.2 获取数据  getXxx()\n            int id = rs.getInt(1);\n            String name = rs.getString(2);\n            double money = rs.getDouble(3);\n\n            System.out.println(id);\n            System.out.println(name);\n            System.out.println(money);\n\n            System.out.println(\"--------------\");\n\n        }*/\n    // 6.1 光标向下移动一行，并且判断当前行是否有数据\n    while (rs.next()){\n        //6.2 获取数据  getXxx()\n        int id = rs.getInt(\"id\");\n        String name = rs.getString(\"name\");\n        double money = rs.getDouble(\"money\");\n\n        System.out.println(id);\n        System.out.println(name);\n        System.out.println(money);\n\n        System.out.println(\"--------------\");\n    }\n\n    //7. 释放资源\n    rs.close();\n    stmt.close();\n    conn.close();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-xynoe3m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-xynoe3m",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-kbez481",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-kbez481",
+				"updated": "20221201224253"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-qisf0tv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-qisf0tv",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-fddcss5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-fddcss5",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "需求：查询account账户表数据，封装为Account对象中，并且存储到ArrayList集合中"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-2h13bam",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-2h13bam",
+						"updated": "20221201224253"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-8wyqku9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-8wyqku9",
+								"updated": "20221201224253"
+							},
+							"Children": [
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221130101125"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221130101125-20221201224253-otuulbk.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-pa1qk12",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-pa1qk12",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n  * 查询account账户表数据，封装为Account对象中，并且存储到ArrayList集合中\n  * 1. 定义实体类Account\n  * 2. 查询数据，封装到Account对象中\n  * 3. 将Account对象存入ArrayList集合中\n  */\n@Test\npublic void testResultSet2() throws  Exception {\n    //1. 注册驱动\n    //Class.forName(\"com.mysql.jdbc.Driver\");\n    //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写\n    String url = \"jdbc:mysql:///db1?useSSL=false\";\n    String username = \"root\";\n    String password = \"1234\";\n    Connection conn = DriverManager.getConnection(url, username, password);\n\n    //3. 定义sql\n    String sql = \"select * from account\";\n\n    //4. 获取statement对象\n    Statement stmt = conn.createStatement();\n\n    //5. 执行sql\n    ResultSet rs = stmt.executeQuery(sql);\n\n    // 创建集合\n    List\u003cAccount\u003e list = new ArrayList\u003c\u003e();\n   \n    // 6.1 光标向下移动一行，并且判断当前行是否有数据\n    while (rs.next()){\n        Account account = new Account();\n\n        //6.2 获取数据  getXxx()\n        int id = rs.getInt(\"id\");\n        String name = rs.getString(\"name\");\n        double money = rs.getDouble(\"money\");\n\n        //赋值\n        account.setId(id);\n        account.setName(name);\n        account.setMoney(money);\n\n        // 存入集合\n        list.add(account);\n    }\n\n    System.out.println(list);\n\n    //7. 释放资源\n    rs.close();\n    stmt.close();\n    conn.close();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-sju9pfg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-sju9pfg",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PreparedStatement"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-gwphkrz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221201223815-gwphkrz",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221201223815-sqv3crb",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-sqv3crb",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "PreparedStatement作用："
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-ltf942g",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20221201223815-ltf942g",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-9xxeb5d",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20221201223815-9xxeb5d",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-g0x6kvx",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-g0x6kvx",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "预编译SQL语句并执行：预防SQL注入问题"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-kpcrckg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-kpcrckg",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SQL 注入问题"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-56y5rnr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-56y5rnr",
+				"updated": "20221201224301"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "https://www.jianshu.com/p/078df7a35671"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.jianshu.com/p/078df7a35671"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-i3miur3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221201223815-i3miur3",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PreparedStatement概述"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ugsvwzr",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-ugsvwzr",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-ygn9iv2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-ygn9iv2",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-k6vk1gh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-k6vk1gh",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取 PreparedStatement 对象"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-d7yzwnh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-d7yzwnh",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// SQL语句中的参数值，使用？占位符替代  \nString sql = \"select * from user where username = ? and password = ?\";  \n// 通过Connection对象获取，并传入对应的sql语句  \nPreparedStatement pstmt = conn.prepareStatement(sql);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-kmdu5h5",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221201223815-kmdu5h5",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"ID": "20221201223815-wwia7p3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-wwia7p3",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-ynpao8f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-ynpao8f",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "设置参数值\n上面的sql语句中参数使用 ? 进行占位，在之前之前肯定要设置这些 ? 的值。"
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-j4rich0",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20221201223815-j4rich0",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20221201223815-43mlsqm",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-43mlsqm",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "PreparedStatement对象：setXxx(参数1，参数2)：给 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "?"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 赋值"
+										}
+									]
+								},
+								{
+									"ID": "20221201223815-4py8q89",
+									"Type": "NodeList",
+									"ListData": {},
+									"Properties": {
+										"id": "20221201223815-4py8q89",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"ID": "20221201223815-lzfk7c1",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20221201223815-lzfk7c1",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"ID": "20221201223815-d3e2m4s",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-d3e2m4s",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "Xxx：数据类型 ； 如 setInt (参数1，参数2)"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20221201223815-68rbizk",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20221201223815-68rbizk",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"ID": "20221201223815-dst7kyq",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-dst7kyq",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "参数："
+														}
+													]
+												},
+												{
+													"ID": "20221201223815-lorbko7",
+													"Type": "NodeList",
+													"ListData": {},
+													"Properties": {
+														"id": "20221201223815-lorbko7",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"ID": "20221201223815-8cuk7ih",
+															"Type": "NodeListItem",
+															"ListData": {
+																"BulletChar": 42,
+																"Marker": "Kg=="
+															},
+															"Properties": {
+																"id": "20221201223815-8cuk7ih",
+																"updated": "20221201223815"
+															},
+															"Children": [
+																{
+																	"ID": "20221201223815-fico9ek",
+																	"Type": "NodeParagraph",
+																	"Properties": {
+																		"id": "20221201223815-fico9ek",
+																		"updated": "20221201223815"
+																	},
+																	"Children": [
+																		{
+																			"Type": "NodeText",
+																			"Data": "参数1： "
+																		},
+																		{
+																			"Type": "NodeCodeSpan",
+																			"Data": "code",
+																			"Children": [
+																				{
+																					"Type": "NodeCodeSpanOpenMarker"
+																				},
+																				{
+																					"Type": "NodeCodeSpanContent",
+																					"Data": "?"
+																				},
+																				{
+																					"Type": "NodeCodeSpanCloseMarker"
+																				}
+																			]
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "的位置编号，"
+																		},
+																		{
+																			"Type": "NodeStrong",
+																			"Data": "strong",
+																			"Children": [
+																				{
+																					"Type": "NodeStrongA6kOpenMarker",
+																					"Data": "**"
+																				},
+																				{
+																					"Type": "NodeText",
+																					"Data": "从"
+																				},
+																				{
+																					"Type": "NodeMark",
+																					"Data": "mark",
+																					"Children": [
+																						{
+																							"Type": "NodeMark2OpenMarker"
+																						},
+																						{
+																							"Type": "NodeText",
+																							"Data": "1"
+																						},
+																						{
+																							"Type": "NodeMark2CloseMarker"
+																						}
+																					]
+																				},
+																				{
+																					"Type": "NodeText",
+																					"Data": " 开始"
+																				},
+																				{
+																					"Type": "NodeStrongA6kCloseMarker",
+																					"Data": "**"
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"ID": "20221201223815-0gyc22c",
+															"Type": "NodeListItem",
+															"ListData": {
+																"BulletChar": 42,
+																"Marker": "Kg=="
+															},
+															"Properties": {
+																"id": "20221201223815-0gyc22c",
+																"updated": "20221201223815"
+															},
+															"Children": [
+																{
+																	"ID": "20221201223815-14kw7v4",
+																	"Type": "NodeParagraph",
+																	"Properties": {
+																		"id": "20221201223815-14kw7v4",
+																		"updated": "20221201223815"
+																	},
+																	"Children": [
+																		{
+																			"Type": "NodeText",
+																			"Data": "参数2： "
+																		},
+																		{
+																			"Type": "NodeCodeSpan",
+																			"Data": "code",
+																			"Children": [
+																				{
+																					"Type": "NodeCodeSpanOpenMarker"
+																				},
+																				{
+																					"Type": "NodeCodeSpanContent",
+																					"Data": "?"
+																				},
+																				{
+																					"Type": "NodeCodeSpanCloseMarker"
+																				}
+																			]
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "的值"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-gkxswk5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221201223815-gkxswk5",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-um4ufl6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221201223815-um4ufl6",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行SQL语句"
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-8wkq07l",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20221201223815-8wkq07l",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20221201223815-p3dbev9",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-p3dbev9",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "executeUpdate()"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "; 方法返回值是一个整数，指示受影响的行数，通常用于update、insert、delete 语句\n"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "executeQuery()"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "; 方法执行后返回单个结果集的，通常用于select语句"
+										}
+									]
+								},
+								{
+									"ID": "20221201223815-usqdllp",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-usqdllp",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeMark",
+											"Data": "mark",
+											"Children": [
+												{
+													"Type": "NodeMark2OpenMarker"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "注意："
+												},
+												{
+													"Type": "NodeMark2CloseMarker"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20221201223815-j1kjb3c",
+									"Type": "NodeList",
+									"ListData": {},
+									"Properties": {
+										"id": "20221201223815-j1kjb3c",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"ID": "20221201223815-gt4qsjp",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20221201223815-gt4qsjp",
+												"updated": "20221201223815"
+											},
+											"Children": [
+												{
+													"ID": "20221201223815-wjvao9r",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20221201223815-wjvao9r",
+														"updated": "20221201223815"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "调用这两个方法时不需要传递SQL语句，因为获取SQL语句执行对象时已经对SQL语句进行预编译了。"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-227ah6j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221201223815-227ah6j",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-nn68h22",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-nn68h22",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "资源回收"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-k0h8dom",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-k0h8dom",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "资源回收时，是类似于递归式的回收资源，先创建的后回收，后创建的先回收。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-suu0kz6",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221201223815-suu0kz6",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221201223815-23ryh44",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-23ryh44",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "Tip:  就像我们需要去冰箱取东西"
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-wtbotbd",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20221201223815-wtbotbd",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-7bya0vr",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20221201223815-7bya0vr",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-q1w6mnv",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-q1w6mnv",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "打开冰箱门"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-pysitt8",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20221201223815-pysitt8",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-c9tzcn8",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-c9tzcn8",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "拉开小储物柜"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-sbd3yj8",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20221201223815-sbd3yj8",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-aqvsmri",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-aqvsmri",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "取东西"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-pbe350x",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NC4=",
+								"Num": 4
+							},
+							"Properties": {
+								"id": "20221201223815-pbe350x",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-p37d5te",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-p37d5te",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "关闭小储物柜"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-dhxasjv",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NS4=",
+								"Num": 5
+							},
+							"Properties": {
+								"id": "20221201223815-dhxasjv",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-ux9azrj",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-ux9azrj",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "关闭冰箱门"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201224312-ug8wwuw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224312-ug8wwuw"
+			}
+		},
+		{
+			"ID": "20221201223815-vvmt8c3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-vvmt8c3",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不要对sql语句进行插入"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-ungg2x4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-ungg2x4",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "看以下代码"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-8nvx6zc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-8nvx6zc",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "String sql = \"insert into student values(\" + id + \", '张三')\";\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-uor2g2b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-uor2g2b",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这里的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "id"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就是我们要进行插入的值。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-anizfd7",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221201223815-anizfd7",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221201223815-8ufp57v",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221201223815-8ufp57v",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "通过字符串拼接这个操作来构造sql,也是可行的.但是并不科学!!!"
+						}
+					]
+				},
+				{
+					"ID": "20221201223815-as6oooy",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20221201223815-as6oooy",
+						"updated": "20221201223815"
+					},
+					"Children": [
+						{
+							"ID": "20221201223815-ut9p1jf",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20221201223815-ut9p1jf",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-dbfmggy",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-dbfmggy",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "这么写非常麻烦,容易写错."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221201223815-ca2119q",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20221201223815-ca2119q",
+								"updated": "20221201223815"
+							},
+							"Children": [
+								{
+									"ID": "20221201223815-xvwi30c",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221201223815-xvwi30c",
+										"updated": "20221201223815"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "这么写也容易引起\"sql注入攻击\"."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-2upd2qq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-2upd2qq",
+				"updated": "20221201224539"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "推荐使用 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221201223815-sju9pfg"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "PreparedStatement"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "] 的 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "setXXX系列方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行替换。"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-qxmhnng",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-qxmhnng",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "String sql = \"insert into student values(? , ?)\";\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201224611-5jrjqof",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224611-5jrjqof"
+			}
+		},
+		{
+			"ID": "20221201224611-todg6dn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224611-todg6dn"
+			}
+		},
+		{
+			"ID": "20221201223815-cafizit",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221201223815-cafizit",
+				"updated": "20221201224435"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDBC实例代码"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-qq1kp64",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-qq1kp64",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查询"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-427d8xp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-427d8xp",
+				"updated": "20221201224501"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查询的步骤稍微麻烦一些，需要使用到"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221201223815-853groz"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "ResultSet"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-r6fo1hb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-r6fo1hb",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import com.mysql.cj.jdbc.MysqlDataSource;  \n  \nimport javax.sql.DataSource;  \nimport java.sql.Connection;  \nimport java.sql.PreparedStatement;  \nimport java.sql.ResultSet;  \nimport java.sql.SQLException;  \n  \npublic class TestJDBCSelect {  \n    public static void main(String[] args) throws SQLException {  \n        DataSource dataSource= new MysqlDataSource();  \n  \n        ((MysqlDataSource) dataSource).setURL(\"jdbc:mysql://127.0.0.1:3306/mydb?characterEncoding=utf8\u0026useSSL=false\");  \n        ((MysqlDataSource) dataSource).setUser(\"root\");  \n        ((MysqlDataSource) dataSource).setPassword(\"back7671773\");  \n  \n        Connection connection = dataSource.getConnection();  \n  \n        String sql = \"select * from student \";  \n        PreparedStatement statement = connection.prepareStatement(sql);  \n        ResultSet resultSet =  statement.executeQuery();  \n  \n  \n        while(resultSet.next())  \n        {  \n            int id = resultSet.getInt(\"id\");  \n            String name = resultSet.getString(\"name\");  \n  \n            System.out.println(\"id : \"+ id);  \n            System.out.println(\"name : \"+ name);  \n        }  \n  \n        resultSet.close();  \n        statement.close();  \n        connection.close();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201224508-z8njoee",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224508-z8njoee"
+			}
+		},
+		{
+			"ID": "20221201223815-4ih5gek",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221201223815-4ih5gek",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "更新与删除"
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-g24s2p2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-g24s2p2",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "更新"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-4mcjme7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-4mcjme7",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import com.mysql.cj.jdbc.MysqlDataSource;  \n  \nimport javax.sql.DataSource;  \nimport java.sql.Connection;  \nimport java.sql.PreparedStatement;  \nimport java.sql.SQLException;  \nimport java.util.Scanner;  \n  \npublic class TestJDBCUpdate {  \n    public static void main(String[] args) throws SQLException {  \n        DataSource dataSource = new MysqlDataSource();  \n        ((MysqlDataSource)dataSource).setURL(\"jdbc:mysql:///mydb?characterEncoding=utf8\u0026useSSL=false\");  \n        ((MysqlDataSource)dataSource).setUser(\"root\");  \n        ((MysqlDataSource)dataSource).setPassword(\"back7671773\");  \n  \n        Connection connection =dataSource.getConnection();  \n  \n        Scanner scanner = new Scanner(System.in);  \n        System.out.println(\"请输入要修改的学生id: \");  \n        int id = scanner.nextInt();  \n        System.out.println(\"请输入要修改的学生姓名: \");  \n        String name = scanner.next();  \n  \n        String sql = \"update student set name = ? where id = ?\";  \n        PreparedStatement statement = connection.prepareStatement(sql);  \n        statement.setInt(2 , id);  \n        statement.setString(1, name);  \n  \n        System.out.println(\"statement: \" + statement);  \n  \n        int ret = statement.executeUpdate();  \n        System.out.println(\"ret = \" + ret);  \n  \n        statement.close();  \n        connection.close();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201224514-j9a7l3l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224514-j9a7l3l"
+			}
+		},
+		{
+			"ID": "20221201223815-h11u9v5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201223815-h11u9v5",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "删除"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221201223815-hlvg00i",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221201223815-hlvg00i",
+				"updated": "20221201223815"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import com.mysql.cj.jdbc.MysqlDataSource;  \n  \nimport javax.sql.DataSource;  \nimport java.sql.Connection;  \nimport java.sql.PreparedStatement;  \nimport java.sql.SQLException;  \nimport java.util.Scanner;  \n  \npublic class TestJDBCDelete {  \n    public static void main(String[] args) throws SQLException {  \n        DataSource dataSource = new MysqlDataSource();  \n        ((MysqlDataSource) dataSource).setURL(\"jdbc:mysql:///mydb?characterEncoding=utf8\u0026useSSL=false\");  \n        ((MysqlDataSource) dataSource).setUser(\"root\");  \n        ((MysqlDataSource) dataSource).setPassword(\"back7671773\");  \n  \n        Connection connection = dataSource.getConnection();  \n  \n        Scanner scanner = new Scanner(System.in);  \n        System.out.printf(\"请输入一个要删除的 id: \");  \n        int id = scanner.nextInt();  \n  \n        String sql = \"delete from student where id = ?\";  \n        PreparedStatement statement = connection.prepareStatement(sql);  \n  \n        statement.setInt(1, id);  \n  \n        int ret = statement.executeUpdate();  \n        System.out.println(\"ret:\" + ret);  \n  \n        statement.close();  \n        connection.close();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221201224604-eac96bi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221201224604-eac96bi"
+			}
+		}
+	]
+}
