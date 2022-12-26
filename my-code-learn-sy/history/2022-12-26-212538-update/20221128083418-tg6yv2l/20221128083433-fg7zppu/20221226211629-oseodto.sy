@@ -1,0 +1,7598 @@
+{
+	"ID": "20221226211629-oseodto",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221226211629-oseodto",
+		"title": "类和对象",
+		"updated": "20221226212454"
+	},
+	"Children": [
+		{
+			"ID": "20221226211632-weimkp6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-weimkp6",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类定义和使用"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-w50n8ox",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-w50n8ox",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类的定义格式"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-wbtfd6t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-wbtfd6t",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在java中定义类时需要用到class关键字，具体语法如下"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-v9gqwuo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-v9gqwuo",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 创建类\nclass ClassName{\n\tfield; // 字段(属性) 或者 成员变量\n\tmethod; // 行为 或者 成员方法\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-h7xksy3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-h7xksy3",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "class"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为定义类的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "关键字"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ClassName"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "类的名字"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "{}"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "类的主体"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n类中包含的内容称为类的成员。属性主要是用来描述类的，称之为类的成员属性或者类成员变量。方法主要说明类具有哪些功能，称为类的成员方法。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-fp8v0ng",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-fp8v0ng",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class WashMachine{  \n    public String brand; // 品牌  \n    public String type; // 型号  \n    public double weight; // 重量  \n    public double lenght; // 长  \n    public double weidth; // 宽  \n    public double height; // 高  \n    public String color; // 颜色  \n    public void WashClothes(){ // 洗衣服  \n        System.out.println(\"洗衣功能\");  \n    }  \n    public void dryClothes(){ // 脱水  \n        System.out.println(\"脱水功能\");  \n    }  \n    public void SetTime(){ // 定时  \n        System.out.println(\"定时功能\");  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-ywun3nc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-ywun3nc",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "采用Java语言将洗衣机类在计算机中定义完成，经过javac编译之后形成.class文件，在JVM的基础上计算机就可以识别了。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211653-yl2t63o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211653-yl2t63o"
+			}
+		},
+		{
+			"ID": "20221226211632-07rxnax",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-07rxnax",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意事项"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-t0nwulp",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-t0nwulp",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-94l60o9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-94l60o9",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-yz9zpjx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-yz9zpjx",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类名注意采用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "大驼峰定义"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  如：PrintArray"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211655-hj82eh8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211655-hj82eh8"
+			}
+		},
+		{
+			"ID": "20221226211632-c35blor",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-c35blor",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类的实例化"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-kt4t3og",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-kt4t3og",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是实例化"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-y63i3ka",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-y63i3ka",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "定义了一个类，就相当于在计算机中定义了一种新的类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，与int，double类似，只不过int和double是java语言自带的内置类型，而类是用户自定义了一个新的类型，比如上述的：PetDog类和Student类。它们都是类(一种新定义的类型)有了这些自定义的类型之后，就可以使用这些类来定义实例(或者称为对象)。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-8dig16s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-8dig16s",
+				"updated": "20221226211746"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用类类型创建对象的过程，称为类的实例化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，在java中采用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "new"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "关键字，配合类名来实例化对象。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221204154852"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221204154852-20221226211746-983ogv5.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-fk92ti3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-fk92ti3",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Main{  \n    public static void main(String[] args) {  \n        PetDog dogh = new PetDog(); //通过new实例化对象  \n        dogh.name = \"阿黄\";  \n        dogh.color = \"黑黄\";  \n        dogh.barks();  \n        dogh.wag();  \n        PetDog dogs = new PetDog();  \n        dogs.name = \"阿黄\";  \n        dogs.color = \"黑黄\";  \n        dogs.barks();  \n        dogs.wag();  \n    }  \n}\n\n//输出结果：\n阿黄: 旺旺旺~~~\n阿黄: 摇尾巴~~~\n赛虎: 旺旺旺~~~\n赛虎: 摇尾巴~~~\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-tn4e6ei",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-tn4e6ei",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意事项"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-3qgwonn",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-3qgwonn",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-hqxi7sw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-hqxi7sw",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-5xbfg7d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-5xbfg7d",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "new"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 关键字用于创建一个对象的实例."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-wkjcuxh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-wkjcuxh",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-4m2l345",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-4m2l345",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "."
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 来访问对象中的属性和方法."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-lbjvadp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-lbjvadp",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-rxh8vhc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-rxh8vhc",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "同一个类可以创建多个实例."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211753-2dbq31e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211753-2dbq31e"
+			}
+		},
+		{
+			"ID": "20221226211632-j2rmi63",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-j2rmi63",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类和对象的说明"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-zu3qo3f",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-zu3qo3f",
+				"updated": "20221226211801"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-mgwivgg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-mgwivgg",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-euremxq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-euremxq",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类只是一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "模型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "一样的东西，用来对一个实体进行描述，限定了类有哪些成员."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-xz1uyqy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-xz1uyqy",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-qbwmdpt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-qbwmdpt",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "类是一种自定义的类型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，可以用来定义变量，但是在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "java中用类定义出来的变量我们成为对象"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-fy30i87",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-fy30i87",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-35zm6k0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-35zm6k0",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一个类可以实例化出多个对象，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实例化出的对象 占用实际的物理空间，存储类成员变量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-3yqx9bc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-3yqx9bc",
+						"updated": "20221226211801"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-4a7g3mo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-4a7g3mo",
+								"updated": "20221226211801"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "做个比方。"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "类实例化出对象就像现实中使用建筑设计图建造出房子，类就像是设计图"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，只设计出需要什么东西，但是并没有实体的建筑存在，同样类也只是一个设计，实例化出的对象才能实际存储数据，占用物理空间\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221204155114"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221204155114-20221226211801-gjb949m.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211805-hvxvsj2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211805-hvxvsj2"
+			}
+		},
+		{
+			"ID": "20221226211632-reoua94",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-reoua94",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "this 引用"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-okmtylg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-okmtylg",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么要有this引用"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-p6tkuld",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-p6tkuld",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "先看一个日期类的例子："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-ubnd87b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-ubnd87b",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {  \n    public int year;  \n    public int month;  \n    public int day;  \n    public void setDay(int y, int m, int d){  \n        year = y;  \n        month = m;  \n        day = d;  \n    }  \n    public void printDate(){  \n        System.out.println(year + \"/\" + month + \"/\" + day);  \n    }  \n    public static void main(String[] args) {  \n        // 构造三个日期类型的对象 d1 d2 d3        Date d1 = new Date();  \n        Date d2 = new Date();  \n        Date d3 = new Date();  \n\n\t\t// 对d1，d2，d3的日期设置  \n        d1.setDay(2020,9,15);  \n        d2.setDay(2020,9,16);  \n        d3.setDay(2020,9,17);  \n\t\n\t\t// 打印日期中的内容  \n        d1.printDate();  \n        d2.printDate();  \n        d3.printDate();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-u9nw7tg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-u9nw7tg",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以上代码定义了一个日期类，然后main方法中创建了三个对象，并通过Date类中的成员方法对对象进行设置和打印，代码整体逻辑非常简单，没有任何问题。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-gaglg25",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-gaglg25",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是细思之下有以下两个疑问："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-xbj6vhd",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-xbj6vhd",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-r4yp4ge",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-r4yp4ge",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-p7vnbmk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-p7vnbmk",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "形参名不小心与成员变量名相同："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-p2h5e2t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-p2h5e2t",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public void setDay(int year, int month, int day){\nyear = year;\nmonth = month;\nday = day;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-bizy178",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-bizy178",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那函数体中到底是谁给谁赋值？成员变量给成员变量？参数给参数？参数给成员变量？成员变量参数？估计\n自己都搞不清楚了。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-uvycon7",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-uvycon7",
+				"updated": "20221226211817"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-ft7t0wc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-ft7t0wc",
+						"updated": "20221226211817"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-i0ulakb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-i0ulakb",
+								"updated": "20221226211817"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一切让this引用来揭开这层神秘的面纱。"
+								}
+							]
+						},
+						{
+							"ID": "20221226211817-epey8e6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211817-epey8e6",
+								"updated": "20221226211817"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "三个对象都在调用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "setDate"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "printDate"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "函数，但是这两个函数中没有任何有关对象的说明，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "setDate和\nprintDate函数如何知道打印的是那个对象的数据呢？"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221204155506"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221204155506-20221226211817-njmc031.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-5w561p9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-5w561p9",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是this引用"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-khjvejx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-khjvejx",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "java编译器给每个“成员方法“增加了一个隐藏的引用类型参数，该引用参数指向当前对象(成员方法运行时调用该成员方法的对象)，在成员方法中所有成员变量的操作，都是通过该引用去访问。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 只不过所有的操作对用户是透明的，即用户不需要来传递，编译器自动完成。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-qi7tno0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-qi7tno0",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {  \n    public int year;  \n    public int month;  \n    public int day;  \n    public void setDay(int year, int month, int day){  \n        this.year = year;  \n        this.month = month;  \n        this.day = day;  \n    }  \n    public void printDate(){  \n        System.out.println(this.year + \"/\" + this.month + \"/\" + this.day);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-wnyk0da",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-wnyk0da",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "this引用是编译器自动添加的，用户在实现代码时一般不需要显式给出。\n注意："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "this引用的是调用成员方法的对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-oikih2a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-oikih2a",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void main(String[] args) {\n\tDate d = new Date();\n\td.setDay(2020,9,15);\n\td.printDate();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-cu8mmd0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-cu8mmd0",
+				"updated": "20221226211843"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221204155725"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221204155725-20221226211843-6zts68h.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211849-pkvbbx2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211849-pkvbbx2"
+			}
+		},
+		{
+			"ID": "20221226211632-dm4zn1r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-dm4zn1r",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "this引用的特性"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-ymb6qi2",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-ymb6qi2",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-toqbvmp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-toqbvmp",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-grekthw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-grekthw",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "this的类型：对应类类型引用，即哪个对象调用就是哪个对象的引用类型"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-lxejaj5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-lxejaj5",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-ofytb77",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-ofytb77",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "this只能在\"成员方法\"中使用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-2ud023u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-2ud023u",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-u71k7tm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-u71k7tm",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在\"成员方法\"中，this只能引用当前对象，不能再引用其他对象，具有final属性"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-o81wfc1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-o81wfc1",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-7a9cnqr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-7a9cnqr",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "this是“成员方法”第一个隐藏的参数，编译器会自动传递，在成员方法执行时，编译器会负责将调用成员方法对象的引用传递给该成员方法，this负责来接收"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-utfupk0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-utfupk0",
+				"updated": "20221226211857"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在代码层面来简单演示    注意：下图右侧中的Date类也是可以通过编译的\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221204155808"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221204155808-20221226211857-kvegabo.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-xzlgyol",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-xzlgyol",
+				"updated": "20221226211902"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221204155838"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221204155838-20221226211902-uvacitf.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211904-yxrp0dr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211904-yxrp0dr"
+			}
+		},
+		{
+			"ID": "20221226211632-07yywvx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-07yywvx",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对象的构造及初始化"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-vqqt1ak",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-vqqt1ak",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如何初始化对象"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-bjeqir5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-bjeqir5",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过前面知识点的学习知道，在Java方法内部定义一个局部变量时，必须要初始化，否则会编译失败。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-jytsbua",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-jytsbua",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void main(String[] args) {\n\tDate d = new Date();\n\td.printDate();\n\td.setDate(2021,6,9);\n\td.printDate();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-n64muv6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-n64muv6",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "需要调用之前写的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SetDate"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方法才可以将具体的日期设置到对象中。通过上述例子发现两个问题："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-6lwfjtz",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-6lwfjtz",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-1szo0sx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-1szo0sx",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-ywj8liq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-ywj8liq",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每次对象创建好后调用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SetDate"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法设置具体日期，比较麻烦，那对象该如何初始化？"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-j27exfi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-j27exfi",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-v0bgual",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-v0bgual",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "局部变量必须要初始化才能使用，为什么字段声明之后没有给值依然可以使用？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211909-1bkcz16",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211909-1bkcz16"
+			}
+		},
+		{
+			"ID": "20221226211632-e2l5a0b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-e2l5a0b",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "构造方法"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-4on9v83",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221226211632-4on9v83",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "概念"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-mh520s1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-mh520s1",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "构造方法(也称为构造器)是一个特殊的成员方法，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "名字必须与类名相同，在创建对象时，由编译器自动调用，并且在整个对象的生命周期内只调用一次"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-drftti9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-drftti9",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {\n\tpublic int year;\n\tpublic int month;\n\tpublic int day;\n\n\t// 构造方法：\n\t// 名字与类名相同，没有返回值类型，设置为void也不行\n\t// 一般情况下使用public修饰\n\t// 在创建对象时由编译器自动调用，并且在对象的生命周期内只调用一次\n\tpublic Date(int year, int month, int day){\n\t\tthis.year = year;\n\t\tthis.month = month;\n\t\tthis.day = day;\n\t\tSystem.out.println(\"Date(int,int,int)方法被调用了\");\n\t}\n\n\tpublic void printDate(){\n\t\tSystem.out.println(year + \"-\" + month + \"-\" + day);\n\t}\n\n\tpublic static void main(String[] args) {\n\t\t// 此处创建了一个Date类型的对象，并没有显式调用构造方法\n\t\tDate d = new Date(2021,6,9); // 输出Date(int,int,int)方法被调用了\n\t\td.printDate(); // 2021-6-9\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-q2tiiyn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-q2tiiyn",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意：构造方法的作用就是对对象中的成员进行初始化，并不负责给对象开辟空间。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211914-pw8his0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211914-pw8his0"
+			}
+		},
+		{
+			"ID": "20221226211632-kcpkuiq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221226211632-kcpkuiq",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "特性"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-b0r2yk0",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-b0r2yk0",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-h6kqnd1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-h6kqnd1",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-ul824kl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-ul824kl",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "名字必须与类名相同"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-7ns7p1c",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-7ns7p1c",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-7ec45hx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-7ec45hx",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "没有返回值类型，设置为void也不行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-fcul3lx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-fcul3lx",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-ietyt06",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-ietyt06",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建对象时由编译器自动调用，并且在对象的生命周期内只调用一次(相当于人的出生，每个人只能出生一次)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-12pi2hv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-12pi2hv",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-0kcjyyb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-0kcjyyb",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造方法可以重载(用户根据自己的需求提供不同参数的构造方法)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-pobumxp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-pobumxp",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {\n\tpublic int year;\n\tpublic int month;\n\tpublic int day;\n\n\t// 无参构造方法\n\tpublic Date(){\n\t\tthis.year = 1900;\n\t\tthis.month = 1;\n\t\tthis.day = 1;\n\t}\n\n\t// 带有三个参数的构造方法\n\tpublic Date(int year, int month, int day) {\n\t\tthis.year = year;\n\t\tthis.month = month;\n\t\tthis.day = day;\n\t}\n\n\tpublic void printDate(){\n\t\tSystem.out.println(year + \"-\" + month + \"-\" + day);\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tDate d = new Date();\n\t\td.printDate();\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-iadrr10",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-iadrr10",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上述两个构造方法：名字相同，参数列表不同，因此构成了方法重载。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-nyr0z6e",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-nyr0z6e",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-pdyfgq9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221226211632-pdyfgq9",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-znmm9l3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-znmm9l3",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果用户没有显式定义，编译器会生成一份默认的构造方法，生成的默认构造方法一定是无参的。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-zdgxery",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-zdgxery",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {\n\tpublic int year;\n\tpublic int month;\n\tpublic int day;\n\tpublic void printDate(){\n\t\tSystem.out.println(year + \"-\" + month + \"-\" + day);\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tDate d = new Date();\n\t\td.printDate();\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-lqhmzjg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-lqhmzjg",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上述Date类中，没有定义任何构造方法，编译器会默认生成一个不带参数的构造方法。\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：一旦用户定义，编译器则不再生成。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-m4c5mpk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-m4c5mpk",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {\n\tpublic int year;\n\tpublic int month;\n\tpublic int day;\n\n\tpublic Date(int year, int month, int day) {\n\t\tthis.year = year;\n\t\tthis.month = month;\n\t\tthis.day = day;\n\t}\n\n\tpublic void printDate(){\n\t\tSystem.out.println(year + \"-\" + month + \"-\" + day);\n\t}\n\n\tpublic static void main(String[] args) {\n\t\t// 如果编译器会生成，则生成的构造方法一定是无参的\n\t\t// 则此处创建对象是可以通过编译的\n\t\t// 但实际情况是：编译期报错\n\t\tDate d = new Date();\n\t\td.printDate();\n\t}\n}\n\n/*\nError:(26, 18) java: 无法将类 extend01.Date中的构造器 Date应用到给定类型;\n需要: int,int,int\n找到: 没有参数\n原因: 实际参数列表和形式参数列表长度不同\n*/\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-d8y3hkr",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-d8y3hkr",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-3o4ef1l",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20221226211632-3o4ef1l",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-wevbt3o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-wevbt3o",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造方法中，可以通过this调用其他构造方法来简化代码"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-uh5sxby",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-uh5sxby",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {  \n    public int year;  \n    public int month;  \n    public int day;  \n  \n    // 无参构造方法--内部给各个成员赋值初始值，该部分功能与三个参数的构造方法重复  \n\t// 此处可以在无参构造方法中通过this调用带有三个参数的构造方法  \n\t// 但是this(1900,1,1);必须是构造方法中第一条语句  \n    public Date(){  \n\t\t//System.out.println(year); 注释取消掉，编译会失败  \n\t\n        this(1900, 1, 1);  \n\t\t//this.year = 1900;  \n\t\t//this.month = 1;  \n\t\t//this.day = 1;  \n    }  \n    // 带有三个参数的构造方法  \n    public Date(int year, int month, int day) {  \n        this.year = year;  \n        this.month = month;  \n        this.day = day;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-11worcq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-11worcq",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-znfocyo",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-znfocyo",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-fypyilp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-fypyilp",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-f3fek4r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-f3fek4r",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "this(...)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "必须是构造方法中第一条语句"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-n3rc87k",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-n3rc87k",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-whzvg66",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-whzvg66",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不能形成环"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-plrfi1h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-plrfi1h",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public Date(){\n\tthis(1900,1,1);\n}\n\npublic Date(int year, int month, int day) {\n\tthis();\n}\n\n/*\n无参构造器调用三个参数的构造器，而三个参数构造器有调用无参的构造器，形成构造器的递归调用\n编译报错：Error:(19, 12) java: 递归构造器调用\n*/\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-a983yub",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-a983yub",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-z5m63f4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ny4=",
+						"Num": 7
+					},
+					"Properties": {
+						"id": "20221226211632-z5m63f4",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-2zb04fi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-2zb04fi",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "绝大多数情况下使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "public"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来修饰，特殊场景下会被"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "private"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "修饰(后序讲单例模式时会遇到)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211929-3ygrsh1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211929-3ygrsh1"
+			}
+		},
+		{
+			"ID": "20221226211632-dnnratt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-dnnratt",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "默认初始化"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-ufz696f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-ufz696f",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在上文中提出的第二个问题：为什么局部变量在使用时必须要初始化，而成员变量可以不用呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-3v80dvi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-3v80dvi",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {  \n    public int year;  \n    public int month;  \n    public int day;  \n    public Date(int year, int month, int day) {  \n\t\t// 成员变量在定义时，并没有给初始值, 为什么就可以使用呢？  \n        System.out.println(this.year);  \n        System.out.println(this.month);  \n        System.out.println(this.day);  \n    }  \n  \n    public static void main(String[] args) {  \n\t\t// 此处a没有初始化，编译时报错：  \n\t\t// Error:(24, 28) java: 可能尚未初始化变量a  \n\t\t// int a;  \n\t\t// System.out.println(a);  \n        Date d = new Date(2021,6,9);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-oxgmphd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-oxgmphd",
+				"updated": "20221226211936"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221226155839"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221226155839-20221226211936-hulvtxh.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-trg77fm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-trg77fm",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "要搞清楚这个过程，就需要知道 new 关键字背后所发生的一些事情："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-bxnj0ii",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-bxnj0ii",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Date d = new Date(2021,6,9);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-1l68yuh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-1l68yuh",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在程序层面只是简单的一条语句，在JVM层面需要做好多事情，下面简单介绍下："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-h84y9kw",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-h84y9kw",
+				"updated": "20221226211942"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-mwcvxcj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-mwcvxcj",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-lqconbs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-lqconbs",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "检测对象对应的类是否加载了，如果没有加载则加载"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-u26o1ya",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-u26o1ya",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-aeani8p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-aeani8p",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "为对象分配内存空间"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-0zfxm10",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-0zfxm10",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-qk4agfh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-qk4agfh",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "处理并发安全问题"
+								}
+							]
+						},
+						{
+							"ID": "20221226211632-7begrev",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221226211632-7begrev",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"ID": "20221226211632-i4c8n52",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221226211632-i4c8n52",
+										"updated": "20221226211632"
+									},
+									"Children": [
+										{
+											"ID": "20221226211632-cbflttt",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221226211632-cbflttt",
+												"updated": "20221226211632"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "比如：多个线程同时申请对象，JVM要保证给对象分配的空间不冲突"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-hhnr4k5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-hhnr4k5",
+						"updated": "20221226211942"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-2poq9re",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-2poq9re",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "初始化所分配的空间"
+								}
+							]
+						},
+						{
+							"ID": "20221226211632-8wsehcp",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20221226211632-8wsehcp",
+								"updated": "20221226211942"
+							},
+							"Children": [
+								{
+									"ID": "20221226211632-3gif6ak",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221226211632-3gif6ak",
+										"updated": "20221226211632"
+									},
+									"Children": [
+										{
+											"ID": "20221226211632-d58bctr",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221226211632-d58bctr",
+												"updated": "20221226211632"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "即：对象空间被申请好之后，对象中包含的成员已经设置好了初始值，比如："
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20221226211632-av9dvf2",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20221226211632-av9dvf2",
+										"updated": "20221226211942"
+									},
+									"Children": [
+										{
+											"ID": "20221226211632-lywiddj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20221226211632-lywiddj",
+												"updated": "20221226211942"
+											},
+											"Children": [
+												{
+													"Type": "NodeImage",
+													"Data": "span",
+													"Children": [
+														{
+															"Type": "NodeBang"
+														},
+														{
+															"Type": "NodeOpenBracket"
+														},
+														{
+															"Type": "NodeLinkText",
+															"Data": "Pasted image 20221226160111"
+														},
+														{
+															"Type": "NodeCloseBracket"
+														},
+														{
+															"Type": "NodeOpenParen"
+														},
+														{
+															"Type": "NodeLinkDest",
+															"Data": "assets/Pasted image 20221226160111-20221226211942-d27f5zj.png"
+														},
+														{
+															"Type": "NodeCloseParen"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-lrm2gba",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221226211632-lrm2gba",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-jr1wu1n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-jr1wu1n",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "设置对象头信息(关于对象内存模型后面会介绍)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-f2tmnuy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20221226211632-f2tmnuy",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-10t9nae",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-10t9nae",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "调用构造方法\u003c\u003e，给对象中各个成员赋值"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-p70gymi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-p70gymi",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "就地初始化"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-rvnre47",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-rvnre47",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在声明成员变量时，就直接给出了初始值。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-h55mfus",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-h55mfus",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Date {  \n    public int year = 1900;  \n    public int month = 1;  \n    public int day = 1;  \n  \n    public Date(){  \n    }  \n  \n    public Date(int year, int month, int day) {  \n    }  \n  \n    public static void main(String[] args) {  \n        Date d1 = new Date(2021,6,9);  \n        Date d2 = new Date();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-rhvq57k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-rhvq57k",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：代码编译完成后，编译器会将所有给成员初始化的这些语句添加到各个构造函数中"
+				}
+			]
+		},
+		{
+			"ID": "20221226211951-ywv4ql8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211951-ywv4ql8"
+			}
+		},
+		{
+			"ID": "20221226211632-nnahxwg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-nnahxwg",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "封装"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-ll0dunj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-ll0dunj",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "封装的概念"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-uonmk0d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-uonmk0d",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "面向对象程序三大特性：封装、继承、多态。而类和对象阶段，主要研究的就是封装特性。何为封装呢？简单来说就是套壳屏蔽细节。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-sd5806v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-sd5806v",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "封装：将数据和操作数据的方法进行有机结合，隐藏对象的属性和实现细节，仅对外公开接口来和对象进行 交互"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-k0hxjky",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-k0hxjky",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "访问限定符"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-zobj3q0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-zobj3q0",
+				"updated": "20221226211957"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java中主要通过类和访问权限来实现封装："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "类可以将数据以及封装数据的方法结合在一起"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，更符合人类对事物的认知，而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "访问权限用来控制方法或者字段能否直接在类外使用"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。Java中提供了四种访问限定符：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221226160603"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221226160603-20221226211957-qvv7dmp.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-rbbm47s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-rbbm47s",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如：\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "public"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：可以理解为一个人的外貌特征，谁都可以看得到\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "default"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 对于自己家族中(同一个包中)不是什么秘密，对于其他人来说就是隐私了\n"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "private"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：只有自己知道，其他人都不知道"
+				}
+			]
+		},
+		{
+			"ID": "20221226212001-p9115yh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212001-p9115yh"
+			}
+		},
+		{
+			"ID": "20221226211632-2q2kor6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-2q2kor6",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "【说明】"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-4trf07b",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-4trf07b",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-cxcpibv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-cxcpibv",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-3vegh8y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-3vegh8y",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "protected"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "主要是用在继承中，继承部分详细介绍"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-w83fyxk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-w83fyxk",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-myzxczx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-myzxczx",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "default"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "权限指：什么都不写时的默认权限"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-5fw3aw7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-5fw3aw7",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-lr7rzpt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-lr7rzpt",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问权限除了可以限定类中成员的可见性，也可以控制类的可见性"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-0zt9uvc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-0zt9uvc",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Computer {  \n    private String cpu; // cpu  \n    private String memory; // 内存  \n    public String screen; // 屏幕  \n    String brand; // 品牌----\u003edefault属性  \n  \n    public Computer(String brand, String cpu, String memory, String screen) {  \n        this.brand = brand;  \n        this.cpu = cpu;  \n        this.memory = memory;  \n        this.screen = screen;  \n    }  \n  \n    public void Boot(){  \n        System.out.println(\"开机~~~\");  \n    }\n    \n    public void PowerOff(){  \n        System.out.println(\"关机~~~\");  \n    }  \n  \n    public void SurfInternet(){  \n        System.out.println(\"上网~~~\");  \n    }  \n}  \npublic class TestComputer {  \n    public static void main(String[] args) {  \n        Computer p = new Computer(\"HW\", \"i7\", \"8G\", \"13*14\");  \n        System.out.println(p.brand); // default属性：只能被本包中类访问  \n        System.out.println(p.screen); // public属性： 可以任何其他类访问  \n\t\t// System.out.println(p.cpu); // private属性：只能在Computer类中访问，不能被其他类访问  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-9x8pkw3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-9x8pkw3",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：一般情况下成员变量设置为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "private"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，成员方法设置为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "public"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-65fiykz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-65fiykz",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "封装扩展之包"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-s1v97c7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221226211632-s1v97c7",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包的概念"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-bnhl1gm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-bnhl1gm",
+				"updated": "20221226212012"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在面向对象体系中，提出了一个软件包的概念，即："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "为了更好的管理类，把多个类收集在一起成为一组，称为软件包"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。有点类似于目录。比如：为了更好的管理电脑中的歌曲，一种好的方式就是将相同属性的歌曲放在相同文件下，也可以对某个文件夹下的音乐进行更详细的分类。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221226161102"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221226161102-20221226212012-xf54epn.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n在Java中也引入了包，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "包是对类、接口等的封装机制的体现，是一种对类或者接口等的很好的组织方式"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，比如：一个包中的类不想被其他包中的类使用。包还有一个重要的作用："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在同一个工程中允许存在相同名称的类，只要处在不同的包中即可"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226212018-o1uj3p9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212018-o1uj3p9"
+			}
+		},
+		{
+			"ID": "20221226211632-yp69q0o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221226211632-yp69q0o",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "导入包中的类"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-e3f8tej",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-e3f8tej",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 中已经提供了很多现成的类供我们使用. 例如"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Date"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类：可以使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "java.util.Date"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 导入 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "java.util"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 这个包中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Date"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类."
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-3a95w1p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-3a95w1p",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Test {\n\tpublic static void main(String[] args) {\n\t\tjava.util.Date date = new java.util.Date();\n\t\t// 得到一个毫秒级别的时间戳\n\t\tSystem.out.println(date.getTime());\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-nw9e53z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-nw9e53z",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是这种写法比较麻烦一些, 可以使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "import"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "语句导入包."
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-ct4rt50",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-ct4rt50",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import java.util.Date;  \npublic class Test {  \n    public static void main(String[] args) {  \n        Date date = new Date();  \n\t\t// 得到一个毫秒级别的时间戳  \n        System.out.println(date.getTime());  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-5wqwl8m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-5wqwl8m",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果需要使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "java.util"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 中的其他类, 可以使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "import java.util.*"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-686c74u",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-686c74u",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import java.util.*;  \npublic class Test {  \n    public static void main(String[] args) {  \n        Date date = new Date();  \n\t\t// 得到一个毫秒级别的时间戳  \n        System.out.println(date.getTime());  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-c1qnfpt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-c1qnfpt",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是我们"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "更建议显式的指定要导入的类名. 否则还是容易出现冲突"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的情况."
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-pgnj0t8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-pgnj0t8",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import java.util.*;\nimport java.sql.*;\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\t// util 和 sql 中都存在一个 Date 这样的类, 此时就会出现歧义, 编译出错\n\t\tDate date = new Date();\n\t\tSystem.out.println(date.getTime());\n\t}\n}\n\n// 编译出错\nError:(5, 9) java: 对Date的引用不明确\njava.sql 中的类 java.sql.Date 和 java.util 中的类 java.util.Date 都匹配\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-bl01m26",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-bl01m26",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在这种情况下需要使用完整的类名"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-zxja35s",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-zxja35s",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import java.util.*;\nimport java.sql.*;\n\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tjava.util.Date date = new java.util.Date();\n\t\tSystem.out.println(date.getTime());\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-hf27hfq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-hf27hfq",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "import static"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "导入包中静态的方法和字段。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-j8vr09o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-j8vr09o",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "import static java.lang.Math.*;  \n\npublic class Test {  \n    public static void main(String[] args) {  \n        double x = 30;  \n        double y = 40;  \n\t\n\t\t// 静态导入的方式写起来更方便一些.  \n\t\t// double result = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));  \n        double result = sqrt(pow(x, 2) + pow(y, 2));  \n        System.out.println(result);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-st0cdlu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-st0cdlu",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意事项: "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "import"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 C++ 的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "#include"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "差别很大. C++ 必须 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "#include"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 来引入其他文件内容, 但是 Java 不需要."
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "import"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 只是为了写代码的时候更方便. "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "import"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 更类似于 C++ 的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "namespace"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "using"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226212025-ch5xnn4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212025-ch5xnn4"
+			}
+		},
+		{
+			"ID": "20221226211632-xnqwc73",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221226211632-xnqwc73",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自定义包"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-wbw3apa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-wbw3apa",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "基本规则"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-6xbvz59",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-6xbvz59",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-uqc11m1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-uqc11m1",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-rylyjv5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-rylyjv5",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在文件的最上方加上一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "package"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 语句指定该代码在哪个包中."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-7m6hqfp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-7m6hqfp",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-re0hqrr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-re0hqrr",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "包名需要尽量指定成唯一的名字, 通常会用公司的域名的颠倒形式(例如 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "com.bit.demo1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " )."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-qiu9tx3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-qiu9tx3",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-i6oygf1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-i6oygf1",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "包名要和代码路径相匹配. 例如创建 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "com.bit.demo1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的包, 那么会存在一个对应的路径 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "com/bit/demo1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 来存储代码."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-ez65pce",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-ez65pce",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-b4q0pn0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-b4q0pn0",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果一个类没有 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "package"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 语句, 则该类被放到一个默认包中."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-n9lpwb2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-n9lpwb2",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "操作步骤"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-smaqct9",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-smaqct9",
+				"updated": "20221226212122"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-hgnd67d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-hgnd67d",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-5tp17d2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-5tp17d2",
+								"updated": "20221226212032"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在 IDEA 中先新建一个包: 右键 src -\u003e 新建 -\u003e 包\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221226162113"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221226162113-20221226212032-kfm6ft3.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-kl1sloh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-kl1sloh",
+						"updated": "20221226212102"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-aynv014",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-aynv014",
+								"updated": "20221226212102"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在弹出的对话框中输入包名, 例如"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": " com.bit.demo1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221226162133"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221226162133-20221226212102-ql9r7h0.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-1q98egk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-1q98egk",
+						"updated": "20221226212110"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-959yq6n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-959yq6n",
+								"updated": "20221226212110"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在包中创建类, 右键包名 -\u003e 新建 -\u003e 类, 然后输入类名即可.\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221226162147"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221226162147-20221226212110-abucgs3.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-idb8c61",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-idb8c61",
+						"updated": "20221226212116"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-i9snvy3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-i9snvy3",
+								"updated": "20221226212116"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此时可以看到我们的磁盘上的目录结构已经被 IDEA 自动创建出来了\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221226162204"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221226162204-20221226212116-wxsfqbc.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-dr8foni",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221226211632-dr8foni",
+						"updated": "20221226212122"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-iynqry4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-iynqry4",
+								"updated": "20221226212122"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "同时我们也看到了, 在新创建的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Test.java"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 文件的最上方, 就出现了一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "package"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 语句\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221226162218"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221226162218-20221226212122-c6usal4.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226212125-g5ye6s5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212125-g5ye6s5"
+			}
+		},
+		{
+			"ID": "20221226211632-qzbd1d2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221226211632-qzbd1d2",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "包的访问权限控制举例"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-5fr8pnl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-5fr8pnl",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Computer"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类位于"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "com.bit.demo1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "包中，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TestComputer"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "位置"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "com.bit.demo2"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "包中："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-luj2wvc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-luj2wvc",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "package com.bit.demo1;  \npublic class Computer {  \n    private String cpu; // cpu  \n    private String memory; // 内存  \n    public String screen; // 屏幕  \n    String brand; // 品牌  \n    public Computer(String brand, String cpu, String memory, String screen) {  \n        this.brand = brand;  \n        this.cpu = cpu;  \n        this.memory = memory;  \n        this.screen = screen;  \n    }  \n    public void Boot(){  \n        System.out.println(\"开机~~~\");  \n    }  \n    public void PowerOff(){  \n        System.out.println(\"关机~~~\");  \n    }  \n    public void SurfInternet(){  \n        System.out.println(\"上网~~~\");  \n    }  \n}\n\n///////////////////////////////////////////////////////////////////////////  \npackage com.bite.demo2;  \nimport com.bite.demo1.Computer;  \npublic class TestComputer {  \n    public static void main(String[] args) {  \n        Computer p = new Computer(\"HW\", \"i7\", \"8G\", \"13*14\");  \n        System.out.println(p.screen);  \n\t\t// System.out.println(p.cpu); // 报错：cup是私有的，不允许被其他类访问  \n\t\t// System.out.println(p.brand); // 报错：brand是default，不允许被其他包中的类访问  \n    }  \n} \n// 注意：如果去掉Computer类之前的public修饰符，代码也会编译失败\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226212131-8p441w5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212131-8p441w5"
+			}
+		},
+		{
+			"ID": "20221226211632-7cb8omn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221226211632-7cb8omn",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常见的包"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-jpptg5q",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-jpptg5q",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-0zbufhy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-0zbufhy",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-x4m3suw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-x4m3suw",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.lang"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":系统常用基础类(String、Object),此包从JDK1.1后自动导入。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-jppaso8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-jppaso8",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-73d6i6s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-73d6i6s",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.lang.reflect"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":java 反射编程包;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-jpwb3v1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-jpwb3v1",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-w9dfqoe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-w9dfqoe",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.net"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":进行网络编程开发包。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-6qgfxh8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-6qgfxh8",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-p1sepod",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-p1sepod",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.sql"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":进行数据库开发的支持包。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-seh8yf2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221226211632-seh8yf2",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-wvj0pyc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-wvj0pyc",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.util"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":是java提供的工具程序包。(集合类等) 非常重要"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-7ha593v",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20221226211632-7ha593v",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-xo0fwg9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-xo0fwg9",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.io"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":I/O编程开发包。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226212134-npygqif",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212134-npygqif"
+			}
+		},
+		{
+			"ID": "20221226211632-untre8f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-untre8f",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "static成员"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-gydrpjx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-gydrpjx",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用前文中介绍的学生类实例化三个对象s1、s2、s3，每个对象都有自己特有的名字、性别，年龄，学分绩点等成员信息，这些信息就是对不同学生来进行描述的，如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-oprta6z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-oprta6z",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Student {  \n    // ...  \n    public static void main(String[] args) {  \n        Student s1 = new Student(\"Li leilei\", \"男\", 18, 3.8);  \n        Student s2 = new Student(\"Han MeiMei\", \"女\", 19, 4.0);  \n        Student s3 = new Student(\"Jim\", \"男\", 18, 2.6);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-9009n5n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-9009n5n",
+				"updated": "20221226212140"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221226164243"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221226164243-20221226212140-w70o877.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n假设三个同学是同一个班的，那么他们上课肯定是在同一个教室，那既然在同一个教室，那能否给类中再加一个成员变量，来保存同学上课时的教室呢？答案是不行的。\n之前在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Student类中定义的成员变量，每个对象中都会包含一份(称之为实例变量)"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，因为需要使用这些信息来描述具体的学生。而现在要表示学生上课的教室，这个教室的属性并不需要每个学生对象中都存储一份，而是需要让所有的学生来共享。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在Java中，被static修饰的成员，称之为静态成员，也可以称为类成员，其不属于某个具体的对象，是所有对象所共享的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226212142-gm2rw0p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212142-gm2rw0p"
+			}
+		},
+		{
+			"ID": "20221226211632-ieropks",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-ieropks",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "static修饰成员变量"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-31zn892",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-31zn892",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "static"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "修饰的成员变量，称为静态成员变量"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，静态成员变量最大的特性："
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "不属于某个具体的对象，是所有对象所共享的"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-lhucpdz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-lhucpdz",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "【静态成员变量特性】"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-t71totm",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-t71totm",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-r13ldpl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-r13ldpl",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-3d42zud",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-3d42zud",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不属于某个具体的对象，是类的属性，所有对象共享的，不存储在某个对象的空间中"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-xs7yfhw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-xs7yfhw",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-0igxscs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-0igxscs",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "既可以通过对象访问，也可以通过类名访问，但一般更推荐使用类名访问"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-g6xbsxa",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-g6xbsxa",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-e4mbszw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-e4mbszw",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JDK7及以前，HotSpot(Java虚拟机)中存储在方法区，JDK8及之后，类变量存储在Java堆中"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-w19wcop",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-w19wcop",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-3rxuke7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-3rxuke7",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类变量存储在方法区当中"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-thbnpgr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221226211632-thbnpgr",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-66tctbb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-66tctbb",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "生命周期伴随类的一生(即：随类的加载而创建，随类的卸载而销毁)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-52r02s5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-52r02s5",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Student{  \n    public String name;  \n    public String gender;  \n    public int age;  \n    public double score;  \n    public static String classRoom = \"Bit306\";  \n    // ...  \n    public static void main(String[] args) {  \n\n\t\t// 静态成员变量可以直接通过类名访问  \n        System.out.println(Student.classRoom);  \n        Student s1 = new Student(\"Li leilei\", \"男\", 18, 3.8);  \n        Student s2 = new Student(\"Han MeiMei\", \"女\", 19, 4.0);  \n        Student s3 = new Student(\"Jim\", \"男\", 18, 2.6);  \n\t\n\t\t// 也可以通过对象访问：但是classRoom是三个对象共享的  \n        System.out.println(s1.classRoom);  \n        System.out.println(s2.classRoom);  \n        System.out.println(s3.classRoom);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-alvgkvi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-alvgkvi",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "同学以调试方式运行上述代码，然后在监视窗口中可以看到，静态成员变量并没有存储到某个具体的对象中。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-qfwuw0r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-qfwuw0r",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "static修饰成员方法"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-osodi5t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-osodi5t",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一般类中的数据成员都设置为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "private"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而成员方法设置为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "public"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那设置之后，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Student类"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "classRoom"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "属性如何在类外访问呢？"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-rsaxzrw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-rsaxzrw",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Student{  \n    private String name;  \n    private String gender;  \n    private int age;  \n    private double score;  \n    private static String classRoom = \"Bit306\";  \n// ...  \n}  \n\npublic class TestStudent {  \n    public static void main(String[] args) {  \n        System.out.println(Student.classRoom);  \n    }  \n}  \n\n//编译失败：  \n        //Error:(10, 35) java: classRoom 在 extend01.Student 中是 private 访问控制\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-1vnmx48",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-1vnmx48",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "那static属性应该如何访问呢？"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nJava中，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "被static修饰的成员方法称为静态成员方法，是类的方法，不是某个对象所特有的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。静态成员一般是通过静态方法来访问的。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-3sm21ij",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-3sm21ij",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Student{  \n    // ...  \n    private static String classRoom = \"Bit306\";  \n    // ...  \n    public static String getClassRoom(){  \n        return classRoom;  \n    }  \n}  \npublic class TestStudent {  \n    public static void main(String[] args) {  \n        System.out.println(Student.classRoom);  \n    }\n}\n\n输出：Bit306\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-xwakpwf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-xwakpwf",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "【静态方法特性】"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-1q16hp5",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-1q16hp5",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-ms59djr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-ms59djr",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-rris8w4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-rris8w4",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不属于某个具体的对象，是类方法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-n3giqna",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-n3giqna",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-kurl5pq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-kurl5pq",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以通过对象调用，也可以通过类名.静态方法名(...)方式调用，更推荐使用后者"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-b85kjrq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20221226211632-b85kjrq",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-c7reqbm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-c7reqbm",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态方法没有隐藏的this引用参数，因此不能在静态方法中访问任何非静态成员变量"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-17a54ed",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-17a54ed",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static String getClassRoom(){  \n\tSystem.out.println(this);  \n\treturn classRoom;  \n}  \n\t// 编译失败：Error:(35, 28) java: 无法从静态上下文中引用非静态 变量 this\n\npublic static String getClassRoom(){  \n\tage += 1;  \n\treturn classRoom;  \n}  \n// 编译失败：Error:(35, 9) java: 无法从静态上下文中引用非静态 变量 age\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-295ozd0",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-295ozd0",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-hsbo7z8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20221226211632-hsbo7z8",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-o5sjfv6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-o5sjfv6",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态方法中不能调用任何非静态方法，因为非静态方法有this参数，在静态方法中调用时候无法传递this引用"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-4xvoe1e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-4xvoe1e",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static String getClassRoom(){\n\tdoClass();\n\treturn classRoom;\n}\n// 编译报错：Error:(35, 9) java: 无法从静态上下文中引用非静态 方法 doClass()\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-1sd984s",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-1sd984s",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-kc3bv67",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20221226211632-kc3bv67",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-6re0m8p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-6re0m8p",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态方法无法重写，不能用来实现多态"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-n0favyy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-n0favyy",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "static成员变量初始化"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-qspmqp4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-qspmqp4",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：静态成员变量一般不会放在构造方法中来初始化，构造方法中初始化的是与对象相关的实例属性\n静态成员变量的初始化分为两种："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "就地初始化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "静态代码块初始化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-rwx9wcz",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-rwx9wcz",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-d3u3wnl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20221226211632-d3u3wnl",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-ih4jkwj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-ih4jkwj",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "就地初始化\n就地初始化指的是：在定义时直接给出初始值"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-4cmpfu8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-4cmpfu8",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Student{  \n    private String name;  \n    private String gender;  \n    private int age;  \n    private double score;  \n    private static String classRoom = \"Bit306\";  \n\t// ...  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-6amuflv",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20221226211632-6amuflv",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-ggg83b2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20221226211632-ggg83b2",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-xoddnr8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-xoddnr8",
+								"updated": "20221226212506"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态代码块初始化"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226212506-ud2c7ls",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20221226212506-ud2c7ls",
+				"updated": "20221226212515"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20221226211632-3ha4wiz'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20221226212454-aoc5dpe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212454-aoc5dpe"
+			}
+		},
+		{
+			"ID": "20221226211632-5zfdsqt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-5zfdsqt",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码块"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-r80og1h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-r80og1h",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码块概念以及分类"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-l4kqec2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-l4kqec2",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "使用"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "{}"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 定义的一段代码称为代码块"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。根据代码块定义的位置以及关键字，又可分为以下四种："
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-dctzdig",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-dctzdig",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-hxchiop",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-hxchiop",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-myqo6cd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-myqo6cd",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "普通代码块"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-0skkshp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-0skkshp",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-1ub97zf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-1ub97zf",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造块"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-ce84z6s",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-ce84z6s",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-hx99ily",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-hx99ily",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态块"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-xpxg4ia",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-xpxg4ia",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-qqzmuvr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-qqzmuvr",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "同步代码块（后续讲解多线程部分再谈）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-fnyv1uz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-fnyv1uz",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "普通代码块"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-qpbosj9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-qpbosj9",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "普通代码块：定义在方法中的代码块."
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-cyw46h2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-cyw46h2",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Main{  \n    public static void main(String[] args) {  \n        { //直接使用{}定义，普通方法块  \n            int x = 10 ;  \n            System.out.println(\"x1 = \" +x);  \n        }  \n        int x = 100 ;  \n        System.out.println(\"x2 = \" +x);  \n    }  \n}  \n\n// 执行结果  \nx1 = 10  \nx2 = 100\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-k3lg2sx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-k3lg2sx",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这种用法较少见"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-jn0mg8t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-jn0mg8t",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "构造代码块"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-maomita",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-maomita",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "构造块：定义在类中的代码块(不加修饰符)。也叫：实例代码块。构造代码块一般用于初始化实例成员变量。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-f0bv847",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-f0bv847",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Student{  \n    //实例成员变量  \n    private String name;  \n    private String gender;  \n    private int age;  \n    private double score;  \n    public Student() {  \n        System.out.println(\"I am Student init()!\");  \n    }  \n    //实例代码块  \n    {  \n        this.name = \"bit\";  \n        this.age = 12;  \n        this.sex = \"man\";  \n        System.out.println(\"I am instance init()!\");  \n    }  \n    public void show(){  \n        System.out.println(\"name: \"+name+\" age: \"+age+\" sex: \"+sex);  \n    }  \n}  \n\npublic class Main {  \n    public static void main(String[] args) {  \n        Person p1 = new Person();  \n        p1.show();  \n    }  \n}\n\n// 运行结果\nI am instance init()!\nI am Person init()!\nname: bit age: 12 sex: man\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-q7mvcrw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-q7mvcrw",
+				"updated": "20221226212348"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "【注意事项 】"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n实例代码块优先于构造方法执行，因为编译完成后，编译器会将实例代码块中的代码拷贝到每个构造方法第一条语句前。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221226165620"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221226165620-20221226212348-36tqsw4.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221226212350-vxxza4p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212350-vxxza4p"
+			}
+		},
+		{
+			"ID": "20221226212439-828yj2g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212439-828yj2g"
+			}
+		},
+		{
+			"ID": "20221226211632-3ha4wiz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221226211632-3ha4wiz",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "静态代码块"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-l6ushlg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-l6ushlg",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用static定义的代码块称为静态代码块。一般用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "初始化静态成员变量"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-l20xx8n",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221226211632-l20xx8n",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Student{  \n    private String name;  \n    private String gender;  \n    private int age;  \n    private double score;  \n    private static String classRoom;  \n    //实例代码块  \n    {  \n        this.name = \"bit\";  \n        this.age = 12;  \n        this.gender = \"man\";  \n        System.out.println(\"I am instance init()!\");  \n    }  \n  \n    // 静态代码块  \n    static {  \n        classRoom = \"bit306\";  \n        System.out.println(\"I am static init()!\");  \n    }  \n    public Student(){  \n        System.out.println(\"I am Student init()!\");  \n    }  \n    public static void main(String[] args) {  \n        Student s1 = new Student();  \n        Student s2 = new Student();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-smgvaaw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-smgvaaw",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意事项"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-c9fy05o",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-c9fy05o",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-x98eg1w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-x98eg1w",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-5ai65lu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-5ai65lu",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态代码块不管生成多少个对象，其只会执行一次"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-l61cz64",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-l61cz64",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-nor5v7o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-nor5v7o",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "静态成员变量是类的属性，因此是在JVM加载类时开辟空间并初始化的"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-i914sjx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-i914sjx",
+				"updated": "20221226212400"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java代码在经过编译器编译之后，如果要运行必须先要经过类加载子系统加载到JVM中才能运行。在加载阶\n段：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221226170006"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221226170006-20221226212400-9mhtemq.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n在链接阶段第二步准备中会给静态成员变量开辟空间，并设置为默认值，在初始化阶段，会执行静态代码块\n中的代码。(了解：关于类加载过程后序JVM中会详细讲解)"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-gxuzyr8",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221226211632-gxuzyr8",
+				"updated": "20221226212409"
+			},
+			"Children": [
+				{
+					"ID": "20221226211632-fkyfawf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-fkyfawf",
+						"updated": "20221226212409"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-zgrurn9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-zgrurn9",
+								"updated": "20221226212409"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果一个类中包含多个静态代码块，在编译代码时，编译器会按照定义的先后次序依次合并，最终放在生成\n的\u003c\u003e方法中，该方法在类加载时调用，并且只调用一次。\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Pasted image 20221226170111"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "assets/Pasted image 20221226170111-20221226212409-k143szb.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeBr",
+									"Data": "br"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221226211632-541aana",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221226211632-541aana",
+						"updated": "20221226211632"
+					},
+					"Children": [
+						{
+							"ID": "20221226211632-2901jvi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221226211632-2901jvi",
+								"updated": "20221226211632"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实例代码块只有在创建对象时才会执行。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221226212412-2c6laxg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212412-2c6laxg"
+			}
+		},
+		{
+			"ID": "20221226211632-udepbal",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221226211632-udepbal",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内部类"
+				}
+			]
+		},
+		{
+			"ID": "20221226211632-vs8gw43",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226211632-vs8gw43",
+				"updated": "20221226211632"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当一个事物的内部，还有一个部分需要一个完整的结构进行描述，而这个内部的完整的结构又只为外部事物提供服务，那么整个内部的完整结构最好使用内部类。在 Java 中，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可以将一个类定义在另一个类或者一个方法的内部，前者称为内部类，后者称为外部类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。内部类也是封装的一种体现。"
+				}
+			]
+		},
+		{
+			"ID": "20221226212413-qtn2gne",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221226212413-qtn2gne"
+			}
+		}
+	]
+}
