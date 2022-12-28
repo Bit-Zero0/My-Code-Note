@@ -1,0 +1,1495 @@
+{
+	"ID": "20221228220332-uymqj2j",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20221228220332-uymqj2j",
+		"title": "链表",
+		"updated": "20221228220345"
+	},
+	"Children": [
+		{
+			"ID": "20221228220345-uw6kutq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-uw6kutq",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "合并两个有序列表"
+				}
+			]
+		},
+		{
+			"ID": "20221228220415-8qxymst",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221228220415-8qxymst",
+				"updated": "20221228220415"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "21. 合并两个有序链表"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://leetcode.cn/problems/merge-two-sorted-lists/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-izdey1t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-izdey1t",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-gkd6dgo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-gkd6dgo",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "创建一个带头结点的链表，比较list1 和list2每个节点的值，较小的插入到我们创建的链表中。两条链表最终有可能还有节点还没被插入到我们创建的列表中，所以还需要最后一层判断。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-l27m6po",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-l27m6po",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-5wdjtm7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-5wdjtm7",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//带哨兵位的头结点  \nclass Solution {  \n    public:  \n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {  \n        ListNode* newList = new ListNode(-1);  //创建头结点\n        ListNode* tmp = newList;  \n  \n        while(list1 \u0026\u0026 list2)  \n        {  \n            if(list1-\u003eval \u003c list2-\u003eval)  \n            {  \n                tmp-\u003enext = list1;  \n                list1 = list1-\u003enext;  \n                tmp = tmp-\u003enext;  \n            }  \n            else  \n            {  \n                tmp-\u003enext = list2;  \n                list2 = list2-\u003enext;  \n                tmp = tmp-\u003enext;  \n            }  \n        }  \n  \n        if(list1)  //list1 还有节点未被插入\n            tmp-\u003enext = list1;  \n  \n        if(list2)  //list2 还有节点未被插入\n            tmp-\u003enext = list2;  \n  \n        ListNode* next = newList-\u003enext;  \n        delete newList;  \n  \n        return next;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-k0wy700",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-k0wy700",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-7zskced",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-7zskced",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {  \n        ListNode NewList = new ListNode(-1);  \n        ListNode tmp = NewList;  \n        while(list1 != null \u0026\u0026 list2 != null) {  \n            if(list1.val \u003c list2.val){  \n                tmp.next = list1;  \n                list1 = list1.next;  \n                tmp = tmp.next;  \n            }else{  \n                tmp.next = list2;  \n                list2 = list2.next;  \n                tmp = tmp.next;  \n            }  \n        }  \n        if(list1 != null)  \n            tmp.next = list1;  \n  \n        if(list2 != null)  \n            tmp.next = list2;  \n  \n        return NewList.next;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-w0of9f4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-w0of9f4"
+			}
+		},
+		{
+			"ID": "20221228220425-smp3jij",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220425-smp3jij"
+			}
+		},
+		{
+			"ID": "20221228220345-v5fuuv3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-v5fuuv3",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "反转链表"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-e84inlv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-e84inlv",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "206. 反转链表"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://leetcode.cn/problems/reverse-linked-list/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-kgxml6m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-kgxml6m",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-z9spck2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-z9spck2",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用双指针，cur比prev先一步，在将cur的next指向prev即可。注意保存cur的next。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-u351k7t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-u351k7t",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-ekhhh1s",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-ekhhh1s",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public:  \n    ListNode* reverseList(ListNode* head) {  \n        if(head == nullptr)return nullptr;  \n  \n        ListNode* prev = nullptr;  \n        ListNode* cur = head;  \n  \n        while(cur != nullptr){  \n            ListNode* next = cur-\u003enext;  //先保存cur的下一个节点\n            cur-\u003enext = prev;  \n            prev = cur;  \n            cur = next;  \n        }  \n        return prev;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-zocyzgd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-zocyzgd",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-2zwvu8d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-2zwvu8d",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public ListNode reverseList(ListNode head) {  \n        if(head == null){  \n            return null;  \n        }  \n  \n        ListNode prev = null;  \n        ListNode cur = head;  \n  \n        while(cur != null){  \n            ListNode next = cur.next;  \n            cur.next = prev ;  \n            prev = cur;  \n            cur = next;  \n        }  \n        return prev;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-cuh479q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-cuh479q",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "移除链表元素"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-ak9i8iu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-ak9i8iu",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "203. 移除链表元素"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://leetcode.cn/problems/remove-linked-list-elements/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-rllrzky",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-rllrzky",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-p7otjpx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-p7otjpx",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public:  \n    ListNode* removeElements(ListNode* head, int val) {  \n        if(head == nullptr)return nullptr;  \n  \n        ListNode* prev = head;  \n        ListNode* cur = head-\u003enext;  \n        while(cur != nullptr)  \n        {  \n            if(cur-\u003eval == val)  \n            {  \n                prev-\u003enext = cur-\u003enext;  \n                cur = cur-\u003enext;  \n            }  \n            else  \n            {  \n                prev = cur ;  \n                cur = cur-\u003enext;  \n            }  \n        }  \n        if(head-\u003eval == val)  \n        {  \n            head = head-\u003enext;  \n        }  \n        return head;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-vfcuw2g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-vfcuw2g",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-7fk67x3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-7fk67x3",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public ListNode removeElements(ListNode head, int val) {  \n        if(head == null) return null;  \n  \n        ListNode prev = head;  \n        ListNode cur = head.next;  \n  \n        while(cur != null){  \n            if(cur.val == val ){  \n                prev.next = cur.next;  \n                cur = cur.next;  \n            }else{  \n                prev = cur;  \n                cur = cur.next;  \n            }  \n        }  \n        if(head.val == val){  \n            head = head.next;  \n        }  \n  \n        return head;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220444-nrdxzrn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220444-nrdxzrn"
+			}
+		},
+		{
+			"ID": "20221228220444-ey9x96n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220444-ey9x96n"
+			}
+		},
+		{
+			"ID": "20221228220345-hb539b8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-hb539b8",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "链表的中间结点"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-3zhgcxf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-3zhgcxf",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "876. 链表的中间结点"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://leetcode.cn/problems/middle-of-the-linked-list/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-67abii7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-67abii7",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-2166cpz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-2166cpz",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用快慢指针，fast指针的速度是slow指针的两倍。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-hduaew2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-hduaew2",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-9ucn55w",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-9ucn55w",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public:  \n    ListNode* middleNode(ListNode* head) {  \n        if(head == nullptr) return nullptr;  \n        ListNode* fast = head;  \n        ListNode* slow = head;  \n        while(fast != nullptr \u0026\u0026 fast-\u003enext != nullptr){  \n            fast = fast-\u003enext-\u003enext;  \n            slow = slow-\u003enext;  \n        }  \n        return slow;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-683g1km",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-683g1km",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-jjyaazm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-jjyaazm",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public ListNode middleNode(ListNode head) {  \n        if(head == null) return null;  \n  \n        ListNode fast = head;  \n        ListNode slow = head;  \n        while(fast != null \u0026\u0026 fast.next != null){  \n            fast = fast.next.next;  \n            slow = slow.next;  \n        }  \n        return slow;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220501-y3jzlm5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220501-y3jzlm5"
+			}
+		},
+		{
+			"ID": "20221228220345-gmdsrqi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-gmdsrqi",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "链表分割"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-wxqp4u3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-wxqp4u3",
+				"updated": "20221228220456"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "https://www.nowcoder.com/practice/0e27e0b064de4eacac178676ef9c9d70?"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.nowcoder.com/practice/0e27e0b064de4eacac178676ef9c9d70?"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-pwy40zk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-pwy40zk",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-5io37jx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-5io37jx",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "创建四个指针 ，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "as"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ae"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ， "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "bs"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  ，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "be"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,  (as = a start , ae = a end...以此类推),使用as到ae来操作小于x的数，使用bs到be来操作大于x的数。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-2tyspl9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-2tyspl9",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-h58bhg2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-h58bhg2",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Partition {  \n    public:  \n    ListNode* partition(ListNode* pHead, int x) {  \n        // write code here  \n        if(pHead == nullptr) return nullptr;  \n  \n        ListNode* as = nullptr;  \n        ListNode* ae = nullptr;  \n        ListNode* bs = nullptr;  \n        ListNode* be = nullptr;  \n        ListNode* cur = pHead;  \n        while(cur != nullptr)  \n        {  \n            if(cur-\u003eval \u003c x )  \n            {  \n                if(ae == nullptr)  \n                {  \n                    as = cur;  \n                    ae = cur;  \n                }  \n                else  \n                {  \n                    ae-\u003enext = cur;  \n                    ae = ae-\u003enext;  \n                }  \n            }  \n            else  \n            {  \n                if(be == nullptr)  \n                {  \n                    bs = cur;  \n                    be = cur;  \n                }  \n                else  \n                {  \n                    be-\u003enext = cur;  \n                    be = be-\u003enext;  \n                }  \n            }  \n            cur = cur-\u003enext;  \n        }  \n        if(as == nullptr)  \n        {  \n            return bs;  \n        }  \n        ae-\u003enext = bs;  \n  \n        if(bs != nullptr)  \n        {  \n            be-\u003enext = nullptr;  \n        }  \n  \n        return as;  \n  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-zeyp7i8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-zeyp7i8",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-g5axhc6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-g5axhc6",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Partition {  \n    public ListNode partition(ListNode pHead, int x) {  \n        ListNode bs = null;  \n        ListNode be = null;  \n        ListNode as = null;  \n        ListNode ae = null;  \n        ListNode cur = pHead;  \n        while (cur != null) {  \n            if (cur.val \u003c x) {  \n                //1、第一次  \n                if (as == null) {  \n                    as = cur;  \n                    ae = cur;  \n                } else {  \n                    //2、不是第一次  尾插  \n                    ae.next = cur;  \n                    ae = ae.next;  \n                }  \n            } else {  \n                if (bs == null) {  \n                    bs = cur;  \n                    be = cur;  \n                } else {  \n                    //2、不是第一次  \n                    be.next = cur;  \n                    be = be.next;  \n                }  \n            }  \n            cur = cur.next;  \n        }  \n        //预防第一个段为空  \n        if (as == null) {  \n            return bs;  \n        }  \n        ae.next = bs;  \n        //预防第2个段当中的数据，最后一个节点不是空的  \n        if (bs != null) {  \n            be.next = null;  \n        }  \n        return as;  \n    }  \n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220508-ifk5lg3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220508-ifk5lg3"
+			}
+		},
+		{
+			"ID": "20221228220345-2mpz9ew",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-2mpz9ew",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "链表中倒数第k个结点"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-zlm7v8m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-zlm7v8m",
+				"updated": "20221228220507"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-fandtg7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-fandtg7",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-joch3f5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-joch3f5",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "本题使用的是快慢指针，既然我们要找倒数第k个节点，我们就让快指针先走k-1步(要注意k-1是否超过链表长度)，随后快慢指针一起行走，当快指针到达终点时，慢指针就是我们要找的倒数第K个节点。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-gnsqadw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-gnsqadw",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-tc94qbh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-tc94qbh",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public:  \n    ListNode* FindKthToTail(ListNode* pListHead, unsigned int k) {  \n        if(k \u003c 0 || pListHead  == nullptr) return nullptr;  \n        ListNode* prev = pListHead;  \n        ListNode* cur = pListHead;  \n  \n        while(k -1 != 0)  \n        {  \n            prev = prev-\u003enext;  \n            if(prev == nullptr) return nullptr;  //判断k是否超过链表的长度\n            k--;  \n        }  \n  \n        while(prev-\u003enext != nullptr)  \n        {  \n            prev = prev-\u003enext;  \n            cur = cur-\u003enext;  \n        }  \n  \n        return cur;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-dqoonhy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-dqoonhy",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-nwfkzzz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-nwfkzzz",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Solution {  \n    public ListNode FindKthToTail(ListNode head,int k) {  \n        if(k \u003c 0 || head == null) return null;  \n        ListNode prev = head;  \n        ListNode cur = head;  \n  \n        while(k -1 != 0){  \n            prev = prev.next;  \n            if(prev == null) return null;  \n            k--;  \n        }  \n        while(prev.next != null){  \n            prev = prev.next;  \n            cur = cur.next;  \n        }  \n        return cur;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220512-zmvvifr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220512-zmvvifr"
+			}
+		},
+		{
+			"ID": "20221228220345-b3pij34",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-b3pij34",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "删除链表中重复的结点"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-42m2va9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-42m2va9",
+				"updated": "20221228220528"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-2lky02o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-2lky02o",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-2vbqzmb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-2vbqzmb",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public:  \n    ListNode* deleteDuplication(ListNode* pHead) {  \n        if(pHead == nullptr) return nullptr;  \n        ListNode* newList = new ListNode(-1);  \n        ListNode* tmp = newList;  \n        ListNode* cur = pHead;  \n        while(cur != nullptr){  \n            if(cur-\u003enext != nullptr \u0026\u0026 cur-\u003eval == cur-\u003enext-\u003eval ){  \n                while(cur-\u003enext != nullptr \u0026\u0026 cur-\u003eval == cur-\u003enext-\u003eval){  \n                    cur = cur-\u003enext;  \n                }  \n  \n                cur = cur-\u003enext;//多走一步  \n            }else{  \n                tmp-\u003enext = cur;  \n                tmp = tmp-\u003enext;  \n                cur = cur-\u003enext;  \n            }  \n        }  \n  \n        tmp-\u003enext = nullptr;//防止最后一个节点的值也是重复的  \n        ListNode* next  = newList-\u003enext;  \n        delete newList;  \n        return next;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-c1lprd9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-c1lprd9",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-3hrnh4k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-3hrnh4k",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Solution {  \n    public ListNode deleteDuplication(ListNode pHead) {  \n        if(pHead == null) return null;  \n        ListNode newList = new ListNode(-1);  \n        ListNode tmp = newList;  \n        ListNode cur = pHead;  \n        while(cur != null){  \n            if(cur.next != null \u0026\u0026 cur.val == cur.next.val ){  \n                while(cur.next != null \u0026\u0026 cur.val == cur.next.val){  \n                    cur = cur.next;  \n                }  \n  \n                cur = cur.next;//多走一步  \n            }else{  \n                tmp.next = cur;  \n                tmp = tmp.next;  \n                cur = cur.next;  \n            }  \n        }  \n  \n        tmp.next = null;//防止最后一个节点的值也是重复的  \n  \n        return newList.next;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220532-lygy0oa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220532-lygy0oa"
+			}
+		},
+		{
+			"ID": "20221228220345-31qfxf3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221228220345-31qfxf3",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "回文链表"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-mo9wzye",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-mo9wzye",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "234. 回文链表"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://leetcode.cn/problems/palindrome-linked-list/"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n "
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "牛客网 回文链表"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.nowcoder.com/practice/d281619e4b3e4a60a2cc66ea32855bfa?"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-mct32bd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-mct32bd",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-mz8spaz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-mz8spaz",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "先找到中间节点，如果链表的节点是偶数个 ，则找到中间的第二个节点，从此节点开始反转链表，最后使用双指针进行判断即可。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-dn4vpe5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-dn4vpe5",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++ 题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-dzcdc9d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-dzcdc9d",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不知为何在leetcode中无法通过，但是牛客网没问题。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-p3jeygh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-p3jeygh",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class PalindromeList {  \n    public:  \n    bool chkPalindrome(ListNode* head) {  \n        // write code here  \n        if(head == nullptr) return true;  \n        ListNode* fast = head;  \n        ListNode* slow = head;  \n  \n        while(fast != nullptr \u0026\u0026 fast-\u003enext != nullptr)  \n        {  \n            fast = fast-\u003enext-\u003enext;  \n            slow = slow-\u003enext;  \n        }  \n        //slow走到了中间位置-\u003e反转 \n  \n        ListNode* cur = slow-\u003enext;  \n        while(cur != nullptr)  \n        {  \n            ListNode* next = cur-\u003enext;  \n            cur-\u003enext = slow;  \n            slow = cur;  \n            cur = next;  \n        }  \n\t\t//反转完成\n        while(head != slow)  \n        {  \n            if(head-\u003eval != slow-\u003eval)  \n                return false;  \n  \n            if(head-\u003enext == slow)  \n                return true;  \n  \n            head = head-\u003enext;  \n            slow = slow-\u003enext;  \n        }  \n        return true;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-svdqp97",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221228220345-svdqp97",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "思路二：集中到数组中，进行前后比较。"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-k0pg00e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-k0pg00e",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \npublic:  \n    bool isPalindrome(ListNode* head) {  \n        std::vector\u003cint\u003e vec;  \n        while(head != nullptr)  \n        {  \n            vec.push_back(head-\u003eval);  \n            head = head-\u003enext;  \n        }  \n  \n        for( int i = 0 , j = vec.size() -1 ;i \u003c j ; i++ ,j--)  \n        {  \n            if(vec[i] != vec[j]) return false;  \n        }  \n        return true;  \n    }  \n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-s75518b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221228220345-s75518b",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "java题解"
+				}
+			]
+		},
+		{
+			"ID": "20221228220345-k90600n",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221228220345-k90600n",
+				"updated": "20221228220345"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {  \n    public boolean isPalindrome(ListNode head) {  \n        if(head == null) return true;  \n        ListNode fast = head;  \n        ListNode slow = head;  \n        while(fast != null \u0026\u0026 fast.next != null) {  \n            fast = fast.next.next;  \n            slow = slow.next;  \n        }  \n        //slow走到了中间位置-》反转  \n  \n        ListNode cur = slow.next;  \n        while(cur != null) {  \n            ListNode curNext = cur.next;  \n            cur.next = slow;  \n            slow = cur;  \n            cur = curNext;  \n        }  \n        //反转完成  \n        while(head != slow) {  \n            if(head.val != slow.val) {  \n                return false;  \n            }  \n            if(head.next == slow) {  \n                return true;  \n            }  \n            head = head.next;  \n            slow = slow.next;  \n        }  \n        return true;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}
