@@ -4,8 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722135628-17xr0fh",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220722135633-02kuhen\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230317140207-mu65z8b\u0026quot;,\u0026quot;scrollTop\u0026quot;:5820.5,\u0026quot;focusId\u0026quot;:\u0026quot;20230317140208-nn2i0ej\u0026quot;,\u0026quot;focusStart\u0026quot;:20,\u0026quot;focusEnd\u0026quot;:20}",
 		"title": "vim文本编辑器",
-		"updated": "20220722135633"
+		"updated": "20230317140403"
 	},
 	"Children": [
 		{
@@ -1135,6 +1136,711 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "20230317140206-3kv67m5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140206-3kv67m5"
+			}
+		},
+		{
+			"ID": "20230317140208-zizhqlp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230317140208-zizhqlp",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "vim替换命令"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-pdtl82h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-pdtl82h",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "一、Vim替换字符串命令的语法"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-utusj6p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-utusj6p",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Vim替换字符串命令的基本语法是 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": ":[range]s/目标字符串/替换字符串/[option]"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，其中range和option字段都可以缺省不填。"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-nn2i0ej",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-nn2i0ej",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面介绍VIM替换字符串各个变量的含义："
+				}
+			]
+		},
+		{
+			"ID": "20230317140346-dxglvq5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140346-dxglvq5"
+			}
+		},
+		{
+			"ID": "20230317140208-7aejcam",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230317140208-7aejcam",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "range:表示搜索范围，默认表示当前行;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-1doiwmd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-1doiwmd",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "  range字段值1,10表示从第1到第10行;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-407m5ao",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-407m5ao",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "  %表示整个文件(相当于1,$);"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-6mz6x5m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-6mz6x5m",
+				"updated": "20230317140403"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "  而"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "$"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​代表从当前行到本文件的末尾"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-mbqn7d2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-mbqn7d2",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "s：substitute的简写，表示执行替换字符串操作;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140347-7vboznm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140347-7vboznm"
+			}
+		},
+		{
+			"ID": "20230317140208-equ7ihe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230317140208-equ7ihe",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "option:表示操作类型，默认只对第一个匹配的字符进行替换；"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-eo0qaja",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-eo0qaja",
+				"updated": "20230317140300"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "option字段值"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "g"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​(global)表示全局替换;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-rwf5jfn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-rwf5jfn",
+				"updated": "20230317140302"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "c"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​(comfirm)表示操作时需要确认;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-w09cp8k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-w09cp8k",
+				"updated": "20230317140304"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "i"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​(ignorecase)表示不区分大小写;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-12frr1j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-12frr1j",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "vim替换字符串的这些选项可以组合使用"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-pyi8hfo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230317140208-pyi8hfo",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "二、Vim替换命令举例"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-irws3jn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-irws3jn",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "vim全局替换命令并要求对替换字符串命令进行确认操作"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-1pe4fg7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-1pe4fg7",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "将所有的Vim字符串替换为vim字符串"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-8xucgnz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-8xucgnz",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1,"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "$s/Vim/vim/gc"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 会出现提示”"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "replace with foo(y/n/a/q/l/^E/^Y)?"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​”，询问是否确认执行"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-8omgomr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-8omgomr",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "待选择操作的含义包括："
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-udtoyyn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-udtoyyn",
+				"updated": "20230317140224"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "y"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​:确认执行这个替换将将所有Vim替换成vim;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-6zquutb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-6zquutb",
+				"updated": "20230317140226"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​:取消这个本交Vim替换命令的操作;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-0jq34jf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-0jq34jf",
+				"updated": "20230317140228"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "a"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​:执行本次所有替换字符串操作且不再询问;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-l4p5xne",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-l4p5xne",
+				"updated": "20230317140229"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "q"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​:退出当前vim字符串替换操作而不做任何改动;"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-bvknver",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-bvknver",
+				"updated": "20230317140231"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "l"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​:替换完当前匹配点后退出(last)"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-gdtlsiq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-gdtlsiq",
+				"updated": "20230317140233"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Ctrl + E"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​:向上翻滚一行"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-gxce4il",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-gxce4il",
+				"updated": "20230317140238"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Ctrl + Y"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​:向下翻滚一行"
+				}
+			]
+		},
+		{
+			"ID": "20230317140219-t87p2iu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140219-t87p2iu"
+			}
+		},
+		{
+			"ID": "20230317140208-eu446dy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-eu446dy",
+				"updated": "20230317140218"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "2. 将光标所在行出现的所有包含line的字符串中line替换为lines"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-wlimeaa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-wlimeaa",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": ":s/line/lines/g"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​表示将光标所在当前行的line全局替换为lines"
+				}
+			]
+		},
+		{
+			"ID": "20230317140214-3esnug1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140214-3esnug1"
+			}
+		},
+		{
+			"ID": "20230317140208-n7f8zmn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-n7f8zmn",
+				"updated": "20230317140216"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "3. 将从2行到10行中出现的所有包含line的字符串中的line替换为lines"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-u5ztwop",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-u5ztwop",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": ":2,10s/line/lines/g"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​表示将2~3行的line全局替换为lines"
+				}
+			]
+		},
+		{
+			"ID": "20230317140213-v8gmd35",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140213-v8gmd35"
+			}
+		},
+		{
+			"ID": "20230317140208-6kqy8d1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-6kqy8d1",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "4。全文的行首加入//字符，批量注释时非常有用"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-z4qr0ke",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-z4qr0ke",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": ":%s/^/\\/\\//"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​表示在全文范围行首替换插入//，注意在Vim中需要将/进行转义后才可以替换"
+				}
+			]
+		},
+		{
+			"ID": "20230317140211-4o6vc5v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140211-4o6vc5v"
+			}
+		},
+		{
+			"ID": "20230317140208-r072z72",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-r072z72",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "5.将所有行尾多余的空格删除"
+				}
+			]
+		},
+		{
+			"ID": "20230317140208-mz2w5oo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140208-mz2w5oo",
+				"updated": "20230317140208"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": ":%s= *$=="
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​表示全局替换行尾的一个或多个空格，更多正则表达式的说明可以参考Vim正则表达式"
+				}
+			]
+		},
+		{
+			"ID": "20230317140207-mu65z8b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230317140207-mu65z8b"
+			}
 		}
 	]
 }
