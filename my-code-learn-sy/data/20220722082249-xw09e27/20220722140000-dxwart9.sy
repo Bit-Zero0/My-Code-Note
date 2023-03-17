@@ -1,5 +1,6 @@
 {
 	"ID": "20220722140000-dxwart9",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722140000-dxwart9",
@@ -103,33 +104,11 @@
 							"Data": "通过 yum list 命令可以罗列出当前一共有哪些软件包. 由于包的数目可能非常之多, 这里我们需要使用 "
 						},
 						{
-							"Type": "NodeBlockRef",
-							"Data": "span",
-							"Children": [
-								{
-									"Type": "NodeOpenParen"
-								},
-								{
-									"Type": "NodeOpenParen"
-								},
-								{
-									"Type": "NodeBlockRefID",
-									"Data": "20220722135728-me728tr"
-								},
-								{
-									"Type": "NodeBlockRefSpace"
-								},
-								{
-									"Type": "NodeBlockRefDynamicText",
-									"Data": "grep"
-								},
-								{
-									"Type": "NodeCloseParen"
-								},
-								{
-									"Type": "NodeCloseParen"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "block-ref",
+							"TextMarkBlockRefID": "20220722135728-me728tr",
+							"TextMarkBlockRefSubtype": "d",
+							"TextMarkTextContent": "grep"
 						},
 						{
 							"Type": "NodeText",
@@ -357,22 +336,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "注意事项:"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意事项:"
 				}
 			]
 		},

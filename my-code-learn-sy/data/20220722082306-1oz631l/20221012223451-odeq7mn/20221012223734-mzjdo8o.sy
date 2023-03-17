@@ -1,5 +1,6 @@
 {
 	"ID": "20221012223734-mzjdo8o",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221012223734-mzjdo8o",
@@ -76,20 +77,9 @@
 					"Data": "对于一些自定义的类型，却无法使用这样的初始化。比如:\n"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "vector\u003cint\u003e v{1,2,3,4,5};"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "vector\u0026lt;int\u0026gt; v{1,2,3,4,5};"
 				},
 				{
 					"Type": "NodeText",
@@ -276,98 +266,37 @@
 									"Data": "多个对象的列表初始化\n多个对象想要支持列表初始化，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "需给该类(模板类)添加一个带有"
-										},
-										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "initializer_list"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
-										},
-										{
-											"Type": "NodeText",
-											"Data": "类型参数的构造函数即可"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "需给该类(模板类)添加一个带有"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong mark",
+									"TextMarkTextContent": "initializer_list"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "类型参数的构造函数即可"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "。注意："
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "initializer_list"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "initializer_list"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "是系统自定义的类模板，该类模板中主要有三个方法："
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "begin()、end()迭代器 以及获取区间中元素个数的方法size()"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "begin()、end()迭代器 以及获取区间中元素个数的方法size()"
 								},
 								{
 									"Type": "NodeText",
@@ -564,13 +493,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221012223831-1a72ze6"
-			},
-			"Children": [
-				{
-					"Type": "NodeBr",
-					"Data": "br"
-				}
-			]
+			}
 		},
 		{
 			"ID": "20221012223824-4ct7jfp",
@@ -588,33 +511,11 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221012224056-dkn63hy"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "使用initializer_list来构造vector"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221012224056-dkn63hy",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "使用initializer_list来构造vector"
 				}
 			]
 		},
@@ -627,33 +528,11 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221012224002-wpw37s0"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "使用initializer_list构造来构造list"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221012224002-wpw37s0",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "使用initializer_list构造来构造list"
 				}
 			]
 		},

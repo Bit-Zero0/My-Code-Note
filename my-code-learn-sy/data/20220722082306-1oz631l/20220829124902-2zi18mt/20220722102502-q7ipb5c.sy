@@ -1,5 +1,6 @@
 {
 	"ID": "20220722102502-q7ipb5c",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722102502-q7ipb5c",
@@ -106,22 +107,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "内核空间"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "内核空间"
 								},
 								{
 									"Type": "NodeText",
@@ -152,100 +140,41 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "栈"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "栈"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 是"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在内存中是"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "向下增长"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "在内存中是"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "向下增长"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "的 ，在Linux系统下，空间大概有 "
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "8M"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "8M"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " ， 栈空间的数据是 "
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "后进先出"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "后进先出"
 								},
 								{
 									"Type": "NodeText",
@@ -276,22 +205,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "内存映射段"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "内存映射段"
 								},
 								{
 									"Type": "NodeText",
@@ -322,102 +238,45 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "堆"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "堆"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 在"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "内存中是向上增长"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "内存中是向上增长"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "的， 堆内存很大，32位系统下，大概2~4G，"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "malloc"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "malloc"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "calloc"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "calloc"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " ,"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "realloc"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "realloc"
 								},
 								{
 									"Type": "NodeText",
@@ -448,82 +307,36 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "数据段(静态区)"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "数据段(静态区)"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  存放 "
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "静态变量"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "静态变量"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 和 "
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "全局变量"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "全局变量"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 的区域。如"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "static"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "static"
 								},
 								{
 									"Type": "NodeText",
@@ -554,42 +367,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "代码段(常量区)"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "代码段(常量区)"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 存放 "
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "可执行的代码/只读常量"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "可执行的代码/只读常量"
 								},
 								{
 									"Type": "NodeText",
@@ -705,420 +494,192 @@
 											"Data": "选择题：\n选项: A.栈 B.堆 C.数据段 D.代码段\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "globalVar"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "globalVar"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里？ "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "数据段"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "数据段"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "staticGlobalVar"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "staticGlobalVar"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里？  "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "数据段"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "数据段"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "staticVar"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "staticVar"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里？  "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "数据段"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "数据段"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "localVar"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "localVar"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里?  "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "代码段"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "代码段"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "num1"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "num1"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " 在哪里？ "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "栈"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "栈"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "char2"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "char2"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里？ "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "栈 ，char2是数组名，可以看作指向数组的指针"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "栈 ，char2是数组名，可以看作指向数组的指针"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "*char2"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "*char2"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里？ "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "栈 ，char2是一个数组，把后面常量串拷贝过来到数组中，数组在栈上，所以*char2在栈上 \n"
-												},
-												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "pChar3"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "在哪里？  "
-												},
-												{
-													"Type": "NodeMark",
-													"Data": "mark",
-													"Children": [
-														{
-															"Type": "NodeMark2OpenMarker"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "栈 ，因为pchar3是指针"
-														},
-														{
-															"Type": "NodeMark2CloseMarker"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "\n"
-												},
-												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "*pChar3"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "在哪里？"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "栈 ，char2是一个数组，把后面常量串拷贝过来到数组中，数组在栈上，所以*char2在栈上 \n"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark code",
+											"TextMarkTextContent": "pChar3"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "在哪里？  "
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark mark",
+											"TextMarkTextContent": "栈 ，因为pchar3是指针"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "\n"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark code",
+											"TextMarkTextContent": "*pChar3"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "在哪里？"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "代码段 ，解引用后的字符串是在代码段的==\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "ptr1"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "ptr1"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里？ "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "栈"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "栈"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "\n"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "*ptr1"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "*ptr1"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "在哪里？ "
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "堆 ，  *ptr1得到的是动态申请空间的数据在堆区"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "堆 ，  *ptr1得到的是动态申请空间的数据在堆区"
 										}
 									]
 								}
