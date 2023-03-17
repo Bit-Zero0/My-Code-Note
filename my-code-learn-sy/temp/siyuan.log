@@ -2791,3 +2791,56 @@ I 2023/03/17 11:11:40 conf.go:416: exiting kernel [force=false, execInstallPkg=0
 I 2023/03/17 11:11:40 database.go:1127: closed database
 I 2023/03/17 11:11:40 conf.go:782: cleared workspace temp
 I 2023/03/17 11:11:40 conf.go:463: exited kernel
+I 2023/03/17 11:43:00 working.go:119: 
+      ___                                   ___           ___           ___
+     /  /\        ___           ___        /__/\         /  /\         /__/\
+    /  /:/_      /  /\         /__/|       \  \:\       /  /::\        \  \:\
+   /  /:/ /\    /  /:/        |  |:|        \  \:\     /  /:/\:\        \  \:\
+  /  /:/ /::\  /__/::\        |  |:|    ___  \  \:\   /  /:/~/::\   _____\__\:\
+ /__/:/ /:/\:\ \__\/\:\__   __|__|:|   /__/\  \__\:\ /__/:/ /:/\:\ /__/::::::::\
+ \  \:\/:/~/:/    \  \:\/\ /__/::::\   \  \:\ /  /:/ \  \:\/:/__\/ \  \:\~~\~~\/
+  \  \::/ /:/      \__\::/    ~\~~\:\   \  \:\  /:/   \  \::/       \  \:\  ~~~
+   \__\/ /:/       /__/:/       \  \:\   \  \:\/:/     \  \:\        \  \:\
+     /__/:/        \__\/         \__\/    \  \::/       \  \:\        \  \:\
+     \__\/                                 \__\/         \__\/         \__\/
+I 2023/03/17 11:43:00 runtime.go:57: kernel is booting:
+    * ver [2.7.8]
+    * arch [amd64]
+    * os [Microsoft Windows 11 Home China 10.0.22000.1696 Build 22000.1696]
+    * pid [30700]
+    * runtime mode [prod]
+    * working directory [C:\Users\31533\AppData\Local\Programs\SiYuan\resources]
+    * read only [false]
+    * container [std]
+    * database [ver=20220501]
+    * workspace directory [S:\github\My-Code-Note\my-code-learn-sy]
+E 2023/03/17 11:43:00 conf.go:367: parse language configuration failed [C:\Users\31533\AppData\Local\Programs\SiYuan\resources\appearance\langs\es_ES.json] failed: invalid character '}' looking for beginning of object key string
+E 2023/03/17 11:43:00 conf.go:367: parse language configuration failed [C:\Users\31533\AppData\Local\Programs\SiYuan\resources\appearance\langs\fr_FR.json] failed: invalid character '}' looking for beginning of object key string
+I 2023/03/17 11:43:00 conf.go:103: initialized the specified language [zh_CN]
+I 2023/03/17 11:43:00 conf.go:221: downgraded from version [2.7.8] to [2.7.8]
+I 2023/03/17 11:43:00 runtime.go:103: use network proxy [system]
+I 2023/03/17 11:43:00 serve.go:108: kernel [pid=30700] http server [127.0.0.1:6078] is booting
+I 2023/03/17 11:43:00 working.go:395: built-in pandoc [ver=2.19.2, bin=S:\github\My-Code-Note\my-code-learn-sy\temp\pandoc\bin\pandoc.exe]
+I 2023/03/17 11:43:00 blocktree.go:386: read block tree [3.2 MB] to [S:\github\My-Code-Note\my-code-learn-sy\temp\blocktree], elapsed [0.02s]
+I 2023/03/17 11:43:00 conf.go:635: database size [82 MB], tree/block count [126/13914]
+I 2023/03/17 11:43:00 working.go:159: kernel booted
+I 2023/03/17 11:43:00 box.go:75: auto stat [trees=126, blocks=13914, dataSize=148 MB, assetsSize=141 MB]
+I 2023/03/17 11:43:00 disk.go:33: disk usage [total=1.0 TB, used=345 GB, free=679 GB]
+E 2023/03/17 12:01:47 transaction.go:873: update data is nil
+I 2023/03/17 12:01:51 database.go:108: reinitialized database [S:\github\My-Code-Note\my-code-learn-sy\temp\siyuan.db]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20220722082249-xw09e27] in [0.01s], tree [count=29, size=1.4 MB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20220722082306-1oz631l] in [0.01s], tree [count=34, size=1.2 MB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20220806211818-mt252kw] in [0.00s], tree [count=2, size=235 kB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20220807211018-u9252yz] in [0.00s], tree [count=8, size=77 kB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20221019224701-22nyxx6] in [0.01s], tree [count=26, size=1.5 MB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20221021214858-tshtndb] in [0.00s], tree [count=2, size=26 kB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20221118230728-emou0jh] in [0.01s], tree [count=12, size=964 kB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20221125223059-53uuv53] in [0.00s], tree [count=2, size=298 kB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20221125230049-5ctliev] in [0.00s], tree [count=3, size=72 kB]
+I 2023/03/17 12:01:51 index.go:132: rebuilt database for notebook [20221128083418-tg6yv2l] in [0.01s], tree [count=8, size=788 kB]
+W 2023/03/17 12:01:55 blocktree.go:436: save block tree [size=3.2 MB] to [S:\github\My-Code-Note\my-code-learn-sy\temp\blocktree], elapsed [3.80s]
+I 2023/03/17 12:01:55 index.go:205: resolved refs [47] in [95ms]
+I 2023/03/17 12:38:20 conf.go:416: exiting kernel [force=false, execInstallPkg=0]
+I 2023/03/17 12:38:20 database.go:1127: closed database
+I 2023/03/17 12:38:20 conf.go:782: cleared workspace temp
+I 2023/03/17 12:38:21 conf.go:463: exited kernel
