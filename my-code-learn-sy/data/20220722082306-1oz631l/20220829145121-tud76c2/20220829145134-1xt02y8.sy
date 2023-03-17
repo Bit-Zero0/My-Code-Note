@@ -1,5 +1,6 @@
 {
 	"ID": "20220829145134-1xt02y8",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220829145134-1xt02y8",
@@ -123,88 +124,36 @@
 					"Data": "二叉树也可以用递归的形式定义，即二叉树是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "n(n≥0)"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "n(n≥0)"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "个结点的有限集合。当"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "n=0"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "n=0"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "时，称为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "空二叉树"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "空二叉树"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "；当"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "n\u003e0"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "n\u0026gt;0"
 				},
 				{
 					"Type": "NodeText",
@@ -305,42 +254,19 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "【性质1】在二叉树的第i层上最多有 "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "2^(i-1)"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 个结点（i≥1）"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "【性质1】在二叉树的第i层上最多有 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "2^(i-1)"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": " 个结点（i≥1）"
 				},
 				{
 					"Type": "NodeText",
@@ -361,60 +287,27 @@
 					"Data": "二叉树的第1层只有一个根结点，所以，i=1 时，"
 				},
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "2^{i-1}=2^{1-1}=2^0=1"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "2^{i-1}=2^{1-1}=2^0=1"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "^  成立。\n假设对所有的 j ,1≤j＜i 成立，即第j层上最多有 2"
 				},
 				{
-					"Type": "NodeSup",
-					"Data": "sup",
-					"Children": [
-						{
-							"Type": "NodeSupOpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "j"
-						},
-						{
-							"Type": "NodeSupCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "sup",
+					"TextMarkTextContent": "j"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "-1 个结点成立，则当 i=j+1 时，由于在二叉树中，每个结点的度最大为 2，所以可以推导出第 i 层最多的结点个数就是第i-1层最多结点个数的2倍，即 "
 				},
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "2^{j-1}× 2=2^{i-2}× 2=2^{i-1}"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "2^{j-1}× 2=2^{i-2}× 2=2^{i-1}"
 				},
 				{
 					"Type": "NodeText",
@@ -432,42 +325,19 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "【性质2】深度为K的二叉树最多有 "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "2^K-1"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 个结点（K≥1）。"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "【性质2】深度为K的二叉树最多有 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "2^K-1"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": " 个结点（K≥1）。"
 				}
 			]
 		},
@@ -484,40 +354,18 @@
 					"Data": "证明：由性质1可以得出，1至K层各层最多的结点个数分别为 "
 				},
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "2^0,2^1,2^2,2^3, …,2^{K-1}"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "2^0,2^1,2^2,2^3, …,2^{K-1}"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。这是一个以2为比值的"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "等比数列"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "等比数列"
 				},
 				{
 					"Type": "NodeText",
@@ -588,130 +436,59 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "【性质3】对于任意一棵二叉树BT，如果"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "度为0"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "的结点个数为"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "n0"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "，"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "度为2"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "的结点个数为"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "n2"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "，则"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "n0=n2+1"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "。"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "【性质3】对于任意一棵二叉树BT，如果"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "度为0"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "的结点个数为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "n0"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "度为2"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "的结点个数为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "n2"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "，则"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "n0=n2+1"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "。"
 				}
 			]
 		},
@@ -728,44 +505,18 @@
 					"Data": "证明：假设"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "度为1"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "度为1"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的结点个数为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "n1"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "n1"
 				},
 				{
 					"Type": "NodeText",
@@ -825,34 +576,9 @@
 					"Data": "再查看一下分支数。在二叉树中，除根结点之外，每个结点都有一个从上向下的分支指向，所以，总的结点个数n与分支数B之间的关系为"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "n=B+1"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "n=B+1"
 				},
 				{
 					"Type": "NodeText",
@@ -912,60 +638,27 @@
 					"Data": "用式 "
 				},
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "n=n_0+n_1+n_2"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "n=n_0+n_1+n_2"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 减去式 "
 				},
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "n=n_1+2n_2+1"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "n=n_1+2n_2+1"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " ，并经过调整后得到 "
 				},
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "n_0=n_2+1"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "n_0=n_2+1"
 				},
 				{
 					"Type": "NodeText",
@@ -990,86 +683,39 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "【性质4】具有n个结点的完全二叉树的深度为 "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "[log2n]+1"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "。其中 "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "[log2n]"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 的结果是不大于"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "log2n"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "的最大整数。"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "【性质4】具有n个结点的完全二叉树的深度为 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "[log2n]+1"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "。其中 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "[log2n]"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": " 的结果是不大于"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "log2n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "的最大整数。"
 				}
 			]
 		},
@@ -1143,20 +789,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "2^{K-1}-1\u003c n ≤ 2^K-1"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "2^{K-1}-1\u0026lt; n ≤ 2^K-1"
 				}
 			]
 		},
@@ -1183,20 +818,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "2^{K-1}≤ n \u003c2^K"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "2^{K-1}≤ n \u0026lt;2^K"
 				}
 			]
 		},
@@ -1223,20 +847,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "K-1≤log_2n\u003cK"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "K-1≤log_2n\u0026lt;K"
 				}
 			]
 		},
@@ -1263,20 +876,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "[log_2n]=K-1"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "[log_2n]=K-1"
 				}
 			]
 		},
@@ -1303,20 +905,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeInlineMath",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeInlineMathOpenMarker"
-						},
-						{
-							"Type": "NodeInlineMathContent",
-							"Data": "K=[log_2n]+1"
-						},
-						{
-							"Type": "NodeInlineMathCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "inline-math",
+					"TextMarkInlineMathContent": "K=[log_2n]+1"
 				}
 			]
 		},
@@ -1330,86 +921,39 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "【性质5】对于有 "
-						},
-						{
-							"Type": "NodeEmphasis",
-							"Data": "em",
-							"Children": [
-								{
-									"Type": "NodeEmA6kOpenMarker",
-									"Data": "*"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "n"
-								},
-								{
-									"Type": "NodeEmA6kCloseMarker",
-									"Data": "*"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 个结点的完全二叉树中的所有结点按从上到下、从左到右的顺序进行编号，则对任意一个结点 "
-						},
-						{
-							"Type": "NodeEmphasis",
-							"Data": "em",
-							"Children": [
-								{
-									"Type": "NodeEmA6kOpenMarker",
-									"Data": "*"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "i"
-								},
-								{
-									"Type": "NodeEmA6kCloseMarker",
-									"Data": "*"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "（"
-						},
-						{
-							"Type": "NodeEmphasis",
-							"Data": "em",
-							"Children": [
-								{
-									"Type": "NodeEmA6kOpenMarker",
-									"Data": "*"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "1≤i≤n"
-								},
-								{
-									"Type": "NodeEmA6kCloseMarker",
-									"Data": "*"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "），都有"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "【性质5】对于有 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark em",
+					"TextMarkTextContent": "n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": " 个结点的完全二叉树中的所有结点按从上到下、从左到右的顺序进行编号，则对任意一个结点 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark em",
+					"TextMarkTextContent": "i"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "（"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark em",
+					"TextMarkTextContent": "1≤i≤n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "），都有"
 				}
 			]
 		},
@@ -1426,154 +970,63 @@
 					"Data": "① 如果"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "i=1"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "i=1"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，则结点i是这棵完全二叉树的根，没有双亲；否则，其双亲结点的编号为 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "[i/2]"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "[i/2]"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。\n② 如果 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "2i\u003en"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "2i\u0026gt;n"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，则结点 "
 				},
 				{
-					"Type": "NodeEmphasis",
-					"Data": "em",
-					"Children": [
-						{
-							"Type": "NodeEmA6kOpenMarker",
-							"Data": "*"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "i"
-						},
-						{
-							"Type": "NodeEmA6kCloseMarker",
-							"Data": "*"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "em",
+					"TextMarkTextContent": "i"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 没有左孩子；否则，其左孩子结点的编号为2i。\n③ 如果"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "2i+1\u003en"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "2i+1\u0026gt;n"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，则结点 "
 				},
 				{
-					"Type": "NodeEmphasis",
-					"Data": "em",
-					"Children": [
-						{
-							"Type": "NodeEmA6kOpenMarker",
-							"Data": "*"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "i"
-						},
-						{
-							"Type": "NodeEmA6kCloseMarker",
-							"Data": "*"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "em",
+					"TextMarkTextContent": "i"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 没有右孩子；否则，其右孩子结点的编号为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "2i+1"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "2i+1"
 				},
 				{
 					"Type": "NodeText",

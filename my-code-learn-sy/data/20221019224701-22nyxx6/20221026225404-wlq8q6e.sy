@@ -1,5 +1,6 @@
 {
 	"ID": "20221026225404-wlq8q6e",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221026225404-wlq8q6e",
@@ -35,33 +36,11 @@
 					"Data": "在"
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221019224713-ahcoy7z"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "认识 \"协议\""
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221019224713-ahcoy7z",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "认识 \"协议\""
 				},
 				{
 					"Type": "NodeText",
@@ -133,60 +112,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "约定方案一"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "约定方案一"
 						},
 						{
 							"Type": "NodeText",
 							"Data": ":\n客户端发送一个形如\""
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "1+1"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "1+1"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\"的字符串;\n这个字符串中有两个操作数, 都是整形;\n两个数字之间会有一个字符是运算符, 运算符只能是 "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "+"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "+"
 						},
 						{
 							"Type": "NodeText",
@@ -217,60 +163,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "约定方案二:"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "约定方案二:"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n定义结构体来表示我们需要交互的信息;\n发送数据时将这个结构体按照一个规则转换成字符串, 接收到数据的时候再按照相同的规则把字符串转化回结构体;\n这个过程叫做 \""
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "序列化"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "序列化"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\" 和 \""
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "反序列化"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "反序列化"
 						},
 						{
 							"Type": "NodeText",
@@ -304,33 +217,11 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221026225442-9g650ob"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "方案一代码"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221026225442-9g650ob",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "方案一代码"
 				}
 			]
 		},
@@ -362,66 +253,22 @@
 					"Data": "使用"
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221026225535-lyhhje0"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "序列化和反序列化"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221026225535-lyhhje0",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "序列化和反序列化"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "\n我们使用的是 "
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221026225550-fzllyhl"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "json序列化"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221026225550-fzllyhl",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "json序列化"
 				},
 				{
 					"Type": "NodeText",
@@ -438,33 +285,11 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221026225732-wq0yetn"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "方案二代码"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221026225732-wq0yetn",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "方案二代码"
 				}
 			]
 		},
@@ -629,34 +454,9 @@
 									"Data": "源地址和目的地址是指网卡的硬件地址(也叫"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "MAC地址"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "MAC地址"
 								},
 								{
 									"Type": "NodeText",
@@ -897,60 +697,27 @@
 									"Data": "使用的协议类型。TCP通信中 IP协议与ARP协议较常见 0000-05DC：IEEE 802.3  "
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "0800:IP协议"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "0800:IP协议"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  ；"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "0806 :ARP协议"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "0806 :ARP协议"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " ； "
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "86DD:IPv6"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "86DD:IPv6"
 								}
 							]
 						}
@@ -979,94 +746,36 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "如何分离报头和有效载荷(封装) ？  如何决定将自己的有效载荷交付给上一层？"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "如何分离报头和有效载荷(封装) ？  如何决定将自己的有效载荷交付给上一层？"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n都由"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "目的地址"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "目的地址"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "，"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "源地址"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "源地址"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "，"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "类型"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "类型"
 						},
 						{
 							"Type": "NodeText",
@@ -1153,66 +862,27 @@
 									"Data": "长度为"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "48位"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "48位"
 								},
 								{
 									"Type": "NodeText",
 									"Data": ", 及"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "6个字节"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "6个字节"
 								},
 								{
 									"Type": "NodeText",
 									"Data": ". 一般用16进制数字加上"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "冒号"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "冒号"
 								},
 								{
 									"Type": "NodeText",
@@ -1247,22 +917,9 @@
 									"Data": "在"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "网卡出厂时就确定了, 不能修改. mac地址通常是唯一的"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "网卡出厂时就确定了, 不能修改. mac地址通常是唯一的"
 								},
 								{
 									"Type": "NodeText",

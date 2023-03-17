@@ -1,5 +1,6 @@
 {
 	"ID": "20221023210323-xcfru0h",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221023210323-xcfru0h",
@@ -35,22 +36,9 @@
 					"Data": " 在C语言中，如果"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "赋值运算符左右两侧类型不同，或者形参与实参类型不匹配，或者返回值类型与接收返回值类型不一致时，就需要发生类型转化"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "赋值运算符左右两侧类型不同，或者形参与实参类型不匹配，或者返回值类型与接收返回值类型不一致时，就需要发生类型转化"
 				},
 				{
 					"Type": "NodeText",
@@ -167,22 +155,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "缺陷：  转换的可视性比较差，所有的转换形式都是以一种相同形式书写，难以跟踪错误的转换"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "缺陷：  转换的可视性比较差，所有的转换形式都是以一种相同形式书写，难以跟踪错误的转换"
 				}
 			]
 		},
@@ -221,80 +196,36 @@
 					"Data": "标准C++为了加强类型转换的可视性，引入了四种命名的强制类型转换操作符：\n"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "static_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "static_cast"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "、"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "reinterpret_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "reinterpret_cast"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "、"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "const_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "const_cast"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "、"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "dynamic_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "dynamic_cast"
 				},
 				{
 					"Type": "NodeText",
@@ -333,84 +264,36 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "static_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "static_cast"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "用于"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "非多态类型"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "非多态类型"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的转换（静态转换），编译器隐式执行的任何类型转换都可用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "static_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "static_cast"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，但它"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "不能用于两个不相关的类型进行转换"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "不能用于两个不相关的类型进行转换"
 				},
 				{
 					"Type": "NodeText",
@@ -476,54 +359,19 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "reinterpret_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "reinterpret_cast"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "操作符通常为操作数的位模式提供较低层次的重新解释，"
-						},
-						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "用于将一种类型转换为另一种不同的类型"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "操作符通常为操作数的位模式提供较低层次的重新解释，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong mark",
+					"TextMarkTextContent": "用于将一种类型转换为另一种不同的类型"
 				}
 			]
 		},
@@ -585,38 +433,14 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "const_cast"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "最常用的用途就是删除变量的const属性，方便赋值"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "const_cast"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "最常用的用途就是删除变量的const属性，方便赋值"
 				},
 				{
 					"Type": "NodeText",
@@ -682,102 +506,45 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "dynamic_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "dynamic_cast"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "用于"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "将一个父类对象的指针/引用转换为子类对象的指针或引用(动态转换)"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "将一个父类对象的指针/引用转换为子类对象的指针或引用(动态转换)"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "\n"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "向上转型"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "向上转型"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "：子类对象指针/引用-\u003e父类指针/引用(不需要转换，赋值兼容规则)\n"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "向下转型"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "向下转型"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "：父类对象指针/引用-\u003e子类指针/引用(用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "dynamic_cast"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "dynamic_cast"
 				},
 				{
 					"Type": "NodeText",
@@ -833,38 +600,14 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "dynamic_cast"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
-										},
-										{
-											"Type": "NodeText",
-											"Data": "只能用于含有虚函数的类"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong code",
+									"TextMarkTextContent": "dynamic_cast"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "只能用于含有虚函数的类"
 								}
 							]
 						}
@@ -893,42 +636,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "dynamic_cast"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "dynamic_cast"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "会"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "先检查"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "先检查"
 								},
 								{
 									"Type": "NodeText",

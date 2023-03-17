@@ -1,5 +1,6 @@
 {
 	"ID": "20221012224342-8ey6enl",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221012224342-8ey6enl",
@@ -160,20 +161,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "auto与指针和引用结合起来使用"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "auto与指针和引用结合起来使用"
 								}
 							]
 						}
@@ -206,100 +196,45 @@
 							"Data": "用"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "auto"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "auto"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "声明指针类型时，用"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "auto"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "auto"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "和"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "auto*"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "auto*"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "没有任何区别，但用"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "auto"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "auto"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "声明引用类型时则必须加"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "\u0026"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "\u0026amp;"
 						}
 					]
 				}
@@ -373,20 +308,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在同一行定义多个变量"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "在同一行定义多个变量"
 								},
 								{
 									"Type": "NodeText",
@@ -758,44 +682,18 @@
 					"Data": "如果能用"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "加完之后结果的实际类型作为函数的返回值类型就不会出错"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "加完之后结果的实际类型作为函数的返回值类型就不会出错"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，但这需要程序运行完才能知道结果的实际类型，即"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "RTTI"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "RTTI"
 				},
 				{
 					"Type": "NodeText",

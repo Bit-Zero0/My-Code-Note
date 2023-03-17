@@ -1,5 +1,6 @@
 {
 	"ID": "20221013224045-bzs9pkf",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221013224045-bzs9pkf",
@@ -35,50 +36,19 @@
 					"Data": "在C++11之前，涉及到多线程问题，都是和平台相关的，比如windows和linux下各有自己的接口，这使得代码的可移植性比较差。C++11中最重要的特性就是对线程进行支持了，使得C++在 并行编程时不需要依赖第三方库，而且在原子操作中还引入了原子类的概念。要使用标准库中的\n线程，必须包含"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "\u003cthread\u003e"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "\u0026lt;thread\u0026gt;"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "头文件。\n"
 				},
 				{
-					"Type": "NodeLink",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "C++11中线程类"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "http://www.cplusplus.com/reference/thread/thread/?kw=thread"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "http://www.cplusplus.com/reference/thread/thread/?kw=thread",
+					"TextMarkTextContent": "C++11中线程类"
 				}
 			]
 		},
@@ -409,22 +379,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "当创建一个线程对象后，没有提供线程函数，该对象实际没有对应任何线程。"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "当创建一个线程对象后，没有提供线程函数，该对象实际没有对应任何线程。"
 								}
 							]
 						}
@@ -457,44 +414,18 @@
 									"Data": "当"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "创建一个线程对象后"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "创建一个线程对象后"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，并且给"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "线程关联线程函数"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "线程关联线程函数"
 								},
 								{
 									"Type": "NodeText",
@@ -622,86 +553,37 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "thread类是"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "防拷贝"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeText",
-											"Data": "的"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "thread类是"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "防拷贝"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "的"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "不允许拷贝构造以及赋值"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "不允许拷贝构造以及赋值"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，但是"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "可以移动构造和移动赋值"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "可以移动构造和移动赋值"
 								},
 								{
 									"Type": "NodeText",
@@ -858,33 +740,11 @@
 					"Data": "用法和"
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20220913223533-jqys64s"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefText",
-							"Data": "Linux多线程"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220913223533-jqys64s",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "Linux多线程"
 				},
 				{
 					"Type": "NodeText",
@@ -954,54 +814,18 @@
 					"Data": "线程函数的参数是以"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "值拷贝"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "值拷贝"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的方式拷贝到线程栈空间中的，因此："
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "即使线程参数为引用类型，在线程中修改后也不能修改外部实参，因为其实际引用的是线程栈中的拷贝，而不是外部实参"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "即使线程参数为引用类型，在线程中修改后也不能修改外部实参，因为其实际引用的是线程栈中的拷贝，而不是外部实参"
 				},
 				{
 					"Type": "NodeText",
@@ -1029,20 +853,9 @@
 					"Data": "如果想要通过形参改变外部实参时，必须借助"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "std::ref()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "std::ref()"
 				},
 				{
 					"Type": "NodeText",
@@ -1122,66 +935,22 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20220913223533-jqys64s"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "Linux多线程"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220913223533-jqys64s",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "Linux多线程"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "\n在多线程环境下，如果想要保证某个变量的安全性，只要将其设置成对应的"
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221017225222-wb190fz"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefText",
-							"Data": "原子类型"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221017225222-wb190fz",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "原子类型"
 				},
 				{
 					"Type": "NodeText",
@@ -1355,34 +1124,9 @@
 													"TableCellAlign": 2,
 													"Children": [
 														{
-															"Type": "NodeMark",
-															"Data": "mark",
-															"Children": [
-																{
-																	"Type": "NodeMark2OpenMarker"
-																},
-																{
-																	"Type": "NodeStrong",
-																	"Data": "strong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "函数名"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
-																},
-																{
-																	"Type": "NodeMark2CloseMarker"
-																}
-															]
+															"Type": "NodeTextMark",
+															"TextMarkType": "mark strong",
+															"TextMarkTextContent": "函数名"
 														}
 													]
 												},
@@ -1392,34 +1136,9 @@
 													"TableCellAlign": 1,
 													"Children": [
 														{
-															"Type": "NodeMark",
-															"Data": "mark",
-															"Children": [
-																{
-																	"Type": "NodeMark2OpenMarker"
-																},
-																{
-																	"Type": "NodeStrong",
-																	"Data": "strong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "函数功能"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
-																},
-																{
-																	"Type": "NodeMark2CloseMarker"
-																}
-															]
+															"Type": "NodeTextMark",
+															"TextMarkType": "mark strong",
+															"TextMarkTextContent": "函数功能"
 														}
 													]
 												}
@@ -1565,20 +1284,9 @@
 									"Data": "如果该互斥量当前没有被锁住，则调用线程将该互斥量锁住，直到调用 "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "unlock"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "unlock"
 								},
 								{
 									"Type": "NodeText",
@@ -1659,20 +1367,9 @@
 					"Data": "线程函数调用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "try_lock()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "try_lock()"
 				},
 				{
 					"Type": "NodeText",
@@ -1742,20 +1439,9 @@
 									"Data": "如果当前互斥量被其他线程锁住，则当前调用线程返回 "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "false"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "false"
 								},
 								{
 									"Type": "NodeText",
@@ -1837,94 +1523,36 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "std::recursive_mutex"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "std::recursive_mutex"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "\n其允许同一个线程对互斥量多次上锁（即"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "递归上锁"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "递归上锁"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "），来获得对互斥量对象的多层所有权，释放互斥量时需要调用与该锁层次深度相同次数的 unlock()，除此之外，"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "std::recursive_mutex"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "std::recursive_mutex"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 的特性和 "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "std::mutex"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "std::mutex"
 								},
 								{
 									"Type": "NodeText",
@@ -1978,20 +1606,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "std::timed_mutex"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "std::timed_mutex"
 								}
 							]
 						},
@@ -2029,60 +1646,27 @@
 													"Data": "比"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "std::mutex"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "std::mutex"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "多了两个成员函数，"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "try_lock_for()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "try_lock_for()"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "，"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "try_lock_until()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "try_lock_until()"
 												},
 												{
 													"Type": "NodeText",
@@ -2111,20 +1695,9 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "try_lock_for()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "try_lock_for()"
 												}
 											]
 										},
@@ -2159,100 +1732,45 @@
 																	"Data": "接受一个时间范围，表示在这一段时间范围之内线程如果没有获得锁则被阻塞住（与"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"Data": "code",
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "std::mutex "
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "std::mutex "
 																},
 																{
 																	"Type": "NodeText",
 																	"Data": "的 "
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"Data": "code",
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "try_lock()"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "try_lock()"
 																},
 																{
 																	"Type": "NodeText",
 																	"Data": " 不同，"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"Data": "code",
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "try_lock"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "try_lock"
 																},
 																{
 																	"Type": "NodeText",
 																	"Data": "如果被调用时没有获得锁则直接返回"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"Data": "code",
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "false"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "false"
 																},
 																{
 																	"Type": "NodeText",
 																	"Data": "），如果在此期间其他线程释放了锁，则该线程可以获得对互斥量的锁，如果超时（即在指定时间内还是没有获得锁），则返回"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"Data": "code",
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": " false"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": " false"
 																},
 																{
 																	"Type": "NodeText",
@@ -2285,20 +1803,9 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "try_lock_until()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "try_lock_until()"
 												}
 											]
 										},
@@ -2333,20 +1840,9 @@
 																	"Data": "接受一个时间点作为参数，在指定时间点未到来之前线程如果没有获得锁则被阻塞住，如果在此期间其他线程释放了锁，则该线程可以获得对互斥量的锁，如果超时（即在指定时间内还是没有获得锁），则返回 "
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"Data": "code",
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "false"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "false"
 																},
 																{
 																	"Type": "NodeText",
@@ -2408,20 +1904,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "std::recursive_timed_mutex"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "std::recursive_timed_mutex"
 								}
 							]
 						}
@@ -2453,20 +1938,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "但我们遇到需要加锁的环境，且这个环境中有循环，我们应该怎么加锁？为什么？"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "但我们遇到需要加锁的环境，且这个环境中有循环，我们应该怎么加锁？为什么？"
 				}
 			]
 		},
@@ -2575,34 +2049,9 @@
 													},
 													"Children": [
 														{
-															"Type": "NodeMark",
-															"Data": "mark",
-															"Children": [
-																{
-																	"Type": "NodeMark2OpenMarker"
-																},
-																{
-																	"Type": "NodeStrong",
-																	"Data": "strong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "并行"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
-																},
-																{
-																	"Type": "NodeMark2CloseMarker"
-																}
-															]
+															"Type": "NodeTextMark",
+															"TextMarkType": "mark strong",
+															"TextMarkTextContent": "并行"
 														},
 														{
 															"Type": "NodeText",
@@ -2633,34 +2082,9 @@
 													},
 													"Children": [
 														{
-															"Type": "NodeMark",
-															"Data": "mark",
-															"Children": [
-																{
-																	"Type": "NodeMark2OpenMarker"
-																},
-																{
-																	"Type": "NodeStrong",
-																	"Data": "strong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "串行"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
-																},
-																{
-																	"Type": "NodeMark2CloseMarker"
-																}
-															]
+															"Type": "NodeTextMark",
+															"TextMarkType": "mark strong",
+															"TextMarkTextContent": "串行"
 														},
 														{
 															"Type": "NodeText",
@@ -2797,22 +2221,9 @@
 					"Data": "多线程最主要的问题是共享数据带来的问题(即线程安全)。"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "如果共享数据都是只读的，那么没问题，因为只读操作不会影响到数据，更不会涉及对数据的修改，所以所有线程都会获得同样的数据"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "如果共享数据都是只读的，那么没问题，因为只读操作不会影响到数据，更不会涉及对数据的修改，所以所有线程都会获得同样的数据"
 				},
 				{
 					"Type": "NodeText",
@@ -2833,80 +2244,32 @@
 					"Data": "虽然加锁可以解决，但是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "加锁有一个缺陷"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "加锁有一个缺陷"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "就是：只要一个线程在对"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "sum++"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "sum++"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "时，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "其他线程就会被阻塞，会影响程序运行的效率，而且锁如果控制不好，还容易造成"
-						},
-						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "死锁"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "其他线程就会被阻塞，会影响程序运行的效率，而且锁如果控制不好，还容易造成"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong mark",
+					"TextMarkTextContent": "死锁"
 				},
 				{
 					"Type": "NodeText",
@@ -2941,34 +2304,9 @@
 					"Data": "在C++11中，程序员不需要对原子类型变量进行加锁解锁操作，线程能够对原子类型变量互斥的访问。\n更为普遍的，程序员可以使用 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "atomic"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "atomic"
 				},
 				{
 					"Type": "NodeText",
@@ -3016,22 +2354,9 @@
 					"Data": "原子类型通常属于\"资源型\"数据，多个线程只能访问单个原子类型的拷贝，因此在C++11中，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "原子类型只能从其模板参数中进行构造，不允许原子类型进行拷贝构造、移动构造以及operator=等"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "原子类型只能从其模板参数中进行构造，不允许原子类型进行拷贝构造、移动构造以及operator=等"
 				},
 				{
 					"Type": "NodeText",
@@ -3071,20 +2396,9 @@
 					"Data": "\n注意：需要使用以上原子操作变量时，必须添加头文件"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "\u003catomic\u003e"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "\u0026lt;atomic\u0026gt;"
 				}
 			]
 		},
@@ -3174,106 +2488,45 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "lock_guard"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_guard"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 对象的"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "拷贝构造和移动构造"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "拷贝构造和移动构造"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "(move construction)均"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "被禁用"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "被禁用"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，因此 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "lock_guard"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_guard"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "对象不可被拷贝构造或移动构造"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对象不可被拷贝构造或移动构造"
 				},
 				{
 					"Type": "NodeText",
@@ -3352,34 +2605,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "为什么说他是不安全的呢？"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "为什么说他是不安全的呢？"
 				},
 				{
 					"Type": "NodeText",
@@ -3400,60 +2628,27 @@
 					"Data": "先看"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "malloc"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "malloc"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的表现，"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "malloc"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "malloc"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "失败后会返回null, 那么if判断之后，会直接返回"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "-1"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "-1"
 				},
 				{
 					"Type": "NodeText",
@@ -3501,54 +2696,18 @@
 					"Data": "2、如果抛"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "异常"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "异常"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "了之后，跳转到catch处，可是"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "catch"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "catch"
 				},
 				{
 					"Type": "NodeText",
@@ -3569,80 +2728,36 @@
 					"Data": "如果代码是正常执行的话，那么并没有什么问题，可以如果是在多线程的环境下"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "new"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "new"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "一旦失败了，就会抛异常而"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "try"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "try"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 捕捉到了之后就会交给"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "catch"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "catch"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "处理，可是"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "catch"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "catch"
 				},
 				{
 					"Type": "NodeText",
@@ -3704,108 +2819,36 @@
 					"Data": "锁控制不好时，可能会造成死锁，最常见的比如在锁中间代码返回，或者在锁的范围内抛异常。因此：C++11采用"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "RAII（ RAII (Resource Acquisition Is Initialization)是一种利用对象生命周期来控制程序资源(如内存、文件句 柄r网络连接、斥量等等)的简单技术"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "RAII（ RAII (Resource Acquisition Is Initialization)是一种利用对象生命周期来控制程序资源(如内存、文件句 柄r网络连接、斥量等等)的简单技术"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。 ）的方式对锁进行了封装，即 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "lock_guard"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "lock_guard"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 和 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "unique_lock"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "unique_lock"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " ，引入"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "lock_guard"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_guard"
 				},
 				{
 					"Type": "NodeText",
@@ -3875,82 +2918,36 @@
 					"Data": "此时我们可以发现，在使用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "lock_guard"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_guard"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "之后，无论是抛异常还是程序中间返回，都会被处理。\n通过上述代码可以看到，"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "lock_guard"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_guard"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "类模板主要是通过"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "RAII"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "RAII"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的方式，对其管理的互斥量进行了封装，在需要加锁的地方，只需要用上述介绍的任意互斥体实例化一个lock_guard，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "调用构造函数成功上锁，出作用域前, lock_guard对象要被销毁，调用析构函数自动解锁"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "调用构造函数成功上锁，出作用域前, lock_guard对象要被销毁，调用析构函数自动解锁"
 				},
 				{
 					"Type": "NodeText",
@@ -4042,266 +3039,114 @@
 					"Data": "与"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "lock_gard"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_gard"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "类似，"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "unique_lock"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "unique_lock"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "类模板也是采用"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "RAII"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "RAII"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的方式对锁进行了封装，并且也是以独占所有权的方式，管理mutex对象的上锁和解锁操作，即"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "其对象之间不能发生拷贝"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "其对象之间不能发生拷贝"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。\n在"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "构造"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "构造"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "(或"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "移动(move)赋值"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "移动(move)赋值"
 				},
 				{
 					"Type": "NodeText",
 					"Data": ")时，"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "unique_lock"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "unique_lock"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 对象需要传递一个 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "Mutex"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Mutex"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 对象作为它的参数，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "新创建的 unique_lock 对象负责传入的 "
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "Mutex"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "对象的上锁和解锁操作"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "新创建的 unique_lock 对象负责传入的 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "Mutex"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对象的上锁和解锁操作"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。\n使用以上类型互斥量实例化"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "unique_lock"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "unique_lock"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的对象时，自动调用构造函数上锁，unique_lock对象销毁时自动调用析构函数解锁，可以很方便的防止死锁问题。\n与lock_guard不同的是，"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "unique_lock"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "unique_lock"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "更加的灵活，提供了更多的成员函数"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "更加的灵活，提供了更多的成员函数"
 				},
 				{
 					"Type": "NodeText",
@@ -4339,34 +3184,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "上锁/解锁操作"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "上锁/解锁操作"
 								},
 								{
 									"Type": "NodeText",
@@ -4397,34 +3217,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "修改操作"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "修改操作"
 								},
 								{
 									"Type": "NodeText",
@@ -4455,34 +3250,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "获取属性"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "获取属性"
 								},
 								{
 									"Type": "NodeText",
@@ -4525,30 +3295,10 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeLink",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "lock_guard/unique_lock详解"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "https://blog.csdn.net/zzhongcy/article/details/85230200"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://blog.csdn.net/zzhongcy/article/details/85230200",
+					"TextMarkTextContent": "lock_guard/unique_lock详解"
 				}
 			]
 		},
@@ -4691,34 +3441,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "参数："
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "参数："
 				}
 			]
 		},
@@ -4743,60 +3468,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "lck"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "lck"
 						},
 						{
 							"Type": "NodeText",
 							"Data": ": 传递unique_lock类型的对象\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "Predicate"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "Predicate"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "： 模板参数，传递对应的可调用对象（lanmda表达式、函数指针、仿函数）, 可调用对象必须是具有返回值的，并且"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "返回值必须是一个bool类型"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "返回值必须是一个bool类型"
 						},
 						{
 							"Type": "NodeText",
@@ -4833,64 +3525,27 @@
 					"Data": "在"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "阻塞线程的那一刻"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "阻塞线程的那一刻"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，函数"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "自动调用"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "自动调用"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "lck.unlock()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lck.unlock()"
 				},
 				{
 					"Type": "NodeText",
@@ -4907,38 +3562,14 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "一旦通知（明确地，由某个其他线程），该函数将解除阻塞并调用 "
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "lck.lock()"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "一旦通知（明确地，由某个其他线程），该函数将解除阻塞并调用 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "lck.lock()"
 				},
 				{
 					"Type": "NodeText",
@@ -4959,40 +3590,18 @@
 					"Data": "通常，函数通过调用另一个线程中的成员 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "notify_one"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "notify_one"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 或成员 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "notify_all"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "notify_all"
 				},
 				{
 					"Type": "NodeText",
@@ -5009,82 +3618,38 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "如果指定了 pred (2)，则该函数仅在 pred 返回 "
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "false"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 时阻塞，并且通知只能在它变为 "
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "true"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 时解除阻塞线程（这对于检查虚假唤醒调用特别有用"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "如果指定了 pred (2)，则该函数仅在 pred 返回 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "false"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": " 时阻塞，并且通知只能在它变为 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "true"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": " 时解除阻塞线程（这对于检查虚假唤醒调用特别有用"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "）。就像如此："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "while (!pred()) wait(lck);"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "while (!pred()) wait(lck);"
 				}
 			]
 		},
@@ -5152,20 +3717,9 @@
 					"Data": "\n"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "notify_one()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "notify_one()"
 				},
 				{
 					"Type": "NodeText",
@@ -5207,20 +3761,9 @@
 									"Data": "解除阻塞"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "当前等待（这属于一个条件）"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "当前等待（这属于一个条件）"
 								},
 								{
 									"Type": "NodeText",
@@ -5297,20 +3840,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "notify_all()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "notify_all()"
 				},
 				{
 					"Type": "NodeText",
@@ -5353,34 +3885,9 @@
 					"Data": "看一个题了解线程同步\n"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "支持两个线程交替打印，一个打印奇数，一个打印偶数"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "支持两个线程交替打印，一个打印奇数，一个打印偶数"
 				},
 				{
 					"Type": "NodeText",
@@ -5475,34 +3982,9 @@
 					"Data": "\n没有交替打印是因为"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "时间片"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "时间片"
 				},
 				{
 					"Type": "NodeText",
@@ -5523,22 +4005,9 @@
 					"Data": "需要完美的实现这个案例，这就需要我们加入"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "条件变量"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "条件变量"
 				},
 				{
 					"Type": "NodeText",
@@ -5613,10 +4082,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},

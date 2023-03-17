@@ -1,5 +1,6 @@
 {
 	"ID": "20221125224252-cip1x0r",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221125224252-cip1x0r",
@@ -155,44 +156,18 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "WebAPI"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "WebAPI"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 就包含了 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "DOM + BOM"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "DOM + BOM"
 				},
 				{
 					"Type": "NodeText",
@@ -309,22 +284,9 @@
 					"Data": "API 是一个更广义的概念. 而 WebAPI 是一个更具体的概念, 特指 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "DOM+BOM"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "DOM+BOM"
 				},
 				{
 					"Type": "NodeText",
@@ -384,30 +346,10 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeLink",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://developer.mozilla.org/zh-CN/docs/Web/API",
+					"TextMarkTextContent": "https://developer.mozilla.org/zh-CN/docs/Web/API"
 				}
 			]
 		},
@@ -665,22 +607,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "页面结构形如"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "页面结构形如"
 				},
 				{
 					"Type": "NodeText",
@@ -714,10 +643,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -737,22 +662,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "DOM 树结构形如:"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "DOM 树结构形如:"
 				},
 				{
 					"Type": "NodeText",
@@ -1094,50 +1006,19 @@
 									"Data": "selectors 包含一个或多个要匹配的选择器的 DOM字符串 "
 								},
 								{
-									"Type": "NodeLink",
-									"Data": "span",
-									"Children": [
-										{
-											"Type": "NodeOpenBracket"
-										},
-										{
-											"Type": "NodeLinkText",
-											"Data": "DOMString"
-										},
-										{
-											"Type": "NodeCloseBracket"
-										},
-										{
-											"Type": "NodeOpenParen"
-										},
-										{
-											"Type": "NodeLinkDest",
-											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String"
-										},
-										{
-											"Type": "NodeCloseParen"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "a",
+									"TextMarkAHref": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String",
+									"TextMarkTextContent": "DOMString"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 。  该字符串必须是有效的CSS选择器字符串；如果不是，则引发 "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "SYNTAX_ERR"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "SYNTAX_ERR"
 								},
 								{
 									"Type": "NodeText",
@@ -1172,30 +1053,10 @@
 									"Data": "表示文档中与指定的一组CSS选择器匹配的第一个元素的 html元素Element"
 								},
 								{
-									"Type": "NodeLink",
-									"Data": "span",
-									"Children": [
-										{
-											"Type": "NodeOpenBracket"
-										},
-										{
-											"Type": "NodeLinkText",
-											"Data": "Element"
-										},
-										{
-											"Type": "NodeCloseBracket"
-										},
-										{
-											"Type": "NodeOpenParen"
-										},
-										{
-											"Type": "NodeLinkDest",
-											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API/Element"
-										},
-										{
-											"Type": "NodeCloseParen"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "a",
+									"TextMarkAHref": "https://developer.mozilla.org/zh-CN/docs/Web/API/Element",
+									"TextMarkTextContent": "Element"
 								},
 								{
 									"Type": "NodeText",
@@ -1230,30 +1091,10 @@
 									"Data": "如果您需要与指定选择器匹配的所有元素的列表，则应该使用 "
 								},
 								{
-									"Type": "NodeLink",
-									"Data": "span",
-									"Children": [
-										{
-											"Type": "NodeOpenBracket"
-										},
-										{
-											"Type": "NodeLinkText",
-											"Data": "querySelectorAll"
-										},
-										{
-											"Type": "NodeCloseBracket"
-										},
-										{
-											"Type": "NodeOpenParen"
-										},
-										{
-											"Type": "NodeLinkDest",
-											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll"
-										},
-										{
-											"Type": "NodeCloseParen"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "a",
+									"TextMarkAHref": "https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll",
+									"TextMarkTextContent": "querySelectorAll"
 								}
 							]
 						}
@@ -1314,40 +1155,18 @@
 							"Data": "正因为参数是选择器, 所以一定要通过特殊符号指定是哪种选择器.\n例如 "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": ".box"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": ".box"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 是类选择器, "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "#star"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "#star"
 						},
 						{
 							"Type": "NodeText",
@@ -1419,40 +1238,18 @@
 					"Data": "使用 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "querySelectorAll"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "querySelectorAll"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的用法和 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "querySelector"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "querySelector"
 				},
 				{
 					"Type": "NodeText",
@@ -1851,20 +1648,9 @@
 									"Data": "其中   "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "btn.onclick = function()"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "btn.onclick = function()"
 								},
 								{
 									"Type": "NodeText",
@@ -1929,20 +1715,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "Element.innerText"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Element.innerText"
 				},
 				{
 					"Type": "NodeText",
@@ -2070,20 +1845,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "Element.innerHTML"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Element.innerHTML"
 				},
 				{
 					"Type": "NodeText",
@@ -2364,20 +2128,9 @@
 					"Data": "此时可以看到img这个"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "Element"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Element"
 				},
 				{
 					"Type": "NodeText",
@@ -2411,10 +2164,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -2777,22 +2526,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "代码示例:"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "代码示例:"
 				},
 				{
 					"Type": "NodeText",
@@ -2877,22 +2613,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "代码示例"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "代码示例"
 				},
 				{
 					"Type": "NodeText",
@@ -3073,22 +2796,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "代码示例"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "代码示例"
 				},
 				{
 					"Type": "NodeText",
@@ -3122,10 +2832,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -3323,22 +3029,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "代码示例"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "代码示例"
 				},
 				{
 					"Type": "NodeText",
@@ -3371,80 +3064,36 @@
 							"Data": "style 中的属性都是使用  驼峰命名  的方式和  CSS 属性对应的.\n例如: "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "font-size"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "font-size"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " =\u003e"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "fontSize"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "fontSize"
 						},
 						{
 							"Type": "NodeText",
 							"Data": ", "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "background-color"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "background-color"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " =\u003e "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "backgroundColor"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "backgroundColor"
 						},
 						{
 							"Type": "NodeText",
@@ -3595,22 +3244,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "代码示例"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "代码示例"
 				},
 				{
 					"Type": "NodeText",
@@ -3644,10 +3280,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -4115,20 +3747,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "上面介绍的只是创建元素节点, 还可以使用"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "上面介绍的只是创建元素节点, 还可以使用"
 						}
 					]
 				},
@@ -4162,20 +3783,9 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "createTextNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "createTextNode"
 										},
 										{
 											"Type": "NodeText",
@@ -4206,20 +3816,9 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "createComment"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "createComment"
 										},
 										{
 											"Type": "NodeText",
@@ -4250,40 +3849,18 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "createAttribute"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "createAttribute"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " 创建属性节点\n我们以 "
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "createElement"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "createElement"
 										},
 										{
 											"Type": "NodeText",
@@ -4353,22 +3930,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "使用 appendChild 将节点插入到指定节点的最后一个孩子之后"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "使用 appendChild 将节点插入到指定节点的最后一个孩子之后"
 								}
 							]
 						}
@@ -4511,22 +4075,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "使用 insertBefore 将节点插入到指定节点之前"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "使用 insertBefore 将节点插入到指定节点之前"
 								},
 								{
 									"Type": "NodeText",
@@ -4607,20 +4158,9 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "insertedNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "insertedNode"
 										},
 										{
 											"Type": "NodeText",
@@ -4651,20 +4191,9 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "parentNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "parentNode"
 										},
 										{
 											"Type": "NodeText",
@@ -4695,120 +4224,54 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "referenceNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "referenceNode"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " : "
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "newNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "newNode"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "将要插在这个节点之前\n如果"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "referenceNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "referenceNode"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "为"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "null"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "null"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "则"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "newNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "newNode"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "将被插入到子节点的末尾.\n注意: "
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "referenceNode"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "referenceNode"
 										},
 										{
 											"Type": "NodeText",
@@ -4897,22 +4360,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "注意1:  如果针对一个节点插入两次, 则只有最后一次生效(相当于把元素移动了)"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意1:  如果针对一个节点插入两次, 则只有最后一次生效(相当于把元素移动了)"
 				}
 			]
 		},
@@ -4991,22 +4441,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "注意2: 一旦一个节点插入完毕, 再针对刚刚的节点对象进行修改, 能够同步影响到 DOM 树中的内容."
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意2: 一旦一个节点插入完毕, 再针对刚刚的节点对象进行修改, 能够同步影响到 DOM 树中的内容."
 				}
 			]
 		},
@@ -5111,20 +4548,9 @@
 					"Data": "使用 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "removeChild"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "removeChild"
 				},
 				{
 					"Type": "NodeText",
@@ -5201,20 +4627,9 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "child"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "child"
 										},
 										{
 											"Type": "NodeText",
@@ -5245,40 +4660,18 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "element"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "element"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " 为 "
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "child"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "child"
 										},
 										{
 											"Type": "NodeText",
@@ -5309,22 +4702,9 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "返回值为该被删除节点"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "返回值为该被删除节点"
 										}
 									]
 								}
@@ -5383,40 +4763,18 @@
 											"Data": "如果上例中的 "
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "child"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "child"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "节点  不是"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "element"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "element"
 										},
 										{
 											"Type": "NodeText",
@@ -5630,30 +4988,10 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeLink",
-									"Data": "span",
-									"Children": [
-										{
-											"Type": "NodeOpenBracket"
-										},
-										{
-											"Type": "NodeLinkText",
-											"Data": "align-items - CSS（层叠样式表） | MDN (mozilla.org)"
-										},
-										{
-											"Type": "NodeCloseBracket"
-										},
-										{
-											"Type": "NodeOpenParen"
-										},
-										{
-											"Type": "NodeLinkDest",
-											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items"
-										},
-										{
-											"Type": "NodeCloseParen"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "a",
+									"TextMarkAHref": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items",
+									"TextMarkTextContent": "align-items - CSS（层叠样式表） | MDN (mozilla.org)"
 								}
 							]
 						}
@@ -5680,30 +5018,10 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeLink",
-									"Data": "span",
-									"Children": [
-										{
-											"Type": "NodeOpenBracket"
-										},
-										{
-											"Type": "NodeLinkText",
-											"Data": "display: flex - CSS（层叠样式表） | MDN (mozilla.org)"
-										},
-										{
-											"Type": "NodeCloseBracket"
-										},
-										{
-											"Type": "NodeOpenParen"
-										},
-										{
-											"Type": "NodeLinkDest",
-											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/display"
-										},
-										{
-											"Type": "NodeCloseParen"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "a",
+									"TextMarkAHref": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/display",
+									"TextMarkTextContent": "display: flex - CSS（层叠样式表） | MDN (mozilla.org)"
 								}
 							]
 						}
@@ -5730,30 +5048,10 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeLink",
-									"Data": "span",
-									"Children": [
-										{
-											"Type": "NodeOpenBracket"
-										},
-										{
-											"Type": "NodeLinkText",
-											"Data": "justify-content - CSS（层叠样式表） | MDN (mozilla.org)"
-										},
-										{
-											"Type": "NodeCloseBracket"
-										},
-										{
-											"Type": "NodeOpenParen"
-										},
-										{
-											"Type": "NodeLinkDest",
-											"Data": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content"
-										},
-										{
-											"Type": "NodeCloseParen"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "a",
+									"TextMarkAHref": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content",
+									"TextMarkTextContent": "justify-content - CSS（层叠样式表） | MDN (mozilla.org)"
 								}
 							]
 						}

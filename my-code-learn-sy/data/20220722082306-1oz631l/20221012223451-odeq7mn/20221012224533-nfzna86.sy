@@ -1,5 +1,6 @@
 {
 	"ID": "20221012224533-nfzna86",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221012224533-nfzna86",
@@ -181,22 +182,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "可位于赋值号（=）左侧的表达式就是左值；反之，只能位于赋值号右侧的表达式就是右值"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "可位于赋值号（=）左侧的表达式就是左值；反之，只能位于赋值号右侧的表达式就是右值"
 								},
 								{
 									"Type": "NodeText",
@@ -317,22 +305,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "有名称的、可以获取到存储地址的表达式即为左值；反之则是右值"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "有名称的、可以获取到存储地址的表达式即为左值；反之则是右值"
 								},
 								{
 									"Type": "NodeText",
@@ -650,42 +625,18 @@
 					"Data": "为此，C++11 标准新引入了另一种引用方式，称为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "右值引用"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "右值引用"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，用 \""
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "\u0026\u0026"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "\u0026amp;\u0026amp;"
 				},
 				{
 					"Type": "NodeText",
@@ -844,20 +795,9 @@
 					"Data": "另外值得一提的是，C++ 语法上是支持定义常量右值引用的，例如：\n"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "const int\u0026\u0026 a = 10;//编译器不会报错"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "const int\u0026amp;\u0026amp; a = 10;//编译器不会报错"
 				},
 				{
 					"Type": "NodeText",
@@ -1035,66 +975,27 @@
 											"Data": "普通类型的变量，因为"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "有名字"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "有名字"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "，可以"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "取地址"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "取地址"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "，都认为是"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "左值"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "左值"
 										},
 										{
 											"Type": "NodeText",
@@ -1127,44 +1028,18 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "const修饰的常量，不可修改，只读类型"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "const修饰的常量，不可修改，只读类型"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "的，理论应该按照右值对待，但因为其可以取地址(如果只是 const类型常量的定义，编译器不给其开辟空间，如果对该常量取地址时，编译器才为其开辟空间)，C++11认为其是"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "左值"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "左值"
 										},
 										{
 											"Type": "NodeText",
@@ -1201,44 +1076,18 @@
 											"Data": "如果"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "表达式的运行结果是一个临时变量或者对象"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "表达式的运行结果是一个临时变量或者对象"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "，认为是"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "右值"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "右值"
 										},
 										{
 											"Type": "NodeText",
@@ -1291,34 +1140,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "总结："
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "总结："
 				}
 			]
 		},
@@ -1411,34 +1235,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "C++11对右值进行了严格的区分："
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "C++11对右值进行了严格的区分："
 				}
 			]
 		},
@@ -1585,34 +1384,9 @@
 					"Data": "注意:"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "普通引用只能引用左值，不能引用右值，const引用既可引用左值，也可引用右值"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "普通引用只能引用左值，不能引用右值，const引用既可引用左值，也可引用右值"
 				},
 				{
 					"Type": "NodeText",
@@ -1713,38 +1487,14 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "左值引用能否引用右值 -- "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "不能直接引用，但是const 左值引用可以引用右值"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "左值引用能否引用右值 -- "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "不能直接引用，但是const 左值引用可以引用右值"
 				}
 			]
 		},
@@ -1784,38 +1534,14 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "右值引用能否引用左值 -- "
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "不能直接引用，但是可以右值引用可以引用move以后左值"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "右值引用能否引用左值 -- "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "不能直接引用，但是可以右值引用可以引用move以后左值"
 				}
 			]
 		},
@@ -1955,44 +1681,18 @@
 					"Data": "\n在operator+中："
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "strRet在按照值返回时，必须创建一个临时对象，临时对象创建好之后，strRet就被销毁了，最后使用返回的临时对象构造s3，s3构造好之后，临时对象就被销毁了"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "strRet在按照值返回时，必须创建一个临时对象，临时对象创建好之后，strRet就被销毁了，最后使用返回的临时对象构造s3，s3构造好之后，临时对象就被销毁了"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。仔细观察会发现："
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "strRet、临时对象、s3每个对象创建后，都有自己独立的空间，而空间中存放内容也都相同，相当于创建了三个内容完全相同的对象，对于空间是一种浪费，程序的效率也会降低，而且临时对象确实作用不是很大"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "strRet、临时对象、s3每个对象创建后，都有自己独立的空间，而空间中存放内容也都相同，相当于创建了三个内容完全相同的对象，对于空间是一种浪费，程序的效率也会降低，而且临时对象确实作用不是很大"
 				},
 				{
 					"Type": "NodeText",
@@ -2028,22 +1728,9 @@
 					"Data": "C++11提出了移动语义概念，即："
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "将一个对象中资源移动到另一个对象中的方式"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "将一个对象中资源移动到另一个对象中的方式"
 				},
 				{
 					"Type": "NodeText",
@@ -2077,10 +1764,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -2124,54 +1807,18 @@
 					"Data": "因为strRet对象的生命周期在创建好临时对象后就结束了，即"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "将亡值"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "将亡值"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，C++11认为其为"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "右值"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "右值"
 				},
 				{
 					"Type": "NodeText",
@@ -2195,34 +1842,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "注意:"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "注意:"
 				}
 			]
 		},
@@ -2260,22 +1882,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "移动构造函数的参数千万不能设置成const类型的右值引用，因为资源无法转移而导致移动语义失效"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "移动构造函数的参数千万不能设置成const类型的右值引用，因为资源无法转移而导致移动语义失效"
 								},
 								{
 									"Type": "NodeText",
@@ -2312,44 +1921,18 @@
 									"Data": "在C++11中，编译器会为类"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "默认生成一个移动构造"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "默认生成一个移动构造"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，该移动构造为"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "浅拷贝"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "浅拷贝"
 								},
 								{
 									"Type": "NodeText",
@@ -2389,78 +1972,27 @@
 					"Data": "按照语法，右值引用只能引用右值，但右值引用一定不能引用左值吗？因为：有些场景下，可能真的需要用右值去引用左值实现移动语义。"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "当需要用右值引用引用一个左值时，可以通过move函数将左值转化为右值"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "当需要用右值引用引用一个左值时，可以通过move函数将左值转化为右值"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。C++11中，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "std::move()"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "std::move()"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 函数位于 头文件中，该函数名字具有迷惑性，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "它并不搬移任何东西，唯一的功能就是将一个左值强制转化为右值引用，然后实现移动语义"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "它并不搬移任何东西，唯一的功能就是将一个左值强制转化为右值引用，然后实现移动语义"
 				},
 				{
 					"Type": "NodeText",
@@ -2547,42 +2079,18 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "问：为什么接受右值引用的构造函数被视为“移动”语义？"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "问：为什么接受右值引用的构造函数被视为“移动”语义？"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "\n"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "答："
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "答："
 				},
 				{
 					"Type": "NodeText",
@@ -2610,22 +2118,9 @@
 					"Data": "如果"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "自定义了拷贝构造函数（const引用版），则移动构造函数会被编译器隐式地声明为delete的，此时如果用右值来构造对象，调用的则是const引用版的拷贝构造函数"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "自定义了拷贝构造函数（const引用版），则移动构造函数会被编译器隐式地声明为delete的，此时如果用右值来构造对象，调用的则是const引用版的拷贝构造函数"
 				},
 				{
 					"Type": "NodeText",
@@ -2721,34 +2216,9 @@
 					"Data": "\n"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "只使用拷贝构造"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "只使用拷贝构造"
 				}
 			]
 		},
@@ -2855,34 +2325,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "使用拷贝构造+移动构造"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "使用拷贝构造+移动构造"
 				}
 			]
 		},
@@ -2962,22 +2407,9 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "to_string函数快结束时，将str的值传入移动构造，然后ret取得资源，相当于str的资源被ret继承了"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "to_string函数快结束时，将str的值传入移动构造，然后ret取得资源，相当于str的资源被ret继承了"
 										}
 									]
 								}
@@ -3022,22 +2454,9 @@
 					"Data": "指对"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "模板参数"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "模板参数"
 				},
 				{
 					"Type": "NodeText",
@@ -3082,34 +2501,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "引用折叠"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "引用折叠"
 				},
 				{
 					"Type": "NodeText",
@@ -3154,34 +2548,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "未实现完美转发的代码"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "未实现完美转发的代码"
 				}
 			]
 		},
@@ -3225,22 +2594,9 @@
 					"Data": "但是看看运行结果，都"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "被转发为了左值引用"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "被转发为了左值引用"
 				},
 				{
 					"Type": "NodeText",
@@ -3343,44 +2699,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "模板中的\u0026\u0026不代表右值引用，而是万能引用"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "模板中的\u0026amp;\u0026amp;不代表右值引用，而是万能引用"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，其既"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "能接收左值又能接收右值"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "能接收左值又能接收右值"
 								},
 								{
 									"Type": "NodeText",
@@ -3415,22 +2745,9 @@
 									"Data": "模板的"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "万能引用只是提供了能够接收同时接收左值引用和右值引用的能力"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "万能引用只是提供了能够接收同时接收左值引用和右值引用的能力"
 								},
 								{
 									"Type": "NodeText",
@@ -3465,66 +2782,27 @@
 									"Data": "但是"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "引用类型的唯一作用"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "引用类型的唯一作用"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "就是"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "限制了接收的类型"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "限制了接收的类型"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，后续使用中都"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "退化成了左值"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "退化成了左值"
 								},
 								{
 									"Type": "NodeText",
@@ -3571,20 +2849,9 @@
 					"Data": "这里使用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "forward\u003cT\u003e()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "forward\u0026lt;T\u0026gt;()"
 				},
 				{
 					"Type": "NodeText",
@@ -3659,10 +2926,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},

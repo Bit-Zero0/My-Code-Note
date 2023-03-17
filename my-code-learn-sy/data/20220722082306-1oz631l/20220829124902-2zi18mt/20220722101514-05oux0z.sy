@@ -1,5 +1,6 @@
 {
 	"ID": "20220722101514-05oux0z",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722101514-05oux0z",
@@ -31,42 +32,18 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "适配器是一种设计模式"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "适配器是一种设计模式"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "(设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结)，"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "该种模式是将一个类的接口转换成客户希望的另外一个接口"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "该种模式是将一个类的接口转换成客户希望的另外一个接口"
 				},
 				{
 					"Type": "NodeText",
@@ -131,154 +108,63 @@
 					"Data": "虽然"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stack"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stack"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "queue"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "queue"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "中也可以存放元素，但在STL中并没有将其划分在容器的行列，而是将其称为"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "容器适配器"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "容器适配器"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，这是因为"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stack"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stack"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和队列只是对其他容器的接口进行了包装，STL中"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stack"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stack"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "queue"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "queue"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "默认使用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "deque"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "deque"
 				},
 				{
 					"Type": "NodeText",
@@ -474,34 +360,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "deque(双端队列)"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "deque(双端队列)"
 						},
 						{
 							"Type": "NodeText",
@@ -541,22 +402,9 @@
 							"Data": "\n"
 						},
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "deque并不是真正连续的空间，而是由一段段连续的小空间拼接而成的"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "deque并不是真正连续的空间，而是由一段段连续的小空间拼接而成的"
 						},
 						{
 							"Type": "NodeText",
@@ -662,76 +510,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "与vector比较"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "与vector比较"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，deque的优势是："
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "头部插入和删除"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "头部插入和删除"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "时，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "不需要搬移元素，效率特别高"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "不需要搬移元素，效率特别高"
 				},
 				{
 					"Type": "NodeText",
@@ -748,56 +547,18 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "与list比较"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "与list比较"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，其底层是连续空间，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "空间利用率比较高"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "空间利用率比较高"
 				},
 				{
 					"Type": "NodeText",
@@ -818,56 +579,18 @@
 					"Data": "但是，"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "deque有一个致命缺陷"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "deque有一个致命缺陷"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "："
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "不适合遍历，因为在遍历时，deque的迭代器要频繁的去检测其是否移动到某段小空间的边界，导致效率低下"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "不适合遍历，因为在遍历时，deque的迭代器要频繁的去检测其是否移动到某段小空间的边界，导致效率低下"
 				},
 				{
 					"Type": "NodeText",
@@ -888,78 +611,34 @@
 					"Data": "因此在"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "实际中，需要线性结构时，大多数情况下优先考虑 "
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "vector"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 和"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "list"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": ","
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "实际中，需要线性结构时，大多数情况下优先考虑 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "因为deque适合头尾插入删除，但是中间插入删除、和随机访问效率都差强人意。所以要高频随机访问还得是vector,要任意位置插入删除，还得是Iist"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark code",
+					"TextMarkTextContent": "vector"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": " 和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark code",
+					"TextMarkTextContent": "list"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": ","
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "因为deque适合头尾插入删除，但是中间插入删除、和随机访问效率都差强人意。所以要高频随机访问还得是vector,要任意位置插入删除，还得是Iist"
 				},
 				{
 					"Type": "NodeText",
@@ -976,60 +655,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "deque"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "deque"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的应用并不多，而目前能看到的一个应用就是，STL用其作为"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stack"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stack"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "queue"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "queue"
 				},
 				{
 					"Type": "NodeText",
@@ -1090,140 +736,63 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stack"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stack"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "是一种后进先出的特殊线性数据结构，因此只要具有"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "push_back()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "push_back()"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "pop_back()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "pop_back()"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "操作的线性结构，都可以作为"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stack"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stack"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的底层容器，比如"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "vector"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "vector"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "list"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "list"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "都可以；"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "queue"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "queue"
 				},
 				{
 					"Type": "NodeText",
@@ -1240,140 +809,63 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "push_back"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "push_back"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "pop_front"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "pop_front"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "操作的线性结构，都可以作为"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "queue"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "queue"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的底层容器，比如"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "list"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "list"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。但是STL中对"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stack"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stack"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "queue"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "queue"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "默认选择"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "deque"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "deque"
 				},
 				{
 					"Type": "NodeText",

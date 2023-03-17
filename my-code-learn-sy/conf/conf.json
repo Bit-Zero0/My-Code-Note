@@ -2,22 +2,23 @@
   "logLevel": "debug",
   "appearance": {
     "mode": 0,
+    "modeOS": false,
     "darkThemes": [
       "Dark+",
       "midnight"
     ],
     "lightThemes": [
-      "blue-dog",
       "Dark+",
+      "blue-dog",
       "daylight"
     ],
     "themeDark": "Dark+",
     "themeLight": "blue-dog",
     "themeVer": "0.25",
     "icons": [
+      "Remix Icon",
       "ant",
-      "material",
-      "Remix Icon"
+      "material"
     ],
     "icon": "Remix Icon",
     "iconVer": "1.3",
@@ -36,14 +37,6 @@
       "name": "en_US"
     },
     {
-      "label": "Español",
-      "name": "es_ES"
-    },
-    {
-      "label": "Français",
-      "name": "fr_FR"
-    },
-    {
       "label": "繁體中文",
       "name": "zh_CHT"
     },
@@ -57,7 +50,7 @@
     "alwaysSelectOpenedFile": false,
     "openFilesUseCurrentTab": false,
     "refCreateSavePath": "",
-    "createDocNameTemplate": "",
+    "docCreateSavePath": "",
     "maxListCount": 512,
     "maxOpenTabCount": 8,
     "allowCreateDeeper": false,
@@ -82,13 +75,25 @@
     "emoji": [],
     "virtualBlockRef": false,
     "virtualBlockRefExclude": "",
+    "virtualBlockRefInclude": "",
     "blockRefDynamicAnchorTextMaxLen": 96,
     "plantUMLServePath": "https://www.plantuml.com/plantuml/svg/~1",
-    "fullWidth": true
+    "fullWidth": true,
+    "katexMacros": "",
+    "readOnly": false,
+    "embedBlockBreadcrumb": false,
+    "listLogicalOutdent": false,
+    "floatWindowMode": 0,
+    "dynamicLoadBlocks": 48,
+    "justify": false,
+    "rtl": false,
+    "spellcheck": false,
+    "backlinkExpandCount": 0
   },
   "export": {
     "paragraphBeginningSpace": false,
     "addTitle": true,
+    "addFooter": false,
     "blockRefMode": 4,
     "blockEmbedMode": 1,
     "blockRefTextLeft": "",
@@ -96,7 +101,7 @@
     "tagOpenMarker": "#",
     "tagCloseMarker": "#",
     "fileAnnotationRefMode": 0,
-    "pandocBin": ""
+    "pandocBin": "S:\\github\\My-Code-Note\\my-code-learn-sy\\temp\\pandoc\\bin\\pandoc.exe"
   },
   "graph": {
     "maxBlocks": 10240,
@@ -153,27 +158,13 @@
     }
   },
   "uiLayout": {
-    "bottom": [],
+    "bottom": {
+      "data": [],
+      "pin": true
+    },
     "hideDock": false,
     "layout": {
       "children": [
-        {
-          "children": [
-            {
-              "children": [],
-              "instance": "Wnd"
-            },
-            {
-              "children": [],
-              "instance": "Wnd",
-              "resize": "lr"
-            }
-          ],
-          "direction": "lr",
-          "instance": "Layout",
-          "size": "0px",
-          "type": "top"
-        },
         {
           "children": [
             {
@@ -200,9 +191,41 @@
                     {
                       "children": {
                         "action": "",
+                        "blockId": "20221125224252-cip1x0r",
+                        "instance": "Editor",
+                        "mode": "wysiwyg",
+                        "notebookId": "20221125223059-53uuv53",
+                        "rootId": "20221125224252-cip1x0r",
+                        "scrollAttr": {
+                          "endId": "20221125224254-fg25ph3",
+                          "focusEnd": 0,
+                          "focusId": "20221125224254-w0sdezt",
+                          "focusStart": 0,
+                          "scrollTop": 0,
+                          "startId": "20221125224254-w0sdezt"
+                        }
+                      },
+                      "docIcon": "",
+                      "instance": "Tab",
+                      "pin": false,
+                      "title": "WebAPI"
+                    },
+                    {
+                      "children": {
+                        "action": "",
                         "blockId": "20221228220332-uymqj2j",
                         "instance": "Editor",
-                        "mode": "wysiwyg"
+                        "mode": "wysiwyg",
+                        "notebookId": "20221125230049-5ctliev",
+                        "rootId": "20221228220332-uymqj2j",
+                        "scrollAttr": {
+                          "endId": "20221228220345-tc94qbh",
+                          "focusEnd": 0,
+                          "focusId": "20221228220345-uw6kutq",
+                          "focusStart": 0,
+                          "scrollTop": 0,
+                          "startId": "20221228220345-uw6kutq"
+                        }
                       },
                       "docIcon": "",
                       "instance": "Tab",
@@ -210,17 +233,71 @@
                       "title": "链表"
                     },
                     {
-                      "active": true,
                       "children": {
                         "action": "",
-                        "blockId": "20220722153052-t26rxxj",
+                        "blockId": "20221125230055-dbpvjim",
                         "instance": "Editor",
-                        "mode": "wysiwyg"
+                        "mode": "wysiwyg",
+                        "notebookId": "20221125230049-5ctliev",
+                        "rootId": "20221125230055-dbpvjim",
+                        "scrollAttr": {
+                          "endId": "20221125230055-ncadumq",
+                          "focusEnd": 0,
+                          "focusId": "20221125230055-ncadumq",
+                          "focusStart": 0,
+                          "scrollTop": 0,
+                          "startId": "20221125230055-ncadumq"
+                        }
                       },
                       "docIcon": "",
                       "instance": "Tab",
                       "pin": false,
-                      "title": "Linux IO操作"
+                      "title": "剑指offer"
+                    },
+                    {
+                      "active": true,
+                      "children": {
+                        "action": "",
+                        "blockId": "20220913223533-jqys64s",
+                        "instance": "Editor",
+                        "mode": "wysiwyg",
+                        "notebookId": "20220722082249-xw09e27",
+                        "rootId": "20220913223533-jqys64s",
+                        "scrollAttr": {
+                          "endId": "20221011092438-e62r0so",
+                          "focusEnd": 4,
+                          "focusId": "20230317110149-f1w2av1",
+                          "focusStart": 4,
+                          "scrollTop": 7076,
+                          "startId": "20230317110149-z1s4x9q"
+                        }
+                      },
+                      "docIcon": "",
+                      "instance": "Tab",
+                      "pin": false,
+                      "title": "Linux多线程"
+                    },
+                    {
+                      "children": {
+                        "action": "",
+                        "blockId": "20221125230122-ukikrhv",
+                        "instance": "Editor",
+                        "mode": "wysiwyg",
+                        "notebookId": "20221125230049-5ctliev",
+                        "rootId": "20221125230122-ukikrhv",
+                        "scrollAttr": {
+                          "endId": "20221125230129-bvbu4t4",
+                          "focusEnd": 0,
+                          "focusId": "20221125230129-h82qtyy",
+                          "focusStart": 0,
+                          "scrollTop": 0,
+                          "startId": "20221125230129-h82qtyy"
+                        }
+                      },
+                      "docIcon": "",
+                      "instance": "Tab",
+                      "pin": false,
+                      "title": "数组类"
                     }
                   ],
                   "height": "",
@@ -249,13 +326,12 @@
               "direction": "tb",
               "instance": "Layout",
               "resize": "lr",
-              "size": "0px",
+              "size": "227px",
               "type": "right"
             }
           ],
           "direction": "lr",
           "instance": "Layout",
-          "resize": "tb",
           "size": "auto",
           "type": "normal"
         },
@@ -282,123 +358,130 @@
       "instance": "Layout",
       "type": "normal"
     },
-    "left": [
-      [
-        {
-          "hotkeyLangId": "fileTree",
-          "icon": "iconFiles",
-          "show": false,
-          "size": {
-            "height": 0,
-            "width": 200
+    "left": {
+      "data": [
+        [
+          {
+            "hotkeyLangId": "fileTree",
+            "icon": "iconFiles",
+            "show": false,
+            "size": {
+              "height": 0,
+              "width": 227
+            },
+            "type": "file"
           },
-          "type": "file"
-        },
-        {
-          "hotkeyLangId": "inbox",
-          "icon": "iconInbox",
-          "show": false,
-          "size": {
-            "height": 0,
-            "width": 252
+          {
+            "hotkeyLangId": "inbox",
+            "icon": "iconInbox",
+            "show": false,
+            "size": {
+              "height": 0,
+              "width": 320
+            },
+            "type": "inbox"
+          }
+        ],
+        [
+          {
+            "hotkeyLangId": "bookmark",
+            "icon": "iconBookmark",
+            "show": false,
+            "size": {
+              "height": 0,
+              "width": 227
+            },
+            "type": "bookmark"
           },
-          "type": "inbox"
-        }
+          {
+            "hotkeyLangId": "tag",
+            "icon": "iconTags",
+            "show": false,
+            "size": {
+              "height": 0,
+              "width": 227
+            },
+            "type": "tag"
+          }
+        ]
       ],
-      [
-        {
-          "hotkeyLangId": "bookmark",
-          "icon": "iconBookmark",
-          "show": false,
-          "size": {
-            "height": 0,
-            "width": 240
+      "pin": true
+    },
+    "right": {
+      "data": [
+        [
+          {
+            "hotkeyLangId": "outline",
+            "icon": "iconAlignCenter",
+            "show": true,
+            "size": {
+              "height": null,
+              "width": null
+            },
+            "type": "outline"
           },
-          "type": "bookmark"
-        },
-        {
-          "hotkeyLangId": "tag",
-          "icon": "iconTags",
-          "show": false,
-          "size": {
-            "height": 0,
-            "width": 240
+          {
+            "hotkeyLangId": "graphView",
+            "icon": "iconGraph",
+            "show": false,
+            "size": {
+              "height": 0,
+              "width": 320
+            },
+            "type": "graph"
           },
-          "type": "tag"
-        }
-      ]
-    ],
-    "right": [
-      [
-        {
-          "hotkeyLangId": "outline",
-          "icon": "iconAlignCenter",
-          "show": false,
-          "size": {
-            "height": null,
-            "width": 197
-          },
-          "type": "outline"
-        },
-        {
-          "hotkeyLangId": "graphView",
-          "icon": "iconGraph",
-          "show": false,
-          "size": {
-            "height": 0,
-            "width": 360
-          },
-          "type": "graph"
-        },
-        {
-          "hotkeyLangId": "globalGraph",
-          "icon": "iconGlobalGraph",
-          "show": false,
-          "size": {
-            "height": 0,
-            "width": 360
-          },
-          "type": "globalGraph"
-        }
+          {
+            "hotkeyLangId": "globalGraph",
+            "icon": "iconGlobalGraph",
+            "show": false,
+            "size": {
+              "height": 0,
+              "width": 320
+            },
+            "type": "globalGraph"
+          }
+        ],
+        [
+          {
+            "hotkeyLangId": "backlinks",
+            "icon": "iconLink",
+            "show": false,
+            "size": {
+              "height": 0,
+              "width": 320
+            },
+            "type": "backlink"
+          }
+        ]
       ],
-      [
-        {
-          "hotkeyLangId": "backlinks",
-          "icon": "iconLink",
-          "show": false,
-          "size": {
-            "height": 0,
-            "width": 360
-          },
-          "type": "backlink"
-        }
-      ]
-    ],
-    "top": []
+      "pin": true
+    }
   },
-  "userData": "d716d5d6812229ac440f08261821941a627edf95926852dba21fd65ab8acb3b88afb5d4bd4ed7b9b6d9cef6f38ba37954aa6d0448b59f68983381fb16628f640c70a5dc60c9bc03a714b2f708ffaf87bb268595f610a22e5658f8db7d57df79e8e8d520e983af4f6916ed92ccbb6f7bee55304705a747f982f45cc110c862a69397935d2a2467af40ff73882b5da20a5f4e64df74126cfe2e7ebacce8fe3c6eb53fd4b9d2320c5f9cf764b970c370e4efd36608d38564fc909525c4fac833601c2b5dad662b3b0549fbfaad65355b0c76eb187cfc7557ff45798a21267cb3338aa3a98cfd58bc7ac623cca9bb1dc28cc51a5ecdd696069a8b8e7c181a659396f2137d6a8fb67e7e4c0ee0de9313939bcc7ce4244c44d695c52daab4595b3faeea178d1c8047f965eadb089022e88022ab0f95678df784b4d6d6283e85960337277e38bdb7862aa3e5233e9a3055b6138a089df1db00f694075163a4b8c192090715f969696b8b76fded5c9afbd65179a0eaf4915d19d40cc8fb493b1ca08a1dbdb4373c0fa0b7c5d2f44463ebe944aa1680a8f544b42386af26ad11b89517402ba81764670c253a5a80695dcb516bf009eb765a9975e5297658a19d5bbacf052aff501875e81e4aa5225da3053b555fbe169af25c6226247dc6f63e08bea597e85295cbfce1463ba0b0985eab1d7c9df21cd7ff67f2e3cde3d3aeb2a3dbc4dcff11e7dbcf82d798af51d9ae8f04498f86c391467a04eb138536b65536b46b017b60c3bc81c17ea218ba2a0766249d7dfe56c2af34248402d9c8a7514ced4a4e7009f0da8b94369c089a6c61eafbd4631d32ac1e933f529ba77a805efcce1ada80f5b66143106c75817830c8a8c8e7bc6ea4034667d1ab6a5373808d23318fa8fdd59e96ff118e1a7e636b99dabb41d15524fe19c0c7d43093f5008107211611242f5e785f8241d6981175e600a511b9077ba5f538351c5971718a57a819a6a7adea32f5e014d9d61129c71eb4ac23069197d6fbcf4373222acff919defec0c0a25a630365024f4a6b8a8d02769c7b22a9fab84038fac8531b017646cf3a07e0e69f616339a9cc74023ee662cd5d9eb0fd3e65741c716e7aaffaad849c01a2f2a4a2984c70430ce8c0078e02fc1d45c2151e73e26888287c6a4f073fb59ce35d86e0675c46978870276002427d0b8a8d610f49e77874032874bf3444e22d77f973be58ae6a42e0f340bf8528fc974198f6f1524bddd30792b437904edeaa7af6019d8b43951f2f32560a62e1c41d41b60b60ead5a166e6b783f37acf252b06456a7a530ded766465169444cd37b8b37056141d3fe9ad4252a3ff2a26a720b2850d4a7902fd0b337abec994b8c726145f50135d0067637d6389afd0cccda8164bf02fa8ae3d90e89741ff4d08e290ace8fbcd028d63adfd28a573e9dfd35f90f72411bcc8562d6fccbc4786eba95bbe30c18389e516390b99ce2be4ead1aea9cb4608f2df663310618e84cf55ae5580933f56d524b54a0c624f07b66b27f840ec2166d185c18aa8f14012f3aa745091460a5322938b41eaff31121e47b67ade5976e8c9f3494f4dec9826dfef1a6341f395dc4a1b624974d6eb7efa58fcd62fdfd24ec5518bae2cf7d1428e2bad1ab7952ba569a383e9ba1d9f0b5e9285eaa5152f60367658ccf4194128c14e90edf89873b468ba5da9206200dc926ab359c8b0351e4065e0df13b858f644e0078efd2edce85943f13a95e985d313a2ce6bcc88e3f4c10cbee251ac58bd24481edd04789dd3ccb1a64bd31467492e4d0e890d2bcf91cad3f3b7acee29e4c34723561177ee7d454915e77124b38e1790455131a9113387ec52fd4ba249d29bb9a41332e018264ce98a4363c462f43f9d69d27a96dd0a0813db812d109fe24f09fc755a709c094de9f4c63920059d409d73bd98d41ffeeca8e0ac69af1036ede58e17d31f055551f687c3896aa27cf5f4a6231c24afb2de458f7bbda0e26d0961a92e8f72256a26d950cbae2d31051f2feb594be60065c986934daa537a469efcb5cd6afb188fa60726d56e77aceb33588b8fbc63eef96e85dc537939399b506eafafd35118efcf0e76e41065675d1947ae6604e9f4f77185daafd9cc74bfb53d0239b936c3e7313c636ca14a30defa238c3417c8c8318632232f2239c991dac36898bbff15c73a0bbf64be4c16064da0dcbf3138e5b8fb7c7507e6f5c490c527b2027d2bc9ca9043d5f01a411686c5e4ec8340028f301d43e087831c5dd8cf4678d0bd70d20436662d36295a41847a653f5b460808648318b574a65c780421e1f90f725f46e6b879949cc2ebb2a3015fcf511eb561453c8cc3479548c3dbce5915b9d3977bd0af4a4b6abb72089c693bc48039dcd53fafc3e375f88bd68dad7771aa20d2446044861af300017777df7574220c248ec3d34201b76b9577d846531140eeb01cf66b5e34b570b633e236dc7193e3e53a50f79a5477c7f50a22d4bd9bb40528165c10409eddcf00b34b9b5b81f1bb31a6a706b5c8b8b13b13ecff223a0584353fe22fac9021be88166c6b9e608b6950b1564849d5184dd6b13ff293a312fe2b0ddbdf235609f5e56297b5a5a492caa8816eb449bc9794abfb12af7c0c4cbf0695801a00fae7b6576271df746ac8a92fec5ecda99823bf21b76c0b96f8d26fccc8851635f1bf0a2e970e4a5e90379dc2300980c7caca05812f9d16db94df83abf078b26ed6461cc2cea2d5a4506721a1b107952055d3189a36422f48ba4b0ae891261f56e417696613eee3172a270bb3660f55eb05dca2c54892410dc6dcd393f2a11c24d328da01c7ef6baae752b2fe3f0055435f110d81f426ea9e18d5f9549eabe476f9df6c355a39562fc1f44e3d2ea947db97ebcab5dc5f9613edffa1ce3",
+  "userData": "d716d5d6812229ac440f08261821941a627edf95926852dba21fd65ab8acb3b88afb5d4bd4ed7b9b6d9cef6f38ba37954aa6d0448b59f68983381fb16628f640c70a5dc60c9bc03a714b2f708ffaf87bb268595f610a22e5658f8db7d57df79e8e8d520e983af4f6916ed92ccbb6f7bee55304705a747f982f45cc110c862a69397935d2a2467af40ff73882b5da20a5f4e64df74126cfe2e7ebacce8fe3c6eb53fd4b9d2320c5f9cf764b970c370e4efd36608d38564fc909525c4fac833601c2b5dad662b3b0549fbfaad65355b0c76eb187cfc7557ff45798a21267cb3338aa3a98cfd58bc7ac623cca9bb1dc28cc51a5ecdd696069a8b8e7c181a659396f2137d6a8fb67e7e4c0ee0de9313939bcc7ce4244c44d695c52daab4595b3faeea178d1c8047f965eadb089022e88022ab0f95678df784b4d6d6283e85960337277e38bdb7862aa3e5233e9a3055b6138a089df1db00f694075163a4b8c192090715f969696b8b76fded5c9afbd65179a0eaf4915d19d40cc8fb493b1ca08a1dbdb4373c0fa0b7c5d2f44463ebe944aa1680a8f544b42386af26ad11b89517402ba81764670c253a5a80695dcb516bf009eb765a9975e5297658a19d5bbacf052aff501875e81e4aa5225da3053b555fbe169af25c6226247dc6f63e08bea597e85295cbfce1463ba0b0985eab1d7c9df21cd7ff67f2e3cde3d3aeb2a3dbc4dcff11e7dbcf82d798af51d9ae8f04498f86c391467a04eb138536b65536b46b017b60c3bc81c17ea218ba2a0766249d7dfe56c2af34248402d9c8a7514ced4a4e7009f0da8b94369c089a6c61eafbd4631d32ac1e933f529ba77a805efcce1ada80f5b66143106c75817830c8a8c8e7bc6ea4034667d1ab6a5373808d23318fa8fdd59e96ff118e1a7e636b99dabb41d15524fe19c0c7d43093f5008107211611242f5e785f8241d6981175e600a511b9077ba5f538351c5971718a57a819a6a7adea32f5e014d9d61129c71eb4ac23069197d6fbcf4373222acff919defec0c0a25a630365024f4a6b8a8d02769c7b22a9fab84038fac8531b017646cf3a07e0e69f616339a9cc74023ee662cd5d9eb0fd3e65741c716e7aaffaad849c01a2f2a4a2984c70430ce8c0078e02fc1d45c2151e73e26888287c6a4f073fb59ce35d86e0675c46978870276002427d0b8a8d610f49e77874032874bf3444e22d77f973be58ae6a42e0f340bf8528fc974198f6f1524bddd30792b437904edeaa7af6019d8b43951f2f32560a62e1c41d41b60b60ead5a166e6b783f37acf252b06456a7a530ded766465169444cd37b8b37056141d3fe9ad4252a3ff2a26a720b2850d4a7902fd0b337abec994b8c726145f50135d0067637d6389afd0cccda8164bf02fa8ae3d90e89741ff4d08e290ace8fbcd028d63adfd28a573e9dfd35f90f72411bcc8562d6fccbc4786eba95bbe30c18389e516390b99ce2be4ead1aea9cb4608f2df663310618e84cf55ae5580933f56d524b54a0c624f07b66b27f840ec2166d185c18aa8f14012f3aa745091460a813a5b3ebc624e2351eda53bd326d2e7f97d915bdd6d9bdcf07dc3e412e755e55aed3e0f0d42f0e98f7394f66ac715215959319ba36aa2ed46df00995f88cbedda26930d24c9178af152bf4b4eb5651fedafde9ce1053cd637b91962d97a161df766a5e9646fc12edfab7ec53f0f7ffdbc2fb255e9491e13dc4d6751d036360f9f1ffa140f9255d93f09307fcd10fa07d425ee109d4725294a3fd30d0e8bc521649a46fae9e291763e2437bc7dbabf391078e2853e594aee9d3888f135d9ee154a7549f01534a96ebeac3b9c44f18ef456a188c9bf5e97181277257b813722b24b68dda22e9913627beb15606572c4e9976d46bcd39a3ef2ff955aa3788cafd0de940178d4132f6a064940b3c3ca4456f393fdc8e89013b1a1a467ad7d4e4b0db1a0473b1ba735be3ba770b7722da9e2951d23efc11a1ce99298f8fd0d20ac3b5ae782cf99ce4f924f7b3c1de2e67bd85483b48b230f95123fa4150e1bcbcbdec2a31bad45c4ba7e8c81a631a6d8941e069ea64346c2158f6369dd667268ba7eab0a99101a1dadc82fe68a6870476c103f02ca6224cdd7d22800a918fd5cd5004021e9a781be347497a0063ee305b6b3d55d6209b581d82d81d01d52a37e83324f6d329a9e7d11c50cb7f05b51ceca14fe8833bc7338417e212e2894c274dac2dd8e27f666e61bf3d86886c2203fa75e05918b53454629d66c22ff49dde50cbcd8f09c6f90d4a58a0a3ff40517e314ea15354927d51fcda9aa26e50a4f60d72a4ce6244fea60e9bf0e6e12265eb3cbebd50974475c4d663609c97e7f881bc53bf834d34bf16598e934f891d752fa9c5eb49f2ddcd561cf3fb157e0ecdec50e12a66feb57b4c07feb78bdd28a9382c39e59314c1c64c7332c3c1305b78be3495c097f208d0169c1748da3dcdef8ff68d50797c760135c168fc642c07dad12d77f5b0b6cadd85316116b02907a7b5b6df4f8659c7124f77ed551e48d86bd58361cf837aba254f607888f3c28b334a7944f87667d3015143cb9ce5d5dd246718280c7dcc8885fbaa9a5abdc2bad737d076a73f198ab95f6daea0cf0ecb4659aca18c2034159214f680096efcc9855249dd81b74c6c338c1ac92df86b5ddd7a76b5be260d353120eafc8f0ecc65d4137ffa5036cb6519098de969f262878b155ea89c33137c43b80612d0bb5df83dcc140ec215d5de9279949f9d06bc585a5b7cfa8c9ba284a56585a674dcb8992de64d0d82c44dbe124127cd0e7b96bf47f414972346aacdc91da122cfd3778b8d747629075cb2b877bc5b9f0db7bd1e6b22e455baec40edc6bb6cb7268ef556454a07c95a357d31bc8306154a58fb9e4f8003861045f259c69081d1b30a07a9c2c020ec7e380da4a2e6a1d30c672c52544a272cb2592a2a7087581f24b37c1d9ae732bc2a0cf275a3968adff8299fa48d031aff6e9fcbe2c25c69118dd27480153d3e2b4225dc0a984b8e36d51bba27bedb073e1b130dc8b33249afb7ac200157f2e5e4c9eb0a414f6213498b145b7a20ddd3a073a9295fe6e485f7e4bc7a3f465f8924",
   "account": {
     "displayTitle": true,
     "displayVIP": true
   },
   "readonly": false,
   "localIPs": [
+    "192.168.203.179",
     "192.168.137.1",
     "192.168.238.1",
     "192.168.64.1",
-    "192.168.2.165",
     "127.0.0.1"
   ],
   "accessAuthCode": "",
   "system": {
     "id": "02387331-c424-4e1d-af0e-934379e03f83",
-    "kernelVersion": "2.1.1",
+    "kernelVersion": "2.7.8",
     "os": "windows",
+    "osPlatform": "Microsoft Windows 11 Home China",
     "container": "std",
+    "isMicrosoftStore": false,
     "isInsider": false,
     "homeDir": "C:\\Users\\31533",
     "workspaceDir": "S:\\github\\My-Code-Note\\my-code-learn-sy",
-    "appDir": "E:\\SiYuan\\resources",
+    "appDir": "C:\\Users\\31533\\AppData\\Local\\Programs\\SiYuan\\resources",
     "confDir": "S:\\github\\My-Code-Note\\my-code-learn-sy\\conf",
     "dataDir": "S:\\github\\My-Code-Note\\my-code-learn-sy\\data",
     "networkServe": false,
@@ -407,15 +490,500 @@
       "host": "",
       "port": ""
     },
-    "uploadErrLog": false
+    "uploadErrLog": false,
+    "disableGoogleAnalytics": false,
+    "downloadInstallPkg": false,
+    "autoLaunch": false
   },
-  "keymap": {},
+  "keymap": {
+    "editor": {
+      "general": {
+        "alignCenter": {
+          "custom": "⌥C",
+          "default": "⌥C"
+        },
+        "alignLeft": {
+          "custom": "⌥L",
+          "default": "⌥L"
+        },
+        "alignRight": {
+          "custom": "⌥R",
+          "default": "⌥R"
+        },
+        "attr": {
+          "custom": "⌥⌘A",
+          "default": "⌥⌘A"
+        },
+        "backlinks": {
+          "custom": "⌥B",
+          "default": "⌥B"
+        },
+        "collapse": {
+          "custom": "⌘↑",
+          "default": "⌘↑"
+        },
+        "copyBlockEmbed": {
+          "custom": "⇧⌘E",
+          "default": "⇧⌘E"
+        },
+        "copyBlockRef": {
+          "custom": "⇧⌘C",
+          "default": "⇧⌘C"
+        },
+        "copyHPath": {
+          "custom": "⇧⌘P",
+          "default": "⇧⌘P"
+        },
+        "copyID": {
+          "custom": "",
+          "default": ""
+        },
+        "copyPlainText": {
+          "custom": "",
+          "default": ""
+        },
+        "copyProtocol": {
+          "custom": "⇧⌘H",
+          "default": "⇧⌘H"
+        },
+        "duplicate": {
+          "custom": "⌘D",
+          "default": "⌘D"
+        },
+        "expand": {
+          "custom": "⌘↓",
+          "default": "⌘↓"
+        },
+        "expandDown": {
+          "custom": "⌥⇧↓",
+          "default": "⌥⇧↓"
+        },
+        "expandUp": {
+          "custom": "⌥⇧↑",
+          "default": "⌥⇧↑"
+        },
+        "fullscreen": {
+          "custom": "⌥Y",
+          "default": "⌥Y"
+        },
+        "graphView": {
+          "custom": "⌥G",
+          "default": "⌥G"
+        },
+        "hLayout": {
+          "custom": "",
+          "default": ""
+        },
+        "insertAfter": {
+          "custom": "⇧⌘A",
+          "default": "⇧⌘A"
+        },
+        "insertBefore": {
+          "custom": "⇧⌘B",
+          "default": "⇧⌘B"
+        },
+        "insertBottom": {
+          "custom": "⌥⌘.",
+          "default": "⌥⌘."
+        },
+        "insertRight": {
+          "custom": "⌥.",
+          "default": "⌥."
+        },
+        "jumpToParentNext": {
+          "custom": "⇧⌘N",
+          "default": "⇧⌘N"
+        },
+        "moveToDown": {
+          "custom": "⇧⌘↓",
+          "default": "⇧⌘↓"
+        },
+        "moveToUp": {
+          "custom": "⇧⌘↑",
+          "default": "⇧⌘↑"
+        },
+        "netImg2LocalAsset": {
+          "custom": "",
+          "default": ""
+        },
+        "newContentFile": {
+          "custom": "F4",
+          "default": "F4"
+        },
+        "newNameFile": {
+          "custom": "F3",
+          "default": "F3"
+        },
+        "newNameSettingFile": {
+          "custom": "⌘F3",
+          "default": "⌘F3"
+        },
+        "openBy": {
+          "custom": "⌥,",
+          "default": "⌥,"
+        },
+        "outline": {
+          "custom": "⌥O",
+          "default": "⌥O"
+        },
+        "preview": {
+          "custom": "⌥⌘9",
+          "default": "⌥⌘9"
+        },
+        "quickMakeCard": {
+          "custom": "⌥⌘F",
+          "default": "⌥⌘F"
+        },
+        "redo": {
+          "custom": "⌘Y",
+          "default": "⌘Y"
+        },
+        "refPopover": {
+          "custom": "",
+          "default": ""
+        },
+        "refTab": {
+          "custom": "⇧⌘\u003e",
+          "default": "⇧⌘\u003e"
+        },
+        "refresh": {
+          "custom": "F5",
+          "default": "F5"
+        },
+        "rename": {
+          "custom": "F2",
+          "default": "F2"
+        },
+        "showInFolder": {
+          "custom": "⌥A",
+          "default": "⌥A"
+        },
+        "undo": {
+          "custom": "⌘Z",
+          "default": "⌘Z"
+        },
+        "vLayout": {
+          "custom": "",
+          "default": ""
+        },
+        "wysiwyg": {
+          "custom": "⌥⌘7",
+          "default": "⌥⌘7"
+        }
+      },
+      "heading": {
+        "heading1": {
+          "custom": "⌥⌘1",
+          "default": "⌥⌘1"
+        },
+        "heading2": {
+          "custom": "⌥⌘2",
+          "default": "⌥⌘2"
+        },
+        "heading3": {
+          "custom": "⌥⌘3",
+          "default": "⌥⌘3"
+        },
+        "heading4": {
+          "custom": "⌥⌘4",
+          "default": "⌥⌘4"
+        },
+        "heading5": {
+          "custom": "⌥⌘5",
+          "default": "⌥⌘5"
+        },
+        "heading6": {
+          "custom": "⌥⌘6",
+          "default": "⌥⌘6"
+        },
+        "paragraph": {
+          "custom": "⌥⌘0",
+          "default": "⌥⌘0"
+        }
+      },
+      "insert": {
+        "blockRef": {
+          "custom": "⌥[",
+          "default": "⌥["
+        },
+        "bold": {
+          "custom": "⌘B",
+          "default": "⌘B"
+        },
+        "check": {
+          "custom": "⌘L",
+          "default": "⌘L"
+        },
+        "clearFontStyle": {
+          "custom": "⌘\\",
+          "default": "⌘\\"
+        },
+        "code": {
+          "custom": "⇧⌘K",
+          "default": "⇧⌘K"
+        },
+        "font": {
+          "custom": "⌥⌘X",
+          "default": "⌥⌘X"
+        },
+        "inline-code": {
+          "custom": "⌘G",
+          "default": "⌘G"
+        },
+        "inline-math": {
+          "custom": "⌘M",
+          "default": "⌘M"
+        },
+        "italic": {
+          "custom": "⌘I",
+          "default": "⌘I"
+        },
+        "kbd": {
+          "custom": "⌘'",
+          "default": "⌘'"
+        },
+        "lastUsed": {
+          "custom": "⌥X",
+          "default": "⌥X"
+        },
+        "link": {
+          "custom": "⌘K",
+          "default": "⌘K"
+        },
+        "mark": {
+          "custom": "⌥D",
+          "default": "⌥D"
+        },
+        "memo": {
+          "custom": "⌥⌘M",
+          "default": "⌥⌘M"
+        },
+        "strike": {
+          "custom": "⇧⌘S",
+          "default": "⇧⌘S"
+        },
+        "sub": {
+          "custom": "⌘J",
+          "default": "⌘J"
+        },
+        "sup": {
+          "custom": "⌘H",
+          "default": "⌘H"
+        },
+        "table": {
+          "custom": "⌘O",
+          "default": "⌘O"
+        },
+        "tag": {
+          "custom": "⌘T",
+          "default": "⌘T"
+        },
+        "underline": {
+          "custom": "⌘U",
+          "default": "⌘U"
+        }
+      },
+      "list": {
+        "checkToggle": {
+          "custom": "⌘↩",
+          "default": "⌘↩"
+        },
+        "indent": {
+          "custom": "⇥",
+          "default": "⇥"
+        },
+        "outdent": {
+          "custom": "⇧⇥",
+          "default": "⇧⇥"
+        }
+      },
+      "table": {
+        "delete-column": {
+          "custom": "⇧⌘_",
+          "default": "⇧⌘_"
+        },
+        "delete-row": {
+          "custom": "⌘-",
+          "default": "⌘-"
+        },
+        "insertColumnLeft": {
+          "custom": "⇧⌘L",
+          "default": "⇧⌘L"
+        },
+        "insertColumnRight": {
+          "custom": "⇧⌘R",
+          "default": "⇧⌘R"
+        },
+        "insertRowAbove": {
+          "custom": "⇧⌘T",
+          "default": "⇧⌘T"
+        },
+        "insertRowBelow": {
+          "custom": "⇧⌘D",
+          "default": "⇧⌘D"
+        },
+        "moveToDown": {
+          "custom": "⌥⌘B",
+          "default": "⌥⌘B"
+        },
+        "moveToLeft": {
+          "custom": "⌥⌘L",
+          "default": "⌥⌘L"
+        },
+        "moveToRight": {
+          "custom": "⌥⌘R",
+          "default": "⌥⌘R"
+        },
+        "moveToUp": {
+          "custom": "⌥⌘T",
+          "default": "⌥⌘T"
+        }
+      }
+    },
+    "general": {
+      "backlinks": {
+        "custom": "⌥7",
+        "default": "⌥7"
+      },
+      "bookmark": {
+        "custom": "⌥3",
+        "default": "⌥3"
+      },
+      "closeTab": {
+        "custom": "⌘W",
+        "default": "⌘W"
+      },
+      "config": {
+        "custom": "⌥P",
+        "default": "⌥P"
+      },
+      "dailyNote": {
+        "custom": "⌥5",
+        "default": "⌥5"
+      },
+      "dataHistory": {
+        "custom": "⌥H",
+        "default": "⌥H"
+      },
+      "editMode": {
+        "custom": "⇧⌘G",
+        "default": "⇧⌘G"
+      },
+      "enter": {
+        "custom": "⌥→",
+        "default": "⌥→"
+      },
+      "enterBack": {
+        "custom": "⌥←",
+        "default": "⌥←"
+      },
+      "fileTree": {
+        "custom": "⌥1",
+        "default": "⌥1"
+      },
+      "globalGraph": {
+        "custom": "⌥9",
+        "default": "⌥9"
+      },
+      "globalSearch": {
+        "custom": "⌘P",
+        "default": "⌘P"
+      },
+      "goBack": {
+        "custom": "⌘[",
+        "default": "⌘["
+      },
+      "goForward": {
+        "custom": "⌘]",
+        "default": "⌘]"
+      },
+      "graphView": {
+        "custom": "⌥8",
+        "default": "⌥8"
+      },
+      "inbox": {
+        "custom": "⌥6",
+        "default": "⌥6"
+      },
+      "lockScreen": {
+        "custom": "⌥N",
+        "default": "⌥N"
+      },
+      "move": {
+        "custom": "",
+        "default": ""
+      },
+      "newFile": {
+        "custom": "⌘N",
+        "default": "⌘N"
+      },
+      "outline": {
+        "custom": "⌥2",
+        "default": "⌥2"
+      },
+      "recentDocs": {
+        "custom": "⌘E",
+        "default": "⌘E"
+      },
+      "replace": {
+        "custom": "⌘R",
+        "default": "⌘R"
+      },
+      "riffCard": {
+        "custom": "⌥0",
+        "default": "⌥0"
+      },
+      "search": {
+        "custom": "⌘F",
+        "default": "⌘F"
+      },
+      "selectOpen1": {
+        "custom": "",
+        "default": ""
+      },
+      "stickSearch": {
+        "custom": "⇧⌘F",
+        "default": "⇧⌘F"
+      },
+      "syncNow": {
+        "custom": "F9",
+        "default": "F9"
+      },
+      "tag": {
+        "custom": "⌥4",
+        "default": "⌥4"
+      },
+      "toggleWin": {
+        "custom": "⌥M",
+        "default": "⌥M"
+      }
+    }
+  },
   "sync": {
     "cloudName": "main",
     "enabled": false,
     "mode": 1,
     "synced": 0,
-    "stat": ""
+    "stat": "",
+    "generateConflictDoc": false,
+    "provider": 0,
+    "s3": {
+      "endpoint": "",
+      "accessKey": "",
+      "secretKey": "",
+      "bucket": "",
+      "region": "",
+      "pathStyle": false,
+      "skipTlsVerify": false,
+      "timeout": 30
+    },
+    "webdav": {
+      "endpoint": "",
+      "username": "",
+      "password": "",
+      "skipTlsVerify": false,
+      "timeout": 30
+    }
   },
   "search": {
     "document": true,
@@ -429,23 +997,33 @@
     "superBlock": true,
     "paragraph": true,
     "htmlBlock": true,
+    "embedBlock": false,
     "limit": 300,
     "caseSensitive": false,
     "name": true,
     "alias": true,
     "memo": true,
-    "custom": false,
+    "ial": false,
     "backlinkMentionName": true,
     "backlinkMentionAlias": false,
     "backlinkMentionAnchor": true,
     "backlinkMentionDoc": true,
+    "backlinkMentionKeywordsLimit": 512,
     "virtualRefName": true,
     "virtualRefAlias": false,
     "virtualRefAnchor": true,
-    "virtualRefDoc": true
+    "virtualRefDoc": true,
+    "virtualRefKeywordsLimit": 512
   },
   "stat": {
-    "docCount": 126
+    "treeCount": 126,
+    "cTreeCount": 500,
+    "blockCount": 13821,
+    "cBlockCount": 20000,
+    "dataSize": 147993941,
+    "cDataSize": 209715200,
+    "assetsSize": 140695697,
+    "cAssetsSize": 209715200
   },
   "api": {
     "token": "pswa6nx9uv2spq1n"
@@ -453,5 +1031,5 @@
   "repo": {
     "key": null
   },
-  "newbie": false
+  "openHelp": false
 }

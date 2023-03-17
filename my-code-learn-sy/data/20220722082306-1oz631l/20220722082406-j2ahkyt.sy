@@ -1,5 +1,6 @@
 {
 	"ID": "20220722082406-j2ahkyt",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722082406-j2ahkyt",
@@ -225,30 +226,10 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeLink",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "日期类代码"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "D:\\code\\cpp-learn\\date\\date"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "D:\\code\\cpp-learn\\date\\date",
+					"TextMarkTextContent": "日期类代码"
 				}
 			]
 		},
@@ -280,34 +261,9 @@
 					"Data": "构造函数是特殊的成员函数，需要注意的是，构造函数的虽然名称叫构造，但是需要注意的是构造函数的主要任务并不是开空间创建对象，而是"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "初始化对象"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "初始化对象"
 				},
 				{
 					"Type": "NodeText",
@@ -602,34 +558,9 @@
 					"Data": "析构函数：与构造函数功能相反，析构函数不是完成对象的销毁，局部对象销毁工作是由编译器完成的。而"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "对象在销毁时会自动调用析构函数，完成类的一些资源清理工作"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "对象在销毁时会自动调用析构函数，完成类的一些资源清理工作"
 				},
 				{
 					"Type": "NodeText",
@@ -690,20 +621,9 @@
 									"Data": "析构函数名是在类名前加上字符 "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "~"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "~"
 								},
 								{
 									"Type": "NodeText",
@@ -1053,10 +973,6 @@
 				{
 					"Type": "NodeText",
 					"Data": "未被析构前"
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -1204,48 +1120,22 @@
 					"Data": "当我们需要销毁 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "MyQueue"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "MyQueue"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 时，它会自动调用我们定义的"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "自定义类型"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "自定义类型"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "中的析构函数来完成释放。"
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -1316,22 +1206,9 @@
 					"Data": "拷贝构造函数：只有单个形参，该形参是对"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "本类类型对象的引用"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "本类类型对象的引用"
 				},
 				{
 					"Type": "NodeText",
@@ -1348,22 +1225,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "特征"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "特征"
 				}
 			]
 		},
@@ -1465,68 +1329,18 @@
 									"Data": "若未显示定义，系统生成默认的拷贝构造函数。 默认的拷贝构造函数对象按内存存储按字节序完成拷贝，这种拷贝我们叫做"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "浅拷贝"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "浅拷贝"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，或者"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "值拷贝"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "值拷贝"
 								},
 								{
 									"Type": "NodeText",
@@ -1635,22 +1449,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "传值"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "传值"
 				},
 				{
 					"Type": "NodeText",
@@ -1697,22 +1498,9 @@
 							"Data": "所以在应该使用"
 						},
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "引用方式传参,那样的话 形参就是实参的别名,就不会造成无限递归了"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "引用方式传参,那样的话 形参就是实参的别名,就不会造成无限递归了"
 						}
 					]
 				}
@@ -1813,34 +1601,9 @@
 							"Data": "两个对象或之内的成员的地址是相同的，当对两个对象进行析构时，就会造成一个对同一个地址的"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "二次释放"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "二次释放"
 						},
 						{
 							"Type": "NodeText",
@@ -2146,100 +1909,45 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": ".*"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": ".*"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " 、"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "::"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "::"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " 、"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "sizeof"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "sizeof"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " 、"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "?:(三目操作符)"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "?:(三目操作符)"
 										},
 										{
 											"Type": "NodeText",
 											"Data": " 、"
 										},
 										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "."
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "code",
+											"TextMarkTextContent": "."
 										},
 										{
 											"Type": "NodeText",
@@ -2266,20 +1974,9 @@
 					"Data": "全局的 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "operator=="
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "operator=="
 				}
 			]
 		},
@@ -2323,20 +2020,9 @@
 					"Data": "在类中的"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "operator=="
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "operator=="
 				}
 			]
 		},
@@ -2437,56 +2123,18 @@
 					"Data": "将const修饰的类成员函数称之为const成员函数，const修饰类成员函数，实际"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "修饰该成员函数隐含的this指针"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "修饰该成员函数隐含的this指针"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，表明在"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "该成员函数中不能对类的任何成员进行修改"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "该成员函数中不能对类的任何成员进行修改"
 				},
 				{
 					"Type": "NodeText",
@@ -2547,66 +2195,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "主要任务"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "主要任务"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "：都是取出对象的 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "this指针"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "this指针"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，即对象的"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "地址"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "地址"
 				}
 			]
 		},

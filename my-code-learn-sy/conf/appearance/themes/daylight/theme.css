@@ -1,14 +1,15 @@
 :root {
     /* 主色 */
-    --b3-theme-primary: #0969da;
-    --b3-theme-primary-light: rgba(9, 105, 218, 0.54);
-    --b3-theme-primary-lighter: rgba(9, 105, 218, 0.38);
-    --b3-theme-primary-lightest: rgba(9, 105, 218, 0.12);
+    --b3-theme-primary: #3575f0;
+    --b3-theme-primary-light: rgba(53, 117, 240, 0.54);
+    --b3-theme-primary-lighter: rgba(53, 117, 240, 0.38);
+    --b3-theme-primary-lightest: rgba(53, 117, 240, 0.12);
     --b3-theme-secondary: #f3a92f;
     --b3-theme-background: #fff;
     --b3-theme-background-light: #dfe0e1;
-    --b3-theme-surface: #f3f3f3;
+    --b3-theme-surface: #f7f8fa;
     --b3-theme-surface-light: rgba(243, 243, 243, .86);
+    --b3-theme-surface-lighter: rgba(0, 0, 0, .06);
     --b3-theme-error: #d23f31;
 
     /* 文字颜色 */
@@ -26,14 +27,21 @@
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     --b3-font-family-math: KaTeX_Math;
 
+    /* 顶部工具栏 */
+    --b3-toolbar-background: #2b2d30;
+    --b3-toolbar-blur-background: #373a41;
+    --b3-toolbar-color: #9aa0a6;
+    --b3-toolbar-hover: #383a42;
+
     /* 线条 */
-    --b3-border-color: rgba(0, 0, 0, .06);
+    --b3-border-color: rgba(0, 0, 0, .1);
 
     /* 滚动条 */
     --b3-scroll-color: rgba(0, 0, 0, .2);
 
     /* 列表 */
     --b3-list-hover: #e9eaea;
+    --b3-list-icon-hover: rgba(33, 34, 36, .1);
 
     /* 菜单 */
     --b3-menu-background: #f8f9fa;
@@ -46,13 +54,13 @@
 
     /* 卡片背景 */
     --b3-card-error-color: rgb(97, 26, 21);
-    --b3-card-error-background: rgb(253, 236, 234);
+    --b3-card-error-background: #f5d1cf;
     --b3-card-warning-color: rgb(102, 60, 0);
-    --b3-card-warning-background: rgb(255, 244, 229);
+    --b3-card-warning-background: #ffe8c8;
     --b3-card-info-color: rgb(13, 60, 97);
-    --b3-card-info-background: rgb(232, 244, 253);
+    --b3-card-info-background: #d6eaf9;
     --b3-card-success-color: rgb(30, 70, 32);
-    --b3-card-success-background: rgb(237, 247, 237);
+    --b3-card-success-background: #d7eed8;
 
     /* 自定义文字 */
     --b3-font-color1: var(--b3-card-error-color);
@@ -72,27 +80,27 @@
     --b3-font-background2: var(--b3-card-warning-background);
     --b3-font-background3: var(--b3-card-info-background);
     --b3-font-background4: var(--b3-card-success-background);
-    --b3-font-background5: var(--b3-theme-surface);
-    --b3-font-background6: var(--b3-theme-primary-light);
-    --b3-font-background7: rgba(217, 211, 215, 0.5);
+    --b3-font-background5: #e2e3e4;
+    --b3-font-background6: #acd0fc;
+    --b3-font-background7: #fdeed6;
     --b3-font-background8: rgba(255, 193, 153, 0.5);
-    --b3-font-background9: rgba(189, 201, 255, 0.5);
-    --b3-font-background10: rgba(239, 218, 251, 0.5);
-    --b3-font-background11: rgba(234, 202, 220, 0.5);
+    --b3-font-background9: #fdd5e7;
+    --b3-font-background10: #e6c7e6;
+    --b3-font-background11: #def0d9;
     --b3-font-background12: rgba(253, 198, 200, 0.5);
     --b3-font-background13: var(--b3-theme-on-background);
 
     /* 动画效果 */
-    --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
-    --b3-width-transition: width .15s cubic-bezier(0, 0, .2, 1) 0ms;
+    --b3-transition: all .2s cubic-bezier(0, 0, .2, 1) 0ms;
+    --b3-width-transition: width .2s cubic-bezier(0, 0, .2, 1) 0ms;
 
     /* 阴影 */
-    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --b3-point-shadow: 0 3px 6px rgba(140,149,159,0.15);
+    --b3-dialog-shadow: 0 8px 24px rgba(140,149,159,0.2);
 
     /* 图表颜色 */
     --b3-graph-p-point: #076f7e;
-    --b3-graph-heading-point: #660e7a;
+    --b3-graph-heading-point: #8250df;
     --b3-graph-math-point: #80FFA5;
     --b3-graph-code-point: #00DDFF;
     --b3-graph-table-point: #37A2FF;
@@ -127,10 +135,11 @@
     --b3-protyle-inline-em-color: #202124;
     --b3-protyle-inline-s-color: #202124;
     --b3-protyle-inline-link-color: #4285f4;
-    --b3-protyle-inline-mark-background: #ffe955;
+    --b3-protyle-inline-mark-background: rgb(252, 212, 126);
     --b3-protyle-inline-mark-color: #202124;
     --b3-protyle-inline-tag-color: #5f6368;
-    --b3-protyle-inline-blockref-color: #660e7a;
+    --b3-protyle-inline-blockref-color: #8250df;
+    --b3-protyle-inline-fileref-color: #21862e;
 
     /* PDF */
     --b3-pdf-selection: #d0e9c8;
@@ -143,12 +152,11 @@
     --b3-pdf-background5: #f5539e;
     --b3-pdf-background6: var(--b3-theme-primary);
     --b3-pdf-background7: #944194;
+    --b3-pdf-dark: #212224;
 }
 
-/* PDF */
-.textLayer,
-.pdf__resize {
-    /* dark 蓝色、紫色背景显示不清楚，文档位于 https://github.com/siyuan-note/siyuan/issues/5351 */
+/* https://github.com/siyuan-note/siyuan/issues/6440 */
+.protyle-action--order:after {
     mix-blend-mode: multiply;
 }
 

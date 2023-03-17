@@ -1,5 +1,6 @@
 {
 	"ID": "20220722135713-mmh1dnc",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722135713-mmh1dnc",
@@ -50,40 +51,18 @@
 					"Data": "最常使用 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "netstat -nltp"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "netstat -nltp"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "  和 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "netstat -nlup"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "netstat -nlup"
 				},
 				{
 					"Type": "NodeText",
@@ -141,1048 +120,459 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-a"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "或"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "--all"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": " 显示所有连线中的Socket。查看所有"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "-a"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "或"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "--all"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": " 显示所有连线中的Socket。查看所有"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-A"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-A"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\u003c网络类型\u003e或--\u003c网络类型\u003e 列出该网络类型连线中的相关地址。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-c"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-c"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--continuous"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--continuous"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 持续列出网络状态。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-C"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-C"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--cache"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--cache"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示路由器配置的快取信息。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-e"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-e"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--extend"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--extend"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示网络其他相关信息。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-F"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-F"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--fib"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--fib"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示路由缓存。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-g"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-g"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--groups"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--groups"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示多重广播功能群组组员名单。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-h"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-h"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--help"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--help"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 在线帮助。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-i"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-i"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--interfaces"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--interfaces"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示网络界面信息表单。\n"
 						},
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-l"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "或"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "--listening"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": " 显示监控中的服务器的Socket。"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "-l"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "或"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "--listening"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": " 显示监控中的服务器的Socket。"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-M"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-M"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--masquerade"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--masquerade"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示伪装的网络连线。\n"
 						},
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-n"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "或"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "--numeric"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": " 直接使用IP地址，而不通过域名服务器，不以服务名称显示"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "-n"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "或"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "--numeric"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": " 直接使用IP地址，而不通过域名服务器，不以服务名称显示"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-N"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-N"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--netlink"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--netlink"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或--symbolic 显示网络硬件外围设备的符号连接名称。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-o"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-o"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--timers"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--timers"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示计时器。\n"
 						},
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-p"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "或"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "--programs"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": " 显示正在使用Socket的程序识别码和程序名称。查看当前网络状态对应的进程"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "-p"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "或"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "--programs"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": " 显示正在使用Socket的程序识别码和程序名称。查看当前网络状态对应的进程"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-r"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-r"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--route"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--route"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示Routing Table。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-s"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-s"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--statistics"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--statistics"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示网络工作信息统计表。\n"
 						},
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-t"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "或"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "--tcp"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": " 显示TCP传输协议的连线状况。"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "-t"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "或"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "--tcp"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": " 显示TCP传输协议的连线状况。"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n"
 						},
 						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-u"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "或"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "--udp"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": " 显示UDP传输协议的连线状况。"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "-u"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "或"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong code",
+							"TextMarkTextContent": "--udp"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": " 显示UDP传输协议的连线状况。"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-v"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-v"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--verbose"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--verbose"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示指令执行过程。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-V"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-V"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--version"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--version"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示版本信息。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-w"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-w"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--raw"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--raw"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示RAW传输协议的连线状况。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-x"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-x"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--unix"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--unix"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 此参数的效果和指定\"-A unix\"参数相同。\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--ip"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--ip"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "--inet"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--inet"
 						},
 						{
 							"Type": "NodeText",
@@ -1204,13 +594,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221029232202-rxp1uby"
-			},
-			"Children": [
-				{
-					"Type": "NodeBr",
-					"Data": "br"
-				}
-			]
+			}
 		},
 		{
 			"ID": "20220910160658-wh56ukz",
@@ -1255,60 +639,27 @@
 					"Data": "可以查看进程通信的方式的"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "共享内存"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "共享内存"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "消息队列"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "消息队列"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "信号量"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "信号量"
 				}
 			]
 		},
@@ -1333,60 +684,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-m"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-m"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 仅查看共享内存\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-q"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-q"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 仅查看消息队列\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-s"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-s"
 						},
 						{
 							"Type": "NodeText",
@@ -1420,80 +738,36 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "ipcrm -m [shmid]"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ipcrm -m [shmid]"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "\n释放或进程通信的方式的"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "共享内存"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "共享内存"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "消息队列"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "消息队列"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "信号量"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "信号量"
 				}
 			]
 		},
@@ -1518,60 +792,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-m"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-m"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 释放共享内存\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-q"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-q"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 释放消息队列\n"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-s"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-s"
 						},
 						{
 							"Type": "NodeText",
@@ -1631,20 +872,9 @@
 					"Data": "对二进制文件"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": ".o"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": ".o"
 				},
 				{
 					"Type": "NodeText",
@@ -1678,10 +908,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -1740,10 +966,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -1778,116 +1000,45 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "作用"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "作用"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "：查看"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "可执行文件"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "可执行文件"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "链接"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "链接"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。\n"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "用法"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "用法"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "ldd  可执行文件"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ldd  可执行文件"
 				},
 				{
 					"Type": "NodeText",
@@ -1980,20 +1131,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "作用"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "作用"
 				},
 				{
 					"Type": "NodeText",
@@ -2022,100 +1162,45 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-c"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-c"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "　  统计字节数\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-l"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-l"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "　   统计行数\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-m"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-m"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "　 统计字符数。这个参数不能与 -c 参数一起使用。\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-w"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-w"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "　 统计字数。一个字被定义为空白、跳格或换行字符分隔的字符串。\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-L"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-L"
 						},
 						{
 							"Type": "NodeText",
@@ -2223,60 +1308,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "作用"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "作用"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "：查看文件属性\n"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "用法"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "用法"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "stat 文件名"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "stat 文件名"
 				}
 			]
 		},
@@ -2375,34 +1427,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "pwd"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "pwd"
 						},
 						{
 							"Type": "NodeText",
@@ -2455,34 +1482,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-ls"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "-ls"
 						},
 						{
 							"Type": "NodeText",
@@ -2511,120 +1513,54 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-a"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-a"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 列出目录下的所有文件，包括以 . 开头的隐含文件\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-k"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-k"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 以 k 字节的形式表示文件的大小。ls –alk 指定文件\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-r"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-r"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 对目录反向排序。\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-t"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-t"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 以时间排序。\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-R"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-R"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 列出所有子目录下的文件。(递归)\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-l"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-l"
 								},
 								{
 									"Type": "NodeText",
@@ -2657,54 +1593,18 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "ll"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "ll"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 查看当前目录的文件详细信息，后面可以跟指定文件夹名，相当于 "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "ls -la"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "ls -la"
 						}
 					]
 				}
@@ -2753,34 +1653,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "cd"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "cd"
 						},
 						{
 							"Type": "NodeText",
@@ -2809,40 +1684,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "cd ~"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "cd ~"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "：进入用户家目\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "cd -"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "cd -"
 								},
 								{
 									"Type": "NodeText",
@@ -2897,34 +1750,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "touch"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "touch"
 						},
 						{
 							"Type": "NodeText",
@@ -2953,60 +1781,27 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-a"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-a"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "   或--time=atime或--time=access或--time=use只更改存取时间。\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-r"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-r"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  把指定文档或目录的日期时间，统统设成和参考文档或目录的日期时间相同。\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-t"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-t"
 								},
 								{
 									"Type": "NodeText",
@@ -3054,34 +1849,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "mkdir"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "mkdir"
 						},
 						{
 							"Type": "NodeText",
@@ -3110,20 +1880,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-p"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-p"
 								},
 								{
 									"Type": "NodeText",
@@ -3171,34 +1930,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "rm"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "rm"
 						},
 						{
 							"Type": "NodeText",
@@ -3227,60 +1961,27 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-f"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-f"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  强制删除 ，不必询问\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-r"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-r"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  删除文件目录，及其下的所有文件与目录。\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-i"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-i"
 								},
 								{
 									"Type": "NodeText",
@@ -3320,42 +2021,18 @@
 					"Data": "Linux系统中的可靠男人。\n"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "语法"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "语法"
 				},
 				{
 					"Type": "NodeText",
 					"Data": ": "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "man [选项] 命令"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "man [选项] 命令"
 				}
 			]
 		},
@@ -3380,34 +2057,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "man"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "man"
 						},
 						{
 							"Type": "NodeText",
@@ -3436,40 +2088,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-k"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-k"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 根据关键字搜索联机帮助\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-a"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-a"
 								},
 								{
 									"Type": "NodeText",
@@ -3565,34 +2195,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "cp"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "cp"
 						},
 						{
 							"Type": "NodeText",
@@ -3621,60 +2226,27 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-f"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-f"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " (force)  强行复制文件或目录，不论目的文件或目录是否存在。\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-i"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-i"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  或 --interactive 覆盖文件之前先询问用户\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-r"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-r"
 								},
 								{
 									"Type": "NodeText",
@@ -3722,34 +2294,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "mv"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "mv"
 						},
 						{
 							"Type": "NodeText",
@@ -3778,40 +2325,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-f"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-f"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-i"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-i"
 								},
 								{
 									"Type": "NodeText",
@@ -3859,34 +2384,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "cat"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "cat"
 						},
 						{
 							"Type": "NodeText",
@@ -3915,60 +2415,27 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-b"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-b"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 对非空输出行编号\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-n"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-n"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 对输出的所有行编号\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-s"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-s"
 								},
 								{
 									"Type": "NodeText",
@@ -4016,74 +2483,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "more"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "more"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "功能类似 cat，查看重头展示目标文件内容的一部分，按 "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "s"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "s"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 键向下翻动，不能向上翻动， 不够灵活，推荐使用 "
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "less"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "less"
 						},
 						{
 							"Type": "NodeText",
@@ -4112,40 +2532,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-n"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-n"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " 对输出的所有行编号\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "q"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "q"
 								},
 								{
 									"Type": "NodeText",
@@ -4193,34 +2591,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "less"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "less"
 						},
 						{
 							"Type": "NodeText",
@@ -4249,140 +2622,63 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-i"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-i"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  忽略搜索时的大小写\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-N"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-N"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "  显示每行的行号\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "/字符串"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "/字符串"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "：向下搜索“字符串”的功能\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "?字符串"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "?字符串"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "：向上搜索“字符串”的功能\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "n"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "n"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "：重复前一个搜索（与 / 或 ? 有关）\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "N"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "N"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "：反向重复前一个搜索（与 / 或 ? 有关）\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "q"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "q"
 								},
 								{
 									"Type": "NodeText",
@@ -4430,34 +2726,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "head"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "head"
 						},
 						{
 							"Type": "NodeText",
@@ -4486,20 +2757,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-n\u003c行数\u003e"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-n\u0026lt;行数\u0026gt;"
 								},
 								{
 									"Type": "NodeText",
@@ -4547,34 +2807,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "tail"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "tail"
 						},
 						{
 							"Type": "NodeText",
@@ -4603,20 +2838,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-n\u003c行数\u003e"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-n\u0026lt;行数\u0026gt;"
 								},
 								{
 									"Type": "NodeText",
@@ -4664,34 +2888,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "date"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "date"
 						},
 						{
 							"Type": "NodeText",
@@ -4720,80 +2919,36 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "%H"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "%H"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " : 小时(00..23)\n==%M ==: 分钟(00..59)\n==%S ==: 秒(00..61)\n==%X ==: 相当于 %H:%M:%S\n==%d ==: 日 (01..31)\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "%m"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "%m"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " : 月份 (01..12)\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "%Y"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "%Y"
 								},
 								{
 									"Type": "NodeText",
 									"Data": " : 完整年份 (0000..9999)\n"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "%F"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "%F"
 								},
 								{
 									"Type": "NodeText",
@@ -4833,20 +2988,9 @@
 					"Data": "cal命令可以用来显示公历（阳历）日历。公历是现在国际通用的历法\n命令格式： "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "cal [参数][月份][年份]"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "cal [参数][月份][年份]"
 				}
 			]
 		},
@@ -4871,34 +3015,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "cal"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark strong",
+							"TextMarkTextContent": "cal"
 						}
 					]
 				},
@@ -4923,20 +3042,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "-3"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "-3"
 								},
 								{
 									"Type": "NodeText",
@@ -4998,20 +3106,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-name"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-name"
 						},
 						{
 							"Type": "NodeText",
@@ -5049,20 +3146,9 @@
 					"Data": "语法："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "grep[选项]"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "grep[选项]"
 				},
 				{
 					"Type": "NodeText",
@@ -5091,60 +3177,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-i"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-i"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：忽略大小写的不同，所以大小写视为相同\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-n"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-n"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：输出行号\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-v"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-v"
 						},
 						{
 							"Type": "NodeText",
@@ -5161,20 +3214,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-E"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-E"
 						},
 						{
 							"Type": "NodeText",
@@ -5234,20 +3276,9 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-r"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-r"
 						},
 						{
 							"Type": "NodeText",
@@ -5307,160 +3338,72 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-c"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-c"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：建立一个压缩文件的参数指令(create 的意思)；\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-x"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-x"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：解开一个压缩文件的参数指令！\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-t"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-t"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：查看 tarfifile 里面的文件！\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-z"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-z"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-j"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-j"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-v"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-v"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-f"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-f"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " ：使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-C"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-C"
 						},
 						{
 							"Type": "NodeText",
@@ -5483,40 +3426,18 @@
 					"Data": "解压 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": ".tar.gz"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": ".tar.gz"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 后缀的压缩包的指令 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "tar -xzf 文件名"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "tar -xzf 文件名"
 				}
 			]
 		},
@@ -5551,64 +3472,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "语法"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "语法"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "uname [选项]"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "uname [选项]"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " \n"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "功能"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "功能"
 				},
 				{
 					"Type": "NodeText",
@@ -5637,60 +3521,27 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-r"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-r"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 显示内核版本信息\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-a"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-a"
 						},
 						{
 							"Type": "NodeText",
 							"Data": "或"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "–all"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "–all"
 						},
 						{
 							"Type": "NodeText",
@@ -5724,22 +3575,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "功能说明："
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "功能说明："
 				},
 				{
 					"Type": "NodeText",
@@ -5756,38 +3594,14 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "语法："
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "语法："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "fifile [选项] 文件或目录... "
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "fifile [选项] 文件或目录... "
 				}
 			]
 		},
@@ -5826,40 +3640,18 @@
 					},
 					"Children": [
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-c"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-c"
 						},
 						{
 							"Type": "NodeText",
 							"Data": " 详细显示指令执行过程，便于排错或分析程序执行的情形。\n"
 						},
 						{
-							"Type": "NodeMark",
-							"Data": "mark",
-							"Children": [
-								{
-									"Type": "NodeMark2OpenMarker"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "-z"
-								},
-								{
-									"Type": "NodeMark2CloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-z"
 						},
 						{
 							"Type": "NodeText",
@@ -5978,64 +3770,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "语法"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "语法"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "ln [选项] 链接地址 链接名"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ln [选项] 链接地址 链接名"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " \n"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "功能"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "功能"
 				},
 				{
 					"Type": "NodeText",
@@ -6068,20 +3823,9 @@
 							"Data": "不带 "
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-s"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "-s"
 						},
 						{
 							"Type": "NodeText",
@@ -6176,20 +3920,9 @@
 					"Data": "不带 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "-s"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "-s"
 				},
 				{
 					"Type": "NodeText",
@@ -6228,64 +3961,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "语法"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "语法"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "unlink 链接名"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "unlink 链接名"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " \n"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "功能"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "功能"
 				},
 				{
 					"Type": "NodeText",
@@ -6343,33 +4039,11 @@
 					"Data": "说明：查看进程。\n但是通常是配合着 "
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20220722135728-me728tr"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "grep"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722135728-me728tr",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "grep"
 				},
 				{
 					"Type": "NodeText",
@@ -6386,34 +4060,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "ps axj | head -1 \u0026\u0026 ps axj | grep 进程名"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "ps axj | head -1 \u0026amp;\u0026amp; ps axj | grep 进程名"
 				}
 			]
 		},
@@ -6471,54 +4120,18 @@
 					"Data": "或查看"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "pid"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "pid"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 为 "
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "66123"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "66123"
 				},
 				{
 					"Type": "NodeText",
@@ -6680,10 +4293,6 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
-				{
-					"Type": "NodeBr",
-					"Data": "br"
 				}
 			]
 		},
@@ -6736,54 +4345,18 @@
 					"Data": "使用 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "kill -l"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "kill -l"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "  ， 可以查看"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "kill"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "kill"
 				},
 				{
 					"Type": "NodeText",
@@ -6920,34 +4493,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "echo $?"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "echo $?"
 				},
 				{
 					"Type": "NodeText",

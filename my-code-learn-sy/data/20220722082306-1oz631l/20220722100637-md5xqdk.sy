@@ -1,5 +1,6 @@
 {
 	"ID": "20220722100637-md5xqdk",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722100637-md5xqdk",
@@ -87,34 +88,9 @@
 											"Data": "vector是表示"
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "可变大小数组"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark strong",
+											"TextMarkTextContent": "可变大小数组"
 										},
 										{
 											"Type": "NodeText",
@@ -151,84 +127,36 @@
 											"Data": "就像数组一样，vector也"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "采用"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "采用"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "的"
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "连续存储空间"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "连续存储空间"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "来存储元素。也就是意味着可以采用下标对vector的元素进行访问，和数组一样高效。但是又不像数组，它的"
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "大小是可以动态改变"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "大小是可以动态改变"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "的，而且它的"
 										},
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "大小会被容器自动处理"
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark",
+											"TextMarkTextContent": "大小会被容器自动处理"
 										},
 										{
 											"Type": "NodeText",
@@ -291,56 +219,18 @@
 									},
 									"Children": [
 										{
-											"Type": "NodeMark",
-											"Data": "mark",
-											"Children": [
-												{
-													"Type": "NodeMark2OpenMarker"
-												},
-												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "vector分配空间策略"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeMark2CloseMarker"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "mark strong",
+											"TextMarkTextContent": "vector分配空间策略"
 										},
 										{
 											"Type": "NodeText",
 											"Data": "：vector会分配一些额外的空间以适应可能的增长，因为存储空间比实际需要的存储空间更大。不同的库采用不同的策略权衡空间的使用和重新分配。但是无论如何，重新分配都应该是对数增长的间隔大小，以至于在末尾插入一个元素的时候是在常数时间的复杂度完成的。("
 										},
 										{
-											"Type": "NodeStrong",
-											"Data": "strong",
-											"Children": [
-												{
-													"Type": "NodeStrongA6kOpenMarker",
-													"Data": "**"
-												},
-												{
-													"Type": "NodeText",
-													"Data": "增长速度大约为1.5倍"
-												},
-												{
-													"Type": "NodeStrongA6kCloseMarker",
-													"Data": "**"
-												}
-											]
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "增长速度大约为1.5倍"
 										},
 										{
 											"Type": "NodeText",
@@ -649,40 +539,18 @@
 									"Data": "获取"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "第一个数据位置"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "第一个数据位置"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "的iterator/const_iterator， 获取"
 								},
 								{
-									"Type": "NodeMark",
-									"Data": "mark",
-									"Children": [
-										{
-											"Type": "NodeMark2OpenMarker"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "最后一个数据的下一个位置"
-										},
-										{
-											"Type": "NodeMark2CloseMarker"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "最后一个数据的下一个位置"
 								},
 								{
 									"Type": "NodeText",
@@ -1239,38 +1107,14 @@
 									"Data": "查找。"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "（注意这个是算法模块实现，不是vector的成员接口）,需要导入头文件"
-										},
-										{
-											"Type": "NodeCodeSpan",
-											"Data": "code",
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "\u003calgorithm\u003e"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker"
-												}
-											]
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "（注意这个是算法模块实现，不是vector的成员接口）,需要导入头文件"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong code",
+									"TextMarkTextContent": "\u0026lt;algorithm\u0026gt;"
 								}
 							]
 						}
@@ -1403,33 +1247,11 @@
 					"Data": "vector中使用find,需要使用到"
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20220722100351-cnqwdxc"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "迭代器"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722100351-cnqwdxc",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "迭代器"
 				},
 				{
 					"Type": "NodeText",
@@ -1506,33 +1328,11 @@
 					"Data": "vector使用的"
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20220722100407-bk6qcro"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "随机迭代器"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722100407-bk6qcro",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "随机迭代器"
 				}
 			]
 		},
@@ -1648,20 +1448,9 @@
 					"Data": "现代写法实际上是使用了"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "迭代器"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "迭代器"
 				},
 				{
 					"Type": "NodeText",
@@ -1793,60 +1582,27 @@
 					"Data": "sz的大小一定要事先记录好， 不然等到释放了"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "_start"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "_start"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 时，"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "size()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "size()"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 就是不是原来的值，"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "_finish"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "_finish"
 				},
 				{
 					"Type": "NodeText",
@@ -1924,33 +1680,11 @@
 					"Data": "涉及到"
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20220722100407-a6y1vn0"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "迭代器失效"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722100407-a6y1vn0",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "迭代器失效"
 				},
 				{
 					"Type": "NodeText",
@@ -2265,40 +1999,18 @@
 					"Data": "在vector文件中添加"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "revser_iterator"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "revser_iterator"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "const_reverse_iterator"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "const_reverse_iterator"
 				},
 				{
 					"Type": "NodeText",

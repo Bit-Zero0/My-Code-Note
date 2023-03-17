@@ -1,5 +1,6 @@
 {
 	"ID": "20221113214200-kalo7gx",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221113214200-kalo7gx",
@@ -30,38 +31,14 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "Reactor 反应堆模式"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": ": 通过多路转接方案，被动的采用事件派发的方式，去反向的调用对应的回调函数"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "Reactor 反应堆模式"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": ": 通过多路转接方案，被动的采用事件派发的方式，去反向的调用对应的回调函数"
 				}
 			]
 		},
@@ -78,95 +55,38 @@
 					"Data": "主要是设计一个 "
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "epoll"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "epoll"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " "
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221113211217-ayuqlkt"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "ET 模式"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221113211217-ayuqlkt",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "ET 模式"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "版本的计算器，但本次项目中只实现了 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "+"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "+"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 号，想要更改数据的处理其实可以把 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Service.hpp 和 util.hpp文件中Deserialize函数"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Service.hpp 和 util.hpp文件中Deserialize函数"
 				},
 				{
 					"Type": "NodeText",
@@ -227,44 +147,18 @@
 									"Data": "我们需要给每一个"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "fd"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "fd"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，都要有"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "自己专属的输入输出缓冲区"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "自己专属的输入输出缓冲区"
 								},
 								{
 									"Type": "NodeText",
@@ -336,44 +230,18 @@
 													"Data": "通过"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "回调"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "回调"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "的方式来"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "解耦"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "解耦"
 												}
 											]
 										}
@@ -410,22 +278,9 @@
 									"Data": "epoll最大的优势在"
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "就绪事件通知机制"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "就绪事件通知机制"
 								},
 								{
 									"Type": "NodeText",
@@ -467,42 +322,18 @@
 													"Data": "使用"
 												},
 												{
-													"Type": "NodeMark",
-													"Data": "mark",
-													"Children": [
-														{
-															"Type": "NodeMark2OpenMarker"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "派发器"
-														},
-														{
-															"Type": "NodeMark2CloseMarker"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "mark",
+													"TextMarkTextContent": "派发器"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "来"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "处理就绪时间派发逻辑"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "处理就绪时间派发逻辑"
 												},
 												{
 													"Type": "NodeText",
@@ -570,132 +401,54 @@
 					"Data": "这个小项目总共有六个文件，主文件是 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "epoll_server.cpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "epoll_server.cpp"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " , 也就是最顶层的文件，其余文件分别是: "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Reactor.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Reactor.hpp"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " ,  "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Serivce.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Serivce.hpp"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " , "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Accepter.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Accepter.hpp"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " . "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Sock.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Sock.hpp"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " , "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Util.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Util.hpp"
 				}
 			]
 		},
@@ -715,66 +468,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Reactor.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Reactor.hpp"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " : 主要 含有"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Event类"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Event类"
 				},
 				{
 					"Type": "NodeText",
 					"Data": " 和 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Reactor类"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Reactor类"
 				},
 				{
 					"Type": "NodeText",
@@ -798,22 +512,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Serivce.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Serivce.hpp"
 				},
 				{
 					"Type": "NodeText",
@@ -837,22 +538,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Accepter.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Accepter.hpp"
 				},
 				{
 					"Type": "NodeText",
@@ -876,22 +564,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Util.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Util.hpp"
 				},
 				{
 					"Type": "NodeText",
@@ -915,22 +590,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Sock.hpp"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Sock.hpp"
 				},
 				{
 					"Type": "NodeText",
@@ -1293,33 +955,11 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221113213910-4qaavqy"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefDynamicText",
-							"Data": "Sock.hpp(端口复用版)"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221113213910-4qaavqy",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "Sock.hpp(端口复用版)"
 				}
 			]
 		},

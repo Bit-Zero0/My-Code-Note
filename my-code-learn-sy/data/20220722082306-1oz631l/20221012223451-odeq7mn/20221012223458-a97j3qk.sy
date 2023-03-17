@@ -1,5 +1,6 @@
 {
 	"ID": "20221012223458-a97j3qk",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221012223458-a97j3qk",
@@ -117,22 +118,9 @@
 					"Data": "随着C++语法的发展，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "人们开始觉得上面的写法太复杂了，每次为了实现一个algorithm算法， 都要重新去写一个类，如果每次比较的逻辑不一样，还要去实现多个类，特别是相同类的命名，这些都给编程者带来了极大的不便"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "人们开始觉得上面的写法太复杂了，每次为了实现一个algorithm算法， 都要重新去写一个类，如果每次比较的逻辑不一样，还要去实现多个类，特别是相同类的命名，这些都给编程者带来了极大的不便"
 				},
 				{
 					"Type": "NodeText",
@@ -237,20 +225,9 @@
 					"Data": "lambda表达式书写格式："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "[capture-list] (parameters) mutable -\u003e return-type { statement }"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "[capture-list] (parameters) mutable -\u0026gt; return-type { statement }"
 				}
 			]
 		},
@@ -327,44 +304,18 @@
 													"Data": "[capture-list] : "
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "捕捉列表"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "捕捉列表"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "，该列表总是出现在lambda函数的开始位置，"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "编译器根据[]来判断接下来的代码是否为lambda函数，捕捉列表能够捕捉上下文中的变量供lambda函数使用"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "编译器根据[]来判断接下来的代码是否为lambda函数，捕捉列表能够捕捉上下文中的变量供lambda函数使用"
 												},
 												{
 													"Type": "NodeText",
@@ -399,22 +350,9 @@
 													"Data": "(parameters)：参数列表。"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "与普通函数的参数列表一致"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "与普通函数的参数列表一致"
 												},
 												{
 													"Type": "NodeText",
@@ -501,108 +439,45 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "{statement}：函数体"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "{statement}：函数体"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "。在该函数体内，除了可以使用其参数外，还可以使用所有捕获到的变量。\n"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "注意"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "注意"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "：  在lambda函数定义中，"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "参数列表和返回值类型都是可选部分，而捕捉列表和函数体可以为空"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "参数列表和返回值类型都是可选部分，而捕捉列表和函数体可以为空"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "。因此C++11中"
 												},
 												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "最简单的lambda函数"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "最简单的lambda函数"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "为："
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"Data": "code",
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "[]{}"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "[]{}"
 												},
 												{
 													"Type": "NodeText",
@@ -658,42 +533,19 @@
 					"Data": "通过上述例子可以看出，"
 				},
 				{
-					"Type": "NodeMark",
-					"Data": "mark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "lambda表达式实际上可以理解为无名函数，该函数无法直接调用，如果想要直接调用，可借助"
-						},
-						{
-							"Type": "NodeStrong",
-							"Data": "strong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "auto"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "将其赋值给一个变量"
-						},
-						{
-							"Type": "NodeMark2CloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "lambda表达式实际上可以理解为无名函数，该函数无法直接调用，如果想要直接调用，可借助"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "auto"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark",
+					"TextMarkTextContent": "将其赋值给一个变量"
 				},
 				{
 					"Type": "NodeText",
@@ -964,22 +816,9 @@
 									"Data": "a. "
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "父作用域指包含lambda函数的语句块"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "父作用域指包含lambda函数的语句块"
 								}
 							]
 						}
@@ -1010,22 +849,9 @@
 									"Data": "b. "
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "语法上捕捉列表可由多个捕捉项组成，并以逗号分割"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "语法上捕捉列表可由多个捕捉项组成，并以逗号分割"
 								},
 								{
 									"Type": "NodeText",
@@ -1099,22 +925,9 @@
 									"Data": "c. "
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "捕捉列表不允许变量重复传递，否则就会导致编译错误"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "捕捉列表不允许变量重复传递，否则就会导致编译错误"
 								},
 								{
 									"Type": "NodeText",
@@ -1149,22 +962,9 @@
 									"Data": "d.  "
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在块作用域以外的lambda函数捕捉列表必须为空"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "在块作用域以外的lambda函数捕捉列表必须为空"
 								},
 								{
 									"Type": "NodeText",
@@ -1227,22 +1027,9 @@
 									"Data": "f. "
 								},
 								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "lambda表达式之间不能相互赋值"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "lambda表达式之间不能相互赋值"
 								},
 								{
 									"Type": "NodeText",
@@ -1316,20 +1103,9 @@
 					"Data": "函数对象，又称为仿函数，即可以想函数一样使用的对象，就是在类中重载了"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "operator()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "operator()"
 				},
 				{
 					"Type": "NodeText",
@@ -1409,55 +1185,20 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "lambda其实是一个类，定义了一个lambda表达式，编译器会自动生成一个类，在该类中重载了operator()"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "lambda其实是一个类，定义了一个lambda表达式，编译器会自动生成一个类，在该类中重载了operator()"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。  这也是定义lambda表达式的需要使用 "
 				},
 				{
-					"Type": "NodeBlockRef",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeBlockRefID",
-							"Data": "20221012224347-frrdmuv"
-						},
-						{
-							"Type": "NodeBlockRefSpace"
-						},
-						{
-							"Type": "NodeBlockRefText",
-							"Data": "auto"
-						},
-						{
-							"Type": "NodeCloseParen"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221012224347-frrdmuv",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "auto"
 				},
 				{
 					"Type": "NodeText",
