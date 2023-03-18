@@ -1,12 +1,13 @@
 # 磁盘的结构
-![[Pasted image 20220819122712.png]]
->[!tip] 访问文件数据的顺序
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317193316.png)
+
+> 访问文件数据的顺序
 >盘面(磁头) ——> 磁道 ——> 扇区
 
 ## LBA
 可不可以将盘片想象成为线性的结构
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317194122.png)
 
-![[Pasted image 20220819123603.png]]
 LBA就是就是**抽象扇区**的**下标**，通过LBA就能找到对应的扇区，实际关系可以参考[[Linux程序地址空间|虚拟地址和物理地址]]的关系。
 
 
@@ -14,13 +15,14 @@ LBA就是就是**抽象扇区**的**下标**，通过LBA就能找到对应的扇
 
 若磁盘有1T的空间，我们要怎么管理文件？
 其实可以设想一下我们国家的管理。
->[!tip] 国家的管理
+>国家的管理
 >国->省->市->县->乡->镇->村
 
 所以==一个硬盘可以分为好几个区[大小可以不相同]，在每个区中又可以进行细分，循环往复==。但是和现实不同的是，**每一个分区的管理形式基本都是一样的** 。
 >如电脑上的 C D E这些盘。
 
-![[Pasted image 20220819135346.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317194558.png)
+
 1. 分区 ： 将大磁盘 ，分为小空间
 2. 格式化：在分区中写入文件系统
 
@@ -28,7 +30,8 @@ LBA就是就是**抽象扇区**的**下标**，通过LBA就能找到对应的扇
 Linux中文件名在系统层面没有意义!  是给用户使用的!
 Linux中真真标识一个文件，使通过文件的**inode编号**!!   **一个文件一个inode** ! 
 
-![[Pasted image 20220819140451.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317194615.png)
+
 如： 我们在磁盘中的其中一个分区，我们可以看到在分区中的文件管理系统。
 
 - ==Boot Block==:  启动块，不一定每个分区都有。
@@ -42,7 +45,8 @@ Linux中真真标识一个文件，使通过文件的**inode编号**!!   **一�
 
 
 而我们主要学习的是**Block Bitmap** ,**inode Bitmap** , **inode Table** , **Data blocks**
-![[Pasted image 20220819142632.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195506.png)
+
 
 每一个 inode都可以理解为一个结构体
 ```c
@@ -60,7 +64,8 @@ struct inode{
 OS 怎么知道 inode Table中的那些inode没有被使用呢？ ==就靠**inode bitmap**==
 
 inode bitmap其实就是一个inode位图
-![[Pasted image 20220819143812.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195527.png)
+
 
 **从右向左看**，
 比特位的位置含义：inode编号。
@@ -78,9 +83,10 @@ inode bitmap其实就是一个inode位图
 
 
 图中指令在文件系统的步骤是什么？
-![[Pasted image 20220819145213.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195605.png)
+
 在创建`lesson409`时，我们就会得到它的 inode 了
- > [!note] 步骤
+ > 步骤
  > cat myfile.c --> 先查看lesson409 --> data block --> 241234[inode] : 文件名 -->241234[inode]-->inode table--> inode-->block[]-->打印文件内容；
 
 
@@ -108,11 +114,12 @@ A是B的软链接（A和B都是文件名），A的目录项中的inode节点号�
 使用 [[linux常用命令#ln| ln -s]] 指令即可创建软链接
 
 如上级目录`lesson`的一个可执行文件 `myproc` 链接到`lesson409`目录
-![[Pasted image 20220819160857.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195727.png)
+
 
 进入`lesson409`目录
 输入指令 `ln -s ../myproc myexe` , 链接名为 `myexe` .
-![[Pasted image 20220819161217.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195735.png)
 此时就可以在`lesson409`目录中运行被链接的文件了
 
 
@@ -121,36 +128,44 @@ A是B的软链接（A和B都是文件名），A的目录项中的inode节点号�
 创建硬链接，本质是在特定的目录下，填写一对文件名和inode的映射关系！
 
 在我们进行 [[linux常用命令#ls|ls指令]]时，被红框选中的那栏就是文件对应的硬链接数量。
-![[Pasted image 20220819161402.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195804.png)
+
 而硬链接数其实采用的就是 引用计数的方式，在 inode结构体中有个 `int ref` 来进行引用计数。
 
 
 ### 使用方式
 使用[[linux常用命令#ln|ln指令]]，但是不带参数。
-![[Pasted image 20220819161926.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195833.png)
+
 创建成功
-![[Pasted image 20220819162044.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195837.png)
+
 
 
 ### 目录的硬链接数
-![[Pasted image 20220819163353.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195919.png)
+
 当我们创建一个目录时，会发现此目录的硬链接数是2。
 
->[!question]+ 为什么？
+>**为什么？**
 >当我们进入test目录，使用 `ls -al` 指令，会发现
->![[Pasted image 20220819163444.png]]
+>![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317200009.png)
 > `.`  的inode是和test目录的inode是相同的，所以硬链接数是2。
 
->[!question]+ 如果再test目录中在添加一个 t1目录呢，test目录的硬连接数是多少？
-> ![[Pasted image 20220819163804.png]]
+> 如果再test目录中在添加一个 t1目录呢，test目录的硬连接数是多少？
+> ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317200111.png)
+
 > 发现 test目录的硬链接变为了 3，怎么回事？
 > 进入t1目录看看
-> ![[Pasted image 20220819164031.png]]
+> ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317200116.png)
+
 > 发现 `..` 的 inode 和test目录的inode是一致的，所以test的硬链接数是3
 > 
 
 
+## 链接的删除
 
+虽然链接可以使用 rm指令删除，但还是推荐使用unlink指令
 
 
 

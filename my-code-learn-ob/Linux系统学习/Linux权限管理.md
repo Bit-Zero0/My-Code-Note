@@ -15,10 +15,13 @@ inux下有两种用户：超级用户（root）、普通用户。
 >其它用户：`o`  ---Others （外国人）
 
 
-![[Pasted image 20220429073618.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175300.png)
+
 
 权限的**拥有者**和**所属组**
-![[Pasted image 20220429073851.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175449.png)
+
+
 
 
 ## 文件类型和访问权限(事物属性)
@@ -30,10 +33,10 @@ inux下有两种用户：超级用户（root）、普通用户。
 >==p==：管道文件
 >==c==：字符设备文件（例如屏幕等串口设备）
 >==s==：套接口文件
-![[Pasted image 20220429074522.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175506.png)
+
 
 ### 基本权限
-
 >读  `r`：Read对文件而言，具有读取文件内容的权限；对目录来说，具有浏览该目录信息的权限
 >
 >写  `w` ：Write对文件而言，具有修改文件内容的权限；对目录来说具有删除移动目录内文件的权限
@@ -42,7 +45,8 @@ inux下有两种用户：超级用户（root）、普通用户。
 >
 > `-`   表示不具有该项权限
 
-![[Pasted image 20220429074859.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175746.png)
+
 
 ## 文件访问设置的方法
 ### chmod
@@ -102,7 +106,6 @@ inux下有两种用户：超级用户（root）、普通用户。
 
 
 ### chgrp
-
 **功能：** 修改文件或目录的所属组
 
 **格式：** `chgrp [参数] 用户组名 文件名`
@@ -156,6 +159,7 @@ inux下有两种用户：超级用户（root）、普通用户。
 >但不想任何人删掉自己的文件
 
 结果如下：
-![[Pasted image 20220503165136.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175933.png)
 
-![[Pasted image 20220503165355.png]]
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175941.png)

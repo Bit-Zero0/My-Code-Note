@@ -6,7 +6,8 @@
 ==**要使用gdb调试，必须在源代码生成二进制程序的时候, 加上` -g`  选项**==
 
 记住要使用gdb调试，必须在源代码生成二进制程序的时候, 加上` -g`  选项
-![[Pasted image 20220503184437.png]] ^c2a696
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315181006.png)
+
 
 
 

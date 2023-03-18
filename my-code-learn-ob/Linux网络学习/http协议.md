@@ -1,3 +1,7 @@
+本章知识主要是使用大佬 [小林coding](https://xiaolincoding.com/) 的网络教程文章构成的,本章内容的70%以上内容与图片都是来自与小林coding大佬的[图解网络](https://xiaolincoding.com/network/#%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E7%BE%A4%E4%BD%93).本章有我个人的使用C++实现HTTP协议.
+
+非常推荐大家去看 小林大佬的 <<图解教程>> ,一定是比我的更详细与全面,本笔记只是适用与我个人知识记录.[小林coding](https://xiaolincoding.com/)
+
 # HTTP 是什么？
 
 HTTP 是超文本传输协议，也就是**H**yperText **T**ransfer **P**rotocol。
@@ -10,13 +14,15 @@ HTTP的名字「超文本协议传输」，它可以拆成三个部分：
 -   传输
 -   协议
 
-![[Pasted image 20221027162013.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150403.png)
+
 
 注意：==**HTTP协议是应用层协议**==
 
 # 认识URL
 平时我们见到的 "==网址==" 其实就是==**URL**==.
-![[Pasted image 20221027162442.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150407.png)
+
 
 
 服务器后台，是用Linux做的。
@@ -37,7 +43,8 @@ http://www.chaleague.com/data/#/gsmes
 - 将需要转码的字符转为16进制，然后从右到左，取4位(不足4位直接处理)，每2位做一位，前面加上`%`，编码成`%XY`格式
 
 列如：我们在浏览器中搜索 C++
-![[Pasted image 20221027163248.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150457.png)
+
 `+` 被转义成了 `%2B` ，导航栏显示的 `c%2B%2B` 翻译后其实就是 `c++ ` , 这个过程就是==**urlencode**==
 
 ==**urldecode**==就是**urlencode的逆过程**;
@@ -45,7 +52,8 @@ http://www.chaleague.com/data/#/gsmes
 [urlencode转化工具](http://tool.chinaz.com/Tools/urlencode.aspx)
 
 # HTTP协议格式
-![[Pasted image 20221027165018.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150503.png)
+
 **无论是请求还是响应，基本上http都是按照行(`\n`)为单位进行构建请求或者响应的!**
 
 
@@ -67,14 +75,16 @@ Version：http协议的版本，目前最常用的是 `http1.1` 和 `http1.0`(�
 ==**Response**==从状态行到空行都是**http协议的报头**，**响应正文**是该数据的**有效载荷**
 
 ==**HTTP请求**==
-![[Pasted image 20221027165134.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150551.png)
+
 - 首行: [方法] + [url] + [版本]
 - Header: 请求的属性, 冒号分割的键值对;每组属性之间使用\n分隔;遇到空行表示Header部分结束
 - Body: 空行后面的内容都是Body. Body允许为空字符串. 如果Body存在, 则在Header中会有一个Content-Length属性来标识Body的长度;
 
 
 ==**HTTP响应**==
-![[Pasted image 20221027171900.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150556.png)
+
 - 首行: [版本号] + [状态码] + [状态码解释]
 - Header: 请求的属性, 冒号分割的键值对;每组属性之间使用\n分隔;遇到空行表示Header部分结束 
 - Body: 空行后面的内容都是Body. Body允许为空字符串. 如果Body存在, 则在Header中会有一个Content-Length属性来标识Body的长度; 如果服务器返回了一个html页面, 那么html页面内容就是在body中.
@@ -82,12 +92,14 @@ Version：http协议的版本，目前最常用的是 `http1.1` 和 `http1.0`(�
 
 ## HTTP的方法
 其中最常用的就是==**GET**==方法和==**POST**==方法.
-![[Pasted image 20221027172103.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150611.png)
+
 
 
 
 ## HTTP 常见的状态码有哪些？
-![[Pasted image 20221027172416.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150615.png)
+
 `1xx` 类状态码属于**提示信息**，是协议处理中的一种中间状态，实际用到的比较少。
 
 `2xx` 类状态码表示服务器**成功**处理了客户端的请求，也是我们最愿意看到的状态。
@@ -137,7 +149,8 @@ Version：http协议的版本，目前最常用的是 `http1.1` 和 `http1.0`(�
 
 ## Content-Length 字段
 服务器在返回数据时，会有 `Content-Length` 字段，表明本次回应的数据长度。
-![[Pasted image 20221027171130.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150636.png)
+
 ```
 Content-Length: 1000
 ```
@@ -148,7 +161,8 @@ Content-Length: 1000
 
 ## Content-Type 字段
 `Content-Type` 字段用于服务器回应时，告诉客户端，本次数据是什么格式。
-![[Pasted image 20221027171316.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150641.png)
+
 ```
 Content-Type: text/html; charset=utf-8
 ```
@@ -166,10 +180,12 @@ Accept: */*
 ## Connection 字段
 **http1.1新加入的字段**
 `Connection` 字段最常用于客户端要求服务器使用「 HTTP 长连接」机制，以便其他请求复用。
-![[Pasted image 20221027220242.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150649.png)
+
 
 HTTP 长连接的特点是，只要任意一端没有明确提出断开连接，则保持 TCP 连接状态。
-![[Pasted image 20221027220336.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150728.png)
+
 HTTP/1.1 版本的默认连接都是长连接，但为了兼容老版本的 HTTP，需要指定 `Connection` 首部字段的值为 `Keep-Alive`。
 
 ```
@@ -181,7 +197,8 @@ Connection: Keep-Alive
 
 ## Host 字段
 客户端发送请求时，用来指定服务器的域名。
-![[Pasted image 20221027172657.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150745.png)
+
 ```
 Host: www.A.com
 ```
@@ -189,7 +206,8 @@ Host: www.A.com
 
 # http请求的`/` 是什么
 如图：
-![[Pasted image 20221027173327.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150759.png)
+
 http请求的`/`并不是根目录，而叫做**web根目录**
 `/`︰我们一般要请求的一定是一个**具体的资源: html，图片等**
 
@@ -203,7 +221,8 @@ http请求的`/`并不是根目录，而叫做**web根目录**
 GET **请求的参数位置一般是写在 URL 中**，**URL 规定只能支持 ASCII**，所以 GET 请求的参数只允许 ASCII 字符 ，而且**浏览器会对 URL 的长度有限制**（HTTP协议本身对 URL长度并没有做任何规定，是浏览器规定的）。
 
 比如，你打开一个网页，浏览器就会发送 GET 请求给服务器，服务器就会返回网页的所有文字及资源。
-![[Pasted image 20221027173908.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150813.png)
+
 
 
 
@@ -212,7 +231,8 @@ GET **请求的参数位置一般是写在 URL 中**，**URL 规定只能支持 
 POST **请求携带数据的位置一般是写在报文 body 中**， **body 中的数据可以是任意格式的数据**，只要客户端与服务端协商好即可，而且**浏览器不会对 body 大小做限制**。
 
 比如，你在我网页中进行留言，敲入了留言后点击「提交」，浏览器就会执行一次 POST 请求，把你的留言文字放进了报文 body 里，然后拼接好 POST 请求头，通过 TCP 协议发送给服务器。
-![POST 请求](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/HTTP/13-Post%E8%AF%B7%E6%B1%82.png)
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150926.png)
+
 
 ## GET 和 POST 方法都是安全和幂等的吗？
 
@@ -259,7 +279,8 @@ HTTP 协议是基于 **TCP/IP**，并且使用了「**请求 - 应答**」的�
 为了解决上述 TCP 连接问题，**HTTP/1.1** 提出了**长连接**的通信方式，也叫持久连接。这种方式的好处在于减少了 TCP 连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。
 
 持久连接的特点是，只要任意一端没有明确提出断开连接，则保持 TCP 连接状态。
-![[Pasted image 20221028125206.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318150948.png)
+
 当然，如果某个 HTTP 长连接超过一定时间没有任何数据交互，服务端就会主动断开这个连接。
 
 为支持长链接，HTTP/1.1添加了 `Connection` 字段,[[http协议#Connection 字段]]
@@ -271,12 +292,14 @@ HTTP 协议是基于 **TCP/IP**，并且使用了「**请求 - 应答**」的�
 
 ## cookie
 如上所述，`Http`是一个无状态的协议，但是访问有些资源的时候往往需要经过认证的账户才能访问，而且要一直保持在线状态，所以，`cookie`是一种在浏览器端解决的方案，将登陆认证之后的用户信息保存在本地浏览器中，后面每次发起http请求，都自动携带上该信息，就能达到认证用户，保持用户在线的作用，具体如下图:
-![[Pasted image 20221028130300.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151004.png)
+
 设置cookie的方法在Http的Response报头中可以携带set-Cookie字段来完成。
 
 ## session
 而将用户敏感信息放到本地浏览器中，能解决一定的问题，但是又引进了新的安全问题，一旦**cookie丢失，用户信息泄露，也很容易造成跨站攻击**，所以有了另一种解决方法，将用户敏感信息保存至服务器，而服务器本身采用md5算法或相关算法==生成**唯一值**== (session id)，将**该值保存值客户端浏览器，随后，客户端的后续请求，浏览器都会自动携带该id，进而再在服务器端认证，进而达到状态保持的效果**.
-![[Pasted image 20221028130727.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151017.png)
+
 
 ## cookie vs session
 两者有什么区别呢？
@@ -309,7 +332,8 @@ HTTP 由于是明文传输，所以安全上存在以下三个风险：
 -   **篡改风险**，比如强制植入垃圾广告，视觉污染，用户眼容易瞎。
 -   **冒充风险**，比如冒充淘宝网站，用户钱容易没。
 
-![[Pasted image 20221028131503.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151053.png)
+
 HTTP**S** 在 HTTP 与 TCP 层之间加入了 `SSL/TLS` 协议，可以很好的解决了上述的风险：
 -   **信息加密**：交互信息无法被窃取，但你的号会因为「自身忘记」账号而没。
 -   **校验机制**：无法篡改通信内容，篡改了就不能正常显示，但百度「竞价排名」依然可以搜索垃圾广告。
@@ -324,7 +348,8 @@ HTTP**S** 在 HTTP 与 TCP 层之间加入了 `SSL/TLS` 协议，可以很好
 
 ### 混合加密
 通过**混合加密**的方式可以保证信息的**机密性**，解决了窃听的风险。
-![[Pasted image 20221029133417.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151103.png)
+
 ==HTTPS 采用的是**对称加密**和**非对称加密**结合的「混合加密」方式：==
 -   在通信建立前采用**非对称加密**的方式交换「会话秘钥」，后续就不再使用非对称加密。
 -   在通信过程中全部使用**对称加密**的「会话秘钥」的方式加密明文数据。
@@ -343,7 +368,8 @@ HTTP**S** 在 HTTP 与 TCP 层之间加入了 `SSL/TLS` 协议，可以很好
 对方收到后，先是对内容也计算出一个「指纹」，然后跟发送方发送的「指纹」做一个比较，如果「指纹」相同，说明内容没有被篡改，否则就可以判断出内容被篡改了。
 
 那么，在计算机里会用**摘要算法（哈希函数）来计算出内容的哈希值**，也就是内容的「指纹」，这个**哈希值是唯一的，且无法通过哈希值推导出内容**。
-![[Pasted image 20221029133739.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151118.png)
+
 通过哈希算法可以确保内容不会被篡改，**但是并不能保证「内容 + 哈希值」不会被==中间人==替换，因==为这里缺少对客户端收到的消息是否来源于服务端的证明**==。
 
 >举个例子，
@@ -364,7 +390,8 @@ HTTP**S** 在 HTTP 与 TCP 层之间加入了 `SSL/TLS` 协议，可以很好
 **一般我们不会用非对称加密来加密实际的传输内容，因为非对称加密的计算比较耗费性能的**。
 
 所以非对称加密的用途主要在于**通过「私钥加密，公钥解密」的方式，来确认消息的身份**，我们常说的**数字签名算法**，就是用的是这种方式，不过私钥加密内容不是内容本身，而是**对内容的哈希值加密**。
-![[Pasted image 20221029134301.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151139.png)
+
 私钥是由服务端保管，然后服务端会向客户端颁发对应的公钥。如果客户端收到的信息，能被公钥解密，就说明该消息是由服务器发送的。
 
 >引入了数字签名算法后，你就无法模仿你爸爸的字迹来请假了，你爸爸手上持有着私钥，你老师持有着公钥。
@@ -394,14 +421,16 @@ HTTP**S** 在 HTTP 与 TCP 层之间加入了 `SSL/TLS` 协议，可以很好
 在计算机里，这个权威的机构就是==**CA （数字证书认证机构）**== ，将服务器公钥放在数字证书（由数字证书认证机构颁发）中，只要证书是可信的，公钥就是可信的。
 
 数字证书的工作流程，我也画了一张图，方便大家理解：
-![[Pasted image 20221029134808.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151201.png)
+
 通过数字证书的方式保证服务器公钥的身份，解决冒充的风险。
 
 #### 客户端校验数字证书的流程是怎样的？
 接下来，详细说一下实际中数字证书签发和验证流程。
 
 如下图图所示，为数字证书签发和验证流程：
-![[Pasted image 20221029135325.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151212.png)
+
 ==CA 签发证书的过程，如上图左边部分：==
 -   首先 CA 会把持有者的公钥、用途、颁发者、有效时间等信息打成一个包，然后对这些信息进行 Hash 计算，得到一个 Hash 值；
 -   然后 CA 会使用自己的私钥将该 Hash 值加密，生成 **Certificate Signature**，也就是 CA 对证书做了签名；
@@ -415,7 +444,8 @@ HTTP**S** 在 HTTP 与 TCP 层之间加入了 `SSL/TLS` 协议，可以很好
 
 
 但事实上，证书的验证过程中**还存在一个证书信任链的问题**，因为我们向 CA 申请的证书一般不是根证书签发的，而是由中间证书签发的，比如百度的证书，从下图你可以看到，证书的层级有三级：
-![[Pasted image 20221029135541.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151245.png)
+
 对于这种三级层级关系的证书的验证过程如下：
 -   客户端收到 **baidu.com** 的证书后，发现这个证书的签发者不是**根证书**，就无法根据本地已有的**根证书中的公钥**去验证 **baidu.com 证书**是否可信。于是，客户端根据 **baidu.com** 证书中的签发者，找到该证书的颁发机构是 “**GlobalSign Organization Validation CA - SHA256 - G2**”，然后向 CA 请求该中间证书。
 -   请求到证书后发现 “**GlobalSign Organization Validation CA - SHA256 - G2**” 证书是由 “**GlobalSign Root CA**” 签发的，由于 “**GlobalSign Root CA**” 没有再上级签发机构，说明它是根证书，也就是自签证书。应用软件会检查此证书有否已预载于根证书清单上，如果有，则可以利用根证书中的公钥去验证 “**GlobalSign Organization Validation CA - SHA256 - G2**” 证书，如果发现验证通过，就认为该中间证书是可信的。
@@ -424,13 +454,16 @@ HTTP**S** 在 HTTP 与 TCP 层之间加入了 `SSL/TLS` 协议，可以很好
 在这三个步骤中，最开始客户端只信任根证书 GlobalSign Root CA 证书的，然后 “GlobalSign Root CA” 证书信任 “GlobalSign Organization Validation CA - SHA256 - G2” 证书，而 “GlobalSign Organization Validation CA - SHA256 - G2” 证书又信任 baidu.com 证书，于是客户端也信任 baidu.com 证书。
 
 总括来说，由于用户信任 GlobalSign，所以由 GlobalSign 所担保的 baidu.com 可以被信任，另外由于用户信任操作系统或浏览器的软件商，所以由软件商预载了根证书的 GlobalSign 都可被信任。
-![[Pasted image 20221029140100.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151257.png)
+
 
 操作系统里一般都会内置一些根证书，比如我的 Windows 电脑里内置的根证书有这么多：
-![[Pasted image 20221029140209.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151302.png)
+
 
 这样的一层层地验证就构成了一条信任链路，整个证书信任链验证流程如下图所示：
-![[Pasted image 20221029140235.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151310.png)
+
 
 
 最后一个问题，为什么需要证书链这么麻烦的流程？Root CA 为什么不直接颁发证书，而是要搞那么多中间层级呢？
@@ -507,7 +540,8 @@ int main(int argc , char* argv[])
     }
 }
 ```
-![[Pasted image 20221026225322.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151404.png)
+
 
 
 
@@ -646,12 +680,14 @@ int main(int argc, char *argv[])
 ```
 
 在资源文件中使用 GET 方法进行推送数据时，我们的输入信息会在输入框中，所以GET是不安全的。
-![[Pasted image 20221027183205.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151436.png)
+
 POST方法比较私密(私密 != 安全) ，使用抓包工具，还是能获取到POST提交的信息。
 
 
 注意：我们404状态码，是客户端的问题，因为客户不可能想要什么，服务端就有什么。该文件或资源是在服务端中没有的
-![[Pasted image 20221027183458.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151440.png)
+
 
 
 ## HTTP代码实现(重定向版)
@@ -727,7 +763,9 @@ int main(int argc, char *argv[])
     }
 }
 ```
-![[Pasted image 20221027210230.png]]
-![[Pasted image 20221027210052.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151501.png)
 
-![[Pasted image 20221027205736.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151508.png)
+
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318151512.png)
