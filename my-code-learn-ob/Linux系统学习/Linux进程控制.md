@@ -1,14 +1,14 @@
 # 进程创建
 使用 **`fork()`** 函数创建进程。
 
-
 程调用fork，当控制转移到内核中的fork代码后，内核做：
 * 分配新的内存块和内核数据结构给子进程。
 * 将父进程部分数据结构内容拷贝至子进程。
 * 添加子进程到系统进程列表当中。
 * fork返回，开始调度器调度 。
 
-![[Pasted image 20220526124350.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140457.png)
+
 当一个进程调用fork之后，就有==两个二进制代码相同的进程==。而且它们都运行到相同的地方。但每个进程都将可以开始它们自己的旅程。
 
 ![[Linux进程#使用fork创建子进程]]
@@ -21,7 +21,8 @@
 
 ## 写时拷贝
 父子代码共享，父子再不写入时，数据也是共享的，当任意一方试图写入，便以写时拷贝的方式各自一份副本。
-![[Pasted image 20220526125325.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140608.png)
+
 
 ## fork的常规用法
 * 一个父进程希望复制自己，使父子进程同时==执行不同的代码段==。例如，父进程等待客户端请求，生成子进程来处理请求。
@@ -41,7 +42,8 @@
 >代码运行完毕，结果**不正确** ， 退出码返回 ==**!0**==，结果不正确的原因有很多
 >代码异常终止: 程序崩溃，退出码也就没有意义了。
 
-![[Pasted image 20220527205434.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140634.png)
+
 
 ### 进程退出码
 
@@ -63,7 +65,8 @@ int main()
 ```
 
 这里并不是完整的退出码，这是部分。
-![[Pasted image 20220527211417.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140650.png)
+
 
 ## 进程常见的退出方法
 ### 正常终止（可以通过 echo $? 查看进程退出码）：
@@ -78,10 +81,12 @@ int main()
 #### `main` 函数返回
 `main` 函数的退出值是进程的退出码。
 
-![[Pasted image 20220527203638.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140742.png)
+
 如以上代码中的main返回值是 **100**； 我们查询到的==退出信号==也 就是 **100** 。
 查询退出信号使用 `echo $?`
-![[Pasted image 20220527204218.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140754.png)
+
 
 
 #### `exit` 函数返回
@@ -98,16 +103,19 @@ int main()
     return 0;//不会使用return退出进程了
 }
 ```
-![[Pasted image 20220527212631.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140808.png)
+
 
 
 #### `_exit` 函数返回
 `_exit` 函数作用也是 退出进程， 但是也exit有些区别。
 需要导入头文件 `unistd.h`。
-![[Pasted image 20220527215140.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140817.png)
+
 
 `_exit` 函数是不会负责善后工作的。
-![[Pasted image 20220527215228.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140835.png)
+
 ```c
 int main()
 {
@@ -152,7 +160,8 @@ int main()
 }
 ```
 这段代码和上面的一样， 要在输出输出缓冲区中休眠了5秒才打印。
-![[Pasted image 20220527214945.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140919.png)
+
 > `exit` or `main return`本身就会要求系统进行，缓冲区刷新！
 
 
@@ -168,7 +177,8 @@ int main()
 }
 ```
 使用exit和 main中的return是 在5秒后会打印输出缓冲区中的内容的， 但是 `_exit` 不会负责这些善后工作，而是直接带着==**退出码**==退出进程。
-![[Pasted image 20220527215819.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140934.png)
+
 
 >1.`main`函数`return`,代表进程退出！！
 >	* 非`main`函数呢？？ 函数返回！
@@ -181,7 +191,10 @@ int main()
 # 进程等待
 
 进程等待的函数有：
- ![[Pasted image 20220528080653.png]]
+ ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140951.png)
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140957.png)
+
 
 
 ## 进程等待必要性
@@ -195,7 +208,11 @@ int main()
 `wait()` 只能等待==**指定**==一个子进程。
 
 使用时需要包含头文件 `sys/wait.h`
-![[Pasted image 20220527224411.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317141029.png)
+返回值：成功返回被等待进程pid，失败返回-1。
+
+参数 : 输出型参数，获取子进程退出状态,不关心则可以设置成为NULL
+
 ```c
 #include <stdio.h>
 #include <unistd.h>
@@ -231,7 +248,8 @@ int main()
 }
 ```
 先让子进程运行5秒，然后退出子进程，在监视的那一头就会显示子进程进入了 ==**Z** 僵尸状态==  ,之后休息10秒，父进程开始等待子进程，当发现子进程的状态后对子进程进行管理，若子进程的状态为 ==**Z**== ，则保存子进程信息后回收子进程。
-![[Pasted image 20220527232649.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317141223.png)
+
 
 ### `wait()` 的函数参数
 >pid_t wait(int* status);
@@ -340,18 +358,21 @@ int main()
 }
 ```
 但是我们发现status的结果并不是 **10** ，而是 2560。
-![[Pasted image 20220528083904.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317141331.png)
+
 
 #### status的构成
 
 * wait和waitpid，都有一个status参数，该参数是一个==输出型参数==，由操作**系统填充**。
 * 如果==传递NULL==，表示==不关心子进程的退出状态==信息。否则，操作系统会根据该参数，将子进程的退出信息反馈给父进程。
 * status不能简单的当作整形来看待，可以当作位图来看待，具体细节如下图（只研究status==**低16比特位**==）
-* ![[Pasted image 20220528084249.png]]
+* ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153030.png)
+
 
 最终status一定要让父进程得到子进程的执行结果。
 
-![[Pasted image 20220528085226.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153056.png)
+
 
 ==在代码中可以通过 左移操作符`>>` ， 右移操作符`<<` 来的得到**退出状态**和**终止信号==**。
 
@@ -429,10 +450,11 @@ int main()
     return 100;
 }
 ```
-![[Pasted image 20220528091820.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153123.png)
 
 
-![[Pasted image 20220528092236.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153127.png)
+
 
 
 #### options 的构成
@@ -443,11 +465,13 @@ int main()
 
 
 ##### 进程的非阻塞等待
-看到某些应用或者OS本身，卡住了长时间不动，应用或者程序==hang==住了。
+看到某些应用或者OS本身，卡住了长时间不动，也就可以说: 应用或者程序==hang==住了。
 
 在options参数选项填入 ==**WNOHANG**==。
 
-WNOHANG:非阻塞。
+>WNOHANG:非阻塞。
+
+
 ```c
 #include <stdio.h>
 #include <unistd.h>
@@ -495,7 +519,8 @@ int main()
 ```
 
 此时的父子进程都在同时进行了。
-![[Pasted image 20220528095540.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153309.png)
+
 
 
 # 进程程序替换
@@ -507,17 +532,18 @@ int main()
 >没有！！
 
 如，将我们的代码和数据，直接替换到进程的物理地址之中，即完成了进程的程序替换。
-![[Pasted image 20220528095902.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153334.png)
+
 
 ## 进程替换函数
-![[Pasted image 20220528100715.png]]
->int execve(const char *path, char *const argv[], char *const envp[]);
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153620.png)
+
+`int execve(const char *path, char *const argv[], char *const envp[]);`
 
 
-![[Pasted image 20220530214610.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153520.png)
+
 其中 `execve` 是系统调用， 其余的五个函数都是以 `execve` 为基本 来进行封装的。
-
-
 
 
 ### 函数解释
@@ -532,10 +558,13 @@ int main()
 > ==**p**==(path) : 有p自动搜索环境变量PATH
 > ==**e**==(env) : 表示自己维护环境变量
 
-![[Pasted image 20220530192819.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153533.png)
+
 
 
 ### `execl` 函数
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153749.png)
+
 ```c
 #include <stdio.h>
 #include <unistd.h>
@@ -555,17 +584,20 @@ int main()
   return 0;
 }
 ```
-当代码走到 execl时 ，就会被进程替换了，此处是替换为了 `ls` 指令,进程替换后就不会执行后续的代码，因为进程已经被替换。
+当代码走到 `execl()`时 ，就会被进程替换了，此处是替换为了 `ls` 指令,进程替换后就不会执行后续的代码，因为进程已经被替换。
 
 执行结果
-![[Pasted image 20220528101720.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153837.png)
 
 
-![[Pasted image 20220528102319.png]]
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153841.png)
 
 
-![[Pasted image 20220528103704.png]]
-![[Pasted image 20220528103723.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153845.png)
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317153852.png)
+
 
 只要进程的程序替换成功，就不会执行后续代码，意味着`exec*`函数，成功的时候，不需要返回值检测！
 只要`exec*`  返回了，就一定是因为调用失败了。
@@ -585,7 +617,8 @@ int main()
 }
 ```
 执行结果
-![[Pasted image 20220528104256.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317154232.png)
+
 
 
 >int execl(const char* path, const char* arg, ...);
@@ -611,7 +644,6 @@ int main()
 > ==**p**==(path) : 有p自动搜索环境变量PATH
 
 
-
 ```cpp
 #include <stdio.h>
 #include <unistd.h>
@@ -626,7 +658,8 @@ int main()
 }
 ```
 运行结果：
-![[Pasted image 20220530202640.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317154525.png)
+
 
 
 
@@ -640,7 +673,8 @@ int main()
 带e的，需要自己组装环境变量
 
 我们需要创建两个文件，用[[makefile的使用|makefile]]编写一下
-![[Pasted image 20220530212705.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317154548.png)
+
 
 main.c 文件
 ```c
@@ -681,12 +715,13 @@ int main()
 ```
 
 运行可执行文件时 ==**myload**== 时
-![[Pasted image 20220530213223.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317154642.png)
+
 运行==**myload**==只执行文件时，其中打印的我们的环境变量。
 
 
 而当我们在==**myexec**==可执行文件中，使用使用程序替换后的结果。
-![[Pasted image 20220530213432.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317154648.png)
 成功的使用 **`env`** 替换了myload中的环境环境变量。
 
 
@@ -721,7 +756,8 @@ int main()
 }
 ```
 
-![[Pasted image 20220530204740.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317154811.png)
+
 
 
 
@@ -858,4 +894,5 @@ int main()
 }
 ```
 
-![[Pasted image 20220605144659.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317154921.png)
+]]

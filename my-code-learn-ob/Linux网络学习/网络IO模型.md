@@ -29,29 +29,34 @@
 
 ## 阻塞等待(BIO)
 阻塞IO: 在内核将数据准备好之前, 系统调用会一直等待. 所有的套接字, 默认都是阻塞方式.
-![[Pasted image 20221106230003.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143051.png)
+
 
 ## 非阻塞等待(NIO)
 如果内核还未将数据准备好, 系统调用仍然会直接返回, 并且返回`EWOULDBLOCK`错误码.
 
 **非阻塞IO往往需要程序员循环的方式反复尝试读写文件描述符**, 这个过程称为==**轮询**==. 这对CPU来说是较大的浪费, 一般只有特定场景下才使用.
-![[Pasted image 20221106230130.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143059.png)
+
 
 
 ## 信号驱动IO
 信号驱动IO: 内核将数据准备好的时候, 使用**SIGIO**信号()通知应用程序进行IO操作.
-![[Pasted image 20221106230242.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143120.png)
+
 
 
 ## 多路转接IO
 IO多路转接: 虽然从流程图上看起来和阻塞IO类似. 实际上最核心在于IO多路转接能够同时等待多个文件描述符的就绪状态.
-![[Pasted image 20221106231024.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143135.png)
+
 
 
 
 ## 异步IO
 异步IO: 由内核在数据拷贝完成时, 通知应用程序(而信号驱动是告诉应用程序何时可以开始拷贝数据).
-![[Pasted image 20221106231107.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143146.png)
+
 
 ## 小结
 任何IO过程中, 都包含两个步骤. **第一是等待, 第二是拷贝**. 而且在实际的应用场景中, 等待消耗的时间往 
@@ -61,8 +66,9 @@ IO多路转接: 虽然从流程图上看起来和阻塞IO类似. 实际上最核
 | |BIO|	NIO	|IO多路	|信号驱动IO	|异步IO|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |第一阶段|	阻塞|	非阻塞|	阻塞|	非阻塞|	非阻塞|
-|第二阶段|阻塞	|阻塞	|阻塞	|阻塞	|非阻塞|
-![[Pasted image 20221107120859.png]]
+|第二阶段|阻塞	|阻塞	|阻塞	|阻塞	|非阻塞
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143233.png)
+
 
 
 # 网络IO的重要概念
@@ -87,7 +93,8 @@ IO多路转接: 虽然从流程图上看起来和阻塞IO类似. 实际上最核
 # 非阻塞IO
 ## fcntl函数
 一个文件描述符, 默认都是阻塞IO.
-![[Pasted image 20221108160823.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143344.png)
+
 
 传入的cmd的值不同, 后面追加的参数也不相同. 
 
@@ -117,7 +124,8 @@ void SetNonBlock(int fd)
 ```
 - 使用`F_GETFL`将当前的文件描述符的属性取出来(这是一个位图).
 - 然后再使用`F_SETFL`将文件描述符设置回去. 设置回去的同时, 加上一个`O_NONBLOCK`参数.
-![[Pasted image 20221108163225.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143605.png)
+
 
 
 ```cpp
@@ -169,7 +177,8 @@ int main()
 	}
 }
 ```
-![[Pasted image 20221108173010.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143908.png)
+
 
 >==在非阻塞情况下，我们读取数据，如果数据没有就绪，系统是以出错的形式返回的(不是错误)，**没有就绪** 和**真正的错误**使用的是同样的方式标识，如何进一步区分呢??==
 >那就是`errno` 中的  `EAGAIN` 表示的就是没有就绪。
@@ -187,8 +196,9 @@ select，poll，epoll都是IO多路复用的机制。I/O多路复用就是通过
 >- 程序会停在select这里等待，直到被监视的文件描述符有一个或多个发生了状态改变;
 
 ### select函数分析
-需要导入头文件 `sys/select.h`
-![[Pasted image 20221108151253.png]]
+需要导入头文件 sys/select.h`
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318143924.png)
+
 >==nfds==: 监控的文件描述符集里最大文件描述符加1，因为此参数会告诉内核检测前多少个文件描述符的状态
 >==readfds==： 监控有读数据到达文件描述符集合，传入传出参数
 >==writefds==： 监控写数据到达文件描述符集合，传入传出参数
@@ -209,9 +219,11 @@ struct timeval {
 
 
 #### fd_set的结构
-![[Pasted image 20221108152720.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144101.png)
 
-![[Pasted image 20221108152817.png]]
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144105.png)
+
 
 其实这个结构就是一个整数数组, 更严格的说, 是一个 "**位图**". 使用位图中对应的位来表示要监视的文件描述符.
 
@@ -274,7 +286,8 @@ void FD_ZERO(fd_set *set); //把文件描述符集合里所有位清0
 
 ## poll
 poll 和 [[网络IO模型#select|select]] 的实现机制类似，本质上没有多大差别，也是管理多个套接字文件描述符，也是由内核进行轮询并根据描述符的状态进行处理，**但是 poll() 没有最大文件 描述符数量的限制**，勉强算是`select()`函数的升级版。poll 的函数原型如下
-![[Pasted image 20221109124637.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144236.png)
+
 >参数解析
 >==fds==: 是一个 pollfd 结构类型的数组的首地址，用于存放需要检测其状态的Socket描述符
 >==nfds==: 监控数组中有多少文件描述符需要被监控
@@ -336,12 +349,15 @@ int epoll_wait(int epfd, struct epoll_event * events, int maxevents, int timeout
 ```
 
 #### epoll_create()
-![[Pasted image 20221109131619.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144310.png)
+
 创建一个epoll的句柄(文件描述符)，`size`用来告诉内核这个监听的数目一共有多大，这个参数不同于`select()`中的第一个参数，给出最大监听的fd+1的值，**参数size并不是限制了epoll所能监听的描述符最大个数，只是对内核初始分配内部数据结构的一个建议**。  
 当创建好epoll句柄后，它就会占用一个fd值，在linux下如果查看/proc/进程id/fd/，是能够看到这个fd的，所以在使用完epoll后，必须调用`close()`关闭，否则可能导致fd被耗尽。
 
+
 #### epoll_ctl()
-![[Pasted image 20221109131841.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144317.png)
+
 >函数解析
 >- ==epfd==：是`epoll_create()`的返回值。 
 >- ==op==：表示op操作，用三个宏来分别表示添加、删除和修改对fd的监听事件。：
@@ -379,7 +395,8 @@ EPOLLONESHOT：只监听一次事件，当监听完这次事件之后，如果�
 
 
 #### epoll_wait()
-![[Pasted image 20221109131905.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144405.png)
+
 - 参数`events`是分配好的`epoll_event`结构体数组.
 - epoll将会把发生的事件赋值到`events`数组中 (`events`不可以是空指针，内核只负责把数据复制到这个`events`数组中，不会去帮助我们在用户态中分配内存).
 - `maxevents`告之内核这个`events`有多大，这个 `maxevents`的值不能大于创建`epoll_create()`时的`size`. 
@@ -388,14 +405,16 @@ EPOLLONESHOT：只监听一次事件，当监听完这次事件之后，如果�
 
 ### epoll原理
 1.  首先调用epoll_create()创建一个epoll实例----在内核区，是一个eventpoll结构体类型；返回值是一个文件描述符，可以通过这个文件描述符操作内核中这块内存（通过epoll提供的API进行操作）
-![[Pasted image 20221109152121.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144439.png)
+
 
 
 2. 生成的eventpoll内部，有两个类型：
 		- rb_root，红黑树结构；–记录需要检测的文件描述符
 		- list_head，链表 --要求检测的文件描述符中，哪些文件描述符是有数据的
 优点： 与select和poll相比，直接在内核中创建一块内存，没有用户态到内核态的开销。
-![[Pasted image 20221109152202.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144447.png)
+
 
 
 3. 委托内核检测，`epoll_ctl()`函数
@@ -407,14 +426,17 @@ EPOLLONESHOT：只监听一次事件，当监听完这次事件之后，如果�
 				- `ev.events = EPOLLIN`，检测读事件；
 				- `ev.data.fd = lfd`，检测的文件描述符值
 注意：现在只是将需要检测的文件描述符添加到红黑树rbr结构中；–比如添加了5个需要检测。
-![[Pasted image 20221109152412.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144458.png)
+
 
 4.  `epoll_wait()`，调用后，内核就会在内核中的红黑树结构中进行检测；
 	    - 比如红黑树中需要检测5个文件描述符，有3个文件描述符发生了变化，将这3个文件描述符添加到链表rdlist中；
 	    - 并且rdlist中数据会返回出去，速度是很快的（注意：可以返回具体是哪几个文件描述符）
-![[Pasted image 20221109152448.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144505.png)
 
-![[Pasted image 20221109152454.png]]
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144512.png)
+
 
 
 ### epoll 的 LT模式和 ET模式
@@ -464,10 +486,11 @@ LT是 epoll 的默认行为. **使用 ET 能够减少 epoll 触发的次数. 但
 
 假设这样的场景: 服务器接受到一个10k的请求, 会向客户端返回一个应答数据. 如果客户端收不到应答, 不会发送第 
 二个10k请求.
-![[Pasted image 20221113164115.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144813.png)
+
 
 如果服务端写的代码是阻塞式的 `read`, 并且一次只 `read` **1k** 数据的话(read不能保证一次就把所有的数据都读出来,参考 [[linux常用命令#man|man]]手册的说明, 可能被信号打断), 剩下的**9k**数据就会待在缓冲区中.
-![[Pasted image 20221113203758.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144813.png)
 此时由于epoll是**ET模式**,并不会认为文件描述符读就绪. `epoll_wait`就不会再次返回.剩下的9k数据会一直在缓冲区中.直到下一次客户端再给服务器写数据. `epoll_wait`才能返回
 
 但是问题来了
@@ -475,7 +498,8 @@ LT是 epoll 的默认行为. **使用 ET 能够减少 epoll 触发的次数. 但
 - 客户端要读到服务器的响应,才会发送下一个请求
 - 客户端发送了下一个请求,`epoll_wait`才会返回,才能去读缓冲区中剩余的数据.
 
-![[Pasted image 20221113203938.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318144904.png)
+
 所以,为了解决上述问题(阻塞 `read` 不一定能一下把完整的请求读完)于是就可以使用**非阻塞轮训**的方式来读缓冲区,保证一定能把完整的请求都读出来.
 而如果是**LT**没这个问题.只要缓冲区中的数据没读完,就能够让`epoll_wait`返回文件描述符读就绪.
 

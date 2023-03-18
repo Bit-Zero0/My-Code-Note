@@ -18,14 +18,17 @@
 
 ## 如何查看可执行文件的依赖那些动态链接
 使用 [[linux常用命令#ldd|ldd指令]] 
-![[Pasted image 20220830210459.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183327.png)
+
 
 ## 查看动/静态链接
 在默认编译时，默认是使用**动态链接**。
-![[Pasted image 20220830211401.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183428.png)
+
 
 在编译的后面在 **`-static`** ，则可以编译将动态链接改为**静态链接**。 不过一般Linux系统是没有这个静态链接编译的需要 [[Linux 软件包管理器 yum|yum]] 下载一下
-![[Pasted image 20220830211732.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183450.png)
+
 
 
 ## 库的制作与使用
@@ -57,15 +60,18 @@ clean:
 
 ```
 
-![[Pasted image 20220901170047.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183745.png)
+
 生成`libmy.a` 静态库
 
 
 ## 静态库的使用
 静态库文件在 lib 目录中
-![[Pasted image 20220901163614.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183818.png)
+
 lib 目录的文件目录 ，对静态库`.a`使用 `ar -tv` 则可以查看静态库内的二进制文件
-![[Pasted image 20220901163806.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183831.png)
+
 
 在main.c文件中，需要使用我们静态库内的相关函数的头文件。
 ```c
@@ -98,10 +104,11 @@ int main()
 在 gcc 中使用 `-fPIC` 参数，产生位置无关码(position independent code)。
 在使用 gcc 中的 `-shared` 参数生成共享库格式
 
-![[Pasted image 20220901170937.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317201605.png)
+
 生成无关码，并汇编为二进制`.o`文件。
 
-![[Pasted image 20220901171039.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317201613.png)
 生成共享库格式
 
 
@@ -110,10 +117,12 @@ int main()
 动态库的使用方法和静态库是是一样的，使用 **`gcc main.c -I./lib -L./lib -l mymath`**
 
 但是会遇到一个问题
-![[Pasted image 20220901172756.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183947.png)
+
 
 先看我们编译时的这句指令
-![[Pasted image 20220901172942.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315183954.png)
+
 **这里只是告知编译器头文件库路径在哪里,当程序编译好的时候，此时已经和编译无关了!所以可执行文件找不到动态库，就无法编译了**。
 
 
@@ -125,7 +134,8 @@ int main()
 再使用 [[linux常用命令#export 设置一个新的环境变量|export指令]]在`LD_LIBRARY_PATH` 中添加我们的库路径
 **`export LD_LIBRARY_PATH=/home/fmy/lesson/lesson413/lib`**
 
-![[Pasted image 20220901225418.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315184029.png)
+
 
 
 
@@ -133,10 +143,12 @@ int main()
 此方法比较实用，基本没有配置风险。
 ==进入 **`/etc/ld.so.conf.d`** 路径，新建一个 **`.conf`** 后缀的文件，文件名任意，新建与写入需要管理员权限。
 在文件中写入我们 库的路径 ==
-![[Pasted image 20220903124104.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315184045.png)
+
 
 在库中写入我们的库路径
-![[Pasted image 20220903124133.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315184049.png)
 
-最后使用 idconfig 指令编译。
-![[Pasted image 20220903124238.png]]
+
+最后使用 `idconfig` 指令编译。
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315184053.png)

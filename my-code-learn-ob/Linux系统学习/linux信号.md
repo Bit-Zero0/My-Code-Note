@@ -14,7 +14,8 @@
 
 进程在没有收到信号时，进程是知道如何识别是哪一个信号的，因为工程师们在写进程源代码的时候就设置好了。==进程具有识别信号并处理信号的能力远远早于信号的产生的!==
 
-![[Pasted image 20220910184733.png]]
+![](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230316163233.png)
+
 既然进程收到进程时，不是立即处理的，那么这个信号保持在了那里？在 `struct task_struct` 。
 
 task_struct 是一个内核数据结构，定义进程对象。==内核不相信任何人，只相信自己==。那是谁向task_struct 内写入信号数据呢？ ==**OS!!!!**==
@@ -25,23 +26,24 @@ task_struct 是一个内核数据结构，定义进程对象。==内核不相信
 
 
 # 用`kill -l`命令可以察看系统定义的信号列表
-![[Pasted image 20220910185914.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317202233.png)
+
 1号到31号的信号是 ==**普通信号**==，34号及以后的信号是 ==**实时信号**==。而我们只学习普通信号，不学习实时信号。
 而我们在程序运行时使用的 `ctrl+c` ，其实就是2号信号 `SIGINT` .
 
 
 
 # 信号捕捉函数 signal()
-![[Pasted image 20220910215207.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317203809.png)
+
 可以将捕捉信号 ， 并修改信号的处理方式。
 第一个参数 ==signum== 表示我们要捕捉的信号， 
 第二个参数 ==handler== 则是一个函数指针，指向了我们修改信号处理方式的函数地址。 
 
 
 **注意：9号信号是无法被捕捉(自定义)的.**
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317203828.png)
 
-
-![[Pasted image 20220911194956.png]]
 
 ```c
 #include <stdio.h>
@@ -68,7 +70,8 @@ int main(){
 ```
 
 当我们修改了2号信号默认的处理方式后，ctrl+c快捷键的功能也相应改变了。
-![[Pasted image 20220911195248.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317204724.png)
+
 
 
 
@@ -149,10 +152,12 @@ int main(){
 - 在Linux中，当一个进程退出的时候，它的退出码和退出信号都会被设置(正常情况)。
 - 当一个进程异常的时候，进程的退出信号会被设置，表明当前进程退出的原因。
 - 如果必要，OS会设置退出信息中的[[Linux进程控制#status的构成|core dump]]标志位，并将进程在内存中的数据转储到磁盘当中，方便我们后期调试。
-![[Pasted image 20220911205455.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317204750.png)
+
 
 **如下8号信号 `SIGFPE`  和 11号信号 `SIGSEGV`** 就属于硬件异常产生的信号。
-![[Pasted image 20220912092557.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317204800.png)
+
 ```c
 #include <stdio.h>
 #include <signal.h> 
@@ -169,7 +174,8 @@ int main()
     return 0; 
 }
 ```
-![[Pasted image 20220912091043.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317204952.png)
+
 
 捕捉信号
 ```c
@@ -204,10 +210,12 @@ int main(){
 
 ### core dump的使用
 云服务器上的 core dump 一般是被关闭的，需要我们开启
-![[Pasted image 20220911205704.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205032.png)
+
 
 开始时需要我们定义此文件的大小，使用 `ulimit -c 10240` 指令。 我这里定义为 10240byte , 表示开启core dump。
-![[Pasted image 20220911212049.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205036.png)
+
 
 
 ==**开启core dump前**==
@@ -223,18 +231,17 @@ int main(){
 }
 
 ```
-此时这个程序时和死循环。我们对此进程使用 `kill -11` 后
-![[Pasted image 20220911212353.png]]
-运行结果上就会报出 **Segmentation fault**  段错误。也就是11 号信号。
-![[Pasted image 20220911211745.png]]
+
 
 
 ==**开启core dump后**== ，运行一样的代码发现  **Segmentation fault** 后多了一句 **core dumped**
 ，此时我们就可以使用[[gdb调试]]出产生信号的代码行了
-![[Pasted image 20220911212650.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205139.png)
+
 
 在使用 [[linux常用命令#ls|ll]] 时，可以发现出现了一个 ==core.4323== 的文件4323其实就是我们的进程ID。
-![[Pasted image 20220911212911.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205143.png)
+
 
 
 先看以下代码,以下代码会产生8号信号`SIGFPE`。
@@ -252,9 +259,11 @@ int main(){
 
 ```
 我们开启core dump后就可以对其进行[[gdb调试]]了
-![[Pasted image 20220911213658.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205222.png)
 
-![[Pasted image 20220911214448.png]]
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205226.png)
+
 
 
 ## 3.系统调用产生的信号
@@ -262,7 +271,8 @@ int main(){
 
 ### kill()
 kill可以给指定的进程发送信号。
-![[Pasted image 20220911230221.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205313.png)
+
 
 其实可以配合[[Linux 进程参数|main函数参数]]来进行使用
 ```c
@@ -290,12 +300,15 @@ int main(int argc , char* argv[]){
     return 0;
 }
 ```
-![[Pasted image 20220911230136.png]]
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205331.png)
+
 
 
 ### raise()
 raise只能给自己发送信号；
-![[Pasted image 20220911230717.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205336.png)
+
 
 ```c
 #include <stdio.h>
@@ -347,13 +360,15 @@ int main(){
 }
 
 ```
-![[Pasted image 20220911231456.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205434.png)
+
 
 
 
 ### abort()
 向自己进程发送6号==SIGABRT==信号
-![[Pasted image 20220911231923.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205446.png)
+
 
 ```c
 #include <stdio.h>
@@ -405,7 +420,8 @@ int main(){
 }
 
 ```
-![[Pasted image 20220911231907.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205515.png)
+
 
 
 
@@ -419,7 +435,8 @@ int main(){
 
 ### alarm()
 这个函数的返回值是0或者是以前设定的闹钟时间还余下的秒数。函数的返回值仍然是以前设定的闹钟时间还余下的秒数。发送的信号是 ==14号 SIGALRM== 信号。
-![[Pasted image 20220912084056.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205557.png)
+
 
 ```c
 #include <stdio.h>
@@ -447,7 +464,8 @@ int main(){
 }
 
 ```
-![[Pasted image 20220912084039.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205643.png)
+
 
 
 #### 取消alarm()
@@ -496,7 +514,8 @@ int main(){
 }
 
 ```
-![[Pasted image 20220912090408.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205706.png)
+
 
 
 
@@ -508,11 +527,13 @@ int main(){
 	- 被阻塞的信号产生时将保持在未决状态,直到进程解除对此信号的阻塞,才执行递达的动作. 
 	- 注意,阻塞和忽略是不同的,只要信号被阻塞就不会递达,而忽略是在递达之后可选的一种处理动作
 
-![[Pasted image 20220912092732.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205719.png)
+
 
 
 ## 在内核中的标识
-![[Pasted image 20220912093157.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205736.png)
+
 这张表需要的数组是一一相应的。
 - 每个信号都有两个标志位分别表示阻塞(block)和未决(pending),还有一个函数指针表示处理动作。信号产生时,内核在进程控制块中设置该信号的未决标志,直到信号递达才清除该标志。在上图的例子 中,SIGHUP信号未阻塞也未产生过,当它递达时执行默认处理动作。
 - SIGINT信号产生过,但正在被阻塞,所以暂时不能递达。虽然它的处理动作是忽略,但在没有解除阻塞之前不能忽略这个信号,因为进程仍有机会改变处理动作之后再解除阻塞。
@@ -520,9 +541,11 @@ int main(){
 
 
 ### pending
-![[Pasted image 20220912093748.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205758.png)
+
 pending 本质上就是一个==**位图**==  `uint32_t sigs` 
-![[Pasted image 20220912094011.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205802.png)
+
 
 ### block
 block表:本质上，也是位图结构uint32_t block ;
@@ -531,7 +554,8 @@ block表:本质上，也是位图结构uint32_t block ;
 
 ### handler 
 是一个函数指针数组 `void (*handler[31])(int)` , 用来存放相应的默认信号函数或自定义函数。
-![[Pasted image 20220912095705.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205829.png)
+
 
 
 
@@ -585,19 +609,22 @@ int sigismember（const sigset_t *set, int signo);//判断是否与pending位图
 
 ### sigprocmask()
 调用函数sigprocmask可以读取或更改进程的信号屏蔽字(阻塞信号集)。
-![[Pasted image 20220912141720.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205931.png)
+
 如果oldset是非空指针,则读取进程的当前信号屏蔽字通过oset参数传出。如果set是非空指针,则 更改进程的信号屏蔽字
 参数how指示如何更改。如果oldset和set都是非空指针,则先将原来的信号 屏蔽字备份到oset里,然后 根据set和how参数更改信号屏蔽字。
 
 假设当前的信号屏蔽字为mask,下表说明了how参数的可选值。
-![[Pasted image 20220912145508.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205937.png)
+
 如果调用sigprocmask解除了对当前若干个未决信号的阻塞,则在sigprocmask返回前,至少将其中一个信号递达。
 
 
 
 ### sigpending()
 读取当前进程的未决信号集,通过set参数传出。。
-![[Pasted image 20220912145931.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317205957.png)
+
 调用成功则返回0,出错则返回-1
 
 
@@ -654,13 +681,11 @@ int main()
 
 ```
 以下是运行结果
-![[Pasted image 20220912144331.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210011.png)
 
 
 
-
-
-恢复block位图，将oset传进 sigprocmask() 中。
+恢复block位图，将oset传进 `sigprocmask()` 中。
 ```c
 #include <stdio.h>
 #include <unistd.h>
@@ -713,7 +738,8 @@ int main()
     return 0;
 }
 ```
-![[Pasted image 20220912151902.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210117.png)
+
 
 
 
@@ -733,38 +759,43 @@ int main()
 
 ## 用户态与核心态
 **所谓的系统调用:就是进程的身份转化成为内核，然后根据内核页表找到系统函数，执行就行了。**
-![[Pasted image 20220912152829.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210130.png)
 
 
-
-![[Pasted image 20220912153215.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210134.png)
+]]
 ==**每个进程都有各自的用户级页表，但是所有进程的内核空间都共用着一张系统级页表**==
 
 
 
 
 ## 信号的处理过程
-![[Pasted image 20220912153814.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210217.png)
+
 
 具体出来就像这样。
-![[Pasted image 20220912153859.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210223.png)
+
 
 总共进行了4次 态切换 ， 
 - 第一次先从用户态->核心态 ，处理当前可以递达的信号。
 - 第二次是如果要执行自定义捕捉的信号，则从核心态->用户态 去执行我们写的自定义捕捉函数。
 - 执行自定义捕捉函数后，进行第三次切换，从用户态->核心态 调用`sys_sigreturn()`。
 - 第四次 核心态->用户态 返回用户模式从主控制流程中上次被中断的地方继续句下执行
-![[Pasted image 20220912154205.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210228.png)
+
 
 
 ## 内核时如何捕捉信号的
 
 ### sigsction()
 作用其实和signal一样，不过能捕捉实时信号，而且功能多一些
-![[Pasted image 20220912161331.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210318.png)
+
 
 struct sigcation结构体的内容，被红线划了的内容表示我们用不到。
-![[Pasted image 20220912161516.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210327.png)
+
 
 
 - sigaction函数可以读取和修改与指定信号相关联的处理动作。调用成功则返回0,出错则返回- 1。
@@ -820,11 +851,13 @@ int main()
 }
 
 ```
-![[Pasted image 20220912163359.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210404.png)
+
 
 
 # 可重入函数
-![[Pasted image 20220913090449.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210414.png)
+
 - main函数调用insert函数向一个链表head中插入节点node1。
 - 插入操作分为两步,刚做完第一步的时候,因为硬件中断使进程切换到内核,再次回用户态之前检查到有信号待处理,于是切换 到sighandler函数,sighandler也调用insert函数向同一个链表head中插入节点node2。
 - 插入操作的两步都做完之后从sighandler返回内核态,再次回到用户态就从main函数调用的insert函数中继续 往下执行,先前做第一步之后被打断,现在继续做完第二步。
@@ -875,12 +908,14 @@ int main()
 ```
 
 但是运行结果如下，当按下`ctrl+c` 时，程序还在不断运行，无法结束。
-![[Pasted image 20220913093350.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210446.png)
+
 
 
 原因如下：
 编译器在进行优化时，将flag变量加载到了寄存器中，省得每次都需要去内存中读取，但这也导致了我们之后在handler函数中对flag进行修改时，已经无效，因为flag现在寄存器中。
-![[Pasted image 20220913094236.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210449.png)
+
 
 解决办法：
 ```c
@@ -907,7 +942,8 @@ int main()
     return 0;
 }
 ```
-![[Pasted image 20220913094651.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210607.png)
+
 问题解决
 
 
@@ -950,7 +986,8 @@ int main()
     return 0;
 }
 ```
-![[Pasted image 20220913124652.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210644.png)
+
 
 
 其实我们也能在自定义信号处理函数中进行[[Linux进程控制#wait 函数|wait()]]和[[Linux进程控制#main 函数返回|waitpid()]] 来回收子进程
@@ -1009,4 +1046,4 @@ int main()
     return 0;
 }
 ```
-![[Pasted image 20220913125636.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317210717.png)
