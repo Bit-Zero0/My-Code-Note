@@ -8,7 +8,8 @@
 >6. 与其它动态序列容器相比（deques, lists and forward_lists）， vector在访问元素的时候更加高效，在末尾添加和删除元素相对高效。对于其它不在末尾的删除和插入操作，效率更低。比起lists和forward_lists统一的迭代器和引用更好。
 
 ## vector的使用
-![[Pasted image 20220511204407.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220810.png)
+
 >value_type 就是数据的类型
 
 ```cpp
@@ -26,14 +27,16 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20220511210741.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220824.png)
+
 ### vector iterator 的使用
 
 |iterator的使用 |接口说明|
 |:--|:--|
 |begin +end（重点）|获取==第一个数据位置==的iterator/const_iterator， 获取==最后一个数据的下一个位置==的iterator/const_iterator|
 |rbegin + rend|获取最后一个数据位置的reverse_iterator，获取第一个数据前一个位置的|reverse_iterator|
-![[Pasted image 20220511213051.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220836.png)
+
 
 
 
@@ -88,7 +91,7 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20220511215636.png]]
+![](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020220511215636.png)
 
 
 # vector模拟实现
@@ -525,7 +528,8 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20220522172624.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318222251.png)
+
 
 此处是有问题的，因为ret其实走了两步，当erase执行完后，会返回新pos节点的数据，就不需要 ret++ 了。所以需要加一个else判断。
 
@@ -631,7 +635,8 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20220528152522.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318222309.png)
+
 
 
 ## 使用initializer_list来构造vector

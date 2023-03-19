@@ -8,7 +8,8 @@ string模板常被叫做字符串类型，但在c++中，它属于一种模板�
 ## string的创建
 > string 的自动扩容：第一次是两倍，之后一般都稳定在1.5倍的自动扩容。
 
-![[Pasted image 20220422220209.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318213730.png)
+
 
 这是string类型有三种最常见的创建的方式
 
@@ -80,7 +81,8 @@ void Teststring1()
 	cout << s << endl;
 }
 ```
-![[Pasted image 20220424230859.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318213804.png)
+
 
 `reserve` 的使用
 ```c
@@ -99,7 +101,8 @@ void Teststring2()
 	cout << s.capacity() << endl;
 }
 ```
-![[Pasted image 20220424231658.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318213819.png)
+
 仅此得出结论，`reserve` 只会改变 容量(capacity) ,如果reserve小于string的容量空间，它也不会将空降缩小。
 
 
@@ -121,7 +124,8 @@ void TestPushBack()
 	}
 }
 ```
-![[Pasted image 20220425071241.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318213854.png)
+
 
 > 结论：string的初识容量是 16byte ，因为 '\0' 要占用一个byte，所以是15byte，第一次增容是2倍 ， 但之后的增容速率就稳定在 1.5 倍了。
 
@@ -188,7 +192,8 @@ void test_string1()
 	cout << endl;
 }
 ```
-![[Pasted image 20220425074449.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318213946.png)
+
 
 使用迭代器迭代的意义：对于string，无论是正着遍历，还是反着遍历，`[]` 和下标就已经足够使用了，但是对于其他容器(数据结构) 就就无法使用，如：`list`, `map/set`等容器不支持`[]`和下标，用的就是迭代器遍历
 
@@ -269,7 +274,8 @@ int main()
 }
 ```
 
-![[Pasted image 20220425081040.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318214001.png)
+
 
 
 `insert` 方法的使用，`insert`尽量少使用头插，因为是时间是`O(n)`
@@ -295,7 +301,8 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20220425082200.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318215441.png)
+
 
 
 
@@ -888,7 +895,8 @@ string& insert(size_t pos, const char* s)
 虽然此结果的运行结果没有毛病， 但是确实存在一些==越界问题==。
 
 若：我们定义 `string s("hello")`  , 我们要在索引1处插入字符串`abc`  
-![[Pasted image 20220511161041.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318215555.png)
+
 >1.当 end = 3 时，我们已经挪动出我们需要的空位了，但是循环还在继续。
 >2.当end= 3 时， `_str[end] = _str[end -len]` 中  `len = 3` ， `_str[3] = _str[1]` 是没问题的。
 >3.但是当end = 2时 `_str[end -len]` 中的 `end -len` 是等于  `2 - 3` 是等于 `-1` ， 这已经是越界的了。
@@ -1017,10 +1025,12 @@ int main()
 }
 ```
 如果这段代码我们使用 `c_str()` 这个函数，他就不会把 `s+='\0'` 中的 `'\0'` 当作有效字符，而是当作==**结束标志**==。
-![[Pasted image 20220511193724.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220300.png)
+
 
 但是实际上，有效字符却是 **11** 个
-![[Pasted image 20220511193959.png]]、
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220304.png)
+
 
 ##### 正确写法：
 ```cpp
@@ -1033,7 +1043,8 @@ ostream& operator<<(ostream& out, const string& s)
 	return out;
 }
 ```
-![[Pasted image 20220511194200.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220337.png)
+
 
 `\0`作为有效字符时，在vs2019中不显示，而不是用 `' '`(空格) 代替，
 
