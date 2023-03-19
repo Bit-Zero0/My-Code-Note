@@ -4,8 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722082406-j2ahkyt",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220722082417-33zp0gl\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20220722093121-qbxflw4\u0026quot;,\u0026quot;scrollTop\u0026quot;:11092,\u0026quot;focusId\u0026quot;:\u0026quot;20220722082417-zq0mi3z\u0026quot;,\u0026quot;focusStart\u0026quot;:63,\u0026quot;focusEnd\u0026quot;:63}",
 		"title": "c++默认成员函数",
-		"updated": "20220829124700"
+		"updated": "20230319132648"
 	},
 	"Children": [
 		{
@@ -232,6 +233,13 @@
 					"TextMarkTextContent": "日期类代码"
 				}
 			]
+		},
+		{
+			"ID": "20230319121859-bm9vbkj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319121859-bm9vbkj"
+			}
 		},
 		{
 			"ID": "20220722082417-0vc2cdj",
@@ -531,6 +539,13 @@
 			]
 		},
 		{
+			"ID": "20230318222559-2lb6vjg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230318222559-2lb6vjg"
+			}
+		},
+		{
 			"ID": "20220722082417-lm9rkg9",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -756,6 +771,13 @@
 			]
 		},
 		{
+			"ID": "20230319121949-vdskvux",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319121949-vdskvux"
+			}
+		},
+		{
 			"ID": "20220829124651-54j28l0",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -941,7 +963,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220722082417-1mqubaz",
-				"updated": "20220722082417"
+				"updated": "20230319122129"
 			},
 			"Children": [
 				{
@@ -954,7 +976,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "typedef int DataType;\n\nclass SeqList\n\n{\n\npublic :\n\tSeqList (int capacity = 10)\n\t{\n\t\t_pData = (DataType*)malloc(capacity * sizeof(DataType));\n\t\tassert(_pData);\n\t\t_size = 0;\n\t\t_capacity = capacity;\n\t}\n\n\t~SeqList()\n\t{\n\t\tif (_pData)\n\t\t{\n\t\tfree(_pData ); // 释放堆上的空间\n\t\t_pData = NULL; // 将指针置为空\n\t\t_capacity = 0;\n\t\t_size = 0;\n\t\t}\n\t}\n\nprivate :\n\tint* _pData ;\n\tsize_t _size;\n\tsize_t _capacity;\n};\n\n"
+					"Data": "typedef int DataType;\n\nclass SeqList\n{\npublic :\n\tSeqList (int capacity = 10)\n\t{\n\t\t_pData = (DataType*)malloc(capacity * sizeof(DataType));\n\t\tassert(_pData);\n\t\t_size = 0;\n\t\t_capacity = capacity;\n\t}\n\n\t~SeqList()\n\t{\n\t\tif (_pData)\n\t\t{\n\t\t    free(_pData ); // 释放堆上的空间\n\t\t    _pData = NULL; // 将指针置为空\n\t\t    _capacity = 0;\n\t\t    _size = 0;\n\t\t}\n\t}\n\nprivate :\n\tint* _pData ;\n\tsize_t _size;\n\tsize_t _capacity;\n};\n\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -963,27 +985,17 @@
 			]
 		},
 		{
-			"ID": "20220722082417-jeaejk3",
+			"ID": "20230318222637-llsj3zi",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20220722082417-jeaejk3",
-				"updated": "20220722082924"
+				"id": "20230318222637-llsj3zi",
+				"updated": "20230318222637"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "未被析构前"
-				}
-			]
-		},
-		{
-			"ID": "20220722082432-blzhvuv",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722082432-blzhvuv",
-				"updated": "20220722093002"
-			},
-			"Children": [
+					"Data": "未被析构前\n​"
+				},
 				{
 					"Type": "NodeImage",
 					"Data": "span",
@@ -996,7 +1008,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "assets/"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -1006,21 +1018,32 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/20220424162840.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318222613.png"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
 				}
 			]
 		},
 		{
-			"ID": "20220722082417-fx3ntyt",
+			"ID": "20230318222642-f99nu8i",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20220722082417-fx3ntyt",
-				"updated": "20220722093025"
+				"id": "20230318222642-f99nu8i"
+			}
+		},
+		{
+			"ID": "20230318222637-k2mc4wu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230318222637-k2mc4wu",
+				"updated": "20230318222637"
 			},
 			"Children": [
 				{
@@ -1039,7 +1062,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "assets/"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -1049,20 +1072,24 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/020220424162944.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318222619.png"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
 				}
 			]
 		},
 		{
-			"ID": "20220722093033-e18wphe",
+			"ID": "20230318222636-yqay78g",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20220722093033-e18wphe"
+				"id": "20230318222636-yqay78g"
 			}
 		},
 		{
@@ -1086,7 +1113,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220722082417-kbo8br2",
-				"updated": "20220722082417"
+				"updated": "20230319122407"
 			},
 			"Children": [
 				{
@@ -1099,7 +1126,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "class Stack\n{\npublic:\n\tStack(int capacity = 4)\n\t{\n\t\t_a = (int*)malloc(sizeof(int)*capacity);\n\t\tif (_a == nullptr)\n\t\t{\n\t\t\tcout \u003c\u003c \"malloc fail\\n\" \u003c\u003c endl;\n\t\t\texit(-1);\n\t\t}\n\n\t\t_top = 0;\n\t\t_capacity = capacity;\n\t}\n\n\tvoid Push(int x)\n\t{}\n\n\t// 如果我们不写默认生成析构函数和构造函数类似\n\t// 对于内置类型不做处理\n\t// 对于自定义类型回去调用它的析构函数\n\t~Stack()\n\t{\n\t\tfree(_a);\n\t\t_a = nullptr;\n\t\t_top = _capacity = 0;\n\t}\nprivate:\n\tint* _a;\n\tsize_t _top;\n\tsize_t _capacity;\n};\n\n// 两个栈实现一个队列\nclass MyQueue {\npublic:\n\t// 默认生成构造函数和析构函数会对自定义类型成员调用他的构造和析构\n\tvoid push(int x) {\n\n\t}\nprivate:\n\tStack pushST;\n\tStack popST;\n};\n\nint main()\n{\n\n\tStack s1;\n\t//Stack s2(20);\n\n\tMyQueue mq;\n\n\treturn 0;\n}\n"
+					"Data": "class Stack\n{\npublic:\n\tStack(int capacity = 4)\n\t{\n\t\t_a = (int*)malloc(sizeof(int)*capacity);\n\t\tif (_a == nullptr)\n\t\t{\n\t\t\tcout \u003c\u003c \"malloc fail\\n\" \u003c\u003c endl;\n\t\t\texit(-1);\n\t\t}\n\n\t\t_top = 0;\n\t\t_capacity = capacity;\n\t}\n\n\tvoid Push(int x)\n\t{}\n\n\t// 如果我们不写默认生成析构函数和构造函数类似\n\t// 对于内置类型不做处理\n\t// 对于自定义类型会去调用它的析构函数\n\t~Stack()\n\t{\n\t\tfree(_a);\n\t\t_a = nullptr;\n\t\t_top = _capacity = 0;\n\t}\nprivate:\n\tint* _a;\n\tsize_t _top;\n\tsize_t _capacity;\n};\n\n// 两个栈实现一个队列\nclass MyQueue {\npublic:\n\t// 默认生成构造函数和析构函数会对自定义类型成员调用他的构造和析构\n\tvoid push(int x) {\n\n\t}\nprivate:\n\tStack pushST;\n\tStack popST;\n};\n\nint main()\n{\n\n\tStack s1;\n\t//Stack s2(20);\n\n\tMyQueue mq;\n\n\treturn 0;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -1144,9 +1171,13 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722084102-aekda3z",
-				"updated": "20220722092917"
+				"updated": "20230318222714"
 			},
 			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
 				{
 					"Type": "NodeImage",
 					"Data": "span",
@@ -1175,8 +1206,19 @@
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
 				}
 			]
+		},
+		{
+			"ID": "20230318222722-3pc4juf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230318222722-3pc4juf"
+			}
 		},
 		{
 			"ID": "20220722082417-tbee9av",
@@ -1398,9 +1440,13 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722082417-7m4yzpa",
-				"updated": "20220722092942"
+				"updated": "20230318223054"
 			},
 			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​​"
+				},
 				{
 					"Type": "NodeImage",
 					"Data": "span",
@@ -1413,7 +1459,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "assets/"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -1423,12 +1469,16 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/020220424163942.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318223047.png"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​​"
 				}
 			]
 		},
@@ -1507,6 +1557,13 @@
 			]
 		},
 		{
+			"ID": "20230319122739-nk5szxb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319122739-nk5szxb"
+			}
+		},
+		{
 			"ID": "20220722082417-4lgy1l7",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -1526,12 +1583,17 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722082417-tasjfqg",
-				"updated": "20220722082417"
+				"updated": "20230319122744"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "默认是生成的拷贝构造，只是对值进行浅拷贝"
+					"Data": "默认是生成的拷贝构造，只是对值进行"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "浅拷贝"
 				}
 			]
 		},
@@ -1645,9 +1707,13 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722082417-64p89gu",
-				"updated": "20220722093111"
+				"updated": "20230318224054"
 			},
 			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​​"
+				},
 				{
 					"Type": "NodeImage",
 					"Data": "span",
@@ -1660,7 +1726,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "assets/"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -1670,12 +1736,16 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/020220424170023.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318224049.png"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​​"
 				}
 			]
 		},
@@ -1683,7 +1753,46 @@
 			"ID": "20220722093115-4671dha",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20220722093115-4671dha"
+				"id": "20220722093115-4671dha",
+				"updated": "20230319123032"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果现在要一起把"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "s1"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 和 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "s2"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​释放了, 那就构成了指针的二次释放,这是非常严重的问题!!!"
+				}
+			]
+		},
+		{
+			"ID": "20230319122852-2gk0nf8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319122852-2gk0nf8"
+			}
+		},
+		{
+			"ID": "20230319122853-07zidl8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319122853-07zidl8"
 			}
 		},
 		{
@@ -1720,12 +1829,21 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722082417-ndibi3f",
-				"updated": "20220722082417"
+				"updated": "20230319123138"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "函数原型：返回值类型 operator操作符(参数列表)"
+					"Data": "函数原型："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "返回值类型 operator操作符(参数列表)"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
 				}
 			]
 		},
@@ -1986,7 +2104,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220722082417-rc11f54",
-				"updated": "20220722082417"
+				"updated": "20230319123256"
 			},
 			"Children": [
 				{
@@ -1999,13 +2117,20 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "class Date\n\n{\n\npublic:\n\tDate(int year = 1900, int month = 1, int day = 1)\n\t{\n\t\t_year = year;\n\t\t_month = month;\n\t\t_day = day;\n\t}\n\nint _year;\nint _month;\nint _day;\n};\n\n\n// 这里会发现运算符重载成全局的就需要成员变量是共有的，那么问题来了，封装性如何保证？\n// 这里其实可以用我们后面学习的友元解决，或者干脆重载成成员函数。\nbool operator==(const Date\u0026 d1, const Date\u0026 d2)\n{\n\treturn d1._year == d2._year;\n\t\u0026\u0026 d1._month == d2._month\n\t\u0026\u0026 d1._day == d2._day;\n}\n\nvoid Test ()\n{\n\tDate d1(2018, 9, 26);\n\tDate d2(2018, 9, 27);\n\tcout\u003c\u003c(d1 == d2)\u003c\u003cendl;\n}\n"
+					"Data": "class Date\n{\npublic:\n\tDate(int year = 1900, int month = 1, int day = 1)\n\t{\n\t\t_year = year;\n\t\t_month = month;\n\t\t_day = day;\n\t}\n\n        int _year;\n        int _month;\n        int _day;\n};\n\n\n// 这里会发现运算符重载成全局的就需要成员变量是共有的，那么问题来了，封装性如何保证？\n// 这里其实可以用我们后面学习的友元解决，或者干脆重载成成员函数。\nbool operator==(const Date\u0026 d1, const Date\u0026 d2)\n{\n\treturn d1._year == d2._year;\n\t\u0026\u0026 d1._month == d2._month\n\t\u0026\u0026 d1._day == d2._day;\n}\n\nvoid Test ()\n{\n\tDate d1(2018, 9, 26);\n\tDate d2(2018, 9, 27);\n\tcout\u003c\u003c(d1 == d2)\u003c\u003cendl;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
 					"Data": "```"
 				}
 			]
+		},
+		{
+			"ID": "20230319123335-8brlnkk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319123335-8brlnkk"
+			}
 		},
 		{
 			"ID": "20220722082417-91rcihf",
@@ -2054,6 +2179,13 @@
 			]
 		},
 		{
+			"ID": "20230319123407-q26243p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319123407-q26243p"
+			}
+		},
+		{
 			"ID": "20220722082417-bqahge9",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -2096,6 +2228,13 @@
 			]
 		},
 		{
+			"ID": "20230319123517-pp6bl6b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230319123517-pp6bl6b"
+			}
+		},
+		{
 			"ID": "20220722082417-h0jx5bo",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -2115,7 +2254,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722082417-l7pjate",
-				"updated": "20220722093139"
+				"updated": "20230318225531"
 			},
 			"Children": [
 				{
@@ -2138,7 +2277,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "。\n​"
+					"Data": "。\n​​"
 				},
 				{
 					"Type": "NodeImage",
@@ -2152,7 +2291,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "assets/"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -2162,12 +2301,16 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/020220424173601.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318225525.png"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​​"
 				}
 			]
 		},
@@ -2239,7 +2382,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220722082417-zq0mi3z",
-				"updated": "20220722082417"
+				"updated": "20230319132648"
 			},
 			"Children": [
 				{
@@ -2252,7 +2395,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "class Date\n{\npublic :\n\tDate* operator\u0026()\n\t{\n\t\treturn this ;\n\t}\n\n\tconst Date* operator\u0026()const\n\t{\n\t\treturn this ;\n\t}\n\nprivate :\n\tint _year ; // 年\n\tint _month ; // 月\n\tint _day ; // 日\n};\n"
+					"Data": "class Date\n{\npublic :\n\tDate* operator\u0026()\n\t{\n\t\treturn this ;\n\t}\n\n\tconst Date* operator\u0026() const\n\t{\n\t\treturn this ;\n\t}\n\nprivate :\n\tint _year ; // 年\n\tint _month ; // 月\n\tint _day ; // 日\n};\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",

@@ -467,9 +467,11 @@ template<class T>
 ```
 
 这部分的其实就是指定迭代器所用的模板参数
-![[Pasted image 20220518220442.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220547.png)
+
 对应的就是`__list_iterator`中 `self` 中的 ==模板== 
-![[Pasted image 20220518220728.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230318220550.png)
+
 
 ## `list` 迭代器失效
 在list的增删查改中，都有可能会出现迭代器失效。
