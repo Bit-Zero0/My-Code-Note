@@ -1,0 +1,2089 @@
+{
+	"ID": "20230321205944-lcojw9h",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230321205944-lcojw9h",
+		"title": "第一行Android项目",
+		"updated": "20230321210042"
+	},
+	"Children": [
+		{
+			"ID": "20230321205958-gllmisg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-gllmisg",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接下来我们一起分析一下HelloWorld项目究竟是怎么运行起来的吧。首先打开"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Android-Manifest.xml"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件，从中可以找到如下代码："
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-fp9qi18",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-fp9qi18",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cactivity android:name=\".HelloWorldActivity\"\u003e\n\t\u003cintent-filter\u003e\n\t\t\u003caction android:name=\"android.intent.action.MAIN\" /\u003e\n\t\t\u003ccategory android:name=\"android.intent.category.LAUNCHER\" /\u003e\n\t\u003c/intent-filter\u003e\n\u003c/activity\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-2li4rq1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-2li4rq1",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这段代码表示对HelloWorldActivity这个活动进行注册，没有在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "AndroidManifest.xml"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "里注册的活动是不能使用的。其中"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "intent-filter"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "里的两行代码非常重要，和表示HelloWorldActivity是这个项目的主活动，在手机上点击应用图标，首先启动的就是这个活动。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-1gfoyaa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-1gfoyaa",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那HelloWorldActivity具体又有什么作用呢？我在介绍Android四大组件的时候说过，活动是Android应用程序的门面，凡是在应用中你看得到的东西，都是放在活动中的。打开HelloWorldActivity，代码如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-zxjjx4u",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-zxjjx4u",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class MainActivity extends AppCompatActivity {\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-387508g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-387508g",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "HelloWorldActivity"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是继承自"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "AppCompatActivity"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的，这是一种"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "向下兼容的Activity"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，可以将Activity在各个系统版本中增加的特性和功能最低兼容到Android 2.1系统。"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Activity是Android系统提供的一个活动基类，我们项目中所有的活动都必须继承它或者它的子类才能拥有活动的特性"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "AppCompatActivity是Activity的子类"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）。然后可以看到HelloWorldActivity中有一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "onCreate()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法，这个方法是一个活动被创建时必定要执行的方法，其中只有两行代码，并且没有Hello World！的字样"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-44g5kzn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-44g5kzn",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实Android程序的设计讲究逻辑和视图分离，因此是不推荐在活动中直接编写界面的，更加通用的一种做法是，在布局文件中编写界面，然后在活动中引入进来。可以看到，在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "onCreate()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法的第二行调用了"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "setContentView()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法，就是这个方法给当前的活动引入了一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "activity_main"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "布局，那Hello World！一定就是在这里定义的了"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-tab9njo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-tab9njo",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "布局文件都是定义在res/layout目录下的，当你展开layout目录，你会看到hello_world_layout.xml这个文件。打开该文件并切换到Text视图，代码如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-mfgzf87",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-mfgzf87",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"utf-8\"?\u003e\n\u003candroidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\"\u003e\n\n    \u003cTextView\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Hello World!\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" /\u003e\n\n\u003c/androidx.constraintlayout.widget.ConstraintLayout\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-jn26lsv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-jn26lsv",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "后面我会对布局进行详细讲解的，你现在只需要看到上面代码中有一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "TextView"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "这是Android系统提供的一个控件"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，用于在布局中显示文字的。然后你终于在TextView中看到了Hello World！的字样！哈哈！终于找到了，原来就是通过"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "android:text=\u0026quot;Hello World! \u0026quot;"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​这句代码定义的"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-q4vhh3q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230321205958-q4vhh3q",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "详解项目中的资源"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-4kaorj2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-4kaorj2",
+				"updated": "20230321210022"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20230313143245"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20230313143245-20230321210022-d1x58c3.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "所有以drawable开头的文件夹都是"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "用来放图片的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所有以mipmap开头的文件夹都是用来"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "放应用图标的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所有以values开头的文件夹都是用来"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "放字符串、样式、颜色等配置的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，layout文件夹是用来"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "放布局文件"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的。"
+				}
+			]
+		},
+		{
+			"ID": "20230321210038-7xmiihi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321210038-7xmiihi"
+			}
+		},
+		{
+			"ID": "20230321210040-4qssnjd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321210040-4qssnjd",
+				"updated": "20230321210042"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20230313143750"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20230313143750-20230321210042-k5u688r.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-ivsaz4c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-ivsaz4c",
+				"updated": "20230321210038"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "mipmap"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "开头的文件夹，其实主要是为了让程序能够更好地兼容各种设备。"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "drawable"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件夹也是相同的道理，虽然Android Studio没有帮我们自动生成，但是我们应该自己创建"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "drawable-hdpi"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "drawable-xhdpi"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "drawable-xxhdpi"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "等文件夹。在制作程序的时候最好能够给同一张图片提供几个不同分辨率的版本，分别放在这些文件夹下，然后当程序运行的时候，会自动根据当前运行设备分辨率的高低选择加载哪个文件夹下的图片。当然这只是理想情况，更多的时候美工只会提供给我们一份图片，这时你就把所有图片都放在drawable-xxhdpi文件夹下就好了。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-d1pmkcd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-d1pmkcd",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "知道了res目录下每个文件夹的含义，我们再来看一下如何去使用这些资源吧。打开"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "res/values/strings.xml"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件，内容如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-5svpz1h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-5svpz1h",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cresources\u003e  \n    \u003cstring name=\"app_name\"\u003eMy Application\u003c/string\u003e  \n\u003c/resources\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-oiyljrk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-oiyljrk",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到，这里定义了一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "应用程序名"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的字符串，我们有以下两种方式来引用它。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-22p6h0m",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230321205958-22p6h0m",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"ID": "20230321205958-l9559sm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-l9559sm",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-jufrguh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-jufrguh",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在代码中通过"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "R.string.app_name"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​可以获得该字符串的引用。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230321205958-6g4chqn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-6g4chqn",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-ct65qli",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-ct65qli",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在XML中通过"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "@string/app_name"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​可以获得该字符串的引用。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-wgcke6a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-wgcke6a",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本的语法就是上面这两种方式，其中string部分是可以替换的，如果是引用的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "图片资源"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "就可以替换成"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "drawable"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，如果是引用的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "应用图标"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "就可以替换成"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "mipmap"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，如果是引用的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "布局文件"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "就可以替换成"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "layout"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-mmyrlm8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-mmyrlm8",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面举一个简单的例子来帮助你理解，打开"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "AndroidManifest.xml"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件，找到如下代码："
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-ycwcqz0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-ycwcqz0",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003capplication\n\tandroid:allowBackup=\"true\"  \n\tandroid:dataExtractionRules=\"@xml/data_extraction_rules\"  \n\tandroid:fullBackupContent=\"@xml/backup_rules\"  \n\tandroid:icon=\"@mipmap/ic_launcher\"  \n\tandroid:label=\"@string/app_name\"  \n\tandroid:supportsRtl=\"true\"  \n\tandroid:theme=\"@style/Theme.MyApplication\"  \n\ttools:targetApi=\"31\"\u003e\n\t...\n\u003c/application\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-indawtm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-indawtm",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "HelloWorld项目的应用图标就是通过"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "android:icon"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​属性来指定的，应用的名称则是通过"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "android:label"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​属性指定的。可以看到，这里对资源引用的方式正是我们刚刚学过的在XML中引用资源的语法。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-mrj7mps",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230321205958-mrj7mps",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "详解build.gradle文件"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-g99ua5l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-g99ua5l",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不同于Eclipse, Android Studio是采用Gradle来构建项目的。Gradle是一个非常先进的项目构建工具，它使用了一种基于Groovy的领域特定语言（DSL）来声明项目设置，摒弃了传统基于XML（如Ant和Maven）的各种烦琐配置。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-oc2bh1o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-oc2bh1o",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "HelloWorld项目中有两个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "build.gradle"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "一个是在最外层目录下的，一个是在app目录下的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。这两个文件对构建Android Studio项目都起到了至关重要的作用，下面我们就来对这两个文件中的内容进行详细的分析。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-o69xhtf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230321205958-o69xhtf",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Android闭包解析"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-gusewpu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-gusewpu",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "plugins {\n    id 'com.android.application'\n}\n\nandroid {\n    namespace 'com.example.myapplication'\n    compileSdk 33\n\n    defaultConfig {\n        applicationId \"com.example.myapplication\"\n        minSdk 24\n        targetSdk 33\n        versionCode 1\n        versionName \"1.0\"\n\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n    }\n\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n    compileOptions {\n        sourceCompatibility JavaVersion.VERSION_1_8\n        targetCompatibility JavaVersion.VERSION_1_8\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-2l2qceg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-2l2qceg",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个文件中的内容就要相对复杂一些了，下面我们一行行地进行分析。首先第一行应用了一个插件，一般有两种值可选："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "com.android.application"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​表示这是一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "应用程序模块"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "com.android.library"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​表示这是一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "库模块"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。应用程序模块和库模块的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "最大区别在于，一个是可以直接运行的，一个只能作为代码库依附于别的应用程序模块来运行"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-wsqvclr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-wsqvclr",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "defaultConfig {\n        applicationId \"com.example.myapplication\"\n        minSdk 24\n        targetSdk 33\n        versionCode 1\n        versionName \"1.0\"\n\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-fdsbvqk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-fdsbvqk",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "然后我们看到，这里在android闭包中又嵌套了一个 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "defaultConfig"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "闭包"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "defaultConfig"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​闭包中可以对项目的更多细节进行配置。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "其中，applicationId用于指定项目的包名，前面我们在创建项目的时候其实已经指定过包名了，如果你想在后面对其进行修改，那么就是在这里修改的。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "minSdkVersion"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​用于指定项目最低兼容的Android系统版本，这里指定成24表示最低兼容到Android 7.0系统。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "targetSdkVersion"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​指定的值表示你在该目标版本上已经做过了充分的测试，系统将会为你的应用程序启用一些最新的功能和特性。比如说Android 6.0系统中引入了运行时权限这个功能，如果你将"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "targetSdkVersion"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​指定成23或者更高，那么系统就会为你的程序启用运行时权限功能，而如果你将"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "targetSdkVersion"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​指定成22，那么就说明你的程序最高只在Android 5.1系统上做过充分的测试，Android 6.0系统中引入的新功能自然就不会启用了。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "剩下的两个属性都比较简单，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "versionCode"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​用于指定项目的版本号，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "versionName"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​用于指定项目的版本名,这两个属性在生成安装文件的时候非常重要，我们在后面都会学到。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-56z0ecl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-56z0ecl",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-eneu6xn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-eneu6xn",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们看一下"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "buildTypes"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​闭包。"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "buildTypes"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​闭包中用于指定生成安装文件的相关配置，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "通常只会有两个子闭包，一个是_debug_，一个是_release_"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "debug闭包"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "用于指定生成测试版安装文件的配置，release闭包用于指定生成正式版安装文件的配置。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "另外，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "debug闭包是可以忽略不写的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，因此我们看到上面的代码中就只有一个release闭包。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-6n344j2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-6n344j2",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面来看一下"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "em strong",
+					"TextMarkTextContent": "release闭包"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中的具体内容吧"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "minifyEnabled"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​用于指定是否对项目的代码进行混淆，true表示混淆，false表示不混淆。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "proguardFiles"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​用于指定混淆时使用的规则文件，这里指定了两个文件"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-tzb354f",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230321205958-tzb354f",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"ID": "20230321205958-t2oaix6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-t2oaix6",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-wxmh141",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-wxmh141",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "第一个"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong code",
+									"TextMarkTextContent": "proguard-android.txt"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "是在Android SDK目录下"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的，里面是"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "所有项目通用的混淆规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230321205958-nsdi282",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-nsdi282",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-pffmiqw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-pffmiqw",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "第二个"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong code",
+									"TextMarkTextContent": "proguard-rules.pro"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "是在当前项目的根目录下"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的，里面可以编写"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "当前项目特有的混淆规则"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230321205958-xnxc8ta",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-xnxc8ta",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-i87f7mv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-i87f7mv",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "需要注意的是，通过Android Studio直接运行项目生成的都是测试版安装文件"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-swlok7v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230321205958-swlok7v",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "dependencies闭包解析"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-chefmnk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-chefmnk",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anM="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "dependencies {\n    implementation 'androidx.appcompat:appcompat:1.4.1'\n    implementation 'com.google.android.material:material:1.5.0'\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'\n    testImplementation 'junit:junit:4.13.2'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-lhjeuwk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-lhjeuwk",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这样整个android闭包中的内容就都分析完了，接下来还剩一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "dependencies闭包"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。_"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "这个闭包的功能非常强大，它可以指定当前项目所有的依赖关系"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "_。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-06p1wic",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-06p1wic",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通常Android Studio项目一共有3种依赖方式："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "本地依赖"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "库依赖"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "远程依赖"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-gg1f56j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-gg1f56j",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "本地依赖可以对本地的Jar包或目录添加依赖关系，库依赖可以对项目中的库模块添加依赖关系，远程依赖则可以对jcenter库上的开源项目添加依赖关系。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-4rosa7w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-4rosa7w",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "观察一下dependencies闭包中的配置，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "implementation"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​则是"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "远程依赖声明"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "androidx.appcompat:appcompat:1.4.1"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​就是一个标准的远程依赖库格式，其中"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "androidx.appcompat"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是域名部分，用于和其他公司的库做区分；appcompat是工程名部分，用于和同一个公司中不同的库工程做区分；1.4.1是版本号，用于和同一个库不同的版本做区分。加上这句声明后，Gradle在构建项目时会首先检查一下本地是否已经有这个库的缓存，如果没有的话则会自动联网下载，然后再添加到项目的构建路径中。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-zcrcupp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-zcrcupp",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "至于"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "库依赖声明"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这里"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "没有用到"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，它的基本格式是"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "implementation project"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后面加上要依赖的库的名称，比如有一个库模块的名字叫helper，那么添加这个库的依赖关系只需要加入"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "implementation project(':helper')"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​这句声明即可"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-5iz1hzw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-5iz1hzw",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外剩下的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "testImplementation"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "androidTestImplementation"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​都是用于"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "声明测试用例库"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的，这个我们暂时用不到，先忽略它就可以了。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-k9zpbgc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230321205958-k9zpbgc",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "日记工具的使用"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-vjpjgwx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230321205958-vjpjgwx",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用Android的日志工具"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-8d83tgi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-8d83tgi",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Android中的日志工具类是Log（android.util.Log），这个类中提供了如下5个方法来供我们打印日志。"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-v1hvt4o",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230321205958-v1hvt4o",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"ID": "20230321205958-vsxi0dy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-vsxi0dy",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-69r1ahv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-69r1ahv",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Log.v()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​。用于打印那些最为琐碎的、意义最小的日志信息。对应级别verbose，是Android日志里面级别最低的一种。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230321205958-xyxqygw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-xyxqygw",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-qs68o8i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-qs68o8i",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Log.d()。"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​用于打印一些调试信息，这些信息对你调试程序和分析问题应该是有帮助的。对应级别debug，比verbose高一级。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230321205958-1f7arpt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-1f7arpt",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-2md7ne6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-2md7ne6",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Log.i()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​。用于打印一些比较重要的数据，这些数据应该是你非常想看到的、可以帮你分析用户行为数据。对应级别info，比debug高一级。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230321205958-00epil0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-00epil0",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-jbex0i1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-jbex0i1",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Log.w()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​。用于打印一些警告信息，提示程序在这个地方可能会有潜在的风险，最好去修复一下这些出现警告的地方。对应级别warn，比info高一级。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230321205958-v2cedrl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230321205958-v2cedrl",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"ID": "20230321205958-wwzkr9r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230321205958-wwzkr9r",
+								"updated": "20230321205958"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Log.e()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​。用于打印程序中的错误信息，比如程序进入到了catch语句当中。当有错误信息打印出来的时候，一般都代表你的程序出现严重问题了，必须尽快修复。对应级别error，比warn高一级。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-2rmpiq8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-2rmpiq8",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打开HelloWorldActivity，在onCreate()方法中添加一行打印日志的语句，如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-qiytrfu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230321205958-qiytrfu",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "protected void onCreate(Bundle savedInstanceState) {\n\tsuper.onCreate(savedInstanceState);\n\tsetContentView(R.layout.hello_world_layout);\n\tLog.d(\"HelloWorldActivity\", \"onCreate execute\");\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-exryqci",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230321205958-exryqci",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230321205958-n6do6hh",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230321205958-n6do6hh",
+						"updated": "20230321205958"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "​"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "Log.d()"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​方法中传入了两个参数："
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "第一个参数是tag，一般传入当前的类名就好，主要用于对打印信息进行过滤；"
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "第二个参数是msg，即想要打印的具体的内容。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-rxbujqe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230321205958-rxbujqe",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "现在可以重新运行一下HelloWorld这个项目了，点击顶部工具栏上的运行按钮，或者使用快捷键"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Shift + F10"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​（Mac系统是control + R），等程序运行完毕，点击Android Studio底部工具栏的Android Monitor，在logcat中就可以看到打印信息了"
+				}
+			]
+		},
+		{
+			"ID": "20230321205958-fbbzdp1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230321205958-fbbzdp1",
+				"updated": "20230321205958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么使用Log而不使用System.out"
+				}
+			]
+		}
+	]
+}
