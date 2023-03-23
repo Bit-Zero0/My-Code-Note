@@ -6,9 +6,137 @@
 		"id": "20221228220332-uymqj2j",
 		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221228220345-uw6kutq\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221228220345-tc94qbh\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20221228220345-uw6kutq\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
 		"title": "链表",
-		"updated": "20221228220345"
+		"updated": "20230323214510"
 	},
 	"Children": [
+		{
+			"ID": "20230323214457-3eld0xa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230323214457-3eld0xa",
+				"updated": "20230323214457"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "707.设计了链表"
+				}
+			]
+		},
+		{
+			"ID": "20230323214457-a6ti6b3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323214457-a6ti6b3",
+				"updated": "20230323214457"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/design-linked-list/",
+					"TextMarkTextContent": "707. 设计链表"
+				}
+			]
+		},
+		{
+			"ID": "20230323214457-fmhvgl9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230323214457-fmhvgl9",
+				"updated": "20230323214457"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230323214457-japs2zx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323214457-japs2zx",
+				"updated": "20230323214510"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实就是写个链表,我们这里就写个带头的单链表与双向链表"
+				}
+			]
+		},
+		{
+			"ID": "20230323214457-su7axw7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230323214457-su7axw7",
+				"updated": "20230323214457"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230323214457-bwtby2y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230323214457-bwtby2y",
+				"updated": "20230323214457"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "单链表版"
+				}
+			]
+		},
+		{
+			"ID": "20230323214457-mwwf7h9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230323214457-mwwf7h9",
+				"updated": "20230323214457"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class MyLinkedList {\n\npublic:\n    struct LinkNode{\n        int _val;\n        LinkNode* _next = nullptr;\n        LinkNode(int val)\n            :_val(val)\n            ,_next(nullptr)\n        {}\n    };\n\nprivate:\n    int _size;\n    LinkNode* head;\n\npublic:\n  \n    MyLinkedList() {\n        _size = 0;\n        head = new LinkNode(0);\n    }\n  \n    int get(int index) {\n        if(index \u003e= _size || index \u003c 0) return -1;\n        LinkNode* cur = head-\u003e_next;\n    \n        while(index--)\n        {\n            cur= cur-\u003e_next;\n        }\n        return cur-\u003e_val;\n    }\n  \n    void addAtHead(int val) {\n        LinkNode* NewNode = new LinkNode(val);\n        NewNode-\u003e_next = head-\u003e_next;\n        head-\u003e_next = NewNode;\n        _size++;\n    }\n  \n    void addAtTail(int val) {\n        LinkNode* cur = head;\n        while(cur-\u003e_next != nullptr)\n        {\n            cur = cur-\u003e_next;\n        }\n        LinkNode* NewNode = new LinkNode(val); \n        cur-\u003e_next = NewNode;\n        _size++;\n    }\n  \n    void addAtIndex(int index, int val) {\n        if(index \u003e _size || index \u003c 0) return;\n        if(index == _size) \n        {\n            addAtTail(val);\n            return;\n        }\n        if(index == 0)\n        {\n            addAtHead(val);\n            return;\n        }\n\n        LinkNode* cur = head;\n        while(index--)\n        {\n            cur = cur-\u003e_next;\n        }\n        LinkNode* NewNode = new LinkNode(val);\n\n        NewNode-\u003e_next = cur-\u003e_next;\n        cur-\u003e_next = NewNode; \n        _size++;\n        return ;\n    }\n  \n    void deleteAtIndex(int index) {\n        if(_size == 0 || index \u003c 0 || index\u003e=_size) return ;\n\n        LinkNode *cur = head;\n        while(index--)\n        {\n            cur = cur-\u003e_next;\n        }\n        LinkNode* tmp = cur-\u003e_next;\n        cur-\u003e_next = cur-\u003e_next-\u003e_next;\n        delete tmp;\n        _size--;\n    }\n\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230323214456-njtaypp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323214456-njtaypp"
+			}
+		},
 		{
 			"ID": "20221228220345-uw6kutq",
 			"Type": "NodeHeading",

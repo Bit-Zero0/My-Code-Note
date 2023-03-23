@@ -1,33 +1,57 @@
 /* 对话框 */
-@import url(/appearance/themes/Dark+/style/module/config.css);
-@import url(/widgets/custom.css);
+#keymapList .b3-list--border > .b3-list-item.toggle {
+  margin: 0 !important;
+}
+#keymapList .b3-list--border > .b3-list-item.toggle ~ div .b3-list-item::before {
+  left: -23px;
+  border-left: var(--custom-list-guides-line-width) solid var(--custom-list-guides-line-color);
+}
+#keymapList .b3-list--border > .b3-list-item.toggle ~ div .b3-list-item + div::before {
+  left: -57px;
+  border-left: var(--custom-list-guides-line-width) solid var(--custom-list-guides-line-color);
+}
 .b3-dialog__container {
   /* 对话框图片 */
   background-image: var(--custom-background-image-dialog);
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-attachment: fixed !important;
-  background-color: transparent !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: transparent;
+  border-radius: var(--custom-border-radius) !important;
+}
+.b3-dialog__container > .b3-dialog__close {
+  border-radius: 50%;
 }
 .b3-dialog__container > .b3-dialog__close:hover {
   /* 关闭按钮 */
+  color: var(--b3-theme-surface);
   background-color: var(--b3-theme-on-surface);
 }
 .b3-dialog__container > .b3-dialog__header {
   background-color: var(--custom-dialog-background-color);
 }
-.b3-dialog__container > div:nth-child(3) {
+.b3-dialog__container > .b3-dialog__header + div {
   background-color: var(--custom-dialog-background-color);
+  border-radius: inherit;
 }
-.b3-dialog__container > div:nth-child(3) .search__header,
-.b3-dialog__container > div:nth-child(3) .search__header > input {
+.b3-dialog__container .b3-dialog__content {
+  background-color: transparent !important;
+}
+.b3-dialog__container .config__tab-container {
   background-color: transparent;
 }
-.b3-dialog__container > div:nth-child(3) .layout-tab-bar {
+.b3-dialog__container .fn__flex-column {
+  border-radius: inherit;
+}
+.b3-dialog__container .fn__flex-column .search__header,
+.b3-dialog__container .fn__flex-column .search__header > input {
   background-color: transparent;
 }
-.b3-dialog__container > div:nth-child(3) .layout-tab-bar .item__text {
+.b3-dialog__container .fn__flex-column .layout-tab-bar {
+  background-color: transparent;
+}
+.b3-dialog__container .fn__flex-column .layout-tab-bar .item .item__text {
   /* 对话框页签 */
   padding: 0 0.5em;
 }
@@ -47,7 +71,61 @@
   min-width: 100px;
   width: auto !important;
 }
-/* 搜索结果列表 */
+.search__header .search__path {
+  height: 16px;
+}
+.search__header .search__path .search__rmpath {
+  /* 搜索路径移除按钮 */
+  top: 0;
+  background-color: transparent;
+}
+.search__header .search__path .search__rmpath:hover {
+  color: var(--b3-theme-surface);
+  background-color: var(--b3-theme-on-surface);
+}
+#searchList > .b3-list-item[data-type="search-item"],
+.search__list > .b3-list-item[data-type="search-item"] {
+  /* 未分组 */
+  padding-bottom: calc(1.25em + 1px);
+}
+#searchList > .b3-list-item[data-type="search-item"] .b3-list-item__text,
+.search__list > .b3-list-item[data-type="search-item"] .b3-list-item__text {
+  display: var(--custom-search-display);
+}
+#searchList > .b3-list-item[data-type="search-item"] .b3-list-item__meta,
+.search__list > .b3-list-item[data-type="search-item"] .b3-list-item__meta {
+  position: absolute;
+  right: 8px;
+  bottom: 0.25em;
+  max-width: calc(100% - 12px);
+  line-height: 1.25em;
+}
+#searchList > .b3-list-item:not([data-type="search-item"]),
+.search__list > .b3-list-item:not([data-type="search-item"]) {
+  outline-color: var(--b3-theme-on-surface);
+}
+#searchList > .b3-list-item:not([data-type="search-item"]) .b3-list-item__text,
+.search__list > .b3-list-item:not([data-type="search-item"]) .b3-list-item__text {
+  color: var(--custom-popover-menu-path-color);
+}
+.b3-list.b3-list--background > .b3-list-item[data-type="card-item"] {
+  /* 卡包列表 */
+  padding-bottom: calc(1.25em + 1px);
+}
+.b3-list.b3-list--background > .b3-list-item[data-type="card-item"] .b3-list-item__text {
+  display: var(--custom-search-display);
+}
+.b3-list.b3-list--background > .b3-list-item[data-type="card-item"] .b3-list-item__meta {
+  position: absolute;
+  right: 8px;
+  bottom: 0.25em;
+  max-width: calc(100% - 12px);
+  line-height: 1.25em;
+}
+/* 搜索输入框 */
+.search__header,
+#searchInput,
+#replaceInput,
 #searchList,
 #searchPreview {
   background-color: transparent;
@@ -56,14 +134,23 @@
 #historyContainer > * {
   background-color: transparent !important;
 }
+#historyContainer .history__repo .history__repoheader {
+  /* 历史控件栏 */
+  border-top: 1px solid var(--b3-scroll-color);
+  border-bottom: 1px solid var(--b3-scroll-color);
+}
 #historyContainer .history__asset,
 #historyContainer .history__text {
   /* 历史对话框内容框 */
   background-color: transparent;
 }
-#historyContainer .b3-dialog__scrim {
+.b3-dialog__scrim {
   /* 对话框遮罩 */
-  background-color: var(--custom-dialog-scrim-background-color);
+  background-color: var(--custom-scrim-background-color) !important;
+}
+/* 闪卡显示容器 */
+.b3-dialog__cardblock {
+  outline: 1px solid var(--b3-scroll-color);
 }
 /* 搜索控件 */
 /* div.b3-dialog__container div.fn__flex-column>div.b3-form__space--small {
@@ -74,38 +161,49 @@
  *  REF: [自定义样式：搜索窗口改造（窗口放大+左右布局） - 链滴](https: //ld246.com/article/1648269766832)
  */
 /* 搜索对话框尺寸 */
-body > div[data-key] > .b3-dialog > .b3-dialog__container,
-body > div[data-key] > .b3-dialog > .b3-dialog__container > div > .fn__flex > .fn__flex-column {
+body > .b3-dialog--open:has(#searchInput) > .b3-dialog > .b3-dialog__container:not(:has(.b3-dialog__cardblock, .b3-dialog--switch)),
+body > .b3-dialog--open:has(#searchInput) > .b3-dialog > .b3-dialog__container > div[style*="height"]:not(:has(.b3-dialog__cardblock, .b3-dialog--switch)) {
   width: var(--custom-dialog-search-width) !important;
   height: var(--custom-dialog-search-height) !important;
 }
-body > div[data-key] > .b3-dialog > .b3-dialog__container > .b3-dialog__close {
+body > .b3-dialog--open:has(#searchInput) > .b3-dialog > .b3-dialog__container > .b3-dialog__close {
   /* 调整搜索框关闭按钮位置, 避免被遮挡 */
   right: calc((100vw - var(--custom-dialog-search-width)) / -2);
 }
-/* 窗口较宽时并排显示搜索结果 */
-@media screen and (min-width: 960px) {
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column {
-    /* 弹性盒子模式: 水平显示, 必要时折行 */
-    flex-direction: row !important;
-    flex-wrap: wrap;
-  }
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column *:is(.search__header, .b3-form__space--small) {
-    /* 设置需要占满一行的项目 */
-    width: 100%;
-  }
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column #searchList,
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column #searchPreview {
-    /* 搜索结果与搜索结果预览分栏 */
-    float: left;
-    width: 50% !important;
-  }
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column .search__header:first-child + .search__header:is(.fn__none) ~ #searchList,
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column .search__header:first-child + .search__header:is(.fn__none) ~ #searchPreview {
-    height: calc(100% - 92px) !important;
-  }
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column .search__header:first-child + .search__header:not(.fn__none) ~ #searchList,
-  body > div[data-key] > .b3-dialog > .b3-dialog__container .fn__flex-column .search__header:first-child + .search__header:not(.fn__none) ~ #searchPreview {
-    height: calc(100% - 142px) !important;
-  }
+/* 制卡(添加到卡包)对话框 */
+.b3-dialog--open[data-key=makeCard] .b3-dialog__container .b3-list.b3-list--background > .b3-list-item > .b3-list-item__meta {
+  margin-left: 8px;
+  font-size: unset;
 }
+.b3-dialog--open[data-key=makeCard] .b3-dialog__container .b3-list.b3-list--background > .b3-list-item > .b3-list-item__action {
+  height: 24px;
+}
+/* 闪卡复习对话框 */
+.b3-dialog--open:has(.card__block) .b3-dialog__container .card__block.protyle {
+  border-bottom: 2px solid var(--b3-border-color);
+}
+.b3-dialog--open:has(.card__block) .b3-dialog__container .card__empty {
+  background-color: unset;
+}
+.b3-dialog--open:has(.card__block) .b3-dialog__container .card__action > div {
+  /* 复习按钮容器 */
+  text-align: center;
+}
+.b3-dialog--open:has(.card__block) .b3-dialog__container .card__action > div .b3-button {
+  /* 复习按钮 */
+  padding: 0;
+  display: inline-flex;
+}
+.b3-dialog--open:has(.card__block) .b3-dialog__container .card__action > div .b3-button > div {
+  /* 按钮 emoji */
+  font-size: 1.5em;
+  line-height: 2em;
+  margin: 0;
+}
+.b3-dialog--open:has(.card__block) .b3-dialog__container .card__action > .b3-button--cancel {
+  /* 撤销复习按钮 */
+  opacity: unset;
+  outline: 1px solid var(--b3-theme-primary);
+}
+/* 窗口较宽时并排显示搜索结果 */
+/* @deprecated: [搜索界面支持左右布局 · Issue #6744 · siyuan-note/siyuan · GitHub](https://github.com/siyuan-note/siyuan/issues/6744) */

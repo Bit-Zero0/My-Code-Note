@@ -1,11 +1,16 @@
 /* 大纲面板 */
 
-@import (css) url(/appearance/themes/Dark+/style/module/config.css);
-@import (css) url(/widgets/custom.css);
 
-/* 过长子标题名显示样式 */
-.sy__outline .b3-list-item__text {
-    display: var(--custom-outline-display);
+.sy__outline {
+    .b3-list-item__graphic {
+        /* 标题图标样式 */
+        padding: 0;
+    }
+
+    .b3-list-item__text {
+        /* 过长子标题名显示样式 */
+        display: var(--custom-outline-display);
+    }
 }
 
 .heading(@selector, @color) {
@@ -16,8 +21,15 @@
             @{selector} {
 
                 &,
-                & .b3-list-item__text {
+                .b3-list-item__text,
+                .b3-list-item__toggle {
                     color: var(@color);
+                }
+
+                &+ul::before {
+                    /* 辅助线颜色 */
+                    background-color: var(@color) !important;
+                    opacity: 0.375;
                 }
             }
         }

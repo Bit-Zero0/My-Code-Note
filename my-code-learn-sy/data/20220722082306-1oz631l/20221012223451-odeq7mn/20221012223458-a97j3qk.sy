@@ -4,9 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221012223458-a97j3qk",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221012223509-tz39id8\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221012223509-z6bcozg\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20221012223509-tz39id8\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221012223509-tz39id8\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221012223509-w5c1ww1\u0026quot;,\u0026quot;scrollTop\u0026quot;:6946,\u0026quot;focusId\u0026quot;:\u0026quot;20221012223509-w5c1ww1\u0026quot;,\u0026quot;focusStart\u0026quot;:87,\u0026quot;focusEnd\u0026quot;:87}",
 		"title": "lambda表达式",
-		"updated": "20221012225501"
+		"updated": "20230323201516"
 	},
 	"Children": [
 		{
@@ -29,12 +29,21 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221012223509-xub09qg",
-				"updated": "20221012223509"
+				"updated": "20230323195519"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "++98中的一个例子\n在C++98中，如果想要对一个数据集合中的元素进行排序，可以使用std::sort方法。"
+					"Data": "C++98中的一个例子\n在C++98中，如果想要对一个数据集合中的元素进行排序，可以使用"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "std::sort"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法。"
 				}
 			]
 		},
@@ -85,7 +94,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20221012223509-mf87q6x",
-				"updated": "20221012223509"
+				"updated": "20230323195621"
 			},
 			"Children": [
 				{
@@ -98,7 +107,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "struct Goods\n{\n    string _name;\n    double _price;\n};\nstruct Compare\n{\n    bool operator()(const Goods\u0026 gl, const Goods\u0026 gr)\n    {\n        return gl._price \u003c= gr._price;\n    }\n};\nint main()\n{\n    Goods gds[] = { { \"苹果\", 2.1 }, { \"相交\", 3 }, { \"橙子\", 2.2 }, {\"菠萝\", 1.5} };\n    sort(gds, gds + sizeof(gds) / sizeof(gds[0]), Compare());\n    return 0;\n}\n"
+					"Data": "struct Goods\n{\n    string _name;\n    double _price;\n};\nstruct Compare\n{\n    bool operator()(const Goods\u0026 gl, const Goods\u0026 gr)\n    {\n        return gl._price \u003c= gr._price;\n    }\n};\nint main()\n{\n    Goods gds[] = { { \"苹果\", 2.1 }, { \"香蕉\", 3 }, { \"橙子\", 2.2 }, {\"菠萝\", 1.5} };\n    sort(gds, gds + sizeof(gds) / sizeof(gds[0]), Compare());\n    return 0;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -111,7 +120,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221012223509-0dkdozz",
-				"updated": "20221012223509"
+				"updated": "20230323195659"
 			},
 			"Children": [
 				{
@@ -125,7 +134,12 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "。因此，在C11语法中出现了Lambda表达式"
+					"Data": "。因此，在C++11语法中出现了"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong mark",
+					"TextMarkTextContent": "Lambda表达式"
 				}
 			]
 		},
@@ -182,12 +196,21 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221012223509-pzjclog",
-				"updated": "20221012223509"
+				"updated": "20230323195737"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "上述代码就是使用C++11中的lambda表达式来解决，可以看出lamb表达式实际是一个匿名函数。"
+					"Data": "上述代码就是使用C++11中的lambda表达式来解决，可以看出lambda表达式实际是一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "匿名函数"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
 				}
 			]
 		},
@@ -240,7 +263,7 @@
 			},
 			"Properties": {
 				"id": "20221012223509-3uuowdb",
-				"updated": "20221012223509"
+				"updated": "20230323195913"
 			},
 			"Children": [
 				{
@@ -254,7 +277,7 @@
 					},
 					"Properties": {
 						"id": "20221012223509-yfwudjq",
-						"updated": "20221012223509"
+						"updated": "20230323195913"
 					},
 					"Children": [
 						{
@@ -277,7 +300,7 @@
 							"ListData": {},
 							"Properties": {
 								"id": "20221012223509-kk85nul",
-								"updated": "20221012223509"
+								"updated": "20230323195913"
 							},
 							"Children": [
 								{
@@ -289,7 +312,7 @@
 									},
 									"Properties": {
 										"id": "20221012223509-st861ql",
-										"updated": "20221012223509"
+										"updated": "20230323195818"
 									},
 									"Children": [
 										{
@@ -297,12 +320,21 @@
 											"Type": "NodeParagraph",
 											"Properties": {
 												"id": "20221012223509-w7hlmz9",
-												"updated": "20221012223509"
+												"updated": "20230323195818"
 											},
 											"Children": [
 												{
 													"Type": "NodeText",
-													"Data": "[capture-list] : "
+													"Data": "​"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "[capture-list]"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​ : "
 												},
 												{
 													"Type": "NodeTextMark",
@@ -316,7 +348,21 @@
 												{
 													"Type": "NodeTextMark",
 													"TextMarkType": "strong",
-													"TextMarkTextContent": "编译器根据[]来判断接下来的代码是否为lambda函数，捕捉列表能够捕捉上下文中的变量供lambda函数使用"
+													"TextMarkTextContent": "编译器根据"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong code",
+													"TextMarkTextContent": "[]"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "来判断接下来的代码是否为lambda函数，捕捉列表能够捕捉上下文中的变量供lambda函数使用"
 												},
 												{
 													"Type": "NodeText",
@@ -335,7 +381,7 @@
 									},
 									"Properties": {
 										"id": "20221012223509-q0bnqs5",
-										"updated": "20221012223509"
+										"updated": "20230323195827"
 									},
 									"Children": [
 										{
@@ -343,12 +389,21 @@
 											"Type": "NodeParagraph",
 											"Properties": {
 												"id": "20221012223509-ejq4va4",
-												"updated": "20221012223509"
+												"updated": "20230323195827"
 											},
 											"Children": [
 												{
 													"Type": "NodeText",
-													"Data": "(parameters)：参数列表。"
+													"Data": "​"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "(parameters)"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​：参数列表。"
 												},
 												{
 													"Type": "NodeTextMark",
@@ -357,7 +412,16 @@
 												},
 												{
 													"Type": "NodeText",
-													"Data": "，如果不需要参数传递，则可以连同()一起省略"
+													"Data": "，如果不需要参数传递，则可以连同"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "()"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​一起省略"
 												}
 											]
 										}
@@ -372,7 +436,7 @@
 									},
 									"Properties": {
 										"id": "20221012223509-xk4almb",
-										"updated": "20221012223509"
+										"updated": "20230323195913"
 									},
 									"Children": [
 										{
@@ -380,12 +444,30 @@
 											"Type": "NodeParagraph",
 											"Properties": {
 												"id": "20221012223509-2jpq2dk",
-												"updated": "20221012223509"
+												"updated": "20230323195913"
 											},
 											"Children": [
 												{
 													"Type": "NodeText",
-													"Data": "mutable：默认情况下，lambda函数总是一个const函数，mutable可以取消其常量性。使用该修饰符时，参数列表不可省略(即使参数为空)。"
+													"Data": "​"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "mutable"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​：默认情况下，lambda函数总是一个const函数，"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "mutable"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "可以取消其常量性。使用该修饰符时，参数列表不可省略(即使参数为空)。"
 												}
 											]
 										}
@@ -400,7 +482,7 @@
 									},
 									"Properties": {
 										"id": "20221012223509-i669bzq",
-										"updated": "20221012223509"
+										"updated": "20230323195806"
 									},
 									"Children": [
 										{
@@ -408,12 +490,21 @@
 											"Type": "NodeParagraph",
 											"Properties": {
 												"id": "20221012223509-286vfll",
-												"updated": "20221012223509"
+												"updated": "20230323195806"
 											},
 											"Children": [
 												{
 													"Type": "NodeText",
-													"Data": "-\u003ereturn-type：返回值类型。用追踪返回类型形式声明函数的返回值类型，没有返回值时此部分可省略。返回值类型明确情况下，也可省略，由编译器对返回类型进行推导。"
+													"Data": "​"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "-\u0026gt;return-type"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​：返回值类型。用追踪返回类型形式声明函数的返回值类型，没有返回值时此部分可省略。返回值类型明确情况下，也可省略，由编译器对返回类型进行推导。"
 												}
 											]
 										}
@@ -428,7 +519,7 @@
 									},
 									"Properties": {
 										"id": "20221012223509-zivx6xn",
-										"updated": "20221012223509"
+										"updated": "20230323195809"
 									},
 									"Children": [
 										{
@@ -436,13 +527,26 @@
 											"Type": "NodeParagraph",
 											"Properties": {
 												"id": "20221012223509-k0h3fhq",
-												"updated": "20221012223509"
+												"updated": "20230323195809"
 											},
 											"Children": [
 												{
+													"Type": "NodeText",
+													"Data": "​"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong code",
+													"TextMarkTextContent": "{statement}"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​"
+												},
+												{
 													"Type": "NodeTextMark",
 													"TextMarkType": "strong",
-													"TextMarkTextContent": "{statement}：函数体"
+													"TextMarkTextContent": "：函数体"
 												},
 												{
 													"Type": "NodeText",
@@ -482,7 +586,7 @@
 												},
 												{
 													"Type": "NodeText",
-													"Data": " ; 该lambda函数不能做任何事情。"
+													"Data": "​ ; 该lambda函数不能做任何事情。"
 												}
 											]
 										}
@@ -500,7 +604,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20221012223509-l37y8xk",
-				"updated": "20221012223509"
+				"updated": "20230323200725"
 			},
 			"Children": [
 				{
@@ -513,7 +617,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "int main()\n{\n    // 最简单的lambda表达式, 该lambda表达式没有任何意义\n    [] {};\n\n    // 省略参数列表和返回值类型，返回值类型由编译器推导为int \n    int a = 3, b = 4;\n    [=] {return a + 3; };\n\n    // 省略了返回值类型，无返回值类型\n    auto fun1 = [\u0026](int c) {b = a + c; };\n    fun1(10);\n    cout \u003c\u003c a \u003c\u003c \" \" \u003c\u003c b \u003c\u003c endl;\n\n    // 各部分都很完善的lambda函数\n    auto fun2 = [=, \u0026b](int c)-\u003eint {return b += a + c; };\n    cout \u003c\u003c fun2(10) \u003c\u003c endl;\n\n    // 复制捕捉x ,但捕捉到的x是不可变的，所以需要加上mutable\n    int x = 10;\n    auto add_x = [x](int a) mutable { x *= 2; return a + x; };\n    cout \u003c\u003c add_x(10) \u003c\u003c endl;\n    return 0;\n}\n"
+					"Data": "int main()\n{\n    // 最简单的lambda表达式, 该lambda表达式没有任何意义\n    [] {};\n\n    // 省略参数列表和返回值类型，返回值类型由编译器推导为int \n    int a = 3, b = 4;\n    inte res = [=] {return a + 3; }();//它只是被赋值给了 res，没有被调用。因此，编译器会报错，\n                                //提示无法将 lambda 表达式隐式转换为 int 类型,要修正这个问题\n                                //需要在变量 res 的赋值语句末尾加上一对括号来调用 lambda 表达式\n  \n\n    // 省略了返回值类型，无返回值类型\n    auto fun1 = [\u0026](int c) {b = a + c; };\n    fun1(10);\n    cout \u003c\u003c a \u003c\u003c \" \" \u003c\u003c b \u003c\u003c endl;\n\n    // 各部分都很完善的lambda函数\n    auto fun2 = [=, \u0026b](int c)-\u003eint {return b += a + c; };\n    cout \u003c\u003c fun2(10) \u003c\u003c endl;\n\n    // 复制捕捉x ,但捕捉到的x是不可变的，所以需要加上mutable\n    int x = 10;\n    auto add_x = [x](int a) mutable { x *= 2; return a + x; };\n    cout \u003c\u003c add_x(10) \u003c\u003c endl;\n    return 0;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -789,7 +893,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20221012223509-z6bcozg",
-				"updated": "20221012223509"
+				"updated": "20230323201207"
 			},
 			"Children": [
 				{
@@ -834,7 +938,7 @@
 					},
 					"Properties": {
 						"id": "20221012223509-1v3hc20",
-						"updated": "20221012223509"
+						"updated": "20230323201133"
 					},
 					"Children": [
 						{
@@ -866,7 +970,7 @@
 							"ListData": {},
 							"Properties": {
 								"id": "20221012223509-sncceii",
-								"updated": "20221012223509"
+								"updated": "20230323201133"
 							},
 							"Children": [
 								{
@@ -878,7 +982,7 @@
 									},
 									"Properties": {
 										"id": "20221012223509-u2ckuno",
-										"updated": "20221012223509"
+										"updated": "20230323201133"
 									},
 									"Children": [
 										{
@@ -886,12 +990,66 @@
 											"Type": "NodeParagraph",
 											"Properties": {
 												"id": "20221012223509-4ubkspa",
-												"updated": "20221012223509"
+												"updated": "20230323201133"
 											},
 											"Children": [
 												{
 													"Type": "NodeText",
-													"Data": "比如：[=, \u0026a, \u0026b]：以引用传递的方式捕捉变量a和b，值传递方式捕捉其他所有变量 [\u0026，a, this]：值传递方式捕捉变量a和this，引用方式捕捉其他变量"
+													"Data": "比如："
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "[=, \u0026amp;a, \u0026amp;b]"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​：以引用传递的方式捕捉变量"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "a"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​和"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "b"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​，值传递方式捕捉其他所有变量 "
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "[\u0026amp;，a, this]"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​：值传递方式捕捉变量"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "a"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​和"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "this"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​，引用方式捕捉其他变量"
 												}
 											]
 										}
@@ -910,7 +1068,7 @@
 					},
 					"Properties": {
 						"id": "20221012223509-ln1i8xb",
-						"updated": "20221012223509"
+						"updated": "20230323201207"
 					},
 					"Children": [
 						{
@@ -918,7 +1076,7 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20221012223509-sn68lcg",
-								"updated": "20221012223509"
+								"updated": "20230323201207"
 							},
 							"Children": [
 								{
@@ -932,7 +1090,34 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "。 比如：[=, a]：=已经以值传递方式捕捉了所有变量，捕捉a重复"
+									"Data": "。 比如："
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "[=, a]"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​："
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "="
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​已经以值传递方式捕捉了所有变量，捕捉"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "a"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​重复"
 								}
 							]
 						}
@@ -1096,12 +1281,23 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221012223509-gru9r17",
-				"updated": "20221012223509"
+				"updated": "20230323201259"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "函数对象，又称为仿函数，即可以想函数一样使用的对象，就是在类中重载了"
+					"Data": "函数对象，又称为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722133929-9gnjir4",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "仿函数"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，即可以想函数一样使用的对象，就是在类中重载了"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -1110,7 +1306,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "运算符的类对象。"
+					"Data": "​运算符的类对象。"
 				}
 			]
 		},
@@ -1133,7 +1329,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "class Rate \n{\npublic:\n\tRate(double rate): _rate(rate) \n    {}\n  \n\tdouble operator()(double money, int year) \n    { \n\t    return money * _rate * year;\n\t}\n  \nprivate:\n\tdouble _rate; \n};\n\nint main() \n{\n\t// 函数对象\n\tdouble rate = 0.49; \n\tRate r1(rate);\n\tr1(10000, 2); \n\n\t// lambda\n\tauto r2 = [=](double monty, int year)-\u003edouble{return monty*rate*year; }; \n\tr2(10000, 2);\n\treturn 0;\n}\n"
+					"Data": "class Rate \n{\npublic:\n\tRate(double rate): _rate(rate) \n        {}\n  \n\tdouble operator()(double money, int year) \n        { \n\t    return money * _rate * year;\n\t}\n  \nprivate:\n\tdouble _rate; \n};\n\nint main() \n{\n\t// 函数对象\n\tdouble rate = 0.49; \n\tRate r1(rate);\n\tr1(10000, 2); \n\n\t// lambda\n\tauto r2 = [=](double monty, int year)-\u003edouble{return monty*rate*year; }; \n\tr2(10000, 2);\n\treturn 0;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -1182,7 +1378,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221012223509-w5c1ww1",
-				"updated": "20221012225501"
+				"updated": "20230323201516"
 			},
 			"Children": [
 				{
@@ -1203,7 +1399,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "来定义\n​"
+					"Data": "来定义\n​​"
 				},
 				{
 					"Type": "NodeImage",
@@ -1216,8 +1412,7 @@
 							"Type": "NodeOpenBracket"
 						},
 						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221012223030"
+							"Type": "NodeLinkText"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -1227,7 +1422,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221012223030-20221012223657-bxhw8yi.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230323201505.png"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -1236,7 +1431,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "\n实际在底层编译器对于lambda表达式的处理方式，完全就是按照函数对象的方式处理的，即：如果定义了一个lambda表达式，编译器会自动生成一个类，在该类中重载了operator()。"
+					"Data": "​\n实际在底层编译器对于lambda表达式的处理方式，完全就是按照函数对象的方式处理的，即：如果定义了一个lambda表达式，编译器会自动生成一个类，在该类中重载了operator()。"
 				}
 			]
 		}

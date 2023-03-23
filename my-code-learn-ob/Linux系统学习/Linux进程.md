@@ -138,6 +138,9 @@ int main()
 >"X (dead)", /* 16 */
 >"Z (zombie)", /* 32 */
 
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230323212929.png)
+
+
 ## 后台运行
 在状态后面有个 `+`  ， 这是说明这个进程运行在前台，如果没有 `+` ，就是表示进程运行在后台，运行在后台的进程是无法被 `ctrl^c`  kill的。
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317155519.png)

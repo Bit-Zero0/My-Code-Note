@@ -1,11 +1,12 @@
 /* 悬浮输入文本框 */
-@import url(/appearance/themes/Dark+/style/module/config.css);
-@import url(/widgets/custom.css);
-#editor .protyle-util,
-.layout-tab-container .protyle-util {
+.protyle .protyle-util {
   background-color: var(--custom-popover-background-color);
 }
-#editor .protyle-util textarea.b3-text-field,
-.layout-tab-container .protyle-util textarea.b3-text-field {
+.protyle .protyle-util > .fn__flex > .fn__flex-column + div {
+  /* 模板预览窗口宽度 */
+  width: var(--custom-template-preview-width) !important;
+  min-width: var(--custom-template-preview-min-width);
+}
+.protyle .protyle-util textarea.b3-text-field {
   background-color: transparent;
 }

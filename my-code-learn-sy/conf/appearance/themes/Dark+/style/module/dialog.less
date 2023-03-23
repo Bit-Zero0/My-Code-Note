@@ -1,20 +1,70 @@
 /* 对话框 */
 
-@import (css) url(/appearance/themes/Dark+/style/module/config.css);
-@import (css) url(/widgets/custom.css);
+// 搜索结果列表项
+.search-list-item() {
+    padding-bottom: calc(1.25em + 1px);
+
+    .b3-list-item__text {
+        display: var(--custom-search-display);
+    }
+
+    .b3-list-item__meta {
+        position: absolute;
+        right: 8px;
+        bottom: 0.25em;
+        max-width: calc(100% - 12px);
+        line-height: 1.25em;
+    }
+}
+
+// 快捷键设置列表
+#keymapList {
+    .b3-list--border {
+
+        // 最顶层的项
+        >.b3-list-item.toggle {
+            margin: 0 !important;
+
+            ~div {
+
+                // 次级项
+                .b3-list-item {
+                    &::before {
+                        left: -23px;
+                        border-left: var(--custom-list-guides-line-width) solid var(--custom-list-guides-line-color);
+                    }
+
+                    // 次级项的子项
+                    +div {
+                        &::before {
+                            left: -57px;
+                            border-left: var(--custom-list-guides-line-width) solid var(--custom-list-guides-line-color);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
 
 .b3-dialog__container {
     /* 对话框图片 */
     background-image: var(--custom-background-image-dialog);
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-color: transparent !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: transparent;
+
+    border-radius: var(--custom-border-radius) !important;
 
     >.b3-dialog__close {
+        border-radius: 50%;
+
         &:hover {
             /* 关闭按钮 */
+            color: var(--b3-theme-surface);
             background-color: var(--b3-theme-on-surface);
         }
     }
@@ -22,10 +72,25 @@
     // 对话框半透明颜色
     >.b3-dialog__header {
         background-color: var(--custom-dialog-background-color);
+
+        +div {
+            background-color: var(--custom-dialog-background-color);
+            border-radius: inherit;
+        }
     }
 
-    >div:nth-child(3) {
-        background-color: var(--custom-dialog-background-color);
+    // 对话框内容
+    .b3-dialog__content {
+        background-color: transparent !important;
+    }
+
+    // 设置对话框
+    .config__tab-container {
+        background-color: transparent;
+    }
+
+    .fn__flex-column {
+        border-radius: inherit;
 
         // 搜索内容输入框
         .search__header {
@@ -39,9 +104,11 @@
         .layout-tab-bar {
             background-color: transparent;
 
-            .item__text {
-                /* 对话框页签 */
-                padding: 0 0.5em;
+            .item {
+                .item__text {
+                    /* 对话框页签 */
+                    padding: 0 0.5em;
+                }
             }
         }
     }
@@ -76,8 +143,63 @@
             width: auto !important;
         }
     }
+
 }
 
+// 搜索提示信息
+.search__header {
+    .search__path {
+        // font-size: 1em;
+        height: 16px;
+
+        .search__rmpath {
+            /* 搜索路径移除按钮 */
+            top: 0;
+
+            background-color: transparent;
+
+            &:hover {
+                color: var(--b3-theme-surface);
+                background-color: var(--b3-theme-on-surface);
+            }
+        }
+    }
+}
+
+// 搜索结果内容显示方式
+#searchList,
+.search__list {
+    >.b3-list-item {
+        &[data-type="search-item"] {
+            /* 未分组 */
+            .search-list-item();
+        }
+
+        // 已分组
+        &:not([data-type="search-item"]) {
+            outline-color: var(--b3-theme-on-surface);
+
+            .b3-list-item__text {
+                color: var(--custom-popover-menu-path-color);
+            }
+        }
+    }
+}
+
+// 其他列表内容显示方式
+.b3-list.b3-list--background {
+    >.b3-list-item {
+        &[data-type="card-item"] {
+            /* 卡包列表 */
+            .search-list-item();
+        }
+    }
+}
+
+/* 搜索输入框 */
+.search__header,
+#searchInput,
+#replaceInput,
 /* 搜索结果列表 */
 #searchList,
 /* 搜索结果预览 */
@@ -91,18 +213,30 @@
         background-color: transparent !important;
     }
 
+    .history__repo {
+        .history__repoheader {
+            /* 历史控件栏 */
+            border-top: 1px solid var(--b3-scroll-color);
+            border-bottom: 1px solid var(--b3-scroll-color);
+        }
+    }
+
     .history__asset,
     .history__text {
         /* 历史对话框内容框 */
         // border-left: 2px solid var(--b3-border-color);
         background-color: transparent;
     }
+}
 
-    .b3-dialog__scrim {
-        /* 对话框遮罩 */
-        background-color: var(--custom-dialog-scrim-background-color);
-    }
+.b3-dialog__scrim {
+    /* 对话框遮罩 */
+    background-color: var(--custom-scrim-background-color) !important;
+}
 
+/* 闪卡显示容器 */
+.b3-dialog__cardblock {
+    outline: 1px solid var(--b3-scroll-color);
 }
 
 /* 搜索控件 */
@@ -110,21 +244,25 @@
     background-color: var(--custom-editor-breadcrumb-bar-background-color);
 } */
 
-
 /** 搜索对话框
  *  REF: [siyuan-themes-tsundoku-dark/ctrlP.css at main · Achuan-2/siyuan-themes-tsundoku-dark](https: //github.com/Achuan-2/siyuan-themes-tsundoku-dark/blob/main/style/ctrlP.css)
  *  REF: [自定义样式：搜索窗口改造（窗口放大+左右布局） - 链滴](https: //ld246.com/article/1648269766832)
  */
 /* 搜索对话框尺寸 */
 body {
-    >div[data-key] {
+    >.b3-dialog--open:has(#searchInput) {
         >.b3-dialog {
             >.b3-dialog__container {
 
                 &,
-                >div>.fn__flex>.fn__flex-column {
-                    width: var(--custom-dialog-search-width) !important;
-                    height: var(--custom-dialog-search-height) !important;
+                &>div[style*="height"] {
+
+                    // .b3-dialog__cardblock 闪卡
+                    // .b3-dialog--switch 最近打开的文档
+                    &:not(:has(.b3-dialog__cardblock, .b3-dialog--switch)) {
+                        width: var(--custom-dialog-search-width) !important;
+                        height: var(--custom-dialog-search-height) !important;
+                    }
                 }
 
                 >.b3-dialog__close {
@@ -136,50 +274,128 @@ body {
     }
 }
 
+/* 制卡(添加到卡包)对话框 */
+.b3-dialog--open[data-key=makeCard] {
 
-/* 窗口较宽时并排显示搜索结果 */
-@media screen and (min-width: 960px) {
-    body {
-        >div[data-key] {
-            >.b3-dialog {
-                >.b3-dialog__container {
-                    .fn__flex-column {
-                        /* 弹性盒子模式: 水平显示, 必要时折行 */
-                        flex-direction: row !important;
-                        flex-wrap: wrap;
+    .b3-dialog__container {
 
-                        *:is(.search__header, .b3-form__space--small) {
-                            /* 设置需要占满一行的项目 */
-                            width: 100%;
-                        }
+        // 卡包列表
+        .b3-list.b3-list--background {
 
-                        #searchList,
-                        #searchPreview {
-                            /* 搜索结果与搜索结果预览分栏 */
-                            float: left;
-                            width: 50% !important;
-                        }
+            // 卡包
+            >.b3-list-item {
 
-                        .search__header:first-child {
-                            +.search__header:is(.fn__none) {
+                // 卡包信息
+                >.b3-list-item__meta {
+                    margin-left: 8px;
+                    font-size: unset;
+                }
 
-                                ~#searchList,
-                                ~#searchPreview {
-                                    height: calc(100% - 92px) !important;
-                                }
-                            }
-
-                            +.search__header:not(.fn__none) {
-
-                                ~#searchList,
-                                ~#searchPreview {
-                                    height: calc(100% - 142px) !important;
-                                }
-                            }
-                        }
-                    }
+                // 按钮控件
+                >.b3-list-item__action {
+                    height: 24px;
                 }
             }
         }
     }
 }
+
+/* 闪卡复习对话框 */
+.b3-dialog--open:has(.card__block) {
+
+    .b3-dialog__container {
+
+        // 卡片内容
+        .card__block.protyle {
+            border-bottom: 2px solid var(--b3-border-color);
+        }
+
+        // 无复习内容
+        .card__empty {
+            background-color: unset;
+        }
+
+        // 按钮栏
+        .card__action {
+            >div {
+                /* 复习按钮容器 */
+                text-align: center;
+
+                .b3-button {
+                    /* 复习按钮 */
+                    padding: 0;
+                    display: inline-flex;
+
+                    >div {
+                        /* 按钮 emoji */
+                        font-size: 1.5em;
+                        line-height: 2em;
+                        margin: 0;
+                    }
+                }
+            }
+
+            >.b3-button--cancel {
+                /* 撤销复习按钮 */
+                opacity: unset;
+                outline: 1px solid var(--b3-theme-primary);
+            }
+        }
+    }
+}
+
+
+/* 窗口较宽时并排显示搜索结果 */
+/* @deprecated: [搜索界面支持左右布局 · Issue #6744 · siyuan-note/siyuan · GitHub](https://github.com/siyuan-note/siyuan/issues/6744) */
+// @media screen and (min-width: 960px) {
+//     body {
+//         >div[data-key] {
+//             >.b3-dialog {
+//                 >.b3-dialog__container {
+
+//                     .fn__flex-column {
+//                         /* 弹性盒子模式: 水平显示, 必要时折行 */
+//                         flex-direction: row !important;
+//                         flex-wrap: wrap;
+
+//                         .search__header,
+//                         .b3-form__space--small {
+//                             /* 设置需要占满一行的项目 */
+//                             width: 100%;
+//                         }
+
+//                         .search__header {
+//                             /* 搜索栏 */
+//                             border-bottom-color: var(--b3-theme-on-surface-light);
+//                         }
+
+//                         #searchList,
+//                         #searchPreview {
+//                             /* 搜索结果与搜索结果预览分栏 */
+//                             float: left;
+//                             width: 50% !important;
+//                         }
+
+//                         .search__header:first-child {
+//                             +.search__header:is(.fn__none) {
+
+//                                 ~#searchList,
+//                                 ~#searchPreview {
+//                                     height: calc(100% - 92px) !important;
+//                                 }
+//                             }
+
+//                             +.search__header:not(.fn__none) {
+
+//                                 ~#searchList,
+//                                 ~#searchPreview {
+//                                     height: calc(100% - 142px) !important;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

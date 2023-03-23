@@ -6,6 +6,7 @@ import {
     saveCustomFile,
 } from './config.js';
 import { jump } from './../utils/misc.js';
+import { compareVersion } from './../utils/string.js';
 import { globalEventHandler } from './../utils/listener.js';
 import {
     isKey,
@@ -14,6 +15,9 @@ import {
 import {
     getFocusedBlock,
     getFocusedDocID,
+    getTargetDocID,
+    getTargetBlock,
+    getTargetEditor,
     getTargetBlockIndex,
     setBlockDOMAttrs,
     setBlockSlider,
@@ -33,8 +37,8 @@ var record_enable = false;
  * 更新 index 值
  */
 async function updateBlockSlider() {
-    let block = getFocusedBlock(); // 当前光标所在块
-    let top = await getTargetBlockIndex(block); // 获得焦点所在顶层块
+    const block = getFocusedBlock(); // 当前光标所在块
+    const top = await getTargetBlockIndex(block); // 获得焦点所在顶层块
     // console.log(block, top);
     if (block && top) {
         setBlockSlider(top.index, top.scroll, top.offset); // 设置滑块位置
@@ -45,10 +49,12 @@ async function updateBlockSlider() {
     }
     return null;
 }
+
 /**
- * 目标处理函数
+ * 更新块滚动条
+ * @deprecated
  */
-async function focusHandler(target, mode = config.theme.location.record.mode) {
+async function updateSliderHandler(target, mode = config.theme.location.record.mode) {
     if (target
         && (target.classList.contains('protyle-scroll')
             || target.classList.contains('b3-slider')
@@ -69,6 +75,39 @@ async function focusHandler(target, mode = config.theme.location.record.mode) {
     }
 }
 
+/**
+ * 处理焦点事件
+ */
+async function focusHandler() {
+    // console.log(document.getSelection()?.focusNode?.parentElement);
+
+    /* 获取当前编辑区 */
+    const block = getFocusedBlock(); // 当前光标所在块
+    /* 当前块已经设置焦点 */
+    if (block?.classList.contains(config.theme.location.focus.className)
+        && block.id === config.theme.location.focus.id
+    ) return;
+
+    /* 当前块未设置焦点 */
+    const editor = getTargetEditor(block); // 当前光标所在块位于的编辑区
+    if (editor) {
+        // editor.querySelectorAll(`.${config.theme.location.focus.className}`).forEach(element => element.classList.remove(config.theme.location.focus.className));
+        // document.querySelectorAll(`#${config.theme.location.focus.id}`).forEach(element => element.removeAttribute('id'));
+
+        let element;
+        while (element = document.getElementById(config.theme.location.focus.id)) {
+            element.removeAttribute('id');
+        }
+
+        Array.prototype.forEach.call(
+            editor.getElementsByClassName(config.theme.location.focus.className),
+            element => element.classList.remove(config.theme.location.focus.className),
+        )
+
+        block.classList.add(config.theme.location.focus.className);
+        block.id = config.theme.location.focus.id;
+    }
+}
 
 /**
  * 跳转到浏览位置
@@ -100,7 +139,7 @@ async function goto(docID, scroll, mode = config.theme.location.record.mode) {
  */
 async function back(target) {
     // console.log(target);
-    let scroll;
+    let scroll, protyle;
     // console.log(target.dataset.docType, target.getAttribute('custom-location'))
     if (target.dataset.docType
         && config.theme.regs.id.test(target.getAttribute('custom-location'))
@@ -112,18 +151,20 @@ async function back(target) {
             .nextElementSibling
             .nextElementSibling; // 块滚动条;
     }
-    else if (target && target.localName === 'input' && target.className === 'b3-slider') {
+    else if (target && target.localName === 'input' && target.classList.contains('b3-slider')) {
         scroll = target.parentElement;
     }
     else if (target && target.localName === 'div' && target.classList.contains('protyle-scroll')) {
         scroll = target;
     }
     else return null;
-
-    setTimeout(async () => goto(
-        scroll.parentElement.querySelector('.protyle-background').dataset.nodeId,
-        scroll,
-    ), 0);
+    for (protyle = scroll; protyle && !protyle.classList.contains('protyle'); protyle = protyle.parentElement);
+    if (protyle) {
+        setTimeout(async () => goto(
+            protyle.querySelector('.protyle-background')?.dataset?.nodeId,
+            scroll,
+        ), 0);
+    }
 }
 
 /**
@@ -139,11 +180,23 @@ function record(docID, value, mode = config.theme.location.record.mode) {
 
             case 2: // 保存在文档块属性中
                 const ATTRS = { [config.theme.location.record.attribute]: value };
-                setBlockDOMAttrs(docID, ATTRS);
+                if (compareVersion(window.theme.kernelVersion, '2.2.0') < 0)
+                    setBlockDOMAttrs(docID, ATTRS);
                 setBlockAttrs(docID, ATTRS);
                 break;
             default:
                 break;
+        }
+    }
+}
+
+/* 更新浏览位置 */
+function update(e) {
+    if (record_enable) {
+        const block = getTargetBlock(e.target);
+        const docID = getTargetDocID(block);
+        if (block && docID) {
+            record(docID, block.dataset.nodeId);
         }
     }
 }
@@ -177,7 +230,8 @@ function clear(mode = config.theme.location.record.mode) {
                     break;
                 case 2: // 保存在文档块属性中
                     const ATTRS = { [config.theme.location.record.attribute]: '' };
-                    setBlockDOMAttrs(DOC_ID, ATTRS);
+                    if (compareVersion(window.theme.kernelVersion, '2.2.0') < 0)
+                        setBlockDOMAttrs(DOC_ID, ATTRS);
                     setBlockAttrs(DOC_ID, ATTRS);
                     break;
                 default:
@@ -206,10 +260,14 @@ setTimeout(() => {
                     // 编辑器可能还没有加载完成, 所以需要轮询
                     try {
                         getEditor((editor) => {
-                            if (config.theme.location.slider.follow.enable) {
-                                // 滑块跟踪鼠标点击的块
-                                editor.addEventListener('click', e => setTimeout(async () => focusHandler(e.target), 0));
+                            // REF [块滚动条跟随滚动 · Issue #4612 · siyuan-note/siyuan](https://github.com/siyuan-note/siyuan/issues/4612)
+                            if (compareVersion(window.theme.kernelVersion, '2.4.5') <= 0) {
+                                if (config.theme.location.slider.follow.enable) {
+                                    // 滑块跟踪鼠标点击的块
+                                    editor.addEventListener('click', e => setTimeout(async () => updateSliderHandler(e.target), 0));
+                                }
                             }
+
 
                             if (config.theme.location.slider.goto.enable) {
                                 // 跳转浏览进度
@@ -228,6 +286,12 @@ setTimeout(() => {
                 }
                 setTimeout(fn, 0);
             }
+            if (config.theme.location.focus.enable) {
+                // 跟踪当前所在块
+                const handler = _ => setTimeout(focusHandler, 0);
+                window.addEventListener('mouseup', handler, true);
+                window.addEventListener('keyup', handler, true);
+            }
             if (config.theme.location.record.enable) {
                 // 开关浏览位置记录功能
                 const Fn_recordEnable = toolbarItemInit(
@@ -238,6 +302,13 @@ setTimeout(() => {
                     'keyup',
                     config.theme.hotkeys.location.record,
                     _ => Fn_recordEnable(),
+                );
+
+                /* 记录浏览位置 */
+                globalEventHandler.addEventHandler(
+                    'dblclick',
+                    config.theme.hotkeys.location.update,
+                    update,
                 );
             }
             if (config.theme.location.clear.enable) {

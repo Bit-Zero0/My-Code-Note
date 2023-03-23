@@ -4,9 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221013224045-bzs9pkf",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221013224051-zxo6qa8\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221017225222-d3vbr2e\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20221013224051-zxo6qa8\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221017225222-kdschih\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221017225222-bxq9ar6\u0026quot;,\u0026quot;scrollTop\u0026quot;:8187,\u0026quot;focusId\u0026quot;:\u0026quot;20221017225222-8fobglv\u0026quot;,\u0026quot;focusStart\u0026quot;:326,\u0026quot;focusEnd\u0026quot;:326}",
 		"title": "C++线程库",
-		"updated": "20230322214756"
+		"updated": "20230323194534"
 	},
 	"Children": [
 		{
@@ -1019,7 +1019,7 @@
 			},
 			"Properties": {
 				"id": "20221017225222-d3vbr2e",
-				"updated": "20221017225605"
+				"updated": "20230323192018"
 			},
 			"Children": [
 				{
@@ -1033,7 +1033,7 @@
 					},
 					"Properties": {
 						"id": "20221017225222-7vd929a",
-						"updated": "20221017225605"
+						"updated": "20230323192018"
 					},
 					"Children": [
 						{
@@ -1206,12 +1206,21 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20221017225605-mtmyvpc",
-								"updated": "20221017225605"
+								"updated": "20230323192018"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "注意，线程函数调用lock()时，可能会发生以下三种情况："
+									"Data": "注意，线程函数调用"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "lock()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​时，可能会发生以下三种情况："
 								}
 							]
 						}
@@ -1352,7 +1361,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20221017225222-yxled7i",
-				"updated": "20221017225222"
+				"updated": "20230323192102"
 			},
 			"Children": [
 				{
@@ -1364,7 +1373,7 @@
 					},
 					"Properties": {
 						"id": "20221017225222-t69whrz",
-						"updated": "20221017225222"
+						"updated": "20230323192102"
 					},
 					"Children": [
 						{
@@ -1372,12 +1381,21 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20221017225222-ttpq6td",
-								"updated": "20221017225222"
+								"updated": "20230323192102"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "如果当前互斥量没有被其他线程占有，则该线程锁住互斥量，直到该线程调用 unlock释放互斥量"
+									"Data": "如果当前互斥量没有被其他线程占有，则该线程锁住互斥量，直到该线程调用 "
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "unlock"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​释放互斥量"
 								}
 							]
 						}
@@ -1466,7 +1484,7 @@
 			},
 			"Properties": {
 				"id": "20221017225222-d5jftjx",
-				"updated": "20221017225222"
+				"updated": "20230323192143"
 			},
 			"Children": [
 				{
@@ -1480,7 +1498,7 @@
 					},
 					"Properties": {
 						"id": "20221017225222-tp050dw",
-						"updated": "20221017225222"
+						"updated": "20230323192143"
 					},
 					"Children": [
 						{
@@ -1488,9 +1506,13 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20221017225222-922xcjm",
-								"updated": "20221017225222"
+								"updated": "20230323192143"
 							},
 							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "code",
@@ -1498,7 +1520,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "\n其允许同一个线程对互斥量多次上锁（即"
+									"Data": "​\n其允许同一个线程对互斥量多次上锁（即"
 								},
 								{
 									"Type": "NodeTextMark",
@@ -1507,7 +1529,25 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "），来获得对互斥量对象的多层所有权，释放互斥量时需要调用与该锁层次深度相同次数的 unlock()，除此之外，"
+									"Data": "），来获得对互斥量对象的多层所有权，"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "释放互斥量时需要调用与该锁层次深度相同次数"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的 "
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "unlock()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​，除此之外，"
 								},
 								{
 									"Type": "NodeTextMark",
@@ -1516,7 +1556,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": " 的特性和 "
+									"Data": "​ 的特性和 "
 								},
 								{
 									"Type": "NodeTextMark",
@@ -1525,7 +1565,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": " 大致相同。"
+									"Data": "​ 大致相同。"
 								}
 							]
 						}
@@ -1840,18 +1880,18 @@
 			}
 		},
 		{
-			"ID": "20221017225817-bnitatv",
+			"ID": "20230323192826-y3f5g32",
 			"Type": "NodeList",
 			"ListData": {
 				"Typ": 1
 			},
 			"Properties": {
-				"id": "20221017225817-bnitatv",
-				"updated": "20221017225824"
+				"id": "20230323192826-y3f5g32",
+				"updated": "20230323192839"
 			},
 			"Children": [
 				{
-					"ID": "20221017225824-zyy19b5",
+					"ID": "20230323192826-owyiy07",
 					"Type": "NodeListItem",
 					"ListData": {
 						"Typ": 1,
@@ -1860,28 +1900,119 @@
 						"Num": 4
 					},
 					"Properties": {
-						"id": "20221017225824-zyy19b5",
-						"updated": "20221017225824"
+						"id": "20230323192826-owyiy07",
+						"updated": "20230323192839"
 					},
 					"Children": [
 						{
-							"ID": "20221017225824-w542m74",
+							"ID": "20230323192826-6djq41u",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20221017225824-w542m74",
-								"updated": "20221017225824"
+								"id": "20230323192826-6djq41u",
+								"updated": "20230323192826"
 							},
 							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "code",
 									"TextMarkTextContent": "std::recursive_timed_mutex"
 								}
 							]
+						},
+						{
+							"ID": "20230323192831-gba58b2",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20230323192831-gba58b2",
+								"updated": "20230323192839"
+							},
+							"Children": [
+								{
+									"ID": "20230323192839-z4elnal",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230323192839-z4elnal",
+										"updated": "20230323192839"
+									},
+									"Children": [
+										{
+											"ID": "20230323192839-hi7e6fl",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230323192839-hi7e6fl",
+												"updated": "20230323192839"
+											},
+											"Children": [
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "std::recursive_timed_mutex"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​ 是一个同步原语，可以用来保护共享数据不被多个线程同时访问。它类似于 "
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "std::recursive_mutex"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​，提供了排他性的递归所有权语义。也就是说，一个线程可以多次锁定同一个互斥锁，只要在解锁时匹配相同的次数。此外，"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "std::recursive_timed_mutex"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​ 还提供了通过 "
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "try_lock_for"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​ 和 "
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "try_lock_until"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "​ 成员函数在指定的超时时间内尝试获取互斥锁的能力"
+												}
+											]
+										}
+									]
+								}
+							]
 						}
 					]
 				}
 			]
+		},
+		{
+			"ID": "20230323192844-3uxn8tp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323192844-3uxn8tp"
+			}
 		},
 		{
 			"ID": "20221017225222-kom5o4y",
@@ -1918,7 +2049,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20221017225222-guyomes",
-				"updated": "20221017225222"
+				"updated": "20230323192901"
 			},
 			"Children": [
 				{
@@ -1931,7 +2062,7 @@
 					"ListData": {},
 					"Properties": {
 						"id": "20221017225222-clk0bbk",
-						"updated": "20221017225222"
+						"updated": "20230323192901"
 					},
 					"Children": [
 						{
@@ -1943,7 +2074,7 @@
 							},
 							"Properties": {
 								"id": "20221017225222-te7wxv3",
-								"updated": "20221017225222"
+								"updated": "20230323192901"
 							},
 							"Children": [
 								{
@@ -1951,12 +2082,21 @@
 									"Type": "NodeParagraph",
 									"Properties": {
 										"id": "20221017225222-746oaax",
-										"updated": "20221017225222"
+										"updated": "20230323192901"
 									},
 									"Children": [
 										{
 											"Type": "NodeText",
-											"Data": "锁加在何处其实是需要根据代码量来进行调整的，如果临界区只有一两条语句，锁应该加在循环外(串行)，若语句比较多，则加在循环内(并行)。"
+											"Data": "锁加在何处其实是需要根据代码量来进行调整的，"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "如果临界区只有一两条语句，锁应该加在循环外(串行)，若语句比较多，则加在循环内(并行)"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "。"
 										}
 									]
 								}
@@ -2105,7 +2245,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "#include \u003cmutex\u003e  \n#include \u003cthread\u003e  \nint x = 0;  \nmutex mtx;  \nvoid Func(int n)  \n{  \n   // 加锁，加再循环里面还是循环外面？为什么？  \n   // 2  \n   for (int i = 0; i \u003c n; ++i)  \n   {  \n\t   mtx.lock();  \n   \n      //cout \u003c\u003c std::this_thread::get_id() \u003c\u003c\"-\u003e\"\u003c\u003c x \u003c\u003c endl;    \n      ++x;  \n    \n\t   mtx.unlock();  \n   }  \n}  \nint main()  \n{  \n   thread t1(Func, 5000000);  \n   thread t2(Func, 5000000);  \n  \n   t1.join();  \n   t2.join();  \n  \n   cout \u003c\u003c x \u003c\u003c endl;  \n  \n   return 0;  \n}\n"
+					"Data": "#include \u003cmutex\u003e  \n#include \u003cthread\u003e  \nint x = 0;  \nmutex mtx;  \nvoid Func(int n)  \n{  \n   // 加锁，加再循环里面还是循环外面？为什么？  \n   // 2  \n   for (int i = 0; i \u003c n; ++i)  \n   {  \n\t   mtx.lock();  \n   \n          //cout \u003c\u003c std::this_thread::get_id() \u003c\u003c\"-\u003e\"\u003c\u003c x \u003c\u003c endl;    \n          ++x;  \n  \n\t   mtx.unlock();  \n   }  \n}  \nint main()  \n{  \n   thread t1(Func, 5000000);  \n   thread t2(Func, 5000000);  \n  \n   t1.join();  \n   t2.join();  \n  \n   cout \u003c\u003c x \u003c\u003c endl;  \n  \n   return 0;  \n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -2161,6 +2301,13 @@
 					"Data": "```"
 				}
 			]
+		},
+		{
+			"ID": "20230323193344-osgx52e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323193344-osgx52e"
+			}
 		},
 		{
 			"ID": "20221017225222-wb190fz",
@@ -2315,7 +2462,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-mbuvliw",
-				"updated": "20221017225925"
+				"updated": "20230323193452"
 			},
 			"Children": [
 				{
@@ -2325,11 +2472,25 @@
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "strong",
-					"TextMarkTextContent": "原子类型只能从其模板参数中进行构造，不允许原子类型进行拷贝构造、移动构造以及operator=等"
+					"TextMarkTextContent": "原子类型只能从其模板参数中进行构造，不允许原子类型进行拷贝构造、移动构造以及"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "operator="
 				},
 				{
 					"Type": "NodeText",
-					"Data": " ，为了防止意外，标准库已经将atmoic模板类中的拷贝构造、移动构造、赋值运算符重载默认删除掉了。\n​"
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "等"
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ，为了防止意外，标准库已经将atmoic模板类中的拷贝构造、移动构造、赋值运算符重载默认删除掉了。\n​​"
 				},
 				{
 					"Type": "NodeImage",
@@ -2343,7 +2504,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221016224938"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -2353,7 +2514,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221016224938-20221017225925-rz3xard.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230323193422.png"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -2362,12 +2523,16 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "\n注意：需要使用以上原子操作变量时，必须添加头文件"
+					"Data": "​\n注意：需要使用以上原子操作变量时，必须添加头文件"
 				},
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "code",
 					"TextMarkTextContent": "\u0026lt;atomic\u0026gt;"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
 				}
 			]
 		},
@@ -2398,7 +2563,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20221017225222-jfy6gbx",
-				"updated": "20221017225222"
+				"updated": "20230323193544"
 			},
 			"Children": [
 				{
@@ -2411,13 +2576,20 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "#include \u003ciostream\u003e \nusing namespace std; \n#include \u003cthread\u003e \n#include \u003catomic\u003e\n\natomic_long sum{ 0 }; //定义sum为原子变量\n\nvoid fun(size_t num)\n{\n\tfor (size_t i = 0; i \u003c num; ++i) \n\tsum ++;   // 原子操作\n}\n\nint main() \n{\n\tcout \u003c\u003c \"Before joining, sum = \" \u003c\u003c sum \u003c\u003c std::endl; \n\tthread t1(fun, 1000000);\n\tthread t2(fun, 1000000); \n\tt1.join();\n\tt2.join();\n\tcout \u003c\u003c \"After joining, sum = \" \u003c\u003c sum \u003c\u003c std::endl; \n\treturn 0;\n}\n"
+					"Data": "#include \u003ciostream\u003e \nusing namespace std; \n#include \u003cthread\u003e \n#include \u003catomic\u003e\n\natomic_long sum{ 0 }; //定义sum为原子变量\n\nvoid fun(size_t num)\n{\n\tfor (size_t i = 0; i \u003c num; ++i) \n\tsum++;   // 原子操作\n}\n\nint main() \n{\n\tcout \u003c\u003c \"Before joining, sum = \" \u003c\u003c sum \u003c\u003c std::endl; \n\tthread t1(fun, 1000000);\n\tthread t2(fun, 1000000); \n\tt1.join();\n\tt2.join();\n\tcout \u003c\u003c \"After joining, sum = \" \u003c\u003c sum \u003c\u003c std::endl; \n\treturn 0;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
 					"Data": "```"
 				}
 			]
+		},
+		{
+			"ID": "20230323193930-sbk4wis",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323193930-sbk4wis"
+			}
 		},
 		{
 			"ID": "20221017225222-krbc23o",
@@ -2589,7 +2761,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-kqd1d91",
-				"updated": "20221017225222"
+				"updated": "20230323193947"
 			},
 			"Children": [
 				{
@@ -2603,7 +2775,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "的表现，"
+					"Data": "​的表现，"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2612,7 +2784,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "失败后会返回null, 那么if判断之后，会直接返回"
+					"Data": "​失败后会返回null, 那么if 判断之后，会直接返回"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2621,7 +2793,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": ", 整个程序就结束了，可是如果是多线程环境下，那么还是会死锁，一个线程拿到锁之后并没有释放，另外一个线程就会被卡在执行处."
+					"Data": "​, 整个程序就结束了，可是如果是多线程环境下，那么还是会死锁，一个线程拿到锁之后并没有释放，另外一个线程就会被卡在执行处."
 				}
 			]
 		},
@@ -2653,11 +2825,18 @@
 			]
 		},
 		{
+			"ID": "20230323194038-pj0m10d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323194038-pj0m10d"
+			}
+		},
+		{
 			"ID": "20221017225222-7vkpcya",
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-7vkpcya",
-				"updated": "20221017230114"
+				"updated": "20230323194058"
 			},
 			"Children": [
 				{
@@ -2666,12 +2845,14 @@
 				},
 				{
 					"Type": "NodeTextMark",
-					"TextMarkType": "mark strong",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221018214834-jt5hrf0",
+					"TextMarkBlockRefSubtype": "s",
 					"TextMarkTextContent": "异常"
 				},
 				{
 					"Type": "NodeText",
-					"Data": "了之后，跳转到catch处，可是"
+					"Data": "了之后，跳转到"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2680,7 +2861,16 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "并不能为你释放锁资源，那么也会导致死锁的问题"
+					"Data": "​处，可是"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "catch"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​并不能为你释放锁资源，那么也会导致死锁的问题"
 				}
 			]
 		},
@@ -2735,16 +2925,32 @@
 			]
 		},
 		{
+			"ID": "20230323194157-jbvtesb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323194157-jbvtesb"
+			}
+		},
+		{
 			"ID": "20221017225222-p66hz63",
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-p66hz63",
-				"updated": "20221017225222"
+				"updated": "20230323194151"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "以下代码已做catch处理。"
+					"Data": "以下代码已做"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "catch"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​处理。"
 				}
 			]
 		},
@@ -2780,7 +2986,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-o8guoa8",
-				"updated": "20221017225222"
+				"updated": "20230323194243"
 			},
 			"Children": [
 				{
@@ -2790,7 +2996,7 @@
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "mark",
-					"TextMarkTextContent": "RAII（ RAII (Resource Acquisition Is Initialization)是一种利用对象生命周期来控制程序资源(如内存、文件句 柄r网络连接、斥量等等)的简单技术"
+					"TextMarkTextContent": "RAII（ RAII (Resource Acquisition Is Initialization)是一种利用对象生命周期来控制程序资源(如内存、文件句柄,网络连接、斥量等等)的简单技术"
 				},
 				{
 					"Type": "NodeText",
@@ -2803,7 +3009,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": " 和 "
+					"Data": "​ 和 "
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2812,7 +3018,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": " ，引入"
+					"Data": "​ ，引入"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2821,7 +3027,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "之后，并不会出现这样的问题"
+					"Data": "​之后，并不会出现这样的问题"
 				}
 			]
 		},
@@ -2879,7 +3085,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-0op5v98",
-				"updated": "20221017225222"
+				"updated": "20230323194324"
 			},
 			"Children": [
 				{
@@ -2893,7 +3099,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "之后，无论是抛异常还是程序中间返回，都会被处理。\n通过上述代码可以看到，"
+					"Data": "​之后，无论是抛异常还是程序中间返回，都会被处理。\n通过上述代码可以看到，"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2902,7 +3108,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "类模板主要是通过"
+					"Data": "​类模板主要是通过"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2911,7 +3117,16 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "的方式，对其管理的互斥量进行了封装，在需要加锁的地方，只需要用上述介绍的任意互斥体实例化一个lock_guard，"
+					"Data": "的方式，对其管理的互斥量进行了封装，在需要加锁的地方，只需要用上述介绍的任意互斥体实例化一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_guard"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2971,14 +3186,39 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221017225222-g66hb61",
-				"updated": "20221017225222"
+				"updated": "20230323194408"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "lock_guard的缺陷：太单一，用户没有办法对该锁进行控制，因此C++11又提供了unique_lock。"
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lock_guard"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​的缺陷：太单一，用户没有办法对该锁进行控制，因此C++11又提供了"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "unique_lock"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​。"
 				}
 			]
+		},
+		{
+			"ID": "20230323194410-po7nyx7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323194410-po7nyx7"
+			}
 		},
 		{
 			"ID": "20221017225222-ske8dlk",
@@ -3129,7 +3369,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20221017225222-p0qxykt",
-				"updated": "20221017225222"
+				"updated": "20230323194534"
 			},
 			"Children": [
 				{
@@ -3141,7 +3381,7 @@
 					},
 					"Properties": {
 						"id": "20221017225222-23i4g68",
-						"updated": "20221017225222"
+						"updated": "20230323194534"
 					},
 					"Children": [
 						{
@@ -3149,7 +3389,7 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20221017225222-qw3qdk7",
-								"updated": "20221017225222"
+								"updated": "20230323194534"
 							},
 							"Children": [
 								{
@@ -3159,7 +3399,52 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "：lock、try_lock、try_lock_for、try_lock_until和unlock"
+									"Data": "："
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "lock"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​、"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "try_lock"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​、"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "try_lock_for"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​、"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "try_lock_until"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​和"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "unlock"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
 								}
 							]
 						}

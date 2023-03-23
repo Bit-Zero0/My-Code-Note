@@ -47,7 +47,12 @@ const KEY_MAP = {
     ArrowRight: '→',
 };
 
+const KEY_TYPE_MAP = {
+    dblclick: 'double-click',
+};
+
 function printHotKey(key) {
+    if (key.enable === false) return "";
     let ctrl = 'Ctrl';
     let shift = 'Shift';
     let alt = 'Alt';
@@ -73,6 +78,12 @@ function printHotKey(key) {
     if (key.Alt) {
         hotkey.push(alt);
     }
-    hotkey.push(KEY_MAP[key.key] || key.key || key.type || MOUSE_BUTTON_MAP[key.button]);
+    hotkey.push(
+        KEY_MAP[key.key]
+        ?? key.key
+        ?? KEY_TYPE_MAP[key.type]
+        ?? key.type
+        ?? MOUSE_BUTTON_MAP[key.button]
+    );
     return hotkey.join(' + ');
 }

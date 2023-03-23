@@ -44,6 +44,8 @@ window.theme.urlFormat = function (url, ssl = true) {
         case url.startsWith('assets/'):
         case url.startsWith('widgets/'):
         case url.startsWith('emojies/'):
+        case url.startsWith('history/'):
+        case url.startsWith('snippets/'):
         case url.startsWith('appearance/'):
         case url.startsWith('export/'):
             return new URL(`${window.location.origin}/${url}`);
@@ -51,6 +53,7 @@ window.theme.urlFormat = function (url, ssl = true) {
             return new URL(`${ssl ? 'https' : 'http'}:${url}`);
         case url.startsWith('/'):
             return new URL(`${window.location.origin}${url}`);
+        case url.startsWith('file://'):
         case url.startsWith('http://'):
         case url.startsWith('https://'):
             return new URL(url);
@@ -106,8 +109,13 @@ window.theme.openNewWindow = function (
                     url.pathname = `/stage/build/${mode.toLowerCase()}/`;
                     break;
                 case 'editor':
+                    windowParams = JSON.parse(JSON.stringify(windowParams));
+                    windowParams.webPreferences.contextIsolation = true;
                     break;
                 default:
+                    windowParams = JSON.parse(JSON.stringify(windowParams));
+                    windowParams.webPreferences.nodeIntegration = false;
+                    windowParams.webPreferences.contextIsolation = true;
                     break;
             }
         }
@@ -126,6 +134,18 @@ window.theme.openNewWindow = function (
             // 新建窗口(Electron 环境)
             var newWin = new BrowserWindow(windowParams);
             const menu = Menu.buildFromTemplate(menuTemplate);
+
+            switch (mode.toLowerCase()) {
+                case 'app':
+                case 'desktop':
+                case 'mobile':
+                case 'editor':
+                    // require('@electron/remote/main').initialize();
+                    require('@electron/remote').require('@electron/remote/main').enable(newWin.webContents);
+                    break;
+                default:
+                    break;
+            }
 
             // console.log(menu);
             console.log(url.href);

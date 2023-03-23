@@ -21,6 +21,8 @@ import {
     getFocusedID,
     getTargetBlockID,
     getTargetInboxID,
+    getTargetHistory,
+    getTargetSnapshotDoc,
 } from './../utils/dom.js';
 
 function open(id = getFocusedID(), urlParams = {}) {
@@ -54,9 +56,23 @@ function infocus(id = getFocusedID()) {
     });
 }
 
-async function middleClick(e, fn_id, fn_href = null, fn_inbox = null) {
+async function middleClick(e, fn_id, fn_href = null, fn_inbox = null, fn_history = null, fn_snapshot = null) {
+    // 历史项
+    const history = getTargetHistory(e.target)
+    if (history) {
+        if (fn_history) fn_history(history.path, history.id);
+        return;
+    }
+
+    // 快照项
+    const snapshot = getTargetSnapshotDoc(e.target)
+    if (snapshot) {
+        if (fn_snapshot) fn_snapshot(snapshot.diff, snapshot.id, snapshot.id2);
+        return;
+    }
+
     // 收集箱
-    let inbox = getTargetInboxID(e.target);
+    const inbox = getTargetInboxID(e.target);
     if (inbox) {
         for (const dock of ['leftDock', 'rightDock', 'topDock', 'bottomDock']) {
             if (window.siyuan.layout[dock]
@@ -84,8 +100,9 @@ async function middleClick(e, fn_id, fn_href = null, fn_inbox = null) {
         }
     }
 
-    let target = getTargetBlockID(e.target);
-    console.log(target);
+    // 文档 ID 或者超链接
+    const target = getTargetBlockID(e.target);
+    // console.log(target);
     if (target) {
         // 目标非空, 是 ID 或者链接
         if (config.theme.regs.id.test(target)) {
@@ -112,9 +129,9 @@ async function createTempDir(path) {
 
 setTimeout(async () => {
     try {
-        if (config.theme.window.enable) {
-            if (config.theme.window.open.enable) {
-                if (config.theme.window.open.panel.enable) {
+        if (config.theme.window.enable) { // 窗口功能
+            if (config.theme.window.open.enable) { // 打开新窗口
+                if (config.theme.window.open.panel.enable) { // 打开一个新窗口
                     toolbarItemInit(
                         config.theme.window.open.panel.toolbar,
                         () => {
@@ -146,8 +163,8 @@ setTimeout(async () => {
                         },
                     );
                 }
-                if (config.theme.window.open.block.enable) {
-                    if (config.theme.window.open.block.outfocus.enable) {
+                if (config.theme.window.open.block.enable) { // 新窗口打开大当前块
+                    if (config.theme.window.open.block.outfocus.enable) { // 新窗口打开当前块不聚焦
                         const Fn_outfocus = toolbarItemInit(
                             config.theme.window.open.block.outfocus.toolbar,
                             outfocus,
@@ -160,7 +177,7 @@ setTimeout(async () => {
                             _ => Fn_outfocus(),
                         );
                     }
-                    if (config.theme.window.open.block.infocus.enable) {
+                    if (config.theme.window.open.block.infocus.enable) { // 新窗口打开当前块并聚焦
                         const Fn_infocus = toolbarItemInit(
                             config.theme.window.open.block.infocus.toolbar,
                             infocus,
@@ -174,7 +191,7 @@ setTimeout(async () => {
                         );
                     }
                 }
-                if (config.theme.window.open.link.enable) {
+                if (config.theme.window.open.link.enable) { // 新窗口打开链接/块引用
                     if (config.theme.window.open.link.outfocus.enable) {
                         globalEventHandler.addEventHandler(
                             'mouseup',
@@ -190,7 +207,7 @@ setTimeout(async () => {
                         );
                     }
                 }
-                if (config.theme.window.open.editor.enable) {
+                if (config.theme.window.open.editor.enable) { // 新窗口打开编辑器
                     // 新窗口打开编辑器
 
                     // 首先删除并新建临时目录
@@ -198,7 +215,7 @@ setTimeout(async () => {
                     let r = await createTempDir(config.theme.window.open.editor.path.temp.relative);
                     if (r && r.code === 0) {
                         // 临时目录创建成功
-                        globalEventHandler.addEventHandler(
+                        globalEventHandler.addEventHandler( // kramdown
                             'mouseup',
                             config.theme.hotkeys.window.open.markdown,
                             e => setTimeout(async () => middleClick(
@@ -206,14 +223,61 @@ setTimeout(async () => {
                                 async id => compareVersion(window.theme.kernelVersion, '2.0.24') > 0
                                     ? editBlockKramdown(id)
                                     : editDocKramdown(id),
+                                undefined,
+                                undefined,
+                                async (path, id) => {
+                                    /* diff 对比编辑历史文档与当前文档 kramdown */
+                                    window.theme.openNewWindow(
+                                        'editor',
+                                        undefined,
+                                        {
+                                            id: id,
+                                            mode: 'history',
+                                            type: 'kramdown',
+                                            url: encodeURI(path),
+                                            lang: window.theme.languageMode,
+                                            // theme: window.siyuan.config.appearance.mode,
+                                            fontFamily: encodeURI(window.siyuan.config.editor.fontFamily),
+                                            // tabSize: window.siyuan.config.editor.codeTabSpaces,
+                                            // workspace: window.siyuan.config.system.workspaceDir,
+                                        },
+                                        config.theme.window.windowParams,
+                                        config.theme.window.menu.template,
+                                        config.theme.window.open.editor.path.index,
+                                    );
+                                },
+                                async (diff, id, id2) => {
+                                    /* diff 对比查看快照 kramdown 更改 */
+                                    const urlParams = {
+                                        id,
+                                        mode: 'snapshot',
+                                        type: 'kramdown',
+                                        lang: window.theme.languageMode,
+                                        // theme: window.siyuan.config.appearance.mode,
+                                        fontFamily: encodeURI(window.siyuan.config.editor.fontFamily),
+                                        // tabSize: window.siyuan.config.editor.codeTabSpaces,
+                                        // workspace: window.siyuan.config.system.workspaceDir,
+                                    };
+                                    if (diff) urlParams.id2 = id2;
+
+                                    window.theme.openNewWindow(
+                                        'editor',
+                                        undefined,
+                                        urlParams,
+                                        config.theme.window.windowParams,
+                                        config.theme.window.menu.template,
+                                        config.theme.window.open.editor.path.index,
+                                    );
+                                },
                             ), 0),
                         );
-                        globalEventHandler.addEventHandler(
+                        globalEventHandler.addEventHandler( // markdown
                             'mouseup',
                             config.theme.hotkeys.window.open.editor,
                             e => setTimeout(async () => middleClick(
                                 e,
                                 async id => {
+                                    /* 查看/编辑思源块 markdown */
                                     window.theme.openNewWindow(
                                         'editor',
                                         undefined,
@@ -271,6 +335,7 @@ setTimeout(async () => {
                                             // 复制本地文件至临时目录
                                             await copyFile(path, temp_file_path_absolute).then(() => {
                                                 // 复制成功
+                                                /* 编辑本地文件 */
                                                 window.theme.win = window.theme.openNewWindow(
                                                     'editor',
                                                     config.theme.window.open.editor.path.index,
@@ -309,6 +374,7 @@ setTimeout(async () => {
                                     }
                                     else {
                                         // 思源资源文件链接或网络文件链接
+                                        /* 编辑资源文件 */
                                         window.theme.openNewWindow(
                                             'editor',
                                             config.theme.window.open.editor.path.index,
@@ -339,6 +405,7 @@ setTimeout(async () => {
                                     putFile(temp_file_path_relative, inbox.shorthandContent).then(r => {
                                         if (r && r.code === 0) {
                                             // 写入文件成功
+                                            /* 编辑收集箱临时文件 */
                                             window.theme.win = window.theme.openNewWindow(
                                                 'editor',
                                                 config.theme.window.open.editor.path.index,
@@ -348,7 +415,7 @@ setTimeout(async () => {
                                                     path: encodeURI(temp_file_path_relative),
                                                     lang: window.theme.languageMode,
                                                     // theme: window.siyuan.config.appearance.mode,
-                                                    tabSize: window.siyuan.config.editor.codeTabSpaces,
+                                                    // tabSize: window.siyuan.config.editor.codeTabSpaces,
                                                     fontFamily: encodeURI(window.siyuan.config.editor.fontFamily),
                                                     workspace: window.siyuan.config.system.workspaceDir,
 
@@ -368,6 +435,50 @@ setTimeout(async () => {
                                             );
                                         }
                                     });
+                                },
+                                async (path, id) => {
+                                    /* 查看历史文档 markdown */
+                                    window.theme.openNewWindow(
+                                        'editor',
+                                        undefined,
+                                        {
+                                            id: id,
+                                            mode: 'history',
+                                            type: 'markdown',
+                                            url: encodeURI(path),
+                                            lang: window.theme.languageMode,
+                                            // theme: window.siyuan.config.appearance.mode,
+                                            fontFamily: encodeURI(window.siyuan.config.editor.fontFamily),
+                                            // tabSize: window.siyuan.config.editor.codeTabSpaces,
+                                            // workspace: window.siyuan.config.system.workspaceDir,
+                                        },
+                                        config.theme.window.windowParams,
+                                        config.theme.window.menu.template,
+                                        config.theme.window.open.editor.path.index,
+                                    );
+                                },
+                                async (diff, id, id2) => {
+                                    /* diff 对比查看快照 markdown 更改 */
+                                    const urlParams = {
+                                        id,
+                                        mode: 'snapshot',
+                                        type: 'markdown',
+                                        lang: window.theme.languageMode,
+                                        // theme: window.siyuan.config.appearance.mode,
+                                        fontFamily: encodeURI(window.siyuan.config.editor.fontFamily),
+                                        // tabSize: window.siyuan.config.editor.codeTabSpaces,
+                                        // workspace: window.siyuan.config.system.workspaceDir,
+                                    };
+                                    if (diff) urlParams.id2 = id2;
+
+                                    window.theme.openNewWindow(
+                                        'editor',
+                                        undefined,
+                                        urlParams,
+                                        config.theme.window.windowParams,
+                                        config.theme.window.menu.template,
+                                        config.theme.window.open.editor.path.index,
+                                    );
                                 },
                             ), 0),
                         );

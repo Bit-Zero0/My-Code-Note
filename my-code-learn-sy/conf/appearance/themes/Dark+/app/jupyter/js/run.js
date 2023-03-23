@@ -1,10 +1,5 @@
-export {
-    runCode, // 运行代码
-    closeConnection, // 关闭连接
-}
-
 import {
-    upload,
+    jupyter,
     queryBlock,
     getBlockAttrs,
     setBlockAttrs,
@@ -12,17 +7,46 @@ import {
     appendBlock,
     updateBlock,
 } from './api.js';
-import { config } from './config.js';
-import { custom } from './../../public/custom.js';
 import {
-    setBlockDOMAttrs,
+    config,
+    i18n,
+} from './config.js';
+import {
+    custom,
+    loadCustomJson,
+} from './../../public/custom.js';
+import {
+    Queue,
+    Output,
     timestampFormat,
-    base64ToBlob,
-    escapeText,
     promptFormat,
-    HTMLEncode,
+    parseText,
+    parseData,
+    markdown2kramdown,
+    workerInit,
 } from './utils.js';
 
+export {
+    setLang, // 设置语言
+    getConf, // 获取配置
+    runCell, // 运行单元格
+    runCells, // 运行多个单元格
+    restartKernel, // 重启内核
+    closeConnection, // 关闭连接
+    reloadCustomJson, // 重新加载配置
+}
+
+self.handlers = {
+    setLang,
+    getConf,
+    runCell,
+    runCells,
+    restartKernel,
+    closeConnection,
+    reloadCustomJson,
+};
+
+var lang;
 var websockets = {
     // doc_id: { // 文档 ID
     //     ws: WebSocket, // WebSocket 对象
@@ -32,6 +56,7 @@ var websockets = {
     //         language: kernel_language, // 内核语言
     //     },
     //     session: session_id, // 会话 ID
+    //     username: username, // 工作空间用户名
     //     version: version, // 版本
     //     index: 0, // 索引
     //     messages: { // 消息集合
@@ -39,85 +64,27 @@ var websockets = {
     //             doc: doc_id, // 文档块 ID
     //             code: code_id, // 代码块 ID
     //             output: output_id, // 输出块 ID
-    //             escaped: boolean, // 是否转义输出结果
+    //             current: {
+    //                 id: id, // 当前块 ID
+    //                 markdown: markdown, // 当前内容
+    //             },
+    //             params: {
+    //                 escaped: boolean, // 是否转义输出结果
+    //                 cntrl: boolean, // 是否解析控制字符
+    //             },
     //             index: int, // 消息序号
     //         },
-    //     }
+    //     },
+    //     flag: false, // 是否有待处理消息
+    //     queue: new Queue(), // 接收的消息队列
     // },
 };
-
-/* 加载样式 */
-const style = document.getElementById(config.jupyter.id.siyuan.style.id) || document.createElement('link');
-const i18n = config.jupyter.i18n;
-const lang = window.theme.languageMode;
-style.id = config.jupyter.id.siyuan.style.id;
-style.type = 'text/css';
-style.rel = 'stylesheet';
-style.href = config.jupyter.id.siyuan.style.href;
-document.head.appendChild(style);
-
-/* 解析数据 */
-async function parseData(data, escaped) {
-    let text, image, application, ext, mime;
-    for (const item in data) {
-        switch (true) {
-            case item.startsWith('text/'):
-                text = data[item];
-                break;
-            case item.startsWith('image/'):
-                switch (true) {
-                    case item.endsWith('/svg+xml'):
-                        image = Buffer.from(data[item]).toString('base64');
-                        ext = 'svg';
-                        break;
-                    default:
-                        image = data[item].split('\n')[0];
-                        ext = item.split('/')[1];
-                        break;
-                }
-                mime = item;
-                break;
-            case item.startsWith('application/'):
-                switch (true) {
-                    case item.endsWith('/json'):
-                        ext = 'json';
-                        mime = item;
-                        application = [
-                            '```json',
-                            JSON.stringify(data[item], undefined, 4),
-                            '```',
-                        ].join('\n');
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            default:
-                break;
-        }
-    }
-    let markdown;
-    if (text && image && ext) {
-        const filename = `jupyter-output.${ext}`;
-        const response = await upload(
-            base64ToBlob(image, mime),
-            undefined,
-            filename,
-        );
-        const filepath = response.data.succMap[filename];
-        markdown = `![${filename}](${filepath} "${text.length < config.jupyter.output.image.title.max ? HTMLEncode(text) : ""}")`;
-    }
-    else if (text) {
-        markdown = escaped
-            ? escapeText(text)
-            : text;
-    }
-    return markdown;
-}
 
 /* 回复消息处理 */
 async function messageHandle(msg_id, msg_type, message, websocket) {
     const message_info = websocket.messages[msg_id];
+    let markdown; // 需要输出的消息
+    let ial = {}; // 需要输出的 IAL
     if (!message_info) return;
     switch (msg_type) {
         case "status": // 状态信息
@@ -127,143 +94,145 @@ async function messageHandle(msg_id, msg_type, message, websocket) {
                 const doc_attrs = {
                     [config.jupyter.attrs.other.prompt]: promptFormat(
                         websocket.kernel.language,
-                        websocket.kernel.name,
-                        i18n[execution_state][lang] || i18n[execution_state].default,
+                        websocket.kernel.display_name,
+                        i18n(execution_state, lang),
                     )
                 };
                 await setBlockAttrs(message_info.doc, doc_attrs);
-                await setBlockDOMAttrs(message_info.doc, doc_attrs);
+
+                /* 更新块序号状态与启动时间 */
+                switch (execution_state) {
+                    case 'busy':
+                        {
+                            const date = new Date(message.header.date);
+                            const code_attrs = {
+                                [config.jupyter.attrs.code.index]: '*',
+                                [config.jupyter.attrs.code.time]: `${i18n('start', lang)}: ${date.format('yyyy-MM-dd hh:mm:ss')}`,
+                            };
+                            const output_attrs = { [config.jupyter.attrs.output.index]: '*' };
+
+                            await setBlockAttrs(message_info.code, code_attrs);
+                            await setBlockAttrs(message_info.output, output_attrs);
+                        }
+                        break;
+                    case 'idle':
+                        markdown = '---'; // 末尾分割线
+                        break;
+                    default:
+                        break;
+                }
             }
             break;
         case "stream": // 代码输出文本信息
             {
-                const text = message.content.text;
                 const type = message.content.name;
-                let style, ial;
+                const text = message.content.text;
                 switch (type) {
                     case "stdout":
                         break;
                     case "stderr":
-                        style = config.jupyter.style.error;
+                        ial.style = config.jupyter.style.error;
                         break;
                     default:
-                        style = config.jupyter.style.warning;
+                        ial.style = config.jupyter.style.warning;
                         break;
                 }
-                ial = style
-                    ? `\n{: style="${style}" }`
-                    : '';
-                await appendBlock(
-                    message_info.output,
-                    message_info.escaped
-                        ? escapeText(text) + ial
-                        : text + ial,
-                )
+                markdown = text;
             }
             break;
         case "execute_result": // 代码运行结果
         case "display_data": // 代码输出展示信息
             {
                 const data = message.content.data;
-
-                const markdown = await parseData(data, message_info.escaped);
-                if (markdown) {
-                    await appendBlock(
-                        message_info.output,
-                        markdown,
-                    )
-                }
+                markdown = await parseData(data, message_info.params);
             }
             break;
         case "error": // 代码输出错误信息
             {
-                const ename = message.content.ename;
-                const evalue = message.content.evalue;
+                // const ename = message.content.ename;
+                // const evalue = message.content.evalue;
                 const traceback = message.content.traceback;
-                let markdown = [];
-                markdown.push('```plaintext');
-                for (const t of traceback) {
-                    markdown.push(t.replace(/\u001b\[(\d+;)*\d+m/g, ''));
-                }
-                markdown.push('```');
-                markdown.push(`{: style="${config.jupyter.style.error}"}`);
-                await appendBlock(message_info.output, markdown.join('\n'));
+                let markdowns = [];
+
+                /* 使用超级块显示堆栈信息 */
+                markdowns.push('{{{row');
+                markdowns.push(parseText(traceback.join('\n'), message_info.params));
+                markdowns.push('}}}');
+                markdown = markdowns.join('\n');
+                ial.style = config.jupyter.style.error;
             }
             break;
-        case "execute_input": // 代码输入信息
-            {
-                /* 更新块序号状态与启动时间 */
-                const date = new Date(message.header.date);
-                let code_attrs = {
-                    [config.jupyter.attrs.code.index]: '*',
-                    [config.jupyter.attrs.code.time]: `${i18n.start[lang] || i18n.start.default}: ${date.format('yyyy-MM-dd hh:mm:ss')}`,
-                };
-                let output_attrs = { [config.jupyter.attrs.output.index]: '*' };
-                await setBlockAttrs(message_info.code, code_attrs);
-                await setBlockAttrs(message_info.output, output_attrs);
-                await setBlockDOMAttrs(message_info.code, code_attrs);
-                await setBlockDOMAttrs(message_info.output, output_attrs);
-            }
+        case "execute_input": // 代码输入信息\
+            // /* 调整至 status 消息解析处 */
+            // {
+            //     /* 更新块序号状态与启动时间 */
+            //     const date = new Date(message.header.date);
+            //     let code_attrs = {
+            //         [config.jupyter.attrs.code.index]: '*',
+            //         [config.jupyter.attrs.code.time]: `${i18n('start', lang)}: ${date.format('yyyy-MM-dd hh:mm:ss')}`,
+            //     };
+            //     let output_attrs = { [config.jupyter.attrs.output.index]: '*' };
+
+            //     await setBlockAttrs(message_info.code, code_attrs);
+            //     await setBlockAttrs(message_info.output, output_attrs);
+            // }
             break;
         case "input_request": // 需要输入信息
             break;
         case "execute_reply": // 运行结果信息
             {
-                const status = message.metadata.status;
+                const status = message.content.status ?? message.metadata.status;
                 const payloads = message.content.payload;
 
-                let markdown = [];
+                let markdowns = [];
                 if (payloads) {
                     /* 解析运行结果文本 */
                     for (const payload of payloads) {
                         const data = payload.data;
-                        const text = await parseData(data, message_info.escaped);
-                        if (text) markdown.push(text);
+                        const text = await parseData(data, message_info.params);
+                        if (text) markdowns.push(text);
                     }
                 }
-                let code_index = message_info.index;
+                let code_index = `${message_info.index}`;
                 let output_index, output_style;
                 switch (status) {
                     case 'ok': // 成功
                         output_index = code_index;
-                        output_style = '';
                         break;
                     case 'error': // 错误
                         output_index = 'E';
                         output_style = config.jupyter.style.error;
 
-                        const ename = message.content.ename;
-                        const evalue = message.content.evalue;
-                        if (ename && evalue) {
-                            markdown.push([
-                                '```plaintext',
-                                `${ename}: ${evalue}`,
-                                '```',
-                                `{: style="${output_style}" }`,
-                            ].join('\n'));
-                        }
+                        /* 使用代码块显示堆栈信息 */
+                        const traceback = message.content.traceback;
+                        markdowns.push('```plaintext');
+                        markdowns.push(new Output(traceback.join('\n')).removeCmdControlChars().toString());
+                        markdowns.push('```');
+                        markdowns.push(`{: style="${config.jupyter.style.error}"}`);
+                        markdowns.join('\n');
                         break;
                     default:
                         break;
                 }
 
                 /* 更新块序号状态与执行时间 */
-                const started = new Date(message.metadata.started);
+                const started = new Date(message?.metadata?.started ?? message.parent_header.date);
                 const stoped = new Date(message.header.date);
-                let code_attrs = {
+
+                const code_attrs = {
                     [config.jupyter.attrs.code.index]: code_index,
-                    [config.jupyter.attrs.code.time]: `${i18n.start[lang] || i18n.start.default}: ${started.format('yyyy-MM-dd hh:mm:ss')} | ${i18n.runtime[lang] || i18n.runtime.default}: ${timestampFormat(stoped - started)}`,
+                    [config.jupyter.attrs.code.time]: `${i18n('start', lang)}: ${started.format('yyyy-MM-dd hh:mm:ss')} | ${i18n('runtime', lang)}: ${timestampFormat(stoped - started)}`,
                 };
-                let output_attrs = {
+                const output_attrs = {
                     [config.jupyter.attrs.output.index]: output_index,
                     // style: output_style,
                 };
+
                 await setBlockAttrs(message_info.code, code_attrs);
                 await setBlockAttrs(message_info.output, output_attrs);
-                await setBlockDOMAttrs(message_info.code, code_attrs);
-                await setBlockDOMAttrs(message_info.output, output_attrs);
-                markdown.push('---');
-                await appendBlock(message_info.output, markdown.join('\n'));
+
+                // markdowns.push('---');
+                markdown = markdowns.join('\n');
             }
             break;
         case "kernel_info_reply": // 内核信息
@@ -272,12 +241,94 @@ async function messageHandle(msg_id, msg_type, message, websocket) {
         default:
             break;
     }
+
+    /* 如果存在需要输出的消息 */
+    if (markdown) {
+        let response; // 响应
+        if (msg_type === 'stream') { // 输出流
+            if (markdown.indexOf('\r') >= 0 || markdown.indexOf('\b') >= 0) { // 编辑原块
+                if (message_info.current?.id) { // 有上一个块
+                    /* 更新原块内容 */
+                    markdown = new Output(markdown)
+                        .parseControlChars(message_info.current.markdown) // 解析控制字符
+                        .toString();
+
+                    if (/^\s*$/.test(markdown)) { // 更新的都是空白字符
+                        /* 删除原块 */
+                        // await deleteBlock(message_info.current.id);
+                        // message_info.current = null;
+                        // return;
+
+                        /* 更新为空块 */
+                        markdown = '';
+                    }
+
+                    let blocks = markdown.split('\n\n'); // 分割块
+
+                    /* 更新原块 */
+                    response = await updateBlock(
+                        message_info.current.id,
+                        markdown2kramdown(
+                            parseText(blocks[0], message_info.params),
+                            blocks.length > 1
+                                ? null
+                                : ial,
+                        ),
+                    );
+
+                    /* 插入剩余块(若有) */
+                    for (let i = 1; i < blocks.length; ++i) {
+                        markdown = blocks[i];
+                        response = await appendBlock(
+                            message_info.output,
+                            markdown2kramdown(parseText(blocks[i], message_info.params), ial),
+                        );
+                    }
+                }
+                else { // 没有上一个块
+                    markdown = new Output(markdown)
+                        .parseControlChars() // 解析控制字符
+                        .toString();
+                    /* 插入块 */
+                    response = await appendBlock(
+                        message_info.output,
+                        markdown2kramdown(parseText(markdown, message_info.params), ial),
+                    );
+                }
+            }
+            else { // 生成新块
+                /* 插入块 */
+                response = await appendBlock(
+                    message_info.output,
+                    markdown2kramdown(parseText(markdown, message_info.params), ial),
+                );
+            }
+        }
+        else { // 非输出流
+            response = await appendBlock(
+                message_info.output,
+                markdown2kramdown(markdown, ial),
+            );
+        }
+
+        /* 更新当前块信息 */
+        if (/\n\s*$/.test(markdown)) { // 若以换行为结尾
+            message_info.current = null; // 当前块结束
+        }
+        else { // 若不以换行为结尾
+            message_info.current = { // 当前块可继续处理
+                id: response?.[0]?.doOperations?.[0]?.id,
+                markdown: markdown,
+            };
+        }
+    }
 }
 
 /* 创建发送消息 */
 function createSendMessage(
     code,
     session_id,
+    username = null,
     version = null,
     msg_id = crypto.randomUUID(),
     date = (new Date()).toISOString(),
@@ -298,7 +349,7 @@ function createSendMessage(
             msg_id: msg_id,
             msg_type: "execute_request",
             session: session_id,
-            username: "",
+            username: username || "",
             version: version || "5.3",
         },
         metadata: {},
@@ -306,7 +357,45 @@ function createSendMessage(
     };
 }
 
-async function runCode(e, code_id, params) {
+/* 设置语言 */
+function setLang(l) {
+    lang = l;
+}
+
+/* 获得 jupyter 配置项 */
+function getConf() {
+    return config;
+}
+
+/* 关闭当前活动连接 */
+async function closeConnection(e, doc_id, params) {
+    websockets?.[doc_id]?.ws?.close();
+}
+
+/* 重启内核 */
+async function restartKernel(e, doc_id, params) {
+    /* 关闭当前会话 */
+    await closeConnection(e, doc_id, params);
+
+    /* 获得文档块的块属性 */
+    const doc_attrs = await getBlockAttrs(doc_id);
+    if (!doc_attrs) return;
+
+    const kernel_id = doc_attrs[config.jupyter.attrs.kernel.id];
+    const kernel = await jupyter.kernels.restart(kernel_id);
+    if (kernel) {
+        await setBlockAttrs(doc_id, {
+            [config.jupyter.attrs.other.prompt]: promptFormat(
+                doc_attrs[config.jupyter.attrs.kernel.language],
+                doc_attrs[config.jupyter.attrs.kernel.display_name],
+                i18n(kernel?.execution_state, lang),
+            ),
+        }); // 更新文档块的属性
+    }
+}
+
+/* 运行代码单元格 */
+async function runCell(e, code_id, params, opened = null) {
     /* 获得代码块 */
     let code_block, output_block;
     code_block = await queryBlock(code_id);
@@ -320,7 +409,7 @@ async function runCode(e, code_id, params) {
     let code_attrs = await getBlockAttrs(code_id);
     if (!code_attrs) return;
 
-    /* 获得代码块所在文档块 */
+    /* 获得代码块所在文档块的块属性 */
     const doc_attrs = await getBlockAttrs(doc_id);
     if (!doc_attrs) return;
 
@@ -359,8 +448,9 @@ async function runCode(e, code_id, params) {
         code_attrs = {}, output_attrs = {};
 
         /* 设置块序号 */
-        websocket.index += 1; // 更新消息序号
-        const index = String(websocket.index);
+        websocket.index++; // 更新消息序号
+        // const index = String(websocket.index);
+        const index = '*';
         code_attrs[config.jupyter.attrs.code.index] = index;
         output_attrs[config.jupyter.attrs.output.index] = index;
 
@@ -377,33 +467,33 @@ async function runCode(e, code_id, params) {
             doc: doc_id,
             code: code_id,
             output: output_id,
-            escaped: params.escaped,
-            index: index,
+            params: params,
+            index: websocket.index,
         };
         const message = JSON.stringify(createSendMessage( // 创建消息
             code_block.content,
             doc_attrs[config.jupyter.attrs.session.id],
+            websocket.username,
             websocket.version,
             msg_id,
         ));
-        websocket.ws.send(message); // 发送消息
-
-        await setBlockDOMAttrs(code_id, code_attrs); // 更新代码块的属性
-        await setBlockDOMAttrs(output_id, output_attrs); // 更新输出块的属性
         await setBlockAttrs(code_id, code_attrs); // 更新代码块的属性
         await setBlockAttrs(output_id, output_attrs); // 更新输出块的属性
+
+        websocket.ws.send(message); // 发送消息
     }
 
-    if (websockets[doc_id]
-        && websockets[doc_id].ws
-        && websockets[doc_id].ws.readyState === WebSocket.OPEN
-    ) {
+    if (websockets?.[doc_id]?.ws?.readyState === WebSocket.OPEN) {
         websocket = websockets[doc_id];
-        run();
+        await run();
+        if (typeof opened === 'function') opened(websocket);
     }
     else {
+        // websockets?.[doc_id]?.ws?.close();
+
         const kernel_id = doc_attrs[config.jupyter.attrs.kernel.id];
         const kernel_name = doc_attrs[config.jupyter.attrs.kernel.name];
+        const kernel_display_name = doc_attrs[config.jupyter.attrs.kernel.display_name];
         const kernel_language = doc_attrs[config.jupyter.attrs.kernel.language];
         const session_id = doc_attrs[config.jupyter.attrs.session.id];
 
@@ -418,24 +508,44 @@ async function runCode(e, code_id, params) {
             kernel: {
                 id: kernel_id,
                 name: kernel_name,
+                display_name: kernel_display_name,
                 language: kernel_language,
             },
             session: session_id,
             version: null,
             index: 0,
             messages: {},
+            flag: false,
+            queue: new Queue(),
         };
-        websocket.ws.onmessage = async e => {
+
+        /** 消息队列处理
+         *  REF [JavaScript 通过队列实现异步流控制 - 从过去穿越到现在 - 博客园](https://www.cnblogs.com/liaozhenting/p/8681527.html)
+         */
+        async function msgHandler() {
+            websocket.flag = true;
+            while (!websocket.queue.empty()) {
+                const message = websocket.queue.dequeue().value;
+                websocket.username = message.header.username;
+                websocket.version = message.header.version;
+                const msg_id = message.parent_header.msg_id;
+                const msg_type = message.msg_type;
+                await messageHandle(msg_id, msg_type, message, websocket);
+            }
+            websocket.flag = false;
+        }
+        websocket.ws.onmessage = e => {
             // REF [MessageEvent - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/MessageEvent)
-            const message = JSON.parse(e.data);
-            websocket.version = message.header.version;
-            const msg_id = message.parent_header.msg_id;
-            const msg_type = message.msg_type;
-            await messageHandle(msg_id, msg_type, message, websocket);
+            // REF [JavaScript 通过队列实现异步流控制 - 从过去穿越到现在 - 博客园](https://www.cnblogs.com/liaozhenting/p/8681527.html)
+            const data = JSON.parse(e.data);
+            const index = parseInt(data.msg_id.substring(data.msg_id.lastIndexOf('_') + 0));
+            websocket.queue.enqueue(data, index);
+            if (!websocket.flag) msgHandler();
         };
         websocket.ws.onopen = async e => {
             console.log(e);
-            run();
+            await run();
+            if (typeof opened === 'function') opened(websocket);
         };
         websocket.ws.onerror = async e => {
             console.warn(e);
@@ -449,7 +559,17 @@ async function runCode(e, code_id, params) {
     }
 }
 
-/* 关闭当前活动连接 */
-async function closeConnection(e, doc_id, params) {
-    if (websockets[doc_id]) websockets[doc_id].ws.close();
+/* 依次运行多个单元格 */
+async function runCells(e, IDs, params) {
+    const call = async i => {
+        if (i < IDs.length) runCell(e, IDs[i], params, async _ => call(i + 1));
+    };
+    call(0);
 }
+
+/* 重新加载配置 */
+async function reloadCustomJson(...args) {
+    loadCustomJson();
+}
+
+workerInit(self); // 初始化工作线程

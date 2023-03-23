@@ -1,7 +1,6 @@
 /* 菜单增强 */
 
 import { config } from './config.js';
-import { isKey } from './../utils/hotkey.js';
 import { getSysFonts } from './../utils/api.js';
 import { globalEventHandler } from './../utils/listener.js';
 import {
@@ -65,13 +64,12 @@ function blockMenuCallback(mutationList, observer) {
         // 块菜单已经加载完成
         if (mutation.addedNodes.length === 1
             && mutation.addedNodes[0].classList.contains('b3-menu__item--readonly')
-            && mutation.addedNodes[0].lastElementChild.childElementCount === 1
-            && mutation.previousSibling
-            && mutation.previousSibling.classList.contains('b3-menu__separator')
+            && mutation.addedNodes[0].lastElementChild.childElementCount <= 1
+            && mutation.previousSibling.classList?.contains('b3-menu__separator')
         ) {
             // 块菜单添加
             // console.log(mutation);
-            const block = block_mark || getBlockSelected() || null;
+            const block = getBlockSelected() || block_mark || null;
             if (block) {
                 const items = menuInit(
                     config.theme.menu.block.items,
@@ -90,13 +88,8 @@ function blockMenuCallback(mutationList, observer) {
         }
         // 页签项菜单已加载完成
         else if (mutation.addedNodes.length === 1
-            && mutation.addedNodes[0].firstChild
-            && mutation.addedNodes[0].firstChild.firstChild
-            && mutation.addedNodes[0].firstChild.firstChild.getAttribute('xlink:href') === '#iconPin'
-            && mutation.previousSibling
-            && mutation.previousSibling.firstChild
-            && mutation.previousSibling.firstChild.firstChild
-            && mutation.previousSibling.firstChild.firstChild.getAttribute('xlink:href') === '#iconCopy'
+            && mutation.addedNodes[0]?.firstChild?.firstChild?.getAttribute('xlink:href') === '#iconPin'
+            && mutation.previousSibling?.firstChild?.firstChild?.getAttribute('xlink:href') === '#iconCopy'
         ) {
             const items = menuInit(config.theme.menu.tabbar.items);
             if (items) {
@@ -142,9 +135,9 @@ async function loadFonts(menuItems, fonts, mode) {
                 label: {
                     zh_CN: font,
                     other: font,
-                    style: `font-family: '${font}'`,
+                    style: `font-family: "${font}"`,
                 },
-                accelerator: `font-family: '${font}'`,
+                accelerator: `font-family: "${font}"`,
                 click: {
                     enable: true,
                     callback: null,
@@ -180,7 +173,7 @@ async function loadFonts(menuItems, fonts, mode) {
                             params: {
                                 'style': {
                                     regexp: /\s*font-family:.*?;/g,
-                                    value: `font-family: '${font}';`,
+                                    value: `font-family: "${font}";`,
                                 },
                             },
                         },
@@ -193,7 +186,7 @@ async function loadFonts(menuItems, fonts, mode) {
 }
 
 /* 加载字体菜单项 */
-async function loadFontsItem(items, fontList) {
+async function loadFontsItem() {
     let system_fonts = await getSysFonts();
     loadFonts(config.theme.menu.block.items[0].items, COMMON_FONTS, 'custom-font-family');
     loadFonts(config.theme.menu.block.items[1].items, system_fonts, 'style');

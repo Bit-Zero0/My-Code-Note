@@ -57,6 +57,10 @@ class EventHandler {
                 is: isEvent,
                 handlers: [],
             },
+            fullscreenchange: {
+                is: null,
+                handlers: [],
+            },
         };
 
         for (const listener in this.listeners) {
@@ -78,8 +82,8 @@ class EventHandler {
 
     addEventHandler(type, e, callback) {
         const listener = this.listeners[type];
-        if (listener) {
-            this.listeners[type].handlers.push({
+        if (listener && (e === null || e.enable !== false)) {
+            listener.handlers.push({
                 e: e,
                 callback: callback,
             });
