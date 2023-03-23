@@ -1,7 +1,5 @@
 /* 表格自动调整宽度 */
 
-@import (css) url(/appearance/themes/Dark+/style/module/config.css);
-@import (css) url(/widgets/custom.css);
 
 .protyle-wysiwyg {
 
@@ -9,14 +7,12 @@
 
         &[custom-table-width~=auto],
         &[custom-table-width~="自动"] {
-            &[data-node-id].table {
-                /* 自动宽度 */
-                width: calc(100% - 8px);
+            /* 自动宽度 */
+            width: 100%;
 
-                table {
-                    /* 自动宽度 */
-                    width: auto;
-                }
+            table {
+                /* 自动宽度 */
+                width: auto;
             }
         }
 

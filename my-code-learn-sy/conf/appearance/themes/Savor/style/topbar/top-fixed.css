@@ -1,0 +1,49 @@
+
+.toolbar{
+	height:32px;
+	margin-bottom: -32px;
+	opacity: 0;
+	transition: all 300ms;
+	transform:translateY(-20px);
+	z-index:8;
+	transition-delay: 500ms;
+	border-bottom: 1px solid var(--b3-dockright-background);
+	background-color:var(--b3-theme-background);
+}
+
+.toolbar:hover{
+	opacity: 1;
+	transform:translateY(0px);
+	transition: all 300ms;
+}
+
+.fn__flex-column.fn__flex-shrink>.fn__flex:first-child:not(.fn__none),
+.layout__center~.fn__flex-column>.fn__flex:first-child,
+.fn__flex-column.fn__flex-shrink>.fn__flex.fn__none+.layout__resize+.fn__flex,
+.layout__center~.fn__flex-column>.fn__flex.fn__none+.layout__resize+.fn__flex{
+	padding-top:0px;
+}
+
+.dock#dockLeft .dock__item:first-child,.dock#dockRight .dock__item:first-child{
+	margin: 8px 7px 7px 7px;
+}
+
+
+
+
+
+
+.layout-tab-bar {
+	margin-right:0!important;
+	margin-left:0!important;
+}
+
+
+#drag{
+	height:32px;
+	margin-bottom: 0px;
+}
+
+.fn__flex-column.fn__flex-shrink,.layout__center+.layout__resize--lr+.fn__flex-column{
+	padding-top:0px;
+}

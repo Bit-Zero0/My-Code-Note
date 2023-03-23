@@ -21,20 +21,35 @@ function changeBackground(background, mode = 'image') {
         case 'image':
         default:
             element.style.backgroundImage = ``;
-            element.style.backgroundImage = `url("${background}")`;
+            // element.style.backgroundImage = `url("${background}")`;
+            document.body.parentElement.style.setProperty(config.theme.background.image.propertyName, `url("${background}")`);
             break;
     }
 }
 
 function switchBackground(lightIter, darkIter) {
     // console.log(customBackground);
+    let landscape, portrait;
+    /* 判断主题颜色 */
     switch (window.theme.themeMode) {
         case 'light':
-            changeBackground(lightIter.next().value);
+            landscape = lightIter.landscape;
+            portrait = lightIter.portrait;
             break;
         case 'dark':
         default:
-            changeBackground(darkIter.next().value);
+            landscape = darkIter.landscape;
+            portrait = darkIter.portrait;
+            break;
+    }
+    /* 判断窗口宽高 */
+    switch (window.theme.orientation()) {
+        case 'portrait':
+            changeBackground(portrait.next().value);
+            break;
+        case 'landscape':
+        default:
+            changeBackground(landscape.next().value);
             break;
     }
 }
@@ -44,16 +59,29 @@ setTimeout(() => {
         if (config.theme.background.enable) {
             if (config.theme.background.image.enable) {
                 if (config.theme.background.image.web.enable) {
-                    const WEB_LIGHT_ITER = config.theme.background.image.web.random
-                        ? Iterator(shuffle(config.theme.background.image.web.light.slice()), true)
-                        : Iterator(config.theme.background.image.web.light.slice(), true);
-                    const WEB_DARK_ITER = config.theme.background.image.web.random
-                        ? Iterator(shuffle(config.theme.background.image.web.dark.slice()), true)
-                        : Iterator(config.theme.background.image.web.dark.slice(), true);
+                    const WEB_LIGHT_LANDSCAPE_ITER = config.theme.background.image.web.random
+                        ? Iterator(shuffle(config.theme.background.image.web.landscape.light.slice()), true)
+                        : Iterator(config.theme.background.image.web.landscape.light.slice(), true);
+                    const WEB_LIGHT_PORTRAIT_ITER = config.theme.background.image.web.random
+                        ? Iterator(shuffle(config.theme.background.image.web.portrait.light.slice()), true)
+                        : Iterator(config.theme.background.image.web.portrait.light.slice(), true);
+
+                    const WEB_DARK_LANDSCAPE_ITER = config.theme.background.image.web.random
+                        ? Iterator(shuffle(config.theme.background.image.web.landscape.dark.slice()), true)
+                        : Iterator(config.theme.background.image.web.landscape.dark.slice(), true);
+                    const WEB_DARK_PORTRAIT_ITER = config.theme.background.image.web.random
+                        ? Iterator(shuffle(config.theme.background.image.web.portrait.dark.slice()), true)
+                        : Iterator(config.theme.background.image.web.portrait.dark.slice(), true);
 
                     const Fn_webBackground = toolbarItemInit(
                         config.theme.background.image.web.toolbar,
-                        () => switchBackground(WEB_LIGHT_ITER, WEB_DARK_ITER),
+                        () => switchBackground({
+                            landscape: WEB_LIGHT_LANDSCAPE_ITER,
+                            portrait: WEB_LIGHT_PORTRAIT_ITER,
+                        }, {
+                            landscape: WEB_DARK_LANDSCAPE_ITER,
+                            portrait: WEB_DARK_PORTRAIT_ITER,
+                        }),
                     );
 
                     // 随机背景图片
@@ -64,16 +92,29 @@ setTimeout(() => {
                     );
                 }
                 if (config.theme.background.image.custom.enable) {
-                    const CUSTOM_LIGHT_ITER = config.theme.background.image.custom.random
-                        ? Iterator(shuffle(config.theme.background.image.custom.light.slice()), true)
-                        : Iterator(config.theme.background.image.custom.light.slice(), true);
-                    const CUSTOM_DARK_ITER = config.theme.background.image.custom.random
-                        ? Iterator(shuffle(config.theme.background.image.custom.dark.slice()), true)
-                        : Iterator(config.theme.background.image.custom.dark.slice(), true);
+                    const CUSTOM_LIGHT_LANDSCAPE_ITER = config.theme.background.image.custom.random
+                        ? Iterator(shuffle(config.theme.background.image.custom.landscape.light.slice()), true)
+                        : Iterator(config.theme.background.image.custom.landscape.light.slice(), true);
+                    const CUSTOM_LIGHT_PORTRAIT_ITER = config.theme.background.image.custom.random
+                        ? Iterator(shuffle(config.theme.background.image.custom.portrait.light.slice()), true)
+                        : Iterator(config.theme.background.image.custom.portrait.light.slice(), true);
+
+                    const CUSTOM_DARK_LANDSCAPE_ITER = config.theme.background.image.custom.random
+                        ? Iterator(shuffle(config.theme.background.image.custom.landscape.dark.slice()), true)
+                        : Iterator(config.theme.background.image.custom.landscape.dark.slice(), true);
+                    const CUSTOM_DARK_PORTRAIT_ITER = config.theme.background.image.custom.random
+                        ? Iterator(shuffle(config.theme.background.image.custom.portrait.dark.slice()), true)
+                        : Iterator(config.theme.background.image.custom.portrait.dark.slice(), true);
 
                     const Fn_customBackground = toolbarItemInit(
                         config.theme.background.image.custom.toolbar,
-                        () => switchBackground(CUSTOM_LIGHT_ITER, CUSTOM_DARK_ITER),
+                        () => switchBackground({
+                            landscape: CUSTOM_LIGHT_LANDSCAPE_ITER,
+                            portrait: CUSTOM_LIGHT_PORTRAIT_ITER,
+                        }, {
+                            landscape: CUSTOM_DARK_LANDSCAPE_ITER,
+                            portrait: CUSTOM_DARK_PORTRAIT_ITER,
+                        }),
                         2,
                     );
                     // 是否默认启用自定义背景图片

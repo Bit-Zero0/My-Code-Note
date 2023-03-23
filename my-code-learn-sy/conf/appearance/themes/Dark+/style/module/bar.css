@@ -1,0 +1,199 @@
+/* 边栏 */
+/* 窗口控件 */
+.window-tools .b3-tooltips {
+  margin: 0;
+  padding: calc(var(--custom-dock-item-padding-width) + 2px) calc(var(--custom-dock-item-margin-width) + var(--custom-dock-item-padding-width) + 2px);
+  border-radius: 0;
+}
+.window-tools .b3-tooltips > svg {
+  /* 按钮图标 */
+  width: calc(var(--custom-dock-item-icon-size) - 2px * 2) !important;
+  height: calc(var(--custom-dock-item-icon-size) - 2px * 2) !important;
+}
+/* 未激活的窗口标题栏 */
+.inactive-window-title-bar {
+  /* 未激活的窗口标题栏 */
+  background-color: var(--custom-window-inactive-title-bar-background-color);
+}
+.inactive-window-title-bar .toolbar__item {
+  color: var(--custom-window-inactive-title-bar-color);
+}
+.block__icons--active {
+  /* 聚焦的侧边面板标题 */
+  background-color: var(--b3-list-hover);
+}
+/* 页签新窗口 */
+.body--window #layouts .layout-tab-bar--readonly {
+  /* 页签栏 */
+  padding-right: 0 !important;
+}
+.body--window #layouts .layout-tab-bar--readonly .item--readonly > .fn__flex-1 {
+  /* 页签栏按钮填充间隔 */
+  height: unset !important;
+}
+.body--window .toolbar__window {
+  width: 100%;
+  position: unset;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--custom-tool-bar-background-color);
+  border-bottom: 1px solid var(--b3-border-color);
+  app-region: drag;
+}
+.body--window .toolbar__window > .toolbar__item--active {
+  /* 被激活的窗口控件 */
+  box-shadow: unset;
+}
+.body--blur.body--window .toolbar__window {
+  /* 未激活的窗口标题栏 */
+  background-color: var(--custom-window-inactive-title-bar-background-color);
+}
+.body--blur.body--window .toolbar__window .toolbar__item {
+  color: var(--custom-window-inactive-title-bar-color);
+}
+.body--window .toolbar__window > * {
+  app-region: no-drag;
+}
+.body--window .toolbar__window .b3-tooltips {
+  margin: 0;
+  padding: calc(var(--custom-dock-item-padding-width) + 2px) calc(var(--custom-dock-item-margin-width) + var(--custom-dock-item-padding-width) + 2px);
+  border-radius: 0;
+}
+.body--window .toolbar__window .b3-tooltips > svg {
+  /* 按钮图标 */
+  width: calc(var(--custom-dock-item-icon-size) - 2px * 2) !important;
+  height: calc(var(--custom-dock-item-icon-size) - 2px * 2) !important;
+}
+/* ↑👆👈👉👇↓ */
+#toolbar,
+#dockTop,
+#dockLeft,
+#dockRight,
+#dockBottom,
+#status {
+  padding: 0;
+  box-sizing: content-box;
+}
+#toolbar .b3-tooltips,
+#dockTop .b3-tooltips,
+#dockLeft .b3-tooltips,
+#dockRight .b3-tooltips,
+#dockBottom .b3-tooltips,
+#status .b3-tooltips {
+  /* 边栏按钮 */
+  margin: var(--custom-dock-item-margin-width);
+  padding: var(--custom-dock-item-padding-width);
+  border-radius: var(--custom-border-radius);
+}
+#toolbar .b3-tooltips > svg,
+#dockTop .b3-tooltips > svg,
+#dockLeft .b3-tooltips > svg,
+#dockRight .b3-tooltips > svg,
+#dockBottom .b3-tooltips > svg,
+#status .b3-tooltips > svg {
+  /* 边栏按钮图标 */
+  width: var(--custom-dock-item-icon-size);
+  height: var(--custom-dock-item-icon-size);
+}
+/* 👆👈👉👇 */
+#dockTop,
+#dockLeft,
+#dockRight,
+#dockBottom {
+  background-color: var(--custom-dock-background-color);
+}
+/* ↑👆👇↓ */
+/* ↑↓ */
+#toolbar,
+#status {
+  height: calc(var(--custom-dock-width) - var(--custom-dock-item-margin-width) * 2);
+}
+#toolbar .b3-tooltips,
+#status .b3-tooltips {
+  /* 边栏按钮 */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* 👆👇 */
+#dockTop,
+#dockBottom {
+  height: var(--custom-dock-width);
+  padding: 0;
+}
+/* 👈👉 */
+#dockLeft,
+#dockRight {
+  width: var(--custom-dock-width);
+}
+#toolbar {
+  /* ↑顶部工具栏↑ */
+  background-color: var(--custom-tool-bar-background-color);
+}
+.body--blur #toolbar {
+  /* 未激活的窗口标题栏 */
+  background-color: var(--custom-window-inactive-title-bar-background-color);
+}
+.body--blur #toolbar .toolbar__item {
+  color: var(--custom-window-inactive-title-bar-color);
+}
+body:not(.body--win32) #toolbar:not(.toolbar--browser) {
+  padding-left: 69px;
+}
+#toolbar .toolbar__text {
+  color: var(--b3-theme-on-background);
+}
+#toolbar .toolbar__item {
+  /* 顶部工具栏按钮 */
+  margin: 0px 4px;
+}
+#toolbar .toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover {
+  background-color: var(--b3-theme-background-light);
+}
+#toolbar .toolbar__item.toolbar__item--active {
+  /* 顶部工具栏激活的按钮 */
+  margin: calc(0px + 2px) calc(4px + 2px);
+  padding: calc(var(--custom-dock-item-padding-width) - 2px);
+}
+#toolbar #windowAppIcon {
+  /* 应用图标 */
+  padding: 6px;
+  margin: 0;
+  width: 36px;
+}
+#toolbar #barWorkspace {
+  /* 工作空间下拉菜单 */
+  margin: 0;
+}
+#toolbar #drag {
+  /* 顶部工具栏标题 */
+  padding: 0;
+}
+#toolbar #windowControls .b3-tooltips {
+  margin: 0;
+  padding: calc(var(--custom-dock-item-padding-width) + 2px) calc(var(--custom-dock-item-margin-width) + var(--custom-dock-item-padding-width) + 2px);
+  border-radius: 0;
+}
+#toolbar #windowControls .b3-tooltips > svg {
+  /* 按钮图标 */
+  width: calc(var(--custom-dock-item-icon-size) - 2px * 2) !important;
+  height: calc(var(--custom-dock-item-icon-size) - 2px * 2) !important;
+}
+/* 被激活的控件 */
+.block__icon--active,
+.toolbar__item--active {
+  color: var(--custom-toolbar-tiem-active-color);
+  background-color: var(--custom-toolbar-tiem-active-background-color);
+  /* outline: 1px solid var(--custom-toolbar-tiem-active-color); */
+  box-shadow: 0 0 var(--custom-toolbar-tiem-active-box-shadow-spread) var(--custom-box-shadow-color);
+}
+/* ↑顶部工具栏↑ */
+/* ↓底部状态栏↓ */
+#status #barDock .b3-menu,
+#status #barHelp .b3-menu {
+  /* 左下右下菜单 */
+  bottom: calc(var(--custom-dock-width) - var(--custom-dock-item-margin-width) * 2) !important;
+}
+#status .status__msg,
+#status .status__counter {
+  line-height: calc(var(--custom-dock-width) - var(--custom-dock-item-margin-width) * 2);
+}

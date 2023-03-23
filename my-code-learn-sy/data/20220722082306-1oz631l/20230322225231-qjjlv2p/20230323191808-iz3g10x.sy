@@ -1,0 +1,382 @@
+{
+	"ID": "20230323191808-iz3g10x",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230323191808-iz3g10x",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230323191819-ljrs5vf\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230323191819-q3u2o5q\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20230323191819-ljrs5vf\u0026quot;,\u0026quot;focusStart\u0026quot;:4,\u0026quot;focusEnd\u0026quot;:4}",
+		"title": "指针",
+		"updated": "20230323191828"
+	},
+	"Children": [
+		{
+			"ID": "20230323191819-ljrs5vf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230323191819-ljrs5vf",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "函数指针"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-7r73e0s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-7r73e0s",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "函数指针是指向函数的指针变量，它可以存储函数的地址，也可以通过函数指针调用对应的函数。下面是一个简单的函数指针的示例："
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-jo7n1wp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230323191819-jo7n1wp",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n\nint add(int a, int b)\n{\n    return a + b;\n}\n\nint main()\n{\n    int (*p)(int, int); // 声明一个函数指针变量\n    p = add; // 将函数add的地址赋值给p\n    int sum = (*p)(2, 3); // 通过p调用函数add\n    printf(\"2 + 3 = %d\\n\", sum);\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-xhh9zbv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-xhh9zbv",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的代码中，我们定义了一个函数add，它接受两个int类型的参数并返回它们的和。然后我们定义了一个函数指针变量p，它可以指向接受两个int类型参数并返回int类型的函数。接着将函数add的地址赋值给p，并通过p调用函数add，将结果存储在sum变量中，并打印输出。"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-gkxux58",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-gkxux58",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "除此之外，函数指针还有很多其他的应用，比如可以用函数指针作为函数的参数，可以在运行时动态地选择需要调用的函数 , 这也叫做"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "回调函数"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。下面是一些其他的函数指针的示例："
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-iojtuu8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-iojtuu8",
+				"updated": "20230323191819"
+			}
+		},
+		{
+			"ID": "20230323191819-k7fgx6p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230323191819-k7fgx6p",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "回调函数"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-q3ybof6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230323191819-q3ybof6",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Yw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cstdio.h\u003e\n\n// 定义一个函数类型，接受两个int类型的参数并返回int类型\ntypedef int (*Func)(int, int);\n\nint add(int a, int b)\n{\n    return a + b;\n}\n\nint sub(int a, int b)\n{\n    return a - b;\n}\n\nint calculate(Func func, int a, int b)\n{\n    return func(a, b); // 调用通过函数指针传入的函数\n}\n\nint main()\n{\n    Func p; // 声明一个函数指针类型变量\n    p = add; // 将函数add的地址赋值给p\n    int sum = calculate(p, 2, 3); // 通过p调用函数add\n    printf(\"2 + 3 = %d\\n\", sum);\n\n    p = sub; // 将函数sub的地址赋值给p\n    int diff = calculate(p, 2, 3); // 通过p调用函数sub\n    printf(\"2 - 3 = %d\\n\", diff);\n\n    return 0;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-eapwz9z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-eapwz9z",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的代码中，我们定义了一个函数类型"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，它接受两个int类型的参数并返回int类型，然后我们定义了两个函数"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "add"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "sub"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，它们分别返回两个参数的和和差。接着我们定义了一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "calculate"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​函数，它接受一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​类型的函数指针和两个int类型的参数，并通过函数指针调用传入的函数。最后在main函数中，我们分别将函数"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "add"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​和函数"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "sub"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​的地址赋值给函数指针p，并通过"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "calculate"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​函数调用它们，将结果存储在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "sum"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "diff"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​变量中，并打印输出。"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-ygj608n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-ygj608n",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "回调函数是指作为参数传递给其他函数的函数，这个函数会在被调用函数执行完特定的操作后被调用，以执行一些额外的操作或返回一些结果。在上面的示例代码中，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "calculate"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​函数就是一个接受函数指针作为参数的函数，这个函数会调用传入的函数指针，以完成特定的计算任务。"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-mw3a48o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-mw3a48o",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在代码中，我们使用了"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "add"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "sub"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​两个函数作为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "calculate"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​函数的参数，这两个函数都符合"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​类型的函数指针的定义，因此可以通过函数指针调用它们。在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "calculate"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​函数内部，我们通过"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "func(a, b)"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​的方式调用通过函数指针传入的函数，并将结果作为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "calculate"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​函数的返回值。"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-zmvq50v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-zmvq50v",
+				"updated": "20230323191819"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过这种方式，我们可以实现代码的复用和动态选择需要执行的函数，而不需要编写大量重复的代码。"
+				}
+			]
+		},
+		{
+			"ID": "20230323191819-q3u2o5q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323191819-q3u2o5q",
+				"updated": "20230323191819"
+			}
+		}
+	]
+}

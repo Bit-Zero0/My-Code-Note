@@ -1,12 +1,21 @@
 /* 悬浮输入文本框 */
 
-@import (css) url(/appearance/themes/Dark+/style/module/config.css);
-@import (css) url(/widgets/custom.css);
 
-#editor,
-.layout-tab-container {
+// // 移动端
+// #editor,
+// // 悬浮窗口
+// .block__popover,
+// // 主面板
+// .layout-tab-container {
+
+.protyle {
     .protyle-util {
         background-color: var(--custom-popover-background-color);
+        >.fn__flex>.fn__flex-column+div {
+            /* 模板预览窗口宽度 */
+            width: var(--custom-template-preview-width) !important;
+            min-width: var(--custom-template-preview-min-width);
+        }
 
         textarea.b3-text-field {
             background-color: transparent;

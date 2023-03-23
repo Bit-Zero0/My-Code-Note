@@ -4,9 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722141457-gsg72to",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220722141506-h8gfueg\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230317190859-u2b4sb0\u0026quot;,\u0026quot;scrollTop\u0026quot;:3610,\u0026quot;focusId\u0026quot;:\u0026quot;20220722141506-mksf44b\u0026quot;,\u0026quot;focusStart\u0026quot;:75,\u0026quot;focusEnd\u0026quot;:75}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220722141506-lbfwuug\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230323213847-sgig0ot\u0026quot;,\u0026quot;scrollTop\u0026quot;:12239,\u0026quot;focusId\u0026quot;:\u0026quot;20230323213847-sgig0ot\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
 		"title": "Linux进程",
-		"updated": "20230317190859"
+		"updated": "20230323213847"
 	},
 	"Children": [
 		{
@@ -172,7 +172,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20220722141506-jehhjck",
-				"updated": "20220722141506"
+				"updated": "20230323204543"
 			},
 			"Children": [
 				{
@@ -184,7 +184,7 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20220722141506-7fsm2m2",
-						"updated": "20220722141506"
+						"updated": "20230323204543"
 					},
 					"Children": [
 						{
@@ -248,7 +248,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": ": 包括显示的I/O请求,分配给进程的I／O设备和被进程使用的文件列表。\n"
+							"Data": ": 包括显示的I/O请求,分配给进程的I/O设备和被进程使用的文件列表。\n"
 						},
 						{
 							"Type": "NodeTextMark",
@@ -763,7 +763,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722141506-5jb3sgq",
-				"updated": "20220722141506"
+				"updated": "20230323204953"
 			},
 			"Children": [
 				{
@@ -782,7 +782,25 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": ": 进程执行时处理器的寄存器中的数据[休学例子，要加图CPU，寄存器]\n进程是有并发性的，当从就绪态进入运行态时，会将我们需要处理的数据交给CPU，但进程是时间片完了后，就会切换下一个进程，而没有被处理完的数据就会保存"
+					"Data": ": 进程执行时处理器的寄存器中的数据.\n进程是有并发性的，当从"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "就绪态"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进入"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "运行态"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，会将我们需要处理的数据交给CPU，但进程是时间片完了后，就会切换下一个进程，而没有被处理完的数据就会保存"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -791,7 +809,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "中，以便下次进入运行态时，恢复现场。\n"
+					"Data": "​中，以便下次进入运行态时，恢复现场。"
 				}
 			]
 		},
@@ -855,12 +873,12 @@
 			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20220722141506-6b4oqps",
-				"updated": "20220722141506"
+				"updated": "20230323205102"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "I／O状态信息:"
+					"Data": "I/O状态信息:"
 				}
 			]
 		},
@@ -869,7 +887,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722141506-zjmjkqh",
-				"updated": "20220722141506"
+				"updated": "20230323205056"
 			},
 			"Children": [
 				{
@@ -879,7 +897,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "：包括显示的I/O请求,分配给进程的I／O设备和被进程使用的文件列表。"
+					"Data": "：包括显示的I/O请求,分配给进程的I/O设备和被进程使用的文件列表。"
 				}
 			]
 		},
@@ -991,12 +1009,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722141506-onflw9o",
-				"updated": "20230317155241"
+				"updated": "20230323205307"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "进程的信息可以通过 /proc 系统文件夹查看\n如：要获取PID为1的进程信息，你需要查看  "
+					"Data": "进程的信息可以通过 "
 				},
 				{
 					"Type": "NodeTextMark",
@@ -1005,7 +1023,16 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​  这个文件夹。\n​​"
+					"Data": "​ 系统文件夹查看\n如：要获取PID为1的进程信息，你需要查看  "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "/proc/"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​  这个文件夹。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -1038,7 +1065,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​​"
+					"Data": "​"
 				}
 			]
 		},
@@ -1170,16 +1197,32 @@
 			]
 		},
 		{
+			"ID": "20230323205544-1dvyd6x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323205544-1dvyd6x"
+			}
+		},
+		{
 			"ID": "20220722141506-bawarbe",
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722141506-bawarbe",
-				"updated": "20230317155311"
+				"updated": "20230323205547"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "注意：子进程的数据和父进程是共享的。\n​"
+					"Data": "注意："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "子进程的数据和父进程是共享的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -1673,6 +1716,99 @@
 			}
 		},
 		{
+			"ID": "20230323212904-cuyc0so",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323212904-cuyc0so",
+				"updated": "20230323212936"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230323212929.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​​"
+				}
+			]
+		},
+		{
+			"ID": "20230323212858-712exi1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323212858-712exi1"
+			}
+		},
+		{
+			"ID": "20230323211927-3lm6lkk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230323211927-3lm6lkk",
+				"updated": "20230323211939"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程状态查看"
+				}
+			]
+		},
+		{
+			"ID": "20230323211927-49tf503",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323211927-49tf503",
+				"updated": "20230323212849"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722135728-2mqk3d1",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "ps axj 命令"
+				}
+			]
+		},
+		{
+			"ID": "20230323212854-kfct6b7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323212854-kfct6b7"
+			}
+		},
+		{
 			"ID": "20220722141506-6kxbpdb",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -1692,7 +1828,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722141506-wmc1eqh",
-				"updated": "20230317155530"
+				"updated": "20230323211555"
 			},
 			"Children": [
 				{
@@ -1724,7 +1860,18 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​  kill的。\n​​"
+					"Data": "​  给 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722135728-9dpkp0a",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "kill"
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 掉的。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -1757,7 +1904,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​​"
+					"Data": "​"
 				}
 			]
 		},
@@ -1854,12 +2001,33 @@
 			]
 		},
 		{
+			"ID": "20230323211715-sk9wyrz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323211715-sk9wyrz"
+			}
+		},
+		{
+			"ID": "20230323211716-rf9ulbh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323211716-rf9ulbh",
+				"updated": "20230323211722"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "死循环代码:"
+				}
+			]
+		},
+		{
 			"ID": "20220722141506-dxxxf1m",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220722141506-dxxxf1m",
-				"updated": "20220722141506"
+				"updated": "20230323211710"
 			},
 			"Children": [
 				{
@@ -1872,7 +2040,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n\nint main()\n{\n  \n    while(1)\n    {\n      int c = 10;\n      int a= c;\n    }\n    return 0;\n}\n"
+					"Data": "#include \u003ciostream\u003e\n#include \u003cunistd.h\u003e\n\nint main()\n{\n  \n    while(1) // \n    {\n      int c = 10;\n      int a= c;\n    }\n    return 0;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -1972,12 +2140,21 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722141506-yvqo6kh",
-				"updated": "20220722141506"
+				"updated": "20230323211738"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "意味着进程在等待事件完成（这里的睡眠有时候也叫做可中断睡眠（interruptible sleep））。"
+					"Data": "意味着进程在等待事件完成（这里的睡眠有时候也叫做"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "可中断睡眠"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（interruptible sleep））。"
 				}
 			]
 		},
@@ -2082,7 +2259,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722141506-mksf44b",
-				"updated": "20220722141506"
+				"updated": "20230323211806"
 			},
 			"Children": [
 				{
@@ -2110,7 +2287,7 @@
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "mark",
-					"TextMarkTextContent": "不可被杀"
+					"TextMarkTextContent": "不可被kill"
 				},
 				{
 					"Type": "NodeText",
@@ -2554,7 +2731,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20220722141506-0dh8cy0",
-				"updated": "20230317190329"
+				"updated": "20230323213203"
 			},
 			"Children": [
 				{
@@ -2566,7 +2743,7 @@
 					},
 					"Properties": {
 						"id": "20220722141506-tu8aw2o",
-						"updated": "20230317190329"
+						"updated": "20230323213203"
 					},
 					"Children": [
 						{
@@ -2574,7 +2751,7 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220722141506-0ielc86",
-								"updated": "20230317190329"
+								"updated": "20230323213203"
 							},
 							"Children": [
 								{
@@ -2589,7 +2766,7 @@
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "mark",
-									"TextMarkTextContent": "进程退出"
+									"TextMarkTextContent": "子进程退出"
 								},
 								{
 									"Type": "NodeText",
@@ -3136,7 +3313,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20220722141506-gorj64k",
-				"updated": "20220722141506"
+				"updated": "20230323213610"
 			},
 			"Children": [
 				{
@@ -3149,7 +3326,7 @@
 					"ListData": {},
 					"Properties": {
 						"id": "20220722141506-hxhu09h",
-						"updated": "20220722141506"
+						"updated": "20230323213610"
 					},
 					"Children": [
 						{
@@ -3189,7 +3366,7 @@
 							},
 							"Properties": {
 								"id": "20220722141506-xwv6b6l",
-								"updated": "20220722141506"
+								"updated": "20230323213610"
 							},
 							"Children": [
 								{
@@ -3197,12 +3374,12 @@
 									"Type": "NodeParagraph",
 									"Properties": {
 										"id": "20220722141506-2l2uhfi",
-										"updated": "20220722141506"
+										"updated": "20230323213610"
 									},
 									"Children": [
 										{
 											"Type": "NodeText",
-											"Data": "优先权高的进程有优先执行权利。配置进程优先权对多任务环境的ux很有用，可以改善系统性能."
+											"Data": "优先权高的进程有优先执行权利。配置进程优先权对多任务环境的Linux很有用，可以改善系统性能."
 										}
 									]
 								}
@@ -4069,6 +4246,13 @@
 					"Data": "​"
 				}
 			]
+		},
+		{
+			"ID": "20230323213847-sgig0ot",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323213847-sgig0ot"
+			}
 		}
 	]
 }

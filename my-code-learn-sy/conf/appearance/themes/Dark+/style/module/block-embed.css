@@ -1,14 +1,30 @@
 /* 嵌入块 */
-@import url(/appearance/themes/Dark+/style/module/config.css);
-@import url(/widgets/custom.css);
 .protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node {
   /* 嵌入块 */
+  margin: 0;
+  padding: 0;
   border: none;
-  outline: 2px solid var(--custom-line-color);
-  background-color: var(--custom-block-embed-background-color) !important;
+  background-color: transparent;
 }
-.protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node > .protyle-wysiwyg__embed:not(:nth-of-type(2)) {
+.protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node + [data-node-id][data-type="NodeBlockQueryEmbed"].render-node {
+  /* 两个连续的嵌入块 */
+  margin-top: 0.5em;
+}
+.protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node > .protyle-icons {
+  /* 悬浮显示的控件 */
+  z-index: 2;
+}
+.protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node > .protyle-wysiwyg__embed {
+  border: 2px solid var(--custom-line-color) !important;
+  background-color: var(--custom-block-embed-background-color);
+}
+.protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node > .protyle-wysiwyg__embed:hover {
+  /* 查询结果鼠标悬停时显示边框 */
+  border-color: var(--b3-theme-on-surface) !important;
+}
+.protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node > .protyle-wysiwyg__embed + .protyle-wysiwyg__embed {
+  margin-top: 0.25em;
+}
+.protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"].render-node > .protyle-wysiwyg__embed:not(:nth-last-child(3)) {
   /* 嵌入块间分隔线 */
-  position: relative;
-  border-top: 4px double var(--custom-line-color);
 }

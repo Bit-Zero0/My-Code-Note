@@ -1,0 +1,18 @@
+:root {
+  /* 自动换行显示字段名 | Wrap displays the field names */
+  --custom-backlink-display: table-cell;
+  --custom-bookmark-display: table-cell;
+  --custom-file-display: table-cell;
+  --custom-inbox-display: table-cell;
+  --custom-outline-display: table-cell;
+  --custom-tag-display: table-cell;
+  --custom-search-display: table-cell;
+}
+.protyle-breadcrumb__item,
+.protyle-breadcrumb__text--ellipsis {
+  max-width: none;
+}
+.b3-list-item__text {
+  display: table-cell !important;
+  word-wrap: break-word;
+}

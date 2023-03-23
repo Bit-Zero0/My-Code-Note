@@ -8,10 +8,14 @@ export {
     getFocusedDocBackground, // 获得焦点所在文档的背景
     getFocusedDocID, // 获得焦点所在文档的 ID
     getFocusedID, // 获得焦点所在的块 ID, 否则获得焦点所在文档的 ID
+    getTargetEditor, // 获得指定块位于的编辑区
+    getTargetDocID, // 获得目标的文档 ID
     getTargetBlock, // 获得目标的块
     getTargetBlockID, // 获得目标的块 ID
     getTargetBlockIndex, // 获得目标的块在文档中的索引
     getTargetInboxID, // 获得目标的收件箱 ID
+    getTargetHistory, // 获得目标的历史文档路径与 ID
+    getTargetSnapshotDoc, // 获得目标的快照文档 ID
     getTargetHref, // 获得目标超链接
     getBlockMark, // 获得块标记
     getBlockSelected, // 获得块选中
@@ -23,6 +27,11 @@ export {
     disabledProtyle, // 禁用编辑器
     enableProtyle, // 解除编辑器禁用
     setDockState, // 设置侧边栏状态
+    countElementIndex, // 计算当前节点是上级节点的第几个节点
+    getTooltipDirection, // 计算当前节点应使用的提示方向
+    setTooltipDirection, // 设置提示信息朝向方向
+    requestFullscreen, // 请求全屏
+    requestFullscreenBlock, // 请求对指定的块全屏
 };
 
 import { url2id } from './misc.js';
@@ -58,11 +67,13 @@ function getDockFromPanel(panelName) {
  * @return {null} 光标不在块内
  */
 function getFocusedBlock() {
-    let block = window.getSelection()
-        && window.getSelection().focusNode
-        && window.getSelection().focusNode.parentElement; // 当前光标
-    while (block != null && block.dataset.nodeId == null) block = block.parentElement;
-    return block;
+    if (document.activeElement.classList.contains('protyle-wysiwyg')) {
+        /* 光标在编辑区内 */
+        let block = window.getSelection()?.focusNode?.parentElement; // 当前光标
+        while (block != null && block?.dataset?.nodeId == null) block = block.parentElement;
+        return block;
+    }
+    else return null;
 }
 
 /**
@@ -84,6 +95,12 @@ function getFocusedBlockID() {
  * @return {null} 没有聚焦的文档
  */
 function getFocusedDoc() {
+    /* 点击按钮后焦点就发生了变化, 不能通过 document.activeElement 获取文档 */
+    // const wysiwyg = document.activeElement;
+    // return wysiwyg.classList.contains('protyle-wysiwyg')
+    //     ? wysiwyg
+    //     : null;
+
     return document.querySelector('div.layout__wnd--active div.protyle:not(.fn__none) > div.protyle-content > div.protyle-wysiwyg[data-doc-type]')
         || document.querySelector('#editor > div.protyle-content >  div.protyle-wysiwyg[data-doc-type]')
         || null;
@@ -95,9 +112,19 @@ function getFocusedDoc() {
  * @return {null} 没有聚焦的文档
  */
 function getFocusedDocBackground() {
-    return document.querySelector('div.layout__wnd--active div.protyle:not(.fn__none) > div.protyle-content > div.protyle-background')
-        || document.querySelector('#editor > div.protyle-content > div.protyle-background')
-        || null;
+    // return document.querySelector('div.layout__wnd--active div.protyle:not(.fn__none) > div.protyle-content > div.protyle-background')
+    //     || document.querySelector('#editor > div.protyle-content > div.protyle-background')
+    //     || null;
+
+    const wysiwyg = getFocusedDoc();
+    // console.log(wysiwyg);
+
+    var background = wysiwyg;
+    while (background != null && background.classList.contains('protyle-background') === false)
+        background = background.previousElementSibling;
+    return background
+        ? background
+        : null;
 }
 
 /**
@@ -107,6 +134,7 @@ function getFocusedDocBackground() {
  */
 function getFocusedDocID() {
     let background = getFocusedDocBackground();
+    // console.log(background);
     if (background) {
         return background.dataset.nodeId;
     }
@@ -122,12 +150,34 @@ function getFocusedID() {
     return getFocusedBlockID() || getFocusedDocID() || null;
 }
 
+/**
+ * 获得指定块位于的编辑区
+ * @params {HTMLElement} block: 块
+ * @return {HTMLElement} 光标所在块位于的编辑区
+ * @return {null} 目标不在块内
+ */
+function getTargetEditor(block) {
+    while (block != null && !block.classList.contains('protyle-content')) block = block.parentElement;
+    return block;
+}
+
+/**
+ * 获得目标的文档 ID
+ * @params {HTMLElement} target: 目标
+ * @return {HTMLElement} 目标文档
+ * @return {null} 目标不在块内
+ */
+function getTargetDocID(block) {
+    const content = getTargetEditor(block);
+    return content?.getElementsByClassName('protyle-background')?.[0]?.dataset?.nodeId
+        ?? null;
+}
 
 /**
  * 获得目标的块
  * @params {HTMLElement} target: 目标
- * @return {HTMLElement} 光标所在块
- * @return {null} 光标不在块内
+ * @return {HTMLElement} 目标所在块
+ * @return {null} 目标不在块内
  */
 function getTargetBlock(target) {
     let element = target;
@@ -188,10 +238,8 @@ async function getTargetBlockIndex(target) {
         const scroll = top
             .parentElement
             .parentElement
-            .nextElementSibling
-            .nextElementSibling
-            .nextElementSibling; // 块滚动条
-        const MAX = parseInt(scroll.firstElementChild.max); // 当前文档的块数
+            .querySelector('protyle-scroll__bar'); // 块滚动条
+        const MAX = parseInt(scroll?.firstElementChild.max); // 当前文档的块数
         let index = parseInt(top.dataset.nodeIndex); // 当前块序号
         let first_index = parseInt(top.parentElement.firstElementChild.dataset.nodeIndex);
         let offset = first_index ? 0 : 1; // 块序号偏移量, 如果是从 0 开始, 则偏移量为 1
@@ -263,6 +311,65 @@ function getTargetInboxID(target) {
 }
 
 /**
+ * 获得目标的历史文档路径与 ID
+ * @params {HTMLElement} target: 目标
+ * @return {object}
+ *      path: 历史文档文件路径
+ *      id: 历史文档对应的 ID
+ * @return {null} 没有找到历史文档
+ */
+function getTargetHistory(target) {
+    let element = target;
+    while (element != null && element.localName !== 'li') element = element.parentElement;
+
+    if (element != null) {
+        const result = config.theme.regs.historypath.exec(element.dataset.path);
+        if (result?.length > 1
+            && element.dataset.type === 'doc'
+            && element.classList.contains('b3-list-item')
+        ) {
+            return {
+                path: element.dataset.path,
+                id: result[1],
+            };
+        }
+    }
+    return null;
+}
+
+/**
+ * 获得目标的快照文档 ID
+ * @params {HTMLElement} target: 目标
+ * @return {object}
+ *      diff: 是否为对比
+ *      id: 快照文件 1
+ *      id2: 快照文件 2
+ * @return {null} 没有找到快照文档
+ */
+function getTargetSnapshotDoc(target) {
+    let element = target;
+    while (element != null && element.localName !== 'li') element = element.parentElement;
+
+    if (element != null) {
+        let node = element;
+        while (node != null && node.classList.contains('b3-dialog__diff')) node = node.parentElement;
+
+        const REG_id = /^[0-9a-f]{40}$/;
+        if (node
+            && REG_id.test(element.dataset?.id)
+            && element.classList.contains('b3-list-item')
+        ) {
+            return {
+                diff: REG_id.test(element.dataset?.id2),
+                id: element.dataset.id,
+                id2: element.dataset.id2,
+            };
+        }
+    }
+    return null;
+}
+
+/**
  * 获得目标超链接
  * @params {HTMLElement} target 目标
  * @return {string} 超链接
@@ -307,8 +414,8 @@ function getBlockMark(target) {
 
     // 文档块块标
     if (node.localName === 'span'
-        && node.parentElement.parentElement.firstElementChild.dataset.nodeId
-        && node.parentElement.parentElement.lastElementChild.dataset.docType
+        && node.classList.contains('protyle-title__icon')
+        && node.parentElement.parentElement.firstElementChild.classList.contains('protyle-background')
     ) return {
         id: node.parentElement.parentElement.firstElementChild.dataset.nodeId,
         // type: node.parentElement.parentElement.lastElementChild.dataset.docType,
@@ -340,11 +447,14 @@ function getBlockSelected() {
 
 /**
  * 设置 DOM 中的块属性
+ * @deprecated 该方法已被废弃(2.1.15+), 使用 API `/api/attr/setBlockAttrs` 代替
+ * > - https://github.com/siyuan-note/siyuan/issues/5847
+ * > - https://github.com/siyuan-note/siyuan/issues/5866
  * @param {string} id 块 ID
  * @param {object} attrs 块属性 dict
  */
 function setBlockDOMAttrs(id, attrs) {
-    let block = document.querySelector(`div.protyle-content div[data-node-id="${id}"]`);
+    let block = document.querySelector(`.protyle-content [data-node-id="${id}"]`);
     if (block) {
         if (block.className === 'protyle-background') {
             while (block && block.dataset.docType == null) block = block.nextElementSibling;
@@ -363,7 +473,7 @@ function setBlockDOMAttrs(id, attrs) {
 
 /**
  * 设置编辑器字号
- * REF https://github.com/siyuan-note/siyuan/blob/fcabf93cabf0383a8b59616d66ec44e7869236cf/app/src/protyle/export/index.ts#L242-L107
+ * REF https://github.com/siyuan-note/siyuan/blob/7fbae2f7438a313837218e419468e0b189163c6a/app/src/util/assets.ts#L120-L145
  * @param {number} fontSize 字号
  * @return {number} 设置后的字号
  * @return {null} 没有找到字号
@@ -374,12 +484,13 @@ function setFontSize(fontSize) {
         const height = Math.floor(fontSize * 1.625);
         style.innerHTML = `
 .b3-typography, .protyle-wysiwyg, .protyle-title {font-size:${fontSize}px !important}
-.b3-typography code:not(.hljs), .protyle-wysiwyg code:not(.hljs) { font-variant-ligatures: ${window.siyuan.config.editor.codeLigatures ? "normal" : "none"} }
+.b3-typography code:not(.hljs), .protyle-wysiwyg span[data-type~=code] { font-variant-ligatures: ${window.siyuan.config.editor.codeLigatures ? "normal" : "none"} }
 .li > .protyle-action {height:${height + 8}px;line-height: ${height + 8}px}
 .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h1, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h2, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h3, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h4, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h5, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h6 {line-height:${height + 8}px;}
 .protyle-wysiwyg [data-node-id].li > .protyle-action:after {height: ${fontSize}px;width: ${fontSize}px;margin:-${fontSize / 2}px 0 0 -${fontSize / 2}px}
 .protyle-wysiwyg [data-node-id].li > .protyle-action svg {height: ${Math.max(14, fontSize - 8)}px}
 .protyle-wysiwyg [data-node-id] [spellcheck="false"] {min-height:${height}px}
+.protyle-wysiwyg [data-node-id] {${window.siyuan.config.editor.rtl ? " direction: rtl;" : ""}${window.siyuan.config.editor.justify ? " text-align: justify;" : ""}}
 .protyle-wysiwyg .li {min-height:${height + 8}px}
 .protyle-gutters button svg {height:${height}px}
 .protyle-wysiwyg img.emoji, .b3-typography img.emoji {width:${height - 8}px}
@@ -389,7 +500,7 @@ function setFontSize(fontSize) {
 .protyle-wysiwyg .h4 img.emoji, .b3-typography h4 img.emoji {width:${Math.floor(fontSize * 1.25 * 1.25)}px}
 .protyle-wysiwyg .h5 img.emoji, .b3-typography h5 img.emoji {width:${Math.floor(fontSize * 1.13 * 1.25)}px}
 .protyle-wysiwyg .h6 img.emoji, .b3-typography h6 img.emoji {width:${Math.floor(fontSize * 1.25)}px}
-.b3-typography, .protyle-wysiwyg, .protyle-title, .protyle-title__input{font-family: "${window.siyuan.config.editor.fontFamily}", "quote", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols" !important;}
+.b3-typography:not(.b3-typography--default), .protyle-wysiwyg, .protyle-title, .protyle-title__input{font-family: "${window.siyuan.config.editor.fontFamily}", "quote", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols" !important;}
 `;
         return parseInt(config.theme.regs.fontsize.exec(style.innerHTML));
     }
@@ -408,8 +519,8 @@ function getEditorsFromLayout(centerLayout) {
         const layout = layouts.pop();
         if (layout.children.length > 0) {
             for (let child of layout.children) {
-                if (child.model) editors.push(child.model.editor);
-                else layouts.push(child);
+                if (child.model?.editor) editors.push(child.model.editor);
+                else if (child.children) layouts.push(child);
             }
         }
     }
@@ -573,5 +684,150 @@ function setDockState(items, state) {
         const type = item.dataset.type;
         const active = item.classList.contains('dock__item--active');
         if (state[type] && (active ^ state[type].fold)) item.click();
+    }
+}
+
+/**
+ * 计算当前节点是上级节点的第几个节点
+ * @deprecated 该方法已被废弃, 使用 API `/api/block/getBlockIndex` 代替
+ * @params {HTMLElement} element: 当前节点
+ * @params {Array} classList: 类字段列表
+ * @return {int}: 节点索引数
+ */
+function countElementIndex(element, classList = []) {
+    const parent_children = element.parentElement.children;
+    if (classList.length === 0) { // 不关注同类节点
+        return [].indexOf.call(element, parent_children);
+    }
+    else {
+        let index = 0;
+        for (let i = 0; i < parent_children.length; ++i) {
+            let target = parent_children[i];
+            let isSimilar = true; // 该节点是否为同类节点
+            if (element === target) return index;
+            for (const classname of classList) {
+                if (!!target.classList.contains(classname)) { // 非同类
+                    isSimilar = false;
+                    break;
+                }
+            }
+            if (isSimilar) ++index;
+        }
+        return index;
+    }
+}
+
+/**
+ * 计算当前节点应使用的提示信息的朝向
+ * @params {HTMLElement} element: 当前节点
+ * @return {string}: 提示标签方向类
+ */
+function getTooltipDirection(element) {
+    const rect = element.getBoundingClientRect();
+    const left = rect.left + rect.width / 2;
+    const top = rect.top + rect.height / 2;
+
+    const threshold_w = 1 * document.documentElement.offsetWidth / 3;
+    const threshold_e = 2 * document.documentElement.offsetWidth / 3;
+    const threshold_n = 1 * document.documentElement.offsetHeight / 3;
+    const threshold_s = 2 * document.documentElement.offsetHeight / 3;
+    let tooltips_class;
+    switch (true) {
+        case top < threshold_n && left < threshold_w:
+            tooltips_class = 'b3-tooltips__se';
+            break;
+        case top < threshold_n && left >= threshold_w && left <= threshold_e:
+            tooltips_class = 'b3-tooltips__s';
+            break;
+        case top < threshold_n && left > threshold_e:
+            tooltips_class = 'b3-tooltips__sw';
+            break;
+        case top >= threshold_n && top <= threshold_s && left < threshold_w:
+            tooltips_class = 'b3-tooltips__e';
+            break;
+        case top >= threshold_n && top <= threshold_s && left >= threshold_w && left <= threshold_e:
+            tooltips_class = 'b3-tooltips__s';
+            break;
+        case top >= threshold_n && top <= threshold_s && left > threshold_e:
+            tooltips_class = 'b3-tooltips__w';
+            break;
+        case top > threshold_s && left < threshold_w:
+            tooltips_class = 'b3-tooltips__ne';
+            break;
+        case top > threshold_s && left >= threshold_w && left <= threshold_e:
+            tooltips_class = 'b3-tooltips__n';
+            break;
+        case top > threshold_s && left > threshold_e:
+            tooltips_class = 'b3-tooltips__nw';
+            break;
+        default:
+            break;
+    }
+    return tooltips_class;
+}
+
+/**
+ * 设置提示信息朝向方向
+ * @params {function} classname: 获得元素的标签类名
+ * @params {array} items: DOM 元素数组
+ */
+function setTooltipDirection(classname, ...items) {
+    const tooltips_class_list = [
+        'b3-tooltips__nw',
+        'b3-tooltips__n',
+        'b3-tooltips__ne',
+        'b3-tooltips__e',
+        'b3-tooltips__se',
+        'b3-tooltips__s',
+        'b3-tooltips__sw',
+        'b3-tooltips__w',
+    ];
+    items.forEach(item => {
+        item.classList.remove(...tooltips_class_list);
+        item.classList.add(classname(item));
+    });
+}
+
+/**
+ * 请求对指定的块全屏
+ * @params {HTMLElement} block: 块元素
+ */
+function requestFullscreenBlock(block) {
+    let element;
+    switch (block?.dataset.type) {
+        case 'NodeVideo':
+            element = block.querySelector('video');
+            break;
+        case 'NodeIFrame':
+        case 'NodeWidget':
+            element = block.querySelector('iframe');
+            break;
+        default:
+            element = block;
+            break;
+    }
+    element?.requestFullscreen();
+}
+
+/**
+ * 请求对指定 ID 的块全屏
+ * @params {string} id: 块 ID
+ */
+function requestFullscreen(id) {
+    // console.log();
+    const block = document.querySelector(`.protyle-wysiwyg--select[data-node-id="${id}"]`);
+    if (block) {
+        requestFullscreenBlock(block);
+    }
+    else { // 可能是文档块标
+        // console.log(getEditor(id));
+        const protyle = getEditor(id)?.protyle;
+        if (protyle) {
+            /* 窗口内全屏 */
+            protyle?.element.classList.toggle('fullscreen');
+
+            /* 屏幕全屏 */
+            // protyle?.element.requestFullscreen();
+        }
     }
 }

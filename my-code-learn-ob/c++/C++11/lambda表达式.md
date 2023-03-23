@@ -1,5 +1,5 @@
 # lambda的由来
-++98中的一个例子
+C++98中的一个例子
 在C++98中，如果想要对一个数据集合中的元素进行排序，可以使用std::sort方法。
 
 ```cpp
@@ -30,7 +30,7 @@ struct Compare
 };
 int main()
 {
-    Goods gds[] = { { "苹果", 2.1 }, { "相交", 3 }, { "橙子", 2.2 }, {"菠萝", 1.5} };
+    Goods gds[] = { { "苹果", 2.1 }, { "香蕉", 3 }, { "橙子", 2.2 }, {"菠萝", 1.5} };
     sort(gds, gds + sizeof(gds) / sizeof(gds[0]), Compare());
     return 0;
 }
@@ -163,5 +163,6 @@ int main()
 
 # lambda的本质
 **lambda其实是一个类，定义了一个lambda表达式，编译器会自动生成一个类，在该类中重载了operator()**。  这也是定义lambda表达式的需要使用 [[变量类型推导#auto 使用细则|auto]] 来定义
-![[Pasted image 20221012223030.png]]
+![](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230323201505.png)
+
 实际在底层编译器对于lambda表达式的处理方式，完全就是按照函数对象的方式处理的，即：如果定义了一个lambda表达式，编译器会自动生成一个类，在该类中重载了operator()。

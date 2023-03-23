@@ -31,6 +31,10 @@ export function querySQL(sql) {
   return request("/api/query/sql", { "stmt": sql })
 }
 
+export function searchEmbedBlock(stmt, embedBlockID, headingMode = 0, breadcrumb = false, excludeIDs = []) {
+  return request("/api/search/searchEmbedBlock", { stmt, embedBlockID, headingMode, breadcrumb, excludeIDs })
+}
+
 /**
  * 网络请求
  * @param {*} url 请求地址

@@ -1,21 +1,31 @@
 /* 文件注释引用(PDF注释) */
-@import url(/appearance/themes/Dark+/style/module/config.css);
-@import url(/widgets/custom.css);
 .b3-typography a[href*=".pdf?p="][href*="assets/"]::before,
 .b3-typography a[href*=".pdf?p="][href*="/assets/"]::before {
   /* PDF 引用导出样式 */
   background-image: url(/appearance/themes/Dark+/icon/pdf-page.svg);
 }
-.protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"] {
+.sy__outline [data-node-id] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
   /* PDF 引用链接样式 */
   color: var(--custom-span-file-ref-color);
 }
-.protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"]::before {
-  /* PDF 引用链接图标 */
-  content: "" !important;
-  background-image: url(/appearance/themes/Dark+/icon/pdf-ref.svg) !important;
+.sy__outline [data-node-id] span[data-type~=file-annotation-ref]::before,
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref]::before {
+  /* 超链接前标志 */
+  content: "";
+  display: inline-block;
+  position: relative;
+  background-image: url(/appearance/themes/Dark+/icon/pdf-ref.svg);
+  background-size: 0.875em auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0.875em;
+  height: 1em;
+  margin: 0.125em 0.125em -0.125em 0;
+  padding: 0;
 }
-.protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"]:hover {
+.sy__outline [data-node-id] span[data-type~=file-annotation-ref]:hover,
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref]:hover {
   /* PDF 引用链接鼠标悬浮 */
   border-bottom: 1px solid var(--custom-span-file-ref-color);
 }

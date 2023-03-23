@@ -1,0 +1,24 @@
+/* PDF 导出页面 */
+
+#action {
+    background: unset !important;
+}
+
+#preview {
+    border-right: 1px solid var(--b3-theme-on-surface);
+
+    // 导出时显示高亮内容
+    &.protyle-wysiwyg {
+
+        mark,
+        span[data-type~=mark] {
+
+            &,
+            &:hover {
+                background-color: var(--cusotm-span-mark-background-color);
+                color: var(--b3-protyle-inline-mark-color);
+                text-shadow: none;
+            }
+        }
+    }
+}

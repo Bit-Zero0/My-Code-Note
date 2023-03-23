@@ -1,6 +1,7 @@
 import {
     url,
     config,
+    i18n,
 } from './config.js';
 import { custom } from '../../public/custom.js';
 import {
@@ -40,7 +41,6 @@ const sessions_manage_close_button = document.getElementById(config.jupyter.id.s
 
 const id = url.searchParams.get('id'); // 文档 ID
 const lang = url.searchParams.get('lang'); // 用户语言
-const i18n = config.jupyter.i18n; // 多语言
 
 var attrs = await getBlockAttrs(id);
 var kernelspecs, sessions, session, kernel;
@@ -48,8 +48,10 @@ var kernelspecs, sessions, session, kernel;
 /* 初始化 */
 function init() {
     if (kernelspecs && sessions) {
-        if (attrs[config.jupyter.attrs.kernel.name])
+        if (attrs[config.jupyter.attrs.kernel.name]) { 
             sessions_create_kernel_select.value = attrs[config.jupyter.attrs.kernel.name];
+            renderKernelspecInfo(kernelspecs.kernelspecs[sessions_create_kernel_select.value]);
+        }
         if (attrs[config.jupyter.attrs.session.name])
             sessions_create_name_input.value = attrs[config.jupyter.attrs.session.name];
         if (attrs[config.jupyter.attrs.session.path])
@@ -67,7 +69,7 @@ function init() {
 
 /* 重定向至全局设置页面 */
 function redirect() {
-    alert(i18n['jupyter-server-auth-faild'][lang] || i18n['jupyter-server-auth-faild'].default);
+    alert(i18n('jupyter-server-auth-faild', lang));
     let url = new URL(location.href);
     url.pathname = config.jupyter.path.global;
     location.href = url.href;
@@ -75,9 +77,7 @@ function redirect() {
 
 /* 获得内核可读名字 */
 function getKernelDisplayName(kernelName) {
-    return kernelspecs
-        && kernelspecs.kernelspecs[kernelName]
-        && kernelspecs.kernelspecs[kernelName].spec.display_name
+    return kernelspecs?.kernelspecs?.[kernelName]?.spec?.display_name
 }
 
 /* 更新内核下拉选择器 */
@@ -126,6 +126,7 @@ function updateDocAttrs(del = false) {
         // 非删除会话
         const kernel_id = session.kernel.id;
         const kernel_name = session.kernel.name;
+        const kernel_display_name = getKernelDisplayName(kernel_name);
         const kernel_state = session.kernel.execution_state;
         const kernel_language = kernelspecs.kernelspecs[kernel_name].spec.language;
         const session_id = session.id;
@@ -134,14 +135,15 @@ function updateDocAttrs(del = false) {
         attrs = {
             [config.jupyter.attrs.kernel.id]: kernel_id,
             [config.jupyter.attrs.kernel.name]: kernel_name,
+            [config.jupyter.attrs.kernel.display_name]: kernel_display_name,
             [config.jupyter.attrs.kernel.language]: kernel_language,
             [config.jupyter.attrs.session.id]: session_id,
             [config.jupyter.attrs.session.name]: session_name,
             [config.jupyter.attrs.session.path]: session_path,
             [config.jupyter.attrs.other.prompt]: promptFormat(
                 kernel_language,
-                getKernelDisplayName(kernel_name),
-                i18n[kernel_state][lang] || i18n[kernel_state].default
+                kernel_display_name,
+                i18n(kernel_state, lang)
             ),
         };
         localStorage.setItem("local-codelang", kernel_language);
@@ -211,7 +213,7 @@ sessions_create_create_button.addEventListener('click', async () => {
         });
         if (session) {
             console.log(
-                `${i18n.session[lang] || i18n.session.default}:\n`,
+                `${i18n('session', lang)}:\n`,
                 session,
             );
             sessions_manage_refresh_button.click();
@@ -219,7 +221,7 @@ sessions_create_create_button.addEventListener('click', async () => {
         else redirect();
     }
     else {
-        alert(i18n.incomplete[lang] || i18n.incomplete.default);
+        alert(i18n('incomplete', lang));
     }
 });
 
@@ -238,7 +240,7 @@ sessions_manage_session_select.addEventListener('change', () => {
 sessions_manage_refresh_button.addEventListener('click', async () => {
     sessions = await jupyter.sessions.get();
     console.log(
-        `${i18n.sessions[lang] || i18n.sessions.default}:\n`,
+        `${i18n('sessions', lang)}:\n`,
         sessions,
     );
     updateSessionsSelector(
@@ -262,14 +264,14 @@ sessions_manage_update_button.addEventListener('click', async () => {
             },
         );
         console.log(
-            `${i18n.session[lang] || i18n.session.default}:\n`,
+            `${i18n('session', lang)}:\n`,
             session,
         );
         sessions_manage_refresh_button.click();
         setTimeout(updateDocAttrs, 1000);
     }
     else {
-        alert(i18n.incomplete[lang] || i18n.incomplete.default);
+        alert(i18n('incomplete', lang));
     }
 });
 
@@ -281,7 +283,7 @@ sessions_manage_interrupt_button.addEventListener('click', async () => {
     const r = await jupyter.kernels.interrupt(session.kernel.id);
     if (r && r.status === 204) {
         console.log(
-            `${i18n.interrupt[lang] || i18n.interrupt.default}:\n`,
+            `${i18n('interrupt', lang)}:\n`,
             r,
         );
         sessions_manage_refresh_button.click();
@@ -295,7 +297,7 @@ sessions_manage_restart_button.addEventListener('click', async () => {
     kernel = await jupyter.kernels.restart(session.kernel.id);
     if (kernel) {
         console.log(
-            `${i18n.restart[lang] || i18n.restart.default}:\n`,
+            `${i18n('restart', lang)}:\n`,
             kernel,
         );
         sessions_manage_refresh_button.click();
@@ -309,7 +311,7 @@ sessions_manage_close_button.addEventListener('click', async () => {
     const r = await jupyter.sessions.delete(session.id);
     if (r && r.status === 204) {
         console.log(
-            `${i18n.close[lang] || i18n.close.default}:\n`,
+            `${i18n('close', lang)}:\n`,
             session,
         );
         session = null;

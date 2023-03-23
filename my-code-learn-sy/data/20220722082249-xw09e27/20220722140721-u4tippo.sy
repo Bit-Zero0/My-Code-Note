@@ -4,8 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722140721-u4tippo",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220722140734-473oaue\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20220722140734-darcog0\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20220722140734-473oaue\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
 		"title": "gcc与g++的使用",
-		"updated": "20220722140750"
+		"updated": "20230323202210"
 	},
 	"Children": [
 		{
@@ -490,7 +491,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20220722140734-mwkgkwr",
-				"updated": "20220722140734"
+				"updated": "20230323202104"
 			},
 			"Children": [
 				{
@@ -503,7 +504,7 @@
 					"ListData": {},
 					"Properties": {
 						"id": "20220722140734-jsbo5bn",
-						"updated": "20220722140734"
+						"updated": "20230323202104"
 					},
 					"Children": [
 						{
@@ -543,7 +544,7 @@
 							},
 							"Properties": {
 								"id": "20220722140734-pwlpbv2",
-								"updated": "20220722140734"
+								"updated": "20230323202104"
 							},
 							"Children": [
 								{
@@ -551,12 +552,21 @@
 									"Type": "NodeParagraph",
 									"Properties": {
 										"id": "20220722140734-btxvdax",
-										"updated": "20220722140734"
+										"updated": "20230323202104"
 									},
 									"Children": [
 										{
 											"Type": "NodeText",
-											"Data": "最后的答案是:系统把这些函数实现都被做到名为 libc.so.6 的库文件中去了,在没有特别指定时,gcc 会到系统默认的搜索路径“/usr/lib”下进行查找,也就是链接到 libc.so.6 库函数中去,这样就能实现函数“printf”了,而这也就是链接的作用"
+											"Data": "最后的答案是:系统把这些函数实现都被做到名为 "
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "libc.so.6"
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 的库文件中去了,在没有特别指定时,gcc 会到系统默认的搜索路径“/usr/lib”下进行查找,也就是链接到 libc.so.6 库函数中去,这样就能实现函数“printf”了,而这也就是链接的作用"
 										}
 									]
 								}
@@ -665,7 +675,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "”"
+											"Data": "​”"
 										}
 									]
 								}
@@ -707,7 +717,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "” ,如前面所述的 "
+											"Data": "​” ,如前面所述的 "
 										},
 										{
 											"Type": "NodeTextMark",
@@ -716,7 +726,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": " 就是动态库。"
+											"Data": "​ 就是动态库。"
 										},
 										{
 											"Type": "NodeTextMark",
@@ -740,6 +750,10 @@
 											"Type": "NodeTextMark",
 											"TextMarkType": "code",
 											"TextMarkTextContent": "gcchello.o –o hello"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "​"
 										}
 									]
 								}
@@ -781,6 +795,30 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "20230323202132-l2hv7r9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323202132-l2hv7r9",
+				"updated": "20230323202210"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20221125222100-vbyp2t4",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "学习动静态库"
+				}
+			]
+		},
+		{
+			"ID": "20230323202133-covtolc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323202133-covtolc"
+			}
 		},
 		{
 			"ID": "20220722140734-arnxymz",

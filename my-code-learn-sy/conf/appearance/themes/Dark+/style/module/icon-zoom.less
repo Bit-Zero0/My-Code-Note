@@ -1,7 +1,5 @@
 /* 引入参数配置 */
 
-@import (css) url(/appearance/themes/Dark+/style/module/config.css);
-@import (css) url(/widgets/custom.css);
 
 .popover() {
     transform: scale(1.25);
@@ -22,17 +20,20 @@ svg,
 // 页签项图标
 // .layout-tab-bar .item .item__icon:hover :is(svg, img),
 // 文档树文档图标
-.b3-list-item__icon:hover,
+.b3-list-item__icon,
 // 停靠栏图标
-.dock__item:hover,
+.dock__item,
 // 工具栏按钮
-.toolbar__item:hover,
+.b3-tooltips,
+.toolbar__item,
 // 按钮
-.b3-list-item__action:hover,
-.block__icon:hover {
+.b3-list-item__action,
+.block__icon {
+    &:hover {
 
-    svg,
-    img {
-        .popover();
+        svg,
+        img {
+            .popover();
+        }
     }
 }

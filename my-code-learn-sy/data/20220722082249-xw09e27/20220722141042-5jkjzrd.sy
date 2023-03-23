@@ -4,9 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220722141042-5jkjzrd",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230317192623-9v1uhq7\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20220722141412-6qwbtmp\u0026quot;,\u0026quot;scrollTop\u0026quot;:6125}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230317192623-9v1uhq7\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20220722141412-6qwbtmp\u0026quot;,\u0026quot;scrollTop\u0026quot;:7035,\u0026quot;focusId\u0026quot;:\u0026quot;20230317192623-z3q045s\u0026quot;,\u0026quot;focusStart\u0026quot;:3,\u0026quot;focusEnd\u0026quot;:3}",
 		"title": "Linux权限管理",
-		"updated": "20230317193100"
+		"updated": "20220722141409"
 	},
 	"Children": [
 		{
@@ -29,12 +29,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20230317192623-89e78fb",
-				"updated": "20230317192623"
+				"updated": "20230323202616"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "inux下有两种用户：超级用户（root）、普通用户。"
+					"Data": "Linux下有两种用户：超级用户（root）、普通用户。"
 				}
 			]
 		},
@@ -43,7 +43,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20230317192623-cf9o3pf",
-				"updated": "20230317192623"
+				"updated": "20230323202636"
 			},
 			"Children": [
 				{
@@ -55,7 +55,7 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20230317192623-tttru9q",
-						"updated": "20230317192623"
+						"updated": "20230323202636"
 					},
 					"Children": [
 						{
@@ -88,7 +88,7 @@
 						{
 							"Type": "NodeTextMark",
 							"TextMarkType": "code",
-							"TextMarkTextContent": "#"
+							"TextMarkTextContent": "$"
 						},
 						{
 							"Type": "NodeText",
@@ -362,7 +362,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20230317192623-ksnosj7",
-				"updated": "20230317192623"
+				"updated": "20230323203541"
 			},
 			"Children": [
 				{
@@ -374,7 +374,7 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20230317192623-93jr51x",
-						"updated": "20230317192623"
+						"updated": "20230323203541"
 					},
 					"Children": [
 						{
@@ -402,7 +402,18 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "：软链接（类似Windows的快捷方式）\n"
+							"Data": "："
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "block-ref",
+							"TextMarkBlockRefID": "20220819164909-abepr1a",
+							"TextMarkBlockRefSubtype": "d",
+							"TextMarkTextContent": "软链接"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "（类似Windows的快捷方式）\n"
 						},
 						{
 							"Type": "NodeTextMark",
@@ -438,7 +449,16 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "：套接口文件\n​"
+							"Data": "：套接口文件\n"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "mark",
+							"TextMarkTextContent": "-"
+						},
+						{
+							"Type": "NodeText",
+							"Data": " :  表示不具有该项权限\n​"
 						},
 						{
 							"Type": "NodeImage",
@@ -478,6 +498,13 @@
 			]
 		},
 		{
+			"ID": "20230323203455-hzazb64",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323203455-hzazb64"
+			}
+		},
+		{
 			"ID": "20230317192623-nmfwx55",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -497,7 +524,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20230317192623-ruxpk6i",
-				"updated": "20230317192623"
+				"updated": "20230323203611"
 			},
 			"Children": [
 				{
@@ -509,7 +536,7 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20230317192623-a0dcg1y",
-						"updated": "20230317192623"
+						"updated": "20230323203559"
 					},
 					"Children": [
 						{
@@ -523,7 +550,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "​：Read对文件而言，具有读取文件内容的权限；对目录来说，具有浏览该目录信息的权限"
+							"Data": "​：(Read)对文件而言，具有读取文件内容的权限；对目录来说，具有浏览该目录信息的权限"
 						}
 					]
 				},
@@ -532,7 +559,7 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20230317192623-2nmzjmu",
-						"updated": "20230317192623"
+						"updated": "20230323203607"
 					},
 					"Children": [
 						{
@@ -546,7 +573,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "​ ：Write对文件而言，具有修改文件内容的权限；对目录来说具有删除移动目录内文件的权限"
+							"Data": "​ ：(Write)对文件而言，具有修改文件内容的权限；对目录来说具有删除移动目录内文件的权限"
 						}
 					]
 				},
@@ -555,7 +582,7 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20230317192623-zncr8ns",
-						"updated": "20230317192623"
+						"updated": "20230323203611"
 					},
 					"Children": [
 						{
@@ -569,7 +596,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "​ ：execute对文件而言，具有执行文件的权限；对目录来说，具有进入目录的权限"
+							"Data": "​ ：(execute)对文件而言，具有执行文件的权限；对目录来说，具有进入目录的权限"
 						}
 					]
 				},
@@ -1338,6 +1365,13 @@
 			]
 		},
 		{
+			"ID": "20230323204152-0xhihqi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230323204152-0xhihqi"
+			}
+		},
+		{
 			"ID": "20230317192623-c1qfvtc",
 			"Type": "NodeParagraph",
 			"Properties": {
@@ -1749,281 +1783,6 @@
 			}
 		},
 		{
-			"ID": "20220722141051-4yycglu",
-			"Type": "NodeHeading",
-			"HeadingLevel": 2,
-			"Properties": {
-				"id": "20220722141051-4yycglu",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "粘滞位"
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-5xjp5cw",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722141051-5xjp5cw",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "只要"
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark",
-					"TextMarkTextContent": "用户"
-				},
-				{
-					"Type": "NodeText",
-					"Data": "具有目录的"
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark",
-					"TextMarkTextContent": "写权限"
-				},
-				{
-					"Type": "NodeText",
-					"Data": ", 用户就可以"
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "strong",
-					"TextMarkTextContent": "删除目录中的文件"
-				},
-				{
-					"Type": "NodeText",
-					"Data": ", 而"
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark",
-					"TextMarkTextContent": "不论这个用户是否有这个文件的写权限"
-				},
-				{
-					"Type": "NodeText",
-					"Data": "."
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-2n56g9e",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722141051-2n56g9e",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "这好像不太科学啊, 我张三创建的一个文件, 凭什么被你李四可以删掉?"
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-q64nz6f",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722141051-q64nz6f",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "为解决这个问题，就有了"
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark strong",
-					"TextMarkTextContent": "粘滞位"
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-zcn1eh2",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722141051-zcn1eh2",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "strong",
-					"TextMarkTextContent": "粘滞位的设置方法："
-				},
-				{
-					"Type": "NodeText",
-					"Data": " "
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "code",
-					"TextMarkTextContent": "chmod [用户] +t"
-				},
-				{
-					"Type": "NodeText",
-					"Data": "  这里的用户一般设置为 "
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "code",
-					"TextMarkTextContent": "o"
-				},
-				{
-					"Type": "NodeText",
-					"Data": " ， 也就是 "
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark",
-					"TextMarkTextContent": "其他人"
-				},
-				{
-					"Type": "NodeText",
-					"Data": "。"
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-vaxqkpl",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722141051-vaxqkpl",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "strong",
-					"TextMarkTextContent": "注意事项："
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 设置粘滞位后只有 "
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark",
-					"TextMarkTextContent": "文件的拥有者"
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 可以删除，此外 "
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark",
-					"TextMarkTextContent": "root"
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 用户也可以删除，因为"
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "mark",
-					"TextMarkTextContent": "root用户"
-				},
-				{
-					"Type": "NodeText",
-					"Data": "是上帝，可以修改一切"
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-v9ceiue",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722141051-v9ceiue",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "若我们的需求："
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-ktf1jsx",
-			"Type": "NodeBlockquote",
-			"Properties": {
-				"id": "20220722141051-ktf1jsx",
-				"updated": "20220722141051"
-			},
-			"Children": [
-				{
-					"Type": "NodeBlockquoteMarker",
-					"Data": "\u003e"
-				},
-				{
-					"ID": "20220722141051-yr4dnf1",
-					"Type": "NodeParagraph",
-					"Properties": {
-						"id": "20220722141051-yr4dnf1",
-						"updated": "20220722141051"
-					},
-					"Children": [
-						{
-							"Type": "NodeText",
-							"Data": "other 可以在lesson文件下创建文件，并写入\n但不想任何人删掉自己的文件"
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20220722141051-as7mcuq",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722141051-as7mcuq",
-				"updated": "20220722141409"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "结果如下：\n​"
-				},
-				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "assets/"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/020220503165136.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
-				}
-			]
-		},
-		{
 			"ID": "20220722141416-75vibm6",
 			"Type": "NodeParagraph",
 			"Properties": {
@@ -2032,33 +1791,8 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "assets/"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/020220503165355.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeText",
+					"Data": "​​"
 				}
 			]
 		},

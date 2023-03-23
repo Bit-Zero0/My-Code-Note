@@ -1,6 +1,8 @@
 /* 列表 */
-@import url(/appearance/themes/Dark+/style/module/config.css);
-@import url(/widgets/custom.css);
+.protyle-wysiwyg [data-node-id].li,
+.protyle-wysiwyg [data-node-id].list {
+  margin: 0;
+}
 .protyle-wysiwyg [data-node-id].li > .protyle-action {
   /* 列表标志 */
   z-index: 0;
@@ -8,6 +10,12 @@
 .protyle-wysiwyg [data-node-id].li > .protyle-action::after {
   /* 标志阴影 */
   z-index: -1;
+}
+.protyle-wysiwyg [data-node-id].li::before {
+  /* 缩进辅助线样式 */
+  border-left-width: var(--custom-list-guides-line-width);
+  border-left-color: var(--custom-list-guides-line-color);
+  left: 16px;
 }
 .protyle-wysiwyg [data-node-id].li > [data-node-id]::before {
   /* 缩进辅助线样式 */
@@ -40,11 +48,11 @@
   /* 修正列表内标题辅助线错位 */
   left: -21px;
 }
-.protyle-wysiwyg [data-node-id].li > [data-node-id].render-node::before[data-type="NodeBlockQueryEmbed"] {
+.protyle-wysiwyg [data-node-id].li > [data-node-id].render-node[data-type="NodeBlockQueryEmbed"]::before {
   /* 修正列表内嵌入块辅助线错位 */
-  left: calc(15px - 2em);
+  left: calc(16px - 2em);
 }
-.protyle-wysiwyg [data-node-id].li > [data-node-id].render-node::before[data-type="NodeMathBlock"] {
+.protyle-wysiwyg [data-node-id].li > [data-node-id].render-node[data-type="NodeMathBlock"]::before {
   /* 修正公式块块辅助线错位 */
   left: calc(16px - 2em);
 }

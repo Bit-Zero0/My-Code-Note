@@ -8,6 +8,7 @@ export {
     insertBlock,
     appendBlock,
     updateBlock,
+    deleteBlock,
     jupyter,
 }
 
@@ -27,7 +28,7 @@ async function getFile(path, token = config.token) {
             path: path,
         }),
     });
-    if (response.status === 200)
+    if (response.ok)
         return response;
     else return null;
 }
@@ -50,7 +51,7 @@ async function putFile(path, filedata, isDir = false, modTime = Date.now(), toke
                 Authorization: `Token ${token}`,
             },
         });
-    if (response.status === 200)
+    if (response.ok)
         return await response.json();
     else return null;
 }
@@ -77,7 +78,7 @@ async function upload(
                 Authorization: `Token ${token}`,
             },
         });
-    if (response.status === 200)
+    if (response.ok)
         return await response.json();
     else return null;
 }
@@ -94,7 +95,7 @@ async function siyuanRequest(url, data, token) {
             body: JSON.stringify(data),
         },
     );
-    if (response.status === 200) response = await response.json();
+    if (response.ok) response = await response.json();
     else return null;
     if (response.code === 0) return response.data;
     else return null;
@@ -124,9 +125,9 @@ async function insertBlock(previousID, data, dataType = 'markdown', token = conf
     return siyuanRequest(
         '/api/block/insertBlock',
         {
-            previousID: previousID,
-            dataType: dataType,
-            data: data,
+            previousID,
+            dataType,
+            data,
         },
         token,
     );
@@ -137,9 +138,9 @@ async function appendBlock(parentID, data, dataType = 'markdown', token = config
     return siyuanRequest(
         '/api/block/appendBlock',
         {
-            parentID: parentID,
-            dataType: dataType,
-            data: data,
+            parentID,
+            dataType,
+            data,
         },
         token,
     );
@@ -150,9 +151,20 @@ async function updateBlock(id, data, dataType = 'markdown', token = config.token
     return siyuanRequest(
         '/api/block/updateBlock',
         {
-            id: id,
-            dataType: dataType,
-            data: data,
+            id,
+            dataType,
+            data,
+        },
+        token,
+    );
+}
+
+/* 删除块 */
+async function deleteBlock(id, token = config.token) {
+    return siyuanRequest(
+        '/api/block/deleteBlock',
+        {
+            id,
         },
         token,
     );
@@ -199,7 +211,7 @@ async function jupyterRequest(
             break;
     }
     return fetch(url, init).then(r => {
-        if (r.status >= 200 && r.status < 300)
+        if (r.ok)
             return isParser ? r.json() : r;
         else return null;
     });

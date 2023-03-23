@@ -1,7 +1,5 @@
 /* 编辑区面板 */
 
-@import (css) url(/appearance/themes/Dark+/style/module/config.css);
-@import (css) url(/widgets/custom.css);
 
 // deprecated: 使用 [data-fullwidth="true"] 判断是否开启自适应宽度
 .page-margins() {
@@ -12,6 +10,19 @@
         margin-right: var(--custom-editor-padding-right) !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+}
+
+// 块引用计数
+.refcont() {
+    .protyle-attr {
+        .protyle-attr--refcount {
+            /* 块引用计数 */
+            background-color: transparent;
+            box-shadow: 0 0 var(--custom-toolbar-tiem-active-box-shadow-spread) 0 var(--custom-box-shadow-color);
+            z-index: 1; // 避免被块滚动条覆盖
+            right: -20px;
+        }
     }
 }
 
@@ -29,43 +40,22 @@
     background-color: var(--custom-editor-background-color);
 }
 
+// PDF 书签栏
+#sidebarContainer,
+// 编辑区
 .protyle {
-    /*编辑区*/
     background: transparent;
 }
 
-// 面包屑
-.protyle-breadcrumb {
-    /* 导航栏(面包屑) */
-    background-color: var(--custom-editor-breadcrumb-bar-background-color);
-    /* box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5); */
+// 编辑区
+.protyle {
+    overflow-y: hidden;
+}
 
-    .protyle-breadcrumb__bar {
-
-        .protyle-breadcrumb__item {
-            /* 导航栏文字 */
-            line-height: normal;
-            border: 1px solid var(--b3-theme-on-surface-light);
-
-            // 当前聚焦内容
-            // &.protyle-breadcrumb__item--active {
-            //     border: 1px solid var(--custom-striking-color);
-            // }
-
-            // 文档
-            &:first-child {
-
-                border-color: var(--b3-theme-on-surface);
-
-                &,
-                .protyle-breadcrumb__text--ellipsis {
-                    /* 文档路径完整显示 */
-                    max-width: none;
-                }
-            }
-        }
-    }
-
+// 加载中
+// .fn__loading
+.wysiwygLoading {
+    background-color: transparent !important;
 }
 
 // 编辑区内容
@@ -77,6 +67,18 @@
             >.protyle-background__iconw {
                 /* 文档标志 */
                 left: var(--custom-editor-padding-left) !important;
+            }
+
+            // 题头图控件组
+            .protyle-icons {
+
+                // 题头图控件
+                .protyle-icon {
+                    input[type=file] {
+                        /* 上传文件控件 */
+                        z-index: 1; // position: absolute, 需要设置 z-index, 否则无法捕获点击事件
+                    }
+                }
             }
         }
 
@@ -105,6 +107,8 @@
         // deprecated: 使用 [data-fullwidth="true"] 判断是否开启自适应宽度
         // .page-margins();
 
+        .refcont(); // 块引用计数
+
         .protyle-title__input {
             /*编辑区文件名*/
             background: transparent;
@@ -114,6 +118,8 @@
     >.protyle-wysiwyg {
         // deprecated: 使用 [data-fullwidth="true"] 判断是否开启自适应宽度
         // .page-margins();
+
+        .refcont(); // 块引用计数
 
         // 拖拽
         .dragover__top {
@@ -135,10 +141,39 @@
 
 }
 
+.protyle-scroll {
+    width: 15px;
+    right: 8px;
+    margin: 0 4px;
+    padding: 0;
+
+    .protyle-scroll__bar {
+        // right: -97px;
+        right: calc(3px - var(--b3-dynamicscroll-width) / 2);
+        // z-index: 1;
+    }
+}
+
 .protyle-preview {
-    /* 内容 */
+    /* 导出预览 */
     background-color: transparent;
     backdrop-filter: none;
+
+    .protyle-preview__action {
+        /* 预览样式选择栏 */
+        background-color: var(--custom-components-deep);
+
+        >button {
+            /* 预览样式选择按钮 */
+            background-color: transparent;
+            border-radius: var(--custom-border-radius);
+
+            &:hover {
+                /* 鼠标悬浮 */
+                background-color: var(--b3-theme-background-light);
+            }
+        }
+    }
 
     >.b3-typography {
         padding-left: var(--custom-editor-padding-left) !important;
