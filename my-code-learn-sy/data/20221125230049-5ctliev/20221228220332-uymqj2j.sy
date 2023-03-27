@@ -4,23 +4,458 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221228220332-uymqj2j",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221228220345-uw6kutq\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221228220345-tc94qbh\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20221228220345-uw6kutq\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230327220938-q5uk4f1\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221228220345-tc94qbh\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20230327220938-q5uk4f1\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
 		"title": "链表",
-		"updated": "20230323214510"
+		"updated": "20230327221013"
 	},
 	"Children": [
+		{
+			"ID": "20230327220938-q5uk4f1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327220938-q5uk4f1"
+			}
+		},
+		{
+			"ID": "20230327220941-u2v2l6i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230327220941-u2v2l6i",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "24. 两两交换链表中的节点"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-t4ryjnu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327220941-t4ryjnu",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/swap-nodes-in-pairs/",
+					"TextMarkTextContent": "24. 两两交换链表中的节点"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-u38ejyv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327220941-u38ejyv",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-3j8ezax",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327220941-3j8ezax",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为要两两交换其中相邻的节点,所以我们需要找到需要交换的第一个对象前面的一个节点,并定义为cur,本题也使用了虚拟头节点的方法.随后进行以下四步走(最好进行画图理解):"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-zmxrf6p",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230327220941-zmxrf6p",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"ID": "20230327220941-s7xmcxy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230327220941-s7xmcxy",
+						"updated": "20230327220941"
+					},
+					"Children": [
+						{
+							"ID": "20230327220941-t6bmbh2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327220941-t6bmbh2",
+								"updated": "20230327220941"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "cur-\u003enext 指向 待交换的第二个节点"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230327220941-grs2awx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230327220941-grs2awx",
+						"updated": "20230327220941"
+					},
+					"Children": [
+						{
+							"ID": "20230327220941-45t6dla",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327220941-45t6dla",
+								"updated": "20230327220941"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第二个节点的next 指向 第一个节点"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230327220941-y38m2ox",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230327220941-y38m2ox",
+						"updated": "20230327220941"
+					},
+					"Children": [
+						{
+							"ID": "20230327220941-g0xlla1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327220941-g0xlla1",
+								"updated": "20230327220941"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第一个节点的next 指向 下一组待交换节点的第一个对象."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230327220941-i02x4i4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230327220941-i02x4i4",
+						"updated": "20230327220941"
+					},
+					"Children": [
+						{
+							"ID": "20230327220941-n23vn06",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327220941-n23vn06",
+								"updated": "20230327220941"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "cur = cur-\u003enext-\u003enext(也就是指向下一组待交换节点的前一个节点)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-h5epc03",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327220941-h5epc03",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "c++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-d1u2q8t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230327220941-d1u2q8t",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    ListNode* swapPairs(ListNode* head) {\n        if(head == nullptr) return nullptr;\n\n        ListNode* dummyHead = new ListNode(0);\n        dummyHead-\u003enext = head;\n\n        ListNode* cur = dummyHead;\n        while(cur-\u003enext != nullptr \u0026\u0026 cur-\u003enext-\u003enext != nullptr)//保证待交换的节点存在\n        {\n            ListNode* temp1 = cur-\u003enext;//记录临时节点\n            ListNode* temp2 = cur-\u003enext-\u003enext-\u003enext; //记录临时节点\n        \n            cur-\u003enext = cur-\u003enext-\u003enext; // 步骤一\n            cur-\u003enext-\u003enext = temp1; // 步骤二\n            temp1-\u003enext = temp2; // 步骤三\n\n            cur = cur-\u003enext-\u003enext;  // 步骤四\n        }\n        return dummyHead-\u003enext;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230327221013-7fqhsd3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221013-7fqhsd3"
+			}
+		},
+		{
+			"ID": "20230327220941-08l6ozh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230327220941-08l6ozh",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "19. 删除链表的倒数第 N 个结点"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-jqeibkg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327220941-jqeibkg",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/remove-nth-node-from-end-of-list/",
+					"TextMarkTextContent": "19. 删除链表的倒数第 N 个结点"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-p3t7m71",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327220941-p3t7m71",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-4pkauft",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327220941-4pkauft",
+				"updated": "20230327221000"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用快慢指针法, 如果要删除倒数第n个节点，让"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "fast"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​移动n步，然后让"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "fast"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "slow"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​同时移动，直到"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "fast"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​指向链表末尾。删掉"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "slow"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​所指向的节点就可以了。"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-rro2500",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327220941-rro2500",
+				"updated": "20230327221006"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是我们要删除单向链表的节点时,必须找到被删除节点的前一个节点,所以"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "fast"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​应该多走一步,这样"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "slow"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​就能停留在被删除节点的前一个节点上."
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-dj2dwbb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327220941-dj2dwbb",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230327220941-pykp18r",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230327220941-pykp18r",
+				"updated": "20230327220941"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    ListNode* removeNthFromEnd(ListNode* head, int n) {\n        if(head == nullptr) return nullptr;\n        ListNode* dumyHead = new ListNode(0);\n        dumyHead-\u003enext = head;\n        ListNode* fast = dumyHead;\n        ListNode* slow = dumyHead;\n\n        while(n-- \u0026\u0026 fast != nullptr)\n        {\n            fast = fast-\u003enext;\n        }\n        fast = fast-\u003enext;// fast再提前走一步，因为需要让slow指向删除节点的上一个节点\n\n        while(fast != nullptr)\n        {\n            slow = slow-\u003enext;\n            fast = fast-\u003enext;\n        }\n        slow-\u003enext = slow-\u003enext-\u003enext;\n        return dumyHead-\u003enext;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230327220940-jepncx3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327220940-jepncx3"
+			}
+		},
 		{
 			"ID": "20230323214457-3eld0xa",
 			"Type": "NodeHeading",
 			"HeadingLevel": 1,
 			"Properties": {
 				"id": "20230323214457-3eld0xa",
-				"updated": "20230323214457"
+				"updated": "20230327220805"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "707.设计了链表"
+					"Data": "707.设计链表"
 				}
 			]
 		},
