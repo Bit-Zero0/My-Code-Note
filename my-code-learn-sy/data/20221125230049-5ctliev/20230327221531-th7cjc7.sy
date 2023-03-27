@@ -1,0 +1,543 @@
+{
+	"ID": "20230327221531-th7cjc7",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230327221531-th7cjc7",
+		"title": "哈希表",
+		"updated": "20230327221545"
+	},
+	"Children": [
+		{
+			"ID": "20230327221545-zhpkacn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230327221545-zhpkacn",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "快乐数"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-iuqhqac",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221545-iuqhqac",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/happy-number/",
+					"TextMarkTextContent": "202. 快乐数"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-ghwp8uo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221545-ghwp8uo",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-71w6tqn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221545-71w6tqn",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这题的难点在于跳出死循环, unordered_set是不会存储重复的数据的, 所以我们可以将已经得到的sum加入到unordered_set中 , 在循环中,如果我们再次得到重复的sum, 表示 n 不是快乐数 , 则可以退出循环."
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-yeh0zw6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221545-yeh0zw6",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-t18mjvo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230327221545-t18mjvo",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    int getSum(int n)\n    {\n        int sum = 0;\n        while(n)\n        {\n            sum += (n % 10) * (n % 10);\n            n /= 10;\n        }\n\n        return sum;\n    }\n\n    bool isHappy(int n) {\n        unordered_set\u003cint\u003e set;\n        while(1)\n        {\n            int sum = getSum(n);\n            if(sum == 1)\n                return true;\n        \n            if(set.find(sum) != set.end())\n            {\n                return false;\n            }\n            else\n            {\n                set.insert(sum);\n            }\n            n = sum;\n        } \n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-mzjkasp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230327221545-mzjkasp",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "242. 有效的字母异位词"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-a2cfly1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221545-a2cfly1",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/valid-anagram/",
+					"TextMarkTextContent": "242. 有效的字母异位词"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-waauq3l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221545-waauq3l",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-npcceet",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221545-npcceet",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为本题中只使用小写字母 , 所以使用哈希的思路,将26个字母映射到数组中, 字母每出现一次则被映射到的位置 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "++"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ ,  在与另一个数组进行比对时,该数组映射的相对位置 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "--"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ . 最后若数组中所有元素都是 0 ,则是异位词 true , 反之不为异位词 false"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-x69fard",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221545-x69fard",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-i9eijyd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230327221545-i9eijyd",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    bool isAnagram(string s, string t) {\n        int record[26] = {0};\n        for(int i = 0 ; i \u003c s.size() ; i++)//先将s映射到数组中\n        {\n            record[s[i] - 'a']++;\n        }\n\n        for(int i = 0 ; i \u003c t.size() ; i++) \n        {\n            record[t[i] -'a']--;\n        }\n\n        for(int i = 0 ; i \u003c 26 ; i++)\n        {\n            if(record[i] != 0)\n                return false;\n        }\n\n        return true;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-6ejecw1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230327221545-6ejecw1",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "349. 两个数组的交集"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-m10pcgc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221545-m10pcgc",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/intersection-of-two-arrays/",
+					"TextMarkTextContent": "349. 两个数组的交集"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-a510k04",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221545-a510k04",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-oqg0wdb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221545-oqg0wdb",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用unordered_set来进行解决."
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-ks9ll6v",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230327221545-ks9ll6v",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"ID": "20230327221545-o4s7ai6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230327221545-o4s7ai6",
+						"updated": "20230327221545"
+					},
+					"Children": [
+						{
+							"ID": "20230327221545-8c0kmfa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327221545-8c0kmfa",
+								"updated": "20230327221545"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用unordered_set定义一个"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "result_set"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​来装 交集结果."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230327221545-s1pkzep",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230327221545-s1pkzep",
+						"updated": "20230327221545"
+					},
+					"Children": [
+						{
+							"ID": "20230327221545-7qccq3t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327221545-7qccq3t",
+								"updated": "20230327221545"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用unordered_set定义一个"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "nums_set"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​来将"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "nums1"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​中的数据导入其中,"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "nums_set"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​是会进行 去重操作 的."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230327221545-1qjozsd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230327221545-1qjozsd",
+						"updated": "20230327221545"
+					},
+					"Children": [
+						{
+							"ID": "20230327221545-i9e1wk4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327221545-i9e1wk4",
+								"updated": "20230327221545"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 "
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "nums2"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​中的元素 与"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "nums_set"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​中的元素进行对比 , 将找到的交集的插入到"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "result_set"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​中."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230327221545-la1lzxk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230327221545-la1lzxk",
+						"updated": "20230327221545"
+					},
+					"Children": [
+						{
+							"ID": "20230327221545-imlg81w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230327221545-imlg81w",
+								"updated": "20230327221545"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "最后使用"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "result_set"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​ 初始化一个vector 进行提交即可"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-iapwai1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221545-iapwai1",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230327221545-7yttxos",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230327221545-7yttxos",
+				"updated": "20230327221545"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e intersection(vector\u003cint\u003e\u0026 nums1, vector\u003cint\u003e\u0026 nums2) {\n        unordered_set\u003cint\u003e result_set;\n        unordered_set\u003cint\u003e nums_set(nums1.begin() , nums1.end());\n        for(int i = 0 ; i \u003c nums2.size() ; i++)\n        {\n            if(nums_set.find(nums2[i]) != nums_set.end())\n            {\n                result_set.insert(nums2[i]);\n            }\n        }\n        vector\u003cint\u003e result(result_set.begin() , result_set.end());\n        return result;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230327221531-tff40nm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221531-tff40nm",
+				"updated": "20230327221531"
+			}
+		}
+	]
+}
