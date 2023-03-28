@@ -5,21 +5,472 @@
 	"Properties": {
 		"id": "20230327221531-th7cjc7",
 		"title": "哈希表",
-		"updated": "20230327221545"
+		"updated": "20230328215053"
 	},
 	"Children": [
+		{
+			"ID": "20230328215053-ecg6b27",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230328215053-ecg6b27",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "454. 四数相加 II"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-8cigts7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215053-8cigts7",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/4sum-ii/",
+					"TextMarkTextContent": "454. 四数相加 II"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-ftc6fml",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230328215053-ftc6fml",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-29uskho",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215053-29uskho",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "而这道题目是四个独立的数组，只要找到"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "nums1[i] + nums2[j] + nums2[k] + nums4[l] = 0"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "就可以，不用考虑有重复的四个元素相加等于0的情况"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-10o5wtg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215053-10o5wtg",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "本题解题步骤："
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-ifhvbug",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230328215053-ifhvbug",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"ID": "20230328215053-43eofui",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230328215053-43eofui",
+						"updated": "20230328215053"
+					},
+					"Children": [
+						{
+							"ID": "20230328215053-hnlrt76",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230328215053-hnlrt76",
+								"updated": "20230328215053"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "首先定义 一个unordered_map，key放a和b两数之和，value 放a和b两数之和出现的次数。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230328215053-n8rrfso",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230328215053-n8rrfso",
+						"updated": "20230328215053"
+					},
+					"Children": [
+						{
+							"ID": "20230328215053-xz0inzo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230328215053-xz0inzo",
+								"updated": "20230328215053"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "遍历大A和大B数组，统计两个数组元素之和，和出现的次数，放到map中。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230328215053-8ebmorr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230328215053-8ebmorr",
+						"updated": "20230328215053"
+					},
+					"Children": [
+						{
+							"ID": "20230328215053-8olxv5w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230328215053-8olxv5w",
+								"updated": "20230328215053"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义int变量count，用来统计 a+b+c+d = 0 出现的次数。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230328215053-gfyuqks",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230328215053-gfyuqks",
+						"updated": "20230328215053"
+					},
+					"Children": [
+						{
+							"ID": "20230328215053-b1yua0a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230328215053-b1yua0a",
+								"updated": "20230328215053"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在遍历大C和大D数组，找到如果 0-(c+d) 在map中出现过的话，就用count把map中key对应的value也就是出现次数统计出来。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230328215053-yavs30w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20230328215053-yavs30w",
+						"updated": "20230328215053"
+					},
+					"Children": [
+						{
+							"ID": "20230328215053-tkyznhq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230328215053-tkyznhq",
+								"updated": "20230328215053"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "最后返回统计值 count 就可以了"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-w624gki",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230328215053-w624gki",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-e4ucntt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230328215053-e4ucntt",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    int fourSumCount(vector\u003cint\u003e\u0026 nums1, vector\u003cint\u003e\u0026 nums2, vector\u003cint\u003e\u0026 nums3, vector\u003cint\u003e\u0026 nums4) {\n        unordered_map\u003cint , int\u003e map;//key:a+b的数值，value:a+b数值出现的次数 \n        // 遍历大A和大B数组，统计两个数组元素之和，和出现的次数，放到map中\n        for(int a : nums1)\n        {\n            for(int b : nums2)\n            {\n                map[a+b]++;\n            }\n        }\n\n        // 在遍历大C和大D数组，找到如果 0-(c+d) 在map中出现过的话，就把map中key对应的value也就是出现次数统计出来。\n        int count = 0;\n        for(int c : nums3)\n        {\n            for(int d : nums4)\n            {\n                if(map.find(0-(c+d)) != map.end())\n                {\n                    count += map[0 - (c+d)];\n                }\n            }\n        }\n        return count;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-pk1w3so",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230328215053-pk1w3so",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1. 两数之和"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-ckhx5xl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215053-ckhx5xl",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/two-sum/",
+					"TextMarkTextContent": "1. 两数之和"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-osfi2e1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230328215053-osfi2e1",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-m7i1z0r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215053-m7i1z0r",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "需要一个集合来存放我们遍历过的元素，然后在遍历数组的时候去询问这个集合，某元素是否遍历过，也就是 是否出现在这个集合。"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-zcscdik",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215053-zcscdik",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以 map中的存储结构为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": " {key：数据元素，value：数组元素对应的下标}"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​。"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-fl72ss2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215053-fl72ss2",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在遍历数组的时候，只需要向map去查询是否有和目前遍历元素匹配的数值，如果有，就找到的匹配对，如果没有，就把目前遍历的元素放进map中，因为map存放的就是我们访问过的元素。"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-sfwtr4g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230328215053-sfwtr4g",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230328215053-wmc9s7u",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230328215053-wmc9s7u",
+				"updated": "20230328215053"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e twoSum(vector\u003cint\u003e\u0026 nums, int target) {\n        unordered_map\u003cint,int\u003e map;\n        for(int i = 0; i \u003c nums.size() ; i++)\n        {\n            auto iter = map.find(target - nums[i]);\n             // 遍历当前元素，并在map中寻找是否有匹配的key\n            if(iter != map.end())\n            {\n                return {iter-\u003esecond, i};\n            }\n            else \n            {\n                map.insert({nums[i] , i});// 如果没找到相匹配的值，就把访问过的元素和下标加入到map中\n            }\n        }\n        return {};\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230328215043-op33k15",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215043-op33k15"
+			}
+		},
+		{
+			"ID": "20230328215043-vnaob5l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230328215043-vnaob5l"
+			}
+		},
 		{
 			"ID": "20230327221545-zhpkacn",
 			"Type": "NodeHeading",
 			"HeadingLevel": 1,
 			"Properties": {
 				"id": "20230327221545-zhpkacn",
-				"updated": "20230327221545"
+				"updated": "20230328215047"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "快乐数"
+					"Data": "202. 快乐数"
 				}
 			]
 		},
