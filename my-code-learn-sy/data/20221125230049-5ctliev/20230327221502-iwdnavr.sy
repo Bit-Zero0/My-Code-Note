@@ -5,9 +5,175 @@
 	"Properties": {
 		"id": "20230327221502-iwdnavr",
 		"title": "字符串",
-		"updated": "20230327221522"
+		"updated": "20230330224912"
 	},
 	"Children": [
+		{
+			"ID": "20230330224910-t3mbqbl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230330224910-t3mbqbl"
+			}
+		},
+		{
+			"ID": "20230330224912-w7oj0kt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230330224912-w7oj0kt",
+				"updated": "20230330224912"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "541. 反转字符串 II"
+				}
+			]
+		},
+		{
+			"ID": "20230330224912-1g80zop",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230330224912-1g80zop",
+				"updated": "20230330224912"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/reverse-string-ii/",
+					"TextMarkTextContent": "541. 反转字符串 II"
+				}
+			]
+		},
+		{
+			"ID": "20230330224912-hhxpjgj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230330224912-hhxpjgj",
+				"updated": "20230330224912"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230330224912-a06oyug",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230330224912-a06oyug",
+				"updated": "20230330224912"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在遍历字符串的过程中，只要让"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": " i += (2 * k)"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "i"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 每次移动 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "2 * k"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 就可以了，然后判断是否需要有反转的区间。"
+				}
+			]
+		},
+		{
+			"ID": "20230330224912-2381ldr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230330224912-2381ldr",
+				"updated": "20230330224912"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为要找的也就是每"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "2 * k"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 区间的起点，这样写，程序会高效很多。"
+				}
+			]
+		},
+		{
+			"ID": "20230330224912-mv24y11",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230330224912-mv24y11",
+				"updated": "20230330224912"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230330224912-wmgil3d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230330224912-wmgil3d",
+				"updated": "20230330224912"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    string reverseStr(string s, int k) {\n        int pos = 0;\n        for(int pos = 0 ;  pos \u003c s.size() ; pos += (2 * k) )\n        {\n            if(pos + k \u003c s.size())//剩余字符串大于等于k的情况\n            {\n                reverse(s.begin() + pos , s.begin()+ pos + k );\n            }\n            else //剩余字符串不足k的情况\n            {\n                reverse(s.begin() + pos , s.end());\n            }\n        }\n        return s;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230330224910-osfsg60",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230330224910-osfsg60"
+			}
+		},
 		{
 			"ID": "20230327221522-hrdwrt6",
 			"Type": "NodeHeading",
