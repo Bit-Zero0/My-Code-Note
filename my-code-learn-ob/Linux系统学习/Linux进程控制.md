@@ -114,7 +114,8 @@ int main()
 
 
 `_exit` 函数是不会负责善后工作的。
-![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140835.png)
+![image.png](![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230404105751.png)
+
 
 ```c
 int main()
