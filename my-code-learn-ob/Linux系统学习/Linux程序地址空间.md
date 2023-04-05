@@ -145,7 +145,10 @@ CPU是如何找到代码的入口（如：`main()` 函数）的？
 还是这段代码
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317191522.png)
 
-![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317191527.png)
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230404104503.png)
+
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230404104410.png)
 
 但子进程或父进程发生修改时，就会发生写时拷贝，此时父进程或子进程的物理地址实际上已经发生了改变， 但是虚拟地址还是同一个 。
 

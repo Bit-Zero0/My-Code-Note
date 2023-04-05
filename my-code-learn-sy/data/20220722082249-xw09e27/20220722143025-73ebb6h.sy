@@ -6,7 +6,7 @@
 		"id": "20220722143025-73ebb6h",
 		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220722143034-zqjbdmp\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20220722143034-fe0isko\u0026quot;,\u0026quot;scrollTop\u0026quot;:0}",
 		"title": "Linux进程控制",
-		"updated": "20230317154928"
+		"updated": "20230404113526"
 	},
 	"Children": [
 		{
@@ -52,12 +52,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-dpfxghe",
-				"updated": "20220722143034"
+				"updated": "20230404104851"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "程调用fork，当控制转移到内核中的fork代码后，内核做："
+					"Data": "进程调用fork，当控制转移到内核中的fork代码后，内核做："
 				}
 			]
 		},
@@ -382,12 +382,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-1l5f7hj",
-				"updated": "20230317140615"
+				"updated": "20230404105031"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "父子代码共享，父子再不写入时，数据也是共享的，当任意一方试图写入，便以写时拷贝的方式各自一份副本。\n​​"
+					"Data": "父子代码共享，父子再不写入时，数据也是共享的，当任意一方试图写入，便以写时拷贝的方式各自一份副本。\n​​​"
 				},
 				{
 					"Type": "NodeImage",
@@ -411,7 +411,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140608.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230404104503.png"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -420,7 +420,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​​"
+					"Data": "​​​"
 				}
 			]
 		},
@@ -1019,7 +1019,7 @@
 			},
 			"Properties": {
 				"id": "20220722143034-fe0isko",
-				"updated": "20220722143034"
+				"updated": "20230404105430"
 			},
 			"Children": [
 				{
@@ -1072,7 +1072,7 @@
 					},
 					"Properties": {
 						"id": "20220722143034-q64tf6r",
-						"updated": "20220722143034"
+						"updated": "20230404105428"
 					},
 					"Children": [
 						{
@@ -1080,7 +1080,7 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220722143034-ul7zqp2",
-								"updated": "20220722143034"
+								"updated": "20230404105428"
 							},
 							"Children": [
 								{
@@ -1090,7 +1090,11 @@
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "strong code",
-									"TextMarkTextContent": "exit"
+									"TextMarkTextContent": "exit()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
 								}
 							]
 						}
@@ -1107,7 +1111,7 @@
 					},
 					"Properties": {
 						"id": "20220722143034-mzct5x2",
-						"updated": "20220722143034"
+						"updated": "20230404105430"
 					},
 					"Children": [
 						{
@@ -1115,13 +1119,21 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220722143034-xpbmtoj",
-								"updated": "20220722143034"
+								"updated": "20230404105430"
 							},
 							"Children": [
 								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "strong code",
-									"TextMarkTextContent": "_exit"
+									"TextMarkTextContent": "_exit()"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
 								}
 							]
 						}
@@ -1156,9 +1168,13 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-0finlyt",
-				"updated": "20220722143034"
+				"updated": "20230404105452"
 			},
 			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "strong code",
@@ -1166,7 +1182,18 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，信号终止"
+					"Data": "​，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220910184746-mm74fd3",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "信号"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "终止"
 				}
 			]
 		},
@@ -1286,7 +1313,20 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": " 。\n查询退出信号使用 "
+					"Data": " 。\n"
+				}
+			]
+		},
+		{
+			"ID": "20230404105514-pgjlj7m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230404105514-pgjlj7m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查询退出信号使用 "
 				},
 				{
 					"Type": "NodeTextMark",
@@ -1295,7 +1335,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​\n​​"
+					"Data": "​​\n​​"
 				},
 				{
 					"Type": "NodeImage",
@@ -1562,7 +1602,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-0utk9s4",
-				"updated": "20230317140829"
+				"updated": "20230404105606"
 			},
 			"Children": [
 				{
@@ -1572,11 +1612,20 @@
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "code",
-					"TextMarkTextContent": "_exit"
+					"TextMarkTextContent": "_exit()"
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​ 函数作用也是 退出进程， 但是也exit有些区别。\n需要导入头文件 "
+					"Data": "​ 函数作用也是 退出进程， 但是也"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "exit()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​有些区别。\n需要导入头文件 "
 				},
 				{
 					"Type": "NodeTextMark",
@@ -1585,7 +1634,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​。\n​​"
+					"Data": "​。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -1618,7 +1667,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​​"
+					"Data": "​"
 				}
 			]
 		},
@@ -1664,7 +1713,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20230317140853-pfzbta7",
-				"updated": "20230317140854"
+				"updated": "20230404105818"
 			},
 			"Children": [
 				{
@@ -1693,7 +1742,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317140835.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230404105751.png"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -1738,12 +1787,23 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-6h6omf8",
-				"updated": "20220722143034"
+				"updated": "20230404105723"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "使用exit和 main中的return是 在5秒后会打印输出缓冲区中的内容的， 但是 "
+					"Data": "使用exit和 main中的return是 在5秒后会打印输出"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220725144637-wu3jh5k",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "缓冲区"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中的内容的， 但是 "
 				},
 				{
 					"Type": "NodeTextMark",
@@ -1752,7 +1812,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": " 不会负责这些善后工作，而是直接带着"
+					"Data": "​ 不会负责这些善后工作，而是直接带着"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -2252,16 +2312,214 @@
 			]
 		},
 		{
-			"ID": "20220722143034-yyoqwwh",
-			"Type": "NodeParagraph",
+			"ID": "20230404110008-m3dyq1p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20220722143034-yyoqwwh",
-				"updated": "20230317140947"
+				"id": "20230404110008-m3dyq1p",
+				"updated": "20230404110008"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "进程等待的函数有："
+					"Data": "进程等待必要性"
+				}
+			]
+		},
+		{
+			"ID": "20230404110008-dznhm6e",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230404110008-dznhm6e",
+				"updated": "20230404110111"
+			},
+			"Children": [
+				{
+					"ID": "20230404110008-xrwhgov",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230404110008-xrwhgov",
+						"updated": "20230404110008"
+					},
+					"Children": [
+						{
+							"ID": "20230404110008-5wcss63",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230404110008-5wcss63",
+								"updated": "20230404110008"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "获取子进程退出的信息"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，能够得知子进程执行结果。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230404110008-7uoqenw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230404110008-7uoqenw",
+						"updated": "20230404110008"
+					},
+					"Children": [
+						{
+							"ID": "20230404110008-1pma5ar",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230404110008-1pma5ar",
+								"updated": "20230404110008"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以保证："
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark",
+									"TextMarkTextContent": "时序问题"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，子进程先退出，父进程后退出。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230404110008-wqv8x36",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230404110008-wqv8x36",
+						"updated": "20230404110111"
+					},
+					"Children": [
+						{
+							"ID": "20230404110008-rt8ot0v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230404110008-rt8ot0v",
+								"updated": "20230404110111"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "进程退出的时候会先进入"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "block-ref",
+									"TextMarkBlockRefID": "20220722141506-dooxkzp",
+									"TextMarkBlockRefSubtype": "s",
+									"TextMarkTextContent": "僵尸状况Z"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "会造成内存泄漏的问题，需要"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "通过父进程wait,释放该子进程占用的资源"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230404110008-2v5idv4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230404110008-2v5idv4",
+				"updated": "20230404110046"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外，进程一旦变成"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722141506-dooxkzp",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "僵尸状况Z"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那就刀枪不入，“杀人不眨眼\"的 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "kill -9"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 也无能为力，因为谁也没有办法杀死一个已经死去的进程。"
+				}
+			]
+		},
+		{
+			"ID": "20230404110007-pdmqi9x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230404110007-pdmqi9x"
+			}
+		},
+		{
+			"ID": "20220722143034-yyoqwwh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20220722143034-yyoqwwh",
+				"updated": "20230404105959"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进程等待的函数"
 				}
 			]
 		},
@@ -2305,7 +2563,16 @@
 							"Type": "NodeCloseParen"
 						}
 					]
-				},
+				}
+			]
+		},
+		{
+			"ID": "20230404110121-l9q0h5r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230404110121-l9q0h5r"
+			},
+			"Children": [
 				{
 					"Type": "NodeText",
 					"Data": "​"
@@ -2365,183 +2632,6 @@
 			"Properties": {
 				"id": "20230317141019-8gwq1k9"
 			}
-		},
-		{
-			"ID": "20220722143034-9df1l4s",
-			"Type": "NodeHeading",
-			"HeadingLevel": 2,
-			"Properties": {
-				"id": "20220722143034-9df1l4s",
-				"updated": "20220722143034"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "进程等待必要性"
-				}
-			]
-		},
-		{
-			"ID": "20220722143034-82k88ip",
-			"Type": "NodeList",
-			"ListData": {
-				"Typ": 1
-			},
-			"Properties": {
-				"id": "20220722143034-82k88ip",
-				"updated": "20220722143034"
-			},
-			"Children": [
-				{
-					"ID": "20220722143034-34zj3up",
-					"Type": "NodeListItem",
-					"ListData": {
-						"Typ": 1,
-						"Delimiter": 46,
-						"Marker": "MS4=",
-						"Num": 1
-					},
-					"Properties": {
-						"id": "20220722143034-34zj3up",
-						"updated": "20220722143034"
-					},
-					"Children": [
-						{
-							"ID": "20220722143034-i10za0z",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20220722143034-i10za0z",
-								"updated": "20220722143034"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "通过"
-								},
-								{
-									"Type": "NodeTextMark",
-									"TextMarkType": "strong",
-									"TextMarkTextContent": "获取子进程退出的信息"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，能够得知子进程执行结果。"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20220722143034-ia2clww",
-					"Type": "NodeListItem",
-					"ListData": {
-						"Typ": 1,
-						"Delimiter": 46,
-						"Marker": "Mi4=",
-						"Num": 2
-					},
-					"Properties": {
-						"id": "20220722143034-ia2clww",
-						"updated": "20220722143034"
-					},
-					"Children": [
-						{
-							"ID": "20220722143034-vq8e3n2",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20220722143034-vq8e3n2",
-								"updated": "20220722143034"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "可以保证："
-								},
-								{
-									"Type": "NodeTextMark",
-									"TextMarkType": "mark",
-									"TextMarkTextContent": "时序问题"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，子进程先退出，父进程后退出。"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20220722143034-uurhf1c",
-					"Type": "NodeListItem",
-					"ListData": {
-						"Typ": 1,
-						"Delimiter": 46,
-						"Marker": "My4=",
-						"Num": 3
-					},
-					"Properties": {
-						"id": "20220722143034-uurhf1c",
-						"updated": "20220722143034"
-					},
-					"Children": [
-						{
-							"ID": "20220722143034-cp9jj6a",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20220722143034-cp9jj6a",
-								"updated": "20220722143034"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "进程退出的时候会先进入僵尸状态会造成内存泄漏的问题，需要"
-								},
-								{
-									"Type": "NodeTextMark",
-									"TextMarkType": "strong",
-									"TextMarkTextContent": "通过父进程wait,释放该子进程占用的资源"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "！"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20220722143034-becwp9a",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20220722143034-becwp9a",
-				"updated": "20220905090403"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "另外，进程一旦变成"
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "strong",
-					"TextMarkTextContent": "僵尸状态"
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，那就刀枪不入，“杀人不眨眼\"的 "
-				},
-				{
-					"Type": "NodeTextMark",
-					"TextMarkType": "code",
-					"TextMarkTextContent": "kill -9"
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 也无能为力，因为谁也没有办法杀死一个已经死去的进程。"
-				}
-			]
 		},
 		{
 			"ID": "20220722143721-vwbqvnz",
@@ -2902,7 +2992,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-a4wr4bm",
-				"updated": "20220722143034"
+				"updated": "20230404110230"
 			},
 			"Children": [
 				{
@@ -2912,7 +3002,16 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": " : 输出型参数，"
+					"Data": " : "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "int* status"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 输出型参数，"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -3049,6 +3148,13 @@
 			]
 		},
 		{
+			"ID": "20230404110338-4m3hjey",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230404110338-4m3hjey"
+			}
+		},
+		{
 			"ID": "20220722143034-wj5d4u2",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -3060,16 +3166,7 @@
 				{
 					"Type": "NodeText",
 					"Data": "​"
-				}
-			]
-		},
-		{
-			"ID": "20230317141319-swig8ye",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20230317141319-swig8ye"
-			},
-			"Children": [
+				},
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "code",
@@ -3134,7 +3231,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20220722143034-qv4ta3n",
-				"updated": "20220905091034"
+				"updated": "20230404110423"
 			},
 			"Children": [
 				{
@@ -3174,7 +3271,7 @@
 					},
 					"Properties": {
 						"id": "20220722143034-bdzr4jb",
-						"updated": "20220905091034"
+						"updated": "20230404110423"
 					},
 					"Children": [
 						{
@@ -3182,12 +3279,21 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220722143034-0odbmr0",
-								"updated": "20220905091034"
+								"updated": "20230404110423"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "如果设置了选项 "
+									"Data": "如果设置了"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "options"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​选项为 "
 								},
 								{
 									"Type": "NodeTextMark",
@@ -3196,7 +3302,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": ",而调用中waitpid发现没有已退出的子进程可收集,则返回0；"
+									"Data": "​,而调用中waitpid发现没有已退出的子进程可收集,则返回0；"
 								}
 							]
 						}
@@ -3231,6 +3337,13 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "20230404110435-969ol0x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230404110435-969ol0x"
+			}
 		},
 		{
 			"ID": "20220722143034-a3ags43",
@@ -3316,7 +3429,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-8oce7i2",
-				"updated": "20220722143034"
+				"updated": "20230404110612"
 			},
 			"Children": [
 				{
@@ -3335,7 +3448,16 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": ": 若pid指定的子进程没有结束，则waitpid()函数返回0，不予以等待。若正常结束，则返回该子进程的ID。"
+					"Data": ": 若pid指定的子进程没有结束，则"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "waitpid()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​函数返回0，不予以等待。若正常结束，则返回该子进程的ID。"
 				}
 			]
 		},
@@ -3359,7 +3481,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220722143034-xu56zuj",
-				"updated": "20220724145330"
+				"updated": "20230404111757"
 			},
 			"Children": [
 				{
@@ -3372,7 +3494,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n    int id = fork();\n    if(id == 0)\n    {\n        //child\n\tint cut = 5;\n        while(cut)\n        {    \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\tcut--;\n\t\tsleep(1);\n        }\n\texit(10); //退出码改为10\n    }\n  \n   //parent\n    printf(\"father  wait begin!!\\n\");\n  \n    int status = 0; //定义status\n    int ret = waitpid(id, \u0026status , 0);\n\n\tif(ret \u003e 0)\n\t\tprintf(\"father wait : %d  status：%d\\n\", ret，status);\n\telse\n\t\tprintf(\"father wait failed \\n\");\n    return 100;\n}\n"
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n    int id = fork();\n    if(id == 0)\n    {\n        //child\n\tint cut = 5;\n        while(cut)\n        {  \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\tcut--;\n\t\tsleep(1);\n        }\n\texit(10); //退出码改为10\n    }\n  \n   //parent\n    printf(\"father  wait begin!!\\n\");\n  \n    int status = 0; //定义status\n    int ret = waitpid(id, \u0026status , 0);\n\n    if(ret \u003e 0)\n\tprintf(\"father wait : %d  status：%d\\n\", ret，status);\n    else\n\tprintf(\"father wait failed \\n\");\n    return 100;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -4053,12 +4175,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-00jm0z7",
-				"updated": "20220722143034"
+				"updated": "20230404111059"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "阻寒的本质：其实是进程的PCB被放入了等待队列，并将进程的状态改为S状态。"
+					"Data": "的本质：其实是进程的PCB被放入了等待队列，并将进程的状态改为S状态。"
 				}
 			]
 		},
@@ -4178,7 +4300,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220722143034-ubb5maf",
-				"updated": "20220905092842"
+				"updated": "20230404113422"
 			},
 			"Children": [
 				{
@@ -4191,7 +4313,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n\tint id = fork();\n\tif(id == 0)\n\t{\n\t\t//child\n            int cut = 10;\n            while(cut)\n            {    \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\tcut--;\n\t\tsleep(1);\n            }\n\t    exit(10);\n    }\n  \n    int status  = 0;\n    while(1)\n    {\n\t    int ret = waitpid(id , \u0026status , WNOHANG);\n\t    if(ret == 0)\n\t    {\n\t      //子进程没有退出，但是waitpid的等待是成功的，需要父进程重复进行等待\n\t      printf(\"Do my things! \\n\");\n\t    }\n\t    else if(ret \u003e 0) // 子进程退出了，waitpid也成功了，获取到了对应的结果\n\t    {\n\t      printf(\"father wait : %d , success , status exit code : %d m status exit signal : %d \\n\", ret , (status \u003e\u003e 8)\u00260xFF, status\u00260x7F );\n\t      break;\n\t    }\n\t    else{ // ret \u003c 0 ,等待失败\n\t      perror(\"waitpid\");\n\t        break;\n\t    }\n\t    sleep(1);\n    }\n\treturn 0;\n}\n"
+					"Data": "#include \u003cstdio.h\u003e\n#include \u003cunistd.h\u003e\n#include \u003cstring.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003csys/wait.h\u003e\nint main()\n{\n\tint id = fork();\n\tif(id == 0)\n\t{\n\t\t//child\n            int cut = 10;\n            while(cut)\n            {  \n\t        printf(\"child[%d] is running : cut is : %d!\\n\" ,getpid(), cut);\n\t\tcut--;\n\t\tsleep(1);\n            }\n\t    exit(10);\n    }\n  \n    int status  = 0;\n    while(1)\n    {\n\t    int ret = waitpid(id , \u0026status , WNOHANG);\n\t    if(ret == 0)\n\t    {\n\t      //子进程没有退出，但是waitpid的等待是成功的，需要父进程重复进行等待\n\t      printf(\"Do my things! \\n\");\n\t    }\n\t    else if(ret \u003e 0) // 子进程退出了，waitpid也成功了，获取到了对应的结果\n\t    {\n\t      printf(\"father wait : %d , success , status exit code : %d m status exit signal : %d \\n\", ret , (status \u003e\u003e 8)\u00260xFF, status\u00260x7F );\n\t      break;\n\t    }\n\t    else{ // ret \u003c 0 ,等待失败\n\t      perror(\"waitpid\");\n\t        break;\n\t    }\n\t    sleep(1);\n    }\n\treturn 0;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -4345,13 +4467,23 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220722143034-m5ulmn0",
-				"updated": "20220722143034"
+				"updated": "20230404113454"
 			},
 			"Children": [
 				{
 					"Type": "NodeTextMark",
 					"TextMarkType": "strong",
-					"TextMarkTextContent": "进程不变，仅仅替换当前进程的代码和数据的技术，叫做，进程的程序替换！"
+					"TextMarkTextContent": "进程不变，仅仅替换当前进程的代码和数据的技术，叫做 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong mark",
+					"TextMarkTextContent": "进程的程序替换"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "！"
 				}
 			]
 		},
@@ -4382,6 +4514,13 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "20230404113526-ks9ymgq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230404113526-ks9ymgq"
+			}
 		},
 		{
 			"ID": "20220722143034-onuzzkm",
