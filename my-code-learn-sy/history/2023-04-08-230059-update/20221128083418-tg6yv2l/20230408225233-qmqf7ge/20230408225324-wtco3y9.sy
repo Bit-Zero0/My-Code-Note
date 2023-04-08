@@ -1,0 +1,2798 @@
+{
+	"ID": "20230408225324-wtco3y9",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230408225324-wtco3y9",
+		"title": "Java到底是值传递还是引用传递？",
+		"updated": "20230408225448"
+	},
+	"Children": [
+		{
+			"ID": "20230408225333-s3qkchj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-s3qkchj",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "先说结论: "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "java 只有"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong mark",
+					"TextMarkTextContent": "值传递"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": ", 没有"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong mark",
+					"TextMarkTextContent": "引用传递"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-lkj3ljf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230408225333-lkj3ljf",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "形参与实参"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-i208jy9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-i208jy9",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们先来重温一组语法："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-wq0bb9e",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230408225333-wq0bb9e",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230408225333-o12ncgd",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20230408225333-o12ncgd",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225332-y68pvg6",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20230408225332-y68pvg6",
+								"updated": "20230408225332"
+							},
+							"Children": [
+								{
+									"ID": "20230408225333-rcgvz5z",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230408225333-rcgvz5z",
+										"updated": "20230408225333"
+									},
+									"Children": [
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "形参"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：方法被调用时需要传递进来的参数，如：func(int a)中的a，它只有在func被调用期间a才有意义，也就是会被分配内存空间，在方法func执行完成后，a就会被销毁释放空间，也就是不存在了"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230408225332-dr91kbf",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20230408225332-dr91kbf",
+								"updated": "20230408225332"
+							},
+							"Children": [
+								{
+									"ID": "20230408225333-3zu3cbg",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230408225333-3zu3cbg",
+										"updated": "20230408225333"
+									},
+									"Children": [
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "实参"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：方法被调用时是传入的实际值，它在方法被调用前就已经被初始化并且在方法被调用时传入。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-hf7gmku",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-hf7gmku",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "看以下代码:"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-4jj4cln",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-4jj4cln",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void func(int a){\n\ta=20;\n\tSystem.out.println(a);\n}\npublic static void main(String[] args) {\n\tint a=10;//实参\n\tfunc(a);\n\tSystem.out.println(a);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-eiez8lg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-eiez8lg",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行结果:"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-h7hd0y6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-h7hd0y6",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "20\n10\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-puldg6b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-puldg6b",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "int a=10;"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​中的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "a"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​在被调用之前就已经创建并初始化，在调用"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法时，他被当做参数传入，所以这个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "a"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​是实参。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-c0g5blx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-c0g5blx",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "func(int a)"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​中的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "a"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​只有在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​被调用时它的生命周期才开始，而在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​调用结束之后，它也随之被JVM释放掉，所以这个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "a"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​是形参。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-m9rj5kc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-m9rj5kc",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而且 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "a"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 是一个Java数据类型中的基本类型 , 被存储在 栈 上 , 当传递进入 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法时 , 其实是复制一份 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "a"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 传入"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "func"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法中."
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-w6i4a4i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230408225333-w6i4a4i",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java数据类型"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-y2664jh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-y2664jh",
+				"updated": "20230408225448"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20230408225315-1b5mmhk",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "Java的数据类型"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n有了数据类型，JVM对程序数据的管理就规范化了，不同的数据类型，它的存储形式和位置是不一样的，要想知道JVM是怎么存储各种类型的数据，就得先了解JVM的内存划分以及每部分的职能。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-r4rtlh3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230408225333-r4rtlh3",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JVM内存的划分及职能"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-hru2uzl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-hru2uzl",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java语言本身是不能操作内存的，它的一切都是交给JVM来管理和控制的，因此Java内存区域的划分也就是JVM的区域划分，在说JVM的内存划分之前，我们先来看一下Java程序的执行过程，如下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407134217.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n上图可以看出：Java代码被编译器编译成字节码之后，JVM开辟一片内存空间（也叫运行时数据区），通过类加载器加到到运行时数据区来存储程序执行期间需要用到的数据和相关信息，在这个数据区中，它由以下几部分组成："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-ah1csz3",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230408225333-ah1csz3",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230408225333-66zai3d",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20230408225333-66zai3d",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-g1ebbbm",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20230408225333-g1ebbbm",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"ID": "20230408225333-zmk4rtt",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230408225333-zmk4rtt",
+										"updated": "20230408225333"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "虚拟机栈"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230408225333-f5t2o3x",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20230408225333-f5t2o3x",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"ID": "20230408225333-ujpfmiw",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230408225333-ujpfmiw",
+										"updated": "20230408225333"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "堆"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230408225333-kaeoqwq",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20230408225333-kaeoqwq",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"ID": "20230408225333-ef3uarh",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230408225333-ef3uarh",
+										"updated": "20230408225333"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "程序计数器"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230408225333-vftl2k5",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NC4=",
+								"Num": 4
+							},
+							"Properties": {
+								"id": "20230408225333-vftl2k5",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"ID": "20230408225333-bghdnll",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230408225333-bghdnll",
+										"updated": "20230408225333"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "方法区"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230408225333-u0cbr04",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NS4=",
+								"Num": 5
+							},
+							"Properties": {
+								"id": "20230408225333-u0cbr04",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"ID": "20230408225333-xe5sycj",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230408225333-xe5sycj",
+										"updated": "20230408225333"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "本地方法栈"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-9d784wd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-9d784wd",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们接着来了解一下每部分的原理以及具体用来存储程序执行过程中的哪些数据。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-5r0jfba",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-5r0jfba",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚拟机栈"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-227z89j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-227z89j",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虚拟机栈是Java方法执行的内存模型，栈中存放着栈帧，每个栈帧分别对应一个被调用的方法，方法的调用过程对应栈帧在虚拟机中入栈到出栈的过程。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-8p1w5lu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-8p1w5lu",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "栈是线程私有的，也就是线程之间的栈是隔离的；当程序中某个线程开始执行一个方法时就会相应的创建一个栈帧并且入栈（位于栈顶），在方法结束后，栈帧出栈。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-s4upsaz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-s4upsaz",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下图表示了一个Java栈的模型以及栈帧的组成：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407134445.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "栈帧"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":是用于支持虚拟机进行方法调用和方法执行的数据结构，它是虚拟机运行时数据区中的虚拟机栈的栈元素。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-pqinjvp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-pqinjvp",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每个栈帧中包括："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-w1fbkkd",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230408225333-w1fbkkd",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"ID": "20230408225333-13gnbzf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230408225333-13gnbzf",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-c8nm1xx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225333-c8nm1xx",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "局部变量表"
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":用来存储方法中的局部变量（非静态变量、函数形参）。当变量为基本数据类型时，直接存储值，当变量为引用类型时，存储的是指向具体对象的引用。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225333-b8onnyd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230408225333-b8onnyd",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-kr36ndv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225333-kr36ndv",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "操作数栈"
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":Java虚拟机的解释执行引擎被称为\"基于栈的执行引擎\"，其中所指的栈就是指操作数栈。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225333-c5ey03r",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230408225333-c5ey03r",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-ijfpmd1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225333-ijfpmd1",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "指向运行时常量池的引用"
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":存储程序执行时可能用到常量的引用。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225333-k44v4zm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230408225333-k44v4zm",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-4e9zz4w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225333-4e9zz4w",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "方法返回地址"
+								},
+								{
+									"Type": "NodeText",
+									"Data": ":存储方法执行完成后的返回地址。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-zcsy75q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-zcsy75q",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "堆"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-b0232xb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-b0232xb",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "堆是用来存储"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对象"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "本身和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "数组"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的，在JVM中只有一个堆，因此，堆是被所有线程共享的。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-kknfhb2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-kknfhb2",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法区"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-rr4vpwx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-rr4vpwx",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法区是一块所有线程共享的内存逻辑区域，在JVM中只有一个方法区，用来存储一些线程可共享的内容，它是线程安全的，多个线程同时访问方法区中同一个内容时，只能有一个线程装载该数据，其它线程只能等待。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-2hiweo3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-2hiweo3",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法区可存储的内容有：类的全路径名、类的直接超类的权全限定名、类的访问修饰符、类的类型（类或接口）、类的直接接口全限定名的有序列表、常量池（字段，方法信息，静态变量，类型引用（class））等。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-6l6qrs3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-6l6qrs3",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "本地方法栈"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-yt1mkc4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-yt1mkc4",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "本地方法栈的功能和虚拟机栈是基本一致的，并且也是线程私有的，它们的区别在于虚拟机栈是为执行Java方法服务的，而本地方法栈是为执行本地方法服务的。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-8lght0h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-8lght0h",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "有人会疑惑：什么是本地方法？为什么Java还要调用本地方法？"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-qqu9zue",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-qqu9zue",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "程序计数器"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-bvd4665",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-bvd4665",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程私有的。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "记录着当前线程所执行的字节码的行号指示器，在程序运行过程中，字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、异常处理、线程恢复等基础功能都需要依赖计数器完成。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-ij74lt0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230408225333-ij74lt0",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据如何在内存中存储"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-1233rpo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-1233rpo",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本数据类型的局部变量"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-12zd5du",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-12zd5du",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定义基本数据类型的局部变量以及数据都是直接存储在内存中的栈上，也就是前面说到的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "“虚拟机栈”"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，数据本身的值就是存储在栈空间里面。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-cia3zss",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-cia3zss",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int age=50;\nint weight=50;\nint grade=6;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-y2uwn94",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-y2uwn94",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407135256.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-6rgd6be",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-6rgd6be",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "首先JVM创建一个名为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "age"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​的变量，存于局部变量表中，然后去栈中查找是否存在有字面量值为50的内容，如果有就直接把"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "age"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​指向这个地址，如果没有，JVM会在栈中开辟一块空间来存储“50”这个内容，并且把"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "age"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​指向这个地址。因此我们可以知道："
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "我们声明并初始化基本数据类型的局部变量时，变量名以及字面量值都是存储在栈中，而且是真实的内容。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-83cjqa8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-83cjqa8",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们再来看"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "“int weight=50"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​；”，按照刚才的思路：字面量为50的内容在栈中已经存在，因此"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "weight"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​是直接指向这个地址的。由此可见："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "栈中的数据在当前线程下是共享的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-2kcnxd9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-2kcnxd9",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么如果再执行下面的代码呢？"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-baih1wq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-baih1wq",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "weight=40；\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-3q5lm36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-3q5lm36",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当代码中重新给weight变量进行赋值时，JVM会去栈中寻找字面量为40的内容，发现没有，就会开辟一块内存空间存储40这个内容，并且把weight指向这个地址。由此可知："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-3uw7uq6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-3uw7uq6",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "基本数据类型的数据本身是不会改变的，当局部变量重新赋值时，并不是在内存中改变字面量内容，而是重新在栈中寻找已存在的相同的数据，若栈中不存在，则重新开辟内存存新数据，并且把要重新赋值的局部变量的引用指向新数据所在地址。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-3z7wa67",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-3z7wa67",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本数据类型的成员变量"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-ikt81be",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-ikt81be",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "成员变量：顾名思义，就是在类体中定义的变量。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "看下图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407135623.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-bzxr1bf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-bzxr1bf",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们看per的地址指向的是堆内存中的一块区域，我们来还原一下代码："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-1qm0c5t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-1qm0c5t",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Person{\n\t  private int age;\n\t  private String name;\n\t  private int grade;\n\t//篇幅较长，省略setter getter方法\n\t  static void run(){\n\t     System.out.println(\"run....\"); \n\t   };\n}\n\n//调用\nPerson per=new Person();\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-3t3v3by",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-3t3v3by",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "同样是局部变量的age、name、grade却被存储到了堆中为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "per"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​对象开辟的一块空间中。因此可知："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "基本数据类型的成员变量名和值都存储于"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong mark",
+					"TextMarkTextContent": "堆"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "中，其生命周期和对象的是一致的。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-v2f6kt5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230408225333-v2f6kt5",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "值传递和引用传递"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-7p6so1x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-7p6so1x",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "值传递"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-wc9qslu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-wc9qslu",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "前面已经介绍过形参和实参，也介绍了数据类型以及数据在内存中的存储形式，接下来，就是文章的主题：值传递和引用的传递。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-m9x0xa7",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230408225333-m9x0xa7",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230408225333-9wz1x89",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230408225333-9wz1x89",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "值传递："
+						},
+						{
+							"Type": "NodeBr",
+							"Data": "br"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在方法被调用时，实参通过形参把它的内容副本传入方法内部，此时形参接收到的内容是实参值的一个拷贝，因此在方法内对形参的任何操作，都仅仅是对这个副本的操作，不影响原始值的内容。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-1wfthds",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-1wfthds",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "来看个例子："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-c2l94rj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-c2l94rj",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void valueCrossTest(int age,float weight){\n    System.out.println(\"传入的age：\"+age);\n    System.out.println(\"传入的weight：\"+weight);\n    age=33;\n    weight=89.5f;\n    System.out.println(\"方法内重新赋值后的age：\"+age);\n    System.out.println(\"方法内重新赋值后的weight：\"+weight);\n    }\n\n//测试\npublic static void main(String[] args) {\n        int a=25;\n        float w=77.5f;\n        valueCrossTest(a,w);\n        System.out.println(\"方法执行后的age：\"+a);\n        System.out.println(\"方法执行后的weight：\"+w);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-efl15gt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-efl15gt",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输出结果："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-qgn2bnd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-qgn2bnd",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "传入的age：25\n传入的weight：77.5\n\n方法内重新赋值后的age：33\n方法内重新赋值后的weight：89.5\n\n方法执行后的age：25\n方法执行后的weight：77.5\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-vmwb1l9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-vmwb1l9",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "从上面的打印结果可以看到：\na和w作为实参传入valueCrossTest之后，无论在方法内做了什么操作，最终a和w都没变化。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-i74skws",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-i74skws",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们根据上面学到的知识点，进行详细的分析："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-irpr809",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230408225333-irpr809",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230408225333-ofbhbp7",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230408225333-ofbhbp7",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "首先程序运行时，调用"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "mian()"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​方法，此时JVM为"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "main()"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​方法往虚拟机栈中压入一个栈帧，即为当前栈帧，用来存放"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "main()"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​中的局部变量表(包括参数)、操作栈、方法出口等信息，如a和w都是"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "mian()"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​方法中的局部变量，因此可以断定，a和w是躺着mian方法所在的栈帧中."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-zl7sbg7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-zl7sbg7",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如图:\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407140248.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-gezpyih",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-gezpyih",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而当执行到"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "valueCrossTest()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法时，JVM也为其往虚拟机栈中压入一个栈，即为当前栈帧，用来存放"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "valueCrossTest()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​中的局部变量等信息，因此age和weight是躺着valueCrossTest方法所在的栈帧中，而"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "他们的值是从a和w的值copy了一份副本而得"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，如图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407140318.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-jcf6tws",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-jcf6tws",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因而可以a和age、w和weight对应的内容是不一致的，所以当在方法内重新赋值时，实际流程如图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407140433.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n也就是说，age和weight的改动，只是改变了当前栈帧（valueCrossTest方法所在栈帧）里的内容，当方法执行结束之后，这些局部变量都会被销毁，mian方法所在栈帧重新回到栈顶，成为当前栈帧，再次输出a和w时，依然是初始化时的内容。"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "因此："
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "值传递传递的是真实内容的一个副本，对副本的操作不影响原内容，也就是形参怎么变化，不会影响实参对应的内容。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-at22j37",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-at22j37",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "引用传递"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-9u010q1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-9u010q1",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "”引用”也就是指向真实内容的地址值，在方法调用时，实参的地址通过方法调用被传递给相应的形参，在方法体内，形参和实参指向通愉快内存地址，对形参的操作会影响的真实内容。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-1yzuauz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-1yzuauz",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举个栗子：\n先定义一个对象："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-ixrg2my",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-ixrg2my",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Person {\n        private String name;\n        private int age;\n\n        public String getName() {\n            return name;\n        }\n        public void setName(String name) {\n            this.name = name;\n        }\n        public int getAge() {\n            return age;\n        }\n        public void setAge(int age) {\n            this.age = age;\n        }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-jma76sf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-jma76sf",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们写个函数测试一下："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-bxg4mpu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-bxg4mpu",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void PersonCrossTest(Person person){\n        System.out.println(\"传入的person的name：\"+person.getName());\n        person.setName(\"我是张小龙\");\n        System.out.println(\"方法内重新赋值后的name：\"+person.getName());\n    }\n//测试\npublic static void main(String[] args) {\n        Person p=new Person();\n        p.setName(\"我是马化腾\");\n        p.setAge(45);\n        PersonCrossTest(p);\n        System.out.println(\"方法执行后的name：\"+p.getName());\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-b3h6bba",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-b3h6bba",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输出结果："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-zu4ntbk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-zu4ntbk",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "传入的person的name：我是马化腾\n方法内重新赋值后的name：我是张小龙\n方法执行后的name：我是张小龙\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-p8um3ox",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-p8um3ox",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看出，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "person"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​经过"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "personCrossTest()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法的执行之后，内容发生了改变，这印证了上面所说的“"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "引用传递"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "”，对形参的操作，改变了实际对象的内容。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-hchkupl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-hchkupl",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是 \"引用传递\" 并不是那么简单"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-lc1ck0l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-lc1ck0l",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面我们对上面的例子稍作修改，加上一行代码，"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-p0302cl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-p0302cl",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void PersonCrossTest(Person person){\n        System.out.println(\"传入的person的name：\"+person.getName());\n        person=new Person();//加多此行代码\n        person.setName(\"我是张小龙\");\n        System.out.println(\"方法内重新赋值后的name：\"+person.getName());\n    }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-w9xcb66",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-w9xcb66",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输出结果："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-ghe59ra",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-ghe59ra",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "传入的person的name：我是马化腾\n方法内重新赋值后的name：我是张小龙\n方法执行后的name：我是马化腾\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-pm2y2mf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-pm2y2mf",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么这次的输出和上次的不一样了呢？\n看出什么问题了吗？"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-b41zo3c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-b41zo3c",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "按照上面讲到JVM内存模型可以知道，对象和数组是存储在Java堆区的，而且堆区是共享的，因此程序执行到"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "main()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法中的下列代码时"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-hxhv7yf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230408225333-hxhv7yf",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Person p=new Person();\n        p.setName(\"我是马化腾\");\n        p.setAge(45);\n        PersonCrossTest(p);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-cpezovu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-cpezovu",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JVM会在堆内开辟一块内存，用来存储p对象的所有内容，同时在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "main()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法所在线程的栈区中创建一个引用p存储堆区中p对象的真实地址，如图：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407141531.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n当执行到"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "PersonCrossTest()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法时，因为方法内有这么一行代码：\n​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "person=new Person();"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​\nJVM需要在堆内另外开辟一块内存来存储"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "new Person()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​，假如地址为“0x3333”，那此时形参person指向了这个地址，假如真的是引用传递，那么由上面讲到："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "引用传递中形参实参指向同一个对象，形参的操作会改变实参对象的改变"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-8omnxul",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-8omnxul",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以推出：实参也应该指向了新创建的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "person"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​对象的地址，所以在执行"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "PersonCrossTest()"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​结束之后，最终输出的应该是后面创建的对象内容。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-5o0cdqe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-5o0cdqe",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "然而实际上，最终的输出结果却跟我们推测的不一样，最终输出的仍然是一开始创建的对象的内容。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-m2joid5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-m2joid5",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "由此可见：引用传递，在Java中并不存在。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-ol3cfht",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-ol3cfht",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是有人会疑问：为什么第一个例子中，在方法内修改了形参的内容，会导致原始对象的内容发生改变呢？"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-k2f5meb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-k2f5meb",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这是因为：无论是基本类型和是引用类型，在实参传入形参时，都是值传递，也就是说传递的都是一个副本，而不是内容本身。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230407141927.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "由图可以看出，方法内的形参person和实参p并无实质关联，它只是由p处copy了一份指向对象的地址"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，此时： "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "p和person都是指向同一个对象"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-4cggshx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-4cggshx",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因此在第一个例子中，对形参p的操作，会影响到实参对应的对象内容。而在第二个例子中，当执行到new Person()之后，JVM在堆内开辟一块空间存储新对象，并且把person改成指向新对象的地址，此时："
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-4lg2cz7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-4lg2cz7",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "p依旧是指向旧的对象，person指向新对象的地址。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-uc1y29c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-uc1y29c",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以此时"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对person的操作，实际上是对新对象的操作，于实参p中对应的对象毫无关系"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-mhx69rf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230408225333-mhx69rf",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结语"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-1fxrrlm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230408225333-1fxrrlm",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"ID": "20230408225333-2rv0v5x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225333-2rv0v5x",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-7wonk35",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225333-7wonk35",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 中不存在引用传递, 只有值传递 ."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225333-o9uievy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225333-o9uievy",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-2c39ort",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225333-2c39ort",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基本类型进行传递时, 是把栈上的数据拷贝一份, 然后传递给形参, 修改时并不会对实参造成影响."
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225333-feb47d1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225333-feb47d1",
+						"updated": "20230408225333"
+					},
+					"Children": [
+						{
+							"ID": "20230408225333-akd9sly",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225333-akd9sly",
+								"updated": "20230408225333"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "引用类型进行传递时,不过是把栈上的引用复制一份 ,然后传递给形参 . 此时形参即可通过该引用对堆上的数据进行使用."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-0040z4z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225333-0040z4z",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "参考资料"
+				}
+			]
+		},
+		{
+			"ID": "20230408225333-2q92d8e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225333-2q92d8e",
+				"updated": "20230408225333"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://segmentfault.com/a/1190000016773324",
+					"TextMarkTextContent": "这一次，彻底解决Java的值传递和引用传递 - 个人文章 - SegmentFault 思否"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://www.bilibili.com/video/BV1q34y1s72a/",
+					"TextMarkTextContent": "【每天一个技术点】Java到底是值传递还是引用传递？_哔哩哔哩_bilibili"
+				}
+			]
+		}
+	]
+}

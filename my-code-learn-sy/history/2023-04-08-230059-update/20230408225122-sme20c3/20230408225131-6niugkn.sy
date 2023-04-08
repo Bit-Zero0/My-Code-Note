@@ -1,0 +1,525 @@
+{
+	"ID": "20230408225131-6niugkn",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230408225131-6niugkn",
+		"title": "Redis介绍",
+		"updated": "20230408225144"
+	},
+	"Children": [
+		{
+			"ID": "20230408225139-fbtylcw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230408225139-fbtylcw",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一 介绍"
+				}
+			]
+		},
+		{
+			"ID": "20230408225139-k5m1kw9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225139-k5m1kw9",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1.1 基本了解"
+				}
+			]
+		},
+		{
+			"ID": "20230408225139-yb0o55p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225139-yb0o55p",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " Remote Dictionary Server(远程字典服务)是完全开源的，使用ANSIC语言编写遵守BSD协议，是一个高性能的Key-Value数据库提供了丰富的数据结构，例如String、Hash、List、Set、SortedSet等等。数据是存在内存中的，同时Redis支持事务、持久化、LUA脚本、发布/订阅、缓存淘汰、流技术等多种功能特性提供了主从模式、Redis Sentinel和Redis Cluster集群架构方案。"
+				}
+			]
+		},
+		{
+			"ID": "20230408225139-6im39zr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225139-6im39zr",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1.2 功能"
+				}
+			]
+		},
+		{
+			"ID": "20230408225139-l7cw23n",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230408225139-l7cw23n",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"ID": "20230408225139-iicyodd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225139-iicyodd",
+						"updated": "20230408225139"
+					},
+					"Children": [
+						{
+							"ID": "20230408225139-m27g5g5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225139-m27g5g5",
+								"updated": "20230408225139"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分布式缓存，挡在mysql数据库之前的一道屏障"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225139-qcotm4p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225139-qcotm4p",
+						"updated": "20230408225139"
+					},
+					"Children": [
+						{
+							"ID": "20230408225139-24ab7ki",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225139-24ab7ki",
+								"updated": "20230408225139"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "内存存储和持久化（RDB+AOF），redis支持异步将内存中的数据写到硬盘上，同时不影响继续服务"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225139-sv3ni9r",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225139-sv3ni9r",
+						"updated": "20230408225139"
+					},
+					"Children": [
+						{
+							"ID": "20230408225139-tjoix4a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225139-tjoix4a",
+								"updated": "20230408225139"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "高可用架构搭配"
+								}
+							]
+						},
+						{
+							"ID": "20230408225139-if6slul",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20230408225139-if6slul",
+								"updated": "20230408225139"
+							},
+							"Children": [
+								{
+									"ID": "20230408225139-9aowoqe",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230408225139-9aowoqe",
+										"updated": "20230408225139"
+									},
+									"Children": [
+										{
+											"ID": "20230408225139-c0npe4e",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230408225139-c0npe4e",
+												"updated": "20230408225139"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单机"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20230408225139-eqos5yi",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230408225139-eqos5yi",
+										"updated": "20230408225139"
+									},
+									"Children": [
+										{
+											"ID": "20230408225139-jyjbm74",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230408225139-jyjbm74",
+												"updated": "20230408225139"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "主从"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20230408225139-liu6kwp",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230408225139-liu6kwp",
+										"updated": "20230408225139"
+									},
+									"Children": [
+										{
+											"ID": "20230408225139-bm8j66b",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230408225139-bm8j66b",
+												"updated": "20230408225139"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "哨兵"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20230408225139-fg4a2ea",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230408225139-fg4a2ea",
+										"updated": "20230408225139"
+									},
+									"Children": [
+										{
+											"ID": "20230408225139-1nn5ca0",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230408225139-1nn5ca0",
+												"updated": "20230408225139"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "集群"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20230408225139-pzzwf7n",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230408225139-pzzwf7n",
+										"updated": "20230408225139"
+									},
+									"Children": [
+										{
+											"ID": "20230408225139-s8d7gd1",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230408225139-s8d7gd1",
+												"updated": "20230408225139"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "缓存穿透、击穿、雪崩"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225139-ea2sckk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225139-ea2sckk",
+						"updated": "20230408225139"
+					},
+					"Children": [
+						{
+							"ID": "20230408225139-ws6v4am",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225139-ws6v4am",
+								"updated": "20230408225139"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分布式锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230408225139-micx2e3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230408225139-micx2e3",
+						"updated": "20230408225139"
+					},
+					"Children": [
+						{
+							"ID": "20230408225139-oq1y6u9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230408225139-oq1y6u9",
+								"updated": "20230408225139"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "队列"
+								}
+							]
+						},
+						{
+							"ID": "20230408225139-ycgq8vd",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20230408225139-ycgq8vd",
+								"updated": "20230408225139"
+							},
+							"Children": [
+								{
+									"ID": "20230408225139-9unhylg",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230408225139-9unhylg",
+										"updated": "20230408225139"
+									},
+									"Children": [
+										{
+											"ID": "20230408225139-jj734a1",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230408225139-jj734a1",
+												"updated": "20230408225139"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "Reids提供list和set操作，这使得Redis能作为一个很好的消息队列平台来使用。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20230408225139-jipsodq",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20230408225139-jipsodq",
+										"updated": "20230408225139"
+									},
+									"Children": [
+										{
+											"ID": "20230408225139-3jrdwi6",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20230408225139-3jrdwi6",
+												"updated": "20230408225139"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "我们常通过Reids的队列功能做购买限制。比如到节假日或者推广期间，进行一些活动，对用户购买行为进行限制，限制今天只能购买几次商品或者一段时间内只能购买一次。也比较适合适用。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230408225139-4z6lpry",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230408225139-4z6lpry",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用"
+				}
+			]
+		},
+		{
+			"ID": "20230408225139-mqqnauj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225139-mqqnauj",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "排行榜+点赞"
+				}
+			]
+		},
+		{
+			"ID": "20230408225139-ge11hjn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225139-ge11hjn",
+				"updated": "20230408225139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在互联网应用中，有各种各样的排行榜，如电商网站的月度销量排行榜、社交APP的礼物排行榜、小程序的投票排行榜等等。Redis提供的zset数据类型能够快速实现这些复杂的排行榜。比如小说网站对小说进行排名，根据排名，将排名靠前的小说推荐给用户\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230405203723.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230408225132-hppk599",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230408225132-hppk599",
+				"updated": "20230408225132"
+			}
+		}
+	]
+}
