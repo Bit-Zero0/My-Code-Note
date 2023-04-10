@@ -35,18 +35,54 @@ create table 表名(
 
 ## SHOW DATABASES 
 返回可用数据库的一个列表。包含在这个列表中的可能是MySQL内部使用的数据库
-![[Pasted image 20221114180734.png]]
+```sql
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| oj_client          |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+```
 
 
 ## SHOW TABLES
 返回当前选择的数据库内可用表的列表。
-![[Pasted image 20221114181201.png]]
+```sql
+mysql> show tables;
++---------------------+
+| Tables_in_oj_client |
++---------------------+
+| oj_data             |
++---------------------+
+1 row in set (0.00 sec)
+```
 
 
 
 ==SHOW也可以用来显示表列 ， 但是也可以用DESC命令来代替== 
 `SHOw COLUMNS FROM 表名`    或 ` desc 表名`
-![[Pasted image 20221114181329.png]]
+```sql
+mysql> show columns from oj_data;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| id            | int(11)     | NO   | PRI | NULL    | auto_increment |
+| title         | varchar(64) | NO   |     | NULL    |                |
+| star          | varchar(8)  | NO   |     | NULL    |                |
+| question_desc | text        | NO   |     | NULL    |                |
+| header        | text        | NO   |     | NULL    |                |
+| tail          | text        | NO   |     | NULL    |                |
+| time_limit    | int(11)     | NO   |     | NULL    |                |
+| mem_limit     | int(11)     | NO   |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+```
 
 
 
@@ -203,7 +239,8 @@ show databases;
 ```sql
 show create database 库名;
 ```
-![[Pasted image 20221114190457.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153826.png)
+
 说明：
 - MySQL 建议我们关键字使用大写，但是不是必须的。
 - 数据库名字的反引号``,是为了防止使用的数据库名刚好是关键字
@@ -302,7 +339,8 @@ create  table  users (
 		-  **users.frm**:表结构
 		- **users.MYD**:表数据
 		- **users.MYI**:表索引
-![[Pasted image 20221114192424.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153900.png)
+
 备注：创建一个engine是innodb的数据库，观察存储目录
 
 
@@ -313,7 +351,8 @@ desc 表名;
 ```
 
 示例：
-![[Pasted image 20221114192806.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153933.png)
+
 
 
 ## 修改表
@@ -328,6 +367,7 @@ ALTER TABLE tablename MODIFY (column datatype [DEFAULT expr][,column datatype]..
 #删除字段
 ALTER TABLE  tablename DROP (column);
 ```
+
 ### 案例
 - ==在users表添加二条记录==
 ```sql
@@ -367,11 +407,13 @@ mysql> select * from users;
 ```sql
 mysql> alter table users modify name varchar(60);
 ```
-![[Pasted image 20221114212830.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153957.png)
+
 
 - ==删除password列==
 >注意：删除字段一定要小心，删除字段及其对应的列数据都没了
-![[Pasted image 20221114212927.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410154017.png)
+
 
 
 - ==修改表名为employee==

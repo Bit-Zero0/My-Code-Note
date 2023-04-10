@@ -76,7 +76,8 @@ int main()
 }
 ```
 连接成功:
-![[Pasted image 20221124165022.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410161416.png)
+
 
 
 # mysql接口介绍
@@ -281,7 +282,8 @@ int main()
 ```
 
 运行结果：
-![[Pasted image 20221124172345.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410161439.png)
+
 
 
 # 引用文章
