@@ -4,9 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221118230803-l53hnuo",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221118230823-fvxgrea\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221118231021-2281om8\u0026quot;,\u0026quot;scrollTop\u0026quot;:800,\u0026quot;focusId\u0026quot;:\u0026quot;20221118230823-fvxgrea\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221118230823-miedhm7\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230410154054-sqeh5wr\u0026quot;,\u0026quot;scrollTop\u0026quot;:7633,\u0026quot;focusId\u0026quot;:\u0026quot;20221118230823-mpuj6h8\u0026quot;,\u0026quot;focusStart\u0026quot;:34,\u0026quot;focusEnd\u0026quot;:34}",
 		"title": "MySql基础命令",
-		"updated": "20221118231210"
+		"updated": "20230410154105"
 	},
 	"Children": [
 		{
@@ -407,6 +407,13 @@
 			]
 		},
 		{
+			"ID": "20230410153538-9xt8i5f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230410153538-9xt8i5f"
+			}
+		},
+		{
 			"ID": "20221118230823-duq134h",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -426,41 +433,39 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221118230823-x8kvozp",
-				"updated": "20221118230932"
+				"updated": "20230410153533"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "返回可用数据库的一个列表。包含在这个列表中的可能是MySQL内部使用的数据库\n​"
+					"Data": "返回可用数据库的一个列表。包含在这个列表中的可能是MySQL内部使用的数据库"
+				}
+			]
+		},
+		{
+			"ID": "20230410153530-ca0rh81",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230410153530-ca0rh81",
+				"updated": "20230410153530"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
 				},
 				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221114180734"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221114180734-20221118230932-ngfw052.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e show databases;\n+--------------------+\n| Database           |\n+--------------------+\n| information_schema |\n| mysql              |\n| oj_client          |\n| performance_schema |\n| sys                |\n+--------------------+\n5 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
 				}
 			]
 		},
@@ -491,41 +496,52 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221118230823-3pijrjn",
-				"updated": "20221118230941"
+				"updated": "20230410153523"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "返回当前选择的数据库内可用表的列表。\n​"
+					"Data": "返回当前选择的数据库内可用表的列表。"
+				}
+			]
+		},
+		{
+			"ID": "20230410153520-k0qrudy",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230410153520-k0qrudy",
+				"updated": "20230410153520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
 				},
 				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221114181201"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221114181201-20221118230941-pz97cy1.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e show tables;\n+---------------------+\n| Tables_in_oj_client |\n+---------------------+\n| oj_data             |\n+---------------------+\n1 row in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230410153512-l82hbc7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230410153512-l82hbc7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
 				}
 			]
 		},
@@ -553,7 +569,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "    或 "
+					"Data": "​    或 "
 				},
 				{
 					"Type": "NodeTextMark",
@@ -562,46 +578,34 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "\n"
+					"Data": "​\n"
 				}
 			]
 		},
 		{
-			"ID": "20221118230959-nmq2tpy",
-			"Type": "NodeParagraph",
+			"ID": "20230410153718-ruu1ctu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
 			"Properties": {
-				"id": "20221118230959-nmq2tpy",
-				"updated": "20221118231002"
+				"id": "20230410153718-ruu1ctu",
+				"updated": "20230410153720"
 			},
 			"Children": [
 				{
-					"Type": "NodeImage",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeBang"
-						},
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221114181329"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221114181329-20221118231002-o396ahe.png"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e show columns from oj_data;\n+---------------+-------------+------+-----+---------+----------------+\n| Field         | Type        | Null | Key | Default | Extra          |\n+---------------+-------------+------+-----+---------+----------------+\n| id            | int(11)     | NO   | PRI | NULL    | auto_increment |\n| title         | varchar(64) | NO   |     | NULL    |                |\n| star          | varchar(8)  | NO   |     | NULL    |                |\n| question_desc | text        | NO   |     | NULL    |                |\n| header        | text        | NO   |     | NULL    |                |\n| tail          | text        | NO   |     | NULL    |                |\n| time_limit    | int(11)     | NO   |     | NULL    |                |\n| mem_limit     | int(11)     | NO   |     | NULL    |                |\n+---------------+-------------+------+-----+---------+----------------+\n8 rows in set (0.00 sec)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
 				}
 			]
 		},
@@ -957,6 +961,13 @@
 			]
 		},
 		{
+			"ID": "20230410153801-26njyb3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230410153801-26njyb3"
+			}
+		},
+		{
 			"ID": "20221118230823-1sh05u4",
 			"Type": "NodeParagraph",
 			"Properties": {
@@ -966,20 +977,7 @@
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "创"
-				}
-			]
-		},
-		{
-			"ID": "20221118231018-z1140tb",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20221118231018-z1140tb"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "建一个使用utf8字符集的db2数据库"
+					"Data": "创建一个使用utf8字符集的db2数据库"
 				}
 			]
 		},
@@ -1630,9 +1628,13 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221118230823-rf7jlxt",
-				"updated": "20221118231056"
+				"updated": "20230410153834"
 			},
 			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​​"
+				},
 				{
 					"Type": "NodeImage",
 					"Data": "span",
@@ -1645,7 +1647,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221114190457"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -1655,7 +1657,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221114190457-20221118231056-n6c77wq.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153826.png"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -1664,7 +1666,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "\n说明："
+					"Data": "​\n说明："
 				}
 			]
 		},
@@ -2481,7 +2483,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20221118230823-gpo9yqb",
-				"updated": "20221118231116"
+				"updated": "20230410153909"
 			},
 			"Children": [
 				{
@@ -2493,7 +2495,7 @@
 					},
 					"Properties": {
 						"id": "20221118230823-7ycqdi1",
-						"updated": "20221118231116"
+						"updated": "20230410153909"
 					},
 					"Children": [
 						{
@@ -2516,7 +2518,7 @@
 							"ListData": {},
 							"Properties": {
 								"id": "20221118230823-yegjsgm",
-								"updated": "20221118231116"
+								"updated": "20230410153909"
 							},
 							"Children": [
 								{
@@ -2528,7 +2530,7 @@
 									},
 									"Properties": {
 										"id": "20221118230823-ohihhbl",
-										"updated": "20221118231116"
+										"updated": "20230410153909"
 									},
 									"Children": [
 										{
@@ -2551,7 +2553,7 @@
 											"ListData": {},
 											"Properties": {
 												"id": "20221118230823-zusy485",
-												"updated": "20221118231116"
+												"updated": "20230410153909"
 											},
 											"Children": [
 												{
@@ -2629,7 +2631,7 @@
 													},
 													"Properties": {
 														"id": "20221118230823-je716n0",
-														"updated": "20221118231116"
+														"updated": "20230410153909"
 													},
 													"Children": [
 														{
@@ -2637,7 +2639,7 @@
 															"Type": "NodeParagraph",
 															"Properties": {
 																"id": "20221118230823-lv4q2sm",
-																"updated": "20221118231116"
+																"updated": "20230410153909"
 															},
 															"Children": [
 																{
@@ -2647,7 +2649,7 @@
 																},
 																{
 																	"Type": "NodeText",
-																	"Data": ":表索引\n​"
+																	"Data": ":表索引\n​​"
 																},
 																{
 																	"Type": "NodeImage",
@@ -2661,7 +2663,7 @@
 																		},
 																		{
 																			"Type": "NodeLinkText",
-																			"Data": "Pasted image 20221114192424"
+																			"Data": "image.png"
 																		},
 																		{
 																			"Type": "NodeCloseBracket"
@@ -2671,7 +2673,7 @@
 																		},
 																		{
 																			"Type": "NodeLinkDest",
-																			"Data": "assets/Pasted image 20221114192424-20221118231116-n7xv9b1.png"
+																			"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153900.png"
 																		},
 																		{
 																			"Type": "NodeCloseParen"
@@ -2680,7 +2682,7 @@
 																},
 																{
 																	"Type": "NodeText",
-																	"Data": "\n备注：创建一个engine是innodb的数据库，观察存储目录"
+																	"Data": "​\n备注：创建一个engine是innodb的数据库，观察存储目录"
 																}
 															]
 														}
@@ -2757,12 +2759,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221118230823-iacafma",
-				"updated": "20221118231126"
+				"updated": "20230410153941"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "示例：\n​"
+					"Data": "示例：\n​​"
 				},
 				{
 					"Type": "NodeImage",
@@ -2776,7 +2778,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221114192806"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -2786,12 +2788,16 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221114192806-20221118231126-p9z26su.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153933.png"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​​"
 				}
 			]
 		},
@@ -3161,9 +3167,13 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221118230823-u008ggz",
-				"updated": "20221118231151"
+				"updated": "20230410154008"
 			},
 			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​​"
+				},
 				{
 					"Type": "NodeImage",
 					"Data": "span",
@@ -3176,7 +3186,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221114212830"
+							"Data": "image.png"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -3186,12 +3196,16 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221114212830-20221118231151-8mli9o8.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410153957.png"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​​"
 				}
 			]
 		},
@@ -3247,7 +3261,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20221118230823-gc85uhn",
-				"updated": "20221118231202"
+				"updated": "20230410154105"
 			},
 			"Children": [
 				{
@@ -3259,12 +3273,12 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20221118230823-mpuj6h8",
-						"updated": "20221118231202"
+						"updated": "20230410154105"
 					},
 					"Children": [
 						{
 							"Type": "NodeText",
-							"Data": "注意：删除字段一定要小心，删除字段及其对应的列数据都没了\n​"
+							"Data": "注意：删除字段一定要小心，删除字段及其对应的列数据都没了\n​​"
 						},
 						{
 							"Type": "NodeImage",
@@ -3278,7 +3292,7 @@
 								},
 								{
 									"Type": "NodeLinkText",
-									"Data": "Pasted image 20221114212927"
+									"Data": "image.png"
 								},
 								{
 									"Type": "NodeCloseBracket"
@@ -3288,12 +3302,16 @@
 								},
 								{
 									"Type": "NodeLinkDest",
-									"Data": "assets/Pasted image 20221114212927-20221118231202-erebkuk.png"
+									"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410154017.png"
 								},
 								{
 									"Type": "NodeCloseParen"
 								}
 							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​​"
 						}
 					]
 				}
@@ -3611,6 +3629,13 @@
 					"Data": "```"
 				}
 			]
+		},
+		{
+			"ID": "20230410154054-sqeh5wr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230410154054-sqeh5wr"
+			}
 		}
 	]
 }

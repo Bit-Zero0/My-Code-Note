@@ -18,8 +18,7 @@ JDBC，即Java Database Connectivity，java数据库连接。是一种用于执�
     
 
 以后编写操作数据库的代码只需要面向JDBC（接口），操作哪儿个关系型数据库就需要导入该数据库的驱动包，如需要操作MySQL数据库，就需要再项目中导入MySQL数据库的驱动包。如下图就是MySQL驱动包
-![[Pasted image 20221130085357.png]]
-
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410161621.png)
 
 
 
@@ -99,14 +98,15 @@ public class TestJDBC {
 
 DriverManager（驱动管理类）作用：
 -   注册驱动
-   ![[Pasted image 20221130095555.png]]
+   ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410161534.png)
+
     
-    registerDriver方法是用于注册驱动的，但是我们之前做的入门案例并不是这样写的。而是如下实现
+registerDriver方法是用于注册驱动的，但是我们之前做的入门案例并不是这样写的。而是如下实现
 ```java
     Class.forName("com.mysql.jdbc.Driver");    
 ```
 我们查询MySQL提供的Driver类，看它是如何实现的，源码如下：
-![[Pasted image 20221130095653.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410161658.png)
 在该类中的静态代码块中已经执行了 `DriverManager` 对象的 `registerDriver()` 方法进行驱动的注册了，那么我们只需要加载 `Driver` 类，该静态代码块就会执行。而 `Class.forName("com.mysql.jdbc.Driver");` 就可以加载 `Driver` 类。
 
 > ==提示：== 
@@ -114,7 +114,8 @@ DriverManager（驱动管理类）作用：
 > -   自动加载jar包中META-INF/services/java.sql.Driver文件中的驱动类
     
 -   获取数据库连接
-    ![image-20210725171355278](file://D:\%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\java%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0\%E9%BB%91%E9%A9%ACJavaWeb\day03-JDBC\ppt\assets\image-20210725171355278.png?lastModify=1669773249)
+    ![image-20210725171355278.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20210725171355278.png)
+
     
     参数说明：
     -   **url** ： 连接路径
@@ -190,14 +191,17 @@ CallableStatement prepareCall(sql)
 
 Connection几口中定义了3个对应的方法：
 -   开启事务
-    ![[Pasted image 20221130100148.png]]
+    ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162246.png)
+
     参与autoCommit 表示是否自动提交事务，true表示自动提交事务，false表示手动提交事务。而开启事务需要将该参数设为为false。
     
 -   提交事务
-    ![[Pasted image 20221130100242.png]]
+    ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162250.png)
+
      
 -   回滚事务
-![[Pasted image 20221130100224.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162258.png)
+
     
 
 #### 具体代码实现如下：
@@ -252,17 +256,20 @@ public class JDBCDemo3_Connection {
 ```
 
 ## Statement
-![[Pasted image 20221130102328.png]]
-[[Java的JDBC编程#事务管理]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162350.png)
+
+[[Java的JDBC编程#事务管理|事务管理]]
 
 ### 概述
 Statement对象的作用就是用来执行SQL语句。而针对不同类型的SQL语句使用的方法也不一样。
 
 -   执行DDL、DML语句
-    ![[Pasted image 20221130100547.png]]
+    ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162423.png)
+
     
 -   执行DQL语句
-    ![[Pasted image 20221130100559.png]]
+    ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162432.png)
+
     该方法涉及到了 `ResultSet` 对象，而这个对象我们还没有学习，一会再重点讲解。
     
 
@@ -361,7 +368,8 @@ ResultSet  executeQuery(sql)：执行DQL 语句，返回 ResultSet 对象
 >     -   String类型的参数： 列的名称
 
 如下图为执行SQL语句后的结果
-![[Pasted image 20221130101004.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162502.png)
+
 一开始光标指定于第一行前，如图所示红色箭头指向于表头行。当我们调用了 `next()` 方法后，光标就下移到第一行数据，并且方法返回true，此时就可以通过 `getInt("id")` 获取当前行id字段的值，也可以通过 `getString("name")` 获取当前行name字段的值。如果想获取下一行的数据，继续调用 `next()` 方法，以此类推。
 
 ### 代码实现
@@ -424,7 +432,8 @@ public void testResultSet() throws  Exception {
 ### 案例
 
 -   需求：查询account账户表数据，封装为Account对象中，并且存储到ArrayList集合中
-- ![[Pasted image 20221130101125.png]]
+- ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230410162531.png)
+
 ```java
 /**
   * 查询account账户表数据，封装为Account对象中，并且存储到ArrayList集合中
@@ -501,7 +510,7 @@ PreparedStatement pstmt = conn.prepareStatement(sql);
     
     
 -   设置参数值
-    上面的sql语句中参数使用 ? 进行占位，在之前之前肯定要设置这些 ? 的值。
+    上面的sql语句中参数使用 `?` 进行占位，在之前之前肯定要设置这些 `?` 的值。
     > PreparedStatement对象：setXxx(参数1，参数2)：给 `?` 赋值
     > -   Xxx：数据类型 ； 如 setInt (参数1，参数2)
     > -   参数：
