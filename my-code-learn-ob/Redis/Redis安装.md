@@ -1,6 +1,6 @@
 Redis 只建议安装在Linux系统中
 
-并gcc环境升级到最好在 7 以上
+并gcc环境升级到最好在 7 以上 [[gcc与g++的使用#gcc升级]]
 
 # 下载 Redis
 [Download | Redis](https://redis.io/download/)
