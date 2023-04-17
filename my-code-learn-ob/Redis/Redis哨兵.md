@@ -1,3 +1,6 @@
+# 需要的前置知识
+[[Redis复制]]
+
 # # Redis哨兵基本介绍
 ## 是什么
 吹哨人巡查监控后台master主机是否故障，如果故障了根据==**投票数**==自动将某一个从库转换为新主库，继续对外服务
@@ -20,6 +23,11 @@
 
 **1主2从**: 用于数据读取和存放
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230416215752.png)
+
+生产上都是不同机房不同服务器，很少出现3个哨兵全部挂掉的情况
+
+可以同时监听多个master。
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417073257.png)
 
 
 # 配置参数说明
@@ -104,3 +112,89 @@ dir "/myredis"
 sentinel monitor mymaster 自己的ip 6379 2
 sentinel auth-pass mymaster 111111
 ```
+
+## 框架说明
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417065612.png)
+
+**169**机器上新建redis6379.conf配置文件，由于要配合本次案例，==6379后续可能会变成从机，需要设置访问新主机的密码，所以此处会设置`masterauth`，不然后续可能会报错 master_link_status:down==
+
+
+**172**机器上新建redis6380.conf配置文件，设置好`replicaof <masterip> <masterport>`
+
+
+**173**机器上新建redis6381.conf配置文件，设置好`replicaof <masterip> <masterport>`
+
+
+## sentinel的两种启动方式
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417070211.png)
+
+
+# 运行测试
+先启动三台redis ，完成[[Redis复制|主从复制]]
+```shell
+# ip尾号 169
+redis-server redis6379.conf
+redis-cli -a 123456 -p 6379
+
+# ip尾号 172
+redis-server redis6380.conf
+redis-cli -a 123456 -p 6380
+
+# ip尾号 173
+redis-server redis6381.conf
+redis-cli -a 123456 -p 6381
+```
+
+
+
+再启动3个哨兵监控后再测试一次[[Redis复制|主从复制]]
+```shell
+# ip尾号 169
+redis-server sentinel26379.conf --sentinel
+
+redis-server sentinel26380.conf --sentinel
+
+redis-server sentinel26381.conf --sentinel
+```
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417070814.png)
+
+启动后我们会发现sentinel配置文件会自动在配置文件中加上部分配置
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417071142.png)
+
+## 主节点异常
+### 原有的master挂了
+-   我们自己手动关闭6379服务器，模拟master挂了
+    
+-   问题思考
+    1.  两台从机数据是否OK
+    2.  是否会从剩下的2台机器上选出新的master
+    3.  之前down机的master机器重启回来，谁将会是新老大？会不会双master冲突
+  
+- 揭晓答案
+	1. 两台从机数据OK。但是会出现两个小问题
+		- ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417072102.png)
+		- ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417072252.png)
+	2. 会投票选出新的master主机
+		- ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417072344.png)
+	3.  谁是master，限本次案例
+	    在哨兵中进行了激烈的投票决定谁是master。本案例中6381被选举为新的master，上位成功。重启6379之后，它会从原来的master降级为slave。6380还是slave，只不过是换了一个新老大6381(从跟随6379变成跟随6381)
+		
+
+## 对比配置文件
+老master的redis6379.conf文件
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417072711.png)
+
+
+新master的redis6381.conf文件
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230417072726.png)
+
+
+## 结论
+- **文件的内容，在运行期间会被sentinel动态进行更改**
+- **Master-Slave切换后，master_redis.conf、slave_redis.conf和sentinel.conf的内容都会发生改变，即master_redis.conf中会多一行slaveof的配置，而升级为master的主机会去掉原来的slave配置 ， sentinel.conf的监控目标会随之调换**
+
+# 哨兵运行流程和选举原理
+当一个主从配置中master失效后，sentinel可以选举出一个新的master用于自动接替原master的工作，主从配置中的其他redis服务器自动指向新的master同步数据，一般建议sentinel采取奇数台，防止某一台sentinel无法连接到master导致误切换
+
+## 运行流程与故障切换
+
