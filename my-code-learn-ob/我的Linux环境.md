@@ -26,5 +26,12 @@ bash ~/.VimForCpp/uninstall.sh
 
 
 # Ubuntu
+## 安装gcc
+```shell
+sudo apt update
+sudo apt install build-essential
+```
 
-
+```shell
+sudo apt-get install manpages-dev
+```
