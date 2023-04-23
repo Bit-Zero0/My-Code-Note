@@ -1,6 +1,5 @@
 # Servlet 是什么
-Servlet 是一种实现动态页面的技术. 是一组 Tomcat 提供给程序猿的 API, 帮助程序猿简单高效的开发一 
-个 web app.
+Servlet 是一种实现动态页面的技术. 是一组 Tomcat 提供给程序猿的 API, 帮助程序猿简单高效的开发一个 web app.
 
 
 **回顾  动态页面 vs 静态页面**
@@ -24,28 +23,34 @@ Servlet 是一种实现动态页面的技术. 是一组 Tomcat 提供给程序�
 ## 1. 创建项目
 使用 IDEA 创建一个 Maven 项目. 
 1) 菜单 -> 文件 -> 新建项目 -> Maven
-![[Pasted image 20221126161924.png]]
+![Pasted image 20221126161924.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126161924.png)
+
 
 2) 选择项目要存放的目录
-![[Pasted image 20221126162107.png]]
+![Pasted image 20221126162107.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126162107.png)
+
 
 
 ## 2. 引入依赖
 Maven 项目创建完毕后, 会自动生成一个 pom.xml 文件. 
 我们需要在 pom.xml 中引入 Servlet API 依赖的 jar 包.
 1) 在中央仓库 https://mvnrepository.com/ 中搜索 "servlet", 一般第一个结果就是.
-![[Pasted image 20221126162230.png]]
+![Pasted image 20221126162230.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126162230.png)
+
 
 2) 选择版本. 一般我们使用 3.1.0 版本
-![[Pasted image 20221126162321.png]]
+![Pasted image 20221126162321.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126162321.png)
+
 >Servlet 的版本要和 Tomcat 匹配.
 >如果我们使用 Tomcat 8.5, 那么就需要使用 Servlet 3.1.0
 >可以在 http://tomcat.apache.org/whichversion.html 查询版本对应关系.
->![[Pasted image 20221126162442.png]]
+>![Pasted image 20221126162442.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126162442.png)
+
 
 
 3) 把中央仓库中提供的 xml 复制到项目的 pom.xml 中
-![[Pasted image 20221126162512.png]]
+![Pasted image 20221126162512.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126162512.png)
+
 
 修改后的 pom.xml 形如:(每人的不一定都一样)
 ```xml
@@ -85,12 +90,13 @@ Maven 项目创建完毕后, 会自动生成一个 pom.xml 文件.
 >- **version**: 表示版本号
 中央仓库就是按照这三个字段来确定唯一一个包的.
 
-![[Pasted image 20221126163010.png]]
+![Pasted image 20221126163010.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126163010.png)
 红色方框圈出来的部分, 就是这个 jar 包的 groupId, artifactId, version
 
 ## 3. 创建目录
 当项目创建好了之后, IDEA 会帮我们自动创建出一些目录. 形如
-![[Pasted image 20221126163122.png]]
+![Pasted image 20221126163122.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126163122.png)
+
 这些目录中:
 - src 表示源代码所在的目录
 - main/java 表示源代码的根目录. 后续创建 .java 文件就放到这个目录中. 
@@ -102,12 +108,14 @@ Maven 项目创建完毕后, 会自动生成一个 pom.xml 文件.
 
 **1) 创建 webapp 目录**
 在 main 目录下, 和 java 目录并列, 创建一个 webapp 目录 (注意, 不是 webapps).
-![[Pasted image 20221126163238.png]]
+![Pasted image 20221126163238.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126163238.png)
+
 
 
 **2) 创建 web.xml**
 然后在 webapp 目录内部创建一个 **WEB-INF** 目录, 并创建一个 **web.xml** 文件
-![[Pasted image 20221126163350.png]]
+![Pasted image 20221126163350.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126163350.png)
+
 >注意单词拼写.
 
 **3) 编写 web.xml**
@@ -171,14 +179,17 @@ public class HelloServlet extends HttpServlet {
 可以通过  **菜单 -> View -> Tool Window -> Maven 打开**)
 
 然后展开 Lifecycle , 双击 package 即可进行打包.
-![[Pasted image 20221126165144.png]]
+![Pasted image 20221126165144.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126165144.png)
+
 
 如果比较顺利的话, 能够看到 SUCCESS 这样的字样.
-![[Pasted image 20221126165156.png]]
+![Pasted image 20221126165156.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126165156.png)
+
 
 如果代码/配置/环境存在问题, 可能会提示 BUILD FAILED, 可以根据具体提示的错误信息具体解决.
 打包成功后, 可以看到在 target 目录下, 生成了一个 `jar` 包.
-![[Pasted image 20221126165249.png]]
+![Pasted image 20221126165249.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126165249.png)
+
 这样的 `jar` 包并不是我们需要的, Tomcat 需要识别的是另外一种 `war` 包格式. 
 另外这个 jar 包的名字太复杂了, 我们也希望这个名字能更简单一点.
 
@@ -189,7 +200,7 @@ public class HelloServlet extends HttpServlet {
 
 >`ServletHelloWorld-1.0-SNAPSHOT.jar`    的由来 
 >这个名字来源于
->![[Pasted image 20221126165449.png]]
+>![Pasted image 20221126165449.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126165449.png)
 >相当于把 artifactId 和 version 拼接起来了.
 
 
@@ -239,16 +250,18 @@ public class HelloServlet extends HttpServlet {
 ```
 
 重新使用 maven 打包, 可以看到生成的新的 `war` 包的结果.
-![[Pasted image 20221126170035.png]]
+![Pasted image 20221126170035.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126170035.png)
+
 
 
 ## 6. 部署程序
 把 war 包拷贝到 Tomcat 的 webapps 目录下.
 
 启动 Tomcat , Tomcat 就会自动把 war 包解压缩.
-![[Pasted image 20221126170345.png]]
+![Pasted image 20221126170345.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126170345.png)
 
-![[Pasted image 20221126170413.png]]
+![Pasted image 20221126170413.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126170413.png)
+
 看到这个日志说明 Tomcat 已经正确识别了 ServletHelloWorld 这个 webapp.
 
 
@@ -257,10 +270,12 @@ public class HelloServlet extends HttpServlet {
 此时通过浏览器访问   http://127.0.0.1:8080/ServletHelloWorld/hello 
 
 就可以看到结果了.
-![[Pasted image 20221126170433.png]]
+![Pasted image 20221126170433.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126170433.png)
+
 
 **注意**: URL 中的 PATH 分成两个部分, 其中  ` HelloServlet` 为 Context Path,`hello` 为Servlet Path
-![[Pasted image 20221126170549.png]]
+![Pasted image 20221126170549.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126170549.png)
+
 
 
 # 更方便的部署方式
@@ -271,7 +286,8 @@ public class HelloServlet extends HttpServlet {
 
 ## 安装 Smart Tomcat 插件
 **1) 菜单 -> 文件 -> Settings**
-![[Pasted image 20221126183224.png]]
+![Pasted image 20221126183224.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126183224.png)
+
 
 **2) 选择 Plugins, 选择 Marketplace, 搜索 "tomcat", 点击 "Install".**
 ![[Pasted image 20221126183325.png]]
@@ -279,12 +295,14 @@ public class HelloServlet extends HttpServlet {
 
 
 **3) 安装完毕之后, 会提示 "重启 IDEA"**
-![[Pasted image 20221126183358.png]]
+![Pasted image 20221126183358.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126183358.png)
+
 
 
 ## 配置 Smart Tomcat 插件
 **1) 点击右上角的 "Add Configuration"**
-![[Pasted image 20221126183848.png]]
+![Uploading file...yal5d]()
+
 
 
 **2) 选择左侧的 "Smart Tomcat"**
@@ -301,24 +319,28 @@ public class HelloServlet extends HttpServlet {
 
 
 **4) 点击 OK 之后, 右上角变成了**
-![[Pasted image 20221126184600.png]]
+![](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126183848.png)
 
 点击绿色的三角号, IDEA 就会自动进行编译, 部署, 启动 Tomcat 的过程.
-![[Pasted image 20221126184623.png]]
+![Pasted image 20221126184623.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126184623.png)
+
 此时 Tomcat 日志就会输出在 IDEA 的控制台中, 可以看到现在就**不再乱码**了.
 
 
 **5) 访问页面.**
 在浏览器中使用 http://127.0.0.1:8080/ServletHelloWorld/hello 访问页面.
-![[Pasted image 20221126184824.png]]
+![Pasted image 20221126184824.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126184824.png)
+
 
 注意路径的对应关系.
-![[Pasted image 20221126184841.png]]
+![Pasted image 20221126184841.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126184841.png)
+
 
 
 >使用 Smart Tomcat 部署的时候, 我们发现 Tomcat 的 webapps 内部并没有被拷贝一个 war 包, 也没有看到解压缩的内容.
 >Smart Tomcat 相当于是在 Tomcat 启动的时候直接引用了项目中的 webapp 和 target 目录.
->![[Pasted image 20221126184934.png]]
+>![Pasted image 20221126184934.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126184934.png)
+
 
 
 # 访问出错怎么办?
@@ -327,18 +349,21 @@ public class HelloServlet extends HttpServlet {
 
 **错误实例1**: 少写了 Context Path
 通过 `/hello` 访问服务器
-![[Pasted image 20221126185052.png]]
+![Pasted image 20221126185052.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185052.png)
+
 
 
 
 **错误实例2**: 少写了 Servlet Path 
 通过   /ServletHelloWorld 访问服务器
-![[Pasted image 20221126185148.png]]
+![Pasted image 20221126185148.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185148.png)
+
 
 
 **错误实例3**: Servlet Path 写的和 URL 不匹配 
 修改 @WebServlet 注解的路径
-![[Pasted image 20221126185218.png]]
+![Pasted image 20221126185218.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185218.png)
+
 
 重启 Tomcat 服务器.
 >URL 中的路径写作 "`/hello`" , 而代码中写作的 Servlet Path 为 "`/helloServlet`", 两者不匹配.
@@ -346,15 +371,18 @@ public class HelloServlet extends HttpServlet {
 
 **错误实例4**: web.xml 写错了 
 清除 web.xml 中的内容
-![[Pasted image 20221126185331.png]]
+![Pasted image 20221126185331.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185331.png)
+
 
 重启 Tomcat 服务器.
 通过浏览器访问 URL, 可以看到:
-![[Pasted image 20221126185402.png]]
+![Pasted image 20221126185402.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185402.png)
+
 
 
 >在 Tomcat 启动的时候也有相关的错误提示
->![[Pasted image 20221126185418.png]]
+>![Pasted image 20221126185418.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185418.png)
+
 
 
 ## 出现 405
@@ -364,12 +392,14 @@ public class HelloServlet extends HttpServlet {
 ```java
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet { 
+
 }
 ```
 
 重启 Tomcat 服务器. 
 在浏览器中访问, 可以看到:
-![[Pasted image 20221126185616.png]]
+![Pasted image 20221126185616.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185616.png)
+
 
 在浏览器地址栏直接输入 URL , 会发送一个 HTTP **GET** 请求.
 此时就会根据   `/ServletHelloWorld/hello` 这个路径找到   `HelloServlet` 这个类. 并且尝试调用`HelloServlet` 的 `doGet` 方法.
@@ -394,7 +424,8 @@ public class HelloServlet extends HttpServlet {
 
 重启 Tomcat 服务器. 
 重新访问页面, 可以看到:
-![[Pasted image 20221126185815.png]]
+![Pasted image 20221126185815.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126185815.png)
+
 
 在页面上已经有具体的异常调用栈.
 >异常信息里已经提示了出现异常的代码是 `HelloServlet.java` 的第 13 行.
@@ -418,23 +449,27 @@ public class HelloServlet extends HttpServlet {
 ```
 重启服务器,
 访问服务器, 可以看到一个空白页面:
-![[Pasted image 20221126190028.png]]
+![![Pasted image 20221126190028.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126190028.png)
 
 抓包可以看到, 响应 body 中的内容就是 "空数据"
-![[Pasted image 20221126190041.png]]
+![Pasted image 20221126190041.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126190041.png)
+
 
 
 ## 出现 "无法访问此网站"
 一般是 Tomcat 启动就失败了. 
 错误实例: Servlet Path 写错了.
-![[Pasted image 20221126190101.png]]
+![Pasted image 20221126190101.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126190101.png)
+
 >应该写作 "`/hello`", Tomcat 在启动的时候已经提示了相关的错误.
 >Tomcat 启动的日志里面报错信息可能比较多, 需要耐心观察, 找到关键的提示.
 
-![[Pasted image 20221126190150.png]]
+![Pasted image 20221126190150.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126190150.png)
+
 
 看到的现象:
-![[Pasted image 20221126190209.png]]
+![Pasted image 20221126190209.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221126190209.png)
+
 
 ## 小结
 初学 Servlet, 遇到的这类问题会非常多. 我们不光要学习 Servlet 代码的基本写法, 也要学习**排查错误的 
@@ -457,18 +492,20 @@ public class HelloServlet extends HttpServlet {
 
 ## Tomcat 的定位
 我们自己的实现是在 Tomcat 基础上运行的。
-![[Pasted image 20221127151649.png]]
+![Pasted image 20221127151649.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127151649.png)
+
 
 当浏览器给服务器发送请求的时候, Tomcat 作为 HTTP 服务器, 就可以**接收到这个请求**. 
 HTTP 协议作为一个应用层协议, 需要底层协议栈来支持工作. 如下图所示:
-![[Pasted image 20221127184912.png]]
+![Pasted image 20221127184912.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127184912.png)
 >Tomcat其实是一个应用程序.运行在用户态的普通进程(Tomcat其实也是一个Java进程)
 >用户写的代码(根据请求计算相应)，通过Servlet和Tomcat进行交互
 >Tomcat进一步的和浏览器之间的网络传输,仍然是走的咱们之前学过的网络原理中的那一套(封装和分用)
 
 
 更详细的交互过程可以参考下图:
-![[Pasted image 20221127185055.png]]
+![Pasted image 20221127185055.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127185055.png)
+
 **1) 接收请求**:
 - 用户在浏览器输入一个 URL, 此时浏览器就会构造一个 HTTP 请求.
 - 这个 HTTP 请求会经过网络协议栈逐层进行  **封装**  成二进制的 bit 流, 最终通过物理层的硬件设备转换成光信号/电信号传输出去.
@@ -553,21 +590,26 @@ class Tomcat {
 ```
 
 **1) 让Tomcat先从指定的目录中找到所有要加载的 Servlet类**
-![[Pasted image 20221127190222.png]]
+![Pasted image 20221127190222.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127190222.png)
+
 
 **2) 根据刚才类加载的结果,给这些类创建Servlet 实例**
-![[Pasted image 20221127190315.png]]
+![Pasted image 20221127190315.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127190315.png)
+
 
 
 **3) 实例创建好之后,就可以调用当前Servlet 实例的init方法了**
-![[Pasted image 20221127190437.png]]
+![Pasted image 20221127190437.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127190437.png)
+
 
 
 **4) 创建TCPsocket,监听8080端口,等待有客户端来连接**
-![[Pasted image 20221127190544.png]]
+![Pasted image 20221127190544.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127190544.png)
+
 
 **5) 如果循环退出了，Tomcat 也要结束了.就会依次循环调用每个Servlet的destroy方法**
-![[Pasted image 20221127190737.png]]
+![Pasted image 20221127190737.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127190737.png)
+
 
 **小结**
 - Tomcat 的代码中 内置了 main 方法. 当我们启动 Tomcat 的时候, 就是从 Tomcat 的 main 方法开始执行的.
@@ -617,7 +659,8 @@ class Tomcat {
 - Tomcat 会根据 URL 中的 path 判定这个请求是请求一个静态资源还是动态资源. 如果是静态资源, 直接找到对应的文件把文件的内容通过 Socket 返回. 如果是动态资源, 才会执行到 Servlet 的相关逻辑.
 - Tomcat 会根据 URL 中的 **Context Path** 和 **Servlet Path** 确定要调用哪个 Servlet 实例的 service方法.
 - 通过 service 方法, 就会进一步调用到我们之前写的 **doGet** 或者 **doPost**
-![[Pasted image 20221127191153.png]]
+![Pasted image 20221127191153.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127191153.png)
+
 
 ### 3. Servlet 的 service 方法的实现
 ```java
@@ -666,10 +709,12 @@ ins.doGet(req, resp);
 我们写 Servlet 代码的时候, 首先第一步就是先创建类, 继承自 **HttpServlet**, 并重写其中的某些方法. 
 
 ### 核心方法
-![[Pasted image 20221127192246.png]]
+![Pasted image 20221127192246.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127192246.png)
+
 我们实际开发的时候主要重写` doXXX` 方法, 很少会重写 `init / destory / service` .
 >这些方法的调用时机, 就称为 "Servlet 生命周期". (也就是描述了一个 Servlet 实例从生到死的过程).
-![[Pasted image 20221127192325.png]]
+![Pasted image 20221127192325.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127192325.png)
+
 **注意**: HttpServlet 的实例只是在程序启动时创建一次. 而不是每次收到 HTTP 请求都重新创建实例.
 
 ###  代码示例: 处理 GET 请求
@@ -686,7 +731,8 @@ throws ServletException, IOException {
 ```
 
 创建 testMethod.html, 放到 webapp 目录中, 形如
-![[Pasted image 20221127194450.png]]
+![Pasted image 20221127194450.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127194450.png)
+
 一个 Servlet 程序中可以同时部署静态文件. 静态文件就放到 webapp 目录中即可.
 
 ```java
@@ -728,16 +774,19 @@ throws ServletException, IOException {
 ```
 
 重新部署程序, 使用 URL `http://127.0.0.1:8080/ServletHelloWorld/testMethod.html`访问页面.
-![[Pasted image 20221127194647.png]]
+![Pasted image 20221127194647.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127194647.png)
+
 
 点击 "发送 GET 请求" 按钮, 即可在控制台看到响应内容.
-![[Pasted image 20221127194702.png]]
+![Pasted image 20221127194702.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127194702.png)
+
 
 通过 Fiddler 抓包, 可以看到
 - 当浏览器中输入 URL 之后, 浏览器先给服务器发送了一个 HTTP GET 请求
-![[Pasted image 20221127194750.png]]
+![Pasted image 20221127194750.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127194750.png)
+
 - 当点击 "发送 GET 请求" 按钮, 浏览器又通过 ajax 给服务器发送了一个 HTTP GET 请求
-![[Pasted image 20221127194757.png]]
+![Pasted image 20221127194757.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127194757.png)
 
 >注意这个 ajax 请求的 URL 路径. 代码中写的 URL` url: 'method'`, 为一个相对路径, 最终真实发送的请求的 URL 路径为   `/ServletHelloWorld/method`
 
@@ -749,7 +798,8 @@ resp.getWriter().write("GET 响应");
 ```
 
 此时在浏览器访问的时候, 会看到 "乱码" 的情况.
-![[Pasted image 20221127194954.png]]
+![Pasted image 20221127194954.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127194954.png)
+
 
 >==关于 "乱码":==
 >中文的编码方式有很多种. 其中最常见的就是 utf-8 .
@@ -757,10 +807,12 @@ resp.getWriter().write("GET 响应");
 
 
 可以在代码中, 通过 `resp.setContentType("text/html; charset=utf-8");` 显式的指定编码方式.
-![[Pasted image 20221127195103.png]]
+![Pasted image 20221127195103.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127195103.png)
+
 
 此时通过抓包可以看到, 当加上了 `resp.setContentType("text/html; charset=utf-8");` 代码之后, 响应中多了 Content-Type 字段, 内部指定了编码方式. 浏览器看到这个字段就能够正确解析中文了.
-![[Pasted image 20221127195134.png]]
+![Pasted image 20221127195134.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127195134.png)
+
 
 
 ### 代码示例: 处理 POST 请求
@@ -799,9 +851,9 @@ ServletException, IOException {
 ```
 
 重新部署程序，使用URL` http://127.0.0.1:8080/ServletHelloWor1d/testMethod.html`访问页面.
-![[Pasted image 20221127202308.png]]
+![](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127202308.png)
 点击 "发送 POST 请求" 按钮, 可以在控制台中看到结果
-![[Pasted image 20221127202319.png]]
+![Pasted image 20221127202319.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127202319.png)
 
 通过类似的方式还可以验证 doPut, doDelete 等方法. 此处不再一一演示.
 
@@ -831,13 +883,16 @@ ServletException, IOException {
 >注意: 请求对象是服务器收到的内容, 不应该修改. 因此上面的方法也都只是 "读" 方法, 而不是 "写" 方法.
 
 
-![[Pasted image 20221127212102.png]]
+![Pasted image 20221127212102.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127212102.png)
 
-![[Pasted image 20221127212110.png]]
+![Pasted image 20221127212110.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127212110.png)
 
-![[Pasted image 20221127212119.png]]
 
-![[Pasted image 20221127212127.png]]
+![Pasted image 20221127212119.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127212119.png)
+
+
+![Pasted image 20221127212127.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127212127.png)
+
 
 ### 代码示例: 打印请求信息 
 创建 ShowRequest 类
@@ -875,7 +930,8 @@ throws ServletException, IOException {
 
 部署程序.
 在浏览器通过 URL`http://127.0.0.1:8080/ServletHelloWorld/showRequest` 访问, 可以看到
-![[Pasted image 20221127205448.png]]
+![Pasted image 20221127205448.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127205448.png)
+
 
 
 ### 代码示例: 获取 GET 请求中的参数
@@ -902,7 +958,8 @@ throws ServletException, IOException {
 ```
 
 重新部署程序, 在浏览器中通过 `http://127.0.0.1:8080/ServletHelloWorld/getParameter` 访问,可以看到
-![[Pasted image 20221127210414.png]]
+![Pasted image 20221127210414.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127210414.png)
+
 
 当没有 query string的时候, getParameter 获取的值为 null.
 
@@ -956,11 +1013,14 @@ throws ServletException, IOException {
 
 
 重新部署程序, 通过 URL `http://127.0.0.1:8080/ServletHelloWorld/testPost.html` 访问, 可以看到 HTML
-![[Pasted image 20221127214005.png]]
+![Pasted image 20221127214005.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127214005.png)
+
 在输入框中输入内容, 点击提交
-![[Pasted image 20221127214019.png]]
+![Pasted image 20221127214019.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127214019.png)
+
 可以看到跳转到了新的页面, 并显示出了刚刚传入的数据.
-![[Pasted image 20221127214031.png]]
+![Pasted image 20221127214031.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127214031.png)
+
 
 此时通过抓包可以看到, form 表单构造的 body 数据的格式为:
 ```
@@ -1057,17 +1117,20 @@ public class PostJsonServlet extends HttpServlet {
     }  
 </script>
 ```
-![[Pasted image 20221127221001.png]]
+![Pasted image 20221127221001.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127221001.png)
 
 
-![[Pasted image 20221127221059.png]]
+![Pasted image 20221127221059.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127221059.png)
+
 
 **结果：**
 在浏览器中通过`http://127.0.0.1:8080/ServletHelloWorld/testPostJson.html`访问, 可以看到
-![[Pasted image 20221127220647.png]]
+![Pasted image 20221127220647.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127220647.png)
+
 
 在控制台中可以看到
-![[Pasted image 20221127220723.png]]
+![Pasted image 20221127220723.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127220723.png)
+
 
 
 >注意：
@@ -1092,7 +1155,8 @@ Socket 写回给浏览器.
 |`void sendRedirect(String location)`|使用指定的重定向位置 URL 发送临时重定向响应到客户端。 |
 | `PrintWriter getWriter()`|用于往 body 中写入文本格式数据.|
 |`OutputStream getOutputStream()`|用于往 body 中写入二进制格式数据|
-![[Pasted image 20221127222323.png]]
+![Pasted image 20221127222323.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127222323.png)
+
 
 >**注意**: 响应对象是服务器要返回给浏览器的内容, 这里的重要信息都是程序猿设置的. 因此上面的方法都是 "写" 方法.
 >**注意:** 对于状态码/响应头的设置要放到 getWriter / getOutputStream 之前. 否则可能设置失效.
@@ -1118,7 +1182,8 @@ public class StatusServlet extends HttpServlet {
 ```
 
 部署程序, 在浏览器中通过 URL `http://127.0.0.1:8080/ServletHelloWorld/statusServlet?status=200`访问, 可以看到
-![[Pasted image 20221127222817.png]]
+![Pasted image 20221127222817.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127222817.png)
+
 
 抓包结果:
 ```
@@ -1151,7 +1216,8 @@ throws ServletException, IOException {
 
 
 部署程序, 通过 URL `http://127.0.0.1:8080/ServletHelloWorld/autoRefreshServlet` 访问, 可以看到浏览器每秒钟自动刷新一次.
-![[Pasted image 20221127223315.png]]
+![Pasted image 20221127223315.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127223315.png)
+
 
 抓包结果
 ```java
@@ -1188,7 +1254,8 @@ public class RedirectServlet extends HttpServlet {
 到, 页面自动跳转到  搜狗主页  了.
 
 抓包结果
-![[Pasted image 20221127223527.png]]
+![Pasted image 20221127223527.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221127223527.png)
+
 ```
 HTTP/1.1 302
 Location: http://www.sogou.com 
@@ -1203,17 +1270,18 @@ Connection: keep-alive
 结合上述 API, 我们可以把之前实现的表白墙程序修改成服务器版本. 这样即使页面关闭, 表白墙的内容也不会丢失.
 
 1. 告诉服务器,当前留言了一条啥样的数据
-![[Pasted image 20221129130743.png]]
+![Pasted image 20221129130743.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129130743.png)
 
 
 2. 从服务器获取到,当前都有哪些留言数据
-![[Pasted image 20221129130941.png]]
+![Pasted image 20221129130941.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129130941.png)
+
  
 ### 必知点
-![[Pasted image 20221129131404.png]]
-
+![Pasted image 20221129131404.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129131404.png)
 - ObjectMapper 的 readValue 方法也能直接从一个 InputStream 对象读取数据. 
 - ObjectMapper 的 writeValueAsString 方法也能把一个对象数组直接转成 JSON 格式的字符串.
+
 
 #### 对象和JSON字符串之间的转换
 **Java**
@@ -1635,7 +1703,8 @@ Controller(控制器,处理请求之后的关键逻辑)
 Model(操作数据存取的逻辑)
 View(给用户展示的界面)
 
-![[Pasted image 20221129132402.png]]
+![Pasted image 20221129132402.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129132402.png)
+
 
 
 
@@ -1650,7 +1719,8 @@ HTTP 协议自身是属于 "无状态" 协议.
 
 但是实际开发中, 我们很多时候是需要知道请求之间的关联关系的.
 >例如登陆网站成功后, 第二次访问的时候服务器就能知道该请求是否是已经登陆过了.
-![[Pasted image 20221129134254.png]]
+![Pasted image 20221129134254.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129134254.png)
+
 
 图中的 "令牌" 通常就存储在 Cookie 字段中.
 回忆之前的例子:
@@ -1671,7 +1741,8 @@ HTTP 协议自身是属于 "无状态" 协议.
 >
 >sessionId 和 token 就可以理解成是同一个东西的不同叫法(不同视角的叫法).
 
-![[Pasted image 20221129134607.png]]
+![Pasted image 20221129134607.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129134607.png)
+
 
 - 当用户登陆的时候, 服务器在 Session 中新增一个新记录, 并把 sessionId / token 返回给客户端. (例如通过 HTTP 响应中的 Set-Cookie 字段返回).
 - 客户端后续再给服务器发送请求的时候, 需要在请求中带上 sessionId/ token. (例如通过 HTTP 请求中的 Cookie 字段带上).
@@ -1719,7 +1790,8 @@ HTTP 协议自身是属于 "无状态" 协议.
 如果有,就直接查询出这个HttpSession对象，并且通过返回值返回回去
 
 #### 调用getCookie的时候具体要做的事情
-![[Pasted image 20221129141415.png]]
+![Pasted image 20221129141415.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129141415.png)
+
 
 
 ### HttpServletResponse 类中的相关方法
@@ -1752,10 +1824,12 @@ HTTP 协议自身是属于 "无状态" 协议.
 
 ## 代码示例: 网页登陆
 **实现逻辑**
-![[Pasted image 20221129141747.png]]
+![Pasted image 20221129141747.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129141747.png)
+
 
 **登录交互**
-![[Pasted image 20221129141852.png]]
+![Pasted image 20221129141852.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129141852.png)
+
 
 **LoginServlet类**
 ```java
@@ -1859,13 +1933,13 @@ public class IndexServlet extends HttpServlet {
 路径这个写法,哪里要加`/`    哪里不加`/`一定要多加注意
 
 在 `http://localhost:8080/ServletHelloWorld/login.html` 中输入 **fmy** 和 **123**
-![[Pasted image 20221129145506.png]]
-
-![[Pasted image 20221129145520.png]]
+![Pasted image 20221129145506.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129145506.png)
 
 
-![[Pasted image 20221129150247.png]]
+![Pasted image 20221129145520.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129145520.png)
 
+
+![Pasted image 20221129150247.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129150247.png)
 
 
 
@@ -1951,14 +2025,16 @@ public class UploadServlet extends HttpServlet {
 - `getPart()`的参数需要和form中input标签的name属性对应.
 - 客户端一次可以提交多个文件.(使用多个input标签).此时服务器可以通过`getParts` 获取所有的Part对象.
 
+![Pasted image 20221129153506.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129153506.png)
 
-![[Pasted image 20221129153506.png]]
 
 
 部署程序, 在浏览器中通过 URL `http://localhost:8080/ServletHelloWorld/upload.html` 访问
-![[Pasted image 20221129154213.png]]
+![Pasted image 20221129154213.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129154213.png)
 
-![[Pasted image 20221129154318.png]]
+
+![Pasted image 20221129154318.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129154318.png)
+
 
 此时可以看到服务器端的打印日志
 ```
@@ -1968,7 +2044,8 @@ image/png
 ```
 
 同时在 s 盘中生成了 123.png
-![[Pasted image 20221129154557.png]]
+![Pasted image 20221129154557.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129154557.png)
+
 
 抓包时可以发现
-![[Pasted image 20221129154756.png]]
+![Pasted image 20221129154756.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221129154756.png)

@@ -73,7 +73,7 @@
 6.  pid文件名字，pidfile
 	![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205422.png)
 7.  log文件名字，logfile
-    **如果日志文件和启动文件同级，这里可以配置为./6379.log，否则这里一定要写绝对路径，是个巨坑！！！**
+    **如果日志文件和启动文件同级，这里可以配置为`./6379.log`，否则这里一定要写绝对路径，是个巨坑！！！**
     ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205655.png)
 
 8.  requiredpass
@@ -98,7 +98,7 @@
 -   配从(库)不配(主)库：配置从机
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210302.png)
 
-先master后两台slave依次启动
+先master 后两台slave依次启动
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210315.png)
 
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210327.png)

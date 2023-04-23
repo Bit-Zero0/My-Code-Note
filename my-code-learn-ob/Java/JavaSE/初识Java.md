@@ -21,14 +21,16 @@ public class HelloWorld{
 
 ## 运行Java程序
 Java是一门半编译型、半解释型语言。先通过javac编译程序把源文件进行编译，编译后生成的.class文件是由字节码组成的平台无关、面向JVM的文件。最后启动java虚拟机来运行.class文件，此时JVM会将字节码转换成平台能够理解的形式来运行。
-![[Pasted image 20221125231325.png]]
+![Pasted image 20221125231325.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221125231325.png)
+
 注意：在运行Java程序前，必须先安装好JDK( Java Development Kit即Java开发工具包)，JDK里面就包含了javac和java工具，Java程序最终是在JVM( Java虚拟机)中运行的。
 
 >==【面试题】JDK、JRE、JVM之间的关系？==
 >- **JDK**( Java Development Kit):Java开发工具包，提供给Java程序员使用，包含了JRE，同时还包含了编译器javac与自带的调试工具Jconsole、jstack等。
 >- **JRE**( Java Runtime Environment):Java运行时环境，包含了JVM，Java基础类库。是使用Java语言编写程序运行的所需环境。
 >- **JVM**：Java虚拟机，运行Java代码
->![[Pasted image 20221125231527.png]]
+>![Pasted image 20221125231527.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221125231527.png)
+
 
 编写和运行第一个Java程序时，可能会遇到的一些错误：
 1. 源文件名后缀不是`.java`
@@ -112,4 +114,5 @@ A：class     B：HelloWorld       C：main         D：123abc       E：ARRAY_S
 注意：用户不能使用关键字定义标识符。
 
 在Java中关键字有很多，这里给大家列出来一部分，先了解下后序在逐一详细解释。
-![[Pasted image 20221125232207.png]]
+![Pasted image 20221125232207.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221125232207.png)
+

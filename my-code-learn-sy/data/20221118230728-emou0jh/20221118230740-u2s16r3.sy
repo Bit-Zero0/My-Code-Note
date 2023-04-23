@@ -4,9 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20221118230740-u2s16r3",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221118230743-wscgkl1\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221118230743-d6gf734\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20221118230743-wscgkl1\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20221118230743-wscgkl1\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20221118230743-d6gf734\u0026quot;,\u0026quot;scrollTop\u0026quot;:1700,\u0026quot;focusId\u0026quot;:\u0026quot;20221118230743-zqs3cgl\u0026quot;,\u0026quot;focusStart\u0026quot;:81,\u0026quot;focusEnd\u0026quot;:81}",
 		"title": "Linux环境mysql安装",
-		"updated": "20221118230753"
+		"updated": "20230415182021"
 	},
 	"Children": [
 		{
@@ -29,12 +29,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221118230743-qbo3zmq",
-				"updated": "20221118230743"
+				"updated": "20230415171457"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "本个专题注意使用 CentOs7.6来学习 mysql。"
+					"Data": "本专题注意使用 Centos7.6来学习 mysql。"
 				}
 			]
 		},
@@ -43,7 +43,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221118230743-vpxdfmg",
-				"updated": "20221118230743"
+				"updated": "20230415171505"
 			},
 			"Children": [
 				{
@@ -73,6 +73,165 @@
 					"TextMarkTextContent": "Centos7.6安装Mysql_搬砖工李日兴的技术博客_51CTO博客"
 				}
 			]
+		},
+		{
+			"ID": "20230415182005-nz52eur",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230415182005-nz52eur"
+			}
+		},
+		{
+			"ID": "20230415182008-nkqm9db",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230415182008-nkqm9db",
+				"updated": "20230415182008"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "public key 报错"
+				}
+			]
+		},
+		{
+			"ID": "20230415182008-gphfcy9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230415182008-gphfcy9",
+				"updated": "20230415182008"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用yum -y install mysql-community-server安装mysql时候提示："
+				}
+			]
+		},
+		{
+			"ID": "20230415182008-zbkyd8d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230415182008-zbkyd8d",
+				"updated": "20230415182008"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "The GPG keys listed for the “MySQL 5.7 Community Server” repository are already installed but they are not correct for this package.\nCheck that the correct key URLs are configured for this repository.\n\nFailing package is: mysql-community-libs-compat-5.7.37-1.el7.x86_64\nGPG Keys are configured as: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230415182008-o75ug4o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230415182008-o75ug4o",
+				"updated": "20230415182008"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因是Mysql的GPG升级了，需要重新获取"
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "使用以下命令即可"
+				}
+			]
+		},
+		{
+			"ID": "20230415182008-8g4nbm4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230415182008-8g4nbm4",
+				"updated": "20230415182008"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230415182008-3lbn6e8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230415182008-3lbn6e8",
+				"updated": "20230415182008"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "获取初始密码"
+				}
+			]
+		},
+		{
+			"ID": "20230415182008-c1prg3c",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230415182008-c1prg3c",
+				"updated": "20230415182008"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}'\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230415182007-llnpxr9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230415182007-llnpxr9"
+			}
 		},
 		{
 			"ID": "20221118230743-mmob6bq",
@@ -127,6 +286,44 @@
 					"TextMarkTextContent": "【已解决】【Mysql8.0】ERROR 1820 (HY000): You must reset your password using ALTER USER statement_wingrez的博客-CSDN博客"
 				}
 			]
+		},
+		{
+			"ID": "20230415182021-1t7hxmp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230415182021-1t7hxmp",
+				"updated": "20230415182021"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "更改密码"
+				}
+			]
+		},
+		{
+			"ID": "20230415182021-i2px7ng",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230415182021-i2px7ng",
+				"updated": "20230415182021"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://www.linuxidc.com/Linux/2019-08/160317.htm",
+					"TextMarkTextContent": "MySQL 8.0 设置简单密码报错ERROR 1819 (HY000): Your password does not satisfy the current policy requirements_数据库技术_Linux公社-Linux系统门户网站 (linuxidc.com)"
+				}
+			]
+		},
+		{
+			"ID": "20230415182020-owu15iv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230415182020-owu15iv"
+			}
 		},
 		{
 			"ID": "20221118230743-aqfeb0u",
