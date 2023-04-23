@@ -1,0 +1,3477 @@
+{
+	"ID": "20230423121428-s97pgil",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230423121428-s97pgil",
+		"title": "Redis复制",
+		"updated": "20230423121438"
+	},
+	"Children": [
+		{
+			"ID": "20230423121438-gmr5u2y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230423121438-gmr5u2y",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis复制介绍"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-8j3yc6p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-8j3yc6p",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "是什么"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-5p9kjgw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-5p9kjgw",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "官网地址："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://redis.io/docs/management/replication/",
+					"TextMarkTextContent": "https://redis.io/docs/management/replication/"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-zpuhynn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-zpuhynn",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415204740.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n一句话：就是主从复制，master以写为主，slave以读为主，当master数据变化的时候，自动将新的数据异步同步到其他的slave数据库"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-c5svjkp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-c5svjkp",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "能干嘛"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-ovee2hj",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-ovee2hj",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-1k8mwm8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-1k8mwm8",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-uh4zb1c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-uh4zb1c",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "读写分离"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-b8eoi02",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-b8eoi02",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-gnd3e3m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-gnd3e3m",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "容灾恢复"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-aco8v18",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-aco8v18",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-pia1ssi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-pia1ssi",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据备份"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-nxwq8hc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-nxwq8hc",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-nrl47py",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-nrl47py",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "水平扩容支撑高并发"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-8dq2cda",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-8dq2cda",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "怎么玩"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-d7pbn87",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-d7pbn87",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-mnb9hu6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-mnb9hu6",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-86mmh3k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-86mmh3k",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配从(库)不配主(库)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-4dfrd8x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-4dfrd8x",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-souw1fe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-souw1fe",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "权限细节，重要\nmaster如果配置了"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "requirepass"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​参数，需要密码登录 ，那么slave就要配置masterauth来设置校验密码，否则的话master会拒绝slave的访问请求\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415204903.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-bd5nh4q",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-bd5nh4q",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-exfde7i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-exfde7i",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基本操作命令\n"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "info replication"
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ：可以查看复制结点的主从关系和配置信息\n"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "replicaof 主库IP 主库端口"
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ：一般写入进"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "mark strong",
+									"TextMarkTextContent": "Redis.conf"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "配置文件内，重启后依然生效\n"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "slaveof 主库IP 主库端口"
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ："
+								}
+							]
+						},
+						{
+							"ID": "20230423121438-hidcx86",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-hidcx86",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每次与master断开之后，都需要重新连接，除非你配置进了redis.conf文件；在运行期间修改slave节点的信息，如果该数据库已经是某个主数据库的从数据库，那么会停止和原主数据库的同步关系 "
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "转而和新的主数据库同步，重新拜码头"
+								}
+							]
+						},
+						{
+							"ID": "20230423121438-yt3w34d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-yt3w34d",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "slaveof no one"
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ：使当前数据库停止与其他数据库的同步，转成主数据库，自立为王"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-jig1qya",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230423121438-jig1qya",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例演示-配置文件"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-g0jy20z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-g0jy20z",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "架构说明"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-cnhtbw1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-cnhtbw1",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一个Master两个Slave，三台虚拟机，每台都安装redis\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205148.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n拷贝多个redis.conf文件"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-y9x96t5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-y9x96t5",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "小口诀"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-xv7axaa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-xv7axaa",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "三台虚拟机需要能相互ping通且需要注意防火墙配置"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-61fwsft",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-61fwsft",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "三大命令："
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-gp4c3jv",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-gp4c3jv",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-w3ggxvf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230423121438-w3ggxvf",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-valqidh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-valqidh",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "主从复制\nreplicaof 主库IP 主库端口，配从(库)不配主(库)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-ovpvwa6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230423121438-ovpvwa6",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-sjro7lj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-sjro7lj",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "改换门庭\nslaveof 新主库IP 新主库端口"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-n5362xy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230423121438-n5362xy",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-x1pubai",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-x1pubai",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自立为王\nslaveof no one"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-nmtdjzn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-nmtdjzn",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "修改配置文件细节操作"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-c0z820x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-c0z820x",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "redis6379.conf"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为例，步骤如下："
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-i6r2gez",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-i6r2gez",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-swb478y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230423121438-swb478y",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-fzgu23o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-fzgu23o",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "开启daemonize yes\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205458.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-v1vwgof",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230423121438-v1vwgof",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-yqxqoz8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-yqxqoz8",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注释掉bind 127.0.0.1"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-017ked3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230423121438-017ked3",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-6fnflot",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-6fnflot",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "protected-mode no\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205334.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-96lqlt0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230423121438-96lqlt0",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-iext8vw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-iext8vw",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "指定端口\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205523.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-3p0ie17",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20230423121438-3p0ie17",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-v6l250v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-v6l250v",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "指定当前工作目录，dir\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205406.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-y5wxmia",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20230423121438-y5wxmia",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-gq4sv9n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-gq4sv9n",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "pid文件名字，pidfile\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205422.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-eufa458",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ny4=",
+						"Num": 7
+					},
+					"Properties": {
+						"id": "20230423121438-eufa458",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-79r5atr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-79r5atr",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "log文件名字，logfile\n"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "如果日志文件和启动文件同级，这里可以配置为"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong code",
+									"TextMarkTextContent": "./6379.log"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "，否则这里一定要写绝对路径，是个巨坑！！！"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205655.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-p4hafa5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OC4=",
+						"Num": 8
+					},
+					"Properties": {
+						"id": "20230423121438-p4hafa5",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-vzniqj0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-vzniqj0",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "requiredpass\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205731.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-3mvmr9s",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OS4=",
+						"Num": 9
+					},
+					"Properties": {
+						"id": "20230423121438-3mvmr9s",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-2fk6zua",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-2fk6zua",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "dump.rdb名字\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205801.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-3elnexl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MTAu",
+						"Num": 10
+					},
+					"Properties": {
+						"id": "20230423121438-3elnexl",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-feuhsjc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-feuhsjc",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "aof文件，appendfilename（非必选）\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205816.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-gvuqykc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MTEu",
+						"Num": 11
+					},
+					"Properties": {
+						"id": "20230423121438-gvuqykc",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-terolms",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-terolms",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从机访问主机的通行密码，必须配置从机访问主机的通行密码"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "masterauth"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​，必须配置\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415205858.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "从机需要配置，主机不用"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-j3vrx9j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-j3vrx9j",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用3招"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-ll9phf0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423121438-ll9phf0",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一主二仆"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-e4fwfvs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20230423121438-e4fwfvs",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方案1：配置文件固定写死主从关系"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-9cispym",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-9cispym",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-3yjxkf7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-3yjxkf7",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-quct7o6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-quct7o6",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配置文件执行：replicaof 主库IP 主库端口"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-1vxl3ms",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-1vxl3ms",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-m9140h8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-m9140h8",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配从(库)不配(主)库：配置从机\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210302.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-4jchp6e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-4jchp6e",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "先master 后两台slave依次启动\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210315.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-x3u7b7k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-x3u7b7k",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210327.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-q7o0gei",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-q7o0gei",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-x4i5bqz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-x4i5bqz",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-ytvqsze",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-ytvqsze",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong mark",
+									"TextMarkTextContent": "主从关系查看"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n主机日志\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210357.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						},
+						{
+							"ID": "20230423121438-6xq6riw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-6xq6riw",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "从机日志"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210414.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						},
+						{
+							"ID": "20230423121438-kllvrot",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-kllvrot",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "命令：info replication命令查看"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210457.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-56klsvu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20230423121438-56klsvu",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主从问题演示"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-4l50yc7",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-4l50yc7",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-lm1y9kb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230423121438-lm1y9kb",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-3txr2zn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-3txr2zn",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Q：从机可以执行写命令吗？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-qy1i1r2",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423121438-qy1i1r2",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423121438-hchy0t3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-hchy0t3",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "A："
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "不可以，从机只能读"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-ohmg33n",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-ohmg33n",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-d8o98gd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230423121438-d8o98gd",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-i520o3t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-i520o3t",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Q：从机切入点问题 ,slave是从头开始复制还是从切入点开始复制?"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-7ihwbib",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423121438-7ihwbib",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423121438-9d88qio",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-9d88qio",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "A：master启动，写到k3 slave1跟着master同时启动，跟着写到k3 slave2写到k3后才启动."
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-plm99uo",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-plm99uo",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "那之前的是否也可以复制?"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n首次一锅端，后续跟随，master写，slave跟"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-2z0gjww",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-2z0gjww",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-37iuwqg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230423121438-37iuwqg",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-ni5vrux",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-ni5vrux",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Q：主机shutdown后，从机会上位吗？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-52rbhyq",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423121438-52rbhyq",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423121438-tk60d22",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-tk60d22",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "A："
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "从机不动，原地待命，从机数据可以正常使用，等待主机重启归来"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n​"
+						},
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "image.png"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415210920.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-o1fvp5s",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-o1fvp5s",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-i1fr6xo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230423121438-i1fr6xo",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-32ggk8m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-32ggk8m",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Q：主机shutdown后，重启后主从关系还在吗？从机还能否顺利复制？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-c2n48o2",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423121438-c2n48o2",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423121438-1u9a57e",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-1u9a57e",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "A：主从关系依然存在，从机依旧是从机，可以顺利复制\n​"
+						},
+						{
+							"Type": "NodeImage",
+							"Data": "span",
+							"Children": [
+								{
+									"Type": "NodeBang"
+								},
+								{
+									"Type": "NodeOpenBracket"
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "image.png"
+								},
+								{
+									"Type": "NodeCloseBracket"
+								},
+								{
+									"Type": "NodeOpenParen"
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415211008.png"
+								},
+								{
+									"Type": "NodeCloseParen"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-8w7h7lt",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-8w7h7lt",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-xomuahw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20230423121438-xomuahw",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-a9fhqoc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-a9fhqoc",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Q：某台从机down后，master继续，从机重启后它能跟上大部队吗？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-stn3b7e",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423121438-stn3b7e",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423121438-e3lzoc7",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-e3lzoc7",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "A：可以，类似于从机切入点问题"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-zqljyqg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20230423121438-zqljyqg",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方案2：命令操作手动主从关系指令"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-cgxiu50",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423121438-cgxiu50",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-z5f5j7y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230423121438-z5f5j7y",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-sl6q644",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-sl6q644",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从机停机去掉配置文件中的配置项，3台目前都是主机状态，各不从属\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415211057.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-4wqdg30",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230423121438-4wqdg30",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-izofwh0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-izofwh0",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "3台master\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415211122.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-f7de6er",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230423121438-f7de6er",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-qltw0pr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-qltw0pr",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "预设的从机上执行命令\nsalveof 主库IP 主库端口\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415211144.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-2zcqebw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230423121438-2zcqebw",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-netrbgx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-netrbgx",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用命令使用的话，2台从机重启后，关系还在吗？\n不会存在了\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415211407.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-36daed6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20230423121438-36daed6",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "配置 VS 命令的区别"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-0wjyno5",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-0wjyno5",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-7t25sis",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-7t25sis",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-oq1bl77",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-oq1bl77",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "配置"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，持久稳定永久生效；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-mqqxwu0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-mqqxwu0",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-14laqrg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-14laqrg",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "命令"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，当成生效"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-tp608xz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423121438-tp608xz",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "薪火相传"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-wx2aft7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-wx2aft7",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230416184132.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-fyeg0ma",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-fyeg0ma",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-htrnqg3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-htrnqg3",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-kc6dvad",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-kc6dvad",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "上一个slave可以是下一个slave的master，slave同样可以接收其他slaves的连接和同步请求，那么该slave作为了链条中下一个的master,可以有效减轻主master的写压力"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-celbo8y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-celbo8y",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-ejkwfoa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-ejkwfoa",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "中途变更转向:会清除之前的数据，重新建立主从关系并拷贝最新的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-riarkue",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-riarkue",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-75ek4lr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-75ek4lr",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "slaveof 新主库IP 新主库端口"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-invm62f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423121438-invm62f",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "反客为主"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-qqss1g2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121438-qqss1g2",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "slaveof no one"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 使当前数据库停止与其他数据库的同步关系"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-fa7shy1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230423121438-fa7shy1",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "复制原理和工作流程"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-nnikffw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-nnikffw",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "slave启动，同步初请"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-65k0al0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-65k0al0",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-vtzfveg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-vtzfveg",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-tmedp8m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-tmedp8m",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "slave启动成功链接到master后会发送一个sync命令"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-knwe4ry",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-knwe4ry",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-49o0j61",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-49o0j61",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "slave首次全新连接master，一次完全同步(全量复制)将被自动执行，slave自身原有数据会被master数据覆盖清除"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-x7fz1i6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-x7fz1i6",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "首次连接，全量复制"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-kb55lh6",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-kb55lh6",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-rxr1v1p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-rxr1v1p",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-afzevnr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-afzevnr",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "master节点收到sync命令后会开始在后台保存快照(即RDB持久化，"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "主从复制时会触发RD"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "B)，同时收集所有接收到的用于修改数据集的命令并缓存起来，master节点执行RDB持久化完后，master将RDB快照文件和所有缓存的命令发送到所有slave，以完成一次完全同步"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-cteks97",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-cteks97",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-vor6iic",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-vor6iic",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "而slave服务在接收到数据库文件数据后，将其存盘并加载到内存中，从而完成复制初始化"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-linewlf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-linewlf",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "心跳持续，保持通信"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-hkz5b45",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-hkz5b45",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-gnbvxf7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-gnbvxf7",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-s9ozy5h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-s9ozy5h",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "repl-ping-replica-period 10"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415211841.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-28y635w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-28y635w",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进入平稳，增量复制"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-c0xixu7",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-c0xixu7",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-7zgmyb1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-7zgmyb1",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-7icgvwn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-7icgvwn",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "master继续将新的所有收集到的修改命令自动依次传送给slave，完成同步"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-9ia58lt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423121438-9ia58lt",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "从机下线，重连续传"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-mxsgpet",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-mxsgpet",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-m6potdp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-m6potdp",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-jfg69nu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-jfg69nu",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "master会检查backlog里面的offset，master和slave都会保存一个复制的offset还有一个masterId，offset是保存在backlog中的。"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "master只会把已经缓存的offset后面的数据复制给slave，类似断点续传"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-l54ky7l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230423121438-l54ky7l",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "复制的缺点"
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-9o1u1vm",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423121438-9o1u1vm",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"ID": "20230423121438-ie5j3bc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-ie5j3bc",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-u4mfxqk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-u4mfxqk",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "复制延时，信号衰减\n由于所有的写操作都是先在Master上操作，然后同步更新到Slave上，所以从Master同步到Slave机器有一定的延迟，当系统很繁忙的时候，延迟问题会更加严重，Slave机器数量的增加也会使这个问题更加严重。\n​"
+								},
+								{
+									"Type": "NodeImage",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBang"
+										},
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image.png"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230415211954.png"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-x309y52",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423121438-x309y52",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"ID": "20230423121438-j9uoc8m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423121438-j9uoc8m",
+								"updated": "20230423121438"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "master挂了怎么办？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121438-hv5ohdw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423121438-hv5ohdw",
+				"updated": "20230423121438"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423121438-pusubpt",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-pusubpt",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "默认情况下，"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "不会在slave节点中自动选一个master."
+						},
+						{
+							"Type": "NodeText",
+							"Data": "(请注意：是不会)"
+						}
+					]
+				},
+				{
+					"ID": "20230423121438-pkxpb5g",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423121438-pkxpb5g",
+						"updated": "20230423121438"
+					},
+					"Children": [
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "那每次都要人工干预？"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n无人值守变成刚需, 这是我们不能接受的，所以需要[[Redis哨兵]]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423121428-moeppm8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423121428-moeppm8",
+				"updated": "20230423121428"
+			}
+		}
+	]
+}

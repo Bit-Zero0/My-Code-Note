@@ -1,0 +1,3689 @@
+{
+	"ID": "20230423123325-906dduu",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230423123325-906dduu",
+		"title": "抽象类和接口",
+		"updated": "20230423123349"
+	},
+	"Children": [
+		{
+			"ID": "20230423123335-urf14ot",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230423123335-urf14ot",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-3kuhhp0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-3kuhhp0",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-auci1m0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-auci1m0",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。 比如：\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230421220925.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-8nobrvy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-8nobrvy",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在打印图形例子中, 我们发现, 父类 Shape 中的 draw 方法好像并没有什么实际工作, 主要的绘制图形都是由 Shape 的各种子类的 draw 方法来完成的. 像这种没有实际工作的方法, 我们可以把它设计成一个 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "抽象方法(abstract method)"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 包含抽象方法的类我们称为 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "抽象类(abstract class)"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-9tr46nm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-9tr46nm",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类语法"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-groo0pw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-groo0pw",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "一个类如果被 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "abstract"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": " 修饰称为抽象类，抽象类中被"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "abstract"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": " 修饰的方法称为抽象方法，抽象方法不用给出具体的实现体"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-g4358ey",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-g4358ey",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 抽象类：被abstract修饰的类  \npublic abstract class Shape {  \n    // 抽象方法：被abstract修饰的方法，没有方法体  \n    abstract public void draw();  \n    abstract void calcArea();  \n  \n    // 抽象类也是类，也可以增加普通方法和属性  \n    protected double area; // 面积\n  \n    public double getArea(){  \n        return area;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-5fgfz0k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-5fgfz0k",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意：抽象类也是类，内部可以包含普通方法和属性，甚至构造方法"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-rmlnqkg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-rmlnqkg",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类特性"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-zh1cmlh",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423123335-zh1cmlh",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"ID": "20230423123335-6r8p6uv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230423123335-6r8p6uv",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-0jml4r6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-0jml4r6",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抽象类不能直接实例化对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-h5jxvc7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230423123335-h5jxvc7",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-wbs5u1e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-wbs5u1e",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抽象方法不能是 private 的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-q16sgdo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230423123335-q16sgdo",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-5qm08x9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-5qm08x9",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抽象方法不能被final和static修饰，因为抽象方法要被子类重写"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-cip7sog",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230423123335-cip7sog",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-grzjkfr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-grzjkfr",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抽象类必须被继承，并且继承后子类要重写父类中的抽象方法，否则子类也是抽象类，必须要使用abstract 修饰"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-mgtxtmr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20230423123335-mgtxtmr",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-pwshpt6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-pwshpt6",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抽象类中不一定包含抽象方法，但是有抽象方法的类一定是抽象类"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-jtd8qbg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20230423123335-jtd8qbg",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-9xsz8kq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-9xsz8kq",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抽象类中可以有构造方法，供子类创建对象时，初始化父类的成员变量"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-ees1t5u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-ees1t5u",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类不能直接实例化对象"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-dp8u9fp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-dp8u9fp",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Shape shape = new Shape();\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-m7umiem",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-m7umiem",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 编译出错\nError:(30, 23) java: Shape是抽象的; 无法实例化\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-fv9ctf4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-fv9ctf4",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象方法不能是 private 的"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-clfri60",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-clfri60",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "abstract class Shape {\n\tabstract private void draw();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-buaqpz4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-buaqpz4",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 编译出错\nError:(4, 27) java: 非法的修饰符组合: abstract和private\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-ai4wcfw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-ai4wcfw",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意：抽象方法没有加访问限定符时，默认是public."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-gt33f58",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-gt33f58",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象方法不能被final和static修饰，因为抽象方法要被子类重写"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-se9e9we",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-se9e9we",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public abstract class Shape {\nabstract final void methodA();\nabstract public static void methodB();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-7kztefp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-7kztefp",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 编译报错：\n// Error:(20, 25) java: 非法的修饰符组合: abstract和final\n// Error:(21, 33) java: 非法的修饰符组合: abstract和static\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-r66rusi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-r66rusi",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类必须被继承，并且继承后子类要重写父类中的抽象方法，否则子类也是抽象类，必须要使用abstract 修饰"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-5wcae52",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-5wcae52",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public abstract class Shape {  \n    // 抽象方法：被abstract修饰的方法，没有方法体  \n    abstract public void draw();  \n    abstract void calcArea();  \n    // 抽象类也是类，也可以增加普通方法和属性  \n    public double getArea(){  \n        return area;  \n    }  \n    protected double area; // 面积  \n}\n\n//矩形类\npublic class Rect extends Shape {  \n    private double length;  \n    private double width;  \n    Rect(double length, double width){  \n        this.length = length;  \n        this.width = width;  \n    }  \n    public void draw(){  \n        System.out.println(\"矩形: length= \"+length+\" width= \" + width);  \n    }  \n    public void calcArea(){  \n        area = length * width;  \n    }  \n}\n\n\n// 圆类：  \npublic class Circle extends Shape{  \n    private double r;  \n    final private static double PI = 3.14;  \n    public Circle(double r){  \n        this.r = r;  \n    }  \n    public void draw(){  \n        System.out.println(\"圆：r = \"+r);  \n    }  \n    public void calcArea(){  \n        area = PI * r * r;  \n    }  \n}\n\n// 三角形类：  \npublic abstract class Triangle extends Shape {  \n    private double a;  \n    private double b;  \n    private double c;  \n    @Override  \n    public void draw() {  \n        System.out.println(\"三角形：a = \"+a + \" b = \"+b+\" c = \"+c);  \n    }  \n    // 三角形：直角三角形、等腰三角形等，还可以继续细化  \n    //@Override  \n    //double calcArea(); // 编译失败：要么实现该抽象方法，要么将三角形设计为抽象类  \n}\n\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-8codk6n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-8codk6n",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类的作用"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-ukk2ial",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-ukk2ial",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类本身不能被实例化, 要想使用, 只能创建该抽象类的子类. 然后让子类重写抽象类中的抽象方法."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-hhoy663",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-hhoy663",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有些同学可能会说了, 普通的类也可以被继承呀, 普通的方法也可以被重写呀, 为啥非得用抽象类和抽象方法呢?"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-kzj9lfv",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423123335-kzj9lfv",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423123335-etuz5n1",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423123335-etuz5n1",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "确实如此. 但是使用抽象类相当于多了一重编译器的校验.\n使用抽象类的场景就如上面的代码, 实际工作不应该由父类完成, 而应由子类完成. 那么此时如果不小心误用成父类了, 使用普通类编译器是不会报错的. 但是父类是抽象类就会在实例化的时候提示错误, 让我们尽早发现问题.\n很多语法存在的意义都是为了 \"预防出错\", 例如我们曾经用过的 final 也是类似. 创建的变量用户不去修改, 不就相当于常量嘛? 但是加上 final 能够在不小心误修改的时候, 让编译器及时提醒我们.\n充分利用编译器的校验, 在实际开发中是非常有意义的."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-dpf4yir",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230423123335-dpf4yir",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-dmrkyhb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-dmrkyhb",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口的概念"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-xbkpag9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-xbkpag9",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在现实生活中，接口的例子比比皆是，比如：笔记本上的USB口，电源插座等。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2m2cmgh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-2m2cmgh",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "电脑的USB口上，可以插：U盘、鼠标、键盘...所有符合USB协议的设备\n电源插座插孔上，可以插：电脑、电视机、电饭煲...所有符合规范的设备"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-4ugv8g4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-4ugv8g4",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过上述例子可以看出："
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "接口就是公共的行为规范标准，大家在实现时，只要符合规范标准，就可以通用"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "在Java中，接口可以看成是：多个类的公共规范，是一种引用数据类型"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-xkppmzm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-xkppmzm",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法规则"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-dsqsqkj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-dsqsqkj",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口的定义格式与定义类的格式基本相同，将class关键字换成 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "interface"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 关键字，就定义了一个接口。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-bkt8rxn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-bkt8rxn",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface 接口名称{\n\t// 抽象方法\n\tpublic abstract void method1(); // public abstract 是固定搭配，可以不写\n\tpublic void method2();\n\tabstract void method3();\n\tvoid method4();\n\n\t// 注意：在接口中上述写法都是抽象方法，跟推荐方式4，代码更简洁\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-0aiauxu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-0aiauxu",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "提示:"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-enkr7ja",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423123335-enkr7ja",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423123335-1d32i5v",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20230423123335-1d32i5v",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-hebjn9c",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20230423123335-hebjn9c",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"ID": "20230423123335-4jz63ka",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230423123335-4jz63ka",
+										"updated": "20230423123335"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "创建接口时, 接口的命名一般以大写字母 I 开头."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230423123335-01ga7lg",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20230423123335-01ga7lg",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"ID": "20230423123335-fzy1pct",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230423123335-fzy1pct",
+										"updated": "20230423123335"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "接口的命名一般使用 \"形容词\" 词性的单词."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230423123335-ef3zcaf",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20230423123335-ef3zcaf",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"ID": "20230423123335-dz63r0o",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230423123335-dz63r0o",
+										"updated": "20230423123335"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "阿里编码规范中约定, 接口中的方法和属性不要加任何修饰符号, 保持代码的简洁性."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-56q4gyj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-56q4gyj",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口使用"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-8n2w7y3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-8n2w7y3",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "接口不能直接使用，必须要有一个\u0026quot;实现类\u0026quot;来\u0026quot;实现\u0026quot;该接口，实现接口中的所有抽象方法。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-8jhx341",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-8jhx341",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class 类名称 implements 接口名称{\n\t// ...\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-zy4kkbi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-zy4kkbi",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：子类和父类之间是"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "extends"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 继承关系，类与接口之间是 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "implements"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 实现关系。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-7ef4wk3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-7ef4wk3",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "案例"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-owd6ctb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-owd6ctb",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "请实现笔记本电脑使用USB鼠标、USB键盘的例子"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-645edmy",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423123335-645edmy",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"ID": "20230423123335-hx4gyxs",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230423123335-hx4gyxs",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-89xdf29",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-89xdf29",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "USB接口：包含打开设备、关闭设备功能"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-iyoa9o6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230423123335-iyoa9o6",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-u3tq146",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-u3tq146",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "笔记本类：包含开机功能、关机功能、使用USB设备功能"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-td3gxui",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230423123335-td3gxui",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-vfni4yi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-vfni4yi",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "鼠标类：实现USB接口，并具备点击功能"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-nob8qzr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230423123335-nob8qzr",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-itt9enk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-itt9enk",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "键盘类：实现USB接口，并具备输入功能"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-o33kuv1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-o33kuv1",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "USB接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-pbc7yl6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-pbc7yl6",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface USB {  \n    void OpenDrive();  \n    void CloseDrive();  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-odurac2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-odurac2",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "鼠标类，实现USB接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-9xhhe28",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-9xhhe28",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Mouse implements USB{  \n    @Override  \n    public void OpenDrive() {  \n        System.out.println(\"打开鼠标\");  \n    }  \n  \n    @Override  \n    public void CloseDrive() {  \n        System.out.println(\"关闭鼠标\");  \n    }  \n  \n    public void click(){  \n        System.out.println(\"鼠标点击\");  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-pgp5s1z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-pgp5s1z",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "键盘类，实现USB接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-4xgy4f2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-4xgy4f2",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class KeyBoard implements USB{  \n    @Override  \n    public void OpenDrive() {  \n        System.out.println(\"打开键盘\");  \n    }  \n  \n    @Override  \n    public void CloseDrive() {  \n        System.out.println(\"关闭键盘\");  \n    }  \n  \n    public void inPut() {  \n        System.out.println(\"键盘输入\");  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2hhn18v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-2hhn18v",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "笔记本类：使用USB设备"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-au6kr1i",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-au6kr1i",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Computer {  \n    public void powerOn(){  \n        System.out.println(\"打开笔记本电脑\");  \n    }  \n  \n    public void powerOff() {  \n        System.out.println(\"关闭笔记本的电脑\");  \n    }  \n    public void useDerive(USB usb) {  \n        usb.OpenDrive();   //可以实现多态\n        if(usb instanceof Mouse){  \n            Mouse mouse = (Mouse) usb;  \n            mouse.click();  \n        }else if (usb instanceof KeyBoard){  \n            KeyBoard keyBoard = (KeyBoard) usb;  \n            keyBoard.inPut();  \n        }  \n        usb.CloseDrive();  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-pv9r1sm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-pv9r1sm",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "测试类"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-qmhtncv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-qmhtncv",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class TestUSB {  \n    public static void main(String[] args) {  \n        Computer computer = new Computer();  \n   \n\t\tcomputer.powerOn();  //打开电脑\n  \n        computer.useDerive(new Mouse()); //打开鼠标  \n  \n        computer.useDerive(new KeyBoard());  //打开键盘\n  \n        computer.powerOff();  //关闭电脑\n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-gliepf6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-gliepf6",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口特性"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-qn7yct6",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230423123335-qn7yct6",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"ID": "20230423123335-91lreko",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230423123335-91lreko",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-u6nx4ok",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-u6nx4ok",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "接口类型是一种引用类型，但是不能直接new 接口 的对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-rmlljvw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230423123335-rmlljvw",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-8tud26l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-8tud26l",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "接口中每一个方法都是public的抽象方法, 即接口中的方法会被隐式的指定为 public abstract"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（只能是public abstract，其他修饰符都会报错)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-03toas2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230423123335-03toas2",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-mc3p6b5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-mc3p6b5",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "接口中的方法是不能在接口中实现的，只能由实现接口的类来实现"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-628wiba",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230423123335-628wiba",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-el8avh3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-el8avh3",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "重写接口中方法时，不能使用default访问权限修饰"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-noatgi6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NS4=",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20230423123335-noatgi6",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-p8pgpym",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-p8pgpym",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "接口中可以含有变量，但是接口中的变量会被隐式的指定为 public static final 变量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-z0h2o3z",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ni4=",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20230423123335-z0h2o3z",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-eysd87q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-eysd87q",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "接口中不能有静态代码块和构造方法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-x4o0yvb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Ny4=",
+						"Num": 7
+					},
+					"Properties": {
+						"id": "20230423123335-x4o0yvb",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-3owdhdd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-3owdhdd",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "接口虽然不是类，但是接口编译完成后字节码文件的后缀格式也是"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": ".class"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-qf8wwjx",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OC4=",
+						"Num": 8
+					},
+					"Properties": {
+						"id": "20230423123335-qf8wwjx",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-c7ernsg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-c7ernsg",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果类没有实现接口中的所有的抽象方法，则类必须设置为抽象类"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-q6djeer",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "OS4=",
+						"Num": 9
+					},
+					"Properties": {
+						"id": "20230423123335-q6djeer",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-trxhnp9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-trxhnp9",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "jdk8中：接口中还可以包含default方法。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-zt7iw0h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-zt7iw0h",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面的代码，用的是上面案例的代码片段"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-vgnvbe0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-vgnvbe0",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口类型是一种引用类型，但是不能直接new接口的对象"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-spm1bgn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-spm1bgn",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class TestUSB {\n\tpublic static void main(String[] args) {\n\t\tUSB usb = new USB();\n\t}\n}\n\n// Error:(10, 19) java: day20210915.USB是抽象的; 无法实例化\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-kn7mgqf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-kn7mgqf",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口中每一个方法都是public的抽象方法, 即接口中的方法会被隐式的指定为 public abstract（只能是public abstract，其他修饰符都会报错)"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-rxma5zv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-rxma5zv",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface USB {\n\tprivate void openDevice();//此处不允许使用修饰符private\n\tvoid closeDevice();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2m5mxjy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-2m5mxjy",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口中的方法是不能在接口中实现的，只能由实现接口的类来实现"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-ja194vr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-ja194vr",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface USB {\n\tvoid openDevice();\n\n\tvoid closeDevice(){\n\t\tSystem.out.println(\"关闭USB设备\");\n\t}\n}\n\n// 编译失败：因为接口中的方式默认为抽象方法\n// Error:(5, 23) java: 接口抽象方法不能带有主体\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-0ojivih",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-0ojivih",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "重写接口中方法时，不能使用default访问权限修饰"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-ducqqru",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-ducqqru",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface USB {\n\tvoid openDevice(); // 默认是public的\n\tvoid closeDevice(); // 默认是public的\n}\n\npublic class Mouse implements USB {\n\t@Override\n\tvoid openDevice() {\n\t\tSystem.out.println(\"打开鼠标\");\n\t}\n\t// ...\n}\n\n// 编译报错，重写USB中openDevice方法时，不能使用默认修饰符\n// 正在尝试分配更低的访问权限; 以前为public\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-8rptakl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-8rptakl",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口中可以含有变量，但是接口中的变量会被隐式的指定为"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": " public static final 变量"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-17vxqpc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-17vxqpc",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface USB {\n\tdouble brand = 3.0; // 默认被：final public static修饰\n\tvoid openDevice();\n\tvoid closeDevice();\n}\n\npublic class TestUSB {\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println(USB.brand); // 可以直接通过接口名访问，说明是静态的\n\n\t\tUSB.brand = 2.0; // 说明brand具有final属性\n\t}\n}\n\n// 编译报错：无法为最终变量brand分配值\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2wcqkz2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-2wcqkz2",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口中不能有静态代码块和构造方法"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-m6q0o08",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-m6q0o08",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface USB {\n\t// 编译失败\n\tpublic USB(){\n\t}\n\n\t{} // 编译失败\n\n\tvoid openDevice();\n\tvoid closeDevice();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-0zc9gt8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-0zc9gt8",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现多个接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-hlbh3xf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-hlbh3xf",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意：一个类实现多个接口时，每个接口中的抽象方法都要实现，否则类必须设置为抽象类"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-h9ihrli",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423123335-h9ihrli",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423123335-ntjsb4p",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423123335-ntjsb4p",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "提示, IDEA 中使用 ctrl + i 快速实现接口"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-9wlk2d9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-9wlk2d9",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中，类和类之间是单继承的，一个类只能有一个父类，即"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Java中不支持多继承"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但是"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "一个类可以实现多个接口"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。下面通过类来表示一组动物."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-0ve1qx2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-0ve1qx2",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Animal {  \n    protected String name;  \n  \n    public Animal(String name){  \n        this.name = name;  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-nmdfign",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-nmdfign",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外我们再提供一组接口, 分别表示 \"会飞的\", \"会跑的\", \"会游泳的\".写入不同的类文件中"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-g48epz0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-g48epz0",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface Running {  \n    void run();  \n}\n\npublic interface Swimming {  \n    void swim();  \n}\n\npublic interface Flying {  \n    void fly();  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-y7s2bia",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-y7s2bia",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接下来我们创建几个具体的动物\n猫, 是会跑的."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-o4k5p13",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-o4k5p13",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Cat extends Animal implements Running{  \n    public Cat(String name) {  \n        super(name);  \n    }  \n  \n    @Override  \n    public void run() {  \n        System.out.println(this.name + \"用四条腿跑\");  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-22eo1k6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-22eo1k6",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "鱼, 是会游的."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-lphjlba",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-lphjlba",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Fish extends Animal implements Swimming{  \n    public Fish(String name){  \n        super(name);  \n    }  \n  \n    @Override  \n    public void swim() {  \n        System.out.println(this.name + \"正在水中游\");  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-8u5p6tf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-8u5p6tf",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "青蛙, 既能跑, 又能游(两栖动物)"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-9nhcee8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-9nhcee8",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Frog extends Animal implements Running , Swimming{  \n    Frog(String name){  \n        super(name);  \n    }  \n  \n    @Override  \n    public void run() {  \n        System.out.println(this.name + \"正在往前跳\");  \n    }  \n  \n    @Override  \n    public void swim() {  \n        System.out.println(this.name + \"正在蹬腿游泳\");  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-pogeien",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-pogeien",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还有一种神奇的动物, 水陆空三栖, 叫做 \"鸭子\""
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-mi6qvwr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-mi6qvwr",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Duck extends Animal implements Running , Swimming , Flying{  \n    public Duck(String name){  \n        super(name);  \n    }  \n  \n    @Override  \n    public void fly() {  \n        System.out.println(this.name + \"正在用翅膀飞\");  \n    }  \n  \n    @Override  \n    public void run() {  \n        System.out.println(this.name + \"正在用两条腿跑\");  \n    }  \n  \n    @Override  \n    public void swim() {  \n        System.out.println(this.name + \"正在漂在水上\");  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-r334muu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-r334muu",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的代码展示了 Java 面向对象编程中最常见的用法: 一个类继承一个父类, 同时实现多种接口."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-586i7b3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-586i7b3",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "继承表达的含义是 is - a 语义, 而接口表达的含义是 具有 xxx 特性 ."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2nfpg4p",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423123335-2nfpg4p",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423123335-mwirrog",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423123335-mwirrog",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "猫是一种动物, 具有会跑的特性.\n青蛙也是一种动物, 既能跑, 也能游泳\n鸭子也是一种动物, 既能跑, 也能游, 还能飞"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-j4swaeg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-j4swaeg",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这样设计有什么好处呢? 时刻牢记多态的好处, 让程序猿"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "忘记类型"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ". 有了接口之后, 类的使用者就不必关注具体类型,而只关注某个类是否具备某种能力.\n例如, 现在实现一个方法, 叫 \"散步\""
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-m6pyy99",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-m6pyy99",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Test {  \n    public static void walk(Running running){  //散步方法\n        System.out.println(\"我带着伙伴去散步\");  \n        running.run();  \n    }  \n  \n    public static void main(String[] args) {  \n        Cat cat = new Cat(\"小猫\");  \n        walk(cat);  \n  \n        Frog frog = new Frog(\"小青蛙\");  \n        walk(frog);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-wex90lt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-wex90lt",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行结果："
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-hs6qud4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-hs6qud4",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "我带着伙伴去散步\n小猫正在用四条腿跑\n我带着伙伴去散步\n小青蛙正在往前跳\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-m0m8fzo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-m0m8fzo",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口间的继承"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-nftdx0f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-nftdx0f",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中，类和类之间是单继承的，一个类可以实现多个接口，接口与接口之间可以多继承。即：用接口可以达到多继承的目的。"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-otz4hk1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-otz4hk1",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口可以继承一个接口, 达到复用的效果. 使用 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "extends"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 关键字."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-f5i8jxw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-f5i8jxw",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "interface Running {  \n    void run();  \n}\n\ninterface Swimming {  \n    void swim();  \n}\n\n// 两栖的动物, 既能跑, 也能游\ninterface Amphibious extends Running, Swimming {\n\n}\n\nclass Frog implements Amphibious {\n\t...\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-ykapsjz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-ykapsjz",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过接口继承创建一个新的接口 IAmphibious 表示 \"两栖的\". 此时实现接口创建的 Frog 类, 就继续要实现 run 方法, 也需要实现 swim 方法."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2xcahuw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423123335-2xcahuw",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423123335-is3w4s8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423123335-is3w4s8",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "接口间的继承相当于把多个接口合并在一起."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-b4htkti",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-b4htkti",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接口使用实例"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-qvgfyz2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-qvgfyz2",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Comparable 接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-g4wno10",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-g4wno10",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "给对象数组排序"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-9dt1g84",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-9dt1g84",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Student{  \n    private String name;  \n    private int score;  \n  \n    public Student(String name , int score)  \n    {  \n        this.name = name;  \n        this.score = score;  \n    }  \n  \n    @Override  \n    public String toString() {  \n        return \"Student{\" +  \n                \"name='\" + name + '\\'' +  \n                \", score=\" + score +  \n                '}';  \n    }  \n}  \npublic class test1 {  \n    public static void main(String[] args) {  \n        Student[] students = new Student[] {  \n                new Student(\"张三\", 95),  \n                new Student(\"李四\", 96),  \n                new Student(\"王五\", 97),  \n                new Student(\"赵六\", 92),  \n        };  \n  \n        Arrays.sort(students);  \n        System.out.println(Arrays.toString(students));  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-s6mgnq2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-s6mgnq2",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行结果："
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-a7v0btp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-a7v0btp",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 运行出错, 抛出异常.\nException in thread \"main\" java.lang.ClassCastException: Student cannot be cast to java.lang.Comparable\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-cuq0165",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-cuq0165",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "仔细思考, 不难发现, 和普通的整数不一样, 两个整数是可以直接比较的, 大小关系明确. 而两个学生对象的大小关系怎么确定? 需要我们额外指定."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-fffvpui",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-fffvpui",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "让我们的 Student 类实现 Comparable 接口, 并实现其中的 compareTo 方法"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-pc5kwed",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-pc5kwed",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Student implements Comparable{  //引入Comparable接口\n    private String name;  \n    private int score;  \n  \n    public Student(String name , int score)  \n    {  \n        this.name = name;  \n        this.score = score;  \n    }  \n  \n    @Override  \n    public String toString() {  \n        return \"Student{\" +  \n                \"name='\" + name + '\\'' +  \n                \", score=\" + score +  \n                '}';  \n    }  \n  \n    @Override  \n    public int compareTo(Object o) {  //实现Comparable接口中的compareTo方法\n        Student s = (Student)o;  \n        if (this.score \u003e s.score) {  \n            return -1;  \n        } else if (this.score \u003c s.score) {  \n            return 1;  \n        } else {  \n            return 0;  \n        }  \n    }  \n}  \npublic class test1 {  \n    public static void main(String[] args) {  \n        Student[] students = new Student[] {  \n                new Student(\"张三\", 95),  \n                new Student(\"李四\", 96),  \n                new Student(\"王五\", 97),  \n                new Student(\"赵六\", 92),  \n        };  \n  \n        Arrays.sort(students);  \n        System.out.println(Arrays.toString(students));  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-6sr02h4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-6sr02h4",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 sort 方法中会自动调用 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "compareTo"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 方法. "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "compareTo"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 的参数是 Object , 其实传入的就是 Student 类型的对象."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-t2g8mxv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-t2g8mxv",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "然后比较当前对象和参数对象的大小关系(按分数来算)."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-j36w12i",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230423123335-j36w12i",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"ID": "20230423123335-uuwnxxw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423123335-uuwnxxw",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-1zzowsj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-1zzowsj",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果当前对象应排在参数对象之前, 返回小于 0 的数字;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-pfwg1fh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423123335-pfwg1fh",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-8zocim7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-8zocim7",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果当前对象应排在参数对象之后, 返回大于 0 的数字;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230423123335-0ez5of6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230423123335-0ez5of6",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"ID": "20230423123335-hx3g7t7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230423123335-hx3g7t7",
+								"updated": "20230423123335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果当前对象和参数对象不分先后, 返回 0;"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2eu4itm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-2eu4itm",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "再次执行程序, 结果就符合预期了."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-ijaldu5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-ijaldu5",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[Student{name='王五', score=97}, Student{name='李四', score=96}, Student{name='张三', score=95}, Student{name='赵六', score=92}]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-jo4htfj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-jo4htfj",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意事项: 对于 sort 方法来说, 需要传入的数组的每个对象都是 \u0026quot;可比较\u0026quot; 的, 需要具备 compareTo 这样的能力. 通过重写 compareTo 方法的方式, 就可以定义比较规则."
+				}
+			]
+		},
+		{
+			"ID": "20230423123349-tsslom3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123349-tsslom3"
+			}
+		},
+		{
+			"ID": "20230423123335-65khhk0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-65khhk0",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Comparator 接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-k68dhdw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-k68dhdw",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在上面的案例中使用Comparable , 我们可以发现,这种比较排序是很不方便的, 如果之后我们需要更改排序方式,就需要到"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "compareTo"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​方法中进行更改, 如果这是一个大程序,很有用导致程序中依赖此方法的模块无法正常使用, 导致整个程序无法运行."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-2jgeu2f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-2jgeu2f",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Comparator接口就是能解决这个问题的."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-9n2p4si",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-9n2p4si",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Student {  \n    public String name;  \n    public int score;  \n  \n    public Student(String name , int score)  \n    {  \n        this.name = name;  \n        this.score = score;  \n    }  \n  \n    @Override  \n    public String toString() {  \n        return \"Student{\" +  \n                \"name='\" + name + '\\'' +  \n                \", score=\" + score +  \n                '}';  \n    }  \n}  \n\n//名字比较\nclass NameComparator implements Comparator\u003cStudent\u003e{  \n    @Override  \n    public int compare(Student o1, Student o2) {  \n        return o1.name.compareTo(o2.name)  ;  \n    }  \n}  \n\n//分数比较\nclass ScoreComparator implements Comparator\u003cStudent\u003e {  \n    @Override  \n    public int compare(Student o1, Student o2) {  \n        return o1.score - o2.score;  \n    }  \n}  \n  \n  \npublic class test1 {  \n    public static void main(String[] args) {  \n        Student[] students = new Student[] {  \n                new Student(\"张三\", 95),  \n                new Student(\"李四\", 96),  \n                new Student(\"王五\", 97),  \n                new Student(\"赵六\", 92),  \n        };  \n        //定义比较器\n        ScoreComparator scoreComparator = new ScoreComparator();  \n  \n        NameComparator nameComparator = new NameComparator();  \n  \n        Arrays.sort(students , scoreComparator);  \n        System.out.println(Arrays.toString(students));  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123345-lha94oa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123345-lha94oa"
+			}
+		},
+		{
+			"ID": "20230423123335-zz1g9a4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230423123335-zz1g9a4",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Clonable 接口和深拷贝"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-owu1srb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-owu1srb",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 中内置了一些很有用的接口, "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Clonable"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 就是其中之一.\n​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Object"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 类中存在一个 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "clone"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 方法, 调用这个方法可以创建一个对象的 \"拷贝\". 但是要想合法调用 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "clone"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 方法, 必须要先实现 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Clonable"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 接口, 否则就会抛出 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "CloneNotSupportedException"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 异常."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-r136f9y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-r136f9y",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Animal implements Cloneable {  \n    private String name;  \n    @Override  \n    public Animal clone() {  \n        Animal o = null;  \n        try {  \n            o = (Animal)super.clone();  \n        } catch (CloneNotSupportedException e) {  \n            e.printStackTrace();  \n        }  \n        return o;  \n    }  \n}  \n\npublic class test1 {  \n    public static void main(String[] args) {  \n        Animal animal = new Animal();  \n        Animal animal2 = animal.clone();  \n        System.out.println(animal == animal2);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-dfqamqq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-dfqamqq",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行结果为: "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "false"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230423123342-25eprr5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123342-25eprr5"
+			}
+		},
+		{
+			"ID": "20230423123335-xzehlfc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-xzehlfc",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "浅拷贝 VS 深拷贝"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-81tcjx3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-81tcjx3",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Cloneable 拷贝出的对象是一份 \u0026quot;浅拷贝\u0026quot;"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n观察以下代码:"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-7y0ucf0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-7y0ucf0",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Money{  \n    public double m = 99.99;  \n}  \n  \nclass Person implements Cloneable {  \n    public Money money = new Money();  \n  \n    @Override  \n    protected Object clone() throws CloneNotSupportedException {  \n        return super.clone();  \n    }  \n}  \n  \npublic class TestDemo3 {  \n    public static void main(String[] args) throws CloneNotSupportedException {  \n        Person person1 = new Person();  \n        Person person2 = (Person) person1.clone();  \n        System.out.println(\"通过person2修改前的结果\");  \n    \n        System.out.println(person1.money.m);  \n        System.out.println(person2.money.m);  \n    \n        person2.money.m = 13.6;  \n        System.out.println(\"通过person2修改后的结果\");  \n        System.out.println(person1.money.m);  \n        System.out.println(person2.money.m);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-yg7pmoa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-yg7pmoa",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行结果:"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-bco8d1l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-bco8d1l",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "通过person2修改前的结果\n99.99\n99.99\n通过person2修改后的结果\n13.6\n13.6\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-os08fkf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-os08fkf",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如上代码，我们可以看到，通过clone，我们只是拷贝了Person对象。但是Person对象中的Money对象，并\n没有拷贝。通过person2这个引用修改了m的值后，person1这个引用访问m的时候，值也发生了改变。这里\n就是发生了浅拷贝。那么同学们想一下如何实现深拷贝呢？"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-akhdbwh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230423123335-akhdbwh",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现深拷贝"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-14bxtkb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-14bxtkb",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为Money类也实现Cloneable接口"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-hwty8j1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-hwty8j1",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Money implements Cloneable{  \n    public double m = 99.99;  \n  \n    @Override  \n    protected Object clone() throws CloneNotSupportedException {  \n        return super.clone();  \n    }  \n}  \n  \nclass Person implements Cloneable {  \n    public Money money = new Money();  \n  \n    @Override  \n    protected Object clone() throws CloneNotSupportedException {  \n        Person person = (Person) super.clone();  \n        person.money  = (Money)this.money.clone();  \n        return person;  \n    }  \n}  \n  \npublic class TestDemo3 {  \n    public static void main(String[] args) throws CloneNotSupportedException {  \n        Person person1 = new Person();  \n        Person person2 = (Person) person1.clone();  \n        System.out.println(\"通过person2修改前的结果\");  \n        System.out.println(person1.money.m);  \n        System.out.println(person2.money.m);  \n        person2.money.m = 13.6;  \n        System.out.println(\"通过person2修改后的结果\");  \n        System.out.println(person1.money.m);  \n        System.out.println(person2.money.m);  \n    }  \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-gpqluae",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-gpqluae",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " 执行结果"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-7f76oob",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-7f76oob",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "通过person2修改前的结果\n99.99\n99.99\n通过person2修改后的结果\n99.99\n13.6\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-geyxqav",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230423123335-geyxqav",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类和接口的区别"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-xzy0xcc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-xzy0xcc",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "抽象类和接口都是 Java 中多态的常见使用方式. 都需要重点掌握. 同时又要认清两者的区别(重要!!! 常见面试题)."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-t8gq1nx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-t8gq1nx",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "核心区别"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "抽象类中可以包含普通方法和普通字段, 这样的普通方法和字段可以被子类直接使用(不必重写), 而接口中不能包含普通方法, 子类必须重写所有的抽象方法"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-sfnzi1g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-sfnzi1g",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如之前写的 Animal 例子. 此处的 Animal 中包含一个 name 这样的属性, 这个属性在任何子类中都是存在的. 因此此处的 Animal 只能作为一个抽象类, 而不应该成为一个接口."
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-02q6ulh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230423123335-02q6ulh",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Animal {\n\tprotected String name;\n\n\tpublic Animal(String name) {\n\t\tthis.name = name;\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-cknggxn",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230423123335-cknggxn",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230423123335-5u9mbb8",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230423123335-5u9mbb8",
+						"updated": "20230423123335"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "再次提醒:\n抽象类存在的意义是为了让编译器更好的校验, 像 Animal 这样的类我们并不会直接使用, 而是使用它的子类.\n万一不小心创建了 Animal 的实例, 编译器会及时提醒我们."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230423123335-39x4ic5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230423123335-39x4ic5",
+				"updated": "20230423123335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230422144803.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		}
+	]
+}
