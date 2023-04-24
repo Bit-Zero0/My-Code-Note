@@ -1,0 +1,889 @@
+{
+	"ID": "20230424222909-im24g58",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230424222909-im24g58",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230424222912-wgbulty\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230424222927-pqngsza\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20230424222912-wgbulty\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
+		"title": "二叉树",
+		"updated": "20230424222927"
+	},
+	"Children": [
+		{
+			"ID": "20230424222912-wgbulty",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222912-wgbulty"
+			}
+		},
+		{
+			"ID": "20230424222927-kgcdbik",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424222927-kgcdbik",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "226. 翻转二叉树"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-lexpjij",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-lexpjij",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/invert-binary-tree/",
+					"TextMarkTextContent": "226. 翻转二叉树"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-oert5r7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-oert5r7",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "递归法"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-hdo7asc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-hdo7asc",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    TreeNode* invertTree(TreeNode* root) {\n        if(root == nullptr) return root;\n\n        swap(root-\u003eleft , root-\u003eright);\n        invertTree(root-\u003eleft);\n        invertTree(root-\u003eright);\n        return root;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-oxbxfp4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-oxbxfp4",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "迭代法"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-8xiw5cc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-8xiw5cc",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    TreeNode* invertTree(TreeNode* root) {\n        if(root == nullptr) return root;\n\n        stack\u003cTreeNode*\u003e st;\n        st.push(root);\n        while(!st.empty())\n        {\n            TreeNode* cur = st.top();\n            st.pop();\n            swap(cur-\u003eleft , cur-\u003eright);\n            if(cur-\u003eright) st.push(cur-\u003eright);\n            if(cur-\u003eleft) st.push(cur-\u003eleft);\n        }\n        return root;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-qby0q4a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424222927-qby0q4a",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "102. 二叉树的层序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-2mzn24w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-2mzn24w",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/binary-tree-level-order-traversal/",
+					"TextMarkTextContent": "102. 二叉树的层序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-fr9oila",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-fr9oila",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cvector\u003cint\u003e\u003e levelOrder(TreeNode* root) {\n        vector\u003cvector\u003cint\u003e\u003e result;\n        if(root == nullptr ) return result;\n\n        queue\u003cTreeNode*\u003e que;\n        que.push(root);\n        while(!que.empty())\n        {\n            vector\u003cint\u003e vec;\n            int size = que.size();\n\n            // 这里一定要使用固定大小size，不要使用que.size()，因为que.size是不断变化的\n            for (int i = 0 ; i \u003c size ; i++)\n            {\n                TreeNode* cur = que.front();\n                que.pop();\n                vec.push_back(cur-\u003eval);\n                if(cur-\u003eleft) que.push(cur-\u003eleft);\n                if(cur-\u003eright) que.push(cur-\u003eright);\n            }\n            result.push_back(vec);\n        }\n        return result;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-qca83dx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424222927-qca83dx",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "144. 二叉树前序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-lmhzyuy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-lmhzyuy",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/binary-tree-preorder-traversal/",
+					"TextMarkTextContent": "144. 二叉树的前序遍历 - 力扣（LeetCode）"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-p93z3vt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-p93z3vt",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "递归解题"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-obtl1mw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-obtl1mw",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    void traversal(TreeNode* root , vector\u003cint\u003e\u0026 result )\n    {\n        if(root == nullptr) return;\n        result.push_back(root-\u003eval);\n        traversal(root-\u003eleft , result);\n        traversal(root-\u003eright , result);\n    } \n  \n    vector\u003cint\u003e preorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        traversal(root , result);\n        return result;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-3amjjnq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-3amjjnq",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非递归解题"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-naqla8n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-naqla8n",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "迭代法主要使用 栈 进行解题,在根节点出栈后,先入右孩子 ,再入左孩子 , 这样就能根据栈的特性先出左孩子,在出右孩子"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-wkjtzhk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-wkjtzhk",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e preorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        if(root ==  nullptr) return result;\n        stack\u003cTreeNode*\u003e st;\n           \n        st.push(root); // 入根节点\n        while(!st.empty())\n        {\n            TreeNode* cur = st.top();\n            result.push_back(cur-\u003eval); \n            st.pop(); //出根节点\n            if(cur-\u003eright)st.push(cur-\u003eright);// 右（空节点不入栈）\n            if(cur-\u003eleft)st.push(cur-\u003eleft); // 左（空节点不入栈）\n        }\n        return result;   \n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-zebzen4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424222927-zebzen4",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "94. 二叉树中序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-u5aefs4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-u5aefs4",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/binary-tree-inorder-traversal/",
+					"TextMarkTextContent": "94. 二叉树的中序遍历 - 力扣（LeetCode）"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-o6q7woe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-o6q7woe",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "递归解题"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-ejam5dz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-ejam5dz",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    void traversal(TreeNode* root , vector\u003cint\u003e\u0026 result)\n    {\n        if(root == nullptr) return;\n        traversal(root-\u003eleft , result);\n        result.push_back(root-\u003eval);\n        traversal(root-\u003eright , result);\n    }\n\n    vector\u003cint\u003e inorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        traversal(root , result);\n        return result;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-vpnlfta",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-vpnlfta",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非递归解题"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-fa61qsh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-fa61qsh",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了解释清楚，我说明一下 刚刚在迭代的过程中，其实我们有两个操作："
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-exz0flz",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230424222927-exz0flz",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"ID": "20230424222927-i0chy6o",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230424222927-i0chy6o",
+						"updated": "20230424222927"
+					},
+					"Children": [
+						{
+							"ID": "20230424222927-zzua8ki",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230424222927-zzua8ki",
+								"updated": "20230424222927"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "处理：将元素放进result数组中"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230424222927-ozfnb4c",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230424222927-ozfnb4c",
+						"updated": "20230424222927"
+					},
+					"Children": [
+						{
+							"ID": "20230424222927-flgbaq4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230424222927-flgbaq4",
+								"updated": "20230424222927"
+							},
+							"Children": [
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "访问：遍历节点"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-7horebv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-7horebv",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "分析一下为什么刚刚写的前序遍历的代码，不能和中序遍历通用呢，因为前序遍历的顺序是中左右，先访问的元素是中间节点，要处理的元素也是中间节点，所以刚刚才能写出相对简洁的代码，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "因为要访问的元素和要处理的元素顺序是一致的，都是中间节点。"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-uxtl7fy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-uxtl7fy",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么再看看中序遍历，中序遍历是左中右，先访问的是二叉树顶部的节点，然后一层一层向下访问，直到到达树左面的最底部，再开始处理节点（也就是在把节点的数值放进result数组中），这就造成了"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "处理顺序和访问顺序是不一致的。"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-ont6q7x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-ont6q7x",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "在使用迭代法写中序遍历，就需要借用指针的遍历来帮助访问节点，栈则用来处理节点上的元素。"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-j2xy0lq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-j2xy0lq",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e inorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        stack\u003cTreeNode*\u003e st;\n        TreeNode* cur = root;\n    \n        while(cur != nullptr || !st.empty())\n        {\n            if(cur != nullptr)\n            {\n                st.push(cur);\n                cur = cur-\u003eleft;\n            }\n            else\n            {\n                cur = st.top();\n                st.pop();\n                result.push_back(cur-\u003eval);\n                cur = cur-\u003eright;\n            }\n        }\n        return result;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-nuat8cx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424222927-nuat8cx",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "145. 二叉树后序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-i6foc88",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-i6foc88",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/binary-tree-postorder-traversal/",
+					"TextMarkTextContent": "145. 二叉树的后序遍历 - 力扣（LeetCode）"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-43swrme",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-43swrme",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "递归解题"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-x1ge5fc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-x1ge5fc",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    void traversal(TreeNode* root , vector\u003cint\u003e\u0026 result)\n    {\n        if(root == nullptr) return ;\n        traversal(root-\u003eleft , result);\n        traversal(root-\u003eright , result);\n        result.push_back(root-\u003eval);\n    }\n    vector\u003cint\u003e postorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        traversal(root , result);\n        return result;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-r47btax",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-r47btax",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非递归解题"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-8gwus3r",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-8gwus3r",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e postorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        if(root == nullptr) return result;\n        stack\u003cTreeNode*\u003e st;\n        st.push(root);\n        while(!st.empty())\n        {\n            TreeNode* cur = st.top();\n            result.push_back(cur-\u003eval);\n            st.pop();\n            if(cur-\u003eleft) st.push(cur-\u003eleft);\n            if(cur-\u003eright) st.push(cur-\u003eright);\n        }\n        reverse(result.begin() , result.end());\n        return result;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-r7a7qf0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424222927-r7a7qf0",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "二叉树遍历统一迭代法"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-gsbq4bh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-gsbq4bh",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "中序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-edk0xfi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-edk0xfi",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e inorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        if (root == nullptr) return result;\n        stack\u003cTreeNode*\u003e st;\n\n        st.push(root);\n        while(!st.empty())\n        {\n            TreeNode* cur = st.top();\n            if(cur != nullptr)\n            {\n                st.pop();\n                if(cur-\u003eright) st.push(cur-\u003eright);\n\n                st.push(cur);\n                st.push(nullptr);\n\n                if(cur-\u003eleft) st.push(cur-\u003eleft);\n            }\n            else\n            {   \n                st.pop();\n                cur = st.top();\n                result.push_back(cur-\u003eval);\n                st.pop();\n            }\n        }\n        return result;\n    }\n};\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-dp3y73u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-dp3y73u",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "前序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-oa9i173",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-oa9i173",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "迭代法前序遍历代码如下： ("
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意此时我们和中序遍历相比仅仅改变了两行代码的顺序"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ")"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-emk9ias",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-emk9ias",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e preorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        if (root == nullptr) return result;\n        stack\u003cTreeNode*\u003e st;\n\n        st.push(root);\n        while(!st.empty())\n        {\n            TreeNode* cur = st.top();\n            if(cur != nullptr)\n            {\n                st.pop();\n                if(cur-\u003eright) st.push(cur-\u003eright);\n\n                if(cur-\u003eleft) st.push(cur-\u003eleft);\n            \n                st.push(cur);\n                st.push(nullptr);\n\n            }\n            else\n            {   \n                st.pop();\n                cur = st.top();\n                result.push_back(cur-\u003eval);\n                st.pop();\n            }\n        }\n        return result;\n    \n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-zdiup4y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424222927-zdiup4y",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "后序遍历"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-xdh9ab0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424222927-xdh9ab0",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "后续遍历代码如下： ("
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注意此时我们和中序遍历相比仅仅改变了两行代码的顺序"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ")"
+				}
+			]
+		},
+		{
+			"ID": "20230424222927-pqngsza",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424222927-pqngsza",
+				"updated": "20230424222927"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    vector\u003cint\u003e preorderTraversal(TreeNode* root) {\n        vector\u003cint\u003e result;\n        if (root == nullptr) return result;\n        stack\u003cTreeNode*\u003e st;\n\n        st.push(root);\n        while(!st.empty())\n        {\n            TreeNode* cur = st.top();\n            if(cur != nullptr)\n            {\n                st.pop();\n                if(cur-\u003eright) st.push(cur-\u003eright);\n\n                if(cur-\u003eleft) st.push(cur-\u003eleft);\n            \n                st.push(cur);\n                st.push(nullptr);\n\n            }\n            else\n            {   \n                st.pop();\n                cur = st.top();\n                result.push_back(cur-\u003eval);\n                st.pop();\n            }\n        }\n        return result;\n    \n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		}
+	]
+}

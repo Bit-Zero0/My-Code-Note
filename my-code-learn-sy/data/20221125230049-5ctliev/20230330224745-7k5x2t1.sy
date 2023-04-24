@@ -5,9 +5,172 @@
 	"Properties": {
 		"id": "20230330224745-7k5x2t1",
 		"title": "双指针法",
-		"updated": "20230330224846"
+		"updated": "20230424223247"
 	},
 	"Children": [
+		{
+			"ID": "20230424223116-n2a30nu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223116-n2a30nu"
+			}
+		},
+		{
+			"ID": "20230424223118-yasxdt0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424223118-yasxdt0",
+				"updated": "20230424223118"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "剑指 Offer 05. 替换空格"
+				}
+			]
+		},
+		{
+			"ID": "20230424223118-dncev6e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223118-dncev6e",
+				"updated": "20230424223118"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/ti-huan-kong-ge-lcof/",
+					"TextMarkTextContent": "剑指 Offer 05. 替换空格"
+				}
+			]
+		},
+		{
+			"ID": "20230424223118-wl9h3e2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424223118-wl9h3e2",
+				"updated": "20230424223118"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "C++ 题解"
+				}
+			]
+		},
+		{
+			"ID": "20230424223118-wv2n04a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424223118-wv2n04a",
+				"updated": "20230424223118"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    string replaceSpace(string s) {\n        int count = 0 ;\n        int oldSize = s.size();\n        for(int i = 0 ; i \u003c s.size() ; i++)\n        {\n            if(s[i] == ' ') count++;\n        }\n\n        s.resize(s.size() + count*2);\n        int newSize = s.size();\n        for(int i = oldSize-1 , j = newSize-1 ; i \u003c j  ; i-- , j--)\n        {\n            if(s[i] != ' ')\n            {\n                s[j] = s[i];  \n            }\n            else{\n                s[j] = '0';\n                s[j-1] = '2';\n                s[j-2] = '%';\n                j-=2;\n            }\n        }\n        return s;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424223201-htmcyvl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424223201-htmcyvl",
+				"updated": "20230424223226"
+			}
+		},
+		{
+			"ID": "20230424223117-qv2y28f",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20230424223117-qv2y28f",
+				"updated": "20230424223157"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20230327221522-hrdwrt6'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20230424223234-beywbdd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223234-beywbdd"
+			}
+		},
+		{
+			"ID": "20230424223234-xmq21nu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223234-xmq21nu",
+				"updated": "20230424223239"
+			}
+		},
+		{
+			"ID": "20230424223239-4lfo34u",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20230424223239-4lfo34u",
+				"updated": "20230424223247"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20230327221253-c55ku9l'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20230424223235-x0sczg6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223235-x0sczg6"
+			}
+		},
 		{
 			"ID": "20230330224758-mbclrho",
 			"Type": "NodeHeading",
