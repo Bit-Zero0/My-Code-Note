@@ -6,9 +6,178 @@
 		"id": "20230327221531-th7cjc7",
 		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230328215053-ecg6b27\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230327221531-tff40nm\u0026quot;,\u0026quot;scrollTop\u0026quot;:1000,\u0026quot;focusId\u0026quot;:\u0026quot;20230328215053-e4ucntt\u0026quot;,\u0026quot;focusStart\u0026quot;:3,\u0026quot;focusEnd\u0026quot;:3}",
 		"title": "哈希表",
-		"updated": "20230328215053"
+		"updated": "20230424223335"
 	},
 	"Children": [
+		{
+			"ID": "20230424223320-j6nvo1a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223320-j6nvo1a"
+			}
+		},
+		{
+			"ID": "20230424223321-n0ui0d5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230424223321-n0ui0d5",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "383. 赎金信"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-62d0gzw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223321-62d0gzw",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://leetcode.cn/problems/ransom-note/",
+					"TextMarkTextContent": "383. 赎金信"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-9aurrbl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424223321-9aurrbl",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解题思路"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-vzighea",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223321-vzighea",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为题目所只有小写字母，那可以采用空间换取时间的哈希策略， 用一个长度为26的数组还记录magazine里字母出现的次数。"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-pmuh77m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223321-pmuh77m",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "然后再用ransomNote去验证这个数组是否包含了ransomNote所需要的所有字母。"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-iitj4ap",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223321-iitj4ap",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "依然是数组在哈希法中的应用。"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-ah0qprs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223321-ah0qprs",
+				"updated": "20230424223335"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这道题目和"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20230327221545-mzjkasp",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "242. 有效的字母异位词"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "很像，相当于求 字符串a 和 字符串b 是否可以相互组成 ，而这道题目是求 字符串a能否组成字符串b，而不用管字符串b 能不能组成字符串a。"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-aw64d9c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230424223321-aw64d9c",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "c++题解"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-97abmqc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230424223321-97abmqc",
+				"updated": "20230424223321"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "class Solution {\npublic:\n    bool canConstruct(string ransomNote, string magazine) {\n        int record[26] = {0};\n        if(ransomNote.size() \u003e magazine.size())\n        {\n            return false;\n        }\n        for(int i = 0 ; i \u003c magazine.size() ; i++)\n        {\n            record[magazine[i] - 'a']++;// 通过recode数据记录 magazine里各个字符出现次数\n        } \n\n        for(int i = 0; i \u003c ransomNote.size() ; i++)\n        {\n            record[ransomNote[i] - 'a']--;\n            if(record[ransomNote[i]-'a'] \u003c 0)// 如果小于零说明ransomNote里出现的字符，magazine没有\n            { \n                return false;\n            }\n        }\n        return true;\n    }\n};\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230424223321-gkieawo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230424223321-gkieawo"
+			}
+		},
 		{
 			"ID": "20230328215053-ecg6b27",
 			"Type": "NodeHeading",
