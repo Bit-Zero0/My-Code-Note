@@ -61,7 +61,8 @@ alert("hello");
 // 向控制台输出日志
 console.log("这是一条日志");
 ```
-![[Pasted image 20221116131218.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225105.png)
+
 
 ### 重要概念: 日志
 日志是程序员调试程序的重要手段
@@ -321,7 +322,8 @@ let b = '10';
 console.log( a == b ); //true
 console.log( a ===  b ); //false
 ```
-![[Pasted image 20221116132551.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225146.png)
+
 
 
 ## 逻辑运算符
@@ -421,7 +423,8 @@ arr.length = 6;
 console.log(arr);
 console.log(arr[4], arr[5]);
 ```
-![[Pasted image 20221116154812.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225215.png)
+
 
 
 ### 通过下标新增
@@ -431,7 +434,8 @@ var arr = [];
 arr[2] = 10; 
 console.log(arr);
 ```
-![[Pasted image 20221116154852.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225236.png)
+
 
 此时这个数组的 `[0]` 和 `[1]` 都是 `undefined`
 
@@ -476,7 +480,8 @@ JS 中的数组,不是一个正经数组!!
 
 按照之前的理解, Java 中要求数组下标,是`0 ->length -1`范围.如果超出范围,就会抛出一个**异常**
 JS并非如此 ，当我们访问一个超出范围的下标的时候,得到的结果是`undefined`,并不会出现异常~~
-![[Pasted image 20221116163618.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225253.png)
+
 
 
 ==**玩法一：**==
@@ -486,7 +491,9 @@ var arr[4] =[1 , 2 , 3 , 4];
 arr[-1] = 10;
 console.log(arr);
 ```
-![[Pasted image 20221116163859.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225339.png)
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225417.png)
+
 此时`-1`与其说是一个下标，不如说是一个"**属性**" ,而且并**不会影响到数组的长度** ,所以现在该数组的长度还是4.
 
 
@@ -663,9 +670,9 @@ test1();
 20
 ```
 
-执行 `console.log(num)`的时候, 会现在 **test2** 的局部作用域中查找 **num**. 如果没找到, 则继续去 **test1** 中 
-查找. 如果还没找到, 就去全局作用域查找.
-![[Pasted image 20221123111941.png]]
+执行 `console.log(num)`的时候, 会现在 **test2** 的局部作用域中查找 **num**. 如果没找到, 则继续去 **test1** 中查找. 如果还没找到, 就去全局作用域查找.
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225454.png)
+
 
 
 
@@ -841,10 +848,12 @@ mimi.miao();
 
 例如: 创建一个 cat 对象和 dog 对象, 让这两个对象都能使用 animal 对象中的 eat 方法. 
 通过   `__proto__` 属性来建立这种关联关系 (proto 翻译作 "原型")
-![[Pasted image 20221124174127.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225554.png)
+
 当eat方法被调用的时候，先在自己的方法列表中寻找， 如果找不到，就去找原型中的方法， 如果原型中找不到，  就去原型的原型中去寻找......  最后找到Object那里，  如果还找不到，  那就是未定义了。
 
-![[Pasted image 20221124174258.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225606.png)
+
 
  ### JavaScript 没有 "多态"
 - 多态的本质在于 "程序猿不必关注具体的类型, 就能使用其中的某个方法".
