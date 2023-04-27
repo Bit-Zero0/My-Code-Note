@@ -39,10 +39,12 @@ W3C 标准给我们提供了一系列的函数, 让我们可以操作:
 >树形结构在数据结构阶段会介绍. 就可以简单理解成类似于 "家谱" 这种结构
 
 **页面结构形如**:
-![[Pasted image 20221124214802.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225904.png)
+
 
 **DOM 树结构形如:**
-![[Pasted image 20221124214830.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225910.png)
+
 
 
 重要概念:
@@ -200,7 +202,8 @@ element.innerHTML = htmlString;
 </script>
 ```
 此时可以看到img这个`Element`对象中有很多属性
-![[Pasted image 20221124224329.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225949.png)
+
 
 我们可以在代码中直接通过这些属性来获取属性的值.
 ```js
@@ -213,7 +216,8 @@ element.innerHTML = htmlString;
     console.log(img.alt); 
 </script>
 ```
-![[Pasted image 20221124224358.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230006.png)
+
 
 还可以直接修改属性
 ```js
@@ -279,7 +283,8 @@ element.innerHTML = htmlString;
 
 
 **代码示例**: 全选/取消全选按钮
-![[Pasted image 20221124225406.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230025.png)
+
 1. 点击全选按钮, 则选中所有选项
 2. 只要某个选项取消, 则自动取消全选按钮的勾选状态.
 
@@ -361,9 +366,11 @@ element.className = [CSS 类名];
 >由于  class   是 JS 的保留字, 所以名字叫做  className
 
 **代码示例**: 开启夜间模式
-![[Pasted image 20221124230056.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230045.png)
 
-![[Pasted image 20221124230106.png]]
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230050.png)
+
 
 - 点击页面切换到夜间模式(背景变成黑色) 
 - 再次点击恢复日间模式(背景变成白色)
@@ -474,7 +481,8 @@ element.appendChild(aChild)
     container.appendChild(div);
 </script>
 ```
-![[Pasted image 20221125111347.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230119.png)
+
 
 
 2) **使用 insertBefore 将节点插入到指定节点之前**.
@@ -504,7 +512,8 @@ var insertedNode = parentNode.insertBefore(newNode , refenceNode);
         container.insertBefore(newdiv, container.children[0]);
     </script>
 ```
-![[Pasted image 20221125112946.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230135.png)
+
 
 **注意1:  如果针对一个节点插入两次, 则只有最后一次生效(相当于把元素移动了)**
 ```html
@@ -528,7 +537,8 @@ var insertedNode = parentNode.insertBefore(newNode , refenceNode);
     container.insertBefore(newDiv, container.children[2]); 
 </script>
 ```
-![[Pasted image 20221125113326.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230156.png)
+
 
 
 **注意2: 一旦一个节点插入完毕, 再针对刚刚的节点对象进行修改, 能够同步影响到 DOM 树中的内容.**
@@ -550,7 +560,8 @@ var insertedNode = parentNode.insertBefore(newNode , refenceNode);
     newDiv.innerHTML = '我是新节点2'; 
 </script>
 ```
-![[Pasted image 20221125113554.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230220.png)
+
 
 
 ### 删除节点
@@ -568,7 +579,8 @@ oldChild = element.removeChild(child);
 
 # 代码案例: 猜数字
 ## 预期效果
-![[Pasted image 20221125120828.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426230234.png)
+
 
 ## 代码实现
 ```html

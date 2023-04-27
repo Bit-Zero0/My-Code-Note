@@ -113,7 +113,8 @@ var app = new Vue({
 ```
 
 效果:  
-![[Pasted image 20230311124855.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225642.png)
+
 
 -   v-text指令的作用是:设置标签的内容(textContent)
 -   默认写法会替换全部内容,使用**差值表达式**`{{}}`可以替换指定内容
@@ -225,7 +226,8 @@ var app = new Vue({
 ```
 
 效果  
-![[Pasted image 20230311130653.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225657.png)
+
 
 ## 显示切换,属性绑定
 
@@ -332,11 +334,13 @@ var app = new Vue({
 ```
 
 显示时  
-![[Pasted image 20230313110353.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225808.png)
+
 
 隐藏时:  
 v-if的会直接删除dom元素,使用v-show就只会将display设置为none.  
-![[Pasted image 20230313110412.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426225820.png)
+
 
 ### v-bind
 
