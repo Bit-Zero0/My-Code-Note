@@ -307,7 +307,7 @@ docker run -d redis
 这个是docker的机制问题,比如你的web容器,我们以nginx为例，
 >- 正常情况下,我们配置启动服务只需要启动响应的service即可。例如service nginx start
 >- 但是,这样做,nginx为后台进程模式运行,就导致docker前台没有运行的应用,这样的容器后台启动后,会立即自杀因为他觉得他没事可做了.
->- 所以，最佳的解决方案是,**将你要运行的程序以前台进程的形式运行，常见就是命令行模式，表示我还有交互操作，别中断**，O(∩_∩)O哈哈~
+>- 所以，最佳的解决方案是,**将你要运行的程序以前台进程的形式运行，常见就是命令行模式，表示我还有交互操作，别中断** .  **先使用 `docker -it` , 后使用`ctrl+p+q`** 
 
 
 ## 前后台启动演示
@@ -340,11 +340,127 @@ docker run -d redis:6.0.8
 
 
 ## 进入正在运行的容器并以命令行交互
+
+### exec
 `docker exec -it 容器ID bashShell`
 
 重新进入容器
-![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230427185953.png)
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230428162238.png)
+
 
 
 **查看 `exec` 的指令集**
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230427190129.png)
+
+
+
+### attach
+使用 `attach` 命令进入 ubuntu
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230428161817.png)
+
+
+### exec 和 attach的区别
+`attach` 直接进入容器启动命令的终端，不会启动新的进程用exit退出，会导致容器的停止。
+
+`exec` 是在容器中打开新的终端，并且可以启动新的进程用exit退出，不会导致容器的停止。
+
+**推荐大家使用 `docker exec` 命令，因为退出容器终端，不会导致容器的停止**。
+
+
+### 进入Redis实例
+```shell
+[root@VM-8-10-centos ~]# docker run -d  redis
+fa45e09c6ed621df7b213536b622f695853a1e1588e6dcd9e0cc400d664dde54
+[root@VM-8-10-centos ~]#
+[root@VM-8-10-centos ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS      NAMES
+fa45e09c6ed6   redis     "docker-entrypoint.s…"   4 seconds ago    Up 3 seconds    6379/tcp   beautiful_ishizaka
+d04a503c06b9   ubuntu    "/bin/bash"              13 minutes ago   Up 13 minutes              festive_ellis
+[root@VM-8-10-centos ~]#
+[root@VM-8-10-centos ~]# docker exec -it fa45e09c6ed6 redis-cli
+127.0.0.1:6379>
+127.0.0.1:6379>
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379>
+```
+
+
+## 从文件内拷贝文件到主机
+容器 -->  主机
+
+```
+docker cp  容器ID:容器内路径 目的主机路径
+```
+
+
+```shell
+[root@VM-8-10-centos ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
+d04a503c06b9   ubuntu    "/bin/bash"   17 minutes ago   Up 17 minutes             festive_ellis
+
+[root@VM-8-10-centos ~]# docker exec -it d04a503c06b9 /bin/bash
+root@d04a503c06b9:/#
+root@d04a503c06b9:/#
+root@d04a503c06b9:/# mkdir TEST
+root@d04a503c06b9:/# cd TEST/
+root@d04a503c06b9:/TEST#
+root@d04a503c06b9:/TEST#
+root@d04a503c06b9:/TEST# echo "hello Docker" > test.txt
+root@d04a503c06b9:/TEST# ll
+total 12
+drwxr-xr-x 2 root root 4096 Apr 28 08:32 ./
+drwxr-xr-x 1 root root 4096 Apr 28 08:32 ../
+-rw-r--r-- 1 root root   13 Apr 28 08:32 test.txt
+root@d04a503c06b9:/TEST# exit
+exit
+
+[root@VM-8-10-centos ~]#
+[root@VM-8-10-centos ~]#
+[root@VM-8-10-centos ~]# docker cp d04a503c06b9:/TEST/test.txt ./
+Successfully copied 2.05kB to /root/./
+[root@VM-8-10-centos ~]#
+[root@VM-8-10-centos ~]#
+[root@VM-8-10-centos ~]# ll
+total 12
+-rw-r--r-- 2 root root  0 Apr 26 12:56 abc
+-rw-r--r-- 1 root root 65 Apr 15 20:03 cmd.txt
+-rw-r--r-- 2 root root  0 Apr 26 12:56 def
+-rw-r--r-- 1 root root  4 Apr 26 12:36 emm.txt
+-rw-r--r-- 1 root root 13 Apr 28 16:32 test.txt
+[root@VM-8-10-centos ~]# cat test.txt
+hello Docker
+```
+
+
+
+## 导出和导入容器
+
+### export
+export 导出容器的内容留作为一个tar归档文件
+
+```
+docker export 容器ID > 文件名.tar
+```
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230428164143.png)
+
+
+
+### import
+import 从tar包中的内容创建一个新的文件系统再导入为镜像
+
+```
+cat 文件名.tar | docker import - 镜像用户/镜像名:镜像版本号
+```
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230428165141.png)
+
+
+
+
+
+
+
+
+
