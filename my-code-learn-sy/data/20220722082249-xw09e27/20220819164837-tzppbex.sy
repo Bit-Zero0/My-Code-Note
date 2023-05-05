@@ -4,9 +4,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20220819164837-tzppbex",
-		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220819164909-oameu0y\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230317200210-4s9ibjh\u0026quot;,\u0026quot;scrollTop\u0026quot;:11427.5,\u0026quot;focusId\u0026quot;:\u0026quot;20221212215005-xbqwibe\u0026quot;,\u0026quot;focusStart\u0026quot;:5,\u0026quot;focusEnd\u0026quot;:5}",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20220819164909-oameu0y\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230317200210-4s9ibjh\u0026quot;,\u0026quot;scrollTop\u0026quot;:13225,\u0026quot;focusId\u0026quot;:\u0026quot;20230317195754-qhchpxd\u0026quot;,\u0026quot;focusStart\u0026quot;:51,\u0026quot;focusEnd\u0026quot;:51}",
 		"title": "Linux文件系统",
-		"updated": "20230317200210"
+		"updated": "20230426144804"
 	},
 	"Children": [
 		{
@@ -452,6 +452,279 @@
 			]
 		},
 		{
+			"ID": "20230426143908-h5x2n2t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143908-h5x2n2t"
+			}
+		},
+		{
+			"ID": "20230426143957-ks8ev2d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230426143957-ks8ev2d",
+				"updated": "20230426143957"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "理解文件系统"
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-9yucvzb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143957-9yucvzb",
+				"updated": "20230426144022"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们使用"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722135728-ycmemjs",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "ls -l"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的时候看到的除了看到文件名，还看到了文件元数据。"
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-2xlxc9l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230426143957-2xlxc9l",
+				"updated": "20230426143957"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[root@VM-8-10-centos ~]# ls -l\ntotal 8\n-rw-r--r-- 1 root root 65 Apr 15 20:03 cmd.txt\n-rw-r--r-- 1 root root  4 Apr 26 12:36 emm.txt\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-1bz9h7p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143957-1bz9h7p",
+				"updated": "20230426143957"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每行包含7列："
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-ojb4wpb",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230426143957-ojb4wpb",
+				"updated": "20230426143957"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230426143957-fcuac6m",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230426143957-fcuac6m",
+						"updated": "20230426143957"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "模式\n硬链接数\n文件所有者\n组\n大小\n最后修改时间\n文件名"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230426144034-79a5vn1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144034-79a5vn1"
+			}
+		},
+		{
+			"ID": "20230426143957-s5f2qoc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143957-s5f2qoc",
+				"updated": "20230426144034"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那文件在磁盘中是怎么存储的?"
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-zaw11sv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143957-zaw11sv",
+				"updated": "20230426144028"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220722135728-ycmemjs",
+					"TextMarkBlockRefSubtype": "s",
+					"TextMarkTextContent": "ls -l"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "读取存储在磁盘上的文件信息，然后显示出来\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426123749.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-2orpv7r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143957-2orpv7r",
+				"updated": "20230426144045"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实这个信息除了通过这种方式来读取，还有一个"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20220904133922-nk87h0n",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "stat"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "命令能够看到更多的文件信息"
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-qak39xk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230426143957-qak39xk",
+				"updated": "20230426143957"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[root@VM-8-10-centos ~]# stat emm.txt\n  File: ‘emm.txt’\n  Size: 4               Blocks: 8          IO Block: 4096   regular file\nDevice: fd01h/64769d    Inode: 393824      Links: 1\nAccess: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)\nAccess: 2023-04-26 12:36:30.258889155 +0800\nModify: 2023-04-26 12:36:30.178888546 +0800\nChange: 2023-04-26 12:36:30.178888546 +0800\n Birth: -\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230426143957-v62w37k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143957-v62w37k",
+				"updated": "20230426143957"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的执行结果有几个信息需要解释清楚,就需要了解 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "inode"
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 了"
+				}
+			]
+		},
+		{
+			"ID": "20230426143956-2npe2ol",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426143956-2npe2ol"
+			}
+		},
+		{
 			"ID": "20220819164909-9hma951",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -467,16 +740,98 @@
 			]
 		},
 		{
-			"ID": "20220819164909-93y6vrf",
+			"ID": "20230426144105-e8pq68d",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20220819164909-93y6vrf",
-				"updated": "20220819164909"
+				"id": "20230426144105-e8pq68d",
+				"updated": "20230426144115"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "Linux中文件名在系统层面没有意义!  是给用户使用的!\nLinux中真真标识一个文件，使通过文件的"
+					"Data": "为了能解释清楚inode我们先简单了解一下文件系统\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426125254.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nLinux ext2文件系统，上图为磁盘文件系统图（内核内存映像肯定有所不同），磁盘是典型的块设备，硬盘分区被划分为一个个的block。\n一个block的大小是由格式化的时候确定的，并且不可以更改。例如"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "mke2fs"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "-b"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​选项可以设定block大小为1024、2048或4096字节。而上图中"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "启动块（Boot Block）的大小是确定的"
+				}
+			]
+		},
+		{
+			"ID": "20230426144106-xawx18n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144106-xawx18n"
+			}
+		},
+		{
+			"ID": "20220819164909-93y6vrf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20220819164909-93y6vrf",
+				"updated": "20230426144117"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Linux中文件名在系统层面没有意义!  是给用户使用的!"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nLinux中真真标识一个文件，使通过文件的"
 				},
 				{
 					"Type": "NodeTextMark",
@@ -503,16 +858,20 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220819164909-6nwijmc",
-				"updated": "20230317194646"
+				"updated": "20230426144125"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "​​"
+					"Data": "​​​"
 				},
 				{
 					"Type": "NodeImage",
 					"Data": "span",
+					"Properties": {
+						"parent-style": "max-width: 652px;",
+						"style": "width: 642px;"
+					},
 					"Children": [
 						{
 							"Type": "NodeBang"
@@ -532,7 +891,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317194615.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426124952.png"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -540,8 +899,12 @@
 					]
 				},
 				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 642px;\" parent-style=\"max-width: 652px;\"}"
+				},
+				{
 					"Type": "NodeText",
-					"Data": "​\n如： 我们在磁盘中的其中一个分区，我们可以看到在分区中的文件管理系统。"
+					"Data": "​​\n如： 我们在磁盘中的其中一个分区，我们可以看到在分区中的文件管理系统。"
 				}
 			]
 		},
@@ -551,7 +914,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20220819164909-d0w4kit",
-				"updated": "20220819164909"
+				"updated": "20230425231139"
 			},
 			"Children": [
 				{
@@ -596,7 +959,7 @@
 					},
 					"Properties": {
 						"id": "20220819164909-lzcttum",
-						"updated": "20220819164909"
+						"updated": "20230425230702"
 					},
 					"Children": [
 						{
@@ -604,7 +967,7 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220819164909-c7isl7a",
-								"updated": "20220819164909"
+								"updated": "20230425230702"
 							},
 							"Children": [
 								{
@@ -614,7 +977,16 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "：ext2文件系统会根据分区的大小划分为数个Block Group。而每个Block Group都有着相同的结构组成。政府管理各区的例子"
+									"Data": "：ext2文件系统会根据分区的大小划分为"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "数个Block Group"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。而每个Block Group都有着相同的结构组成."
 								}
 							]
 						}
@@ -629,7 +1001,7 @@
 					},
 					"Properties": {
 						"id": "20220819164909-ygaj28o",
-						"updated": "20220819164909"
+						"updated": "20230425230924"
 					},
 					"Children": [
 						{
@@ -637,13 +1009,13 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220819164909-qwnwf29",
-								"updated": "20220819164909"
+								"updated": "20230425230924"
 							},
 							"Children": [
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "mark",
-									"TextMarkTextContent": "Super Block[超级块]"
+									"TextMarkTextContent": "Super Block(超级块)"
 								},
 								{
 									"Type": "NodeText",
@@ -656,7 +1028,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "。记录的信息主要有：bolck 和 inode的总量，未使用的block和inode的数量，一个block和inode的大小，最近一次挂载的时间，最近一次写入数据的时间，最近一次检验磁盘的时间等其他文件系统的相关信息。Super Block的信息被破坏，可以说整个文件系统结构就被破坏了"
+									"Data": "。记录的信息主要有：block 和 inode的总量，未使用的block和inode的数量，一个block和inode的大小，最近一次挂载的时间，最近一次写入数据的时间，最近一次检验磁盘的时间等其他文件系统的相关信息 . 如果Super Block的信息被破坏，可以说整个文件系统结构就被破坏了"
 								}
 							]
 						}
@@ -671,7 +1043,7 @@
 					},
 					"Properties": {
 						"id": "20220819164909-pda2abm",
-						"updated": "20220819164909"
+						"updated": "20230425230958"
 					},
 					"Children": [
 						{
@@ -679,13 +1051,13 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220819164909-rvcidna",
-								"updated": "20220819164909"
+								"updated": "20230425230958"
 							},
 							"Children": [
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "mark",
-									"TextMarkTextContent": "Group Descriptor Table[GDT]"
+									"TextMarkTextContent": "Group Descriptor Table(GDT)"
 								},
 								{
 									"Type": "NodeText",
@@ -704,7 +1076,7 @@
 					},
 					"Properties": {
 						"id": "20220819164909-2po39kh",
-						"updated": "20220819164909"
+						"updated": "20230425231133"
 					},
 					"Children": [
 						{
@@ -712,13 +1084,13 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220819164909-7opdy9b",
-								"updated": "20220819164909"
+								"updated": "20230425231133"
 							},
 							"Children": [
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "mark",
-									"TextMarkTextContent": "Block Bitmap[块位图]"
+									"TextMarkTextContent": "Block Bitmap(块位图)"
 								},
 								{
 									"Type": "NodeText",
@@ -746,7 +1118,7 @@
 					},
 					"Properties": {
 						"id": "20220819164909-5sv05if",
-						"updated": "20220819164909"
+						"updated": "20230425231127"
 					},
 					"Children": [
 						{
@@ -754,13 +1126,13 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220819164909-xl9rn2q",
-								"updated": "20220819164909"
+								"updated": "20230425231127"
 							},
 							"Children": [
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "mark",
-									"TextMarkTextContent": "inode Bitmap[inode位图]"
+									"TextMarkTextContent": "inode Bitmap(inode位图)"
 								},
 								{
 									"Type": "NodeText",
@@ -830,7 +1202,7 @@
 					},
 					"Properties": {
 						"id": "20220819164909-6xazwwy",
-						"updated": "20220819164909"
+						"updated": "20230425231139"
 					},
 					"Children": [
 						{
@@ -838,13 +1210,13 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20220819164909-xuuhca1",
-								"updated": "20220819164909"
+								"updated": "20230425231139"
 							},
 							"Children": [
 								{
 									"Type": "NodeTextMark",
 									"TextMarkType": "mark",
-									"TextMarkTextContent": "Data blocks[数据区]"
+									"TextMarkTextContent": "Data blocks(数据区)"
 								},
 								{
 									"Type": "NodeText",
@@ -908,10 +1280,68 @@
 					"Type": "NodeTextMark",
 					"TextMarkType": "strong",
 					"TextMarkTextContent": "Data blocks"
-				},
+				}
+			]
+		},
+		{
+			"ID": "20230426144253-hcx9zbh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144253-hcx9zbh"
+			}
+		},
+		{
+			"ID": "20230426144307-ve7u7c5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144307-ve7u7c5",
+				"updated": "20230426144307"
+			},
+			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "\n​​"
+					"Data": "将属性和数据分开存放的想法看起来很简单，但实际上是如何工作的呢？我们通过touch一个新文件来看看如何工作。"
+				}
+			]
+		},
+		{
+			"ID": "20230426144307-t8wiz8s",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230426144307-t8wiz8s",
+				"updated": "20230426144307"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[root@localhost linux]# touch abc\n[root@localhost linux]# ls -i abc\n263466 abc\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230426144307-15obg4r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144307-15obg4r",
+				"updated": "20230426144307"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了说明问题，我们将上图简化：\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -935,7 +1365,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230317195506.png"
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426125645.png"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -944,9 +1374,214 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "​​"
+					"Data": "\n创建一个新文件主要有一下4个操作："
 				}
 			]
+		},
+		{
+			"ID": "20230426144307-ivckoc2",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230426144307-ivckoc2",
+				"updated": "20230426144307"
+			},
+			"Children": [
+				{
+					"ID": "20230426144307-dcpzpkf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230426144307-dcpzpkf",
+						"updated": "20230426144307"
+					},
+					"Children": [
+						{
+							"ID": "20230426144307-sd3dmow",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230426144307-sd3dmow",
+								"updated": "20230426144307"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "存储属性\n内核先找到一个空闲的i节点（这里是263466）。内核把文件信息记录到其中。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230426144307-d40ckd1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230426144307-d40ckd1",
+						"updated": "20230426144307"
+					},
+					"Children": [
+						{
+							"ID": "20230426144307-eqgxsf4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230426144307-eqgxsf4",
+								"updated": "20230426144307"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "存储数据\n该文件需要存储在三个磁盘块，内核找到了三个空闲块：300,500，800。将内核缓冲区的第一块数据复制到300，下一块复制到500，以此类推。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230426144307-iw009dt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230426144307-iw009dt",
+						"updated": "20230426144307"
+					},
+					"Children": [
+						{
+							"ID": "20230426144307-kpafk0d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230426144307-kpafk0d",
+								"updated": "20230426144307"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "记录分配情况\n文件内容按顺序300,500,800存放。内核在inode上的磁盘分布区记录了上述块列表。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230426144307-zp8xvc3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230426144307-zp8xvc3",
+						"updated": "20230426144307"
+					},
+					"Children": [
+						{
+							"ID": "20230426144307-f6o0aw0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230426144307-f6o0aw0",
+								"updated": "20230426144307"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "添加文件名到目录\n新的文件名abc。linux如何在当前的目录中记录这个文件？内核将入口（263466，abc）添加到目录文件。文件名和inode之间的对应关系将文件名和文件的内容及属性连接起来。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230426144307-ohbgfxk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144307-ohbgfxk",
+				"updated": "20230426144307"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230426132215.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n注意: 一个data block的大小是由格式化的时候确定的，并且不可以更改。例如"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "mke2fs"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​的"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "-b"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​选项可以设定block大小为1024、2048或4096字节。(图中为4096byte)"
+				}
+			]
+		},
+		{
+			"ID": "20230426144253-s63vjuk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144253-s63vjuk"
+			}
 		},
 		{
 			"ID": "20220819164909-xtkdfvl",
@@ -968,7 +1603,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20220819164909-67feu8o",
-				"updated": "20220819164909"
+				"updated": "20230426144328"
 			},
 			"Children": [
 				{
@@ -981,7 +1616,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "struct inode{\n\t文件的所有属性\n\tint inode_number 数据\n\tint blocks[32] //对应的文件内容的data blocks的下标\n\tint ref //表示当前这个inode被多少链接指向了\n}\n"
+					"Data": "struct inode{\n\t//文件的所有属性\n\tint inode_number 数据\n\tint blocks[32] //对应的文件内容的data blocks的下标\n\tint ref //表示当前这个inode被多少链接指向了\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -994,7 +1629,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220819164909-srj564a",
-				"updated": "20220819164909"
+				"updated": "20230426144426"
 			},
 			"Children": [
 				{
@@ -1008,14 +1643,225 @@
 				},
 				{
 					"Type": "NodeTextMark",
-					"TextMarkType": "mark strong",
+					"TextMarkType": "mark strong code",
 					"TextMarkTextContent": "blocks[]"
 				},
 				{
 					"Type": "NodeText",
-					"Data": " 。"
+					"Data": "​ 。"
 				}
 			]
+		},
+		{
+			"ID": "20230426144448-8gig6qw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144448-8gig6qw"
+			}
+		},
+		{
+			"ID": "20230426144449-4vu6ew6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230426144449-4vu6ew6",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "inode 的大小是多少"
+				}
+			]
+		},
+		{
+			"ID": "20230426144449-1ruao3f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144449-1ruao3f",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "inode的大小是 256byte"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "."
+				}
+			]
+		},
+		{
+			"ID": "20230426144455-v3hyw5j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144455-v3hyw5j"
+			}
+		},
+		{
+			"ID": "20230426144449-bfvojba",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144449-bfvojba",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": " 我使用的是 centos7.6 系统 , 可以使用该指令查看"
+				}
+			]
+		},
+		{
+			"ID": "20230426144449-zt3zszs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230426144449-zt3zszs",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sudo dumpe2fs /dev/vda1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230426144457-7he1fle",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144457-7he1fle"
+			}
+		},
+		{
+			"ID": "20230426144449-9y9m7t8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144449-9y9m7t8",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果找不到 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "vda1"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 文件 , 可以使用 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "lsblk"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​指令 查看分区"
+				}
+			]
+		},
+		{
+			"ID": "20230426144449-pcjrsjg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230426144449-pcjrsjg",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[root@VM-8-10-centos dev]# lsblk\nNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT\nsr0     11:0    1 203.6M  0 rom  \nvda    253:0    0    50G  0 disk \n└─vda1 253:1    0    50G  0 part /\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230426144449-mqya1dc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144449-mqya1dc",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中的信息会包含 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "Inode size"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ , 这就是 inode的大小."
+				}
+			]
+		},
+		{
+			"ID": "20230426144449-08jh4r3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230426144449-08jh4r3",
+				"updated": "20230426144449"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Inode size:               256\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230426144507-tgaw5r5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144507-tgaw5r5"
+			}
 		},
 		{
 			"ID": "20220819164909-b8xxg07",
@@ -1108,7 +1954,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220819164909-2wfm7p4",
-				"updated": "20220819164909"
+				"updated": "20230425231252"
 			},
 			"Children": [
 				{
@@ -1118,7 +1964,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，\n比特位的位置含义：inode编号。\n比特位的内容含义：特定iode''是否\"被占用。"
+					"Data": "，\n比特位的位置含义：inode编号。\n比特位的内容含义：特定inode''是否\"被占用。"
 				}
 			]
 		},
@@ -1127,7 +1973,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20220819164909-lv31h24",
-				"updated": "20220819164909"
+				"updated": "20230426144518"
 			},
 			"Children": [
 				{
@@ -1139,16 +1985,62 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20220819164909-07fdel3",
-						"updated": "20220819164909"
+						"updated": "20230426144518"
 					},
 					"Children": [
 						{
 							"Type": "NodeText",
-							"Data": "1 则表示被占用了，0则表示没有。"
+							"Data": "​"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "1"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​ 则表示被占用了，"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "0"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​则表示没有。"
 						}
 					]
 				}
 			]
+		},
+		{
+			"ID": "20230426144544-r6qis1y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144544-r6qis1y"
+			}
+		},
+		{
+			"ID": "20230426144547-u103sb1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144547-u103sb1",
+				"updated": "20230426144552"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而block bitmap也是使用了相同的原理 , 用来记录 data block 的使用情况."
+				}
+			]
+		},
+		{
+			"ID": "20230426144544-mztmj3d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144544-mztmj3d"
+			}
 		},
 		{
 			"ID": "20220819164909-4812pel",
@@ -1277,7 +2169,7 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20220819164909-1a2tiu4",
-				"updated": "20220819164909"
+				"updated": "20230426144718"
 			},
 			"Children": [
 				{
@@ -1289,12 +2181,35 @@
 					"Type": "NodeParagraph",
 					"Properties": {
 						"id": "20220819164909-2r4f8av",
-						"updated": "20220819164909"
+						"updated": "20230426144718"
 					},
 					"Children": [
 						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong mark",
+							"TextMarkTextContent": "步骤"
+						},
+						{
 							"Type": "NodeText",
-							"Data": "[!note] 步骤\ncat myfile.c --\u003e 先查看lesson409 --\u003e data block --\u003e 241234[inode] : 文件名 --\u003e241234[inode]--\u003einode table--\u003e inode--\u003eblock[]--\u003e打印文件内容；"
+							"Data": "\ncat myfile.c --\u003e 先查看lesson409 --\u003e data block --\u003e "
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "241234(inode):文件名"
+						},
+						{
+							"Type": "NodeText",
+							"Data": " --\u003e241234(inode)--\u003einode table--\u003e inode--\u003e"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "block[]"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​--\u003e打印文件内容；"
 						}
 					]
 				}
@@ -1360,17 +2275,290 @@
 			}
 		},
 		{
+			"ID": "20230426144742-e7k2f7t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230426144742-e7k2f7t",
+				"updated": "20230426144742"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "文件名 与 inode"
+				}
+			]
+		},
+		{
+			"ID": "20230426144742-6wsmmyq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144742-6wsmmyq",
+				"updated": "20230426144742"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "新的文件名abc。linux如何在当前的目录中记录这个文件？"
+				}
+			]
+		},
+		{
+			"ID": "20230426144742-1wuxldx",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230426144742-1wuxldx",
+				"updated": "20230426144742"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230426144742-skq05qu",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230426144742-skq05qu",
+						"updated": "20230426144742"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "内核将入口（263466，abc）添加到目录文件。文件名和inode之间的对应关系将文件名和文件的内容及属性连接起来。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230426144742-qv949pz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144742-qv949pz",
+				"updated": "20230426144742"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们看到，真正找到磁盘上文件的并不是文件名，而是inode。 其实在linux中可以让多个文件名对应于同一个inode。"
+				}
+			]
+		},
+		{
+			"ID": "20230426144742-cxyimmh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230426144742-cxyimmh",
+				"updated": "20230426144742"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[root@VM-8-10-centos ~]# touch abc \n[root@VM-8-10-centos ~]# ln abc def\n[root@VM-8-10-centos ~]# ls -1i\n393825 abc\n393825 def\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230426144742-22pucd0",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230426144742-22pucd0",
+				"updated": "20230426144742"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230426144742-u0w9vke",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20230426144742-u0w9vke",
+						"updated": "20230426144742"
+					},
+					"Children": [
+						{
+							"ID": "20230426144742-q7mk79y",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20230426144742-q7mk79y",
+								"updated": "20230426144742"
+							},
+							"Children": [
+								{
+									"ID": "20230426144742-7yguyy5",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230426144742-7yguyy5",
+										"updated": "20230426144742"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "abc和def的链接状态完全相同，他们被称为指向文件的硬链接。内核记录了这个连接数，inode 263466 的硬连接数为2。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230426144742-4bovdix",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20230426144742-4bovdix",
+								"updated": "20230426144742"
+							},
+							"Children": [
+								{
+									"ID": "20230426144742-ani9y5t",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230426144742-ani9y5t",
+										"updated": "20230426144742"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "我们在删除文件时干了两件事情："
+										}
+									]
+								},
+								{
+									"ID": "20230426144742-qy66it3",
+									"Type": "NodeList",
+									"ListData": {
+										"Typ": 1
+									},
+									"Properties": {
+										"id": "20230426144742-qy66it3",
+										"updated": "20230426144742"
+									},
+									"Children": [
+										{
+											"ID": "20230426144742-wsgrrtx",
+											"Type": "NodeListItem",
+											"ListData": {
+												"Typ": 1,
+												"Delimiter": 46,
+												"Marker": "MS4=",
+												"Num": 1
+											},
+											"Properties": {
+												"id": "20230426144742-wsgrrtx",
+												"updated": "20230426144742"
+											},
+											"Children": [
+												{
+													"ID": "20230426144742-0tfuyua",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20230426144742-0tfuyua",
+														"updated": "20230426144742"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "在目录中将对应的记录删除"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20230426144742-ufnh2sk",
+											"Type": "NodeListItem",
+											"ListData": {
+												"Typ": 1,
+												"Delimiter": 46,
+												"Marker": "Mi4=",
+												"Num": 2
+											},
+											"Properties": {
+												"id": "20230426144742-ufnh2sk",
+												"updated": "20230426144742"
+											},
+											"Children": [
+												{
+													"ID": "20230426144742-e5xunfk",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20230426144742-e5xunfk",
+														"updated": "20230426144742"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "将硬连接数-1，如果为0，则将对应的磁盘释放。"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230426144742-65yupp0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144742-65yupp0",
+				"updated": "20230426144742"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中的 ln 指令就是硬连接."
+				}
+			]
+		},
+		{
+			"ID": "20230426144734-v9148p2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144734-v9148p2"
+			}
+		},
+		{
 			"ID": "20220819164909-5t8fm81",
 			"Type": "NodeHeading",
 			"HeadingLevel": 1,
 			"Properties": {
 				"id": "20220819164909-5t8fm81",
-				"updated": "20220819164909"
+				"updated": "20230426144752"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "硬链接 and 软链接"
+					"Data": "硬链接 和 软链接"
 				}
 			]
 		},
@@ -1414,7 +2602,20 @@
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "文件A是文件B的硬链接，则A的目录项中的inode节点号与B的目录项中的inode节点号相同，即一个inode节点对应两个不同的文件名，两个文件名指向同一个文件，A和B对文件系统来说是完全平等的。如果删除了其中一个，对另外一个没有影响。每增加一个文件名，inode节点上的链接数增加一，每删除一个对应的文件名，inode节点上的链接数减一，直到为0，inode节点和对应的数据块被回收。注：文件和文件名是不同的东西，rm A删除的只是A这个文件名，而A对应的数据块（文件）只有在inode节点链接数减少为0的时候才会被系统回收。"
+					"Data": "文件A是文件B的硬链接，则A的目录项中的inode节点号与B的目录项中的inode节点号相同，即一个inode节点对应两个不同的文件名，两个文件名指向同一个文件，A和B对文件系统来说是完全平等的。"
+				}
+			]
+		},
+		{
+			"ID": "20230426144759-a9vud2e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144759-a9vud2e"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果删除了其中一个，对另外一个没有影响。每增加一个文件名，inode节点上的链接数增加一，每删除一个对应的文件名，inode节点上的链接数减一，直到为0，inode节点和对应的数据块被回收。注：文件和文件名是不同的东西，rm A删除的只是A这个文件名，而A对应的数据块（文件）只有在inode节点链接数减少为0的时候才会被系统回收。"
 				}
 			]
 		},
@@ -1443,7 +2644,20 @@
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "A是B的软链接（A和B都是文件名），A的目录项中的inode节点号与B的目录项中的inode节点号不相同，A和B指向的是两个不同的inode，继而指向两块不同的数据块。但是A的数据块中存放的只是B的路径名（可以根据这个找到B的目录项）。A和B之间是“主从”关系，如果B被删除了，A仍然存在（因为两个是不同的文件），但指向的是一个无效的链接。"
+					"Data": "A是B的软链接（A和B都是文件名），A的目录项中的inode节点号与B的目录项中的inode节点号不相同，A和B指向的是两个不同的inode，继而指向两块不同的数据块。但是A的数据块中存放的只是B的路径名（可以根据这个找到B的目录项）。"
+				}
+			]
+		},
+		{
+			"ID": "20230426144804-ijmlzqq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230426144804-ijmlzqq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "A和B之间是“主从”关系，如果B被删除了，A仍然存在（因为两个是不同的文件），但指向的是一个无效的链接。"
 				}
 			]
 		},

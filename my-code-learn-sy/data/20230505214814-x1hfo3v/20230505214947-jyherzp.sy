@@ -1,0 +1,1207 @@
+{
+	"ID": "20230505214947-jyherzp",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230505214947-jyherzp",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230505215003-puqg2x9\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230505214947-qzjvcvj\u0026quot;,\u0026quot;scrollTop\u0026quot;:3580,\u0026quot;focusId\u0026quot;:\u0026quot;20230505215003-l02xtap\u0026quot;,\u0026quot;focusStart\u0026quot;:26,\u0026quot;focusEnd\u0026quot;:26}",
+		"title": "Docker 容器数据卷",
+		"updated": "20230505215003"
+	},
+	"Children": [
+		{
+			"ID": "20230505215003-puqg2x9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215003-puqg2x9",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "是什么"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-b26mesy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-b26mesy",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "一句话:有点类似我们Redis里面的rdb和aof文件"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-oyzyz7y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-oyzyz7y",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "也就是将docker容器内的数据保存进宿主机的磁盘中"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-0bpzhhy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-0bpzhhy",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运行一个带有容器卷存储功能的容器实例"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-c8zyer1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230505215003-c8zyer1",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": " docker run -it --privileged=true -v /宿主机绝对路径目录:/容器内目录      镜像名\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-a8rafq7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-a8rafq7",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "坑：容器卷记得加入"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "--privileged=true"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-lc75hzp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-lc75hzp",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为什么需要加 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "--privileged=true"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 这个参数"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-l8uh3me",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215003-l8uh3me",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215003-ydlcqy0",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215003-ydlcqy0",
+						"updated": "20230505215003"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "Docker挂载主机目录访问如果出现cannot open directory .: Permission denied\n解决办法：在挂载目录后多加一个"
+						},
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "code",
+							"TextMarkTextContent": "--privileged=true"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "​参数即可"
+						}
+					]
+				},
+				{
+					"ID": "20230505215003-c1ijxky",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215003-c1ijxky",
+						"updated": "20230505215003"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "如果是CentOS7安全模块会比之前系统版本加强，不安全的会先禁止，所以目录挂载的情况被默认为不安全的行为\n在SELinux里面挂载目录被禁止掉了额，如果要开启，我们一般使用--privileged=true命令，扩大容器的权限解决挂载目录没有权限的问题，也即使用该参数，container内的root拥有真正的root权限，否则，container内的root只是外部的一个普通用户权限。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-bjnbvlq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215003-bjnbvlq",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-g676cyx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-g676cyx",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将运用与运行的环境打包镜像，run后形成容器实例运行 ，但是我们对数据的要求希望是"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "持久化的"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-g2hkia8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-g2hkia8",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Docker容器产生的数据，如果不备份，那么当容器实例删除后，容器内的数据自然也就没有了。\n为了能保存数据在docker中我们使用卷。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-zv15udb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-zv15udb",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "特点："
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-ljt4pgn",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230505215003-ljt4pgn",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"ID": "20230505215003-8lbns8t",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230505215003-8lbns8t",
+						"updated": "20230505215003"
+					},
+					"Children": [
+						{
+							"ID": "20230505215003-a1lgfmp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215003-a1lgfmp",
+								"updated": "20230505215003"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据卷可在容器之间共享或重用数据"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230505215003-csf68ph",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230505215003-csf68ph",
+						"updated": "20230505215003"
+					},
+					"Children": [
+						{
+							"ID": "20230505215003-exq40kt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215003-exq40kt",
+								"updated": "20230505215003"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "卷中的更改可以直接实时生效，爽"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230505215003-fuf5rnj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "My4=",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20230505215003-fuf5rnj",
+						"updated": "20230505215003"
+					},
+					"Children": [
+						{
+							"ID": "20230505215003-3c5covo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215003-3c5covo",
+								"updated": "20230505215003"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据卷中的更改不会包含在镜像的更新中"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230505215003-343e2he",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "NC4=",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20230505215003-343e2he",
+						"updated": "20230505215003"
+					},
+					"Children": [
+						{
+							"ID": "20230505215003-l2611l9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215003-l2611l9",
+								"updated": "20230505215003"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据卷的生命周期一直持续到没有容器使用它为止"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-kehoi3n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215003-kehoi3n",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据卷案例"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-hq0swbc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215003-hq0swbc",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "宿主vs容器之间映射添加容器卷"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-15hn2wf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-15hn2wf",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "公式:"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-pg0jpyl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230505215003-pg0jpyl",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "docker run -it --privileged=true -v /宿主机目录:/容器内目录 ubuntu /bin/bash\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-p54bhae",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-p54bhae",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501155357.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-n48b5cr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230505215003-n48b5cr",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看数据卷是否挂载成功"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-jpf2i4v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-jpf2i4v",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 [[Docker常见命令#查看容器内部细节|docker inspect 容器ID]] 命令中的 Mounts数据项 查看数据卷是否挂载成功"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-5xcfrxs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-5xcfrxs",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501155620.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-sv83xyl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230505215003-sv83xyl",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "容器和宿主机之间的数据共享"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-o0ssscp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20230505215003-o0ssscp",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "docker修改，主机同步获得"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-lx60oes",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-lx60oes",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这问题上图已经验证\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501155357.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-dx1ynk8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20230505215003-dx1ynk8",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主机修改，docker同步获得"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-yj9c0re",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-yj9c0re",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501160705.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-w4f5bfa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20230505215003-w4f5bfa",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "docker容器stop，主机修改，docker容器重启看数据是否同步"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-pzc4mfx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-pzc4mfx",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501161149.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-67jw38s",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215003-67jw38s",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读写规则映射添加说明"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-oei2fq4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230505215003-oei2fq4",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读写"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-yd61hj6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230505215003-yd61hj6",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": " docker run -it --privileged=true -v /宿主机绝对路径目录:/容器内目录:rw   镜像名\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-1htgcpg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-1htgcpg",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的案例默认都是读写的"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-172pk63",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230505215003-172pk63",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "只读"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-kj0ylb9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-kj0ylb9",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "容器实例内部被限制，只能读取不能写"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-996or9q",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230505215003-996or9q",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "docker run -it --privileged=true -v /宿主机绝对路径目录:/容器内目录:ro 镜像名\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-uzosrbo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-uzosrbo",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ro == read only"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-hpra00d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-hpra00d",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501191540.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-m6jbib4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-m6jbib4",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501192454.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-r5evrzh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215003-r5evrzh",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "卷的继承和共享"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-0kdmmu7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230505215003-0kdmmu7",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c2hlbGw="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "docker run -it  --privileged=true --volumes-from 父类  --name u2 ubuntu\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-mzknl31",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-mzknl31",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ubuntu2"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​来继承"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ubuntu1"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​的数据卷\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501212030.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215003-l02xtap",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215003-l02xtap",
+				"updated": "20230505215003"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ubuntu1"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 容器被删除会怎么样\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230501212515.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505214947-qzjvcvj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505214947-qzjvcvj",
+				"updated": "20230505214947"
+			}
+		}
+	]
+}

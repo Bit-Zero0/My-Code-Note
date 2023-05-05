@@ -1,0 +1,2262 @@
+{
+	"ID": "20230505215204-5vj28bg",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230505215204-5vj28bg",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230505215211-cb48y2l\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230505215211-2hyuq2g\u0026quot;,\u0026quot;scrollTop\u0026quot;:12760,\u0026quot;focusId\u0026quot;:\u0026quot;20230505215211-ku5139s\u0026quot;,\u0026quot;focusStart\u0026quot;:97,\u0026quot;focusEnd\u0026quot;:97}",
+		"title": "Redis单线程 VS 多线程",
+		"updated": "20230505215211"
+	},
+	"Children": [
+		{
+			"ID": "20230505215211-cb48y2l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215211-cb48y2l",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "面试题"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-0r9tavi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-0r9tavi",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "redis到底是单线程还是多线程?"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-nire0sb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-nire0sb",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IO多路复用听说过吗?"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-syzej5t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-syzej5t",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "redis为什么快?"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-1g56o9i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215211-1g56o9i",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis为什么选择单线程?"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-oizw8tx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-oizw8tx",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这种问法其实并不严谨，为啥这么说呢?"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-1cjwums",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-1cjwums",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-8gv87tc",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215211-8gv87tc",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "Redis的版本很多3.x、4.x、6.x，版本不同架构也是不同的，不限定版本问是否单线程也不太严谨。"
+						}
+					]
+				},
+				{
+					"ID": "20230505215211-cbof2vp",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20230505215211-cbof2vp",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-ojv79o9",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20230505215211-ojv79o9",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-yukxvex",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-yukxvex",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "版本3.x ，最早版本，也就是大家口口相传的redis是单线程，阳哥2016年讲解的redis就是3.X的版本。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230505215211-jfgojt4",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20230505215211-jfgojt4",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-z8yo19b",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-z8yo19b",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "版本4.x，严格意义来说也不是单线程，而是负责处理客户端请求的线程是单线程，但是"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "开始加了点多线程的东西(异步删除)"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230505215211-kp6fixs",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20230505215211-kp6fixs",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-iavc47l",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-iavc47l",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "2020年5月版本的"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "6.0.x后及2022年出的7.0版本后"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "，"
+										},
+										{
+											"Type": "NodeTextMark",
+											"TextMarkType": "strong",
+											"TextMarkTextContent": "告别了大家印象中的单线程，用一种全新的多线程来解决问题"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "。---实锤"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-weke3ih",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-weke3ih",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有几个里程碑式的重要版本\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504155021.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-pueoidu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-pueoidu",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis的单线程"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-1yatre8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-1yatre8",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主要是指Redis的网络IO和键值对读写是由一个线程来完成的，Redis在处理客户端的请求时包括获取 (socket 读)、解析、执行、内容返回 (socket 写) 等都由一个顺序串行的主线程处理，这就是所谓的“单线程”。这也是Redis对外提供键值存储服务的主要流程。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504155200.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-fm2ubec",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-fm2ubec",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但Redis的其他功能，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "比如持久化RDB、AOF、异步删除、集群数据同步等等，其实是由额外的线程执行的。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-7464sw1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-7464sw1",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Redis命令工作线程是单线程的，但是，整个Redis来说，是多线程的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-e63bswx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-e63bswx",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis3.x 单线程时代性能依旧很快的主要原因"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-qca5u2b",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20230505215211-qca5u2b",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"ID": "20230505215211-ih30nf3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230505215211-ih30nf3",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-d483qly",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215211-d483qly",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基于内存操作:Redis的所有数据都存在内存中，因此所有的运算都是内存级别的，所以他的性能比较高;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230505215211-qvxqlsc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230505215211-qvxqlsc",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-cdc3k5z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215211-cdc3k5z",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据结构简单: Redis 的数据结构是专门设计的，而这些简单的数据结构的查我和操作的时间大部分复杂度都是O(1)，因此性能比较高;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230505215211-xo8btgd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230505215211-xo8btgd",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-u8rpjbg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215211-u8rpjbg",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多路复用和非阻塞I/O:Redis使用/O多路复用功能来监听多个socket连接客户端，这样就可以使用一个线程连接来处理多个请求，减少线程切换带来的开销，同时也避免了I/0阻塞操作"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230505215211-t0poeq8",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20230505215211-t0poeq8",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-ni975io",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215211-ni975io",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "避免上下文切换:因为是单线程模型，因此就避免了不必要的上下文切换和多线程竞争，这就省去了多线程切换带来的时间和性能上的消耗，而且单线程不会导致死锁门题的发生"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-kwwozrd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-kwwozrd",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "官网原话\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504155704.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-z5z65bk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-z5z65bk",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504155710.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n他的大体意思是说 Redis 是基于内存操作的，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "因此他的瓶颈可能是机器的内存或者网络带宽而并非 CPU"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，既然 CPU 不是瓶颈，那么自然就采用单线程的解决方案了，况且使用多线程比较麻烦。"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "但是在 Redis 4.0 中开始支持多线程了，例如后台删除、备份等功能"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-qf04aps",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-qf04aps",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504155755.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-ojv3b6l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-ojv3b6l",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "简单来说，Redis4.0之前一直采用单线程的主要原因有以下三个："
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-ocbxncy",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-ocbxncy",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-q09wu0j",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20230505215211-q09wu0j",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-7kqfmsd",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20230505215211-7kqfmsd",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-0tdsnqm",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-0tdsnqm",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "使用单线程模型是 Redis 的开发和维护更简单，因为单线程模型方便开发和调试；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230505215211-c8danvj",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20230505215211-c8danvj",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-058jq5b",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-058jq5b",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "即使使用单线程模型也并发的处理多客户端的请求，主要使用的是IO多路复用和非阻塞IO；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230505215211-v41aavs",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20230505215211-v41aavs",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-vtf4d9y",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-vtf4d9y",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "对于Redis系统来说，主要的性能瓶颈是内存或者网络带宽而并非 CPU。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-4xrtxon",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215211-4xrtxon",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "既然单线程这么好，为什么逐渐又加入了多线程特性?"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-ddetiuc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-ddetiuc",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "单线程的烦恼"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-gplg7eg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-gplg7eg",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "正常情况下使用 "
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "del"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​ 指令可以很快的删除数据，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "而当被删除的 key 是一个非常大的对象时，例如时包含了成千上万个元素的 hash 集合时，那么 del 指令就会造成 Redis 主线程卡顿"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-evrmihp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-evrmihp",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这就是redis3.x单线程时代最经典的故障，大key删除的头疼问题，"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-4euwktn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-4euwktn",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于redis是单线程的，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "del  bigKey ....."
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-gchm4cy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-gchm4cy",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "等待很久这个线程才会释放，类似加了一个synchronized锁，你可以想象高并发下，程序堵成什么样子？"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-kqdl8fy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-kqdl8fy",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "bigkey删除问题解决"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-z5i2y88",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-z5i2y88",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如当我（Redis）需要删除一个很大的数据时，因为是单线程原子命令操作，这就会导致 Redis 服务卡顿，"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-csai94k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-csai94k",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "于是在 Redis 4.0 中就新增了多线程的模块，当然此版本中的多线程主要是为了解决删除数据效率比较低的问题的。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-1uchgaz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230505215211-1uchgaz",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "unlink key\n\nflushdb async\n\nflushall async\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-eqjymij",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-eqjymij",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这三个命令就是把删除工作交给了后台的小弟（子线程）异步来删除数据了。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-z792dae",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-z792dae",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-4gyjhi4",
+					"Type": "NodeList",
+					"ListData": {},
+					"Properties": {
+						"id": "20230505215211-4gyjhi4",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-wcw0lc1",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20230505215211-wcw0lc1",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-h0xvbb2",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-h0xvbb2",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "因为Redis是单个主线程处理，redis之父antirez一直强调\"Lazy Redis is better Redis\"."
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230505215211-m4ejl6u",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20230505215211-m4ejl6u",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-n56is2h",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-n56is2h",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "而lazy free的本质就是把某些cost(主要时间复制度，占用主线程cpu时间片)较高删除操作，"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20230505215211-j06272s",
+							"Type": "NodeListItem",
+							"ListData": {
+								"BulletChar": 42,
+								"Marker": "Kg=="
+							},
+							"Properties": {
+								"id": "20230505215211-j06272s",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"ID": "20230505215211-y3h3wpo",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20230505215211-y3h3wpo",
+										"updated": "20230505215211"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "从redis主线程剥离让bio子线程来处理，极大地减少主线阻塞时间。从而减少删除导致性能和稳定性问题。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-y9msyn7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-y9msyn7",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Redis 4.0就引入了多个线程来实现数据的异步惰性删除等功能，但是其处理读写请求的仍然只有一个线程，所以仍然算是狭义上的单线程"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-cm5cizy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215211-cm5cizy",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis6/7 多线程特性和IO多路复用"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-68bttdr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-68bttdr",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对于Redis主要的性能瓶颈是内存或者网络带宽而并非CPU"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504161424.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "但是现在我们的电脑内存基本最少都是8GB了, 服务器级别甚至能达到几TB , 所以内存也不再是限制"
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ,所以"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "目前的限制只有网络IO"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-bsor5xk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-bsor5xk",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis的瓶颈: 网络IO"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-q05z9n3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-q05z9n3",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "在Redis6/7中，非常受关注的第一个新特性就是多线程"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-fx2c0cg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-fx2c0cg",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这是因为，Redis一直被大家熟知的就是它的单线程架构，虽然有些命令操作可以用后台线程或子进程执行（比如数据删除、快照生成、AOF重写）。但是，从网络IO处理到实际的读写命令处理，都是由单个线程完成的。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-gslz3u5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-gslz3u5",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "随着网络硬件的性能提升，Redis的性能瓶颈有时会出现在网络IO的处理上，也就是说，单个主线程处理网络请求的速度跟不上底层网络硬件的速度,"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-04ifcsz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-04ifcsz",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了应对这个问题:"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-7vpsadw",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-7vpsadw",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-665fcww",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215211-665fcww",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"Type": "NodeTextMark",
+							"TextMarkType": "strong",
+							"TextMarkTextContent": "采用多个IO线程来处理网络请求，提高网络请求处理的并行度，Redis6/7就是采用的这种方法"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-w0xl11c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-w0xl11c",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是，Redis的多IO线程只是用来处理网络请求的，"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对于读写操作命令Redis仍然使用单线程来处理"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。这是因为，Redis处理请求时，网络处理经常是瓶颈，通过多个IO线程并行处理网络操作，可以提升实例的整体处理性能。而继续使用单线程执行命令操作，就不用为了保证Lua脚本、事务的原子性，额外开发多线程"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "互斥加锁机制了(不管加锁操作处理)"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这样一来，Redis线程模型实现就简单了"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-bvm74qc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-bvm74qc",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主线程和IO线程之间怎么协作"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-gyjppom",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-gyjppom",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "预备知识[[网络编程套接字]]"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-n2czo7e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-n2czo7e",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504162019.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-xkir4af",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-xkir4af",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "阶段一:服务端和客户端建立Socket连接，并分配处理线程"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-5dzd1cp",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-5dzd1cp",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-m1av0mq",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215211-m1av0mq",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "首先，主线程负责接收建立连接请求。当有客户端请求和实例建立Socket连接时，主线程会创建和客户端的连接，并把Socket放入全局等待队列中。紧接着，主线程通过轮询方法把Socket连接分配给IO线程。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-87vvlyw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-87vvlyw",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "阶段二:IO线程读取并解析请求"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-cgb5eqd",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-cgb5eqd",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-z7rqqc1",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215211-z7rqqc1",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "主线程一旦把Socket分配给IO线程，就会进入阻塞状态，等待IO线程完成客户端请求读取和解析。因为有多个IO线程在并行处理，所以，这个过程很快就可以完成。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-xyp5ifd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-xyp5ifd",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "阶段三:主线程执行请求操作"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-mekxg1w",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-mekxg1w",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-5mdlz3o",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215211-5mdlz3o",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "等到IO线程解析完请求，主线程还是会以单线程的方式执行这些命令操作。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-5v78wxt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-5v78wxt",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "阶段四:IO线程回写Socket和主线程清空全局队列"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-zrncdls",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-zrncdls",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-tvtk5nn",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215211-tvtk5nn",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "当主线程执行完请求操作后，会把需要返回的结果写入缓冲区，然后，主线程会阻塞等待I0线程，把这些结果回写到Socket中，并返回给客户端。\n和IO线程读取和解析请求一样，I0线程回写Socket时，也是有多个线程在并发执行，所以回写Socket的速度也很快。等到IO线程回写Socket完毕，主线程会清空全局队列，等待客户端的后续请求。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-81l8syq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-81l8syq",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504162127.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-8umfmh2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215211-8umfmh2",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Unix网络编程中的五种IO模型"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-udg9oc4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-udg9oc4",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "![[网络IO模型#五种IO模型]]"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-z4ii7c8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-z4ii7c8",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504163101.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-fbv1ib6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-fbv1ib6",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "面试题： redis为什么这么快"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-v844jpu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-v844jpu",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "IO多路复用+epoll函数使用，才是redis为什么这么快的直接原因，而不是仅仅单线程命令+redis安装在内存中。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-sud3fwi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215211-sud3fwi",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-gxuguvu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-gxuguvu",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "Redis工作线程是单线程的，但是,整个Redis来说，是多线程的;"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-4x1ye0l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-4x1ye0l",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis6→7将网络数据读写、请求协议解析通过多个IO线程的来处理 ，对于真正的命令执行来说，仍然使用主线程操作，一举两得.\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504163726.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-18bcgdx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230505215211-18bcgdx",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主线程和IO线程之间怎么协作(精简版)"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-jruf3ts",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-jruf3ts",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "I/O 的读和写本身是堵塞的，比如当 socket 中有数据时，Redis 会通过调用先将数据从内核态空间拷贝到用户态空间，再交给 Redis 调用，而这个拷贝的过程就是阻塞的，当数据量越大时拷贝所需要的时间就越多，而这些操作都是基于单线程完成的。\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504163355.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-o1p39z5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-o1p39z5",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "从Redis6开始，就新增了多线程的功能来提高 I/O 的读写性能，他的主要实现思路是将主线程的 IO 读写任务拆分给一组独立的线程去执行，这样就可以使多个 socket 的读写可以并行化了，采用多路 I/O 复用技术可以让单个线程高效的处理多个连接请求（尽量减少网络IO的时间消耗），将最耗时的Socket的读取、请求解析、写入单独外包出去，剩下的命令执行仍然由主线程串行执行并和内存的数据交互。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-u0rbv7q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-u0rbv7q",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504163407.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-8obl9e4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-8obl9e4",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结合上图可知，网络IO操作就变成多线程化了，其他核心部分仍然是线程安全的，是个不错的折中办法。"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-s55x7sn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230505215211-s55x7sn",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis7如何开启多线程"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-4d1cacf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-4d1cacf",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果你在实际应用中，发现Redis实例的CPU开销不大但吞吐量却没有提升，可以考虑使用Redis7的多线程机制，加速网络处理，进而提升实例的吞吐量"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-gdy2546",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20230505215211-gdy2546",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20230505215211-1xjfx2s",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20230505215211-1xjfx2s",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "Redis7将所有数据放在内存中，内存的响应时长大约为100纳秒，对于小数据包，Redis服务器可以处理8W到10W的QPS，这也是Redis处理的极限了，对于80%的公司来说，单线程的Redis已经足够使用了。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-40gvo4z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-40gvo4z",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Redis6.0及7后，多线程机制默认是关闭的"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，如果需要使用多线程功能，需要在redis.conf中完成两个设置"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-qv6bmsc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-qv6bmsc",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504164053.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-mivfea1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230505215211-mivfea1",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504164059.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "​"
+				}
+			]
+		},
+		{
+			"ID": "20230505215211-2hyuq2g",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1
+			},
+			"Properties": {
+				"id": "20230505215211-2hyuq2g",
+				"updated": "20230505215211"
+			},
+			"Children": [
+				{
+					"ID": "20230505215211-o2wlrt1",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "MS4=",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20230505215211-o2wlrt1",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-g9qk0mv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215211-g9qk0mv",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "设置"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "io-thread-do-reads"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​配置项为"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "yes"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "​，表示启动多线程。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20230505215211-b0u6tva",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20230505215211-b0u6tva",
+						"updated": "20230505215211"
+					},
+					"Children": [
+						{
+							"ID": "20230505215211-ku5139s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20230505215211-ku5139s",
+								"updated": "20230505215211"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "设置线程个数。关于线程数的设置，官方的建议是如果为 4 核的 CPU，建议线程数设置为 2 或 3，"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "如果为 8 核 CPU 建议线程数设置为 6"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，线程数一定要小于机器核数，线程数并不是越大越好。"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
