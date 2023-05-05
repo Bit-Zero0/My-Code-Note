@@ -1,0 +1,276 @@
+{
+	"ID": "20230327221035-7ow73vv",
+	"Spec": "1",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20230327221035-7ow73vv",
+		"scroll": "{\u0026quot;startId\u0026quot;:\u0026quot;20230327221045-fyfh3pp\u0026quot;,\u0026quot;endId\u0026quot;:\u0026quot;20230327221100-q5r777l\u0026quot;,\u0026quot;scrollTop\u0026quot;:0,\u0026quot;focusId\u0026quot;:\u0026quot;20230327221100-7uo7a0g\u0026quot;,\u0026quot;focusStart\u0026quot;:0,\u0026quot;focusEnd\u0026quot;:0}",
+		"title": "解题模板",
+		"updated": "20230504161044"
+	},
+	"Children": [
+		{
+			"ID": "20230327221045-fyfh3pp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20230327221045-fyfh3pp",
+				"updated": "20230327221142"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "滑动窗口"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-7uo7a0g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221100-7uo7a0g",
+				"updated": "20230327221108"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "滑动窗口应用场景"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-fqm31gh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221100-fqm31gh",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "算法题应用场景:关键词:\n满足XXX条件(计算结果，出现次数，同时包含)\n"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "最长/最短"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n子串/子数组/子序列"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-t3fv1ih",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221100-t3fv1ih",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如:长度最小的子数组"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-18xgtrm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20230327221100-18xgtrm",
+				"updated": "20230327221112"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "滑动窗口使用思路"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-e1b0mq9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230327221100-e1b0mq9",
+				"updated": "20230327221118"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "滑动窗口寻找最长"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-ujy7t8g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221100-ujy7t8g",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "核心"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 左右双指针(L , R) 在起始点 ,R向右逐位滑动循环"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-nlz525j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221100-nlz525j",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每次滑动过程中\n\t- 如果:窗内元素满足条件，R向右扩大窗口，并更新最优结果\n\t- 如果:窗内元素不满足条件，L向右缩小窗口\nR到达结尾"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-5wkiqd0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230327221100-5wkiqd0",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "初始化left , right , result , bestResult\nwhile(右指针没有到结尾)\n{\n\t窗口扩大,加入right对应的元素,更新当前result.\n\twhile(result 不满足要求)\n\t{\n\t\t窗口缩小,移除left对应元素, left右移\n\t}\n\t更新最有结果bestResult\n\tright++;\n}\n返回bestResult;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230327221126-sij09ue",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221126-sij09ue"
+			}
+		},
+		{
+			"ID": "20230327221100-m6cveef",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20230327221100-m6cveef",
+				"updated": "20230327221123"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "滑动窗口寻找最短"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-80gpsr8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221100-80gpsr8",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "核心"
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":左右双指针(L，R)在起始点，R向右逐位滑动循环"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-mdgfxsg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221100-mdgfxsg",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每次滑动过程中\n\t- 如果:窗内元素满足条件，L向右缩小窗口，并更新最优结果\n\t- 如果:窗内元素不满足条件，R向右扩大窗口\nR到达结尾"
+				}
+			]
+		},
+		{
+			"ID": "20230327221100-q5r777l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20230327221100-q5r777l",
+				"updated": "20230327221100"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "初始化left , right , result , bestResult\nwhile(右指针没有到结尾)\n{\n\t窗口扩大,加入right对应的元素,更新当前result.\n\twhile(result 满足要求)\n\t{\n\t\t更新最有结果bestResult\n\t\t窗口缩小,移除left对应元素, left右移\n\t}\n\tright++;\n}\n返回bestResult;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20230327221425-4e0ejo4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230327221425-4e0ejo4",
+				"updated": "20230327221439"
+			},
+			"Children": [
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "block-ref",
+					"TextMarkBlockRefID": "20230327221253-2arv9r1",
+					"TextMarkBlockRefSubtype": "d",
+					"TextMarkTextContent": "209.长度最小的子数组"
+				}
+			]
+		},
+		{
+			"ID": "20230504161044-sdk9qww",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20230504161044-sdk9qww"
+			}
+		}
+	]
+}
