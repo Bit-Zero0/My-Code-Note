@@ -53,11 +53,10 @@ public class MainActivity extends AppCompatActivity {
 后面我会对布局进行详细讲解的，你现在只需要看到上面代码中有一个**TextView**，**这是Android系统提供的一个控件**，用于在布局中显示文字的。然后你终于在TextView中看到了Hello World！的字样！哈哈！终于找到了，原来就是通过`android:text="Hello World! "`这句代码定义的
 
 ## 详解项目中的资源
-
-![[Pasted image 20230313143245.png]]  
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504223833.png)
 所有以drawable开头的文件夹都是**用来放图片的**，所有以mipmap开头的文件夹都是用来**放应用图标的**，所有以values开头的文件夹都是用来**放字符串、样式、颜色等配置的**，layout文件夹是用来**放布局文件**的。
 
-![[Pasted image 20230313143750.png]]  
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230504223842.png)
 **mipmap**开头的文件夹，其实主要是为了让程序能够更好地兼容各种设备。**drawable**文件夹也是相同的道理，虽然Android Studio没有帮我们自动生成，但是我们应该自己创建**drawable-hdpi**、**drawable-xhdpi**、**drawable-xxhdpi**等文件夹。在制作程序的时候最好能够给同一张图片提供几个不同分辨率的版本，分别放在这些文件夹下，然后当程序运行的时候，会自动根据当前运行设备分辨率的高低选择加载哪个文件夹下的图片。当然这只是理想情况，更多的时候美工只会提供给我们一份图片，这时你就把所有图片都放在drawable-xxhdpi文件夹下就好了。
 
 知道了res目录下每个文件夹的含义，我们再来看一下如何去使用这些资源吧。打开**res/values/strings.xml**文件，内容如下所示：

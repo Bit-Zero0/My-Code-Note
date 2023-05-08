@@ -4,8 +4,6 @@
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315201714.png)
 
 
-
-
 ## 线程的优缺点
 ### 线程的优点
 - 创建一个新线程的代价要比创建一个新进程小得多
