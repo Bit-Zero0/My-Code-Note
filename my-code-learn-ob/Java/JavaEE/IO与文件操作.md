@@ -18,9 +18,9 @@ Java 中通过 java.io.File 类来对一个文件（包括目录）进行抽象�
 ***构造方法***
 |签名 | 说明|
 |:--|:--|
-|`File(File parent, Stringchild)` | 根据父目录 + 孩子文件路径，创建一个新的 File 实例|
+|`File(File parent, String child)` | 根据父目录 + 孩子文件路径，创建一个新的 File 实例|
 |`File(String pathname)`|根据文件路径创建一个新的 File 实例，路径可以是绝对路径或者相对路径|
-|`File(String parent, Stringchild)`| 根据父目录 + 孩子文件路径，创建一个新的 File 实例，父目录用 | 路径表示|
+|`File(String parent, String child)`| 根据父目录 + 孩子文件路径，创建一个新的 File 实例，父目录用 | 路径表示|
 
 
 ***方法***
@@ -37,11 +37,11 @@ Java 中通过 java.io.File 类来对一个文件（包括目录）进行抽象�
 |`boolean createNewFile()`|  根据 File 对象，自动创建一个空文件。成功创建后返回 true|
 |`boolean delete()`| 根据 File 对象，删除该文件。成功删除后返回 true|
 |`void deleteOnExit()`|  根据 File 对象，标注文件将被删除，删除动作会到JVM 运行结束时才会进行|
-|`String[] list`|() 返回 File 对象代表的目录下的所有文件名|
-|`File[] listFiles`|() 返回 File 对象代表的目录下的所有文件，以 File 对象表示|
+|`String[] list()`| 返回 File 对象代表的目录下的所有文件名|
+|`File[] listFiles()`|返回 File 对象代表的目录下的所有文件，以 File 对象表示|
 |`boolean mkdir()`| 创建 File 对象代表的目录|
 |`boolean mkdirs()`| 创建 File 对象代表的目录，如果必要，会创建中间目录|
-|`boolean renameTo(`|Filedest) 进行文件改名，也可以视为我们平时的剪切、粘贴操作|
+|`boolean renameTo(Filedest)`| 进行文件改名，也可以视为我们平时的剪切、粘贴操作|
 |`boolean canRead()`| 判断用户是否对文件有可读权限|
 |`boolean canWrite()`| 判断用户是否对文件有可写权限|
 
@@ -246,9 +246,265 @@ false
 true
 ```
 
+# IO流的原理及流的分类
+`java.io`包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过`标准的方法`输入或输出数据。
+-   按==**数据的流向**==不同分为：**输入流**和**输出流**。
+    -   **输入流** ：把数据从`其他设备`上读取到`内存`中的流。
+        -   以InputStream、Reader结尾
+            
+    -   **输出流** ：把数据从`内存` 中写出到`其他设备`上的流。
+        -   以OutputStream、Writer结尾
 
-# 文件内容的读写---数据流
+
+-   按==**操作数据单位**==的不同分为：**字节流（8bit）** 和 **字符流（16bit）**。    
+    -   **字节流** ：以字节为单位，读写数据的流。
+        -   以InputStream、OutputStream结尾
+        
+    -   **字符流** ：以字符为单位，读写数据的流。        
+        -   以Reader、Writer结尾
+
+
+-   根据==**IO流的角色**==不同分为：**节点流**和**处理流**。
+	- **节点流**：直接从数据源或目的地读写数据
+	    - ![image-20220412230745170.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220412230745170.png)
+
+	- **处理流**：不直接连接到数据源或目的地，而是“连接”在已存在的流（节点流或处理流）之上，通过对数据的处理为程序提供更为强大的读写功能。
+		- ![image-20220412230751461.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220412230751461.png)
+
+## 流的API
+Java的IO流共涉及40多个类，实际上非常规则，都是从如下4个抽象基类派生的。
+
+| （抽象基类） |   输入流    |    输出流    |
+| :----------: | :---------: | :----------: |
+|    字节流    | InputStream | OutputStream |
+|    字符流    |   Reader    |    Writer    |
+
+![image-20220412230501953.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220412230501953.png)
+
+### 常用的节点流
+文件流： FileInputStream、FileOutputStrean、FileReader、FileWriter 
+
+字节/字符数组流： ByteArrayInputStream、ByteArrayOutputStream、CharArrayReader、CharArrayWriter 
+  * 对数组进行处理的节点流（对应的不再是文件，而是内存中的一个数组）。
+
+# 字符流
+## Reader与Writer
+
+Java提供一些字符流类，以字符为单位读写数据，专门用于处理文本文件。不能操作图片，视频等非文本文件。
+
+> 常见的文本文件有如下的格式：.txt、.java、.c、.cpp、.py等
+> 
+> 注意：.doc、.xls、.ppt这些都不是文本文件。
+
+### 字符输入流：Reader
+`java.io.Reader`抽象类是表示用于读取字符流的所有类的父类，可以读取字符信息到内存中。它定义了字符输入流的基本共性功能方法。
+
+-   `public int read()`： 从输入流读取一个字符。 虽然读取了一个字符，但是会自动提升为int类型。返回该字符的Unicode编码值。如果已经到达流末尾了，则返回-1。
+    
+-   `public int read(char[] cbuf)`： 从输入流中读取一些字符，并将它们存储到字符数组 cbuf中 。每次最多读取cbuf.length个字符。返回实际读取的字符个数。如果已经到达流末尾，没有数据可读，则返回-1。
+    
+-   `public int read(char[] cbuf,int off,int len)`：从输入流中读取一些字符，并将它们存储到字符数组 cbuf中，从cbuf[off]开始的位置存储。每次最多读取len个字符。返回实际读取的字符个数。如果已经到达流末尾，没有数据可读，则返回-1。
+    
+-   `public void close()` ：关闭此流并释放与此流相关联的任何系统资源。
+> 注意：当完成流的操作时，必须调用close()方法，释放系统资源，否则会造成内存泄漏。
+
+
+### 字符输出流：Writer
+`java.io.Writer`抽象类是表示用于写出字符流的所有类的超类，将指定的字符信息写出到目的地。它定义了字节输出流的基本共性功能方法。
+
+-   `public void write(int c)` ：写出单个字符。
+    
+-   `public void write(char[] cbuf)`：写出字符数组。
+    
+-   `public void write(char[] cbuf, int off, int len)`：写出字符数组的某一部分。off：数组的开始索引；len：写出的字符个数。
+    
+-   `public void write(String str)`：写出字符串。
+    
+-   `public void write(String str, int off, int len)` ：写出字符串的某一部分。off：字符串的开始索引；len：写出的字符个数。
+    
+-   `public void flush()`：刷新该流的缓冲。
+    
+-   `public void close()` ：关闭此流。
+
+> 注意：当完成流的操作时，必须调用`close()`方法，释放系统资源，否则会造成内存泄漏。
+
+
+## FileReader 与 FileWriter
+### FileReader
+`java.io.FileReader`类用于读取字符文件，构造时使用系统默认的字符编码和默认字节缓冲区。
+-   `FileReader(File file)`： 创建一个新的 FileReader ，给定要读取的File对象。
+    
+-   `FileReader(String fileName)`： 创建一个新的 FileReader ，给定要读取的文件的名称。
+
+**举例：** 读取hello.txt文件中的字符数据，并显示在控制台上
+
+***实现方法1:***
+```java
+public class IODemo {  
+    public static void main(String[] args) throws IOException {  
+        File file = new File("hello.txt");  //创建File类的对象，对应着物理磁盘上的某个文件
+
+		 //创建FileReader流对象，将File类的对象作为参数传递到FileReader的构造器中
+        FileReader fr = new FileReader(file);  
+
+		 //通过相关流的方法，读取文件中的数据
+        int data = 0;  
+        while((data = fr.read()) != -1){  
+            System.out.println((char) data);  
+        }  
+        
+        fr.close();   //关闭相关的流资源，避免出现内存泄漏
+    }  
+}
+```
+
+
+***实现方式1.5：***
+在方式1的基础上改进，使用`try()`处理异常。保证流是可以关闭的.
+```java
+public class IODemo {  
+    public static void main(String[] args) throws IOException {  
+        File file = new File("hello.txt");  
+        try(FileReader fr = new FileReader(file)){  
+            int data = 0;  
+            while((data = fr.read()) != -1){  
+                System.out.print((char) data);  
+            }  
+        }  
+    }  
+}
+```
+
+因为 FileReader 类实现了closeable接口 , 所以可以使用 `try()` 语法糖
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230514171323.png)
+使用`try()`语法糖 , 必须要要我们的类实现了`Closeable`接口 , 当 try()中的数据执行完毕后,会自动调用 `close()` 方法回收资源.
+
+在 `try()` 中可以放多条语句, 使用 `;` 进行分割.
+
+
+***实现方法2:***
+调用`read(char[] cbuf)`,每次从文件中读取多个字符
+```java
+public class IODemo {  
+    public static void main(String[] args) throws IOException {  
+        File file = new File("hello.txt");  
+        try(FileReader fr = new FileReader(file)){  
+            char[] buf = new char[5]; //通过相关流的方法，读取文件中的数据  
+  
+            int len;//记录每次读入的字符的个数  
+            while((len = fr.read(buf)) != -1){  
+                String str = new String(buf , 0 , len);  
+                System.out.print(str);  
+            }  
+        }  
+    }  
+}
+```
+
+这种方法能减少大量的IO次数, 所有效率更高.
+
+
+
+不同实现方式的类比：
+![image-20220518095907714.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220518095907714.png)
+
+
+
+### FileWriter
+`java.io.FileWriter`类用于写出字符到文件，构造时使用系统默认的字符编码和默认字节缓冲区。
+-   `FileWriter(File file)`： 创建一个新的 FileWriter，给定要读取的File对象。
+    
+-   `FileWriter(String fileName)`： 创建一个新的 FileWriter，给定要读取的文件的名称。
+    
+-   `FileWriter(File file,boolean append)`： 创建一个新的 FileWriter，指明是否在现有文件末尾追加内容。
+
+
+***例子1:***
+```java
+public class IODemo {  
+    public static void main(String[] args) throws IOException {  
+        File file = new File("hello.txt");  
+        try(FileWriter fw = new FileWriter(file)){  
+            fw.write(97);  
+            fw.write('b');  
+            fw.write('c');  
+            fw.write(3000);  
+        }  
+    }  
+}
+```
+
+
+
+***例子2:***
+```java
+public class IODemo {  
+    public static void main(String[] args) throws IOException {  
+        File file = new File("hello.txt");  
+        try(FileWriter fw = new FileWriter(file)){  
+            char[] chars = "我爱中国".toCharArray();  
+  
+            // 写出字符数组  
+            fw.write(chars); // 我爱中国  
+  
+            // 写出从索引1开始，3个字符  
+            fw.write(chars , 1 ,3);//爱中国  
+  
+        }  
+    }  
+}
+```
+
+
+***例子3:***
+```java
+public class IODemo {  
+    public static void main(String[] args) throws IOException {  
+        File file = new File("hello.txt");  
+        try(FileWriter fw = new FileWriter(file)){  
+            String str = "I am Bit-zero";  
+  
+            fw.write(str); //I am Bit-zero  
+  
+            // 写出从索引1开始，3个字符  
+            fw.write(str  , 1 , 3);// am  这里的结果包含了空格,所以确实是三个字符  
+  
+        }  
+    }  
+}
+```
+
+
+***例子4:***
+```java
+public class IODemo {  
+    public static void main(String[] args) throws IOException {  
+        File file = new File("hello.txt");  
+        try(FileWriter fw = new FileWriter(file)){  
+            String str = "I am Bit-zero";  
+  
+            fw.write("I love you,");  
+            fw.write("you love him.");  
+            fw.write("so sad".toCharArray());  
+  
+        }  
+    }  
+}
+```
+
+### 小结
+
+对于输出流来说，File类的对象是可以不存在的。
+-  如果File类的对象不存在，则可以在输出的过程中，自动创建File类的对象
+-  如果File类的对象存在，
+	- 如果调用FileWriter(File file)或FileWriter(File file,false)，输出时会新建File文件覆盖已有的文件
+      - 如果调用FileWriter(File file,true)构造器，则在现有的文件末尾追加写出内容。
+
+
+
+# 字节流
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230511163027.png)
+
 
 ## InputStream 概述
 ***方法***
@@ -533,3 +789,41 @@ public class IODemo12 {
     }  
 }
 ```
+
+
+## 拷贝文件到指定目录
+```java
+public class IODemo13 {  
+    public static void main(String[] args) throws IOException {  
+        Scanner scanner = new Scanner(System.in);  
+        System.out.println("请输入要拷贝的文件:");  
+        String srcPath = scanner.next();  
+  
+        System.out.println("请输入要拷贝到的路径");  
+        String destPath = scanner.next();  
+  
+        File srcFile = new File(srcPath);  
+        if(!srcFile.isFile()){  
+            System.out.println("输入的源路径有误");  
+            return;        }  
+  
+        File destFile = new File(destPath);  
+        if(destFile.isFile()){  
+            System.out.println("输入的目标路径有误");  
+            return;        }  
+  
+        //try() 语法支持多个流对象 , 多个流对象之间使用 ; 分割即可  
+        try(InputStream inputStream = new FileInputStream(srcFile);  
+            OutputStream outputStream = new FileOutputStream(destFile)) {  
+            while(true){  
+                int b = inputStream.read();  
+                if(b == -1){  
+                    break;  
+                }  
+                outputStream.write(b);  
+            }  
+        }  
+    }  
+}
+```
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230514121708.png)
