@@ -84,7 +84,7 @@ public class App {
 public class User {  
     public String sayHi(String name){  
         return name + "hello";   
-}  
+	}  
 }
 ```
 
@@ -109,9 +109,12 @@ Spring 配置文件的固定格式为以下内容（以下内容无需记忆，�
 接下来，再将 User 对象注册到 Spring 中就可以，具体操作是在 `<beans>` 中添加如下配置：
 ```java
 <beans>
-	<bean id="user" class="com.bit.User"></bean>
+	<bean id="user" class="User"></bean>
 </beans>
 ```
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230516083633.png)
+
+
 
 完整代码如下:
 ```xml
@@ -137,8 +140,13 @@ Spring 配置文件的固定格式为以下内容（以下内容无需记忆，�
 Spring 上下文对象可使用 ApplicationContext，实现代码如下：
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230514214609.png)
 
+>注意: ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230516084142.png)
+
+
 除了 ApplicationContext 之外，我们还可以使用 BeanFactory 来作为 Spring 的上下文，如下代码所示, (此方法不建议使用, 因为是准备弃用的方法了)
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230514214833.png)
+
+
 
 ApplicationContext 和 BeanFactory 效果是一样的，ApplicationContext 属于 BeanFactory 的子类，它们的区别如下 
 
@@ -167,7 +175,13 @@ Bean 的id要一一对应 , 如下图所示
 
 
 ### getBean方法 的更多用法
-`getBean()` 方法有很多种重载方法，我们也可以使用其他方式来获取 Bean 对象，比如以下这两种：
+`getBean()` 方法有很多种重载方法，我们也可以使用其他方式来获取 Bean 对象，比如以下这三种：
+
+***根据名称获取Bean***
+```java
+User user = (User)context.getBean("user");
+```
+
 
 ***根据类型获取 Bean：***
 ```java

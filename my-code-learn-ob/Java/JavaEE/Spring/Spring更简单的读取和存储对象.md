@@ -5,7 +5,6 @@
 # Bean 命名规则
 通过上述示例，我们可以看出，**通常我们 bean 使用的都是标准的大驼峰命名， 读取的时候首字
 小写就可以获取到 bean 了**，如下图所示：
-
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230515111021.png)
 
 
@@ -24,7 +23,7 @@
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230515111822.png)
 
 
-它使用的是 JDK Introspector 中的 decapitalize 方法，源码如下：
+它使用的是 JDK Introspector 中的 `decapitalize` 方法，源码如下：
 ```java
 public static String decapitalize(String name) {  
     if (name == null || name.length() == 0) {  
@@ -42,7 +41,6 @@ public static String decapitalize(String name) {
 可以看到当前两个字母是大写时 , 就采用原来的就行 
 
 >如: `RBTree`类 , 在获取Bean时 , 命名规则就是 使用 `RBTree`
-
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230515112154.png)
 
 
@@ -55,7 +53,6 @@ public static String decapitalize(String name) {
 
 ## 前置工作: 配置扫描路径(重要)
 注意: 想要将对象成功的存储到Spring中 , 我们需要配置一下存储对象的扫描包路径, 只有**被配置的包下的所有类, 添加了注解才能够被正确的识别并保存到Spring中**.
-
 
 在` spring-config.xml` 配置
 ```xml
@@ -87,24 +84,26 @@ public static String decapitalize(String name) {
 
 ### 为什么需要这么多类注解
 既然功能是一样的，为什么需要这么多的类注解呢？
+-  通过类注解可以了解当前类的用途（看到车牌云A就知道这是昆明的车一样);
+- 功能有细微不同:这个在 Spring MVC/Spring Boot再详细展开。
 >这和为什么每个省/市都有自己的车牌号是一样的？比如陕西的车牌号就是：陕X：XXXXXX，北京的车牌号：京X：XXXXXX，一样。甚至一个省不同的县区也是不同的，比如西安就是，陕A：XXXXX，咸阳：陕B：XXXXXX，宝鸡，陕C：XXXXXX，一样。这样做的好处除了可以节约号码之外，更重要的作用是可以直观的标识一辆车的归属地。
 
-那么为什么需要怎么多的类注解也是相同的原因，就是让程序员看到类注解之后，就能直接了解当前类
-的用途，比如：
-`@Controller`：表示的是业务逻辑层；
-`@Service`：服务层；
-`@Repository`：持久层；
-`@Configuration`：配置层。
+
+那么为什么需要怎么多的类注解也是相同的原因，就是让程序员看到类注解之后，就能直接了解当前类的用途，比如：
+1. `@Controller`(控制器〉﹔归属于业务逻辑层，用来控制用户的行为，它用来检查用户参数的有效性。
+2. `@Service`(服务) :归属于服务层，调用持久化类实现相应的功能。【不直接和数据库交互的，它类似于控制中心】
+3. `@Repository`(仓库)  :归属于持久层，是直接和数据库进行交互的。通常每一个表都会对应一个@Repository 。
+4. `@Configuration`(配置):归属于配置层，是用来配置当前项目的一些信息。
+5. `@Component`(组件):归属于公共工具类，提供某些公共方法。
 
 程序的工程分层，调用流程如下：
-![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230515110323.png)
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230516085139.png)
+
 
 ### 类注解之间的关系
 查看 `@controller / @Service / @Repository / @Configuration` 等注解的源码发现:
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230515110624.png)
 其实这些注解里面都有一个注解 `@Component`，说明它们本身就是属于 `@Component` 的 “子类”。
-
-
 
 
 
@@ -279,7 +278,6 @@ public class Users {
 ## 属性注入
 属性注入是使用 `@Autowired` 实现的，将 Service 类注入到 Controller 类中。
 
-
 **Service 类的实现代码如下：**
 ```java
 @Service  
@@ -331,11 +329,18 @@ public class App {
 核心实现是这句代码
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230515144223.png)
 
+***优点*:**
+- 方便
+- 使用这种方法是主流
+
+***缺点:***
+- 不能注入不可变(final)对象
+	- ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230516085638.png)
+- 只适用于IoC容器
+- 更容易违背单一设计原则. (针对的对象是类)
 
 ## Setter注入
-Setter 注入和属性的 Setter 方法实现类似，只不过**在设置 set 方法的时候需要加上 `@Autowired` 注
-解**
-
+Setter 注入和属性的 Setter 方法实现类似，只不过**在设置 set 方法的时候需要加上 `@Autowired` 注解**
 ```java
 @Controller  
 public class UserController {  
@@ -372,6 +377,13 @@ public class UserController {
 
 >但是如果类中有多个构造方法，那么需要添加上 `@Autowired` 来明确指定到底使用哪个构造方法，否则程序会报错
 
+***优点***
+- 更加符合单一设计原则(针对对象方法级别)
+
+***缺点***
+- 不能注入不可变对象
+- 注入对象可被修改(set方法是普通的set方法, 可以被重复调用, 在被调用是就存在被修改的风险)
+
 
 ## 构造方法注入
 构造方法注入是在类的构造方法中实现注入
@@ -395,6 +407,20 @@ public class UserController {
 
 
 但是如果类中有多个构造方法，那么需要添加上 `@Autowired` 来明确指定到底使用哪个构造方法，否则程序会报错，如下图所示：
+
+
+***优点***
+- 可以注入一个不可变对象.
+- 注入的对象不会被修改
+	- 加了 `final` 修饰符
+	- 构造方法是随着类加载只执行一次(不像set注入有可能被多次修改的风险)
+- 注入的对象会被完全初始化
+- 通用性更好
+- 官方推荐使用
+
+***缺点***
+- 没有属性注入实现简单
+
 
 
 ## 三种注入优缺点分析
