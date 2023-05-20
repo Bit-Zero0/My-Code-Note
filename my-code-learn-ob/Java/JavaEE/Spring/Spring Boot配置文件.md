@@ -307,8 +307,19 @@ public class ReadYml2 {
 }
 ```
 
+[更多Spring boot系统配置项](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties)
+
 # properties VS yml
 - properties是以key=value 的形式配置的键值类型的配置文件，而yml使用的是类似json格式的树形配置方式进行配置的,yml 层级之间使用换行缩进的方式配置，key和value之间使用“:”英文冒号加空格的方式设置，并且空格不可省略。
 - properties为早期并且默认的配置文件格式，但其配置存在一定的冗余数据，使用yml可以很好的解决数据冗余的问题。
 - yml通用性更好，支持更多语言，如Java、Go、Python等，如果是云服务器开发，可以使用一份配置文件作为Java和Go 的共同配置文件。
 - yml支持更多的数据类型。
+
+
+# 设置不同环境的配置文件
+1. 创建不同环境的配置文件：
+>application-dev.yml     这是代表开发环境
+>application-prod.yml    这是代码生产环境
+
+2. 在 application.yml 中设置运行环境
+>spring.profiles.active=dev
