@@ -108,6 +108,8 @@ public class UserController {
 
 **发现 GET 和 POST方法都能请求到**
 
+>**注意**: 使用浏览器访问默认是Get方法
+
 
 #### 指定 GET/POST 方法类型
 
@@ -134,6 +136,10 @@ public class UserController {
 ```
 
 ## 获取参数
+### 传参时注意事项
+在Spring Boot中传参一定要传包装类型,而非基础类型.
+>原因:当需要一个基础类型，但又忘记传递的时候，使用基础类型会报错（程序500)，而保证类型不会报错，只是值为 `null`。
+
 
 ### 传递单个参数
 在 Spring MVC 中可以直接用方法中的参数来实现传参，比如以下代码：
@@ -283,7 +289,7 @@ public class UserController {
 @Controller  
 @ResponseBody  
 @RequestMapping("/user")  
-public class UserController {  
+public class UserController { 
     @PostMapping("/m5")  
     public Object method5(@RequestBody Person person){  
         System.out.println("Person" + person);  
@@ -293,25 +299,370 @@ public class UserController {
 ```
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230520231116.png)
 
+如果没有 `@RequestBody`, 则无法接收到JSON对象信息
+
+>注意事项: Spring Boot 接收的 普通对象 和 JSON对象 是不一样的
+>![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521115557.png)
+
+
+### 获取URL中参数@PathVariable
+后端实现代码:
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController {  
+    @GetMapping("/m6/{name}/{pwd}")  
+    public Object method6(@PathVariable String name ,@PathVariable String pwd){  
+        System.out.println("name: "+ name);  
+        System.out.println("pwd: "+ pwd);  
+        return "name:"+name +"   "+ "pwd:"+pwd;  
+    }
+}
+```
+
+使用浏览器访问
+>因为这里使用了`@GetMapping`注解 , 所以使用浏览器访问, 浏览器默认是get方式进行访问的
+
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521120740.png)
+
+***优缺点***
+使用`@PathVariable`获取URL中参数的优点在于代码简洁易读、安全性高、灵活性好，可以自动解析和映射参数，使API文档更加友好和易于理解。
+缺点在于不支持所有情况，无法自动去除前缀和后缀，容易出现类型不匹配问题，需要手动处理空值和非法输入。
 
 
 
+### 上传文件@RequestPart
+后端代码
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController {  
+    @RequestMapping("/upfile")  
+    public String upfile(@RequestPart("myfile") MultipartFile file) throws IOException {  
+        String path = "s:/github.png";  
+        // 保存文件  
+        file.transferTo(new File(path));  
+        return path;  
+    }
+}
+```
+
+使用 postman 上传文件
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521123119.png)
+
+>注意: key 需要和 `@RequestPart` 注解中的 value 值对应
 
 
+上面的这种方法在实际生产中是绝对不会使用的, 因为不可能将用户的上传文件全部命名为 `github.png` , 更何况用户上传的文件绝不只是一种格式,需要需要对上面的代码进行修改.
+
+修改后的代码需要满足两个条件:
+- 文件名是不同的
+- 保留用户传来的文件后缀
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController {  
+    @RequestMapping("/myupfile")  
+    public String myUpFile(@RequestPart("myfile") MultipartFile file) throws IOException {  
+        // 根目录  
+        String path = "s:/temp/";  
+        // 根目录 + 【唯一的文件名】  
+        path += UUID.randomUUID().toString().replace("-", "");  
+        // 根目录 + 唯一的明文件 + 【文件的后缀】  ex:.png        
+        path += file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));  
+        
+        file.transferTo(new File(path));  
+        return path;  
+    }
+}
+```
+
+使用postman上传文件
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521124306.png)
+
+看看该路径下是否存在该文件
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521124219.png)
 
 
+***获取项目目录的几种方式:***
+```java
+ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX).getPath();
+
+new ClassPathResource("").getFile().getAbsolutePath();
+
+ClassUtils.getDefaultClassLoader().getResource("").getPath();
+
+ResourceUtils.getFile("classpath:static/").getPath();
+```
 
 
+### 获取Cookie/Session/Header
+#### 获取Request 和 Response 对象
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController {  
+    @RequestMapping("/m7")  
+    public String method7(HttpServletRequest request , HttpServletResponse response)  
+    {  
+        String name = request.getParameter("name");   
+        return name + " 你好";  
+    }
+```
+
+#### 获取 header/cookie
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController {  
+    @RequestMapping("/param10")  
+    public String param10(HttpServletResponse response, HttpServletRequest request) {  
+        String name = request.getParameter("name");  
+        // 获取所有 cookie 信息  
+        Cookie[] cookies = request.getCookies();  
+        String userAgent = request.getHeader("User-Agent");  
+        return name + "："+userAgent;  
+    }
+```
+
+##### 获取Cookie
+**获取所有Cookie**
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+@Slf4j  
+public class UserController {  
+    @RequestMapping("/getck")  
+    public String getCookie(HttpServletRequest request){  
+        Cookie[] cookies = request.getCookies();   //servlet写法,获取全部cookie
+        for(Cookie item: cookies){  
+            log.error(item.getName() + ":" + item.getValue());  
+        }  
+        return "get cookie";  
+    }
+}
+```
 
 
+**获取单个Cookie**
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")    
+public class UserController {  
+    @RequestMapping("/getck2")  
+    public String getCookie2(@CookieValue("zhangsan") String val){  
+        return "Cookie Value:"+ val;  
+    }
+}
+```
+
+##### 获取Header
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController {  
+    @RequestMapping("/getheader")  
+    public String getUA(@RequestHeader("User-Agent") String userAgent) {  
+        return userAgent;  
+    }
+}
+```
 
 
+### Session的存储与获取
+Session 存储和 Servlet 类似，是使用 HttpServletRequest 中获取的，如下代码所示：
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController {  
+    @RequestMapping("/setsess")  
+    public String setSession(HttpServletRequest request) {  
+        //// 获取 HttpSession 对象，参数设置为 true 表示如果没有 session 对象就创建一个session  
+        HttpSession session = request.getSession(true);  
+        if(session!=null){  
+            session.setAttribute("username","java");  
+        }  
+        return "session 存储成功";  
+    }
+}
+```
+
+读取 Session 可以使用 HttpServletRequest，如下代码所示
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")   
+public class UserController {  
+    @RequestMapping("/sess")  
+    public String sess(HttpServletRequest request) {  
+        // 如果 session 不存在，不会自动创建  
+        HttpSession session = request.getSession(false);  
+        String username = "暂无";  
+        if(session!=null && session.getAttribute("username")!=null){  
+            username = (String) session.getAttribute("username");  
+        }  
+        return "username："+username;  
+    }
+}
+```
+
+***获取 Session 更简洁的方式：***
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+@Slf4j  
+public class UserController {  
+    @RequestMapping("/sess2")  
+    public String sess2(@SessionAttribute(value = "username",required = false)  
+                                String username) {  
+        return "username："+username;  
+    }
+```
 
 
+## 返回数据
+通过上面的学习我们知道，默认请求下无论是Spring MVC或者是Spring Boot返回的是视图(xxx.html)，而现在都是前后端分离的，后端只需要返给给前端数据即可，这个时候我们就需要使用`@ResponseBody`注解了。|
+
+### 返回静态页面
+创建前端页面
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521161108.png)
+
+```html
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Title</title>  
+</head>  
+<body>  
+    <h1>Hello , Spring MVC</h1>  
+</body>  
+</html>
+```
+
+创建控制器 controller
+```java
+@Controller  
+@RequestMapping("/p")  
+public class PersonController {  
+    @RequestMapping("/index")  
+    public Object index(){  
+        // 执行业务...  
+        // 返回view -> index.html  
+        return "/index.html";  
+    }  
+}
+```
+
+执行结果:
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521161509.png)
 
 
+### 返回 text/html
+```java
+@Controller  
+@RequestMapping("/p")  
+public class PersonController {  
+    @ResponseBody  
+    @RequestMapping("/m8")  
+    public String method8() {  
+        return "<h1>Hello,HTML~</h1>";  
+    }
+}
+```
 
 
+### 返回JSON对象
+```java
+@Controller  
+@ResponseBody  
+@RequestMapping("/user")  
+public class UserController { 
+	@RequestMapping("/m8")
+    public HashMap<String, String> method8(){  
+        HashMap<String , String> map = new HashMap<>();  
+        map.put("Spring" , "Spring Value");  
+        map.put("MySQL" , "MySQL Value");  
+        map.put("Redis" , "Redis Value");  
+        return map;  
+    }
+```
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521162718.png)
+
+>Spring Boot 会将任何 Java 对象序列化为 JSON 格式，并将其返回给页面。但是，在默认情况下，Spring Boot 只支持一些基本类型和集合类型的序列化，例如：
+>-   String、Integer、Long、Boolean、Float、Double、BigDecimal、String、Character 等基本类型；
+>-   java.util.List、java.util.Set、java.util.Map 等集合类型。
+>
+>如果需要将自定义的 Java 类型也序列化为 JSON 格式，可以使用 Jackson 库进行序列化。Jackson 是一个流行的 JSON 序列化/反序列化库，它可以将 Java 对象转换为 JSON 格式，也可以将 JSON 格式转换为 Java 对象。
 
 
+### 请求转发和请求重定向
+**请求转发**是将客户端的请求转发给另一个服务器处理，并将处理结果返回给客户端。在请求转发过程中，所有与原始请求相关的信息都会被保留并传递给下一个服务器。
 
+**请求重定向**是将客户端的请求从一个 URL 重定向到另一个 URL,并且会修改原始请求的 URL,客户端无法感知到中间服务器的存在。
+
+因此，如果需要在多个服务器之间传递请求信息，则应该使用请求转发；如果只需要将请求重定向到另一个 URL,则可以使用请求重定向。
+
+#### forward VS redirect
+return 不但可以返回一个视图，还可以实现跳转，跳转的方式有两种: 
+- forward: 请求转发;
+- redirect: 请求重定向。
+
+**请求转发和重定向的使用对比:**
+index.html资源文件目录如下:
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521161108.png)
+
+后端代码：
+```java
+@Controller  
+@RequestMapping("/user")  
+public class UserController {  
+	//请求重定向
+    @RequestMapping("/index")  
+    public String index(){  
+        return "redirect:/index.html";  
+    }  
+    
+    // 请求转发  
+    @RequestMapping("/index2")  
+    public String index2(){  
+        return "forward:/index.html";  
+    }
+}
+```
+
+访问 index : [http://localhost:8080/user/index](http://localhost:8080/user/index)
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521164734.png)
+
+访问 index2:[http://localhost:8080/user/index2](http://localhost:8080/user/index2)
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230521164408.png)
+
+
+***forward和redirect具体区别如下***:
+1. 请求重定向（redirect)将请求重新定位到资源﹔请求转发(forward)服务器端转发。
+2. 请求重定向地址发生变化，请求转发地址不发生变化。
+3. 请求重定向与直接访问新地址效果一样，不存在原来的外部资源不能访问;请求转发服务器端转发有可能造成原外部资源不能访问。
+
+
+### @RequestBody 说明
+`@ResponseBody`返回的值如果是字符会转换成**text/html**，如果**返回的是对象**会转换成**application/json**返回给前端。
+
+`@ResponseBody`可以用来修饰方法或者是修饰类，修饰类表示类中的所有方法都会返回html或者json，而不是视图。
+
+
+### 组合注解：@RestController
+@RestController = @Controller + @ResponseBody
+
+
+### 查看更多注解
+[官方API](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-requestmapping.html)
