@@ -549,3 +549,4 @@ public class UserController1 {
 6. 解决同一类型多个 Bean 的报错：
 	-  使用 `@Resource(name="")`
 	-  使用 `@Qualifier("")`
+
