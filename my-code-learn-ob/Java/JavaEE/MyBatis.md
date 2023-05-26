@@ -213,16 +213,6 @@ public class Userinfo {
 }
 ```
 
-### 添加mapper接口
-**添加mapper接口到 mapper 路径下**
-数据持久层的接口定义：
-```java
-@Mapper  
-public interface UserMapper {  
-    public List<Userinfo> getAll();  
-}
-```
-
 ### 添加UserMapper.xml
 在resource目录下创建mybatis目录, 在mybatis目录中创建 UserMapper.xml 文件, 用来给UserMapper.java 实现具体SQL语句
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230522123117.png)
@@ -299,6 +289,16 @@ public class UserController {
 这里使用浏览器 : 访问该地址[localhost:8080/user/getall](http://localhost:8080/user/getall)
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230522122109.png)
 
+
+### 添加mapper接口
+**添加mapper接口到 mapper 路径下**
+数据持久层的接口定义：
+```java
+@Mapper  
+public interface UserMapper {  
+    public List<Userinfo> getAll();  
+}
+```
 
 ## 根据 id 查询
 ==添加UserMapper.java接口==
