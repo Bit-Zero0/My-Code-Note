@@ -1,6 +1,6 @@
 # 数据存储逻辑
-![[Pasted image 20221114182118.png]]
-行 有一个术语 ：**一条数据**。
+![Pasted image 20221114182118.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221114182118.png)
+**行** 有一个术语 ：**一条数据**。
 
 
 # SQL分类

@@ -13,19 +13,21 @@ class Student
 ```
 
 右键找到 `generate` 选项
-![[image-20220614151254275 1.png]]
+![image-20220614151254275 1.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220614151254275%201.png)
+
 
 `generate` 选项中的 `Getter and Setter` 
-![[image-20220614151517645.png]]
+![image-20220614151517645.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220614151517645.png)
+
 
 
 
 
 然后选择我们的需要生成的 JavaBean
-![[image-20220614151729123.png]]
+![image-20220614151729123.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220614151729123.png)
+
 
 生成成功
-
 ```java
 class student
 {
@@ -64,14 +66,20 @@ class student
     private String  name;  
 }
 ```
-![[Pasted image 20220614181317.png]]
+![Pasted image 20220614181317.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020220614181317.png)
+
+
 点击Generate后，选择Constructor。
-![[Pasted image 20220614181404.png]]
+![Pasted image 20220614181404.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020220614181404.png)
+
+
 选择我们要参与构造的成员变量
-![[Pasted image 20220614181606.png]]
+![Pasted image 20220614181606.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020220614181606.png)
+
 
 使用成功
-![[Pasted image 20220614181649.png]]
+![Pasted image 20220614181649.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020220614181649.png)
+
 
 
 
@@ -90,10 +98,12 @@ public class test1 {
 ```
 
 将光标指定到当前行， 使用 `alt+enter` 快捷键,就会出现以下菜单，选择第一个选项
-![[image-20220614152439849.png]]
+![image-20220614152439849.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220614152439849.png)
+
 
 我们需要的静态方法就创建出来了。
-![[image-20220614152546217.png]]
+![image-20220614152546217.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220614152546217.png)
+
 
 
 
@@ -116,7 +126,8 @@ public class test1 {
 ```
 
 先选中我们要进行条件判断的代码，使用`ctrl + alt + t` 后就会弹出列表
-![[image-20220614175847473.png]]
+![image-20220614175847473.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220614175847473.png)
+
 
 选择while选项后
-![[image-20220614175921823.png]]
+![image-20220614175921823.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/image-20220614175921823.png)
