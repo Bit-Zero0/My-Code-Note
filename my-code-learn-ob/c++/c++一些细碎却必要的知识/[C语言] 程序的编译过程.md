@@ -1,4 +1,4 @@
-# [C语言] 程序的编译过程
+# C语言 程序的编译过程
 
 ![image-20220224145055627](https://gitee.com/fengalex0/picgo-image/raw/master/202202241450719.png)
 
