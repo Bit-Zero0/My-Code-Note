@@ -61,7 +61,7 @@
 14. [[Spring AOP]]
 15. [[Spring 事务]]
 
-### JavaEE 非必学内容
+### JavaEE 非必学内容(建议还是看看)
 [[Lombok]] （强烈建议学习）
 
 
