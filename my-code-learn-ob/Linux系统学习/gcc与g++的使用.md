@@ -63,13 +63,16 @@
 `-Wall` 生成所有警告信息。 ^0d29e4
 
 
-# gcc升级
-Centos 7默认gcc版本为4.8，有时需要更高版本的
+# gcc升级与安装
 
 使用 `gcc -v` 指令查看当前 gcc版本
 ```shell
 gcc -v
 ```
+
+
+## centos
+Centos 7默认gcc版本为4.8，有时需要更高版本的
 
 安装scl
 ```shell
@@ -97,4 +100,21 @@ scl enable devtoolset-8 bash
 scl enable devtoolset-9 bash
 ```
 
+### centos stream9 安装gcc
+```shell
+sudo yum -y install gcc gcc-c++ kernel-devel
+```
 
+
+## ubuntu
+```shell
+sudo apt update
+sudo apt-get update
+```
+
+
+
+```shell
+sudo apt install build-essential
+```
+安装gcc,这里我们实际上安装的是"build-essential"，它包含了 GNU 编辑器集合，GNU 调试器，和其他编译软件所必需的开发库和工具。下面这个命令将会安装一系列软件包，包括`gcc，` , `g++`和`make`。

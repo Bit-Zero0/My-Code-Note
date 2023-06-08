@@ -518,7 +518,7 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20221020211907.png]]
+![Pasted image 20221020211907.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221020211907.png)
 
 我们只保证了shared_ptr 中 引用计数的安全，因为Date的数据并不是在shared_ptr 类中中进行调用的，所以无法保证线程安全。那如何保证所有数据的线程安全呢？ 在调用的这层进行加锁。
 
@@ -573,7 +573,8 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20221020213339.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230602184602.png)
+
 此时就真正实现的线程安全了。
 
 
@@ -602,7 +603,8 @@ int main()
 }
 ```
 先看运行结果：正确调用了析构函数
-![[Pasted image 20221020214859.png]]
+![Pasted image 20221020214859.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221020214859.png)
+
 
 如果我们在加一句	`n2->_prev = n1;` 呢？
 ```cpp
@@ -617,10 +619,11 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20221020215046.png]]
+![Pasted image 20221020215046.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221020215046.png)
 
 结果却什么都没有。原因就在于出现了**循环引用**。
-![[Pasted image 20221020213853.png]]
+![Pasted image 20221020213853.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221020213853.png)
+
 ==**循环引用分析：**==
 1. node1和node2两个智能指针对象指向两个节点，引用计数变成 1，我们不需要手动`delete`。
 2. node1的`_next`指向node2，node2的`_prev`指向node1，引用计数变成2。
@@ -638,7 +641,8 @@ int main()
 
 `weak_ptr` 模板类中没有重载 `*` 和 `->` 运算符，这也就意味着，`weak_ptr` 类型指针**只能访问**所指的**堆内存**，而**无法修改**它。  
 由于`weak_ptr`指向的对象可能被释放，所以提供了`expired()`函数来**判断所指对象是否已经被销毁**。
-![[Pasted image 20221020220754.png]]
+![Pasted image 20221020220754.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221020220754.png)
+
 
 ## weak_ptr的使用
 解决上述的shared_ptr 循环引用问题。
@@ -676,7 +680,7 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20221020221856.png]]
+![Pasted image 20221020221856.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221020221856.png)
 
 ## weak_ptr模拟实现
 ```cpp
@@ -719,7 +723,8 @@ private:
 其实定制删除器就是 可调用对象(如仿函数，lambda表达式，包装器等)。
 
 如shared_ptr中的模板 class D ，就是定制删除器
-![[Pasted image 20221020225313.png]]
+![Pasted image 20221020225313.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221020225313.png)
+
 
 ```cpp
 namespace fmy
