@@ -54,7 +54,8 @@ try
 获，程序就会直接终止。
 4. 找到匹配的catch子句并处理以后，会继续沿着catch子句后面继续执行。
 
-![[Pasted image 20221018192255.png]]
+![Pasted image 20221018192255.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221018192255.png)
+
 
 ```cpp
 double Division(int a, int b)
@@ -85,7 +86,8 @@ int main()
 	return 0;
 }
 ```
-![[Pasted image 20221018192724.png]]
+![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230602184305.png)
+
 
 ## 异常重新抛出
 有可能单个的`catch`不能完全处理一个异常，在进行一些校正处理以后，希望再交给更外层的调用链函数来处理,`catch`则可以通过重新抛出将异常传递给更上层的函数进行处理。
@@ -160,10 +162,12 @@ void* operator new (std::size_t size, void* ptr) noexcept;//C++11新增
 实际使用中很多公司都会自定义自己的异常体系进行规范的异常管理，因为一个项目中如果大家随意抛异常，那么外层的调用者基本就没办法玩了，所以实际中都会定义一套继承的规范体系。这样大家抛出的都是继承的派生类对象，捕获一个基类就可以了
 
 如：
-![[Pasted image 20221018194914.png]]
+![Pasted image 20221018194914.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221018194914.png)
+
 
 ## 服务器开发中通常使用的异常继承体系
-![[Pasted image 20221018195337.png]]
+![Pasted image 20221018195337.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221018195337.png)
+
 ```cpp
 class Exception
 {
@@ -315,8 +319,8 @@ int main()
 # C++标准库的异常体系
 C++ 提供了一系列标准的异常，定义在  中，我们可以在程序中使用这些标准的异常。它们是以父子类层次结 
 构组织起来的，如下所示：
-![[Pasted image 20221018200119.png]]
-![[Pasted image 20221018200129.png]]
+![Pasted image 20221018200119.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221018200119.png)
+![Pasted image 20221018200129.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/Pasted%20image%2020221018200129.png)
 
 说明：实际中我们可以可以去继承`exception`类实现自己的异常类。但是实际中很多公司像上面一样自己定义 
 一套异常继承体系。因为C++标准库设计的不够好用.
