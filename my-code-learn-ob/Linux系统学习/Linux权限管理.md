@@ -1,4 +1,4 @@
-## Linux权限
+# Linux权限
 inux下有两种用户：超级用户（root）、普通用户。
 
 >**超级用户**：可以再linux系统下做任何事情，不受限制
@@ -9,7 +9,9 @@ inux下有两种用户：超级用户（root）、普通用户。
 功能：切换用户。
 例如，要从root用户切换到普通用户user，则使用 `su user`。 
 
-## 文件访问者分类
+
+
+# 文件访问者分类
 >文件和文件目录的所有者：`u` ---User（中国平民 法律问题）
 >文件和文件目录的所有者所在的组的用户：`g`  ---Group（不多说）
 >其它用户：`o`  ---Others （外国人）
@@ -24,8 +26,8 @@ inux下有两种用户：超级用户（root）、普通用户。
 
 
 
-## 文件类型和访问权限(事物属性)
-### 文件类型
+# 文件类型和访问权限(事物属性)
+## 文件类型
 >==d==：文件夹
 >==-==：普通文件
 >==l==：软链接（类似Windows的快捷方式）
@@ -36,7 +38,7 @@ inux下有两种用户：超级用户（root）、普通用户。
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175506.png)
 
 
-### 基本权限
+## 基本权限
 >读  `r`：Read对文件而言，具有读取文件内容的权限；对目录来说，具有浏览该目录信息的权限
 >
 >写  `w` ：Write对文件而言，具有修改文件内容的权限；对目录来说具有删除移动目录内文件的权限
@@ -48,8 +50,8 @@ inux下有两种用户：超级用户（root）、普通用户。
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175746.png)
 
 
-## 文件访问设置的方法
-### chmod
+# 文件访问设置的方法
+## chmod
 **功能**：设置文件的访问权限
 
 **格式**：`chmod [参数] 权限 文件名`
@@ -60,7 +62,7 @@ inux下有两种用户：超级用户（root）、普通用户。
 > 说明：只有文件的拥有者和root才可以改变文件的权限
 
 
-#### chmod命令权限值的格式
+### chmod命令权限值的格式
 1.用户表示符+/-=权限字符
 
 >==**用户符号**==：  
@@ -141,7 +143,7 @@ inux下有两种用户：超级用户（root）、普通用户。
 ```
 
 
-## 粘滞位
+# 粘滞位
 
 只要==用户==具有目录的==写权限==, 用户就可以**删除目录中的文件**, 而==不论这个用户是否有这个文件的写权限==.
 
@@ -163,3 +165,55 @@ inux下有两种用户：超级用户（root）、普通用户。
 
 
 ![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230315175941.png)
+
+
+# 创建用户
+下面只用案例来进行演示:  创建的用户为 fmy
+
+创建用户:
+```shell
+[root@localhost ~]# adduser fmy
+```
+
+初始化密码:
+```shell
+[root@localhost ~]# passwd fmy
+```
+
+注意新创建的用户是需要被赋权的, 否则无法使用sudo
+
+
+## 为用户赋权
+个人用户的权限只可以在本home下有完整权限，其他目录要看别人授权. 而经常需要root用户的权限，这时候sudo可以化身为root来操作.
+
+sudo命令的授权管理是在sudoers文件里的。可以看看sudoers文件在哪
+```shell
+[root@localhost ~]# whereis sudoers
+sudoers: /etc/sudoers /etc/sudoers.d /usr/libexec/sudoers.so /usr/share/man/man5/sudoers.5.gz
+```
+/etc/sudoers 就是我们要找的文件
+
+
+注意此文件只有 读权限 ,所有要先修改文件权限
+```shell
+[root@localhost ~]# ls -l /etc/sudoers
+-r--r----- 1 root root 4251 9月  25 15:08 /etc/sudoers
+```
+为 /etc/sudoers 添加 w (写权限)
+```shell
+[root@localhost ~]# chmod -v u+w /etc/sudoers
+mode of "/etc/sudoers" changed from 0440 (r--r-----) to 0640 (rw-r-----)
+```
+
+使用[[vim文本编辑器|vim]]对文件进修改
+```shell
+## Allow root to run any commands anywher  
+root    ALL=(ALL)       ALL  
+fmy     ALL=(ALL)       ALL  #这个是新增的用户
+```
+
+此时基本完成了新用户的赋权, 保存退出后, 记得把/etc/sudoers文件的 w 权限收回
+```shell
+[root@localhost ~]# chmod -v u-w /etc/sudoers
+mode of "/etc/sudoers" changed from 0640 (rw-r-----) to 0440 (r--r-----)
+```
