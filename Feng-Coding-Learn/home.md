@@ -1,5 +1,5 @@
 ---
-Modified-date: 2024-06-04 10:52
+Modified-date: 2024-06-09 15:49
 ---
 
 
@@ -9,19 +9,30 @@ Modified-date: 2024-06-04 10:52
 ```dataview
 table
 tags as "标签", Modified-date as "最后修改时间"
-from "数字电路" or "C and C++" or "计算机组成原理"
+from "数字电路" or "C and C++" or "计算机组成原理" or "汇编"
 where date(today) - file.mday < dur(3 days)
 sort file.mtime desc
 limit 6
 ```
 
 
+# 正在写的笔记
 
 ```dataview
 table
-tags , Finish-date
-from "数字电路" or "C and C++" or "计算机组成原理"
+tags  , modified-date
+from "数字电路" or "C and C++" or "计算机组成原理" or "汇编"
+where contains(Status , "writing")
+sort file.mtime desc
+```
+
+# 完成的笔记
+```dataview
+table
+tags , Finish-date , modified-date
+from "数字电路" or "C and C++" or "计算机组成原理" or "汇编"
 where contains(Status , "done")
+sort file.mtime desc 
 ```
 
 
