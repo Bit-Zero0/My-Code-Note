@@ -5,7 +5,7 @@ tags:
 Status: writing
 start-date: 2024-06-09 13:46
 Finish-date: 
-Modified-date: 2024-06-09 15:52
+Modified-date: 2024-06-09 22:00
 ---
 
 # 本文摘要
@@ -156,8 +156,8 @@ add ax, bx
 注意看寄存器的AX , BX寄存器的变化. 
 
 
-> [!question]- 你发现 IP 寄存器的变化了吗? 
-> 它好像与我们的指令有关, 它会自动变化.  #todo ip的变化
+> [!question]+ 你发现 IP 寄存器的变化了吗? 
+> 它好像与我们的指令有关, 它会自动变化.  详细内容请看[[访问寄存器和内存#CS, IP 与代码段]]
 
 
 ### Q指令
