@@ -5,7 +5,8 @@ tags:
 Status: writing
 start-date: 2024-05-20 16:57
 Finish-date: 
-Modified-date: 2024-06-07 23:23
+Modified-date: 2024-06-24 23:19
+Publish:
 ---
 
 # 本文摘要
@@ -154,7 +155,7 @@ C语言中main函数是程序的入口, 程序是从main函数的第一行开始
 那就必须了解C语言的代码执行过程了.
 
 完整的C语言运行，分为以下4步，在VS中我们直接运行，其实是把中间的步骤给省略了
-![[Drawing 2024-06-04 14.23.50.excalidraw|598]]
+![[C语言简易编译原理图.excalidraw|598]]
 - 预处理（这一步后面单独讲解）
     - 简单理解，就是先找到#include后面的 <stdio.h>这个文件
 - 编译
@@ -432,54 +433,605 @@ int main()
 ```
 
 实际上程序运行的结果是这样的：
-
-
 > [!example]+ 运行结果
-> `c:code    est.c`
+> ```
+> c:code    est.c
+> ```
+
+这里就不得不提一下转义字符了。转义字符顾名思义就是转变意思。
+下面看一些转义字符
 
 
 
+| 转义字符   | 释义                         |
+| :----- | -------------------------- |
+| `\?`   | 在书写连续多个问号时使用，防止他们被解析成三字母词  |
+| `\'`   | 用于表示字符常量'                  |
+| `\“`   | 用于表示一个字符串内部的双引号            |
+| `\\`   | 用于表示一个反斜杠，防止它被解释为一个转义序列符。  |
+| `\a`   | 警告字符，蜂鸣                    |
+| `\b`   | 退格符                        |
+| `\f`   | 进纸符                        |
+| `\n`   | 换行                         |
+| `\r`   | 回车                         |
+| `\t`   | 水平制表符                      |
+| `\v`   | 垂直制表符                      |
+| `\ddd` | ddd表示1~3个八进制的数字。 如： \130 X |
+| `\xdd` | dd表示2个十六进制数字。 如： \x30 0    |
+
+```c
+#include <stdio.h>
+int main()
+{
+	//问题1：在屏幕上打印一个单引号'，怎么做？
+	//问题2：在屏幕上打印一个字符串，字符串的内容是一个双引号“，怎么做？
+	printf("%c\n", '\'');
+	printf("%s\n", "\"");
+	return 0;
+}
+```
+
+### 笔试题
+```c
+#include <stdio.h>
+int main()
+{
+	printf("%d\n", strlen("abcdef"));
+	// \62被解析成一个转义字符
+	printf("%d\n", strlen("c:\test\628\test.c"));
+	return 0;
+}
+```
 
 
 
-![image.png](https://image-1311137268.cos.ap-chengdu.myqcloud.com/SiYuan/20230428164143.png)
+## 注释
+
+1. 代码中有不需要的代码可以直接删除，也可以注释掉
+2. 代码中有些代码比较难懂，可以加一下注释文字
+比如：
+
+```c
+#include <stdio.h>
+int Add(int x, int y)
+{
+	return x+y;
+}
+/*C语言风格注释
+int Sub(int x, int y)
+{
+	return x-y;
+}
+*/
+int main()
+{
+	//C++注释风格
+	//int a = 10;
+	//调用Add函数，完成加法
+	printf("%d\n", Add(1, 2));
+	return 0;
+}
+```
+
+注释有两种风格：
+- C语言风格的注释 `/*xxxxxx*/`
+	- 缺陷：不能嵌套注释
+- C++风格的注释 `//xxxxxxxx`
+	- 可以注释一行也可以注释多行
+
+
+# 选择语句
+
+> [!info]+ 栗子
+> 如果你好好学习，校招时拿一个好offer，走上人生巅峰。
+> 如果你不学习，毕业等于失业，回家卖红薯。
+> 这就是选择！
+
+![[选择语句图.excalidraw|421]]
+
+```c
+#include <stdio.h>
+int main()
+{
+	int coding = 0;
+	printf("你会去敲代码吗？（选择1 or 0）:>");
+	scanf("%d", &coding);
+	if(coding == 1)
+	{
+		prinf("坚持，你会有好offer\n");
+	}
+	else
+	{
+		printf("放弃，回家卖红薯\n");
+	}
+	return 0;
+}
+```
+
+# 循环语句
+有些事必须一直做，比如我日复一日的讲课，比如大家，日复一日的学习。
+
+![[循环语句图.excalidraw|459]]
+
+C语言中如何实现循环呢？
+`while` 语句-讲解
+`for`语句（后期讲）
+`do ... while`语句（后期讲）
+
+```c
+//while循环的实例
+#include <stdio.h>
+int main()
+{
+	printf("加入比特\n");
+	int line = 0;
+	while(line<=20000)
+	{
+		line++;
+		printf("我要继续努力敲代码\n");
+	}
+	if(line>20000)
+		printf("好offer\n");
+	return 0;
+}
+```
 
 
 
+# 函数
+函数的特点就是简化代码，代码复用。
+
+如: 
+```c
+#include <stdio.h>
+int main()
+{
+	int num1 = 0;
+	int num2 = 0;
+	int sum = 0;
+	printf("输入两个操作数:>");
+	scanf("%d %d", &num1, &num2);
+	sum = num1 + num2;
+	printf("sum = %d\n", sum);
+	return 0;
+	}
+```
+
+
+上述代码，写成函数如下：
+```c
+#include <stdio.h>
+int Add(int x, int y)
+{
+	int z = x+y;
+	return z;
+}
+
+int main()
+{
+	int num1 = 0;
+	int num2 = 0;
+	int sum = 0;
+	printf("输入两个操作数:>");
+	scanf("%d %d", &num1, &num2);
+	sum = Add(num1, num2);
+	printf("sum = %d\n", sum);
+	return 0;
+}
+```
+
+# 数组
+要存储1-10的数字，怎么存储？
+C语言中给了数组的定义：一组相同类型元素的集合
+
+## 数组的定义
+```c
+int arr[10] = {1,2,3,4,5,6,7,8,9,10};//定义一个整形数组，最多放10个元素
+```
+
+
+## 数组的下标
+C语言规定：数组的每个元素都有一个下标，下标是从0开始的。
+数组可以通过下标来访问的。
+比如：
+```c
+int arr[10] = {0};
+//如果数组10个元素，下标的范围是0-9
+```
+
+![[数组下标图.excalidraw]]
+
+
+## 数组的使用
+```c
+#include <stdio.h>
+int main()
+{
+	int i = 0;
+	int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+	for(i=0; i<10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+	return 0;
+}
+```
 
 
 
+# 操作符
+简单介绍为主，后面课件重点讲。
+
+## 算术操作符
+```c
++ - * / %
+```
+
+## 位移操作符
+
+```c
+>>   <<
+```
+
+## 位操作符
+```c
+&    ^    |
+```
+
+
+## 赋值操作符
+```c
+=   +=   -=   *=   /=   &=   ^=   |=   >>=   <<=
+```
+
+## 单目操作符
+
+`!`   逻辑反操作
+`-`   负值
+`+`   正值
+`&` 取地址
+`sizeof` 操作数的类型长度（以字节为单位）
+`~` 对一个数的二进制按位取反
+`--` 前置、后置--
+`++` 前置、后置++
+`*`  间接访问操作符(解引用操作符)
+`(类型)`   强制类型转换
+
+
+## 关系操作符
+`>`
+`>=`
+`<`
+`<=`
+`!=` 用于测试“不相等”
+`==` 用于测试“相等”
+
+
+## 逻辑操作符
+`&&`  逻辑与
+`||`  逻辑或
+
+
+## 条件操作符
+```c
+exp1 ? exp2 : exp3
+```
+
+## 逗号表达式
+```c
+exp1, exp2, exp3, …expN
+```
+
+## 下标引用, 函数调用和结构成员
+`[]`   `()`    `.`    `->`
 
 
 
+# 常见关键字
+```c
+auto break case char const continue default do double else enum
+extern float for goto if int long register return short signed
+sizeof static struct switch typedef union unsigned void volatile while
+```
+注：关键字，先介绍下面几个，后期遇到讲解。
+
+## 关键字 typedef
+typedef 顾名思义是类型定义，这里应该理解为类型重命名。
+比如：
+```c
+//将unsigned int 重命名为uint_32, 所以uint_32也是一个类型名
+typedef unsigned int uint_32;
+int main()
+{
+	//观察num1和num2,这两个变量的类型是一样的
+	unsigned int num1 = 0;
+	uint_32 num2 = 0;
+	return 0;
+}
+```
+
+
+## 关键字static
+在C语言中：
+static是用来修饰变量和函数的
+1. 修饰局部变量-称为静态局部变量
+2. 修饰全局变量-称为静态全局变量
+3. 修饰函数-称为静态函数
+
+### static 修饰局部变量
+代码1
+```c
+#include <stdio.h>
+void test()
+{
+	int i = 0;
+	i++;
+	printf("%d ", i);
+}
+int main()
+{
+	int i = 0;
+	for(i=0; i<10; i++)
+	{
+		test();
+	}
+	return 0;
+}
+```
+
+代码2
+```c
+#include <stdio.h>
+void test()
+{
+	//static修饰局部变量
+	static int i = 0;
+	i++;
+	printf("%d ", i);
+}
+int main()
+{
+	int i = 0;
+	for(i=0; i<10; i++)
+	{
+	test();
+	}
+	return 0;
+}
+```
+
+
+对比代码1和代码2的效果理解static修饰局部变量的意义。
+结论：
+static修饰局部变量改变了变量的生命周期
+让静态局部变量出了作用域依然存在，到程序结束，生命周期才结束。
 
 
 
+### static 修饰全局变量
+
+代码1
+add.c
+```c title:"add.c"
+int g_val = 2018;
+```
+
+test.c
+```c title:"test.c"
+#include <stdio.h>
+int main()
+{
+	printf("%d\n", g_val);
+	return 0;
+}
+```
 
 
 
+代码2
+add.c
+```c title:"add.c"
+static int g_val = 2018;
+```
 
 
 
+test.c
+```c title:"test.c"
+#include <stdio.h>
+int main()
+{
+	printf("%d\n", g_val);
+	return 0;
+}
+```
 
 
 
+代码1正常，代码2在编译的时候会出现连接性错误。
+结论：
+一个全局变量被static修饰，使得这个全局变量只能在本源文件内使用，不能在其他源文件内使用。
+
+
+### static 修饰函数
+
+代码1
+
+add.c
+```c title:"add.c"
+int Add(int x, int y)
+{
+	return c+y;
+}
+```
+
+test.c
+```c title:"test.c"
+#include <stdio.h>
+int main()
+{
+	printf("%d\n", Add(2, 3));
+	return 0;
+}
+```
 
 
 
+代码2
+add.c
+```c title:"add.c"
+static int Add(int x, int y)
+{
+	return c+y;
+}
+```
+
+test.c
+```c title:"test.c"
+#include <stdio.h>
+int main()
+{
+	printf("%d\n", Add(2, 3));
+	return 0;
+}
+```
+
+代码1正常，代码2在编译的时候会出现连接性错误.
+
+结论：
+>一个函数被static修饰，使得这个函数只能在本源文件内使用，不能在其他源文件内使用。
+
+剩余关键字后续课程中陆续会讲解。
+
+
+# `#define` 定义常量
+
+```c
+//define定义标识符常量
+#define MAX 1000
+
+//define定义宏
+#define ADD(x, y) ((x)+(y))
+
+
+#include <stdio.h>
+int main()
+{
+	int sum = ADD(2, 3);
+	printf("sum = %d\n", sum);
+	
+	sum = 10*ADD(2, 3);
+	printf("sum = %d\n", sum);
+	
+	return 0;
+}
+```
 
 
 
+# 指针
+
+## 内存
+内存是电脑上特别重要的存储器，计算机中程序的运行都是在内存中进行的 。
+所以为了有效的使用内存，就把内存划分成一个个小的内存单元，**每个内存单元的大小是==1个字节==**。
+为了能够有效的访问到内存的每个单元，就给内存单元进行了编号，这些编号被称为该**内存单元的地址**。
+
+![[初识C语言-内存图1.excalidraw]]变量是创建内存中的（在内存中分配空间的），每个内存单元都有地址，所以变量也是有地址的。
+取出变量地址如下：
+```c
+#include <stdio.h>
+int main()
+{
+	int num = 10;
+	&num;//取出num的地址
+	//注：这里num的4个字节，每个字节都有地址，取出的是第一个字节的地址（较小的地址）
+	printf("%p\n", &num);//打印地址，%p是以地址的形式打印
+	return 0;
+}
+```
+![[初识C语言-内存图2.excalidraw]]
+
+那地址如何存储，需要定义指针变量。
+
+```c
+int num = 10;
+int *p;//p为一个整形指针变量
+p = &num;
+```
+
+指针的使用实例：
+```c
+#include <stdio.h>
+int main()
+{
+	int num = 10;
+	int *p = &num;
+	*p = 20;
+	return 0;
+}
+```
+
+![[Drawing 2024-06-24 23.21.16.excalidraw]]
+
+以整形指针举例，可以推广到其他类型，如：
+```c
+#include <stdio.h>
+int main()
+{
+	char ch = 'w';
+	char* pc = &ch;
+	*pc = 'q';
+	printf("%c\n", ch);
+	return 0;
+}
+```
+
+## 指针变量的大小
+```c
+#include <stdio.h>
+//指针变量的大小取决于地址的大小
+//32位平台下地址是32个bit位（即4个字节）
+//64位平台下地址是64个bit位（即8个字节）
+
+int main()
+{
+	printf("%d\n", sizeof(char *));
+	printf("%d\n", sizeof(short *));
+	printf("%d\n", sizeof(int *));
+	printf("%d\n", sizeof(double *));
+	return 0;
+}
+```
+
+结论：指针大小在32位平台是4个字节，64位平台是8个字节。
+
+# 结构体
+结构体是C语言中特别重要的知识点，结构体使得C语言有能力描述复杂类型。
+比如描述学生，学生包含： 名字+年龄+性别+学号这几项信息。
+这里只能使用结构体来描述了。
+
+例如：
+```c
+struct Stu
+{
+	char name[20];//名字
+	int age; //年龄
+	char sex[5]; //性别
+	char id[15]； //学号
+};
+```
 
 
+结构体的初始化：
+```c
+//打印结构体信息
+struct Stu s = {"张三"， 20， "男"， "20180101"};
 
+//.为结构成员访问操作符
+printf("name = %s age = %d sex = %s id = %s\n", s.name, s.age, s.sex, s.id);
 
-
-
-
-
-
-
-
-
-# 总结
+//->操作符
+struct Stu *ps = &s;
+printf("name = %s age = %d sex = %s id = %s\n", ps->name, ps->age, ps->sex, ps->id);
+```

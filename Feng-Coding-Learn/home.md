@@ -1,7 +1,6 @@
 ---
-Modified-date: 2024-06-09 15:49
+Modified-date: 2024-06-24 15:20
 ---
-
 
 
 # 最近更新的文件
@@ -9,7 +8,7 @@ Modified-date: 2024-06-09 15:49
 ```dataview
 table
 tags as "标签", Modified-date as "最后修改时间"
-from "数字电路" or "C and C++" or "计算机组成原理" or "汇编"
+from "数字电路" or "C and C++" or "计算机组成原理" or "汇编" or "Linux 系统编程"
 where date(today) - file.mday < dur(3 days)
 sort file.mtime desc
 limit 6
