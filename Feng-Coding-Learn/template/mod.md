@@ -2,9 +2,10 @@
 Type: Note
 tags: 
 Status: <% tp.system.suggester(["to-write" , "writing", "done"] , ["to-write","writing", "done"] , true , 'Status') %>
-start-date: <% tp.file.creation_date("YYYY-MM-DD HH:mm") %>
+Start-date: <% tp.file.creation_date("YYYY-MM-DD HH:mm") %>
 Finish-date: 
-Modified-date:
+Modified-date: 
+Publish: false
 ---
 
 # 本文摘要

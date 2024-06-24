@@ -6,7 +6,7 @@ tags:
 Status: writing
 start-date: 2024-06-03 13:41
 Finish-date: 
-Modified-date: 2024-06-04 13:53
+Modified-date: 2024-06-15 23:23
 ---
 
 # 本文摘要
@@ -14,7 +14,7 @@ Modified-date: 2024-06-04 13:53
 
 # 主要内容
 ## 官网下载
-打开微软的官方网站 https://visualstudio.microsoft.com/，下载 Visual Studio 安装包。
+打开微软的[官方网站](https://visualstudio.microsoft.com/)，下载 Visual Studio 安装包。
 ![[Pasted image 20240603134359.png]]
 
 ## 需要安装的 工作负荷
@@ -67,5 +67,5 @@ Modified-date: 2024-06-04 13:53
 
 # 总结
 1. 普通用户安装社区版即可. 专业版需要付费.
-2. 注意安装路径不能有中文.
-3. 学习了C语言项目的创建.
+2. 注意安装路径最好不能有中文.
+3. 学习C语言项目的创建.
