@@ -5,7 +5,7 @@ tags:
 Status: writing
 start-date: 2024-05-20 16:57
 Finish-date: 
-Modified-date: 2024-06-24 23:19
+Modified-date: 2024-06-25 17:21
 Publish:
 ---
 
@@ -950,7 +950,7 @@ int main()
 	return 0;
 }
 ```
-![[初识C语言-内存图2.excalidraw]]
+![[初识C语言-内存图2.excalidraw|652]]
 
 那地址如何存储，需要定义指针变量。
 
