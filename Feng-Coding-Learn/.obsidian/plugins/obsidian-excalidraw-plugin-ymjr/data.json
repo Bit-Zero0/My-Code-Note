@@ -19,7 +19,7 @@
   "cropPrefix": "cropped_",
   "annotatePrefix": "annotated_",
   "annotatePreserveSize": false,
-  "previewImageType": "SVGIMG",
+  "previewImageType": "SVG",
   "allowImageCache": true,
   "allowImageCacheInScene": true,
   "displayExportedImageIfAvailable": false,
@@ -36,7 +36,7 @@
   "defaultPenMode": "never",
   "penModeCrosshairVisible": true,
   "renderImageInMarkdownReadingMode": true,
-  "renderImageInHoverPreviewForMDNotes": false,
+  "renderImageInHoverPreviewForMDNotes": true,
   "renderImageInMarkdownToPDF": false,
   "allowPinchZoom": false,
   "allowWheelZoom": false,
@@ -92,7 +92,7 @@
   "library2": {
     "type": "excalidrawlib",
     "version": 2,
-    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.2.7-1",
+    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.2.9-1",
     "libraryItems": []
   },
   "imageElementNotice": true,
@@ -159,10 +159,16 @@
         "value": "{\n      \"org.eclipse.elk.layered.crossingMinimization.semiInteractive\": \"true\",\n      \"org.eclipse.elk.layered.considerModelOrder.components\": \"FORCE_MODEL_ORDER\"\n}",
         "description": "You can use layout options to configure the layout algorithm. A list of all options and further details of their exact effects is available in <a href=\"http://www.eclipse.org/elk/reference.html\" rel=\"nofollow\">ELK's documentation</a>."
       }
+    },
+    "highlight line": {
+      "highlight color": {
+        "value": "#FFC800",
+        "description": "Highlight color around the line."
+      }
     }
   },
-  "defaultTrayMode": true,
-  "previousRelease": "2.2.7-1",
+  "defaultTrayMode": false,
+  "previousRelease": "2.2.9-1",
   "showReleaseNotes": true,
   "showNewVersionNotification": true,
   "latexBoilerplate": "\\color{blue}",
