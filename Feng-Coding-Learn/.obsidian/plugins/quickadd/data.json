@@ -4,8 +4,43 @@
       "id": "d0b66bd9-2623-4472-b96e-33ac9ce7d739",
       "name": "Macro: Insert-svg",
       "type": "Macro",
-      "command": true,
+      "command": false,
       "macroId": "1ef14f81-f878-41e9-a630-8e41d01a2b37"
+    },
+    {
+      "id": "5db880e8-7284-428d-95b7-7d3f27fa0011",
+      "name": "flush",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "template/flush.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": true,
+        "format": "```js quickadd\n    app.workspace.activeLeaf.rebuildView()\n```"
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
     }
   ],
   "macros": [
