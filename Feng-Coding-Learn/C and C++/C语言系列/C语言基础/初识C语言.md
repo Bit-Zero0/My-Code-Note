@@ -5,7 +5,7 @@ tags:
 Status: writing
 start-date: 2024-05-20 16:57
 Finish-date: 
-Modified-date: 2024-06-25 17:21
+Modified-date: 2024-07-17 11:03
 Publish:
 ---
 
@@ -527,7 +527,7 @@ int main()
 > 如果你不学习，毕业等于失业，回家卖红薯。
 > 这就是选择！
 
-![[选择语句图.excalidraw|421]]
+![[选择语句图.excalidraw|465]]
 
 ```c
 #include <stdio.h>
