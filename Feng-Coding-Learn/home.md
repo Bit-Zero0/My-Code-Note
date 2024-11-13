@@ -1,6 +1,14 @@
 ---
-Modified-date: 2024-07-09 21:57
+Modified-date: 2024-11-13 14:27
 ---
+
+# update-siyuan
+```dataview
+table
+tags , modified-date
+where contains( tags, "update-siyuan")
+sort file.mtime desc
+```
 
 
 # 最近更新的文件
@@ -8,7 +16,7 @@ Modified-date: 2024-07-09 21:57
 ```dataview
 table
 tags as "标签", Modified-date as "最后修改时间"
-from "数字电路" or "C and C++" or "计算机组成原理" or "汇编" or "Linux 系统编程" or "算法"
+from "数字电路" or "C and C++" or "计算机组成原理" or "汇编" or "Linux 系统编程" or "算法" or "前端"
 where date(today) - file.mday < dur(3 days)
 sort file.mtime desc
 limit 6
