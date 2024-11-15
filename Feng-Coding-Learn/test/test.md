@@ -9,7 +9,7 @@ Modified-date: 2024-06-28 12:13
 
 ![[test.excalidraw]]
 
-```c
+```c title:test
 #include <stdio.h>
 int main()
 {
