@@ -1,10 +1,13 @@
 ---
 Type: Note
-tags: 
+tags:
+  - 基础
+  - 前端
+  - CSS
 Status: writing
 Start-date: 2024-11-15 13:16
 Finish-date: 
-Modified-date: 2024-11-15 23:15
+Modified-date: 2024-11-17 22:00
 Publish: false
 ---
 
@@ -83,14 +86,14 @@ href属性表示CSS文件的路径。对于路径，相信小伙伴们已经很�
     </style>
 </head>
 <body>
-    <div>绿叶，给你初恋般的感觉。</div>
-    <div>绿叶，给你初恋般的感觉。</div>
-    <div>绿叶，给你初恋般的感觉。</div>
+    <div>Feng，无止境的攀登!!!</div>
+    <div>Feng，无止境的攀登!!!</div>
+    <div>Feng，无止境的攀登!!!</div>
 </body>
 </html>
 ```
 
-![[渲染div内字体为红色图.png]]
+
 如果使用内部样式表，CSS样式必须在style标签内定义，而style标签是放在head标签内的。
 
 ## 行内样式表
