@@ -4,7 +4,7 @@ tags:
 Status: writing
 Start-date: 2024-11-17 22:09
 Finish-date: 
-Modified-date: 2024-11-17 22:38
+Modified-date: 2024-11-18 14:48
 Publish: false
 ---
 
@@ -34,8 +34,11 @@ Publish: false
 
 ## C++关键字
 
-C++比C语言增加了更多的关键字，这些关键字让C++的功能更加强大。这里列出一些重要的新增关键字：
+C++总计63个关键字，C语言32个关键字
+>下面我们只是看一下C++有多少关键字，不对关键字进行具体的讲解。
 
+C++比C语言增加了更多的关键字，这些关键字让C++的功能更加强大。这里列出一些重要的新增关键字：
+![[C++关键字图.png]]
 ==新增的重要关键字==：
 - `class`: 定义类
 - `private/protected/public`: 访问限定符
@@ -50,50 +53,258 @@ C++比C语言增加了更多的关键字，这些关键字让C++的功能更加�
 ## 命名空间
 
 ### 命名空间的定义
-想象一下，如果你和你的朋友都写了一个叫`print`的函数，如何区分它们呢？这就是命名空间要解决的问题！
+想象一下，你和你的朋友都在写代码，而且你们可能会用到相同名字的变量或者函数。比如，你们都写了一个名为 `add` 的函数，一个用于整数相加，一个用于字符串拼接。如果没有命名空间，当这两个代码放在一起编译的时候，编译器就会懵圈，不知道该用哪个 `add` 函数。
 
+但是有了命名空间，就好像给你们各自的代码放进了不同的盒子里。你可以把你的 `add` 函数放在一个命名空间，比如 `yourNamespace`，你的朋友把他的放在 `friendNamespace`。这样，当你想要使用自己的 `add` 函数时，就可以通过 `yourNamespace::add` 来明确地告诉编译器你要用的是这个函数，而不是你朋友定义的那个。
+
+以下是一个简单的示例：
 ```cpp
-// 张三的代码
-namespace zhangsan {
-    void print() {
-        cout << "这是张三的打印函数" << endl;
+// 定义一个命名空间yourNamespace
+namespace yourNamespace {
+    int add(int a, int b) {
+        return a + b;
     }
 }
 
-// 李四的代码
-namespace lisi {
-    void print() {
-        cout << "这是李四的打印函数" << endl;
+// 定义另一个命名空间friendNamespace
+// 因为我们还没开始学习STL ,string是标准库中的字符串, 这个add函数的作用为字符串拼接
+namespace friendNamespace {
+    std::string add(std::string a, std::string b) {
+        return a + b;
+    }
+}
+
+int main() {
+    // 使用yourNamespace中的add函数
+    int result1 = yourNamespace::add(3, 5);
+    // 使用friendNamespace中的add函数
+    std::string result2 = friendNamespace::add("Hello, ", "World!");
+    return 0;
+}
+```
+
+
+#### 普通的命名空间
+```cpp
+namespace N1 // N1为命名空间的名称
+{
+	// 命名空间中的内容，既可以定义变量，也可以定义函数
+	int a;
+	int Add(int left, int right)
+	{
+		return left + right;
+	}
+}
+```
+
+#### 嵌套命名空间
+命名空间还可以嵌套，就像盒子里面再放小盒子一样。
+```cpp
+#include <iostream>
+
+namespace N2
+{
+    int a;
+    int b;
+    int Add(int left, int right)
+    {
+        return left + right;
+    }
+
+    namespace N3
+    {
+        int c;
+        int d;
+        int Sub(int left, int right)
+        {
+            return left - right;
+        }
     }
 }
 ```
+
+> [!warning]+ 注意
+> **一个命名空间就定义了一个新的作用域**，命名空间中的所有内容都局限于该命名空间中.
+
+#### 命名空间合并
+==同一个工程中允许存在多个相同名称的命名空间,编译器最后会合成同一个命名空间中。==
+```cpp hl:1-7
+namespace N1
+{
+	int Mul(int left, int right)
+	{
+		return left * right;
+	}
+}
+
+namespace N1 // N1为命名空间的名称
+{
+	// 命名空间中的内容，既可以定义变量，也可以定义函数
+	int a;
+	int Add(int left, int right)
+	{
+		return left + right;
+	}
+}
+
+```
+
 
 ### 命名空间的使用
+使用 作用域解析运算符 `::`
+
 有三种使用方式：
 
-1. ==完整的命名空间名称==：
+#### 完整的命名空间名称：
+> [!tip]+ 实际项目中比较推荐该方式
+
 ```cpp
-zhangsan::print(); // 调用张三的print
-lisi::print();     // 调用李四的print
+#include<iostream>
+namespace N1 // N1为命名空间的名称
+{
+	// 命名空间中的内容，既可以定义变量，也可以定义函数
+	int a;
+	int Add(int left, int right)
+	{
+		return left + right;
+	}
+}
+
+int main()
+{
+	int x = 10, y = 20;
+	printf("%d \n", N1::Add(x, y)); // 使用Add函数必须加上域空间名和域限定符::
+
+	N1::a = 66;// 使用为N1空间内的a进行初始化 , 必须加上域空间名和域限定符::才能访问到
+	printf("%d \n", N1::a); 
+
+	return 0;
+}
 ```
 
-2. **使用using声明**：
+对于嵌套命名空间，需要使用多个`::`来指定完整的路径。
 ```cpp
-using zhangsan::print;
-print(); // 调用张三的print
+namespace N2
+{
+    int a;
+    int b;
+    int Add(int left, int right)
+    {
+        return left + right;
+    }
+
+    namespace N3
+    {
+        int c;
+        int d;
+        int Sub(int left, int right)
+        {
+            return left - right;
+        }
+    }
+}
+
+int main()
+{
+    N2::N3::c = 8;
+    N2::N3::d = 3;
+	return 0;
+}
 ```
 
-3. **使用using namespace**（==**不推荐在头文件中使用**==）：
+
+#### 部分展开(授权)： using声明
+可以使用`using`声明来简化命名空间成员的访问。
 ```cpp
-using namespace zhangsan;
-print(); // 调用张三的print
+namespace N1 // N1为命名空间的名称
+{
+	// 命名空间中的内容，既可以定义变量，也可以定义函数
+	int a;
+	int Add(int left, int right)
+	{
+		return left + right;
+	}
+}
+
+using namespace N1;
+int main()
+{
+	a = 20;
+    Add(10 , 20);
+	return 0;
+}
 ```
+
+不过要注意，这种方式可能会增加命名冲突的风险，因为它将命名空间中的某个成员引入到当前作用域，就好像这个成员是在当前作用域定义的一样。
+
+
+#### 全部展开(授权) : `using namespace`指令
+这是一种更 “激进” 的方式，它将整个命名空间引入到当前作用域。==**不推荐在头文件中使用**==
+```cpp
+#include<iostream>
+namespace N1 // N1为命名空间的名称
+{
+	// 命名空间中的内容，既可以定义变量，也可以定义函数
+	int a;
+	int Add(int left, int right)
+	{
+		return left + right;
+	}
+}
+using namespace N1;
+int main()
+{
+	int x = 10, y = 20;
+	printf("%d \n", Add(x, y)); 
+	a = 66;
+	printf("%d \n", a); 
+	return 0;
+}
+```
+
+- 这种方式虽然方便，但在大型项目中可能会导致命名冲突，因为它把命名空间中的所有标识符都引入进来了，很可能会和当前作用域或其他引入的命名空间中的同名标识符发生冲突。
 
 > [!warning] 注意事项
-> 使用`using namespace std;`虽然方便，但可能会导致命名冲突。建议：
+> 使用`using namespace std;`虽然方便，但可能会导致命名冲突。因为我这里是教学内容, 所以大部分文章都会使用到 `using namespace std;` , 实际开发中一定要谨慎使用.
+> 
+> 建议：
 > 1. 在小型程序中可以使用
 > 2. 在大型项目中最好使用具体的using声明
 > 3. 或使用完整的命名空间名称
+
+### 命名空间常见错误案列
+#### 命名冲突
+**错误示例**
+```cpp
+// 文件1.cpp
+namespace MySpace {
+    int myVariable = 10;
+}
+// 文件2.cpp
+namespace MySpace {
+    int myVariable = 20;
+}
+```
+**解释与解决方法**：在这个例子中，两个源文件都定义了`MySpace`命名空间，并且都有一个名为`myVariable`的变量。当链接这两个文件时，就会出现重复定义的错误。解决方法是确保每个标识符在整个程序的命名空间中是唯一的，或者将变量定义为`static`（这样变量的作用域就限制在当前文件内），或者将变量放在不同的命名空间子区域。
+
+#### 错误使用using namespace
+**错误示例**
+```cpp
+// 文件1.cpp
+namespace Math {
+    int add(int a, int b) {
+        return a + b;
+    }
+}
+// 文件2.cpp
+using namespace Math;
+namespace Math {
+    int subtract(int a, int b) {
+        return a - b;
+    }
+}
+```
+**解释与解决方法**：这里在使用`using namespace`引入`Math`命名空间后，又在同一个文件中重新定义了`Math`命名空间的一部分。这可能会导致一些难以发现的错误，因为`using namespace`会把之前的`Math`命名空间中的所有成员都引入到当前作用域。正确的做法是避免在一个文件中同时使用`using namespace`和重新定义部分命名空间，可以使用`using`声明来引入特定的成员，或者不使用`using namespace`，而是通过`::`运算符来访问命名空间成员。
 
 ## C++输入&输出
 
@@ -121,11 +332,19 @@ int main() {
 ```
 
 **代码解析：**
-1. `cout`：标准输出流对象
-2. `cin`：标准输入流对象
-3. `<<`：输出运算符
-4. `>>`：输入运算符
-5. `endl`：换行并刷新缓冲区
+说明：
+1. 使用**cout标准输出(控制台**)和**cin标准输入(键盘)** 时，必须包含< iostream >头文件以及std标准命名空间。
+
+> [!warning]+ 注意
+> 早期标准库将所有功能在全局域中实现，声明在.h后缀的头文件中，使用时只需包含对应头文件即可，后来将其实现在std命名空间下，为了和C头文件区分，也为了正确使用命名空间，规定C++头文件不带.h；旧编译器(vc 6.0)中还支持<iostream.h>格式，后续编译器已不支持，因此推荐使用`<iostream>`+std的方式。
+
+2. 使用C++输入输出更方便，不需增加数据格式控制，比如：整形--`%d`，字符--`%c`
+
+- `cout`：标准输出流对象
+- `cin`：标准输入流对象
+- `<<`：输出运算符
+- `>>`：输入运算符
+- `endl`：换行并刷新缓冲区
 
 > [!tip] 小贴士
 > 1. ==C++的输入输出更安全==，不用担心格式符不匹配的问题
@@ -176,7 +395,7 @@ extern const int num;  // 需要显式声明extern才能使用其他文件的con
 ```
 
 ### struct增强
-C++中的结构体可以==**包含成员函数**==，这是向类过渡的第一步！
+C++中的结构体可以==**包含成员函数**==，**这是向类过渡的第一步**！
 
 ```cpp
 struct Student {
@@ -200,23 +419,33 @@ int main() {
 ## 缺省参数
 
 ### 缺省参数的概念
-==缺省参数就是函数参数的默认值==！如果调用函数时没有传递该参数，就使用默认值。
+在 C++ 中，缺省参数（Default Argument）是指==在函数声明或定义时为参数指定一个默认值==。当调用该函数时，如果没有为这个有默认值的参数提供实际的值，编译器就会自动使用默认值。这提供了一种灵活性，允许函数在不同的调用场景下有不同的行为，而不需要为每种情况都定义一个单独的函数重载。
 
 ```cpp
-void printStars(int count = 5, char symbol = '*') {
-    for(int i = 0; i < count; i++) {
-        cout << symbol;
-    }
-    cout << endl;
+#include <iostream>
+// 这里我们定义了一个函数add，它有两个参数，其中b有一个缺省值为5
+int add(int a, int b = 5) {
+    return a + b;
 }
 
 int main() {
-    printStars();      // 打印5个*：*****
-    printStars(3);     // 打印3个*：***
-    printStars(4, '#'); // 打印4个#：####
+    // 我们可以只传递一个参数来调用add函数，这时候b就会使用默认值5
+    int result1 = add(3);
+    std::cout << "result1: " << result1 << std::endl; 
+
+    // 当然，我们也可以传递两个参数，这时候b的值就会被我们传递的值覆盖
+    int result2 = add(3, 7); 
+    std::cout << "result2: " << result2 << std::endl;
     return 0;
 }
 ```
+在这个代码里，`add` 函数的参数 `b` 有一个缺省值 `5`。在 `main` 函数中，当我们只传递一个参数调用 `add` 函数时，就像 `add(3)`，参数 `b` 就会自动取默认值 `5`，函数返回的结果就是 `3 + 5 = 8`。而当我们像 `add(3, 7)` 这样调用时，参数 `b` 的值就被我们传递的 `7` 覆盖了，函数返回 `3 + 7 = 10`。
+
+> [!tip]+ 小贴士
+> 1. 半缺省参数必须从右往左依次来给出，不能间隔着给
+> 2. 缺省参数不能在函数声明和定义中同时出现
+> 3. 缺省值必须是常量或者全局变量
+> 4. C语言不支持（编译器不支持）
 
 ### 缺省参数的分类
 
@@ -240,37 +469,131 @@ void func(int a, int b = 10, int c = 20) { }
 void func(int a, int b, int c = 20) { }
 ```
 
+
 > [!warning] 注意事项
 > 1. ==默认参数只能在声明或定义中出现一次==
 > 2. **必须从右向左连续给出默认值**
 > 3. 调用时==从左向右依次传参==
 
+
+### 缺省参数的规则
+
+####  缺省参数必须从右向左连续设置
+
+这是什么意思呢？比如说我们不能这样定义函数：
+
+```cpp
+int wrongFunction(int a = 3, int b); // 这是错误的，因为缺省参数a在非缺省参数b的左边
+```
+
+正确的做法应该是这样：
+
+```cpp
+int correctFunction(int a, int b = 5); // 正确，缺省参数b在右边
+```
+
+>[!tip]+ 小贴士：
+> 这样规定是为了让编译器能够清楚地知道我们在调用函数时传递的参数是对应哪个参数的。如果缺省参数不连续或者顺序不对，编译器就会搞不清楚啦！
+
+#### 在函数声明和定义中只能有一处指定缺省参数
+我们可以在==函数声明中指定缺省参数，也可以在函数定义中指定，但不能两处都指定==哦。**一般来说，我们会在函数声明中指定，这样代码的可读性会更好**。
+
+例如，我们有一个头文件 `myheader.h`：
+
+```cpp
+// myheader.h
+#ifndef MYHEADER_H
+#define MYHEADER_H
+
+// 在函数声明中指定缺省参数
+int anotherFunction(int a, int b = 10);
+
+#endif
+```
+
+然后在对应的源文件 `myfile.cpp` 中实现这个函数：
+```cpp
+// myfile.cpp
+#include "myheader.h"
+
+// 这里不需要再指定缺省参数的值了
+int anotherFunction(int a, int b) {
+    return a * b;
+}
+```
+
+## 缺省参数的好处
+
+### 1. 简化函数调用
+就像我们前面看到的 `add` 函数的例子一样，当我们经常使用某个参数的特定值时，设置缺省参数可以让我们在调用函数的时候少写一些代码呢！
+
+### 2. 增加函数的灵活性
+我们可以根据需要选择是否覆盖缺省参数的值，这使得函数可以适应更多不同的情况哦。
+>如之后的篇章[[类和对象]], 就能有直观的体验.
+
+
+
+
 ## 函数重载
 
 ### 函数重载的概念
-C++允许==**同名函数但参数列表不同**==！这就是函数重载。
+简单来讲，**函数重载就是在同一个作用域内，可以有一组具有相同函数名，但参数列表不同（参数个数不同、参数类型不同或者参数顺序不同）的函数**。编译器会根据调用函数时传递的实际参数来决定调用哪个版本的函数。这就好比你有几个同名的小伙伴，但是他们每个人都有不同的特点，通过一些线索（参数）就能区分出你到底是在叫谁啦！
 
 ```cpp
-// 三个同名的max函数
-int max(int a, int b) {
-    return a > b ? a : b;
+#include <iostream>
+
+// 函数重载的例子
+
+// 这个函数用于计算两个整数的和
+int add(int num1, int num2) {
+    return num1 + num2;
 }
 
-double max(double a, double b) {
-    return a > b ? a : b;
+// 这个函数用于计算三个整数的和
+int add(int num1, int num2, int num3) {
+    return num1 + num2 + num3;
 }
 
-int max(int a, int b, int c) {
-    return max(max(a, b), c);
+// 这个函数用于计算一个整数和一个浮点数的和
+float add(int num, float fnum) {
+    return num + fnum;
 }
 
 int main() {
-    cout << max(3, 4) << endl;      // 调用第一个max
-    cout << max(3.5, 4.2) << endl;  // 调用第二个max
-    cout << max(3, 4, 5) << endl;   // 调用第三个max
+    int result1 = add(3, 5); 
+    std::cout << "两个整数相加的结果: " << result1 << std::endl; 
+
+    int result2 = add(2, 4, 6); 
+    std::cout << "三个整数相加的结果: " << result2 << std::endl; 
+
+    float result3 = add(3, 5.5f); 
+    std::cout << "整数和浮点数相加的结果: " << result3 << std::endl;
     return 0;
 }
+
 ```
+在这段代码中，我们有三个 `add` 函数。编译器在执行 `main` 函数中的 `add` 调用时，会根据传递的参数类型和个数来决定调用哪个 `add` 函数。比如 `add(3, 5)`，因为传递了两个整数，所以会调用 `int add(int num1, int num2)` 这个函数；`add(2, 4, 6)` 会调用 `int add(int num1, int num2, int num3)`；而 `add(3, 5.5f)` 则会调用 `float add(int num, float fnum)`。
+
+### 函数重载的规则
+
+### 1. 函数名必须相同
+这是函数重载的基本要求啦，就像同名的小伙伴一样，函数重载的函数们都共享同一个名字。
+
+### 2. 参数列表必须不同
+这是重点哦！参数列表不同可以体现在以下几个方面：
+- **参数个数不同**：就像我们上面的例子中，有两个参数的 `add` 函数和三个参数的 `add` 函数。
+- **参数类型不同**：比如一个参数是 `int`，另一个参数是 `float` 的 `add` 函数。
+- **参数顺序不同（注意：参数类型不同才有效）**：例如有一个函数 `func(int a, float b)` 和另一个函数 `func(float b, int a)`，这两个函数是重载关系。但如果是 `func(int a, int b)` 和 `func(int b, int a)`，这样是不行的，因为仅仅参数顺序不同且类型相同，编译器无法区分。
+    
+
+>[!warning]+ 注意事项  
+> 返回类型不同不能作为函数重载的依据哦！也就是说，仅仅返回类型不同的两个函数不能构成重载。比如下面这样是错误的：
+> ```cpp
+> int myFunction(int a); 
+> float myFunction(int a); // 错误，仅返回类型不同，不能构成函数重载
+> ```
+
+
 
 ### 名字修饰
 为什么C++支持函数重载而C语言不支持？这就要说到==名字修饰==（Name Mangling）了！
@@ -279,8 +602,43 @@ C++编译器会根据函数的参数类型对函数名进行修饰，例如：
 - `max(int, int)` 可能被修饰为 `_max_int_int`
 - `max(double, double)` 可能被修饰为 `_max_double_double`
 
-> [!note] 原理解释
+
+#### C 语言不支持函数重载的原因
+**简单的函数命名规则**：C 语言的函数名在编译和链接过程中基本保持不变。当编译器在编译一个 C 程序时，它只是简单地将函数名作为一个符号来处理。例如，有两个函数`int add(int a, int b)`和`float add(float a, float b)`，在 C 语言的编译器眼中，它们的名字都是`add`。在链接阶段，如果同时存在这两个函数，链接器就无法区分应该调用哪一个函数，会产生符号冲突。
+
+**缺乏名字修饰机制**：C 语言没有像 C++ 那样的名字修饰机制，它无法根据函数的参数来改变函数名，以区分不同的函数。所以 C 语言不支持函数重载这种同名函数但参数不同的情况。
+
+
+##### 验证:  gcc函数重载
+由于Windows下vs的修饰规则过于复杂，而Linux下gcc的修饰规则简单易懂，下面我们使用了gcc演示了这个修饰后的名字。
+
+采用C语言编译器编译后结果
+![[gcc验证函数重载.svg]]
+结论：**在linux下，采用gcc编译完成后，函数名字的修饰没有发生改变。**
+
+#### C++ 支持函数重载的原因
+ **编译阶段的类型检查**：C++ 是一种强类型语言，在编译阶段会进行严格的类型检查。编译器能够根据函数调用时提供的参数类型、个数和顺序来确定具体调用哪一个重载函数。
+>例如，当调用`add(1,2)`时，编译器会根据参数是整数，选择`int add(int a, int b)`这个函数。
+
+> [!tip]+ **名字修饰（Name Mangling）机制**
+> 这是 C++ 支持函数重载的关键因素。C++ 编译器会对函数名进行名字修饰，根据函数的参数列表等信息来修改函数名。例如，对于`int add(int a, int b)`和`float add(float a, float b)`，编译器可能会将它们的名字分别修饰为类似`_Z3addii`和`_Z3addff`（这只是一种示意，不同编译器的名字修饰规则不同）。这样，在链接阶段，就可以根据修饰后的名字来区分不同的函数，从而实现函数重载。
+
+##### 验证: g++ 函数重载
+
+![[g++验证函数重载图.svg]]
+g++的函数修饰后变成【`_Z+函数长度+函数名+类型首字母`】。
+
+结论：在linux下，采用g++编译完成后，函数名字的修饰发生改变，编译器将函数参数类型信息
+添加到修改后的名字中。
+
+
+> [!abstract] 原理解释
 > 这就是为什么C++支持重载：==实际上这些函数的真实名字是不同的==！
+
+##### Windows下名字修饰规则
+![[Windows下的名字修饰图.png]]
+对比Linux会发现，windows下C++编译器对函数名字修饰非常诡异，但道理都是一样的。
+
 
 ### extern "C"
 如果想在C++中使用C语言的函数，或者想让C++函数被C语言调用，就需要使用`extern "C"`：
