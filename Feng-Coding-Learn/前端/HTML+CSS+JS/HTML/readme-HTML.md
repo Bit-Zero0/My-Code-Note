@@ -6,7 +6,7 @@ tags:
 Status: writing
 Start-date: 2024-10-31 18:29
 Finish-date: 
-Modified-date: 2024-11-17 14:45
+Modified-date: 2024-11-19 22:07
 Publish: false
 ---
 ### HTML 是什么?
@@ -16,11 +16,11 @@ Publish: false
 
 
 ## 主线剧情
-1. [[基本标签]]
-2. [[文本]]
-3. [[列表]]
-4. [[表格]]
-5. [[图片]]
+1. [[HTML基本标签]]
+2. [[HTMl文本]]
+3. [[HTML列表]]
+4. [[HTML表格]]
+5. [[HTML图片]]
 6. [[超链接]]
 7. [[表单]]
 8. [[框架]]

@@ -1,57 +1,39 @@
 ---
-Modified-date: 2024-11-05 22:54
+Type: Note
+tags:
+  - 前端
+  - 基础
+  - HTML
+Status: writing
+Start-date: 2024-11-02 17:39
+Finish-date: 
+Modified-date: 2024-11-18 22:10
+Publish: false
 ---
 
 # 列表简介
 
-列表是网页中最常用的一种数据排列方式，我们在浏览网页时经常可以看到列表的身影.
+列表是网页中最常用的数据展示方式之一。HTML提供了三种列表类型：有序列表、无序列表和定义列表。
 
-在HTML中，列表共分为三种：有序列表、无序列表和定义列表。
-- 在有序列表中，列表项之间有先后顺序之分。
-- 在无序列表中，列表项之间是没有先后顺序之分的。
-- 定义列表是一组带有特殊含义的列表，一个列表项中包含“条件”和“列表”两部分。
+- **有序列表(ordered list)**: 列表项按特定顺序排列，通常用数字或字母标记
+- **无序列表(unordered list)**: 列表项无特定顺序，通常用圆点等符号标记  
+- **定义列表(definition list)**: 用于术语定义，包含术语和描述两部分
 
+# 有序列表 `<ol>`
 
-# 有序列表
-在HTML中，有序列表中的各个列表项是有顺序的。有序列表从`<ol>`开始，到`</ol>`结束。有序列表一般采用数字或字母作为顺序，默认是采用数字顺序。
+有序列表使用`<ol>`标签创建，每个列表项用`<li>`标签表示。默认使用数字作为标记。
 
 ```html
 <ol>
-    <li>列表项</li>
-    <li>列表项</li>
-    <li>列表项</li>
+    <li>第一项</li>
+    <li>第二项</li>
+    <li>第三项</li>
 </ol>
 ```
 
-
-ol，即ordered list（有序列表）​。li，即list（列表项）​。理解标签的语义更有利于记忆。
-
-`<ol>`和`</ol>`标志着有序列表的开始和结束，而`<li>`和`</li>`标签表示这是一个列表项。一个有序列表可以包含多个列表项。
-
-> [!warning]+ 注意
-> ol标签和li标签是配合一起使用的，不可以单独使用，而且ol标签的子标签只能是li标签，不能是其他标签。
-
-
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>有序列表</title>
-</head>
-<body>
-    <ol>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>Vue.js</li>
-    </ol>
-</body>
-</html>
-```
-
+> [!important]
+> - `ol`标签只能包含`li`子标签
+> - `ol`和`li`标签必须配对使用
 
 ## type属性
 
@@ -64,66 +46,34 @@ ol，即ordered list（有序列表）​。li，即list（列表项）​。理
 </ol>
 ```
 
-![[Pasted image 20241105224445.png]]
+| type值 | 显示效果 |
+|--------|----------|
+| 1      | 1,2,3    |
+| a      | a,b,c    |
+| A      | A,B,C    |
+| i      | i,ii,iii |
+| I      | I,II,III |
 
-对于有序列表的列表项符号，等学了CSS之后，我们可以放弃type属性，而使用list-style-type属性来取代。
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>type属性 </title>
-</head>
-<body>
-    <ol type="a">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>Vue.js</li>
-    </ol>
-</body>
-</html>
-```
+# 无序列表 `<ul>` 
 
-# 无序列表
+无序列表是最常用的列表类型，使用`<ul>`标签创建。
 
-无序列表，很好理解，有序列表的列表项是有一定顺序的，而无序列表的列表项是没有顺序的。默认情况下，无序列表的列表项符号是●，不过可以通过type属性来改变。
 ```html
 <ul>
-    <li>列表项</li>
-    <li>列表项</li>
-    <li>列表项</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
 </ul>
 ```
 
-ul，即unordered list（无序列表）​。li，即list（列表项）​。
+## 实际应用
 
-注意，ul标签和li标签也是配合一起使用，不可以单独使用，而且ul标签的子标签也只能是li标签，不能是其他标签。这一点与有序列表是一样的。
+无序列表在实际开发中应用广泛，常用于:
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>无序列表</title>
-</head>
-<body>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>Vue.js</li>
-    </ul>
-</body>
-</html>
-```
-
-
-
-## type属性
-跟有序列表一样，我们也可以使用type属性来定义列表项符号。
+- 导航菜单
+- 新闻列表
+- 商品列表
+- 评论列表
 
 ```html
 <ul type="属性值">
@@ -158,7 +108,6 @@ ul，即unordered list（无序列表）​。li，即list（列表项）​。
 
 
 ## 深入无序列表
-
 在真正的前端开发中，无序列表比有序列表更为实用。更准确点说，我们一般都是使用无序列表，几乎用不到有序列表。
 
 
@@ -190,8 +139,6 @@ ul，即unordered list（无序列表）​。li，即list（列表项）​。
 </html>
 ```
 
-![[Pasted image 20241105225008.png]]
-
 上面的代码是错误的，因为ul元素的子元素只能是li元素，不能是其他元素。
 
 
@@ -205,8 +152,10 @@ ul，即unordered list（无序列表）​。li，即list（列表项）​。
 </ul>
 ```
 
+> [!tip]
+> 实际开发中，列表的外观样式主要通过CSS来实现，很少使用HTML的type属性
 
-# 定义列表
+# 定义列表 `<dl>`
 在HTML中，**定义列表**由两部分组成：名词和描述。
 
 ```html
@@ -240,11 +189,11 @@ dl即definition list（定义列表）​，dt即definition term（定义名词�
 </html>
 ```
 
-![[Pasted image 20241105225330.png]]
+![[定义列表例子图.png]]
 
 定义列表在实际开发中，定义列表虽然用得比较少，但是在某些高级效果（如自定义表单）中也会用到。
 
-
+定义列表虽然使用较少，但在特定场景(如术语解释、键值对展示等)非常实用。
 
 
 
