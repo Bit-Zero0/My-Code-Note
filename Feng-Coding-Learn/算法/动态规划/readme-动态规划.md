@@ -7,13 +7,14 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-01-20 22:42
+Modified-date: 2025-01-21 16:57
 Publish: false
 ---
 > [!tip]+ 题目
 > 1. [[1137. 第 N 个泰波那契数]]
 > 2. [[面试题 08.01. 三步问题]]
-> 3. 
+> 3. [[746. 使用最小花费爬楼梯]]
+> 4. [[91. 解码方法]]
 
 
 
