@@ -2,10 +2,12 @@
 Type: Note
 tags:
   - 介绍
+  - readme
+  - 算法
 Status: done
 start-date: 2024-07-09 21:13
 Finish-date: 2024-07-09 21:29
-Modified-date: 2024-09-25 14:55
+Modified-date: 2025-01-23 23:22
 dg-publish: true
 ---
 
@@ -13,10 +15,10 @@ dg-publish: true
 [[readme - 双指针]]
 [[readme - 滑动窗口]]
 [[readme - 二分查找]]
-[[前缀和]]
-[[位运算]]
-[[模拟]]
-[[分治-归并]]
+[[readme - 前缀和]]
+[[readme - 位运算]]
+[[readme - 模拟算法]]
+[[readme - 分治,归并]]
 [[链表]]
 [[哈希表]]
 [[字符串]]
