@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-01-21 16:57
+Modified-date: 2025-01-24 21:01
 Publish: false
 ---
 > [!tip]+ 题目
@@ -15,6 +15,9 @@ Publish: false
 > 2. [[面试题 08.01. 三步问题]]
 > 3. [[746. 使用最小花费爬楼梯]]
 > 4. [[91. 解码方法]]
+> 5. [[62. 不同路径]]
+> 6. [[63. 不同路径 II (medium)]]
+> 7. [[LCR 166. 珠宝的最高价值 (medium)]]
 
 
 
