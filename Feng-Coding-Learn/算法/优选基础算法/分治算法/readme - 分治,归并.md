@@ -5,7 +5,7 @@ tags:
 Status: writing
 Start-date: 2025-01-23 23:19
 Finish-date: 
-Modified-date: 2025-01-25 21:29
+Modified-date: 2025-02-03 21:02
 Publish: false
 ---
 
@@ -16,3 +16,4 @@ Publish: false
 5. [[912. 排序数组(medium)#归并排序|912. 排序数组(归并排序)]]
 6. [[LCR 170. 交易逆序对的总数 (hard)]]
 7. [[315. 计算右侧小于当前元素的个数(hard)]]
+8. [[493. 翻转对(hard)]]
