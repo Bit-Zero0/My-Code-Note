@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-03-09 22:10
+Modified-date: 2025-03-10 15:22
 Publish: false
 ---
 > [!tip]+ 题目
@@ -33,6 +33,8 @@ Publish: false
 > 20. [[918. 环形子数组的最大和 (medium)]]
 > 21. [[152. 乘积最大子数组 (medium)]]
 > 22. [[1567. 乘积为正数的最长子数组长度 (medium)]]
+> 23. [[413. 等差数列划分 (medium)]]
+> 24. [[978. 最长湍流子数组 (medium)]]
 
 
 
