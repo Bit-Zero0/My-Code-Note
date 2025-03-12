@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-07-17 22:15
 Finish-date: 
-Modified-date: 2025-03-11 16:59
+Modified-date: 2025-03-12 17:03
 Publish: false
 ---
 题目顺序
@@ -28,6 +28,9 @@ Publish: false
 15. [[22. 括号生成 (medium)]]
 16. [[77. 组合 (medium)]]
 17. [[494. 目标和 (medium)]]
+18. [[39. 组合总和 (medium)]]
+19. [[784. 字母大小写全排列 (medium)]]
+20. [[526. 优美的排列 (medium)]]
 
 
 
