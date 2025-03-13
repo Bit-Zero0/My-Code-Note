@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-03-11 16:32
+Modified-date: 2025-03-13 19:03
 Publish: false
 ---
 > [!tip]+ 题目
@@ -39,6 +39,8 @@ Publish: false
 > 26. [[467. 环绕字符串中唯一的子字符串 (medium)]]
 > 27. [[300. 最长递增子序列 (medium)]]
 > 28. [[376. 摆动序列 (medum)]]
+> 29. [[673. 最长递增子序列的个数 (medium)]]
+> 30. [[646. 最长数对链 (medium)]]
 
 
 

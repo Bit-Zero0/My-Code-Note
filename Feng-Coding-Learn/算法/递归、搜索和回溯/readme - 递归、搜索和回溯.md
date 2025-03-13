@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-07-17 22:15
 Finish-date: 
-Modified-date: 2025-03-12 17:03
+Modified-date: 2025-03-13 22:48
 Publish: false
 ---
 题目顺序
@@ -31,6 +31,10 @@ Publish: false
 18. [[39. 组合总和 (medium)]]
 19. [[784. 字母大小写全排列 (medium)]]
 20. [[526. 优美的排列 (medium)]]
+21. [[51. N 皇后 (hard)]]
+22. [[37. 解数独 (hard)]]
 
-
+扩展题
+> [!tip]+ 扩展题
+> [[526. 优美的排列 (medium)#动态规划解法]]
 
