@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-07-17 22:15
 Finish-date: 
-Modified-date: 2025-03-13 22:48
+Modified-date: 2025-03-14 17:24
 Publish: false
 ---
 题目顺序
@@ -33,6 +33,9 @@ Publish: false
 20. [[526. 优美的排列 (medium)]]
 21. [[51. N 皇后 (hard)]]
 22. [[37. 解数独 (hard)]]
+23. [[79. 单词搜索 (medium)]]
+24. [[1219. 黄金矿工 (medium)]]
+25. [[980. 不同路径 III (hard)]]
 
 扩展题
 > [!tip]+ 扩展题
