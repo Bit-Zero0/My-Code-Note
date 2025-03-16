@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-03-13 19:03
+Modified-date: 2025-03-16 14:50
 Publish: false
 ---
 > [!tip]+ 题目
@@ -41,6 +41,15 @@ Publish: false
 > 28. [[376. 摆动序列 (medum)]]
 > 29. [[673. 最长递增子序列的个数 (medium)]]
 > 30. [[646. 最长数对链 (medium)]]
+> 31. [[1027. 最长等差数列 (medium)]]
+> 32. [[446. 等差数列划分 II - 子序列 (hard)]]
+> > [!note]+ 回文串问题
+> >1.  [[647. 回文子串 (medium)]]
+> >2.  [[5. 最长回文子串 (medium)#动态规划解法]]
+> >3. [[1745. 分割回文串 IV (hard)]]
+> 
+
+
 
 
 
