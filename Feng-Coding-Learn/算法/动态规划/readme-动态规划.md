@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-03-16 14:50
+Modified-date: 2025-03-17 21:52
 Publish: false
 ---
 > [!tip]+ 题目
@@ -43,10 +43,18 @@ Publish: false
 > 30. [[646. 最长数对链 (medium)]]
 > 31. [[1027. 最长等差数列 (medium)]]
 > 32. [[446. 等差数列划分 II - 子序列 (hard)]]
+> 
 > > [!note]+ 回文串问题
 > >1.  [[647. 回文子串 (medium)]]
 > >2.  [[5. 最长回文子串 (medium)#动态规划解法]]
 > >3. [[1745. 分割回文串 IV (hard)]]
+> >4. [[132. 分割回文串 II (hard)]]
+> >5. [[516. 最长回文子序列 (medium)]]
+>
+>
+> > [!abstract]+ 记忆化搜索
+> > 1. [[509. 斐波那契数 (easy)]]
+> > 2. [[62. 不同路径 (medium)#记忆化搜索]]
 > 
 
 
