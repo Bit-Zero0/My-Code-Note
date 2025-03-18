@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-03-17 21:52
+Modified-date: 2025-03-18 21:49
 Publish: false
 ---
 > [!tip]+ 题目
@@ -50,12 +50,13 @@ Publish: false
 > >3. [[1745. 分割回文串 IV (hard)]]
 > >4. [[132. 分割回文串 II (hard)]]
 > >5. [[516. 最长回文子序列 (medium)]]
+> >6. [[1312. 让字符串成为回文串的最少插入次数 (hard)]]
 >
->
-> > [!abstract]+ 记忆化搜索
-> > 1. [[509. 斐波那契数 (easy)]]
-> > 2. [[62. 不同路径 (medium)#记忆化搜索]]
+>> [!abstract]+ 两个数组的DP
+>> 1. [[1143. 最长公共子序列 (medium)]]
 > 
+>
+
 
 
 
