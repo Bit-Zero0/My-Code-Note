@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-07-17 22:15
 Finish-date: 
-Modified-date: 2025-03-17 22:24
+Modified-date: 2025-03-19 17:55
 Publish: false
 ---
 题目顺序
@@ -48,6 +48,10 @@ Publish: false
 > [!abstract]+ 记忆化搜索
 > 1. [[509. 斐波那契数 (easy)]]
 > 2. [[62. 不同路径 (medium)]]
+> 3. [[300. 最长递增子序列 (medium)#记忆化搜索]]
+> 4. [[375. 猜数字大小 II (medium)]]
+> 5. [[329. 矩阵中的最长递增路径 (hard)]]
+
 
 
 
