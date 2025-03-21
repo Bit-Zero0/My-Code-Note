@@ -6,13 +6,15 @@ tags:
 Status: writing
 Start-date: 2025-02-24 13:50
 Finish-date: 
-Modified-date: 2025-03-17 22:21
+Modified-date: 2025-03-21 18:39
 Publish: false
 ---
 
 1. [[860. 柠檬水找零 (easy)]]
 2. [[2208. 将数组和减半的最少操作次数]]
 3. [[179. 最大数 (medium)]]
+4. [[376. 摆动序列 (medium)#优化解法（贪心策略）]]
+5. [[300. 最长递增子序列 (medium)#贪心策略]]
 
 
 

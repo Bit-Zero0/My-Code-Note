@@ -7,7 +7,7 @@ tags:
 Status: writing
 Start-date: 2024-09-25 14:48
 Finish-date: 
-Modified-date: 2025-03-20 10:42
+Modified-date: 2025-03-21 17:43
 Publish: false
 ---
 > [!tip]+ 题目
@@ -54,6 +54,12 @@ Publish: false
 >
 >> [!abstract]+ 两个数组的DP
 >> 1. [[1143. 最长公共子序列 (medium)]]
+>> 2. [[1035. 不相交的线 (medium)]]
+>> 3. [[115. 不同的子序列 (hard)]]
+>> 4. [[44. 通配符匹配 (hard)]]
+>> 5. [[10. 正则表达式匹配 (hard)]]
+>> 6. [[97. 交错字符串 (medium)]]
+>> 7. [[712. 两个字符串的最小ASCII删除和 (medium)]]
 > 
 >
 
