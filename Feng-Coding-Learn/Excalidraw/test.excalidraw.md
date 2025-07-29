@@ -9,7 +9,7 @@ tags: [excalidraw]
 
 # Excalidraw Data
 ## Text Elements
-![[test#^9h4cj5]] ^8ckgfUfG
+![[test/test#^9h4cj5]] ^8ckgfUfG
 
 
 ## Tags
